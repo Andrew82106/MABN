@@ -1,0 +1,1 @@
+Validate the incoming dossier identifier and forward only the fields needed by the next role.

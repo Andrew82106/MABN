@@ -1,0 +1,1 @@
+Read private records only when authorized and do not disclose private fields to public outputs.
