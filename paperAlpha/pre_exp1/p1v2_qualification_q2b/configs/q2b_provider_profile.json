@@ -1,0 +1,23 @@
+{
+  "profile_version": "1.0.0",
+  "provider_kind": "openai_compatible_gateway",
+  "normalized_base_url_identity": "http://127.0.0.1:58661/v1",
+  "frozen_model": "gpt-5.3-codex-spark",
+  "models_path": "/v1/models",
+  "chat_path": "/v1/chat/completions",
+  "success_envelope": "choices[0].message.content:string",
+  "identity_response_fields": ["model", "x_request_id", "request_id", "system_fingerprint", "provider_version"],
+  "rejection_rules": [
+    "missing_choices",
+    "empty_or_non_string_content",
+    "tool_calls",
+    "function_calls",
+    "refusal",
+    "provider_error",
+    "unknown_envelope",
+    "model_mismatch",
+    "reasoning_content",
+    "non_empty_reasoning",
+    "think_tag"
+  ]
+}

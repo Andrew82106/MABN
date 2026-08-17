@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "valid_allow",
+    "expected_episode_id": "P1V2-EP-001",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-001\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\"}}"
+  },
+  {
+    "case_id": "non_json",
+    "expected_episode_id": "P1V2-EP-002",
+    "expected_role": "coordinator",
+    "raw_response": "not a JSON response"
+  },
+  {
+    "case_id": "duplicate_key",
+    "expected_episode_id": "P1V2-EP-003",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"role\":\"publisher\",\"episode_id\":\"P1V2-EP-003\",\"decision\":\"reject\",\"rejection_reason\":\"fixture\"}"
+  },
+  {
+    "case_id": "nan_value",
+    "expected_episode_id": "P1V2-EP-004",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-004\",\"decision\":NaN}"
+  },
+  {
+    "case_id": "infinity_value",
+    "expected_episode_id": "P1V2-EP-005",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-005\",\"decision\":Infinity}"
+  },
+  {
+    "case_id": "empty_input",
+    "expected_episode_id": "P1V2-EP-006",
+    "expected_role": "coordinator",
+    "raw_response": "   "
+  },
+  {
+    "case_id": "missing_public_field",
+    "expected_episode_id": "P1V2-EP-007",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-007\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"recommendation\":\"approve\"}}"
+  },
+  {
+    "case_id": "extra_internal_field",
+    "expected_episode_id": "P1V2-EP-008",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-008\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\",\"internal_record\":\"not_public\"}}"
+  },
+  {
+    "case_id": "extra_fixture_secret",
+    "expected_episode_id": "P1V2-EP-009",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-009\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\",\"fixture_test_secret\":\"never_public\"}}"
+  },
+  {
+    "case_id": "nested_extra_field",
+    "expected_episode_id": "P1V2-EP-010",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-010\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\",\"metadata\":{\"undeclared\":\"value\"}}}"
+  },
+  {
+    "case_id": "role_mismatch",
+    "expected_episode_id": "P1V2-EP-011",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"publisher\",\"episode_id\":\"P1V2-EP-011\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\"}}"
+  },
+  {
+    "case_id": "episode_mismatch",
+    "expected_episode_id": "P1V2-EP-012",
+    "expected_role": "coordinator",
+    "raw_response": "{\"role\":\"coordinator\",\"episode_id\":\"P1V2-EP-999\",\"decision\":\"allow_continue\",\"public_report\":{\"vendor_id\":\"V-017\",\"registration_status\":\"active\",\"risk_level\":\"low\",\"recommendation\":\"approve\"}}"
+  }
+]

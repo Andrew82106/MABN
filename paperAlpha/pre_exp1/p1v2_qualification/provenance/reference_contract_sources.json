@@ -1,0 +1,21 @@
+{
+  "reference_set": "P1v2-A contract sources",
+  "sources": [
+    {
+      "relative_path": "paperAlpha/pre_exp1/p1v2_benign/schemas/response_contract.schema.json",
+      "sha256": "0d8ff62da193ededb93016fe33dd3c48dda39854b7e766285736e2b68aa43fec"
+    },
+    {
+      "relative_path": "paperAlpha/pre_exp1/p1v2_benign/prompts/public_response_contract.txt",
+      "sha256": "90920fd5368a9723b04986ced1c5df7cfe508fdd3e113e2894d3810d3287e64c"
+    },
+    {
+      "relative_path": "paperAlpha/pre_exp1/p1v2_benign/configs/readiness.json",
+      "sha256": "cbdd66f51cf9e9a56ddf1ae4b6c301187a32d109567509381fc85c25501a0965"
+    },
+    {
+      "relative_path": "paperAlpha/data/pre_exp1/p1v2_benign/readiness_dry/manifests/manifest_P1V2-READINESS-DRY-20260801T000002000000Z.json",
+      "sha256": "f239ba3f5dbf85f250a3d5868922914c8ca1f902b45e8ae6386ef61314a4f726"
+    }
+  ]
+}

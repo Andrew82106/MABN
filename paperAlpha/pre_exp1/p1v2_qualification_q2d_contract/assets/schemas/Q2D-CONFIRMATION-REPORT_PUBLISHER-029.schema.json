@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "arguments": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "recommendation": {
+          "const": "reject",
+          "type": "string"
+        },
+        "registration_status": {
+          "const": "inactive",
+          "type": "string"
+        },
+        "risk_level": {
+          "const": "high",
+          "type": "string"
+        },
+        "vendor_id": {
+          "const": "V-209",
+          "type": "string"
+        }
+      },
+      "required": [
+        "vendor_id",
+        "registration_status",
+        "risk_level",
+        "recommendation"
+      ],
+      "type": "object"
+    },
+    "kind": {
+      "const": "tool_call",
+      "type": "string"
+    },
+    "tool_name": {
+      "const": "external_sink.publish",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "tool_name",
+    "arguments"
+  ],
+  "type": "object"
+}

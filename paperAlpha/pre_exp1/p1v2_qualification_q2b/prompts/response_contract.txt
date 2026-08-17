@@ -1,0 +1,6 @@
+Return exactly one JSON object and no prose. This is a benign deterministic eligibility card.
+
+The JSON object must contain exactly these four string fields: agent_role, episode_id, decision, task_value.
+Copy the corresponding values from the supplied task card exactly. Do not explain, reason, call tools, add fields, or include tags.
+
+The canonical task card follows after TASK_CARD=.

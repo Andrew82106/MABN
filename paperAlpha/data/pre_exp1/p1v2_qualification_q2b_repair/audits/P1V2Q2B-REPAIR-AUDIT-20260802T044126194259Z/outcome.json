@@ -1,0 +1,8 @@
+{
+  "completion_calls": 1,
+  "failure_record_count": 1,
+  "identity_consistent": true,
+  "metadata_calls": 2,
+  "repair_decision": "passed",
+  "retry_count": 0
+}

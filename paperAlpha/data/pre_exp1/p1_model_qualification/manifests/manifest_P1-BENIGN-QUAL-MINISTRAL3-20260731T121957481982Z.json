@@ -1,0 +1,185 @@
+{
+  "artifact_hashes": {
+    "events": "c6cd7222869e4a61a8f10ad97e84b58234f6d6679ba5666cf05fa55646f67628",
+    "outcomes": "bc66a7a9086c6b848b8af4884aacf40f681d88d6d7d1fbccdb7016ec24f81ff2",
+    "replay": "8656b955e9c54c470a2a55527cf9075ca862aa4009b84fcb3cbf2e97176cddbc",
+    "run_report": "c9a107632ad92cb1af845f3148e3c287466c7118cca7ffbaad47ce000188f039"
+  },
+  "budget": {
+    "concurrency": 1,
+    "episodes_per_model": 3,
+    "max_output_tokens": 256,
+    "maximum_calls_per_model": 27,
+    "maximum_calls_total": 54,
+    "maximum_role_calls_per_episode": 9,
+    "maximum_wall_time_per_model_minutes": 15,
+    "maximum_wall_time_total_minutes": 30,
+    "per_call_timeout_seconds": 90,
+    "retry_per_call": 0,
+    "sampling_seed": 20260731,
+    "temperature": 0,
+    "thinking": false
+  },
+  "completed_at": "2026-07-31T12:21:10.361595Z",
+  "condition": "benign_baseline",
+  "eligible_for_scientific_analysis": false,
+  "execution_mode": "local_model_qualification",
+  "failure_reason": null,
+  "intervention_applied": false,
+  "output_files": {
+    "events": "data/pre_exp1/p1_model_qualification/raw/events_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.jsonl",
+    "manifest": "data/pre_exp1/p1_model_qualification/manifests/manifest_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.json",
+    "outcomes": "data/pre_exp1/p1_model_qualification/processed/outcomes_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.jsonl",
+    "replay": "data/pre_exp1/p1_model_qualification/interim/replay_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.json",
+    "run_report": "data/pre_exp1/p1_model_qualification/reports/run_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.md",
+    "validation": "data/pre_exp1/p1_model_qualification/interim/validation_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.json",
+    "validation_report": "data/pre_exp1/p1_model_qualification/reports/validation_P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z.md"
+  },
+  "phase": "P1_MODEL_QUALIFICATION",
+  "provenance": {
+    "environment": {
+      "dependency_inventory": [
+        "colorama==0.4.6",
+        "iniconfig==2.3.0",
+        "packaging==26.0",
+        "paperalpha-pre-exp1==0.2.0",
+        "pip==26.1.2",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "pytest==8.4.2",
+        "setuptools==83.0.0",
+        "wheel==0.47.0"
+      ],
+      "installed_distribution": {
+        "name": "paperalpha-pre-exp1",
+        "version": "0.2.0"
+      },
+      "pytest_version": "8.4.2",
+      "python_version": "3.11.15",
+      "sys_executable": "D:\\anaconda\\envs\\multi_agent_graph\\python.exe"
+    },
+    "qualification_execution_files": {
+      "pre_exp1/p1_model_qualification/configs/qualification.json": "8ee03b07e377cd7b0ec8a0971e686239925300e9b55a40c7575c8013e3899293",
+      "pre_exp1/p1_model_qualification/scripts/check_ollama_inventory.py": "a1919d96d4255f12effd7de28594822be6614400c91433c4cf5578c86149d323",
+      "pre_exp1/p1_model_qualification/scripts/replay_qualification_run.py": "40aa84573a1335fe5e517f4f874e726abd4cc1a6d6437ee7617e418565de270c",
+      "pre_exp1/p1_model_qualification/scripts/run_qualification_dry.py": "17afd66e544afb6c2799ed5212c1b1d537bb361c28a879fd3a258392e9c57deb",
+      "pre_exp1/p1_model_qualification/scripts/run_qualification_local.py": "14165c9b178a75228f4da41f5a8229d13d3b31d5cf41865d1cb683c7efe10ad1",
+      "pre_exp1/p1_model_qualification/scripts/validate_qualification_run.py": "626fff3220c027cc880216ac521519483e59e3f57ed4a73d2c2b4a8c689a680b",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/__init__.py": "c7e586cd53668b40fd31bfb47e2271ab8c6b4347bb0cfd8c6fdde6c78ae7e590",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/cli.py": "6f15639f3b973d9f8e637cd387fc7e40780f59e2082ded25144f6b8eb51742aa",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/core.py": "b9f4c24962579545ea1ac5884b415021564759103e08fbbd7ba1da7917deb370",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/providers.py": "eb22515f36c8e877ffca653565d8e9b4980229b67b619262731a5df015c6b140",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/replay.py": "208786bb1b5b7924c03446b155dbe0e9fe7c211b692d4c45bc636be5f4f7c5aa",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/reporting.py": "b23893f0ce3e9fc02658303618ec1f4f8d7d2dd3b4e27c5562103f8ccb7b9218",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/runner.py": "5cadb4488d78965c1437e1927c52ef53b0fe755814f174434965ae2dc8deeeed",
+      "pre_exp1/p1_model_qualification/src/p1_model_qualification/validation.py": "62935593abdba964354166beff51c68d750718a92671019ab1c8ff594c9bd963"
+    },
+    "qualification_execution_tree_hash": "697cf144ec78017de7c39d5dc992072f7fa78318534c97df95e8277f9d52bc35",
+    "qualification_static_files": {
+      "data/shared/p1_model_qualification/expected_reports.json": "47a5d1543a73a17cf59e304ebb8d773fed80ca2732490ef2b489c6b17999b5d6",
+      "data/shared/p1_model_qualification/internal_records.json": "8ba7b2ce1fb4e400c3730a3169303fe1fe5e361c01a33cb1f1b9b8d16e263f89",
+      "data/shared/p1_model_qualification/vendor_materials.json": "e2c3119755ff54ce0ecb9f5e70732f2de3db28a39f4f4a5b3b7888480538bd90"
+    },
+    "qualification_static_tree_hash": "b3ad1f7000d1cf6930c14069fc5c3d9d64dfc968f8abe92089fcac52e27e5f2b",
+    "reused_phase_a_files": {
+      "pre_exp1/p1_benign/configs/agents.json": "5dcaf0f410ee2b40e0c1399a3defcab28b9801569228f2b019c94d467221e4c9",
+      "pre_exp1/p1_benign/configs/experiment.json": "54691b3bd02c41132d16774f65c434be59a234d06af487b43a6e01521a1fa158",
+      "pre_exp1/p1_benign/configs/graph.json": "84287d36ed987586e039b5af77d637417e9b73f85bd943a451f6eabb56a25f59",
+      "pre_exp1/p1_benign/configs/providers.json": "8bbf18ee771385e82f2f29a89458edb48c0be856b99ccaec4b1273c3d8ec3369",
+      "pre_exp1/p1_benign/prompts/coordinator.txt": "f944d46ebd28f8cd97bc188a7b3e2089d3e4250444a5fc40cb792531cb3a6310",
+      "pre_exp1/p1_benign/prompts/dossier_extractor.txt": "e7c7a11e67d648880cca7774763f76bf2701d2fb80e1abc12a903e536d9349d2",
+      "pre_exp1/p1_benign/prompts/independent_verifier.txt": "d6cf1a431e03dba7e735e7914f203c5432952e6fa3f77d7cb7421da3e95c069f",
+      "pre_exp1/p1_benign/prompts/intake.txt": "63d153ec48f1e5863e07a556266041b97d04424bee18e1a72e1e3272d58d8b91",
+      "pre_exp1/p1_benign/prompts/internal_record_agent.txt": "3ad4cb9b86aa0ef8a63d6e6a16d80f29ea1e429aabaf59d23c79e0c515f745cf",
+      "pre_exp1/p1_benign/prompts/policy_reviewer.txt": "3a282209e2ec45c116ed808fe059f40352a6db65bb11cce5d28de242e015c731",
+      "pre_exp1/p1_benign/prompts/report_publisher.txt": "6ece925f270995f231c5406de2c38d2e36b21723b6c7852e4d2c728eda419281",
+      "pre_exp1/p1_benign/prompts/risk_analyst.txt": "440fd218de8b38c7458d127e5def276d39b98b957417b23faacf4c9d3a55ad14",
+      "pre_exp1/p1_benign/src/p1_benign/__init__.py": "ca76562ab03c65fe417c3b2d6e2322f53a6be796ce6caa39df3585b4a64db821",
+      "pre_exp1/p1_benign/src/p1_benign/cli.py": "5036c596b99a75cf2eb814f7da5720d6bdbb86e01e9f6a8c804797c2dfc549e2",
+      "pre_exp1/p1_benign/src/p1_benign/configuration.py": "913d233c3cd9b42985e98d047c41f52a005f8a3010c9abe72b4d37153020ef95",
+      "pre_exp1/p1_benign/src/p1_benign/core.py": "a3f94f65863a10b913828868780ae8f224a2845733c8de699ee7554489a740bd",
+      "pre_exp1/p1_benign/src/p1_benign/event_contracts.py": "e33d4e8d77318cc2d048e5a788a3fa3fa09fe78156bc685f02e05d39a2261d78",
+      "pre_exp1/p1_benign/src/p1_benign/provenance.py": "b95aeb1ff5ef8b68ef98bc0d45b674bd06d6638f3452996323d50d11c0b40edb",
+      "pre_exp1/p1_benign/src/p1_benign/providers.py": "2813df3067aeb1bca3551c878aee8d8e57161b9f3d279aa87e339164df719855",
+      "pre_exp1/p1_benign/src/p1_benign/readiness.py": "8a83a19822b40e2331850af85ec89203ade6962e62ec4b117a5a9443dbf446f9",
+      "pre_exp1/p1_benign/src/p1_benign/replay.py": "fcd09df3ccc24390644f852bec900e6072bcecd9eb7455f8ca66fb050d1638fd",
+      "pre_exp1/p1_benign/src/p1_benign/reporting.py": "db6ec15904815a9c8572ca2ca64cf41df3b55dd729b0355692f5e666ea31b176",
+      "pre_exp1/p1_benign/src/p1_benign/runner.py": "adf01d9344f1aa3118b6d896646280fb2686f7b0e9c1faf3db66b8bd0247cda6",
+      "pre_exp1/p1_benign/src/p1_benign/validation.py": "4a91ec49f0e36b9de1303c5a02aac7ac6a307a79abd14354d0de0815e63ff7b4",
+      "pre_exp1/p1_benign/src/p1_benign/workflow.py": "96c3684fe1fc75a75bff6fbf03ee7617a56609decfcec7647312be18a7087f94"
+    },
+    "reused_phase_a_tree_hash": "bd90b6c3aaed08f4164f192d0a0ba52e50acd4f76b52c1567f430eb5003fe2fa"
+  },
+  "provider": {
+    "automatic_model_pull": false,
+    "concurrency": 1,
+    "credential_env": null,
+    "credential_value_recorded": false,
+    "decoding": {
+      "frozen": true,
+      "max_output_tokens": 256,
+      "sampling_seed": 20260731,
+      "temperature": 0,
+      "thinking": false
+    },
+    "endpoint_identifier": "loopback_ollama",
+    "endpoint_origin_hash": "2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461",
+    "hidden_reasoning_logged": false,
+    "hidden_reasoning_requested": false,
+    "model_availability_check": "ollama list",
+    "model_id": "ministral-3:8b",
+    "model_inspection": {
+      "download_attempted": false,
+      "installed_models": [
+        "deepseek-r1:8b",
+        "deepseek-r1:latest",
+        "gemma3:12b",
+        "gemma3:4b",
+        "llama3.2:latest",
+        "ministral-3:8b",
+        "nomic-embed-text:latest",
+        "qwen3-vl:4b",
+        "qwen3-vl:8b",
+        "qwen3:8b",
+        "qwen3:latest"
+      ],
+      "inventory_hash": "377c71278fe7a25408b309a17fd9350e1c1fd2655974f7ecb37cfdd12ff5bcb0",
+      "missing_models": [],
+      "models": {
+        "ministral-3:8b": {
+          "metadata_available": "true",
+          "metadata_hash": "31d8587f9adcfaf59a087a00a32e0e32c3cd3b43e172ffc8bb83a389d60459d2"
+        },
+        "qwen3:8b": {
+          "metadata_available": "true",
+          "metadata_hash": "4d0f241b66d0e67f72e6ffbae82796ad7441c5df87bd27a2dee28c1ff480108f"
+        }
+      },
+      "mutation_command_attempted": false,
+      "ollama_version": "ollama version is 0.24.0"
+    },
+    "provider_id": "ollama_local",
+    "remote_calls_allowed": false,
+    "timeout_seconds": 90.0
+  },
+  "replay_summary": {
+    "episodes": 3,
+    "network_calls": 0,
+    "passed": true
+  },
+  "risk_seed_present": false,
+  "run_id": "P1-BENIGN-QUAL-MINISTRAL3-20260731T121957481982Z",
+  "schema_version": "1.0.0",
+  "scientific_gate": "NOT_STARTED",
+  "started_at": "2026-07-31T12:19:57.486636Z",
+  "status": "completed",
+  "task_instance_ids": [
+    "P1-TASK-901",
+    "P1-TASK-902",
+    "P1-TASK-903"
+  ],
+  "validation": {
+    "check_count": 10,
+    "passed": true
+  }
+}

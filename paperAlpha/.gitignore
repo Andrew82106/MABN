@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+!.env.example
+
+# Generated pre_exp1 data. Keep directory placeholders and shared static data.
+data/pre_exp1/raw/*
+!data/pre_exp1/raw/.gitkeep
+data/pre_exp1/interim/*
+!data/pre_exp1/interim/.gitkeep
+data/pre_exp1/processed/*
+!data/pre_exp1/processed/.gitkeep
+data/pre_exp1/manifests/*
+!data/pre_exp1/manifests/.gitkeep
+data/pre_exp1/reports/*
+!data/pre_exp1/reports/.gitkeep
+
+# Generated P1 benign Phase A data.
+data/pre_exp1/p1_benign/raw/*
+data/pre_exp1/p1_benign/interim/*
+data/pre_exp1/p1_benign/processed/*
+data/pre_exp1/p1_benign/manifests/*
+data/pre_exp1/p1_benign/reports/*

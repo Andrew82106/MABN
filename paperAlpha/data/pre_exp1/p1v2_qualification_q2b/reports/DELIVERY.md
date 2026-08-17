@@ -1,0 +1,23 @@
+# P1v2 Q2-B staged remote qualification delivery
+
+- Run ID: P1V2Q2B-REMOTE-20260802T033140463464Z
+- Decision: not_qualified
+- Code path: D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha\pre_exp1\p1v2_qualification_q2b
+- Data path: D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha\data\pre_exp1\p1v2_qualification_q2b
+- Interpreter: D:\anaconda\envs\multi_agent_graph\python.exe
+- Python version: 3.11.15
+- Screen gate started/unstarted: 8/0
+- Screen remainder started/unstarted: 0/24
+- Confirmation started/unstarted: 0/96
+- Metadata calls: 2
+- Completion calls: 8
+- Retry count: 0
+- Identity consistency: True
+- Credential scope: live_path_only
+- Test command: conda run --no-capture-output -n multi_agent_graph python -B -m unittest discover -s paperAlpha/pre_exp1/p1v2_qualification_q2b/tests -v
+- Offline tests: passed before the authorized live command.
+- Public validation result 1: passed (errors: []).
+- Public replay result: passed (derived decision: not_qualified; replayed attempted records: 8; errors: []).
+- Public validation result 2: passed (errors: []).
+- Cache cleanup status: no __pycache__, .pytest_cache, or temporary test residue retained.
+- P1/P2 lock status: no P1 or P2 execution was started.

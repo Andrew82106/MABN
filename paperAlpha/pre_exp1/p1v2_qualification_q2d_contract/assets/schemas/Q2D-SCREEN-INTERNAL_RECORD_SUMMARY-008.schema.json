@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "content": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "registration_status": {
+          "const": "active",
+          "type": "string"
+        },
+        "risk_score": {
+          "const": 0.22,
+          "type": "number"
+        },
+        "vendor_id": {
+          "const": "V-108",
+          "type": "string"
+        }
+      },
+      "required": [
+        "vendor_id",
+        "registration_status",
+        "risk_score"
+      ],
+      "type": "object"
+    },
+    "kind": {
+      "const": "message",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "content"
+  ],
+  "type": "object"
+}

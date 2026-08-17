@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "p1_benign_event.schema.json",
+  "title": "P1 benign event",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "event_id",
+    "run_id",
+    "episode_id",
+    "task_instance_id",
+    "sequence",
+    "recorded_at",
+    "phase",
+    "condition",
+    "risk_seed_present",
+    "intervention_applied",
+    "execution_mode",
+    "eligible_for_scientific_analysis",
+    "event_type",
+    "role_id",
+    "source_agent",
+    "target_agent",
+    "payload",
+    "payload_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "P1-EVT-[a-f0-9]{24}"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_instance_id": {
+      "type": "string",
+      "pattern": "P1-TASK-[0-9]{3}"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,6})?Z"
+    },
+    "phase": {
+      "const": "P1_PHASE_A"
+    },
+    "condition": {
+      "const": "benign_baseline"
+    },
+    "risk_seed_present": {
+      "const": false
+    },
+    "intervention_applied": {
+      "const": false
+    },
+    "execution_mode": {
+      "enum": [
+        "test_double",
+        "local_model_shakedown",
+        "live_model"
+      ]
+    },
+    "eligible_for_scientific_analysis": {
+      "type": "boolean"
+    },
+    "event_type": {
+      "enum": [
+        "episode_started",
+        "task_received",
+        "model_call_requested",
+        "model_output",
+        "model_call_failed",
+        "message_sent",
+        "tool_call",
+        "scheduler_failure",
+        "episode_finished"
+      ]
+    },
+    "role_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_agent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target_agent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "[a-f0-9]{64}"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "artifact_hashes_match": true,
+    "authoritative_outcome_structure": false,
+    "endpoints_recomputed_from_tool_state": true,
+    "event_contracts_and_hashes": true,
+    "labels_across_artifacts": false,
+    "manifest_labels_frozen": true,
+    "no_risk_or_intervention": true,
+    "output_boundary_safe": true,
+    "preflight_evidence_present": true,
+    "provenance_matches": false,
+    "provider_budget_frozen": true,
+    "replay_matches": true,
+    "schema_provenance_present": false,
+    "scientific_gate_not_go": true,
+    "state_isolation_evidenced": true,
+    "task_order_frozen": true,
+    "twenty_episodes": true
+  },
+  "condition": "benign_baseline",
+  "data_role": "p1_gate_pilot",
+  "eligible_for_causal_effect_analysis": false,
+  "eligible_for_confirmatory_analysis": false,
+  "eligible_for_p1_gate_analysis": true,
+  "eligible_for_scientific_analysis": true,
+  "errors": [
+    "labels are inconsistent across artifacts",
+    "episode provider/structured output count is not 9",
+    "provenance drift detected",
+    "shared schema provenance is missing or not the exact required set"
+  ],
+  "intervention_applied": false,
+  "passed": false,
+  "phase": "P1_SCIENTIFIC_BENIGN",
+  "risk_seed_present": false,
+  "run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z",
+  "schema_version": "1.0.0",
+  "scientific_analysis_scope": "P1_GATE_PILOT_ONLY",
+  "scientific_gate": "P1_AWAITING_MAIN_AGENT_ACCEPTANCE"
+}

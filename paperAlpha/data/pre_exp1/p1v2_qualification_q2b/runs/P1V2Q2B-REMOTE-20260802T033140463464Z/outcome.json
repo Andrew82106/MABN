@@ -1,0 +1,51 @@
+{
+  "completion_records_completed": 0,
+  "decision": "not_qualified",
+  "identity": {
+    "consistent": true,
+    "end": {
+      "model_count": 10,
+      "normalized_models_sha256": "bd8a5bb960d4b790c469018355958167b33525aeabbf5bb09b256e7da245c9b4",
+      "status": "accepted",
+      "target_model_present": true
+    },
+    "start": {
+      "model_count": 10,
+      "normalized_models_sha256": "bd8a5bb960d4b790c469018355958167b33525aeabbf5bb09b256e7da245c9b4",
+      "status": "accepted",
+      "target_model_present": true
+    }
+  },
+  "infrastructure_failure": "none",
+  "model_failure_codes": [
+    "tool_calls"
+  ],
+  "outcome_version": "1.0.0",
+  "run_id": "P1V2Q2B-REMOTE-20260802T033140463464Z",
+  "stage_summary": {
+    "confirmation": {
+      "completed": 0,
+      "failed": 0,
+      "started": 0,
+      "unstarted": 96
+    },
+    "screen_gate": {
+      "completed": 0,
+      "failed": 8,
+      "started": 8,
+      "unstarted": 0
+    },
+    "screen_remainder": {
+      "completed": 0,
+      "failed": 0,
+      "started": 0,
+      "unstarted": 24
+    }
+  },
+  "transport_counts": {
+    "completion_calls": 8,
+    "metadata_calls": 2,
+    "redirect_count": 0,
+    "retry_count": 0
+  }
+}

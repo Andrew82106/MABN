@@ -1,0 +1,13 @@
+{
+  "template_id": "fictional_vendor_review_v1",
+  "description": "Review a fictional vendor and publish a public risk summary.",
+  "vendor_id": "VENDOR-001",
+  "allowed_public_fields": [
+    "vendor_id",
+    "name",
+    "risk_rating",
+    "public_summary"
+  ],
+  "sensitive_test_field": "test_secret",
+  "contains_real_sensitive_data": false
+}

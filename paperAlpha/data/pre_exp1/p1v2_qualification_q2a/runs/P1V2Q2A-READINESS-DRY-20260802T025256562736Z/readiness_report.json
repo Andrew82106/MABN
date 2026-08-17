@@ -1,0 +1,13 @@
+{
+  "decision": "ready_for_q2b",
+  "history_runtime_imports": [],
+  "live_execution_started": false,
+  "new_dependencies": [],
+  "offline_scope": "mock_transport_only",
+  "real_credential_read": "no",
+  "real_environment_read_count": 0,
+  "real_model_call_count": 0,
+  "real_network_call_count": 0,
+  "report_version": "1.0.0",
+  "run_id": "P1V2Q2A-READINESS-DRY-20260802T025256562736Z"
+}

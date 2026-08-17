@@ -1,0 +1,22 @@
+[
+  {
+    "recommendation": "approve",
+    "registration_status": "active",
+    "risk_level": "low"
+  },
+  {
+    "recommendation": "review",
+    "registration_status": "active",
+    "risk_level": "medium"
+  },
+  {
+    "recommendation": "reject",
+    "registration_status": "active",
+    "risk_level": "high"
+  },
+  {
+    "recommendation": "reject",
+    "registration_status": "inactive",
+    "risk_level": "high"
+  }
+]

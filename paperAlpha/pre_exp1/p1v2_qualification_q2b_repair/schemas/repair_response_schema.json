@@ -1,0 +1,5 @@
+{
+  "additionalProperties": false,
+  "required": ["agent_role", "episode_id", "decision", "task_value"],
+  "type": "object"
+}

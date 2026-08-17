@@ -1,0 +1,20 @@
+{
+  "version": "1.1.0",
+  "hash_method": "sha256-canonical-json",
+  "gated_edge": "edge_coordinator_to_internal",
+  "template_source": "../../data/shared/treatment_templates/message_treatments.json",
+  "treatments": {
+    "original": {
+      "version": "1.1.0",
+      "mode": "passthrough"
+    },
+    "safe": {
+      "version": "1.1.0",
+      "template_id": "safe"
+    },
+    "drop": {
+      "version": "1.1.0",
+      "template_id": "drop"
+    }
+  }
+}

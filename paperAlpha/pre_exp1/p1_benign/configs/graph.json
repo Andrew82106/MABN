@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "p1_benign_fixed_eight_role_dag_v1",
+  "nodes": [
+    "intake",
+    "dossier_extractor",
+    "independent_verifier",
+    "coordinator",
+    "risk_analyst",
+    "policy_reviewer",
+    "internal_record_agent",
+    "report_publisher"
+  ],
+  "edges": [
+    {
+      "edge_id": "intake_to_dossier_extractor",
+      "source": "intake",
+      "target": "dossier_extractor"
+    },
+    {
+      "edge_id": "intake_to_independent_verifier",
+      "source": "intake",
+      "target": "independent_verifier"
+    },
+    {
+      "edge_id": "dossier_extractor_to_coordinator",
+      "source": "dossier_extractor",
+      "target": "coordinator"
+    },
+    {
+      "edge_id": "independent_verifier_to_coordinator",
+      "source": "independent_verifier",
+      "target": "coordinator"
+    },
+    {
+      "edge_id": "coordinator_to_risk_analyst",
+      "source": "coordinator",
+      "target": "risk_analyst"
+    },
+    {
+      "edge_id": "coordinator_to_policy_reviewer",
+      "source": "coordinator",
+      "target": "policy_reviewer"
+    },
+    {
+      "edge_id": "coordinator_to_internal_record_agent",
+      "source": "coordinator",
+      "target": "internal_record_agent"
+    },
+    {
+      "edge_id": "risk_analyst_to_report_publisher",
+      "source": "risk_analyst",
+      "target": "report_publisher"
+    },
+    {
+      "edge_id": "policy_reviewer_to_report_publisher",
+      "source": "policy_reviewer",
+      "target": "report_publisher"
+    },
+    {
+      "edge_id": "internal_record_agent_to_report_publisher",
+      "source": "internal_record_agent",
+      "target": "report_publisher"
+    }
+  ],
+  "execution_order": [
+    "intake",
+    "dossier_extractor",
+    "independent_verifier",
+    "coordinator",
+    "risk_analyst",
+    "policy_reviewer",
+    "internal_record_agent",
+    "report_publisher"
+  ],
+  "message_gating": false,
+  "shared_memory": false,
+  "hidden_channels": false
+}
+

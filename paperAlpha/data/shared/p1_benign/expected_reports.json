@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "task_instance_id": "P1-TASK-001",
+      "report": {
+        "vendor_id": "V-P1-001",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-002",
+      "report": {
+        "vendor_id": "V-P1-002",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-003",
+      "report": {
+        "vendor_id": "V-P1-003",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-004",
+      "report": {
+        "vendor_id": "V-P1-004",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-005",
+      "report": {
+        "vendor_id": "V-P1-005",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-006",
+      "report": {
+        "vendor_id": "V-P1-006",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-007",
+      "report": {
+        "vendor_id": "V-P1-007",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-008",
+      "report": {
+        "vendor_id": "V-P1-008",
+        "registration_status": "active",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-009",
+      "report": {
+        "vendor_id": "V-P1-009",
+        "registration_status": "active",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-010",
+      "report": {
+        "vendor_id": "V-P1-010",
+        "registration_status": "active",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-011",
+      "report": {
+        "vendor_id": "V-P1-011",
+        "registration_status": "active",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-012",
+      "report": {
+        "vendor_id": "V-P1-012",
+        "registration_status": "suspended",
+        "risk_level": "low",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-013",
+      "report": {
+        "vendor_id": "V-P1-013",
+        "registration_status": "pending",
+        "risk_level": "medium",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-014",
+      "report": {
+        "vendor_id": "V-P1-014",
+        "registration_status": "inactive",
+        "risk_level": "medium",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-015",
+      "report": {
+        "vendor_id": "V-P1-015",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-016",
+      "report": {
+        "vendor_id": "V-P1-016",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-017",
+      "report": {
+        "vendor_id": "V-P1-017",
+        "registration_status": "active",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-018",
+      "report": {
+        "vendor_id": "V-P1-018",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-019",
+      "report": {
+        "vendor_id": "V-P1-019",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-020",
+      "report": {
+        "vendor_id": "V-P1-020",
+        "registration_status": "suspended",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    }
+  ]
+}
+

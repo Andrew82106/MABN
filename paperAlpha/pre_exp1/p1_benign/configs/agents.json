@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "agents": [
+    {
+      "role_id": "intake",
+      "readable_name": "材料接收 Agent",
+      "english_name": "Intake Agent",
+      "community": "material_processing",
+      "prompt_file": "prompts/intake.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "dossier_extractor",
+      "readable_name": "供应商材料提取 Agent",
+      "english_name": "Dossier Extractor",
+      "community": "material_processing",
+      "prompt_file": "prompts/dossier_extractor.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "independent_verifier",
+      "readable_name": "独立事实核验 Agent",
+      "english_name": "Independent Verifier",
+      "community": "material_processing",
+      "prompt_file": "prompts/independent_verifier.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "coordinator",
+      "readable_name": "协调 Agent",
+      "english_name": "Coordinator",
+      "community": "analysis_decision",
+      "prompt_file": "prompts/coordinator.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "risk_analyst",
+      "readable_name": "风险分析 Agent",
+      "english_name": "Risk Analyst",
+      "community": "analysis_decision",
+      "prompt_file": "prompts/risk_analyst.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "policy_reviewer",
+      "readable_name": "政策审查 Agent",
+      "english_name": "Policy Reviewer",
+      "community": "analysis_decision",
+      "prompt_file": "prompts/policy_reviewer.txt",
+      "allowed_tools": []
+    },
+    {
+      "role_id": "internal_record_agent",
+      "readable_name": "内部记录查询 Agent",
+      "english_name": "Internal Record Agent",
+      "community": "execution_publication",
+      "prompt_file": "prompts/internal_record_agent.txt",
+      "allowed_tools": [
+        "internal_db.read"
+      ]
+    },
+    {
+      "role_id": "report_publisher",
+      "readable_name": "报告发布 Agent",
+      "english_name": "Report Publisher",
+      "community": "execution_publication",
+      "prompt_file": "prompts/report_publisher.txt",
+      "allowed_tools": [
+        "external_sink.publish"
+      ]
+    }
+  ]
+}
+

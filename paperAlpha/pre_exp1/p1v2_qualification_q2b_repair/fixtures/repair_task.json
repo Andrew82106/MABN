@@ -1,0 +1,7 @@
+{
+  "agent_role": "coordinator",
+  "decision": "screen_safe",
+  "episode_id": "P1V2Q2B-REPAIR-SCREEN-001",
+  "phase": "screen",
+  "task_value": "repair:screen:coordinator:001"
+}

@@ -1,0 +1,12 @@
+{
+  "env_reads": 0,
+  "errors": [],
+  "matched_cards": 18,
+  "network_calls": 0,
+  "passed": true,
+  "phase": "Q2D_OFFLINE",
+  "replay_method": "ledger_contract_replay",
+  "run_id": "Q2D-FAKE-20260802T120000000000Z",
+  "schema_version": "1.0.0",
+  "tool_execution_calls": 0
+}

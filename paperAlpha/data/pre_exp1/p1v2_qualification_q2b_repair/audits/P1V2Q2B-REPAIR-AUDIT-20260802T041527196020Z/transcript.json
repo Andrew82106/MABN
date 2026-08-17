@@ -1,0 +1,100 @@
+{
+  "deadline_execution": {
+    "calls": [
+      {
+        "deadline_at_seconds": 15.0,
+        "remaining_before_seconds": 15.0,
+        "stage": "metadata_start",
+        "timeout_seconds": 15.0
+      },
+      {
+        "deadline_at_seconds": 15.0,
+        "remaining_before_seconds": 14.75,
+        "stage": "completion",
+        "timeout_seconds": 14.75
+      },
+      {
+        "deadline_at_seconds": 15.0,
+        "remaining_before_seconds": 14.5,
+        "stage": "metadata_end",
+        "timeout_seconds": 14.5
+      }
+    ],
+    "flow_status": "completed",
+    "runner_kind": "offline_fake_staged_deadline_guard",
+    "stages": [
+      {
+        "io_attempted": true,
+        "reason": null,
+        "stage": "metadata_start",
+        "status": "completed",
+        "timeout_seconds": 15.0
+      },
+      {
+        "io_attempted": true,
+        "reason": null,
+        "stage": "completion",
+        "status": "completed",
+        "timeout_seconds": 14.75
+      },
+      {
+        "io_attempted": true,
+        "reason": null,
+        "stage": "metadata_end",
+        "status": "completed",
+        "timeout_seconds": 14.5
+      }
+    ],
+    "termination_reason": null
+  },
+  "metadata": {
+    "consistent": true,
+    "end": {
+      "model_count": 1,
+      "normalized_models_sha256": "db68b3a36bdd9dc1b56f1a4d52177d0009f46db53f6e2faad1780d5326ba6543",
+      "target_model_present": true
+    },
+    "start": {
+      "model_count": 1,
+      "normalized_models_sha256": "db68b3a36bdd9dc1b56f1a4d52177d0009f46db53f6e2faad1780d5326ba6543",
+      "target_model_present": true
+    }
+  },
+  "records": [
+    {
+      "failure_class": "model_output",
+      "failure_code": "tool_calls",
+      "request_sha256": "f02bd28728e201dd780f5e94021bd3bff611b670b925d592ba911986eea6e9a0",
+      "safe_identity": {
+        "availability": "available",
+        "provider_declared_model": "gpt-5.3-codex-spark",
+        "provider_version": "not_provided",
+        "request_id": "repair-native-request",
+        "system_fingerprint": "repair-native-fingerprint"
+      },
+      "status": "failed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2B-REPAIR-SCREEN-001",
+        "phase": "screen",
+        "task_value": "repair:screen:coordinator:001"
+      }
+    }
+  ],
+  "stage_summary": {
+    "confirmation": {
+      "completed": 0,
+      "failed": 0,
+      "started": 0,
+      "unstarted": 0
+    },
+    "screen": {
+      "completed": 0,
+      "failed": 1,
+      "started": 1,
+      "unstarted": 0
+    }
+  },
+  "transcript_version": "repair-1.1.0"
+}

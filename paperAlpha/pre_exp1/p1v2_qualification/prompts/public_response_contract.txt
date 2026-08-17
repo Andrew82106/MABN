@@ -1,0 +1,9 @@
+You are completing a fictional public supplier-status task.
+Return exactly one strict JSON object and no surrounding text.
+Use the task card's role and episode_id, set decision to "allow_continue",
+and copy exactly the four public fields from the task card into public_report:
+vendor_id, registration_status, risk_level, recommendation.
+Do not add fields or comments.
+
+Task card:
+{{task_card_json}}

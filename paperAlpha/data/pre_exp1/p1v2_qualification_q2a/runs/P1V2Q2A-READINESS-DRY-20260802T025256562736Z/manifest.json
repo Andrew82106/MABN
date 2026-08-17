@@ -1,0 +1,36 @@
+{
+  "artifact_sha256": {
+    "ledger.jsonl": "ca7932bf2d6fb67694df932c309ca438dc81fe4c43289c60ed52ac57dd44e240",
+    "outcome.json": "2f054d7fa0b8775d823d849dd46f1dbffcdc4e122958d44d58b580f1f8d0fd6e",
+    "readiness_report.json": "ee5fcf5fdca348bfa962f44f660a8fc4741e86cb55ef0cbdd1b131125d44abec",
+    "reports/DELIVERY.md": "978d5107327cabbd359f6776a1538135ec33ab06bbdf3748334cb684e623d6da",
+    "transcript.json": "9bc7733f50a396fa19120ac3692132b1d742954a8c17f5922d0002af9646c72f"
+  },
+  "code_provenance_sha256": {
+    "scripts/replay_q2a_remote.py": "dbcfff5828369f086de89b70840c8216b4bd289583b9b374ef0bf2d206371d3f",
+    "scripts/run_q2a_remote_readiness.py": "148f9b079b65c567ff3e206c98e7c007d8ab7d4c4b8246a58f51eb10abd671cb",
+    "scripts/run_q2b_live.py": "b5c66b264baa74d46eefe7d3c41232c276cac80e57bbe0767d53d68710d18f6c",
+    "scripts/validate_q2a_remote.py": "b9a19336239e6cf81027b3b888f2f9c812ae538f9e4bc6b8de1a512b343dcbcf",
+    "src/p1v2_qualification_q2a/__init__.py": "2f27b76a70c981e2712a45a5a7408edd7b82677083252fe01b0b21b09e8d6b9f",
+    "src/p1v2_qualification_q2a/common.py": "0aa0df28458d625fdef5c80fb5d9fe4f66ac735a0a8ca850b95e95fee71468bd",
+    "src/p1v2_qualification_q2a/errors.py": "84673f34ffe76d0605de098c1a65e7e9e27b1ed158e52cf1fda70fb9a6267ea3",
+    "src/p1v2_qualification_q2a/protocol.py": "698396550d22ac92053ec977b14f1a073d8434e88b7614eace45179f53260768",
+    "src/p1v2_qualification_q2a/replay.py": "cb1fb50dd3ef22f64fe1f055b75c6db0d852b6abee1aede940f192b83be4d041",
+    "src/p1v2_qualification_q2a/runner.py": "281332980f9a0bfeb5295ab40e6bd6ccb08748558aa007ed30f5bb26f059cc98",
+    "src/p1v2_qualification_q2a/transport.py": "22c2c6db0df70fe87d51f694d729e7f0adf99c23038778ba7ee5adf5b7e35ea6",
+    "src/p1v2_qualification_q2a/validation.py": "1e7eb05aa6f38a8961c64abbd745eeb89e416c2311899fd6b1d730360c08ba9b"
+  },
+  "decision": "ready_for_q2b",
+  "frozen_asset_sha256": {
+    "configs/q2a_provider_profile.json": "8c63a632a80b0dea81336a6c292f050a462aeb89c98158053020870b1cb24d21",
+    "configs/q2a_remote_protocol.json": "2d8d913622fe07db2ab1042481979ced47f04f8d1be6fb2708142a33ea2904c1",
+    "fixtures/confirmation_tasks.json": "42e1becaa2f406e791c0e976288593cad4981a2c9c09b13c9be41f43989e5d1f",
+    "fixtures/screen_tasks.json": "11ffbe3cbf530efe12cd9f77e56eec295f5dca5c2259fa1dd5ce4411c7e735b0",
+    "permissions/public_sink_rule.json": "b8ede014a9565eb6154cb759c48c0078e5a7b47965977b738a5c65305a27f3e8",
+    "prompts/response_contract.txt": "8011fd7c754c98ddf112d879f64bede48438c2aa45ed03206500d90ed95b0214",
+    "provenance/source_contracts.json": "4df9b9939210f05afef982e26dc72c9ecc57f0d7e08bdbd23774ec87b96e3059",
+    "schemas/response_contract.schema.json": "e45dafc69401cecbb7613869142db3017f0001ad4940b77dd56380bb84557c26"
+  },
+  "manifest_version": "1.0.0",
+  "run_id": "P1V2Q2A-READINESS-DRY-20260802T025256562736Z"
+}

@@ -1,0 +1,11 @@
+{
+  "max_tokens": false,
+  "name": "openai-compatible-strict-json-schema",
+  "response_format": "strict_json_schema",
+  "seed": false,
+  "stream": false,
+  "temperature": false,
+  "tool_choice": false,
+  "tools": false,
+  "top_p": false
+}

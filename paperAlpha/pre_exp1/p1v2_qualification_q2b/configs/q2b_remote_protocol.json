@@ -1,0 +1,32 @@
+{
+  "protocol_version": "1.0.0",
+  "provider_kind": "openai_compatible_gateway",
+  "base_url_identity": "http://127.0.0.1:58661/v1",
+  "models_path": "/v1/models",
+  "chat_path": "/v1/chat/completions",
+  "model": "gpt-5.3-codex-spark",
+  "concurrency": 1,
+  "retry_count": 0,
+  "stream": false,
+  "timeout_seconds": 60,
+  "batch_wall_clock_seconds": 1200,
+  "request_contract": {
+    "user_message_count": 1,
+    "response_format_kind": "json_schema",
+    "optional_decoding_fields": {
+      "temperature": "not_sent",
+      "top_p": "not_sent",
+      "max_tokens": "not_sent",
+      "seed": "not_sent"
+    }
+  },
+  "stage_counts": {
+    "screen_gate": 8,
+    "screen_total": 32,
+    "confirmation_total": 96
+  },
+  "budget": {
+    "max_models_calls": 2,
+    "max_completion_calls": 128
+  }
+}

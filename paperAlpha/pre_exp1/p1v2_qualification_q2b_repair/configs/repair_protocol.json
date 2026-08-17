@@ -1,0 +1,11 @@
+{
+  "protocol_version": "1.0.0",
+  "artifact_kind": "derived_audit",
+  "is_derived_audit": true,
+  "is_new_run": false,
+  "original_run_id": "P1V2Q2B-REMOTE-20260802T033140463464Z",
+  "max_per_call_timeout_seconds": 60,
+  "batch_budget_seconds": 1200,
+  "required_metadata_calls_for_complete_identity": 2,
+  "required_fields": ["agent_role", "episode_id", "decision", "task_value"]
+}

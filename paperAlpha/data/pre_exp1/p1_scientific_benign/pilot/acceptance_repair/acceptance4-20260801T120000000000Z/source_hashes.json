@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "derived_repair_audit",
+  "audit_mode": "no_provider_reinterpretation",
+  "derived_from_run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z",
+  "execution_mode": "derived_repair_audit",
+  "is_derived_audit": true,
+  "is_new_p1_run": false,
+  "network_calls": 0,
+  "no_provider_calls": true,
+  "repair_id": "acceptance4-20260801T120000000000Z",
+  "source_artifact_hashes": {
+    "events": "8de3e520fe86b3b1be74104d2aa1762ef8ce7b8775be5033f9cc3c51f050d38e",
+    "manifest": "66c48af2d881f298bfa438cf7c3e8f07dde29b6a8a329382cc4d9525875f7ab1",
+    "outcomes": "b8887f9a2cb175e2ad885b77f315f30e710ada3321e251a31647c633e7d6e2ee",
+    "p1_gate_report": "3d85ec4412dd2f35d9e4a22a7f0ec65a600a092db7aa28998061253f2ad842cb",
+    "preflight_report": "d34fd7be744ca6bf16de4640e13a62466b7fb994f947baf1dbc74db18a0d0a1c",
+    "replay": "2b83c0bd3b3f36093943df1e153514a744e22a59d3d62e6c64be0d28c6af0f9b",
+    "run_report": "9f7d3a453ce5a4365ccd63fd027a4a863c5a040e138e263186ddd790dcdd6591",
+    "validation": "d34e490467d865c58bc70d98c382ff0ee71c0e88c68529ea91fffef2666bf5be",
+    "validation_report": "967326a3ed26fbf69db7e969f43eb9b0c88b50da5bcc458ede3fa992bf0ec9f8"
+  },
+  "source_execution_mode": "local_model_pilot",
+  "source_run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z"
+}

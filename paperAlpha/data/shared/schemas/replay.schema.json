@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "replay.schema.json",
+  "title": "pre_exp1 replay result",
+  "type": "object",
+  "required": [
+    "run_id",
+    "passed",
+    "execution_mode",
+    "pure_actions_applied",
+    "live_tool_calls",
+    "episodes"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "passed": {"type": "boolean"},
+    "execution_mode": {"const": "pure_state_actions"},
+    "pure_actions_applied": {"type": "integer", "minimum": 0},
+    "live_tool_calls": {"const": 0},
+    "episodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "episode_id",
+          "scenario",
+          "treatment",
+          "task_status",
+          "matched",
+          "expected_final_state_hash",
+          "actual_final_state_hash",
+          "pure_actions_applied",
+          "replayed_state"
+        ],
+        "properties": {
+          "episode_id": {"type": "string", "minLength": 1},
+          "scenario": {"type": "string", "minLength": 1},
+          "treatment": {"enum": ["original", "safe", "drop"]},
+          "task_status": {"enum": ["completed", "incomplete_information"]},
+          "matched": {"type": "boolean"},
+          "expected_final_state_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "actual_final_state_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "pure_actions_applied": {"type": "integer", "minimum": 0},
+          "replayed_state": {"type": "object"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

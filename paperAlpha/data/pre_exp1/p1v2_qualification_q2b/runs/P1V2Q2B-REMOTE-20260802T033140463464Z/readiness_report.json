@@ -1,0 +1,12 @@
+{
+  "credential_scope": "live_path_only",
+  "decision": "not_qualified",
+  "history_runtime_imports": [],
+  "live_scope": "single_frozen_q2b_batch",
+  "p1_p2_started": false,
+  "rejected_reasoning_persisted": false,
+  "report_version": "1.0.0",
+  "retry_count": 0,
+  "run_id": "P1V2Q2B-REMOTE-20260802T033140463464Z",
+  "server_error_bodies_persisted": false
+}

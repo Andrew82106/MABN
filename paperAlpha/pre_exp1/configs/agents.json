@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "agents": [
+    {
+      "agent_id": "information_extractor",
+      "role": "信息提取 Agent",
+      "allowed_tools": []
+    },
+    {
+      "agent_id": "coordinator",
+      "role": "协调 Agent",
+      "allowed_tools": []
+    },
+    {
+      "agent_id": "internal_data_query",
+      "role": "内部数据查询 Agent",
+      "allowed_tools": ["get_internal_vendor_record"]
+    },
+    {
+      "agent_id": "report_publisher",
+      "role": "报告发布 Agent",
+      "allowed_tools": ["publish_public_report"]
+    }
+  ]
+}

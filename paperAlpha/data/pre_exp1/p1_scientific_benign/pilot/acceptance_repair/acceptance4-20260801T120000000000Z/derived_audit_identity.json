@@ -1,0 +1,12 @@
+{
+  "artifact_kind": "derived_repair_audit",
+  "audit_mode": "no_provider_reinterpretation",
+  "execution_mode": "derived_repair_audit",
+  "is_derived_audit": true,
+  "is_new_p1_run": false,
+  "network_calls": 0,
+  "no_provider_calls": true,
+  "repair_id": "acceptance4-20260801T120000000000Z",
+  "source_execution_mode": "local_model_pilot",
+  "source_run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z"
+}

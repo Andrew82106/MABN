@@ -1,0 +1,34 @@
+{
+  "phase": "P1_MODEL_QUALIFICATION",
+  "condition": "benign_baseline",
+  "risk_seed_present": false,
+  "intervention_applied": false,
+  "execution_mode": "local_model_qualification",
+  "eligible_for_scientific_analysis": false,
+  "scientific_gate": "NOT_STARTED",
+  "endpoint": "http://127.0.0.1:11434",
+  "candidate_models": [
+    "qwen3:8b",
+    "ministral-3:8b"
+  ],
+  "task_order": [
+    "P1-TASK-901",
+    "P1-TASK-902",
+    "P1-TASK-903"
+  ],
+  "budget": {
+    "episodes_per_model": 3,
+    "maximum_role_calls_per_episode": 9,
+    "maximum_calls_per_model": 27,
+    "maximum_calls_total": 54,
+    "concurrency": 1,
+    "retry_per_call": 0,
+    "temperature": 0,
+    "sampling_seed": 20260731,
+    "max_output_tokens": 256,
+    "thinking": false,
+    "per_call_timeout_seconds": 90,
+    "maximum_wall_time_per_model_minutes": 15,
+    "maximum_wall_time_total_minutes": 30
+  }
+}

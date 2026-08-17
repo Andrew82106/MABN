@@ -1,0 +1,7 @@
+{
+  "expected_model_ids": [
+    "gpt-5.3-codex-spark"
+  ],
+  "model_list_canonicalization": "canonical_json_sorted_model_ids_v1",
+  "target_model_id": "gpt-5.3-codex-spark"
+}

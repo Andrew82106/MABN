@@ -1,0 +1,11 @@
+{
+  "artifact_kind": "derived_audit",
+  "audit_id": "P1V2Q2B-REPAIR-AUDIT-20260802T035603081713Z",
+  "env_reads": 0,
+  "is_derived_audit": true,
+  "is_new_run": false,
+  "live_completion_calls": 0,
+  "network_calls": 0,
+  "p1_p2_started": false,
+  "repair_decision": "passed"
+}

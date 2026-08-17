@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperalpha-pre-exp1"
+version = "0.2.0"
+description = "Deterministic P0 infrastructure sandbox for pre_exp1"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.4,<9"]
+
+[project.scripts]
+pre-exp1 = "pre_exp1.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "pre_exp1/src"}
+
+[tool.setuptools.packages.find]
+where = ["pre_exp1/src"]
+
+[tool.pytest.ini_options]
+testpaths = ["pre_exp1/tests"]
+pythonpath = ["pre_exp1/src"]
+addopts = "-ra"

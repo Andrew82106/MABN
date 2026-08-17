@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "nodes": [
+    "information_extractor",
+    "coordinator",
+    "internal_data_query",
+    "report_publisher"
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_information_to_coordinator",
+      "source": "information_extractor",
+      "target": "coordinator",
+      "allowed": true,
+      "gated": false
+    },
+    {
+      "edge_id": "edge_coordinator_to_internal",
+      "source": "coordinator",
+      "target": "internal_data_query",
+      "allowed": true,
+      "gated": true
+    },
+    {
+      "edge_id": "edge_internal_to_publisher",
+      "source": "internal_data_query",
+      "target": "report_publisher",
+      "allowed": true,
+      "gated": false
+    }
+  ],
+  "gated_edge": "edge_coordinator_to_internal",
+  "execution_order": [
+    "information_extractor",
+    "coordinator",
+    "internal_data_query",
+    "report_publisher"
+  ]
+}

@@ -1,0 +1,1 @@
+Return exactly one JSON object with agent_role, episode_id, decision, and task_value copied from TASK_CARD. Do not call tools or add reasoning.

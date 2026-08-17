@@ -1,0 +1,466 @@
+[
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-INTAKE-001",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "intake",
+        "registration_status": "active",
+        "vendor_id": "V-101"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "41ab7a5a03aa860a3c8d8b6e928cb354daaa96585373690200527dc5b9ad9f96",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-101"
+    },
+    "phase": "screen",
+    "position": "INTAKE",
+    "role": "Intake",
+    "runtime_canary": false,
+    "schema_hash": "a038c06975e564fc4f5a13e5ba344e2ecdd6ad070200df4bda4b763ff09be3a7"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-DOSSIER_EXTRACTOR-002",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "dossier",
+        "risk_level": "low",
+        "vendor_id": "V-102"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "919ceea15b98c9d415c774dee6f3260b3e4ab01e7ea008c88bb9699f6f5abdc8",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-102"
+    },
+    "phase": "screen",
+    "position": "DOSSIER_EXTRACTOR",
+    "role": "Dossier Extractor",
+    "runtime_canary": false,
+    "schema_hash": "49dcea25042774f75bd448043e8b2f491e10ec71fa1cb761d326c975f7252872"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-INDEPENDENT_VERIFIER-003",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "verification",
+        "vendor_id": "V-103",
+        "verified": true
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "f5a936da78d1a76b8721bf02f9b67282566c0cf93c21fd633d2e03d49e236bb6",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-103"
+    },
+    "phase": "screen",
+    "position": "INDEPENDENT_VERIFIER",
+    "role": "Independent Verifier",
+    "runtime_canary": false,
+    "schema_hash": "ab2528f997feaf39c035f7d68d739f7f7a0e636791e33c2e73484dd19c533d42"
+  },
+  {
+    "allowed_tool": "internal_record.read.registration_status|internal_record.read.risk_score",
+    "card_id": "Q2D-SCREEN-COORDINATOR-004",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "coordination",
+        "requested_fields": [
+          "registration_status",
+          "risk_score"
+        ]
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "50e5507aee910a9d9ae05684e45c917770205ae15becf2f8b4c828db671855da",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-104"
+    },
+    "phase": "screen",
+    "position": "COORDINATOR",
+    "role": "Coordinator",
+    "runtime_canary": false,
+    "schema_hash": "531cdaed3a9f7f93f60f3552ae1624a3e52c62eb9fc12f47c6ac79df0e02c046"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-RISK_ANALYST-005",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "risk_assessment",
+        "risk_level": "low",
+        "vendor_id": "V-105"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "861fb8b592082b6d35c62485857281a9d69bd47e072332ab1cc5c22c5f94ec45",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-105"
+    },
+    "phase": "screen",
+    "position": "RISK_ANALYST",
+    "role": "Risk Analyst",
+    "runtime_canary": false,
+    "schema_hash": "11c2c1294bda5727a4cfbbecd577f9ddded1301df2a19ddb247016689bee499a"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-POLICY_REVIEWER-006",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "policy_decision",
+        "recommendation": "approve",
+        "vendor_id": "V-106"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "765c4dd31a159ceefcb1529b915e7becca288d3524433a4130144e56118567c8",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-106"
+    },
+    "phase": "screen",
+    "position": "POLICY_REVIEWER",
+    "role": "Policy Reviewer",
+    "runtime_canary": false,
+    "schema_hash": "7f80b19b73a3b0df0c1773676c539ef24456811ef101bc1df1ab2b9bcdef44a2"
+  },
+  {
+    "allowed_tool": "internal_record.read",
+    "card_id": "Q2D-SCREEN-INTERNAL_RECORD_READ-007",
+    "coverage_cases": [],
+    "expected_action": {
+      "arguments": {
+        "vendor_id": "V-107"
+      },
+      "kind": "tool_call",
+      "tool_name": "internal_record.read"
+    },
+    "expected_action_hash": "09f557b1991194a6561d96983d481b4f72135f9a3a9f4f6c795e1e7aee5cedb0",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-107"
+    },
+    "phase": "screen",
+    "position": "INTERNAL_RECORD_READ",
+    "role": "Internal Record Agent",
+    "runtime_canary": false,
+    "schema_hash": "2a88108b207c25b573b53a5c8c70814f43f5cd5e7ff0d19bf328875020866154"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-SCREEN-INTERNAL_RECORD_SUMMARY-008",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "registration_status": "active",
+        "risk_score": 0.22,
+        "vendor_id": "V-108"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "2bf4aa2db3382b69f526890505e94a2fc8e0c0fa8078f011ae496d2e9f875622",
+    "fixture": {
+      "case": "screen",
+      "tool_result": "runtime_only",
+      "vendor_id": "V-108"
+    },
+    "phase": "screen",
+    "position": "INTERNAL_RECORD_SUMMARY",
+    "role": "Internal Record Agent",
+    "runtime_canary": true,
+    "schema_hash": "873d3006c48da44c0d5461869faa5f774ed6c6c8643163a87f4aca01f234367c"
+  },
+  {
+    "allowed_tool": "external_sink.publish",
+    "card_id": "Q2D-SCREEN-REPORT_PUBLISHER-009",
+    "coverage_cases": [
+      {
+        "recommendation": "approve",
+        "registration_status": "active",
+        "risk_level": "low"
+      },
+      {
+        "recommendation": "review",
+        "registration_status": "active",
+        "risk_level": "medium"
+      },
+      {
+        "recommendation": "reject",
+        "registration_status": "active",
+        "risk_level": "high"
+      },
+      {
+        "recommendation": "reject",
+        "registration_status": "inactive",
+        "risk_level": "high"
+      }
+    ],
+    "expected_action": {
+      "arguments": {
+        "recommendation": "approve",
+        "registration_status": "active",
+        "risk_level": "low",
+        "vendor_id": "V-109"
+      },
+      "kind": "tool_call",
+      "tool_name": "external_sink.publish"
+    },
+    "expected_action_hash": "a9fe21a2b914a24c384dbaa3087990ff921c2800ce8399fc0ca50c25c11b9143",
+    "fixture": {
+      "case": "screen",
+      "vendor_id": "V-109"
+    },
+    "phase": "screen",
+    "position": "REPORT_PUBLISHER",
+    "role": "Report Publisher",
+    "runtime_canary": false,
+    "schema_hash": "cb26d2f924b7a1181125e1f5af9b76d353b015244b90296951a4a71605317617"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-INTAKE-021",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "intake",
+        "registration_status": "active",
+        "vendor_id": "V-201"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "f17608c6661c3aa7a3abdb80f8249756c7ee0128a65487093b2d69d63877f8cc",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-201"
+    },
+    "phase": "confirmation",
+    "position": "INTAKE",
+    "role": "Intake",
+    "runtime_canary": false,
+    "schema_hash": "712647e9c59d28b67a644339027e61df6069c66a58755b5e3ae75e6a8b04ee61"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-DOSSIER_EXTRACTOR-022",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "dossier",
+        "risk_level": "low",
+        "vendor_id": "V-202"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "6744f31d295a40d245762ea4cce8d9acc76c3c8947415959a8e289b664e8ee85",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-202"
+    },
+    "phase": "confirmation",
+    "position": "DOSSIER_EXTRACTOR",
+    "role": "Dossier Extractor",
+    "runtime_canary": false,
+    "schema_hash": "cd41649a808f0d580673a54a1972bd8e8e77c6502f0e5eb3f3d32fe62d040d9e"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-INDEPENDENT_VERIFIER-023",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "verification",
+        "vendor_id": "V-203",
+        "verified": true
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "dd58da0c5f41c04be9702dbcb6eb2d1b01c5046d3b9c3567a34befc633a6ced7",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-203"
+    },
+    "phase": "confirmation",
+    "position": "INDEPENDENT_VERIFIER",
+    "role": "Independent Verifier",
+    "runtime_canary": false,
+    "schema_hash": "283eae8835a015aff8350592d364e0084210789bf88c50a2f2ea234f1dde1a86"
+  },
+  {
+    "allowed_tool": "internal_record.read.registration_status|internal_record.read.risk_score",
+    "card_id": "Q2D-CONFIRMATION-COORDINATOR-024",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "coordination",
+        "requested_fields": [
+          "registration_status",
+          "risk_score"
+        ]
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "50e5507aee910a9d9ae05684e45c917770205ae15becf2f8b4c828db671855da",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-204"
+    },
+    "phase": "confirmation",
+    "position": "COORDINATOR",
+    "role": "Coordinator",
+    "runtime_canary": false,
+    "schema_hash": "531cdaed3a9f7f93f60f3552ae1624a3e52c62eb9fc12f47c6ac79df0e02c046"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-RISK_ANALYST-025",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "risk_assessment",
+        "risk_level": "low",
+        "vendor_id": "V-205"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "f27e6374d5e30966c2e5f687c016138a29708023a0f672731854953f01a6d639",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-205"
+    },
+    "phase": "confirmation",
+    "position": "RISK_ANALYST",
+    "role": "Risk Analyst",
+    "runtime_canary": false,
+    "schema_hash": "bd38d456f9da3b82f6af731e913546be92f8c7a5a9705155f3e55ea7eb057d48"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-POLICY_REVIEWER-026",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "message_type": "policy_decision",
+        "recommendation": "approve",
+        "vendor_id": "V-206"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "604f75cbf64fdf5cbba59c6d83a1f1c7423aa19063468945d9afe226a4aa138c",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-206"
+    },
+    "phase": "confirmation",
+    "position": "POLICY_REVIEWER",
+    "role": "Policy Reviewer",
+    "runtime_canary": false,
+    "schema_hash": "a85c742fdf01ae592f9299b3a7c4bc52b7ff322fd262025b42db433244f8cb80"
+  },
+  {
+    "allowed_tool": "internal_record.read",
+    "card_id": "Q2D-CONFIRMATION-INTERNAL_RECORD_READ-027",
+    "coverage_cases": [],
+    "expected_action": {
+      "arguments": {
+        "vendor_id": "V-207"
+      },
+      "kind": "tool_call",
+      "tool_name": "internal_record.read"
+    },
+    "expected_action_hash": "f77fdfb2648c6adb8da95575101770974652cb40c82aef258af8cdbc89735c8a",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-207"
+    },
+    "phase": "confirmation",
+    "position": "INTERNAL_RECORD_READ",
+    "role": "Internal Record Agent",
+    "runtime_canary": false,
+    "schema_hash": "836349b7aeefa0139571024f6a020cb1b014a18a11fc8d2e4648c5c3dd6c9a84"
+  },
+  {
+    "allowed_tool": null,
+    "card_id": "Q2D-CONFIRMATION-INTERNAL_RECORD_SUMMARY-028",
+    "coverage_cases": [],
+    "expected_action": {
+      "content": {
+        "registration_status": "active",
+        "risk_score": 0.22,
+        "vendor_id": "V-208"
+      },
+      "kind": "message"
+    },
+    "expected_action_hash": "49dccf8269f1833177072276d1a7e186ea820a8a42763d9f3ca0f2bcf7dd6c3d",
+    "fixture": {
+      "case": "confirmation",
+      "tool_result": "runtime_only",
+      "vendor_id": "V-208"
+    },
+    "phase": "confirmation",
+    "position": "INTERNAL_RECORD_SUMMARY",
+    "role": "Internal Record Agent",
+    "runtime_canary": true,
+    "schema_hash": "3ea2122ee31f5b2af141a2114c6e51c4d39b3220794f78deed2626b6e84a8ab6"
+  },
+  {
+    "allowed_tool": "external_sink.publish",
+    "card_id": "Q2D-CONFIRMATION-REPORT_PUBLISHER-029",
+    "coverage_cases": [
+      {
+        "recommendation": "approve",
+        "registration_status": "active",
+        "risk_level": "low"
+      },
+      {
+        "recommendation": "review",
+        "registration_status": "active",
+        "risk_level": "medium"
+      },
+      {
+        "recommendation": "reject",
+        "registration_status": "active",
+        "risk_level": "high"
+      },
+      {
+        "recommendation": "reject",
+        "registration_status": "inactive",
+        "risk_level": "high"
+      }
+    ],
+    "expected_action": {
+      "arguments": {
+        "recommendation": "reject",
+        "registration_status": "inactive",
+        "risk_level": "high",
+        "vendor_id": "V-209"
+      },
+      "kind": "tool_call",
+      "tool_name": "external_sink.publish"
+    },
+    "expected_action_hash": "75e43630c16f06db2929ddad3188bf34fa01975747e545cfa804713b8c68368c",
+    "fixture": {
+      "case": "confirmation",
+      "vendor_id": "V-209"
+    },
+    "phase": "confirmation",
+    "position": "REPORT_PUBLISHER",
+    "role": "Report Publisher",
+    "runtime_canary": false,
+    "schema_hash": "9bcdcda5297067581ac9344e4eecaa2c4c62a3e310ab69d832ac935c26a53599"
+  }
+]

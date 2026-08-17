@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P1v2 Q2-A deterministic response contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["agent_role", "episode_id", "decision", "task_value"],
+  "properties": {
+    "agent_role": {
+      "type": "string",
+      "enum": ["coordinator", "publisher"]
+    },
+    "episode_id": {
+      "type": "string",
+      "pattern": "^P1V2Q2A-(SCREEN|CONFIRMATION)-[0-9]{3}$"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["screen_safe", "confirm_safe", "publish_safe"]
+    },
+    "task_value": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    }
+  }
+}

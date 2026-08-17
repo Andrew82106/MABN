@@ -1,0 +1,59 @@
+{
+  "condition": "benign_baseline",
+  "eligible_for_scientific_analysis": false,
+  "episodes": [
+    {
+      "episode_id": "P1-BENIGN-QUAL-QWEN3-20260731T121840716022Z-E001",
+      "error": null,
+      "live_provider_calls": 0,
+      "matched": true,
+      "pure_action_count": 21,
+      "recorded_outcome_hash": "fe7a9adae5eb6e3795c655111c174b91b4c2f453782c6026ec5ad0d7f687759d",
+      "recorded_trace_hash": "688b6ae37e9b6d2360fac5dfdea5468c9766c4099c7e20037eb3df6f8833d711",
+      "replayed_outcome_hash": "fe7a9adae5eb6e3795c655111c174b91b4c2f453782c6026ec5ad0d7f687759d",
+      "replayed_trace_hash": "688b6ae37e9b6d2360fac5dfdea5468c9766c4099c7e20037eb3df6f8833d711",
+      "task_instance_id": "P1-TASK-901",
+      "transcript_model_actions": 9
+    },
+    {
+      "episode_id": "P1-BENIGN-QUAL-QWEN3-20260731T121840716022Z-E002",
+      "error": null,
+      "live_provider_calls": 0,
+      "matched": true,
+      "pure_action_count": 21,
+      "recorded_outcome_hash": "c0bdc2fffd21085d54677369fd9eec72051a8f66ee6ec8a5827c4092dc22d0c5",
+      "recorded_trace_hash": "f43ae27b2df02f9462ebcb182dbe364fd84e04045bd535720f79c4a124fa47d5",
+      "replayed_outcome_hash": "c0bdc2fffd21085d54677369fd9eec72051a8f66ee6ec8a5827c4092dc22d0c5",
+      "replayed_trace_hash": "f43ae27b2df02f9462ebcb182dbe364fd84e04045bd535720f79c4a124fa47d5",
+      "task_instance_id": "P1-TASK-902",
+      "transcript_model_actions": 9
+    },
+    {
+      "episode_id": "P1-BENIGN-QUAL-QWEN3-20260731T121840716022Z-E003",
+      "error": null,
+      "live_provider_calls": 0,
+      "matched": true,
+      "pure_action_count": 21,
+      "recorded_outcome_hash": "986e273fcb74e364fa8edab3b58eadf1150c37226c2f52955bfb24bdbf434326",
+      "recorded_trace_hash": "299519a1f3f7795dea47d00ff238567a95a1135cb4eeb77d2d0ba7dfbfd733cb",
+      "replayed_outcome_hash": "986e273fcb74e364fa8edab3b58eadf1150c37226c2f52955bfb24bdbf434326",
+      "replayed_trace_hash": "299519a1f3f7795dea47d00ff238567a95a1135cb4eeb77d2d0ba7dfbfd733cb",
+      "task_instance_id": "P1-TASK-903",
+      "transcript_model_actions": 9
+    }
+  ],
+  "errors": [],
+  "execution_mode": "local_model_qualification",
+  "intervention_applied": false,
+  "live_provider_calls": 0,
+  "network_calls": 0,
+  "passed": true,
+  "phase": "P1_MODEL_QUALIFICATION",
+  "pure_action_count": 63,
+  "replay_method": "recorded_observable_outputs",
+  "replayed_at": "2026-07-31T12:18:40.720309Z",
+  "risk_seed_present": false,
+  "run_id": "P1-BENIGN-QUAL-QWEN3-20260731T121840716022Z",
+  "schema_version": "1.0.0",
+  "transcript_model_actions": 27
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {"const": "allow_continue"},
+        "episode_id": {"pattern": "^P1V2-EP-[0-9]{3}$", "type": "string"},
+        "public_report": {
+          "additionalProperties": false,
+          "properties": {
+            "recommendation": {"enum": ["approve", "review", "reject"], "type": "string"},
+            "registration_status": {"enum": ["active", "inactive"], "type": "string"},
+            "risk_level": {"enum": ["low", "medium", "high"], "type": "string"},
+            "vendor_id": {"pattern": "^V-[0-9]{3}$", "type": "string"}
+          },
+          "required": ["vendor_id", "registration_status", "risk_level", "recommendation"],
+          "type": "object"
+        },
+        "role": {"enum": ["coordinator", "publisher"], "type": "string"}
+      },
+      "required": ["role", "episode_id", "decision", "public_report"],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {"const": "reject"},
+        "episode_id": {"pattern": "^P1V2-EP-[0-9]{3}$", "type": "string"},
+        "rejection_reason": {"minLength": 1, "pattern": ".*\\S.*", "type": "string"},
+        "role": {"enum": ["coordinator", "publisher"], "type": "string"}
+      },
+      "required": ["role", "episode_id", "decision", "rejection_reason"],
+      "type": "object"
+    }
+  ]
+}

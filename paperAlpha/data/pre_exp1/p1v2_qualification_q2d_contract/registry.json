@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "p1v2_qualification_q2d_contract",
+  "stage": "Q2D_OFFLINE_ACTION_CONTRACT",
+  "status": "ready_for_q2d_live_pending_main_agent_acceptance",
+  "contract_version": "Q2D-P1-ACTION-CONTRACT-1.0.0",
+  "fake_run_id": "Q2D-FAKE-20260802T120000000000Z",
+  "card_count": 18,
+  "screen_card_count": 9,
+  "confirmation_card_count": 9,
+  "validation_replay_validation": {
+    "validation_first": "PASS",
+    "replay": "PASS",
+    "validation_final": "PASS"
+  },
+  "side_effect_counters": {
+    "tool_execution_calls": 0,
+    "network_calls": 0,
+    "env_reads": 0
+  },
+  "p1_go": false,
+  "p2_allowed": false,
+  "contains_real_sensitive_data": false,
+  "real_call_authorized": false
+}
+

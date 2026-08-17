@@ -1,0 +1,7 @@
+{
+  "rule_version": "1.0.0",
+  "public_sink_role": "publisher",
+  "allowed_fields": ["agent_role", "episode_id", "decision", "task_value"],
+  "coordinator_may_write_public_sink": false,
+  "unstarted_cards_may_write_public_sink": false
+}

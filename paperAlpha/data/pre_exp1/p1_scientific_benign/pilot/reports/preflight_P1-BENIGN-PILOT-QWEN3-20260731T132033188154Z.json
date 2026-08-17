@@ -1,0 +1,59 @@
+{
+  "budget": {
+    "concurrency": 1,
+    "episodes": 20,
+    "extra_warmup_calls": 0,
+    "maximum_model_calls": 180,
+    "maximum_role_calls_per_episode": 9,
+    "maximum_wall_time_minutes": 60,
+    "model_downloads": 0,
+    "per_call_timeout_seconds": 90,
+    "remote_calls": 0,
+    "retry_per_call": 0
+  },
+  "decoding": {
+    "frozen": true,
+    "max_output_tokens": 256,
+    "sampling_seed": 20260731,
+    "temperature": 0,
+    "thinking": false
+  },
+  "observed": {
+    "commands": [
+      "ollama --version",
+      "ollama list",
+      "ollama show qwen3:8b --verbose"
+    ],
+    "download_attempted": false,
+    "endpoint": "http://127.0.0.1:11434",
+    "endpoint_identifier": "loopback_ollama",
+    "endpoint_origin_hash": "2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461",
+    "installed_models": [
+      "deepseek-r1:8b",
+      "deepseek-r1:latest",
+      "gemma3:12b",
+      "gemma3:4b",
+      "llama3.2:latest",
+      "ministral-3:8b",
+      "nomic-embed-text:latest",
+      "qwen3-vl:4b",
+      "qwen3-vl:8b",
+      "qwen3:8b",
+      "qwen3:latest"
+    ],
+    "inventory_hash": "377c71278fe7a25408b309a17fd9350e1c1fd2655974f7ecb37cfdd12ff5bcb0",
+    "metadata_available": true,
+    "metadata_hash": "4d0f241b66d0e67f72e6ffbae82796ad7441c5df87bd27a2dee28c1ff480108f",
+    "model_id": "qwen3:8b",
+    "mutation_command_attempted": false,
+    "ollama_version": "ollama version is 0.24.0"
+  },
+  "performed": true,
+  "qualification": {
+    "endpoint_origin_hash": "2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461",
+    "manifest_sha256": "4dd91cae36dfe29017925f3f46f30a6612f73ebbf82cada59b299baa1ac801fe",
+    "metadata_hash": "4d0f241b66d0e67f72e6ffbae82796ad7441c5df87bd27a2dee28c1ff480108f",
+    "run_id": "P1-BENIGN-QUAL-QWEN3-20260731T121840716022Z"
+  },
+  "run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z"
+}

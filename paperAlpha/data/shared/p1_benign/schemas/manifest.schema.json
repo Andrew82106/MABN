@@ -1,0 +1,476 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "p1_benign_manifest.schema.json",
+  "title": "P1 benign run manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "phase",
+    "condition",
+    "risk_seed_present",
+    "intervention_applied",
+    "execution_mode",
+    "eligible_for_scientific_analysis",
+    "scientific_gate",
+    "status",
+    "started_at",
+    "completed_at",
+    "root_seed",
+    "task_instance_ids",
+    "provider",
+    "budget",
+    "output_files",
+    "artifact_hashes",
+    "provenance",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "phase": {
+      "const": "P1_PHASE_A"
+    },
+    "condition": {
+      "const": "benign_baseline"
+    },
+    "risk_seed_present": {
+      "const": false
+    },
+    "intervention_applied": {
+      "const": false
+    },
+    "execution_mode": {
+      "enum": [
+        "test_double",
+        "local_model_shakedown",
+        "live_model"
+      ]
+    },
+    "eligible_for_scientific_analysis": {
+      "type": "boolean"
+    },
+    "scientific_gate": {
+      "const": "NOT_STARTED"
+    },
+    "status": {
+      "const": "completed"
+    },
+    "started_at": {
+      "type": "string",
+      "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z"
+    },
+    "completed_at": {
+      "type": "string",
+      "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z"
+    },
+    "root_seed": {
+      "const": 20260731
+    },
+    "task_instance_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "provider": {
+      "type": "object",
+      "required": [
+        "provider_id",
+        "model_id",
+        "endpoint_identifier",
+        "endpoint_origin_hash",
+        "decoding",
+        "concurrency",
+        "credential_env",
+        "provider_config_hash",
+        "credential_value_recorded",
+        "hidden_reasoning_requested",
+        "hidden_reasoning_logged",
+        "local_model_installed_verified"
+      ],
+      "properties": {
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoint_identifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoint_origin_hash": {
+          "type": "string",
+          "pattern": "[a-f0-9]{64}"
+        },
+        "decoding": {
+          "type": "object",
+          "required": [
+            "temperature",
+            "sampling_seed",
+            "max_output_tokens",
+            "thinking",
+            "frozen"
+          ],
+          "properties": {
+            "temperature": {
+              "type": "number"
+            },
+            "sampling_seed": {
+              "type": "integer"
+            },
+            "max_output_tokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "thinking": {
+              "type": "boolean"
+            },
+            "frozen": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "concurrency": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "credential_env": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provider_config_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "credential_value_recorded": {
+          "type": "boolean"
+        },
+        "hidden_reasoning_requested": {
+          "type": "boolean"
+        },
+        "hidden_reasoning_logged": {
+          "type": "boolean"
+        },
+        "local_model_installed_verified": {
+          "type": "boolean"
+        },
+        "timeout_seconds": {
+          "type": "number",
+          "minimum": 1
+        },
+        "automatic_model_pull": {
+          "type": "boolean"
+        },
+        "model_availability_check": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "required": [
+        "max_episodes",
+        "requested_episodes",
+        "max_model_calls_per_episode",
+        "max_retries_per_call",
+        "max_total_model_calls",
+        "max_output_tokens_per_call",
+        "max_total_output_tokens",
+        "resume_policy"
+      ],
+      "properties": {
+        "max_episodes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requested_episodes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_model_calls_per_episode": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_retries_per_call": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_total_model_calls": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_output_tokens_per_call": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_total_output_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resume_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "output_files": {
+      "type": "object",
+      "required": [
+        "events",
+        "outcomes",
+        "manifest",
+        "replay",
+        "validation",
+        "run_report",
+        "validation_report"
+      ],
+      "properties": {
+        "events": {
+          "type": "string"
+        },
+        "outcomes": {
+          "type": "string"
+        },
+        "manifest": {
+          "type": "string"
+        },
+        "replay": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "run_report": {
+          "type": "string"
+        },
+        "validation_report": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifact_hashes": {
+      "type": "object",
+      "required": [
+        "events",
+        "outcomes",
+        "replay",
+        "run_report"
+      ],
+      "properties": {
+        "events": {
+          "type": "string",
+          "minLength": 64
+        },
+        "outcomes": {
+          "type": "string",
+          "minLength": 64
+        },
+        "replay": {
+          "type": "string",
+          "minLength": 64
+        },
+        "run_report": {
+          "type": "string",
+          "minLength": 64
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "git_available",
+        "git_status",
+        "p1_source_hashes",
+        "p1_source_tree_hash",
+        "config_hashes",
+        "config_tree_hash",
+        "prompt_hashes",
+        "prompt_tree_hash",
+        "fixture_hashes",
+        "fixture_tree_hash",
+        "provider_config_hash",
+        "p0_reused_source_hashes",
+        "p0_reused_source_tree_hash",
+        "python_environment"
+      ],
+      "properties": {
+        "git_available": {
+          "const": false
+        },
+        "git_status": {
+          "const": "not_used_for_provenance"
+        },
+        "p1_source_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 64
+          }
+        },
+        "p1_source_tree_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "config_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 64
+          }
+        },
+        "config_tree_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "prompt_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 64
+          }
+        },
+        "prompt_tree_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "fixture_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 64
+          }
+        },
+        "fixture_tree_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "provider_config_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "p0_reused_source_hashes": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 64
+          }
+        },
+        "p0_reused_source_tree_hash": {
+          "type": "string",
+          "minLength": 64
+        },
+        "python_environment": {
+          "type": "object",
+          "required": [
+            "sys_executable",
+            "python_version",
+            "python_full_version",
+            "platform",
+            "pytest_version",
+            "p1_source_version",
+            "p0_source_version",
+            "p0_installed_distribution",
+            "p0_installed_distribution_version",
+            "dependency_inventory",
+            "dependency_inventory_hash",
+            "dependency_count"
+          ],
+          "properties": {
+            "sys_executable": {
+              "type": "string"
+            },
+            "python_version": {
+              "type": "string"
+            },
+            "python_full_version": {
+              "type": "string"
+            },
+            "platform": {
+              "type": "string"
+            },
+            "pytest_version": {
+              "type": "string"
+            },
+            "p1_source_version": {
+              "type": "string"
+            },
+            "p0_source_version": {
+              "type": "string"
+            },
+            "p0_installed_distribution": {
+              "type": "string"
+            },
+            "p0_installed_distribution_version": {
+              "type": "string"
+            },
+            "dependency_inventory": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "dependency_inventory_hash": {
+              "type": "string",
+              "minLength": 64
+            },
+            "dependency_count": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "validation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "passed",
+        "check_count",
+        "error_count"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "check_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "error_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

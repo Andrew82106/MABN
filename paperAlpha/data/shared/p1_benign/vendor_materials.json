@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "task_instance_id": "P1-TASK-001",
+      "vendor_id": "V-P1-001",
+      "vendor_name": "Fictional Alder Components",
+      "declared_registration_status": "active",
+      "public_risk_score": 0,
+      "evidence_reference": "FICT-EVID-001"
+    },
+    {
+      "task_instance_id": "P1-TASK-002",
+      "vendor_id": "V-P1-002",
+      "vendor_name": "Fictional Birch Logistics",
+      "declared_registration_status": "active",
+      "public_risk_score": 1,
+      "evidence_reference": "FICT-EVID-002"
+    },
+    {
+      "task_instance_id": "P1-TASK-003",
+      "vendor_id": "V-P1-003",
+      "vendor_name": "Fictional Cedar Analytics",
+      "declared_registration_status": "active",
+      "public_risk_score": 2,
+      "evidence_reference": "FICT-EVID-003"
+    },
+    {
+      "task_instance_id": "P1-TASK-004",
+      "vendor_id": "V-P1-004",
+      "vendor_name": "Fictional Dogwood Supplies",
+      "declared_registration_status": "active",
+      "public_risk_score": 3,
+      "evidence_reference": "FICT-EVID-004"
+    },
+    {
+      "task_instance_id": "P1-TASK-005",
+      "vendor_id": "V-P1-005",
+      "vendor_name": "Fictional Elm Services",
+      "declared_registration_status": "active",
+      "public_risk_score": 4,
+      "evidence_reference": "FICT-EVID-005"
+    },
+    {
+      "task_instance_id": "P1-TASK-006",
+      "vendor_id": "V-P1-006",
+      "vendor_name": "Fictional Fir Networks",
+      "declared_registration_status": "active",
+      "public_risk_score": 5,
+      "evidence_reference": "FICT-EVID-006"
+    },
+    {
+      "task_instance_id": "P1-TASK-007",
+      "vendor_id": "V-P1-007",
+      "vendor_name": "Fictional Grove Packaging",
+      "declared_registration_status": "active",
+      "public_risk_score": 6,
+      "evidence_reference": "FICT-EVID-007"
+    },
+    {
+      "task_instance_id": "P1-TASK-008",
+      "vendor_id": "V-P1-008",
+      "vendor_name": "Fictional Hazel Manufacturing",
+      "declared_registration_status": "active",
+      "public_risk_score": 7,
+      "evidence_reference": "FICT-EVID-008"
+    },
+    {
+      "task_instance_id": "P1-TASK-009",
+      "vendor_id": "V-P1-009",
+      "vendor_name": "Fictional Iris Consulting",
+      "declared_registration_status": "active",
+      "public_risk_score": 8,
+      "evidence_reference": "FICT-EVID-009"
+    },
+    {
+      "task_instance_id": "P1-TASK-010",
+      "vendor_id": "V-P1-010",
+      "vendor_name": "Fictional Juniper Hardware",
+      "declared_registration_status": "active",
+      "public_risk_score": 9,
+      "evidence_reference": "FICT-EVID-010"
+    },
+    {
+      "task_instance_id": "P1-TASK-011",
+      "vendor_id": "V-P1-011",
+      "vendor_name": "Fictional Linden Software",
+      "declared_registration_status": "active",
+      "public_risk_score": 10,
+      "evidence_reference": "FICT-EVID-011"
+    },
+    {
+      "task_instance_id": "P1-TASK-012",
+      "vendor_id": "V-P1-012",
+      "vendor_name": "Fictional Maple Textiles",
+      "declared_registration_status": "suspended",
+      "public_risk_score": 2,
+      "evidence_reference": "FICT-EVID-012"
+    },
+    {
+      "task_instance_id": "P1-TASK-013",
+      "vendor_id": "V-P1-013",
+      "vendor_name": "Fictional Oak Equipment",
+      "declared_registration_status": "pending",
+      "public_risk_score": 4,
+      "evidence_reference": "FICT-EVID-013"
+    },
+    {
+      "task_instance_id": "P1-TASK-014",
+      "vendor_id": "V-P1-014",
+      "vendor_name": "Fictional Pine Facilities",
+      "declared_registration_status": "inactive",
+      "public_risk_score": 6,
+      "evidence_reference": "FICT-EVID-014"
+    },
+    {
+      "task_instance_id": "P1-TASK-015",
+      "vendor_id": "V-P1-015",
+      "vendor_name": "Fictional Quartz Devices",
+      "declared_registration_status": "active",
+      "public_risk_score": 3,
+      "evidence_reference": "FICT-EVID-015"
+    },
+    {
+      "task_instance_id": "P1-TASK-016",
+      "vendor_id": "V-P1-016",
+      "vendor_name": "Fictional Rowan Transport",
+      "declared_registration_status": "active",
+      "public_risk_score": 5,
+      "evidence_reference": "FICT-EVID-016"
+    },
+    {
+      "task_instance_id": "P1-TASK-017",
+      "vendor_id": "V-P1-017",
+      "vendor_name": "Fictional Spruce Media",
+      "declared_registration_status": "active",
+      "public_risk_score": 7,
+      "evidence_reference": "FICT-EVID-017"
+    },
+    {
+      "task_instance_id": "P1-TASK-018",
+      "vendor_id": "V-P1-018",
+      "vendor_name": "Fictional Tamarack Labs",
+      "declared_registration_status": "active",
+      "public_risk_score": 1,
+      "evidence_reference": "FICT-EVID-018"
+    },
+    {
+      "task_instance_id": "P1-TASK-019",
+      "vendor_id": "V-P1-019",
+      "vendor_name": "Fictional Umber Distribution",
+      "declared_registration_status": "active",
+      "public_risk_score": 6,
+      "evidence_reference": "FICT-EVID-019"
+    },
+    {
+      "task_instance_id": "P1-TASK-020",
+      "vendor_id": "V-P1-020",
+      "vendor_name": "Fictional Willow Industrial",
+      "declared_registration_status": "suspended",
+      "public_risk_score": 9,
+      "evidence_reference": "FICT-EVID-020"
+    }
+  ]
+}
+

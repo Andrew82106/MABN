@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "providers": [
+    {
+      "provider_id": "deterministic_test",
+      "provider_type": "test_double",
+      "usage_scope": "engineering_test_only",
+      "allowed_for_automated_experiment": true,
+      "eligible_for_scientific_analysis": false,
+      "endpoint": null,
+      "credential_env": null,
+      "allowed_models": [
+        "deterministic-p1-v1"
+      ]
+    },
+    {
+      "provider_id": "ollama_local",
+      "provider_type": "local",
+      "usage_scope": "local_engineering_shakedown_only",
+      "allowed_for_automated_experiment": true,
+      "eligible_for_scientific_analysis": false,
+      "endpoint": "http://127.0.0.1:11434",
+      "credential_env": null,
+      "allowed_models": [
+        "qwen3:8b"
+      ],
+      "automatic_model_pull": false,
+      "concurrency": 1
+    },
+    {
+      "provider_id": "openai_compatible_remote",
+      "provider_type": "remote",
+      "usage_scope": "future_automated_experiment_if_separately_authorized",
+      "allowed_for_automated_experiment": true,
+      "eligible_for_scientific_analysis": true,
+      "endpoint": null,
+      "credential_env": "P1_REMOTE_API_KEY",
+      "allowed_models": []
+    },
+    {
+      "provider_id": "xfyun_astron_coding_plan",
+      "provider_type": "remote",
+      "usage_scope": "interactive_coding_only",
+      "allowed_for_automated_experiment": false,
+      "eligible_for_scientific_analysis": false,
+      "endpoint": "https://maas-coding-api.cn-huabei-1.xf-yun.com/v2",
+      "credential_env": "XFYUN_ASTRON_CODING_API_KEY",
+      "allowed_models": [
+        "xsparkx2agent",
+        "xopglm5",
+        "xopglm52",
+        "xopdeepseekv4pro",
+        "xopdeepseekv4flash",
+        "xopkimik26",
+        "xopglm51",
+        "xopqwen36v35b",
+        "xopqwen35397b"
+      ],
+      "executable_by_p1": false
+    }
+  ]
+}
+

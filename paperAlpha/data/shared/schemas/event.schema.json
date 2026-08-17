@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "event.schema.json",
+  "title": "pre_exp1 event",
+  "type": "object",
+  "required": [
+    "run_id",
+    "episode_id",
+    "event_id",
+    "event_type",
+    "timestamp",
+    "agent_id",
+    "edge_id",
+    "treatment",
+    "payload_hash",
+    "state_before_hash",
+    "state_after_hash",
+    "details"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "episode_id": {"type": "string", "minLength": 1},
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "minLength": 1},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "agent_id": {"type": ["string", "null"]},
+    "edge_id": {"type": ["string", "null"]},
+    "treatment": {"type": ["string", "null"]},
+    "payload_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "state_before_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "state_after_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "details": {"type": "object"}
+  },
+  "additionalProperties": false
+}

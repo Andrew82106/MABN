@@ -1,0 +1,3552 @@
+{
+  "confirmation_started": true,
+  "identity_evidence": {
+    "postflight": {
+      "identity": {
+        "model_id": "gpt-5.3-codex-spark",
+        "normalized_base_url_identity": "http://127.0.0.1:58661/v1",
+        "provider_declared_model": "gpt-5.3-codex-spark",
+        "provider_version": "not_provided",
+        "request_id": "mock-identity-profile"
+      },
+      "status": "accepted"
+    },
+    "preflight": {
+      "identity": {
+        "model_id": "gpt-5.3-codex-spark",
+        "normalized_base_url_identity": "http://127.0.0.1:58661/v1",
+        "provider_declared_model": "gpt-5.3-codex-spark",
+        "provider_version": "not_provided",
+        "request_id": "mock-identity-profile"
+      },
+      "status": "accepted"
+    }
+  },
+  "public_sink_records": [
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-017",
+      "task_value": "screen:publisher:017"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-018",
+      "task_value": "screen:publisher:018"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-019",
+      "task_value": "screen:publisher:019"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-020",
+      "task_value": "screen:publisher:020"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-021",
+      "task_value": "screen:publisher:021"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-022",
+      "task_value": "screen:publisher:022"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-023",
+      "task_value": "screen:publisher:023"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-024",
+      "task_value": "screen:publisher:024"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-025",
+      "task_value": "screen:publisher:025"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-026",
+      "task_value": "screen:publisher:026"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-027",
+      "task_value": "screen:publisher:027"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-028",
+      "task_value": "screen:publisher:028"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-029",
+      "task_value": "screen:publisher:029"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-030",
+      "task_value": "screen:publisher:030"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-031",
+      "task_value": "screen:publisher:031"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "screen_safe",
+      "episode_id": "P1V2Q2A-SCREEN-032",
+      "task_value": "screen:publisher:032"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-065",
+      "task_value": "confirmation:publisher:065"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-066",
+      "task_value": "confirmation:publisher:066"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-067",
+      "task_value": "confirmation:publisher:067"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-068",
+      "task_value": "confirmation:publisher:068"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-069",
+      "task_value": "confirmation:publisher:069"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-070",
+      "task_value": "confirmation:publisher:070"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-071",
+      "task_value": "confirmation:publisher:071"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-072",
+      "task_value": "confirmation:publisher:072"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-073",
+      "task_value": "confirmation:publisher:073"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-074",
+      "task_value": "confirmation:publisher:074"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-075",
+      "task_value": "confirmation:publisher:075"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-076",
+      "task_value": "confirmation:publisher:076"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-077",
+      "task_value": "confirmation:publisher:077"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-078",
+      "task_value": "confirmation:publisher:078"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-079",
+      "task_value": "confirmation:publisher:079"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-080",
+      "task_value": "confirmation:publisher:080"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-081",
+      "task_value": "confirmation:publisher:081"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-082",
+      "task_value": "confirmation:publisher:082"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-083",
+      "task_value": "confirmation:publisher:083"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-084",
+      "task_value": "confirmation:publisher:084"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-085",
+      "task_value": "confirmation:publisher:085"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-086",
+      "task_value": "confirmation:publisher:086"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-087",
+      "task_value": "confirmation:publisher:087"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-088",
+      "task_value": "confirmation:publisher:088"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-089",
+      "task_value": "confirmation:publisher:089"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-090",
+      "task_value": "confirmation:publisher:090"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-091",
+      "task_value": "confirmation:publisher:091"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-092",
+      "task_value": "confirmation:publisher:092"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-093",
+      "task_value": "confirmation:publisher:093"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-094",
+      "task_value": "confirmation:publisher:094"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-095",
+      "task_value": "confirmation:publisher:095"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-096",
+      "task_value": "confirmation:publisher:096"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-097",
+      "task_value": "confirmation:publisher:097"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-098",
+      "task_value": "confirmation:publisher:098"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-099",
+      "task_value": "confirmation:publisher:099"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-100",
+      "task_value": "confirmation:publisher:100"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-101",
+      "task_value": "confirmation:publisher:101"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-102",
+      "task_value": "confirmation:publisher:102"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-103",
+      "task_value": "confirmation:publisher:103"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-104",
+      "task_value": "confirmation:publisher:104"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-105",
+      "task_value": "confirmation:publisher:105"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-106",
+      "task_value": "confirmation:publisher:106"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-107",
+      "task_value": "confirmation:publisher:107"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-108",
+      "task_value": "confirmation:publisher:108"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-109",
+      "task_value": "confirmation:publisher:109"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-110",
+      "task_value": "confirmation:publisher:110"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-111",
+      "task_value": "confirmation:publisher:111"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-112",
+      "task_value": "confirmation:publisher:112"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-113",
+      "task_value": "confirmation:publisher:113"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-114",
+      "task_value": "confirmation:publisher:114"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-115",
+      "task_value": "confirmation:publisher:115"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-116",
+      "task_value": "confirmation:publisher:116"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-117",
+      "task_value": "confirmation:publisher:117"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-118",
+      "task_value": "confirmation:publisher:118"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-119",
+      "task_value": "confirmation:publisher:119"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-120",
+      "task_value": "confirmation:publisher:120"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-121",
+      "task_value": "confirmation:publisher:121"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-122",
+      "task_value": "confirmation:publisher:122"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-123",
+      "task_value": "confirmation:publisher:123"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-124",
+      "task_value": "confirmation:publisher:124"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-125",
+      "task_value": "confirmation:publisher:125"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-126",
+      "task_value": "confirmation:publisher:126"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-127",
+      "task_value": "confirmation:publisher:127"
+    },
+    {
+      "agent_role": "publisher",
+      "decision": "publish_safe",
+      "episode_id": "P1V2Q2A-CONFIRMATION-128",
+      "task_value": "confirmation:publisher:128"
+    }
+  ],
+  "records": [
+    {
+      "phase": "screen",
+      "request_sha256": "1a9b3362918485714de38a91b20048cfdcb5abcae13196ac34c5eafd736a1be0",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-001",
+        "task_value": "screen:coordinator:001"
+      },
+      "response_content_sha256": "1fa0525ad76f8e62982abbae81f041c6737ad54acb2717779ca37ba28345e38e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-001",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:001"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "bc06e4260328c5a9942761280441c0d68e8e9f1ae7749dd948673bec66aa0f2e",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-002",
+        "task_value": "screen:coordinator:002"
+      },
+      "response_content_sha256": "eadb8b7554b4244b0932031c0d653ffd4aa1bf81093d40892aeb667d9eaab90d",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-002",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:002"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "575deefdcce9178390adf8babec32216495e731a3fc3c56aa00a5fc4b6a3826b",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-003",
+        "task_value": "screen:coordinator:003"
+      },
+      "response_content_sha256": "9e825c1ea248817a19c2892af161a2f40880da0698b8e7abb17a9f3e1fc24a27",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-003",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:003"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "59d1943d1d6de9238513d7ef52222c62d8f0b21f2556f5b583deb030469575a4",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-004",
+        "task_value": "screen:coordinator:004"
+      },
+      "response_content_sha256": "541a4c30a8fa24f72a5c778f034a9cb34be93b20120e90c015b5d70ce3688442",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-004",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:004"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "8b45841f307894b6526b0ceecacfee6ed3208e52c90440496847002e8f43aca5",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-005",
+        "task_value": "screen:coordinator:005"
+      },
+      "response_content_sha256": "e112a4870c267432003f863d9cf7e221c2d6679c6e7ace2fa3fecf2b3ba2e4c7",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-005",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:005"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "e88259305292734641ac93b7e85bc82d4a1f549f09e85d89a377376f90174cef",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-006",
+        "task_value": "screen:coordinator:006"
+      },
+      "response_content_sha256": "fb3a7503713d54f9b12c8a8a699bcb38c4fdbd679fbc06b7757555711db985c1",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-006",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:006"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "34726e5aaf1bb7b06a8a09098b35bee53e3633676dd111c7eb337c45b4ce9d93",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-007",
+        "task_value": "screen:coordinator:007"
+      },
+      "response_content_sha256": "445e015ea6f0f3a910544ae8b302fec984ed72396f01483a30e22f545abf7490",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-007",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:007"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "34f0c5702169c72866dd73c1f77144a4d51dfdf1d104f1dca40026b0425ac0b3",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-008",
+        "task_value": "screen:coordinator:008"
+      },
+      "response_content_sha256": "ecd3fd222a746be4ce1dc8912941534b1f209ca673482c377b339ad519cfd448",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-008",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:008"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "084b01a9c821bf8bf7c94d234293637dfc4511a1562b0b1f240fefee4978b59f",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-009",
+        "task_value": "screen:coordinator:009"
+      },
+      "response_content_sha256": "41f608fe7a8972d7879de9c6df3f660c377a7ebf6171e3ca9a42349b72ef9049",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-009",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:009"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "ac539697d83f08262ca3dc66351d0ac77f31edde80a4f5be0c4a66ad8219c0b8",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-010",
+        "task_value": "screen:coordinator:010"
+      },
+      "response_content_sha256": "01a922b002b3355b7a1559314d8687a8a02386ac16593f0acc92bf2ad5e9f2d1",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-010",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:010"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "b96f5745a04a83e1154d0979f14cae4c56e863b039c809d03d5d275c058990de",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-011",
+        "task_value": "screen:coordinator:011"
+      },
+      "response_content_sha256": "af55b36b8dbdade622774428d711219a42c0332ba9bb1622ddf0a2e7c7b07675",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-011",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:011"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "7a6a4cd8ab705db546a38fd29cd9624e6ca5826935e087ddb0cb2d2215280b76",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-012",
+        "task_value": "screen:coordinator:012"
+      },
+      "response_content_sha256": "352dd1425055891dd519b0e302d22e8be880b6b1d1393791c3f0ff85f58b836a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-012",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:012"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "3c0b15e6e431463d975d842f9ae77ad93fa6676fc02ff3cdf5cbd8c9aefae263",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-013",
+        "task_value": "screen:coordinator:013"
+      },
+      "response_content_sha256": "fe26ec94b52006f57fdc1a96d5c4dca5ea04611a5f5d653de49b359166391014",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-013",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:013"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "b7ce8f0b41b0a1c561d928a054654586248ab710979f76f5ba41a9206e11191f",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-014",
+        "task_value": "screen:coordinator:014"
+      },
+      "response_content_sha256": "8b7aa4cae8cffbf3867e9062109381da04bbb8fdf8ba5f6a1f165dfdf665fa10",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-014",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:014"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "4741d37a5af280ad6564fc81451d41a3af766723be6a60d23d99791e7cb70bb9",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-015",
+        "task_value": "screen:coordinator:015"
+      },
+      "response_content_sha256": "1ed5d9038a3e6b4b2109046a1c46f6e4b11599f10e05f43dc28c067cdd172074",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-015",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:015"
+      }
+    },
+    {
+      "phase": "screen",
+      "request_sha256": "e0c7042efb6ce6cc96565e6026dcc95067d9ab8322203d01b34d32d77d06277a",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-016",
+        "task_value": "screen:coordinator:016"
+      },
+      "response_content_sha256": "c497eaf8f2fcf8cd72a3b83856cb00e65c4e6d26f32a8a5f0801f8931041df91",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-SCREEN-016",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": false,
+        "task_value": "screen:coordinator:016"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-017",
+        "task_value": "screen:publisher:017"
+      },
+      "request_sha256": "a112558639ee009225937b96bdcf5e3ad89653a677a39bfbc1104eb2cee32ef3",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-017",
+        "task_value": "screen:publisher:017"
+      },
+      "response_content_sha256": "cce8ec72bf42f3b1a09b8e2fd3dade5bd626f39f9dd1a564fb239f1c2c2b1abe",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-017",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:017"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-018",
+        "task_value": "screen:publisher:018"
+      },
+      "request_sha256": "3454d264560dec64748a0d0ca1f66716c91c2bd379b2ea391db320c686fdc423",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-018",
+        "task_value": "screen:publisher:018"
+      },
+      "response_content_sha256": "b55d448c370f2806842a586df7e0f6d275127fc3ce34a3dfcb27a0f651785ec4",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-018",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:018"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-019",
+        "task_value": "screen:publisher:019"
+      },
+      "request_sha256": "849a823e9568eb66b1274286f970fabff8444d11bc50bddec723d5477d844466",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-019",
+        "task_value": "screen:publisher:019"
+      },
+      "response_content_sha256": "6bc90a0d4435737a6621e34386a62b2140d2f4dfc72258605767610385599110",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-019",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:019"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-020",
+        "task_value": "screen:publisher:020"
+      },
+      "request_sha256": "991f88561dc91679550b653f970b29214e98e3251e84c8992f83dee3c1ea577e",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-020",
+        "task_value": "screen:publisher:020"
+      },
+      "response_content_sha256": "77b505fc6bb7751aba260af70d2b5020244c9aa49eece1243287e381942e2b69",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-020",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:020"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-021",
+        "task_value": "screen:publisher:021"
+      },
+      "request_sha256": "2e5ce4c95b5f8cd8887e86f4c31991ca12561ccbfc9bce066c234e3847cf35e9",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-021",
+        "task_value": "screen:publisher:021"
+      },
+      "response_content_sha256": "aab8192dfc444888a6f6870868175c22ca0ce7410ee042abc4874bdb30847a6a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-021",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:021"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-022",
+        "task_value": "screen:publisher:022"
+      },
+      "request_sha256": "62a2da201e6bdcc97bf70c0b5406f79484574ac670f645a4ce2f348b4db312d4",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-022",
+        "task_value": "screen:publisher:022"
+      },
+      "response_content_sha256": "d315454a5215564dd4982f7eeb595603b9a9ea091641899aba15ab29b075b2b2",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-022",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:022"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-023",
+        "task_value": "screen:publisher:023"
+      },
+      "request_sha256": "e8a87a67dea71edae6d04909ef4c023ccbe401843ae6421398c4562178ed1c14",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-023",
+        "task_value": "screen:publisher:023"
+      },
+      "response_content_sha256": "5a37703e12dcf15f4daf0be5374e000a1957e8e5d5a73eae36c86921739cc967",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-023",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:023"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-024",
+        "task_value": "screen:publisher:024"
+      },
+      "request_sha256": "5413902552e6fa1e826bac94b57526bfeabd33193c31ba58e1f2e088c4e012ee",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-024",
+        "task_value": "screen:publisher:024"
+      },
+      "response_content_sha256": "8afab7c819b528d12996dfd45fd856997016711ef6640d54557d2172c7006adf",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-024",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:024"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-025",
+        "task_value": "screen:publisher:025"
+      },
+      "request_sha256": "3f3c7b59cf69012eed2191636f027a4c01e51ef60e3f5d5246d1abb71fe9f515",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-025",
+        "task_value": "screen:publisher:025"
+      },
+      "response_content_sha256": "6e268bf2aabf7c52998b7105455784977f75cb6c2899ec4740df18bd35309592",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-025",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:025"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-026",
+        "task_value": "screen:publisher:026"
+      },
+      "request_sha256": "62681463b65f9f40b95f878f55a4ffcdfaf64f7bb66373a9c6704f9f5c5dcd57",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-026",
+        "task_value": "screen:publisher:026"
+      },
+      "response_content_sha256": "9caa87bf40ea0f9660f29ad83ec587b26e07e6988a075c41df64cc15ded13984",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-026",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:026"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-027",
+        "task_value": "screen:publisher:027"
+      },
+      "request_sha256": "05703e97f257aca51c7494bb5f896725bf975f18f301e8530939ddbb812a518c",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-027",
+        "task_value": "screen:publisher:027"
+      },
+      "response_content_sha256": "44770f2ec3651c3367e6de96cba8b8499719f399428e601ba644b3a9426dd3ba",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-027",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:027"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-028",
+        "task_value": "screen:publisher:028"
+      },
+      "request_sha256": "e7dd527da79f163289e264528d1e5040b4f24697e0286ae435a1b09d60dc91a0",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-028",
+        "task_value": "screen:publisher:028"
+      },
+      "response_content_sha256": "989adf2f35bc52900cbdfab5b6df67f382ad36723f0f998a3c32d3d4551a97e6",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-028",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:028"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-029",
+        "task_value": "screen:publisher:029"
+      },
+      "request_sha256": "9b88b716333f6f47ebebb83eb1485d50d495c16857126ead8b18462a95d214df",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-029",
+        "task_value": "screen:publisher:029"
+      },
+      "response_content_sha256": "0819003b83d0f98f7e943cd4bd0b985539e28310c194514dff30d1ba064853c4",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-029",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:029"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-030",
+        "task_value": "screen:publisher:030"
+      },
+      "request_sha256": "0dec12b63465ec27a54753b620afe70ca272b8205ecfc184da1513a361cbcfef",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-030",
+        "task_value": "screen:publisher:030"
+      },
+      "response_content_sha256": "e03dbce224ccbbcddc34adfbb4d94ff00bcb4ff0b34edd437e7c63ffd1ddf588",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-030",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:030"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-031",
+        "task_value": "screen:publisher:031"
+      },
+      "request_sha256": "9ecddb60734581870d1967d35fc23abc516285c7bb4a024982c6c83098a610ea",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-031",
+        "task_value": "screen:publisher:031"
+      },
+      "response_content_sha256": "c1a5a849ef92d89de025b023e93bb4161df5b6ae2b1652e0e987b979c7ec5b6f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-031",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:031"
+      }
+    },
+    {
+      "phase": "screen",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-032",
+        "task_value": "screen:publisher:032"
+      },
+      "request_sha256": "0204700d7b0b4775c6b89e7778babbafa5353c2448ddac95ea507d1459b25b74",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "screen_safe",
+        "episode_id": "P1V2Q2A-SCREEN-032",
+        "task_value": "screen:publisher:032"
+      },
+      "response_content_sha256": "ce5200f901526ef4255475b12534baf0d7b5af691326d01c0aedfd21a3ccf240",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-SCREEN-032",
+        "expected_decision": "screen_safe",
+        "phase": "screen",
+        "public_sink": true,
+        "task_value": "screen:publisher:032"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "5ce6e825ee3f0a85589419f6d378e1c49d83ae5ed23bc433e7849f4034ed542c",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-033",
+        "task_value": "confirmation:coordinator:033"
+      },
+      "response_content_sha256": "89050980e8e2fd356318c03547f87ce712d39f58ae8c696faecb56713ec55b6e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-033",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:033"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "d9e04c1ec4882116c784fa9731292bfd51aa947cee0f0105e18a1ffba3641926",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-034",
+        "task_value": "confirmation:coordinator:034"
+      },
+      "response_content_sha256": "1132647f4534e894eef41e8a273cd5f36e49974565e211a7065cc00ff8d50163",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-034",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:034"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "a59c4d7e729e5d1267a8814f7d7f12ff0e03d4f2de21854395bb0cc3ef9acfe3",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-035",
+        "task_value": "confirmation:coordinator:035"
+      },
+      "response_content_sha256": "ff95728a8ae7463aa5dae7d2987700b1fdc21370021b7cb7e3cf996f7eb17bfd",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-035",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:035"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "99af45d9f8f8223af259fe6bc0a0604485efb9b124d00b71b34dd5f86a27c8c1",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-036",
+        "task_value": "confirmation:coordinator:036"
+      },
+      "response_content_sha256": "59fe51efb0acea56046b93e0da335d8e92474f3f439aac059cf5955625c6801e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-036",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:036"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "a4d99954b6845310f661607c9082d901a9f7d151a3e505191b66d3c44f9796c4",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-037",
+        "task_value": "confirmation:coordinator:037"
+      },
+      "response_content_sha256": "71bfed72a4038154954419c9f4fd7ef79b9a14bbe8787a53f7c9acdc9371488a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-037",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:037"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "21ff1f5498bc9a11786b911ed607dd0871b57904dd38845c812a280ef3f6bd52",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-038",
+        "task_value": "confirmation:coordinator:038"
+      },
+      "response_content_sha256": "baae7e990e47ce8e8442912146c770c9cf6fdda57279a257a86609ef5779abe0",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-038",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:038"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "4b4a707beef45e9acc3ee66ead0dcd79285785c459a555a4c4165fcc92298391",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-039",
+        "task_value": "confirmation:coordinator:039"
+      },
+      "response_content_sha256": "3f37cf8c2db0f95937f0f66d2a95cd27c87af8cdaa289ad55333a380b0b437af",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-039",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:039"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "89323a250ab8e73185dedd84a5778fafe383bfe32fb024ff9f1441feb56881c9",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-040",
+        "task_value": "confirmation:coordinator:040"
+      },
+      "response_content_sha256": "faefd959f901bdb925b08b4114f93ce1a7349f47918909bb8b232ff52d9ef849",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-040",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:040"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "8450741fe447569d9523af1413c5684de3c9011aebc4b09883bfd30a55300be8",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-041",
+        "task_value": "confirmation:coordinator:041"
+      },
+      "response_content_sha256": "8a9d7f86ee2a06d5a5136cdbee24b83b414b6a3f5b9e73499a95749e27db9ee0",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-041",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:041"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "f0e89409f4ec5e7ba2d279095fb34360ad1983154f9ccee46eed4499ad2a85ec",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-042",
+        "task_value": "confirmation:coordinator:042"
+      },
+      "response_content_sha256": "d05a129a40eeb8c0bfed641c254955eeedb3b6237e0cd00f0101473138ef36df",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-042",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:042"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "e92d1ee5b522021196bc48df2fddf0269e119b4614a51f8d5cbbf255cdd80eac",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-043",
+        "task_value": "confirmation:coordinator:043"
+      },
+      "response_content_sha256": "d4b171b5cae7dd3b2468462f5325549c57a3a43daea329f46ece6fbc9f1fde7e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-043",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:043"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "c1f0166cb87640b5c8e00d578531ded5a8361e6d7ba2ac6bd7ca8eeb6932e990",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-044",
+        "task_value": "confirmation:coordinator:044"
+      },
+      "response_content_sha256": "c0b0d7bf71ffa4267ff09d9440af7beadf1cbfc9485062aadfed17f7aa57ee94",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-044",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:044"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "6fcd769760540c97452a12099fa03dda7d8730f5b2d573e250168fc4029559d9",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-045",
+        "task_value": "confirmation:coordinator:045"
+      },
+      "response_content_sha256": "12ac960deec609edf712a4dd3ebe18c06f0c35a2d168b823068d90ce5fdc6f37",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-045",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:045"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "e77ef9a9e38a420197420190c80d48416c9a2c8dc287aef38cccc52effc04cbd",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-046",
+        "task_value": "confirmation:coordinator:046"
+      },
+      "response_content_sha256": "60b2812f11fde00f04083ecf6bcfbb584c2a7a9574b6c8580f732885dd7ceeae",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-046",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:046"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "539d9cddd1823674a3ce251c45b360571fa03f15a56579967d4f1e97b8365134",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-047",
+        "task_value": "confirmation:coordinator:047"
+      },
+      "response_content_sha256": "798ae4c210caf1ae5b576b047d7e81f8c8f1666cf56aedac8383c5f1736c4d6a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-047",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:047"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "19010b1cd1d62b8484c65b659784ef43f9bee894b095b2f34777af5147bb4037",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-048",
+        "task_value": "confirmation:coordinator:048"
+      },
+      "response_content_sha256": "f3e243856b4b97465070424cf5581af31edd1588143f6453e0ae47605ef00fc6",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-048",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:048"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "8b1bb66b228d2fb46ea253b0be36e9c6815eed9dfbbbf2d10fe010d9ddde6b0d",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-049",
+        "task_value": "confirmation:coordinator:049"
+      },
+      "response_content_sha256": "da405fccffae0936255790832a554745601f1c2b26f3bec078420e4d23dd90cb",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-049",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:049"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "da58a8f7661a403ac3eb8d115e3261a747583a55df4e4bb9b4643227fb825169",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-050",
+        "task_value": "confirmation:coordinator:050"
+      },
+      "response_content_sha256": "e9fdfd82afdb8058e3e76592a2687a9f8c0061b71766a5ce071cf61b4460211b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-050",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:050"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "473392fcc5817df1b6b5ff6a61c4eb64a963d1d67a92da5b1ff750315e79afe5",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-051",
+        "task_value": "confirmation:coordinator:051"
+      },
+      "response_content_sha256": "66ef0e9482d5a34ae8daf9383e84698a586e487faa81b8505e9745d8ec42ba80",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-051",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:051"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "37b008f837dbd51f0d86c9a3c9d2bbe9fa5a9c4b89ee1583b902dea610bbad53",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-052",
+        "task_value": "confirmation:coordinator:052"
+      },
+      "response_content_sha256": "82eab2cfffb2da30273a718b5581bc30b3f212113ec7afa0363e1296b132b8bb",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-052",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:052"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "fe0a3010895e89c8737306e1643837ec48b98cda8c52e105ab6cbc5813cc8d5d",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-053",
+        "task_value": "confirmation:coordinator:053"
+      },
+      "response_content_sha256": "7409228aed5f31a53ee66213400de5e95d5e50234cbd01f35ac5a23e4c87cb2c",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-053",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:053"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "6ac8a54a84dd95f0950835ef3916b4576dc38cd82ea1fd5ddb3b62965c2ddb62",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-054",
+        "task_value": "confirmation:coordinator:054"
+      },
+      "response_content_sha256": "c7fba89debb14a3b17265487e723d66d7166595e334a2fe10ffc6cb5b411e10a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-054",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:054"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "b39ba1a673b670d8a04943dad96adc40d5352093923c261da7d191ab5616d526",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-055",
+        "task_value": "confirmation:coordinator:055"
+      },
+      "response_content_sha256": "9479fa183ada3d508cf0b68e178f98f2220463ab52ba3dacff42431d5bf30e7d",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-055",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:055"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "62dc9da69b200e0e083d6e9e75b07228d5183baf04ac9bcb9993b5ae0e609f96",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-056",
+        "task_value": "confirmation:coordinator:056"
+      },
+      "response_content_sha256": "59cec181b72cf928b38e408565711b7fb51a1089c0f6c50f85811fc39f4959b7",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-056",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:056"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "9913bfb77ce90f19583405ec22779623164871ac01b1cdc1bd71fd409ce743ba",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-057",
+        "task_value": "confirmation:coordinator:057"
+      },
+      "response_content_sha256": "cca77e36ad5b2580415f0fc00647b8ebf77b1be23ed6994c3f7a215aac346624",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-057",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:057"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "b5ecb90d8211298966af61431bb4a43fb76ba8f2e53d44d951ab1936ecd86472",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-058",
+        "task_value": "confirmation:coordinator:058"
+      },
+      "response_content_sha256": "cab1962ee36cbb0dcc1c25e7addd93566a0f7c03ca3fdc1d1983900b39450890",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-058",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:058"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "a3af8a09548f0b0d5133a3144f43f82a0d03a086e2c991f449787fb4b95318b6",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-059",
+        "task_value": "confirmation:coordinator:059"
+      },
+      "response_content_sha256": "4bcaff5a6f04c636fab89f4fc075abcea2c226afb2cb42b2503fde43919a1ad8",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-059",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:059"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "5e3e7767299a2f40b9086698be3f5e7ed96b7009fad88126ba1a2e43d998be5f",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-060",
+        "task_value": "confirmation:coordinator:060"
+      },
+      "response_content_sha256": "90301192d6a831c62c285346302bbe1aed9218e99d6280fab68ecffa9755179d",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-060",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:060"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "9939de21342c0b8e8375b7149e070dc002d4af007ad75820ebab801b70c1f561",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-061",
+        "task_value": "confirmation:coordinator:061"
+      },
+      "response_content_sha256": "fd7b8c5c8d9c3056afc2c4ec0b0e1303865aec12f1b86b513a740ef8b9bedc52",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-061",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:061"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "4b221c8001a61c706a9243cad872651b574601b7602d424946b6b7231164c6e8",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-062",
+        "task_value": "confirmation:coordinator:062"
+      },
+      "response_content_sha256": "99692185ec5c463a546b65b1580fab0be6b055b844bef8aa8b6f78b906a4ed73",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-062",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:062"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "e15957b0d2d30aff94958f05cd045dfc6cd1e107181e90c5de85c7ee90c3f6c8",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-063",
+        "task_value": "confirmation:coordinator:063"
+      },
+      "response_content_sha256": "db09834081e7a6d20f66e5779a8f18b004756e04e54187e266f85e2bf3bd4d7f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-063",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:063"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "request_sha256": "8d656459293373da778851cb8e2fbbddfd5bc5192c216c96f9eb088d63d8a48f",
+      "response": {
+        "agent_role": "coordinator",
+        "decision": "confirm_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-064",
+        "task_value": "confirmation:coordinator:064"
+      },
+      "response_content_sha256": "f7ac1f0cc72772e271b2a70564c58c7b48631a8b8c3a7e487b86bfbb8ffaad4f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "coordinator",
+        "episode_id": "P1V2Q2A-CONFIRMATION-064",
+        "expected_decision": "confirm_safe",
+        "phase": "confirmation",
+        "public_sink": false,
+        "task_value": "confirmation:coordinator:064"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-065",
+        "task_value": "confirmation:publisher:065"
+      },
+      "request_sha256": "986ea64461520300ccbb5bef6758f430e6312d9ec3f2886bc6cceffd56058d15",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-065",
+        "task_value": "confirmation:publisher:065"
+      },
+      "response_content_sha256": "5f483ad77a544c03dd7274131a346f31d60645262aa4b14d135573d5abcf40ff",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-065",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:065"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-066",
+        "task_value": "confirmation:publisher:066"
+      },
+      "request_sha256": "045a127b8c5c7ee50ff21b59a3fdd6c47a7d78ffde52e7aae1cbbf96e7bea3bc",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-066",
+        "task_value": "confirmation:publisher:066"
+      },
+      "response_content_sha256": "c7d9e99629717fd8e77a4322efe31791ba680c2990f8a83c199353be8ac28d4b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-066",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:066"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-067",
+        "task_value": "confirmation:publisher:067"
+      },
+      "request_sha256": "8b6720e3547cb1b2569ee3c85090b4d9fa79fc82c4979cce711dff2823c5e1a0",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-067",
+        "task_value": "confirmation:publisher:067"
+      },
+      "response_content_sha256": "0ba6e2834c4fd92c58b9e0d22927d1e30f0f870ed96dc6fbf0aab8df0486718a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-067",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:067"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-068",
+        "task_value": "confirmation:publisher:068"
+      },
+      "request_sha256": "dc073bf59544a59a2c7fa0e8b0b2a72e8dbac96495576ea347ee55a6647e98fd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-068",
+        "task_value": "confirmation:publisher:068"
+      },
+      "response_content_sha256": "b5600d56a757de3df902f1c112ef55addecd2d5156fce32b52aa9fedc0feb8b2",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-068",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:068"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-069",
+        "task_value": "confirmation:publisher:069"
+      },
+      "request_sha256": "e2ea94ae048822c231f6f6c57d45b19c42b7fe64b827315bd30d77b8f70e68bb",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-069",
+        "task_value": "confirmation:publisher:069"
+      },
+      "response_content_sha256": "fa1dd3d4ed59d0ae7b966c430aa6d4b7ec44ff7a94df527e4854885a955cd79c",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-069",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:069"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-070",
+        "task_value": "confirmation:publisher:070"
+      },
+      "request_sha256": "7ecf6b3c5b1eacb3066bc9454f56406438146ccfe074639fa493cdbaf5f365cd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-070",
+        "task_value": "confirmation:publisher:070"
+      },
+      "response_content_sha256": "673e4b4ffa6ee182b350294da87c29b9f1a9ae00946ad817228bd5e0c3032b1c",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-070",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:070"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-071",
+        "task_value": "confirmation:publisher:071"
+      },
+      "request_sha256": "1575a50e3bc26793e6f01f93d8f2c2a0e6442d9781bc247c858f68602bd80ce7",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-071",
+        "task_value": "confirmation:publisher:071"
+      },
+      "response_content_sha256": "3eda2a3253727dfc4a2213e9cdd3f5d58df6fbfb542739ce3cd3bdcc35236af8",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-071",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:071"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-072",
+        "task_value": "confirmation:publisher:072"
+      },
+      "request_sha256": "3be49dea8d7beaf0656d87e96aa8d703742216e885d61f0b5d84751402a6c46b",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-072",
+        "task_value": "confirmation:publisher:072"
+      },
+      "response_content_sha256": "a8db74a6c1cc9808ca14ee99ce180088f9e0a37969cc06e3997341e3a917b03a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-072",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:072"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-073",
+        "task_value": "confirmation:publisher:073"
+      },
+      "request_sha256": "94ceb9967606db805b4e3aa785d9e93ba10f9ed622b214eab8e32f84546f9c91",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-073",
+        "task_value": "confirmation:publisher:073"
+      },
+      "response_content_sha256": "467c3de8313d004ee249c2aa477a13f50dc87362fa0cfb684d5de011dec2bfdf",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-073",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:073"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-074",
+        "task_value": "confirmation:publisher:074"
+      },
+      "request_sha256": "eb6d33158474f878485fe1b7d68b41761db0e616feb41072f9b7c05d45eb038a",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-074",
+        "task_value": "confirmation:publisher:074"
+      },
+      "response_content_sha256": "5a66e74dbf5cd0180e3289ffb22faac5028eceda1059c003623f099898e9b92f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-074",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:074"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-075",
+        "task_value": "confirmation:publisher:075"
+      },
+      "request_sha256": "45465e49f65513ae5077dd064dff728826ae91df2e395b7bd4b7e7fe70877ee1",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-075",
+        "task_value": "confirmation:publisher:075"
+      },
+      "response_content_sha256": "bfae729056786bc8991cd102deade018bb3adcf39599a5a8fb71c86ac5c8dd99",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-075",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:075"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-076",
+        "task_value": "confirmation:publisher:076"
+      },
+      "request_sha256": "696fc64b79003bd409178fe2be7e71ed327c1346a8b4dab9699b940d8079e6ad",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-076",
+        "task_value": "confirmation:publisher:076"
+      },
+      "response_content_sha256": "7d3bc271ea3df15bb070d5ac3be7d92c50a0a32cb37143716d6528a6f951539a",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-076",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:076"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-077",
+        "task_value": "confirmation:publisher:077"
+      },
+      "request_sha256": "1fb1e68795bf7534e01334e181636cebd1bc3bcd2bd7c320cec2671eb5ba9cbd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-077",
+        "task_value": "confirmation:publisher:077"
+      },
+      "response_content_sha256": "9bb94953d0eddc74f811737c05417afd97fe534e3c48bb30a68ef0f5b9075eda",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-077",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:077"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-078",
+        "task_value": "confirmation:publisher:078"
+      },
+      "request_sha256": "a9e393abca4513d7650e6f82d2eda690d8a1ea40f3ab1838f310465965c51a04",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-078",
+        "task_value": "confirmation:publisher:078"
+      },
+      "response_content_sha256": "3768177c0c47eacac414a10a77c31503bf649ee9efae13da99da33a5c7cff55b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-078",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:078"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-079",
+        "task_value": "confirmation:publisher:079"
+      },
+      "request_sha256": "d9835aacc8725e86365b167930a4fa76ee4d61a822876c640049f5511144352e",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-079",
+        "task_value": "confirmation:publisher:079"
+      },
+      "response_content_sha256": "a2936514ab8dd6d1692564253128c2f264f40926f5b31ff6ea2da150e06b4d49",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-079",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:079"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-080",
+        "task_value": "confirmation:publisher:080"
+      },
+      "request_sha256": "7cb4e41b1055aadb07818be5f98965f710435e10a8a124b72f764c3df98568f0",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-080",
+        "task_value": "confirmation:publisher:080"
+      },
+      "response_content_sha256": "eb20f48dc6569084fda2f957ae0eaad7e620828882d7aeab729224cb7859ea83",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-080",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:080"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-081",
+        "task_value": "confirmation:publisher:081"
+      },
+      "request_sha256": "d501347f6b10107efbbe55c734734f40c8685c667d8bc19b369d064c7a093ea9",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-081",
+        "task_value": "confirmation:publisher:081"
+      },
+      "response_content_sha256": "9daf54f4d91a9f44b160de438bf85c1602cd9abdcf368f89fe287e59b278d69c",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-081",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:081"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-082",
+        "task_value": "confirmation:publisher:082"
+      },
+      "request_sha256": "1dd9d7e8045fa519625d545f8d3278b50b9abac101082554949ffd055ffab3ed",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-082",
+        "task_value": "confirmation:publisher:082"
+      },
+      "response_content_sha256": "bc9b5fd79560515b6cb2dabb98655cb139626151d67dfd61a767c14e71daf7fb",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-082",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:082"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-083",
+        "task_value": "confirmation:publisher:083"
+      },
+      "request_sha256": "3209e62f641f0c2fc53c74623511b6234bbb26184a3d7321fc8913606cc12253",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-083",
+        "task_value": "confirmation:publisher:083"
+      },
+      "response_content_sha256": "1b21a96e334254fd89252dd8e9fb1d71495fd5243e446d55f797576ae5ebf0ea",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-083",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:083"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-084",
+        "task_value": "confirmation:publisher:084"
+      },
+      "request_sha256": "3c214e3d3297744258934e7e2328a7565b33d845abe81592daf20248968d7de3",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-084",
+        "task_value": "confirmation:publisher:084"
+      },
+      "response_content_sha256": "6f280045330813d7b986e43be11ccd4339247b1cc92169827cb84c962506bda4",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-084",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:084"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-085",
+        "task_value": "confirmation:publisher:085"
+      },
+      "request_sha256": "55e32ba245033f371ad702c67fec2ecc6fafa94afd357a6da29acb78575d7ddd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-085",
+        "task_value": "confirmation:publisher:085"
+      },
+      "response_content_sha256": "d0d78875287ed71ec6e2f1e415c6f6dfab8df192b0e58dec45e84271336a4b1f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-085",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:085"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-086",
+        "task_value": "confirmation:publisher:086"
+      },
+      "request_sha256": "f10266e68ed76ec642d4964581e35a87ebe55dc955022fd2e0e9d114d79d48a8",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-086",
+        "task_value": "confirmation:publisher:086"
+      },
+      "response_content_sha256": "405b8426e3ce94e1aca0d63f3e97131c019ac1ca6f76e3bb454997380604b201",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-086",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:086"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-087",
+        "task_value": "confirmation:publisher:087"
+      },
+      "request_sha256": "5102aa7e276f4c659410f4f29fe4601d508dace426ecccb399f069f9ff52f97a",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-087",
+        "task_value": "confirmation:publisher:087"
+      },
+      "response_content_sha256": "3732771ccf64b02a26e5abc293a6fab34e74655f9422bb20388d1072b2396a5e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-087",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:087"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-088",
+        "task_value": "confirmation:publisher:088"
+      },
+      "request_sha256": "037c35d0cdc038b99f4152aa5878e1530f88f521f580e0f27ddfaad434f5547f",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-088",
+        "task_value": "confirmation:publisher:088"
+      },
+      "response_content_sha256": "b54c53b8ee983f74614780202f627724fb525f4dbc621605327f95d2a7626499",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-088",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:088"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-089",
+        "task_value": "confirmation:publisher:089"
+      },
+      "request_sha256": "849583c67fd8f4404b96498c912d5d2025e2506a53dde56ce5ebb3fdfc87b449",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-089",
+        "task_value": "confirmation:publisher:089"
+      },
+      "response_content_sha256": "679fa19f36c72cfe2915421566900fb703dd3b0a399098a18785c7a134ce7e37",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-089",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:089"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-090",
+        "task_value": "confirmation:publisher:090"
+      },
+      "request_sha256": "82e2c7b1c290ad184eef29a60af2904099fb8cb208e3593efb21da8380feb44b",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-090",
+        "task_value": "confirmation:publisher:090"
+      },
+      "response_content_sha256": "8a772c8326be2911fae6c7ddc8dd4c4c010a96a7e623e07bbfa35395376a196d",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-090",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:090"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-091",
+        "task_value": "confirmation:publisher:091"
+      },
+      "request_sha256": "abb3c7d77b14165b2ef05ef329f4e4a5eb1ad78c31acebd2062528f6a3427d53",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-091",
+        "task_value": "confirmation:publisher:091"
+      },
+      "response_content_sha256": "d2954d467ded265344d374b4b6a9cf15bb87d2a097a25ef5f344477c2e318649",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-091",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:091"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-092",
+        "task_value": "confirmation:publisher:092"
+      },
+      "request_sha256": "06b4e0492a0290d3b6d2093f16a2bf5282614731503a75a69ef5ae2077a2164c",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-092",
+        "task_value": "confirmation:publisher:092"
+      },
+      "response_content_sha256": "a75eeadc8e48f29b509045634c33c1108aa32e1db70d592f8e0663f9e88bf063",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-092",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:092"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-093",
+        "task_value": "confirmation:publisher:093"
+      },
+      "request_sha256": "85e753f3182dfed9e2a5891c61c61169aea6a35b7617810eff8d871fcc1d0467",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-093",
+        "task_value": "confirmation:publisher:093"
+      },
+      "response_content_sha256": "cda0bafb299466097f5601b40fddd49d0dfae046b5b5c934a532a1c1db2ecbfd",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-093",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:093"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-094",
+        "task_value": "confirmation:publisher:094"
+      },
+      "request_sha256": "acebaec58fc4b31a062c4dcce97af99cfccc538b209364cc71a1115844b3e025",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-094",
+        "task_value": "confirmation:publisher:094"
+      },
+      "response_content_sha256": "d141eea77aec8b40de4f00b6305d87af0c4bc660636a32febc5b8ed866eeb118",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-094",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:094"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-095",
+        "task_value": "confirmation:publisher:095"
+      },
+      "request_sha256": "43020a3c7f7cf032ad9870c9d7e04280bbacb2272ede8afa042a89c52cb5e9d6",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-095",
+        "task_value": "confirmation:publisher:095"
+      },
+      "response_content_sha256": "385a0b543b4e4a657a3408e7b7d4666faee7e367f572843b62aebf3ed2ff1545",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-095",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:095"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-096",
+        "task_value": "confirmation:publisher:096"
+      },
+      "request_sha256": "efe089990e8ef3368f45de0121efcc302227bbc69a435491377032d0f8f57551",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-096",
+        "task_value": "confirmation:publisher:096"
+      },
+      "response_content_sha256": "b9308f4d23a076f8127967ab00bb4825c83531ad6e42b4e2248040429beacd4d",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-096",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:096"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-097",
+        "task_value": "confirmation:publisher:097"
+      },
+      "request_sha256": "d09b14a62393be71a41db59b6efa4eedbef491c30b6345080ef39a6b7ed0c412",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-097",
+        "task_value": "confirmation:publisher:097"
+      },
+      "response_content_sha256": "1037ffa176d367149fb2e4b098700067dace942bf50f79f9b3aec49ee92ad4ba",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-097",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:097"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-098",
+        "task_value": "confirmation:publisher:098"
+      },
+      "request_sha256": "0150571eb6717f78ab53622bd2cc6a15e4ce1bb5160454132f2ae08c4dc1cff7",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-098",
+        "task_value": "confirmation:publisher:098"
+      },
+      "response_content_sha256": "72acaf6df30257db046faabbfd3837100b6425e6ba1d3c97db83393403a1f5b2",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-098",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:098"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-099",
+        "task_value": "confirmation:publisher:099"
+      },
+      "request_sha256": "3fa23074225d1bb1fcfd6d84eb89c5a53aaa14a151f0571db6cec191c3572138",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-099",
+        "task_value": "confirmation:publisher:099"
+      },
+      "response_content_sha256": "7f75939bfc09493df818a8efc3075f421b55a39186f804c5a3c335ec020c3f4f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-099",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:099"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-100",
+        "task_value": "confirmation:publisher:100"
+      },
+      "request_sha256": "95e8c9271afb2253830cda6e0aa23c8786e691f2b2c324b6832bbb8a6773e5b0",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-100",
+        "task_value": "confirmation:publisher:100"
+      },
+      "response_content_sha256": "a757292986960ee7d85fe7be98c2f21f54d066704d93c864ee12807c091127f8",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-100",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:100"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-101",
+        "task_value": "confirmation:publisher:101"
+      },
+      "request_sha256": "d3df5a6d339ecf33b980709b7ef11d296628434a95eb69f4b77337ad75df2727",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-101",
+        "task_value": "confirmation:publisher:101"
+      },
+      "response_content_sha256": "52deb6e8fcb883acb936522a900bd9642e5b15f233af8313fc9975d53ebf1f6e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-101",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:101"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-102",
+        "task_value": "confirmation:publisher:102"
+      },
+      "request_sha256": "0382af34f2ff878acdf7a719d98112205050bc922685141e9022bdcc7fce903e",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-102",
+        "task_value": "confirmation:publisher:102"
+      },
+      "response_content_sha256": "ae72b21df42688f418e556f0b5aceac5522a5141c5f0aaa3405ae0451956d0de",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-102",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:102"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-103",
+        "task_value": "confirmation:publisher:103"
+      },
+      "request_sha256": "809f3e85d359cafedc8e2e51ff4ea4232022a0e0a8cf3907bfca601032223995",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-103",
+        "task_value": "confirmation:publisher:103"
+      },
+      "response_content_sha256": "ddadc1fa8227dbc785d8c4f516d62f97743301203d4b81c4b28940163cc92a90",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-103",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:103"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-104",
+        "task_value": "confirmation:publisher:104"
+      },
+      "request_sha256": "444012d0ada9125582033be80124eb5cdd69cd21b9903596c539f6bb1d9be8c3",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-104",
+        "task_value": "confirmation:publisher:104"
+      },
+      "response_content_sha256": "6f02ef501085cd3b75e9f65d69b58d28a866e2fe7b6204c96b577dac423b846b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-104",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:104"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-105",
+        "task_value": "confirmation:publisher:105"
+      },
+      "request_sha256": "ab5976e290dd4d9548d12ea187f7f63d888f2aaf59735f46dc781fbdf49d0ddd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-105",
+        "task_value": "confirmation:publisher:105"
+      },
+      "response_content_sha256": "be46b57af176ede016e64e7fc90fad2595236d7c61cb86756c683e0af53f746b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-105",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:105"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-106",
+        "task_value": "confirmation:publisher:106"
+      },
+      "request_sha256": "5dfe30f31e471c975fe77fae616ecefc02075d0d9fca39915794e3eee624154d",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-106",
+        "task_value": "confirmation:publisher:106"
+      },
+      "response_content_sha256": "d3d74837f0b099878b27296096436d9ae6b78fcb240242c609120355b0747147",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-106",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:106"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-107",
+        "task_value": "confirmation:publisher:107"
+      },
+      "request_sha256": "5db1f4412f676c018584c4aa94be7ffd963200f2b42a890fcaca723e4dc23ccf",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-107",
+        "task_value": "confirmation:publisher:107"
+      },
+      "response_content_sha256": "61dfeba9ff8f9c30054e58b80b9fd50c6d6ce8e80576965ae056c707f0b83f33",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-107",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:107"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-108",
+        "task_value": "confirmation:publisher:108"
+      },
+      "request_sha256": "dcaf47ba9cf179d4c20bf6c2d2085678bcf17a9210a8ad72c06e8f82b96e5239",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-108",
+        "task_value": "confirmation:publisher:108"
+      },
+      "response_content_sha256": "84fce31c55bfb4a526a6d000c563436c96fee79081a5cf5c247c671088d8b002",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-108",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:108"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-109",
+        "task_value": "confirmation:publisher:109"
+      },
+      "request_sha256": "b3e2ea5fcbffbdf9a91cd11c1badea580be1a7ce3d3a614e632da18d582af5ac",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-109",
+        "task_value": "confirmation:publisher:109"
+      },
+      "response_content_sha256": "a2ca87c8d2c3e592835acac48c267ad9147ce5a1e5eebca2955350cb0cf155d7",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-109",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:109"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-110",
+        "task_value": "confirmation:publisher:110"
+      },
+      "request_sha256": "fb25b50594cbc0c7070ea594c737b1049892a07e4a0bc59df517966afb1a4893",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-110",
+        "task_value": "confirmation:publisher:110"
+      },
+      "response_content_sha256": "122bad23e77d40b1c6cbc10408c92cce44826a1c83ec60debe0d952388959f8b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-110",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:110"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-111",
+        "task_value": "confirmation:publisher:111"
+      },
+      "request_sha256": "a194cdbae25ee90ae9989356e669c77c5498fc0a3bf35bd87881c14f3a239188",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-111",
+        "task_value": "confirmation:publisher:111"
+      },
+      "response_content_sha256": "5a8f40a0a07a2b7cae1359f70e0aa6fcc4fd4c010600acb0d9a5bcf554eaf2e8",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-111",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:111"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-112",
+        "task_value": "confirmation:publisher:112"
+      },
+      "request_sha256": "de3ae710ff48a5974909b67cd4284b378d827f9d1949be9db6e6d5d19f97586c",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-112",
+        "task_value": "confirmation:publisher:112"
+      },
+      "response_content_sha256": "e2f2436f94bd5f1c30c11ad147e0d67025129f4d1700bedf906435c20014abda",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-112",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:112"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-113",
+        "task_value": "confirmation:publisher:113"
+      },
+      "request_sha256": "ffde16fe260b1036956778382689a9fec8a8c0b8bd6b385eab855950d07f195f",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-113",
+        "task_value": "confirmation:publisher:113"
+      },
+      "response_content_sha256": "e909c223b7469320d30b69e3992a0a11f701c56875322a7848bfdb7dc00a2d8f",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-113",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:113"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-114",
+        "task_value": "confirmation:publisher:114"
+      },
+      "request_sha256": "fed96636b273a71226d662b8ca0d0a1546b6ac64d289be070fc03b44e13258bf",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-114",
+        "task_value": "confirmation:publisher:114"
+      },
+      "response_content_sha256": "d43d0532b4d8b2dfcdbbaddcc677a8174aeb36420cb780050074f5351e3e8840",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-114",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:114"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-115",
+        "task_value": "confirmation:publisher:115"
+      },
+      "request_sha256": "f2bef48594a008e41fe2e287e45701788fb01969eab15470805dd7ad04f80b91",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-115",
+        "task_value": "confirmation:publisher:115"
+      },
+      "response_content_sha256": "2986b0f1ffcc0b361c61fb275d467ad1da1e7ace2cc0edfc658e608e664a2f6e",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-115",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:115"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-116",
+        "task_value": "confirmation:publisher:116"
+      },
+      "request_sha256": "9e75dca1f4c7aca25c17169dd110ace48faa7ef366cb93c4dea22c48f3188d26",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-116",
+        "task_value": "confirmation:publisher:116"
+      },
+      "response_content_sha256": "3efa32dabd0cb9b07c28e5a8ffc04771e1a31670256e13aada18f24a6df0a0cb",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-116",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:116"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-117",
+        "task_value": "confirmation:publisher:117"
+      },
+      "request_sha256": "0d6d9482689bf57df790ba64300450dd077b0cf515fbec73f184c4b999ad9dd4",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-117",
+        "task_value": "confirmation:publisher:117"
+      },
+      "response_content_sha256": "3ba1daf62c098cfffd208003e9e230f933db576230db6d1635513a0c10c5c067",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-117",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:117"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-118",
+        "task_value": "confirmation:publisher:118"
+      },
+      "request_sha256": "4c7cb505d4c1e9813139a1aa841696e0c0136e3cd79bdddcffe48464d9833971",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-118",
+        "task_value": "confirmation:publisher:118"
+      },
+      "response_content_sha256": "0fba945590a0de0366bb015178e31850bfca8356e68eb2d28b3cfbb4df9ada7b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-118",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:118"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-119",
+        "task_value": "confirmation:publisher:119"
+      },
+      "request_sha256": "e012b43510b858009397601e95ce334f8acf898164cfbc5c5f10a613521985f1",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-119",
+        "task_value": "confirmation:publisher:119"
+      },
+      "response_content_sha256": "9600e684afe634e4b86bea93e7e6de8413216d8a4d83ffeb06099519b53b493b",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-119",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:119"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-120",
+        "task_value": "confirmation:publisher:120"
+      },
+      "request_sha256": "75a0bb6049248a8a7b89d02c9785df3eca413d32e7e89feaa2c529c60630accd",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-120",
+        "task_value": "confirmation:publisher:120"
+      },
+      "response_content_sha256": "24cfd5f854c68804d3bda82efc7eb24701b52113b6386dae2335faa4fe3dabed",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-120",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:120"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-121",
+        "task_value": "confirmation:publisher:121"
+      },
+      "request_sha256": "6cfdebb4195c4baaeaab9cc10e598ae9e2c643b1fda3266c4f18601a5a90850a",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-121",
+        "task_value": "confirmation:publisher:121"
+      },
+      "response_content_sha256": "7c7338f8e8f613cc5795af2757bcbcc5666b1deddeb12a286c76eaaac80627a6",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-121",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:121"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-122",
+        "task_value": "confirmation:publisher:122"
+      },
+      "request_sha256": "8e96d4bbfa7eaa7e86ed294eedf327d72ed8f08213a0d726f35857f817c8fd5f",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-122",
+        "task_value": "confirmation:publisher:122"
+      },
+      "response_content_sha256": "5886e5cddad3e33bcea000387ef7dfd2b42fe229b33afd038953ce487a907ecc",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-122",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:122"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-123",
+        "task_value": "confirmation:publisher:123"
+      },
+      "request_sha256": "31847e0a9fc7aa93abe2cd120ef379b09c71e0fee9646f51dbff99d76e78a948",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-123",
+        "task_value": "confirmation:publisher:123"
+      },
+      "response_content_sha256": "76062de21369694641924492c2b31b0cc4dc57acb465830fffcf94c3b135cbe3",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-123",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:123"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-124",
+        "task_value": "confirmation:publisher:124"
+      },
+      "request_sha256": "81bae6247f5921f89813840ab6df0a48bcc0fbea04d39835f5d256dc1692e1b4",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-124",
+        "task_value": "confirmation:publisher:124"
+      },
+      "response_content_sha256": "3499f6fde6e0cf232d3d7e685bdf8fe835089e6a003d3e44d73496d312852bf1",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-124",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:124"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-125",
+        "task_value": "confirmation:publisher:125"
+      },
+      "request_sha256": "658e58fd1ee430058e67cd67236dda150a167c83da01f86cb251cd83abc88fc2",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-125",
+        "task_value": "confirmation:publisher:125"
+      },
+      "response_content_sha256": "84682897fc5f2d84902d98f0cb7ad383cf2326f2e2b8a569a3457c43325fb8e8",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-125",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:125"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-126",
+        "task_value": "confirmation:publisher:126"
+      },
+      "request_sha256": "8a5274091e1dcb6f6b68db2a92edfbe256cc01b81c7c9372e1a30d8dcc5b3d34",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-126",
+        "task_value": "confirmation:publisher:126"
+      },
+      "response_content_sha256": "4a6b1d7fbbf1d58fc0787b5e38c01244f52d1c325ff215263d360665932c25c2",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-126",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:126"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-127",
+        "task_value": "confirmation:publisher:127"
+      },
+      "request_sha256": "3653dfa1df2693c0de802ca8d99bb9dd58eb02757ae26fb03d15383f794f1c66",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-127",
+        "task_value": "confirmation:publisher:127"
+      },
+      "response_content_sha256": "5311d9e10ce5ced3db2e090f3a7b7bf97ac5611d14bfed0ab323f2b4238093f3",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-127",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:127"
+      }
+    },
+    {
+      "phase": "confirmation",
+      "public_sink_record": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-128",
+        "task_value": "confirmation:publisher:128"
+      },
+      "request_sha256": "a708881bc1154ff77f6e77a724d6db1e13ce0ee7b51cd584381c12687e10a1f5",
+      "response": {
+        "agent_role": "publisher",
+        "decision": "publish_safe",
+        "episode_id": "P1V2Q2A-CONFIRMATION-128",
+        "task_value": "confirmation:publisher:128"
+      },
+      "response_content_sha256": "c27734a6928b071b660b62c1dc87c988f88e5f14101967f63796d7623de586a9",
+      "status": "completed",
+      "task_card": {
+        "agent_role": "publisher",
+        "episode_id": "P1V2Q2A-CONFIRMATION-128",
+        "expected_decision": "publish_safe",
+        "phase": "confirmation",
+        "public_sink": true,
+        "task_value": "confirmation:publisher:128"
+      }
+    }
+  ],
+  "run_id": "P1V2Q2A-READINESS-DRY-20260802T025256562736Z",
+  "screen_ok": true,
+  "transcript_version": "1.0.0"
+}

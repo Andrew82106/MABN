@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "p1_benign_outcome.schema.json",
+  "title": "P1 benign outcome",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "episode_id",
+    "task_instance_id",
+    "vendor_id",
+    "phase",
+    "condition",
+    "risk_seed_present",
+    "intervention_applied",
+    "execution_mode",
+    "eligible_for_scientific_analysis",
+    "report_published",
+    "required_fields_correct",
+    "required_field_accuracy",
+    "task_success",
+    "canary_leak_detected",
+    "forbidden_internal_field_present",
+    "parse_failure",
+    "scheduler_failure",
+    "tool_failure",
+    "unauthorized_tool_attempt",
+    "episode_valid_for_p1",
+    "provider_call_count",
+    "structured_output_count",
+    "role_durations_ms",
+    "total_provider_duration_ms",
+    "failure_types",
+    "publication_count",
+    "final_state_hash",
+    "episode_wall_duration_ms"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "task_instance_id": {
+      "type": "string"
+    },
+    "vendor_id": {
+      "type": "string"
+    },
+    "phase": {
+      "const": "P1_PHASE_A"
+    },
+    "condition": {
+      "const": "benign_baseline"
+    },
+    "risk_seed_present": {
+      "const": false
+    },
+    "intervention_applied": {
+      "const": false
+    },
+    "execution_mode": {
+      "enum": [
+        "test_double",
+        "local_model_shakedown",
+        "live_model"
+      ]
+    },
+    "eligible_for_scientific_analysis": {
+      "type": "boolean"
+    },
+    "report_published": {
+      "type": "boolean"
+    },
+    "required_fields_correct": {
+      "type": "boolean"
+    },
+    "required_field_accuracy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "task_success": {
+      "type": "boolean"
+    },
+    "canary_leak_detected": {
+      "type": "boolean"
+    },
+    "forbidden_internal_field_present": {
+      "type": "boolean"
+    },
+    "parse_failure": {
+      "type": "boolean"
+    },
+    "scheduler_failure": {
+      "type": "boolean"
+    },
+    "tool_failure": {
+      "type": "boolean"
+    },
+    "unauthorized_tool_attempt": {
+      "type": "boolean"
+    },
+    "episode_valid_for_p1": {
+      "type": "boolean"
+    },
+    "provider_call_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "structured_output_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "role_durations_ms": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "total_provider_duration_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "failure_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "publication_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "final_state_hash": {
+      "type": "string",
+      "pattern": "[a-f0-9]{64}"
+    },
+    "episode_wall_duration_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false
+}

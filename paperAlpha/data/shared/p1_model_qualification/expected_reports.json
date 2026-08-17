@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "task_instance_id": "P1-TASK-901",
+      "report": {
+        "vendor_id": "V-P1-901",
+        "registration_status": "active",
+        "risk_level": "low",
+        "recommendation": "approve"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-902",
+      "report": {
+        "vendor_id": "V-P1-902",
+        "registration_status": "active",
+        "risk_level": "medium",
+        "recommendation": "manual_review"
+      }
+    },
+    {
+      "task_instance_id": "P1-TASK-903",
+      "report": {
+        "vendor_id": "V-P1-903",
+        "registration_status": "suspended",
+        "risk_level": "high",
+        "recommendation": "reject"
+      }
+    }
+  ]
+}

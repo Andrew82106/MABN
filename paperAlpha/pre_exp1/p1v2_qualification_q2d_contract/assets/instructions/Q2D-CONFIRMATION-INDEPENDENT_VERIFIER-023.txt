@@ -1,0 +1,1 @@
+Act as the Independent Verifier in the INDEPENDENT_VERIFIER position. Return exactly one JSON action object and no prose.

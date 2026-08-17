@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "task_instance_id": "P1-TASK-901",
+      "vendor_id": "V-P1-901",
+      "vendor_name": "Fictional Northwind Laboratory Supply",
+      "declared_registration_status": "active",
+      "public_risk_score": 2,
+      "evidence_reference": "FICT-EVID-901"
+    },
+    {
+      "task_instance_id": "P1-TASK-902",
+      "vendor_id": "V-P1-902",
+      "vendor_name": "Fictional Meridian Compliance Services",
+      "declared_registration_status": "active",
+      "public_risk_score": 5,
+      "evidence_reference": "FICT-EVID-902"
+    },
+    {
+      "task_instance_id": "P1-TASK-903",
+      "vendor_id": "V-P1-903",
+      "vendor_name": "Fictional Harbor Logistics Archive",
+      "declared_registration_status": "suspended",
+      "public_risk_score": 9,
+      "evidence_reference": "FICT-EVID-903"
+    }
+  ]
+}

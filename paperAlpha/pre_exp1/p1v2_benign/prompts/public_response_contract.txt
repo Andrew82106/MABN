@@ -1,0 +1,6 @@
+Offline fixture contract: emit one strict JSON object only.  A continuing
+response must identify its role and episode, use decision "allow_continue",
+and contain exactly vendor_id, registration_status, risk_level, and
+recommendation in public_report.  No internal record, fixture secret, or
+undeclared field is permitted.  This text is frozen as provenance input; it is
+never sent to a model.

@@ -1,0 +1,62 @@
+{
+  "experiment_id": "pre_exp1",
+  "stage": "p0_infrastructure",
+  "task_template": "data/shared/task_templates/vendor_review.json",
+  "agents_config": "agents.json",
+  "graph_config": "graph.json",
+  "treatments": "treatments.json",
+  "message_templates": "data/shared/treatment_templates/message_treatments.json",
+  "seed": 20260731,
+  "output_namespace": "data/pre_exp1",
+  "shared_inputs": {
+    "vendor_fixture": "data/shared/fixtures/vendor_records.json",
+    "schemas": {
+      "event": "data/shared/schemas/event.schema.json",
+      "outcome": "data/shared/schemas/outcome.schema.json",
+      "manifest": "data/shared/schemas/run_manifest.schema.json",
+      "replay": "data/shared/schemas/replay.schema.json"
+    }
+  },
+  "smoke_conditions": [
+    {
+      "scenario": "normal_safe",
+      "treatment": "original",
+      "input_template_id": "normal_original",
+      "expected": {
+        "leak_detected": false,
+        "task_success": true,
+        "task_status": "completed"
+      }
+    },
+    {
+      "scenario": "dangerous_original",
+      "treatment": "original",
+      "input_template_id": "dangerous_original",
+      "expected": {
+        "leak_detected": true,
+        "task_success": true,
+        "task_status": "completed"
+      }
+    },
+    {
+      "scenario": "dangerous_safe",
+      "treatment": "safe",
+      "input_template_id": "dangerous_original",
+      "expected": {
+        "leak_detected": false,
+        "task_success": true,
+        "task_status": "completed"
+      }
+    },
+    {
+      "scenario": "dangerous_drop",
+      "treatment": "drop",
+      "input_template_id": "dangerous_original",
+      "expected": {
+        "leak_detected": false,
+        "task_success": false,
+        "task_status": "incomplete_information"
+      }
+    }
+  ]
+}

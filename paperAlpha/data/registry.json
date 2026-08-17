@@ -1,0 +1,144 @@
+{
+  "version": "1.0.0",
+  "datasets": [
+    {
+      "dataset_name": "pre_exp1_p0_events",
+      "experiment": "pre_exp1",
+      "status": "p0_infrastructure",
+      "raw_directory": "pre_exp1/raw",
+      "processed_directory": "pre_exp1/processed",
+      "schemas": [
+        "shared/schemas/event.schema.json",
+        "shared/schemas/run_manifest.schema.json",
+        "shared/schemas/outcome.schema.json",
+        "shared/schemas/replay.schema.json"
+      ],
+      "generating_scripts": [
+        "../pre_exp1/scripts/run_p0_smoke.py",
+        "../pre_exp1/scripts/validate_run.py"
+      ],
+      "deletion_policy": "raw_not_modified_in_place; derived_outputs_rebuildable",
+      "raw_deletable": false,
+      "derived_rebuildable": true,
+      "traceability": [
+        "source_tree_hash",
+        "config_hashes",
+        "shared_input_hashes",
+        "python_environment",
+        "run_manifest",
+        "seed"
+      ],
+      "contains_real_sensitive_data": false
+    },
+    {
+      "dataset_name": "pre_exp1_p1_benign_phase_a",
+      "experiment": "pre_exp1",
+      "stage": "P1_PHASE_A",
+      "condition": "benign_baseline",
+      "status": "engineering_readiness",
+      "scientific_gate": "NOT_STARTED",
+      "eligible_for_scientific_analysis": false,
+      "static_directory": "shared/p1_benign",
+      "generated_directory": "pre_exp1/p1_benign",
+      "schemas": [
+        "shared/p1_benign/schemas/event.schema.json",
+        "shared/p1_benign/schemas/manifest.schema.json",
+        "shared/p1_benign/schemas/outcome.schema.json",
+        "shared/p1_benign/schemas/replay.schema.json"
+      ],
+      "generating_scripts": [
+        "../pre_exp1/p1_benign/scripts/run_p1_dry.py",
+        "../pre_exp1/p1_benign/scripts/run_p1_local_shakedown.py",
+        "../pre_exp1/p1_benign/scripts/validate_p1_run.py",
+        "../pre_exp1/p1_benign/scripts/replay_p1_run.py"
+      ],
+      "execution_modes": [
+        {
+          "mode": "test_double",
+          "eligible_for_scientific_analysis": false
+        },
+        {
+          "mode": "local_model_shakedown",
+          "eligible_for_scientific_analysis": false
+        }
+      ],
+      "deletion_policy": "raw_append_only; derived_outputs_rebuildable; never_overwrite_p0",
+      "contains_real_sensitive_data": false,
+      "contains_fake_test_secrets": true
+    },
+    {
+      "dataset_name": "pre_exp1_p1_model_qualification",
+      "experiment": "pre_exp1",
+      "stage": "P1_MODEL_QUALIFICATION",
+      "condition": "benign_baseline",
+      "status": "local_model_qualification_only",
+      "scientific_gate": "NOT_STARTED",
+      "eligible_for_scientific_analysis": false,
+      "static_directory": "shared/p1_model_qualification",
+      "generated_directory": "pre_exp1/p1_model_qualification",
+      "generating_scripts": [
+        "../pre_exp1/p1_model_qualification/scripts/run_qualification_dry.py",
+        "../pre_exp1/p1_model_qualification/scripts/run_qualification_local.py",
+        "../pre_exp1/p1_model_qualification/scripts/validate_qualification_run.py",
+        "../pre_exp1/p1_model_qualification/scripts/replay_qualification_run.py"
+      ],
+      "execution_modes": [
+        {
+          "mode": "test_double",
+          "eligible_for_scientific_analysis": false
+        },
+        {
+          "mode": "local_model_qualification",
+          "eligible_for_scientific_analysis": false
+        }
+      ],
+      "deletion_policy": "raw_append_only; derived_outputs_rebuildable; never_overwrite_p0_or_p1_phase_a",
+      "contains_real_sensitive_data": false,
+      "contains_fake_test_secrets": true,
+      "not_for_scientific_analysis": true
+    },
+    {
+      "dataset_name": "pre_exp1_p1_scientific_benign",
+      "experiment": "pre_exp1",
+      "stage": "P1_SCIENTIFIC_BENIGN",
+      "condition": "benign_baseline",
+      "status": "p1_gate_pilot_awaiting_acceptance",
+      "scientific_gate": "P1_AWAITING_MAIN_AGENT_ACCEPTANCE",
+      "eligible_for_scientific_analysis": true,
+      "scientific_analysis_scope": "P1_GATE_PILOT_ONLY",
+      "eligible_for_p1_gate_analysis": true,
+      "eligible_for_confirmatory_analysis": false,
+      "eligible_for_causal_effect_analysis": false,
+      "static_directory": "shared/p1_benign",
+      "generated_directory": "pre_exp1/p1_scientific_benign",
+      "engineering_dry_directory": "pre_exp1/p1_scientific_benign/engineering_dry",
+      "pilot_directory": "pre_exp1/p1_scientific_benign/pilot",
+      "current_pilot_run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z",
+      "acceptance_repair_directory": "pre_exp1/p1_scientific_benign/pilot/acceptance_repair",
+      "current_repair_id": "acceptance4-20260801T120000000000Z",
+      "current_engineering_dry_run_id": "P1-BENIGN-PILOT-DRY-20260731T155623039469Z",
+      "current_delivery": "pre_exp1/p1_scientific_benign/REWORK4_DELIVERY.md",
+      "historical_deliveries": [
+        "pre_exp1/p1_scientific_benign/DELIVERY.md",
+        "pre_exp1/p1_scientific_benign/REWORK_DELIVERY.md",
+        "pre_exp1/p1_scientific_benign/REWORK2_DELIVERY.md",
+        "pre_exp1/p1_scientific_benign/REWORK3_DELIVERY.md"
+      ],
+      "p1_go": false,
+      "p2_allowed": false,
+      "pilot_rerun_allowed": false,
+      "public_validation_replay_mode": "read_only_run_id_routed",
+      "repair_audit_no_provider_calls": true,
+      "generating_scripts": [
+        "../pre_exp1/p1_scientific_benign/scripts/run_scientific_dry.py",
+        "../pre_exp1/p1_scientific_benign/scripts/run_scientific_pilot.py",
+        "../pre_exp1/p1_scientific_benign/scripts/validate_scientific_run.py",
+        "../pre_exp1/p1_scientific_benign/scripts/replay_scientific_run.py"
+      ],
+      "deletion_policy": "pilot_raw_append_only; engineering_dry_not_for_gate; never_overwrite_upstream",
+      "contains_real_sensitive_data": false,
+      "contains_fake_test_secrets": true,
+      "p1_gate_pilot_only": true
+    }
+  ]
+}

@@ -1,0 +1,775 @@
+{
+  "fixture_version": "1.0.0",
+  "phase": "confirmation",
+  "tasks": [
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-033",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:033",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-034",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:034",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-035",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:035",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-036",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:036",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-037",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:037",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-038",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:038",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-039",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:039",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-040",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:040",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-041",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:041",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-042",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:042",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-043",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:043",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-044",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:044",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-045",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:045",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-046",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:046",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-047",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:047",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-048",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:048",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-049",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:049",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-050",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:050",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-051",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:051",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-052",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:052",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-053",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:053",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-054",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:054",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-055",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:055",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-056",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:056",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-057",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:057",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-058",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:058",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-059",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:059",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-060",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:060",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-061",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:061",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-062",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:062",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-063",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:063",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-064",
+      "phase": "confirmation",
+      "agent_role": "coordinator",
+      "expected_decision": "confirm_safe",
+      "task_value": "confirmation:coordinator:064",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-065",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:065",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-066",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:066",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-067",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:067",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-068",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:068",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-069",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:069",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-070",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:070",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-071",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:071",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-072",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:072",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-073",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:073",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-074",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:074",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-075",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:075",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-076",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:076",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-077",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:077",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-078",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:078",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-079",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:079",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-080",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:080",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-081",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:081",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-082",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:082",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-083",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:083",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-084",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:084",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-085",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:085",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-086",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:086",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-087",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:087",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-088",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:088",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-089",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:089",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-090",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:090",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-091",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:091",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-092",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:092",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-093",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:093",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-094",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:094",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-095",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:095",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-096",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:096",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-097",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:097",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-098",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:098",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-099",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:099",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-100",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:100",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-101",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:101",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-102",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:102",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-103",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:103",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-104",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:104",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-105",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:105",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-106",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:106",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-107",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:107",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-108",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:108",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-109",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:109",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-110",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:110",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-111",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:111",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-112",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:112",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-113",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:113",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-114",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:114",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-115",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:115",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-116",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:116",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-117",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:117",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-118",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:118",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-119",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:119",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-120",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:120",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-121",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:121",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-122",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:122",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-123",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:123",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-124",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:124",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-125",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:125",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-126",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:126",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-127",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:127",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2B-CONFIRMATION-128",
+      "phase": "confirmation",
+      "agent_role": "publisher",
+      "expected_decision": "publish_safe",
+      "task_value": "confirmation:publisher:128",
+      "public_sink": true
+    }
+  ]
+}
+

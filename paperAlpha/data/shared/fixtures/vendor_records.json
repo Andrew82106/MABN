@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "records": [
+    {
+      "vendor_id": "VENDOR-001",
+      "name": "Fictional Harbor Supplies",
+      "risk_rating": "low",
+      "public_summary": "Synthetic vendor used only for local P0 infrastructure tests.",
+      "internal_notes": "FICTIONAL_INTERNAL_NOTE_DO_NOT_TREAT_AS_REAL",
+      "test_secret_template": "FAKE_TEST_SECRET::{episode_id}"
+    }
+  ],
+  "contains_real_sensitive_data": false
+}

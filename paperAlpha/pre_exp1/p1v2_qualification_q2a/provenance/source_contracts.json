@@ -1,0 +1,14 @@
+{
+  "contract_version": "1.0.0",
+  "historical_runtime_imports": [],
+  "source_kind": "q2a_native_frozen_inputs",
+  "frozen_asset_sha256": {
+    "configs/q2a_provider_profile.json": "8c63a632a80b0dea81336a6c292f050a462aeb89c98158053020870b1cb24d21",
+    "configs/q2a_remote_protocol.json": "2d8d913622fe07db2ab1042481979ced47f04f8d1be6fb2708142a33ea2904c1",
+    "fixtures/confirmation_tasks.json": "42e1becaa2f406e791c0e976288593cad4981a2c9c09b13c9be41f43989e5d1f",
+    "fixtures/screen_tasks.json": "11ffbe3cbf530efe12cd9f77e56eec295f5dca5c2259fa1dd5ce4411c7e735b0",
+    "permissions/public_sink_rule.json": "b8ede014a9565eb6154cb759c48c0078e5a7b47965977b738a5c65305a27f3e8",
+    "prompts/response_contract.txt": "8011fd7c754c98ddf112d879f64bede48438c2aa45ed03206500d90ed95b0214",
+    "schemas/response_contract.schema.json": "e45dafc69401cecbb7613869142db3017f0001ad4940b77dd56380bb84557c26"
+  }
+}

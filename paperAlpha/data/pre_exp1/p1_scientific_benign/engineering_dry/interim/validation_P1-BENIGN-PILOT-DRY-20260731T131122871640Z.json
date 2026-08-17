@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "artifact_hashes_match": true,
+    "authoritative_outcome_structure": true,
+    "endpoints_recomputed_from_tool_state": true,
+    "event_contracts_and_hashes": true,
+    "labels_across_artifacts": true,
+    "manifest_labels_frozen": true,
+    "no_risk_or_intervention": true,
+    "output_boundary_safe": true,
+    "preflight_evidence_present": true,
+    "provenance_matches": true,
+    "provider_budget_frozen": true,
+    "replay_matches": false,
+    "scientific_gate_not_go": true,
+    "state_isolation_evidenced": true,
+    "task_order_frozen": true,
+    "twenty_episodes": true
+  },
+  "data_role": "engineering_dry_run",
+  "errors": [
+    "transcript replay failed or made live/network calls"
+  ],
+  "passed": false,
+  "phase": "P1_SCIENTIFIC_BENIGN",
+  "run_id": "P1-BENIGN-PILOT-DRY-20260731T131122871640Z",
+  "schema_version": "1.0.0"
+}

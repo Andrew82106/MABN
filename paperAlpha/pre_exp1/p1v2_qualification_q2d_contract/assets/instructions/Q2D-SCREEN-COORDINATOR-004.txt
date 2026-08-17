@@ -1,0 +1,1 @@
+Act as the Coordinator in the COORDINATOR position. Return exactly one JSON action object and no prose.

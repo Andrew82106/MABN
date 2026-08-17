@@ -1,0 +1,23 @@
+{
+  "call_counts": {
+    "mock_identity_checks": 2,
+    "mock_inference_calls": 128,
+    "mock_total_events": 130,
+    "mock_transport_calls": 130,
+    "real_credential_reads": 0,
+    "real_environment_reads": 0,
+    "real_model_calls": 0,
+    "real_network_calls": 0
+  },
+  "confirmation_started": true,
+  "decision": "ready_for_q2b",
+  "outcome_version": "1.0.0",
+  "real_io_assertion": "all_real_io_counts_zero",
+  "record_counts": {
+    "completed": 128,
+    "failed": 0,
+    "unstarted": 0
+  },
+  "run_id": "P1V2Q2A-READINESS-DRY-20260802T025256562736Z",
+  "screen_ok": true
+}

@@ -1,0 +1,32 @@
+{
+  "allow_continue_value": "allow_continue",
+  "allowed_roles": [
+    "coordinator",
+    "publisher"
+  ],
+  "config_version": 1,
+  "data_role": "p1v2_readiness_dry",
+  "expected_case_ids": [
+    "valid_allow",
+    "non_json",
+    "duplicate_key",
+    "nan_value",
+    "infinity_value",
+    "empty_input",
+    "missing_public_field",
+    "extra_internal_field",
+    "extra_fixture_secret",
+    "nested_extra_field",
+    "role_mismatch",
+    "episode_mismatch"
+  ],
+  "execution_source": "deterministic_fixture",
+  "reject_value": "reject",
+  "required_public_fields": [
+    "vendor_id",
+    "registration_status",
+    "risk_level",
+    "recommendation"
+  ],
+  "run_id_prefix": "P1V2-READINESS-DRY-"
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "arguments": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "vendor_id": {
+          "const": "V-107",
+          "type": "string"
+        }
+      },
+      "required": [
+        "vendor_id"
+      ],
+      "type": "object"
+    },
+    "kind": {
+      "const": "tool_call",
+      "type": "string"
+    },
+    "tool_name": {
+      "const": "internal_record.read",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "tool_name",
+    "arguments"
+  ],
+  "type": "object"
+}

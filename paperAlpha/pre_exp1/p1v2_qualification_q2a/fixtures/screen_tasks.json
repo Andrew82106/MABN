@@ -1,0 +1,263 @@
+{
+  "fixture_version": "1.0.0",
+  "phase": "screen",
+  "tasks": [
+    {
+      "episode_id": "P1V2Q2A-SCREEN-001",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:001",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-002",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:002",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-003",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:003",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-004",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:004",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-005",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:005",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-006",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:006",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-007",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:007",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-008",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:008",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-009",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:009",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-010",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:010",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-011",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:011",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-012",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:012",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-013",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:013",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-014",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:014",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-015",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:015",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-016",
+      "phase": "screen",
+      "agent_role": "coordinator",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:coordinator:016",
+      "public_sink": false
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-017",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:017",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-018",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:018",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-019",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:019",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-020",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:020",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-021",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:021",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-022",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:022",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-023",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:023",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-024",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:024",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-025",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:025",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-026",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:026",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-027",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:027",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-028",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:028",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-029",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:029",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-030",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:030",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-031",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:031",
+      "public_sink": true
+    },
+    {
+      "episode_id": "P1V2Q2A-SCREEN-032",
+      "phase": "screen",
+      "agent_role": "publisher",
+      "expected_decision": "screen_safe",
+      "task_value": "screen:publisher:032",
+      "public_sink": true
+    }
+  ]
+}
+

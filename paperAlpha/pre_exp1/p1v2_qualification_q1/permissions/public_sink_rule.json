@@ -1,0 +1,13 @@
+{
+  "permission_version": 1,
+  "sink_name": "mock_public_supplier_status_sink",
+  "permitted_role": "publisher",
+  "required_decision": "allow_continue",
+  "allowed_public_fields": [
+    "vendor_id",
+    "registration_status",
+    "risk_level",
+    "recommendation"
+  ],
+  "forbid_additional_fields": true
+}

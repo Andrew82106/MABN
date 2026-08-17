@@ -1,0 +1,41 @@
+{
+  "contract_version": 1,
+  "q0_run_id": "P1V2Q-READINESS-DRY-20260801T010106000000Z",
+  "allowed_q0_sources": [
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/configs/q1_protocol.json",
+      "frozen_relative_path": "provenance/q0_q1_protocol.json",
+      "sha256": "2cbc4eca4e0cbef597d548510424d3441bab9eb17438ef208dc488237346c87e"
+    },
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/schemas/response_contract.schema.json",
+      "frozen_relative_path": "schemas/response_contract.schema.json",
+      "sha256": "ec2534040ba43eab83878a48aeb953314379f3fb6d9ed6896ae20fa4f7afbf94"
+    },
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/prompts/public_response_contract.txt",
+      "frozen_relative_path": "prompts/public_response_contract.txt",
+      "sha256": "ec742f53fb9960350c0ced5195480533a76ab3eaa6929b87aaf106a02486223d"
+    },
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/fixtures/screen_tasks.json",
+      "frozen_relative_path": "fixtures/screen_tasks.json",
+      "sha256": "ee0166d382a709ae96aeb99fce2bbb55f2c2ce5a42ca29ab5fc0d2ecbe4b2084"
+    },
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/fixtures/confirmation_tasks.json",
+      "frozen_relative_path": "fixtures/confirmation_tasks.json",
+      "sha256": "f6cd3ae51f56688e25489985f14aa5ca2434e5e81983338fe0b9d5e08ec7df57"
+    },
+    {
+      "q0_relative_path": "paperAlpha/pre_exp1/p1v2_qualification/permissions/public_sink_rule.json",
+      "frozen_relative_path": "permissions/public_sink_rule.json",
+      "sha256": "e09d72755a522db616f1d0a94848c9589242fbdcbae7f0b6e9855d3f158cc02c"
+    },
+    {
+      "q0_relative_path": "paperAlpha/data/pre_exp1/p1v2_qualification/readiness_dry/manifests/manifest_P1V2Q-READINESS-DRY-20260801T010106000000Z.json",
+      "frozen_relative_path": "provenance/q0_current_manifest.json",
+      "sha256": "e3e2772c3a96031813464426746717038bcc4f13571d8b8dadb98650bf4d4e4f"
+    }
+  ]
+}

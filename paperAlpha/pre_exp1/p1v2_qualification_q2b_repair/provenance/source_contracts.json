@@ -1,0 +1,11 @@
+{
+  "contract_version": "1.0.0",
+  "source_kind": "q2b_repair_native_fixtures",
+  "frozen_asset_sha256": {
+    "configs/repair_provider_profile.json": "c4174d97b5bed45f76a8a39cf325ca9f2a764cf6ba509295bf9e369e05622d41",
+    "configs/repair_protocol.json": "0f2225ff46bd79f1f15fb5afca3f439bfc6ad83a1b0ead745b77e353f07eb249",
+    "fixtures/repair_task.json": "e2c890653552290634cf6f0362d53e78e866af7b76bf61074e408e3bef0498e5",
+    "prompts/repair_prompt.txt": "1597eeffcdcb5881d4e194fe08e0889439adb1da10ebc5eca96c4937c2a0ad4a",
+    "schemas/repair_response_schema.json": "6c7f7412fd28e43bff2e745faa6086b053ceee311def41d0cf50de416ce2094e"
+  }
+}

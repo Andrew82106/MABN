@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run_manifest.schema.json",
+  "title": "pre_exp1 run manifest",
+  "type": "object",
+  "required": [
+    "run_id",
+    "experiment_stage",
+    "config_hashes",
+    "shared_input_hashes",
+    "message_template_hashes",
+    "source_file_hashes",
+    "workspace_state",
+    "python_environment",
+    "random_seed",
+    "started_at",
+    "ended_at",
+    "status",
+    "output_files",
+    "validation"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "experiment_stage": {"const": "p0_infrastructure"},
+    "config_hashes": {
+      "type": "object",
+      "required": [
+        "pre_exp1/configs/agents.json",
+        "pre_exp1/configs/experiment.json",
+        "pre_exp1/configs/graph.json",
+        "pre_exp1/configs/treatments.json"
+      ],
+      "properties": {
+        "pre_exp1/configs/agents.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pre_exp1/configs/experiment.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pre_exp1/configs/graph.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pre_exp1/configs/treatments.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "shared_input_hashes": {
+      "type": "object",
+      "required": [
+        "data/shared/fixtures/vendor_records.json",
+        "data/shared/task_templates/vendor_review.json",
+        "data/shared/treatment_templates/message_treatments.json",
+        "data/shared/schemas/event.schema.json",
+        "data/shared/schemas/outcome.schema.json",
+        "data/shared/schemas/replay.schema.json",
+        "data/shared/schemas/run_manifest.schema.json"
+      ],
+      "properties": {
+        "data/shared/fixtures/vendor_records.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/task_templates/vendor_review.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/treatment_templates/message_treatments.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/schemas/event.schema.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/schemas/outcome.schema.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/schemas/replay.schema.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "data/shared/schemas/run_manifest.schema.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "message_template_hashes": {
+      "type": "object",
+      "required": [
+        "normal_original",
+        "dangerous_original",
+        "safe",
+        "drop"
+      ],
+      "properties": {
+        "normal_original": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "dangerous_original": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "safe": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "drop": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_file_hashes": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "workspace_state": {
+      "type": "object",
+      "required": ["git_available", "git_status", "source_tree_hash"],
+      "properties": {
+        "git_available": {"type": "boolean"},
+        "git_status": {
+          "type": ["string", "array"],
+          "items": {"type": "string"}
+        },
+        "source_tree_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "python_environment": {
+      "type": "object",
+      "required": [
+        "sys_executable",
+        "python_version",
+        "python_full_version",
+        "platform",
+        "pytest_version",
+        "source_version",
+        "installed_distribution_version",
+        "dependency_inventory",
+        "dependency_inventory_hash",
+        "dependency_count"
+      ],
+      "properties": {
+        "sys_executable": {"type": "string", "minLength": 1},
+        "python_version": {"const": "3.11.15"},
+        "python_full_version": {"type": "string", "minLength": 1},
+        "platform": {"type": "string", "minLength": 1},
+        "pytest_version": {"type": ["string", "null"]},
+        "source_version": {"const": "0.2.0"},
+        "installed_distribution_version": {"const": "0.2.0"},
+        "dependency_inventory": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "dependency_inventory_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "dependency_count": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "random_seed": {"type": "integer"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "ended_at": {"type": ["string", "null"], "format": "date-time"},
+    "status": {"enum": ["running", "completed", "failed"]},
+    "output_files": {
+      "type": "array",
+      "minItems": 7,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "smoke_expected_behavior",
+        "replay_hashes_match",
+        "replay_live_tool_calls",
+        "data_schema_validation",
+        "validation_checks"
+      ],
+      "properties": {
+        "smoke_expected_behavior": {"type": "boolean"},
+        "replay_hashes_match": {"type": "boolean"},
+        "replay_live_tool_calls": {"const": 0},
+        "data_schema_validation": {"type": "boolean"},
+        "validation_checks": {
+          "type": "object",
+          "additionalProperties": {"type": "boolean"}
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

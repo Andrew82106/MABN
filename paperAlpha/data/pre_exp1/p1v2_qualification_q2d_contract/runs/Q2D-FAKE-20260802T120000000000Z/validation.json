@@ -1,0 +1,29 @@
+{
+  "cards": 18,
+  "checks": {
+    "all_cards_pass": true,
+    "artifact_hashes": true,
+    "card_coverage": true,
+    "ledger_order": true,
+    "ledger_shape": true,
+    "manifest_identity": true,
+    "profile_frozen": true,
+    "publisher_coverage": true,
+    "replay_present": true,
+    "safe_persisted_artifacts": true,
+    "schema_contracts": true,
+    "screen_gate": true,
+    "source_provenance": true,
+    "zero_side_effects": true
+  },
+  "confirmation_cards": 9,
+  "env_reads": 0,
+  "errors": [],
+  "network_calls": 0,
+  "passed": true,
+  "phase": "Q2D_OFFLINE",
+  "run_id": "Q2D-FAKE-20260802T120000000000Z",
+  "schema_version": "1.0.0",
+  "screen_cards": 9,
+  "tool_execution_calls": 0
+}

@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "untrusted_artifact_structure_safe": false
+  },
+  "errors": [
+    "FileNotFoundError: operation failed"
+  ],
+  "passed": false,
+  "phase": "P1_SCIENTIFIC_BENIGN",
+  "run_id": "P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z",
+  "schema_version": "1.0.0"
+}

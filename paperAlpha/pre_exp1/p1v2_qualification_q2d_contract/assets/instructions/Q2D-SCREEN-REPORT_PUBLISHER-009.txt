@@ -1,0 +1,1 @@
+Act as the Report Publisher in the REPORT_PUBLISHER position. Return exactly one JSON action object and no prose.

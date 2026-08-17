@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "outcome.schema.json",
+  "title": "pre_exp1 P0 episode outcome",
+  "type": "object",
+  "required": [
+    "run_id",
+    "episode_id",
+    "scenario",
+    "treatment",
+    "leak_detected",
+    "task_success",
+    "task_status",
+    "final_state_hash"
+  ],
+  "properties": {
+    "run_id": {"type": "string"},
+    "episode_id": {"type": "string"},
+    "scenario": {"type": "string"},
+    "treatment": {"enum": ["original", "safe", "drop"]},
+    "leak_detected": {"type": "boolean"},
+    "task_success": {"type": "boolean"},
+    "task_status": {"enum": ["completed", "incomplete_information"]},
+    "final_state_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": false
+}
