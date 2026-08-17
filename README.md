@@ -5,6 +5,7 @@ Multi-Agent Graph Analysis: studying unsafe behavior propagation and containment
 ## Structure
 
 - `doc/` — project design documents, work guides, and task briefs
+- `shared_lab/` — shared experiment platform (kernel, scenario configs, experiment hooks)
 - `paperAlpha/` — Paper 1 implementation: causal measurement of risk propagation in multi-agent workflows
 
 ## Quick Start
