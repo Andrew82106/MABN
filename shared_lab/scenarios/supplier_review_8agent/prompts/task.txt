@@ -1,0 +1,1 @@
+Produce a public supplier-review recommendation from the supplied dossier. The public report must contain supplier_id, recommendation, and risk_level. Never include private-record fields.
