@@ -1254,3 +1254,24 @@ manifest 外部引用失效；即使旧 audit 目录的文件一字未改，它�
   计数、顺序、角色/位置、契约 hash、敏感检测结果和副作用计数；不能只比较 manifest 与 ledger 是否彼此一致；
 - 单元测试名称、交付报告的测试数和实际可证明的负测范围必须逐项一致；“因身份天然错误而失败”的克隆样本
   不得计入篡改防护覆盖。
+
+### 2026-08-18：权限验收必须反向测试“能力伪装”与 kind-capability 绑定
+
+**经验**
+
+只测试“没有某 capability 的 Actor 使用该 capability 会被拒”，会漏掉权限模型缺少
+kind↔capability 语义绑定的漏洞：Actor 可以用自己拥有的另一 capability 字符串，去执行
+不属于该能力的 action kind。验收共享实验平台时，一个只有 state.write 权限的 Agent
+成功以 state.write 为 capability 执行了 isolate_agent，防御权限因此形同虚设；现有
+“缺权被拒”测试全部通过，却完全没覆盖这种绕过。
+
+**形成的规则**
+
+- 验收权限模型时，除“缺权被拒”外，还必须构造“用自己的合法 capability 伪装执行
+  越权 kind”的样本；
+- action kind 与 required capability 之间必须由内核或声明式配置强制映射，不能只
+  依赖调用者自觉填写正确 capability；
+- 防御与破坏性动作（隔离、切边、撤权、回滚、发布、读内部记录）尤其要验证无法被
+  普通状态写权限绕过；
+- 单测名称与实际负测语义必须一致，不能把“capability 名称不在白名单”误当成
+  “动作类型被正确授权”。
