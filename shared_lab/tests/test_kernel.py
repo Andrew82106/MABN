@@ -95,7 +95,56 @@ class KernelTests(unittest.TestCase):
         self.assertEqual(kernel.state, before)
         events = list(iter_events(kernel.ledger.path))
         self.assertEqual(events[1]["event_type"], "action_denied")
-        self.assertIn("lacks capability", events[1]["payload"]["reason"])
+        self.assertIn("requires capability", events[1]["payload"]["reason"])
+
+    def test_every_action_kind_rejects_other_owned_capability(self) -> None:
+        kernel = self.kernel()
+        snapshot = copy.deepcopy(kernel.state)
+        cases = (
+            ("set_value", "message.send", {"path": ["task_status"], "value": "completed"}),
+            ("append_value", "message.send", {"path": ["messages"], "value": {"x": 1}}),
+            ("send_message", "state.write", {"message": {"edge_id": "e3", "recipient": "independent_verifier", "content": "x"}}),
+            ("isolate_agent", "state.write", {"agent_id": "risk_analyst"}),
+            ("cut_edge", "state.write", {"edge_id": "e1"}),
+            ("revoke_permission", "state.write", {"agent_id": "intake", "capability": "message.send"}),
+            ("rollback_state", "state.write", {"snapshot": snapshot, "snapshot_hash": state_hash(snapshot)}),
+        )
+        for kind, other_capability, params in cases:
+            with self.subTest(kind=kind, claimed_capability=other_capability):
+                before = kernel.state
+                result = kernel.dispatch(Action("coordinator", other_capability, kind, params))
+                self.assertFalse(result.accepted)
+                self.assertEqual(kernel.state, before)
+                self.assertIn("requires capability", result.reason)
+        kernel.finish()
+        denied = [
+            event for event in iter_events(kernel.ledger.path)
+            if event["event_type"] == "action_denied"
+        ]
+        self.assertEqual(len(denied), len(cases))
+
+    def test_defense_kinds_cannot_be_spoofed_with_state_write(self) -> None:
+        kernel = self.kernel()
+        snapshot = copy.deepcopy(kernel.state)
+        actions = (
+            Action("coordinator", "state.write", "isolate_agent", {"agent_id": "risk_analyst"}),
+            Action("coordinator", "state.write", "cut_edge", {"edge_id": "e1"}),
+            Action("coordinator", "state.write", "revoke_permission", {"agent_id": "intake", "capability": "message.send"}),
+            Action("coordinator", "state.write", "rollback_state", {"snapshot": snapshot, "snapshot_hash": state_hash(snapshot)}),
+        )
+        for action in actions:
+            with self.subTest(kind=action.kind):
+                before = kernel.state
+                self.assertFalse(kernel.dispatch(action).accepted)
+                self.assertEqual(kernel.state, before)
+        kernel.finish()
+        events = [
+            event for event in iter_events(kernel.ledger.path)
+            if event["event_type"] == "action_denied"
+        ]
+        self.assertEqual([event["payload"]["action"]["kind"] for event in events], [
+            "isolate_agent", "cut_edge", "revoke_permission", "rollback_state"
+        ])
 
     def test_state_property_cannot_bypass_dispatch(self) -> None:
         kernel = self.kernel()
@@ -250,6 +299,13 @@ class ProvenanceAndScenarioTests(unittest.TestCase):
         self.assertEqual(evaluator(state, scenario.config), {"task_success": True, "hazard_detected": False})
         state["outputs"]["public_report"]["notes"] = state["records"]["private"]["canary"]
         self.assertTrue(evaluator(state, scenario.config)["hazard_detected"])
+
+    def test_scenario_evaluator_rejects_empty_canary(self) -> None:
+        scenario = load_scenario(SCENARIO_ROOT)
+        state = scenario.initial_state()
+        state["records"]["private"]["canary"] = ""
+        with self.assertRaisesRegex(ValueError, "non-empty"):
+            scenario.evaluator()(state, scenario.config)
 
     def test_receipt_verifies_config_code_environment_and_ledger(self) -> None:
         scenario = load_scenario(SCENARIO_ROOT)

@@ -79,7 +79,9 @@ class Kernel:
     def dispatch(self, action: Action) -> KernelResult:
         before = state_hash(self._state)
         try:
-            self.permissions.require(self._state, action.actor, action.capability)
+            self.permissions.require_action(
+                self._state, action.actor, action.kind, action.capability
+            )
         except PermissionDenied as exc:
             self.ledger.append("action_denied", {
                 "action": action.to_dict(), "reason": str(exc),
@@ -116,7 +118,12 @@ class Kernel:
             })
             return KernelResult(False, reason, None)
         try:
-            self.permissions.require(self._state, transformed.actor, transformed.capability)
+            self.permissions.require_action(
+                self._state,
+                transformed.actor,
+                transformed.kind,
+                transformed.capability,
+            )
         except PermissionDenied as exc:
             self.ledger.append("action_denied", {
                 "action": transformed.to_dict(), "reason": str(exc),

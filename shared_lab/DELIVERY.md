@@ -1,48 +1,78 @@
-# 共享实验平台交付说明
+# 共享实验平台权限映射返工交付说明
 
-状态：等待主 Agent 验收。
+状态：主 Agent 已于 2026-08-18 独立验收通过。
 
-## 实际环境
+独立验收使用 `D:\anaconda\envs\multi_agent_graph\python.exe`（Python 3.11.15）
+复跑 22 项测试全部通过，并额外复验：`state.write` 伪装执行 `isolate_agent`
+被拒且状态不变；正确 `defense.isolate` 仍可执行；未知 action kind 被拒；空 canary
+被拒。功能验收与整体交付均通过。
 
-- 开发/主测试解释器：`C:\Users\贾济铭\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe`
-- Python：3.12.13（代码声明并保持 Python 3.11+ 兼容）
-- 交叉测试解释器：`D:\anaconda\python.exe`
-- Python：3.13.5
-- 任务书指定的 `D:\anaconda\envs\multi_agent_graph\python.exe` 在当前机器不存在，因此未能在精确的 3.11.15 环境复跑。
-- GPU、模型与网络：测试均未使用。
+## 实际环境与依赖
 
-## 依赖清单
-
+- Conda 环境：`multi_agent_graph`
+- 解释器：`D:\anaconda\envs\multi_agent_graph\python.exe`
+- Python：`3.11.15`
 - 运行时第三方依赖：无，仅 Python 标准库。
-- 构建依赖：`setuptools>=68`，仅用于可编辑安装/打包。
-- 测试框架：标准库 `unittest`，无新增测试依赖。
+- 测试框架：标准库 `unittest`；未安装任何新依赖。
+- GPU、模型与网络：全部未使用。
 
-## 测试与验收证据
+## 本轮返工
 
-公开测试命令：
+### 内核强制 kind–capability 绑定
+
+映射由 `src/lab_kernel/permissions.py` 内核内置，并使用只读
+`MappingProxyType` 保存。当前所有可执行 action kind 的唯一合法映射为：
+
+| action kind | required capability |
+|---|---|
+| `set_value` | `state.write` |
+| `append_value` | `state.write` |
+| `send_message` | `message.send` |
+| `isolate_agent` | `defense.isolate` |
+| `cut_edge` | `defense.cut_edge` |
+| `revoke_permission` | `defense.revoke` |
+| `rollback_state` | `defense.rollback` |
+
+`Kernel.dispatch()` 在 hook 前的首次授权及 hook 后复检两处都调用
+`PermissionEnforcer.require_action()`。内核先按 `kind` 取得必需 capability，再要求
+调用者声明值与之严格相等，最后才检查该 actor 是否实际持有必需 capability。
+未知 kind、声明不一致或 actor 缺权都会在任何状态转换前拒绝，并追加
+`action_denied` 账本事件；调用者即使持有其他合法 capability 或通配能力，也不能用其
+替代 kind 的必需 capability。
+
+### 空 canary
+
+供应商审查场景 evaluator 现在要求 canary 必须是非空字符串；空值或非字符串会直接
+抛出 `ValueError`，不再触发空字符串包含判断恒真的误报。
+
+## 测试结果
+
+公开复跑命令：
 
 ```powershell
 cd shared_lab
-python -m unittest discover -s tests -v
+conda run --no-capture-output -n multi_agent_graph python -B -m unittest discover -s tests -v
 ```
 
-测试数：19。Python 3.12.13 与 Python 3.13.5 各运行一遍，均为 `Ran 19 tests ... OK`。另执行 `pip wheel --no-deps --no-build-isolation`，成功构建 `lab_kernel-0.1.0-py3-none-any.whl`，随后清理构建产物。
+结果：`Ran 22 tests ... OK`。
 
-1. 场景解耦：`test_kernel_source_has_no_first_scenario_constants` 扫描内核源码；场景数据仅位于 `scenarios/`。
-2. 全离线 stub：`test_offline_stub_scheduler_and_deterministic_replay`。
-3. 追加账本与回放：`test_append_only_ledger_refuses_reopen`、`test_offline_stub_scheduler_and_deterministic_replay`、`test_replay_rejects_state_hash_tampering`。
-4. 权限前置与拒绝留痕：`test_permission_denial_is_recorded_before_execution`、`test_message_must_use_live_configured_edge`、`test_unauthorized_defense_is_denied`。
-5. 配置/代码/环境溯源：`test_receipt_verifies_config_code_environment_and_ledger`。
-6. 篡改 fail-closed：`test_ledger_tampering_fails_even_if_event_hash_is_recomputed`、`test_configuration_tampering_fails_against_receipt`。
-7. 首个场景与程序判定：`test_scenario_is_declarative_and_programmatically_evaluated`。
-8. 三类钩子：`test_message_gate_replace_drop_and_safe_rewrite`、`test_observation_noise_missing_and_false_label`、`test_all_defense_actions_are_permission_checked_and_replayable`。
-9. `paperAlpha/` 字节不变：实施前后对 653 个文件按相对路径排序并计算逐文件 SHA-256 后再聚合；基线与最终值均为 `90372c7a53158b1745dfab0ade03dcffc0cbf9a7c73c6b2f0caf5881e34c6c73`。`git diff HEAD -- paperAlpha doc README.md .gitignore` 为空。
+新增定向证据：
 
-## 未实现项与已知限制
+- `test_every_action_kind_rejects_other_owned_capability`：对全部 7 个 action kind，使用
+  coordinator 已拥有的另一项合法 capability 伪装执行，全部拒绝、状态不变，且逐项
+  产生 `action_denied`。
+- `test_defense_kinds_cannot_be_spoofed_with_state_write`：明确验证隔离、切边、撤权、
+  回滚四种防御动作均不能被 `state.write` 绕过，并核对拒绝账本顺序。
+- `test_scenario_evaluator_rejects_empty_canary`：空 canary 明确报错。
+- 原 19 项账本只增不改、确定回放、溯源收据、配置/代码/账本篡改 fail-closed、
+  场景声明式加载、程序判定器与三个钩子测试全部继续通过，未重做其实现。
 
-- 未集成真实模型适配器；这是刻意保留的场景/部署层扩展点，不影响离线内核验收。
-- 未集成 AutoGen 或 LangGraph；标准库薄内核已经覆盖本任务的审计性质，避免增加运行时依赖。
-- 收据是内容寻址的可信锚，不是数字签名。若攻击者能同时替换账本、配置、代码和调用方保存的原始收据，则纯本地哈希无法证明外部真实性；生产归档应把收据哈希写入独立只读存储或使用组织签名。
-- 精确 Python 3.11.15 解释器在当前环境不可用，等待验收环境复跑。
+## 边界与已知限制
 
-本文不包含论文结论；等待主 Agent 验收。
+- 本轮只修改 `shared_lab/` 内核权限、场景 evaluator、测试和本交付说明。
+- 未修改 `paperAlpha/`、`doc/`、根 README 或 `.gitignore`；工作树中既有的
+  `paperAlpha` 删除状态不属于本任务，也未被触碰。
+- 未接入真实模型、网络、GPU、AutoGen 或 LangGraph。
+- 收据仍是内容寻址可信锚而非数字签名，此限制与首轮交付相同。
+
+本文不包含论文结论；本次交付仅确认共享实验平台的工程基础满足任务书要求。
