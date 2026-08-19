@@ -4,16 +4,19 @@ from __future__ import annotations
 
 import copy
 import inspect
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 from .ledger import AppendOnlyLedger
-from .models import Action, Hook
+from .models import Action, AgentRequest, Hook
+from .observation import build_observation, finalize_hook_observation
 from .permissions import PermissionDenied, PermissionEnforcer
 from .provenance import build_provenance, write_receipt
 from .scenario import Scenario
 from .state import StateTransitionError, apply_action, state_hash
+from .tools import ToolError, ToolRegistry
 
 
 @dataclass(frozen=True)
@@ -21,6 +24,7 @@ class KernelResult:
     accepted: bool
     reason: str | None
     action: Action | None
+    tool_result: Mapping[str, Any] | None = None
 
 
 class Kernel:
@@ -40,6 +44,7 @@ class Kernel:
         self.ledger = AppendOnlyLedger(ledger_path, run_id)
         self.run_id = run_id
         self.permissions = PermissionEnforcer()
+        self.tools = ToolRegistry(scenario, self.permissions)
         self.hooks = tuple(hooks)
         discovered_roots = {Path(__file__).resolve().parent}
         for hook in self.hooks:
@@ -75,6 +80,104 @@ class Kernel:
             and edge.get("target") == message.get("recipient")
             for edge in self._state.get("edges", [])
         )
+
+    def deny_agent_request(
+        self, actor: str, category: str, reason: str
+    ) -> KernelResult:
+        before = state_hash(self._state)
+        self.ledger.append("action_denied", {
+            "request": {"actor": actor, "category": category},
+            "reason": reason,
+            "state_before_hash": before,
+            "state_after_hash": before,
+        })
+        return KernelResult(False, reason, None)
+
+    def dispatch_agent_request(self, request: AgentRequest) -> KernelResult:
+        """Only entry point for untrusted/model-controlled agent intent."""
+
+        if not isinstance(request.params, Mapping):
+            return self.deny_agent_request(
+                request.actor, "malformed_action", "Agent request params must be an object"
+            )
+        if request.kind == "send_message":
+            expected = {"edge_id", "recipient", "content"}
+            if (
+                set(request.params) != expected
+                or not isinstance(request.params["edge_id"], str)
+                or not request.params["edge_id"]
+                or not isinstance(request.params["recipient"], str)
+                or not request.params["recipient"]
+            ):
+                return self.deny_agent_request(
+                    request.actor, "malformed_action", "Message request fields are not exact"
+                )
+            try:
+                json.dumps(request.params["content"], ensure_ascii=False, allow_nan=False)
+            except (TypeError, ValueError):
+                return self.deny_agent_request(
+                    request.actor, "malformed_action", "Message content must be finite JSON"
+                )
+            message = {
+                "edge_id": request.params["edge_id"],
+                "recipient": request.params["recipient"],
+                "content": copy.deepcopy(request.params["content"]),
+                "sender": request.actor,
+            }
+            return self.dispatch(Action(
+                request.actor, "message.send", "send_message", {"message": message}
+            ))
+        if request.kind == "call_tool":
+            if (
+                set(request.params) != {"tool_name", "arguments"}
+                or not isinstance(request.params["tool_name"], str)
+                or not request.params["tool_name"]
+                or not isinstance(request.params["arguments"], Mapping)
+            ):
+                return self.deny_agent_request(
+                    request.actor, "malformed_action", "Tool request fields are not exact"
+                )
+            return self._dispatch_tool(
+                request.actor,
+                request.params["tool_name"],
+                request.params["arguments"],
+            )
+        return self.deny_agent_request(
+            request.actor, "unknown_action", "Untrusted agents may only send messages or call tools"
+        )
+
+    def _dispatch_tool(
+        self, actor: str, tool_name: str, arguments: Any
+    ) -> KernelResult:
+        before = state_hash(self._state)
+        request = {
+            "actor": actor,
+            "kind": "call_tool",
+            "tool_name": tool_name,
+            "arguments": copy.deepcopy(arguments),
+        }
+        try:
+            execution = self.tools.execute(self._state, actor, tool_name, arguments)
+        except ToolError as exc:
+            self.ledger.append("action_denied", {
+                "request": {**request, "category": exc.category},
+                "reason": str(exc),
+                "state_before_hash": before,
+                "state_after_hash": before,
+            })
+            return KernelResult(False, str(exc), None)
+        next_state = copy.deepcopy(dict(execution.next_state))
+        after = state_hash(next_state)
+        self.ledger.append("tool_applied", {
+            "request": request,
+            "required_capability": execution.required_capability,
+            "result_summary": dict(execution.result_summary),
+            "effects": [copy.deepcopy(dict(item)) for item in execution.effects],
+            "state_before_hash": before,
+            "state_after_hash": after,
+        })
+        self._state = next_state
+        return KernelResult(True, None, None, copy.deepcopy(dict(execution.result)))
 
     def dispatch(self, action: Action) -> KernelResult:
         before = state_hash(self._state)
@@ -155,19 +258,14 @@ class Kernel:
         return KernelResult(True, None, transformed)
 
     def observation_for(self, agent_id: str) -> Mapping[str, Any]:
-        observation: Mapping[str, Any] = {
-            "agent_id": agent_id,
-            "state": copy.deepcopy(self._state),
-            "inbox": [
-                copy.deepcopy(item) for item in self._state.get("messages", [])
-                if item.get("recipient") == agent_id
-            ],
-        }
+        base = build_observation(self.scenario, self._state, agent_id)
+        observation: Mapping[str, Any] = copy.deepcopy(base)
         for hook in self.hooks:
             method = getattr(hook, "transform_observation", None)
             if method is not None:
                 observation = method(agent_id, observation, self._context())
-        return observation
+        policy = self.scenario.observation_policy(agent_id)
+        return finalize_hook_observation(base, observation, policy["hook_fields"])
 
     def finish(self) -> None:
         current = state_hash(self._state)

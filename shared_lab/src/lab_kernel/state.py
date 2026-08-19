@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import copy
-from typing import Any, MutableMapping, Sequence
+from typing import Any, Mapping, MutableMapping, Sequence
 
 from .canonical import content_hash
 from .models import Action
@@ -67,4 +67,20 @@ def apply_action(state: dict[str, Any], action: Action) -> dict[str, Any]:
         result = snapshot
     else:
         raise StateTransitionError(f"Unknown action kind: {action.kind}")
+    return result
+
+
+def apply_effects(
+    state: Mapping[str, Any], effects: Sequence[Mapping[str, Any]]
+) -> dict[str, Any]:
+    """Apply already-authorized deterministic effects without executing their producer."""
+
+    result = copy.deepcopy(dict(state))
+    for effect in effects:
+        if set(effect) != {"kind", "params"}:
+            raise StateTransitionError("Tool effect has unexpected fields")
+        result = apply_action(
+            result,
+            Action("__trusted_effect__", "state.write", str(effect["kind"]), dict(effect["params"])),
+        )
     return result

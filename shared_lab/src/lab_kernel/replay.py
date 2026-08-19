@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import copy
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Mapping, MutableMapping
 
+from .canonical import content_hash
 from .ledger import LedgerIntegrityError, iter_events, verify_ledger
 from .models import Action
-from .state import apply_action, state_hash
+from .state import StateTransitionError, apply_action, apply_effects, state_hash
 
 
 class ReplayError(RuntimeError):
@@ -23,7 +24,11 @@ def replay(
     expected_head: str | None = None,
     expected_file_hash: str | None = None,
     expected_final_state_hash: str | None = None,
+    audit: MutableMapping[str, int] | None = None,
 ) -> dict[str, Any]:
+    if audit is not None:
+        audit["model_calls"] = 0
+        audit["tool_executions"] = 0
     try:
         verify_ledger(
             ledger_path, expected_run_id=expected_run_id, expected_head=expected_head,
@@ -42,6 +47,31 @@ def replay(
             raise ReplayError(f"State-before hash mismatch at sequence {event['sequence']}")
         if event["event_type"] == "action_applied":
             state = apply_action(state, Action.from_dict(payload["action"]))
+        if event["event_type"] == "tool_applied":
+            effects = payload.get("effects")
+            request = payload.get("request")
+            summary = payload.get("result_summary")
+            if (
+                not isinstance(effects, list)
+                or not effects
+                or not isinstance(request, Mapping)
+                or not isinstance(summary, Mapping)
+            ):
+                raise ReplayError("Malformed recorded tool effect")
+            final_effect = effects[-1]
+            try:
+                entry = final_effect["params"]["value"]
+                path = final_effect["params"]["path"]
+                if (
+                    final_effect["kind"] != "append_value"
+                    or path != ["tool_results", request["actor"]]
+                    or entry["tool_name"] != request["tool_name"]
+                    or content_hash(entry["result"]) != summary["result_hash"]
+                ):
+                    raise ReplayError("Recorded tool result summary or visibility mismatch")
+                state = apply_effects(state, effects)
+            except (KeyError, TypeError, StateTransitionError) as exc:
+                raise ReplayError("Malformed recorded tool effects") from exc
         if payload.get("state_after_hash") != state_hash(state):
             raise ReplayError(f"State-after hash mismatch at sequence {event['sequence']}")
         if event["event_type"] == "run_finished":

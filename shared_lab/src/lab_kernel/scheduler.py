@@ -5,7 +5,8 @@ from __future__ import annotations
 from typing import Mapping
 
 from .kernel import Kernel
-from .models import Agent
+from .model_agent import ModelActionError
+from .models import Action, Agent, AgentRequest
 
 
 class Scheduler:
@@ -22,8 +23,21 @@ class Scheduler:
                 agent = self.agents.get(agent_id)
                 if agent is None:
                     continue
-                for action in agent.act(self.kernel.observation_for(agent_id)):
+                try:
+                    actions = agent.act(self.kernel.observation_for(agent_id))
+                except ModelActionError as exc:
+                    self.kernel.deny_agent_request(agent_id, exc.category, str(exc))
+                    continue
+                for action in actions:
+                    if not isinstance(action, (Action, AgentRequest)):
+                        self.kernel.deny_agent_request(
+                            agent_id, "invalid_agent_output", "Agent returned an unsupported object"
+                        )
+                        continue
                     if action.actor != agent_id:
                         raise ValueError("Agent returned an action for a different actor")
-                    self.kernel.dispatch(action)
+                    if isinstance(action, AgentRequest):
+                        self.kernel.dispatch_agent_request(action)
+                    else:
+                        self.kernel.dispatch(action)
         self.kernel.finish()

@@ -31,8 +31,20 @@ class Action:
         )
 
 
+@dataclass(frozen=True)
+class AgentRequest:
+    """Untrusted agent intent; authority is deliberately absent."""
+
+    actor: str
+    kind: str
+    params: Mapping[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {"actor": self.actor, "kind": self.kind, "params": dict(self.params)}
+
+
 class Agent(Protocol):
-    def act(self, observation: Mapping[str, Any]) -> Sequence[Action]: ...
+    def act(self, observation: Mapping[str, Any]) -> Sequence[Action | AgentRequest]: ...
 
 
 class Hook(Protocol):
