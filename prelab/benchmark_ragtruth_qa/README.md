@@ -1,6 +1,6 @@
 # RAGTruth QA：原 Llama-2-7B-chat 回答的白盒重建基准
 
-**当前训练、基线比较与数据扩充状态见 [CURRENT_STATUS.md](CURRENT_STATUS.md)。** 下文保留最初数据准备时的说明；其中“尚未加载GPU/训练”等历史状态已由当前进展取代。原QA测试仍封存。
+**给论文合作者的直接写作提示见 [PAPER_WRITING_PROMPT_CN.md](PAPER_WRITING_PROMPT_CN.md)。** 当前训练、基线比较与数据扩充状态见 [CURRENT_STATUS.md](CURRENT_STATUS.md)。下文保留最初数据准备时的说明；其中“尚未加载GPU/训练”等历史状态已由当前进展取代。原QA测试仍封存。
 
 本目录准备独立的人工 span 问答基准，不替代原 R16 控制场景，也不占用 Round21。使用官方发布的 `llama-2-7b-chat` 原回答，文字与人工字符标注保持不变。目标重放是**固定模型、模板与 NF4 精度的教师强制重建**，不是原始生成 token 轨迹的精确复现。目前只做数据与模型准备，未加载 GPU 或提取特征。
 
