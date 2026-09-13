@@ -1,0 +1,47 @@
+{
+  "version": "r30-fixed-answer-supervision-v1",
+  "scope": "Same repeatedly developed original R16 train602/301questions/278groups; human_gold=false. Not a fresh test or replacement for public human-gold QA.",
+  "representation": "Exact R29 full769 raw-window representation. Reuse each frozen R29 fit-only StandardScaler; no refit of LR/PCA/encoder and no new input feature.",
+  "model": {
+    "architecture": "769->32 SiLU->dropout0.1->1",
+    "parameters": 24673,
+    "seed": 20261008,
+    "initialization_seed": "seed+fold, identical initial state and post-init CPU RNG for both modes",
+    "epochs": 10,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "gradient_clipping": null,
+    "scheduler": null,
+    "CPU_threads": 4,
+    "dtype": "float32"
+  },
+  "modes": {
+    "window_only": {
+      "lambda_answer": 0.0
+    },
+    "window_plus_answer": {
+      "lambda_answer": 1.0
+    }
+  },
+  "windows": "Only unchanged main_eligible fit windows enter window BCE; reuse exact R29 loss weights, global mass3854. Ineligible labels remain-1 and never enter BCE.",
+  "answer_targets": "Only unchanged main_eligible (resolved) fit answers enter answer BCE. Gold remains original0/1; safe refusals receive only their existing answer-level negative supervision. Unresolved answer gold remains-1 and never enters BCE.",
+  "answer_weights": "Base: equal mass across fit groups that contain resolved answers, then equal over resolved answers within group. Fit-only weighted class factors0.5/class_base_mass; after class weighting renormalize each such group equally. Final global answer mass1. No question/condition hierarchy or extra token labels in this answer term.",
+  "answer_logit": "max over ALL original candidate-window logits of the whole answer, including windows ineligible for token supervision; unchanged answer geometry. Autograd native max tie handling.",
+  "batch": {
+    "unit": "8 whole assigned fit event groups; last batch actual B. Never split a group or answer, never delete refusal/unresolved answers or ineligible candidate windows from forward.",
+    "order": "Per-fold/per-epoch fixed group permutation seed+100*fold+epoch; original answer order within group and original candidate-window order within answer; A/B exact same forward order and step count.",
+    "loss": "G/B * [sum_batch(window_weight*BCE)/3854 + lambda*sum_batch(answer_weight*BCE)/1], where G is ALL assigned fit groups and both global denominators remain fixed.",
+    "zero_supervision": "Compute BCE only on eligible selected indices. Empty component is differentiable sum(logits)*0; never evaluate unknown labels then multiply0. AdamW decay is separate from data gradients."
+  },
+  "selection": "Each mode/fold first selects ONE epoch1..10 for both units using calibration min(windowF1,answerF1),windowF1,windowPrecision,earlier epoch; epoch0 diagnostic only. Then same chosen mode receives both baselines and same six alpha values with original calibration-only joint-unit selection.",
+  "fusion": "Exact R28/R29 formula and per-fold R26 scores. One alpha per baseline/mode/fold shared by two units;60 candidates per mode/120total, no extra epoch selection for individual baseline.",
+  "evaluation": "Commit all5 folds, both modes and choices before outer metrics. Same eligibility, four-raw-BPE windows and answer max; original R29/R28 controls are only replayed/hashed.",
+  "execution": "Preparation and synthetic CPU selfcheck first; real fit requires a later explicit root instruction. No automatic fit after prepare.",
+  "limits": "Extra answer labels change the objective and effective gradient scale. A positive result would support this fixed supervision change, not prove a universal cure or pure token-level truth detection.",
+  "historical_limit": "Old R16 validation/test were exposed in earlier rounds. This run does not read them. Public QA official_test150 remains sealed.",
+  "GPU_used": false,
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "public_QA_test_opened": false
+}

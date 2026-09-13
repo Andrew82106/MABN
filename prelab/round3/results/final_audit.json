@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "rows": 385,
+  "test_n": 80,
+  "supplement_unique_queries": 687,
+  "source_disjoint": true,
+  "OOF_selection_verified": true,
+  "original_annotation_slices_match": true,
+  "labels_equal_released_dataset": true,
+  "structure_grid_configs": 18,
+  "structure_fit_runs": 30,
+  "validation_choice_verified": true,
+  "validation_cpu_gpu_auc_max_difference": 1.0427294485970684e-05,
+  "supplement_decoding_verified": true,
+  "finite_features": true,
+  "causal_network_prefix_errors": {
+    "mlp": 0.0,
+    "conv": 4.470348358154297e-08,
+    "gru": 0.0
+  },
+  "independent_metric_max_difference": 2.220446049250313e-16,
+  "methods_checked": 51,
+  "code_sha256": {
+    "audit_supplement_states.py": "b2f5b53a4aa15aa92954c875a82352baa1af001431081558b4d5a29fb0f39b07",
+    "cache_test.py": "2ba310483d81b7fd6b6b9df45dc95f7d9f72b19f90b991e19de10d3f7e9a39a8",
+    "evaluate_round3.py": "854aefd98ad17fabcfa0a9911e0cff97620ab746b8e56902f3df29538b8e9d8d",
+    "explore_direct.py": "62919a25447baa0851e0df4cb0d830be5de1ea7c73a5e74a95a44a8682f7f0a1",
+    "fusion.py": "9a5efbebafecbca1103a2d4647f4db743bf1cfd97f896a8ff27573f4650565d0",
+    "networks.py": "be28b400e638c30f4b0de6c582b991419d0edead24fc7d7bef57937c476277dc",
+    "prepare.py": "9e7293fee65d0b958801acb5fe22bdf006b7f7e6f5f3425a63f5b56cf70a465e",
+    "prepare_inputs.py": "bc759170307a3b930599dd48cc2c1baabc79c65f5c9cac6c85e6afd5a7dd07c7",
+    "prepare_queries.py": "f47d1cb9bbf5ea96b1f700f015d7c14b059f9fc996fdbeb5429b2510713b4486",
+    "report.py": "d1272c1171e1c43cf54a90bd5a9570ca1f88231f53f0b78df696f9048ddf7773",
+    "shared.py": "5ab6beb6c87841e6d539b228e2807cec102946633ac9e56cae7e20d255b60a34",
+    "supplement.py": "a230895bbbba490ba56af56a9b51320696374e14f533ce5cea5d0a72479b3f18",
+    "tune_structures.py": "baddf4c7094633df462b6c2ceea32b0907a9508614ae41e340387f500eb281a0",
+    "verify.py": "561141d08f7cf55d57995a1dbaa5e271475252f089a80b009985c8dc5f6423db"
+  },
+  "scope": "integrity and metric audit; does not independently reannotate news or establish live self-generation effectiveness"
+}

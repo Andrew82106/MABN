@@ -1,0 +1,42 @@
+{
+  "version": "qa-lookback-common-stronger-regularization-v1",
+  "methods": [
+    "lb_source_pre_header",
+    "lb_prefix_pre_header",
+    "lb_source_post_header",
+    "lb_prefix_post_header",
+    "lb_source_post_legacy"
+  ],
+  "C": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "added_C": [
+    1e-05,
+    0.0001
+  ],
+  "new_LR_fits": 8,
+  "frozen_model_replays": 17,
+  "total_candidates": 25,
+  "scope": "Unchanged634 fit /159 calibration,168123/42241 raw4BPE windows. Official test remains sealed.",
+  "source_matrices": "Frozen lookback_controls_v2 five1024-dimensional window matrices; no new pooling, feature extraction or scaler fitting.",
+  "fit": "Four control definitions each fit two extra Cs. Same original fit-only scaler, standardized fit matrix, labels and loss weights; total loss mass168123 unchanged.",
+  "anchor": "Five original source-post-no-header models reused. Added Cs1e-5/1e-4 come from regularization_v1; old three from lookback_controls_v2. No anchor refitting.",
+  "replays": "Existing15 control candidates plus two extra anchor candidates copied as frozen model/score artifacts; exact scores/thresholds/metrics retained. Independent coefficient replay tolerance1e-12 does not replace stored scores.",
+  "solver": "Same liblinear L2 max_iter2000 random_state20260924, four CPU threads; no class_weight outside frozen sample weights.",
+  "selection": "Same separate calibration thresholds and q.selection_key; max min(windowF1,answerF1), then windowF1,precision,smaller C. All five definitions share exactly five Cs.",
+  "answer": "Maximum all unchanged eligible windows. Same human-QA refusal policy and original labels.",
+  "primary_closer_official": "lb_prefix_pre_header",
+  "no_PCA_or_scaler_fit": true,
+  "no_GPU": true,
+  "no_official_test": true,
+  "limitation": "Stronger grid added after observing prior development results; repeated calibration selection is optimistic, not independent final performance.",
+  "code_sha256": "b4c4843acf96d150a308bbb476307d91381928a8a92069168796303f072bfa6b",
+  "controls_runner_sha256": "23a6f79d3b29ff3121934875e11b0a05380db9badeda894a3fd5620af396568a",
+  "controls_complete_sha256": "7b13837857a20e0320d63c5b84ccd1af07d6821c13ef4b1cf0230f7f90eefaa0",
+  "regularization_complete_sha256": "7104421ffa9cfd53e7e856bf9fe5673dd373c45a8df5d68288dcbda156e937be",
+  "gold_manifest_sha256": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7"
+}

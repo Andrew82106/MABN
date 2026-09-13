@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "independently_recomputed_prediction_sets": 17,
+  "test_responses": 89,
+  "own_reviewed_responses": 16,
+  "manifest_files_verified": 41,
+  "report_links_valid": true,
+  "all_test_and_own_samples_in_html": true
+}

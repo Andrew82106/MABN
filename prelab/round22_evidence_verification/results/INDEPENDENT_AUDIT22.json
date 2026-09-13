@@ -1,0 +1,279 @@
+{
+  "status": "passed",
+  "reviewer": "/root/data_build with independent coefficient review by /root/data_build/extract_review",
+  "completed_at_utc": "2026-09-11T15:23:11.024614+00:00",
+  "complete_sha256": "01d00a662b2fe1a99148d3c96bd8c8f096eb72e69f8cab62eee809f31eb9396c",
+  "complete22_sha256": "01d00a662b2fe1a99148d3c96bd8c8f096eb72e69f8cab62eee809f31eb9396c",
+  "summary22_sha256": "ca573e3fc2a35a45758ce94a3e88ca7f734e3d090ac8a2d623fe83119a857616",
+  "run22_sha256": "b6320ea36ea511924136a75d0e62fbab2efacb91a54237adda5d1cb66ee7eeab",
+  "component_sha256": {
+    "RESULTS_AUDIT22.json": "ae25e9bdb57645f8d4654626d3a3441d2cdccda1d14516046268986d056fca7f",
+    "COEFFICIENT_AUDIT22.json": "fa8c8fc23a29c09f64f4f18875ef2cd17d51e5b0d4d2a107b87a2b58c1ceb781",
+    "audit_results22.py": "355d56d4fe04f802be5e60820cab4c2c83f53ef15fe288f7349d2321bff0fb28",
+    "audit_coefficients22.py": "7859c2f043aae35297958a18c022b2496c4d0b7885b25101325bb978320f11b1"
+  },
+  "cohort": {
+    "answers": 602,
+    "questions": 301,
+    "groups": 278,
+    "eligible_answers": 598,
+    "risk_answers": 151,
+    "safe_refusals": 117,
+    "unresolved_excluded": 4,
+    "candidate_windows": 12222,
+    "eligible_windows": 9526,
+    "risk_windows": 1063,
+    "generation_hash_bound_design_rows": 602
+  },
+  "checks": {
+    "all_602_design_rows_bound_to_actual_r16_train_and_original_generation_hashes": true,
+    "fixed_external_fold_assignment_exact": true,
+    "all_fit_calibration_outer_groups_disjoint": true,
+    "fit_only_pca_indices_mean_and_weight_metadata_consistent_with_runner": true,
+    "all_five_saved_pca_forward_projections_bitwise_exact": true,
+    "fit_only_scaler_weighted_statistics_reconstructed": true,
+    "all_15_lr_coefficients_and_intercepts_manually_replayed": true,
+    "all_group_condition_answer_weights_and_fixed_loss_mass_3854_reconstructed": true,
+    "every_eligible_answer_in_fit_exactly_three_times_and_excluded_answers_never_in_fit": true,
+    "all_calibration_cutoffs_and_C_T_candidate_selection_reconstructed_without_outer_labels": true,
+    "all_six_old_baseline_scores_manually_replayed_exactly": true,
+    "all_six_old_baseline_oof_scores_predictions_and_summary_match_r21_exactly": true,
+    "every_answer_and_window_oof_once": true,
+    "all_reported_answer_window_confusion_counts_and_f1_recomputed": true,
+    "all_folds_frozen_before_outer_scoring": true,
+    "bound_source_and_result_hashes_rechecked": true
+  },
+  "numerical_errors": {
+    "new_lr_probability_max_absolute": 2.220446049250313e-16,
+    "old_baseline_score_max_absolute": {
+      "base": 0.0,
+      "slots_base": 0.0,
+      "r19_all": 0.0,
+      "base_harp_delta": 0.0,
+      "lookback_tuned": 0.0,
+      "redeep_tuned": 0.0
+    },
+    "pca_fit_weighted_mean_max_absolute": 8.526512829121202e-14,
+    "scaler_fit_weighted_mean_max_absolute": 1.6908098535372408e-15,
+    "scaler_fit_weighted_variance_max_relative": 1.796359100261269e-15,
+    "loss_mass_max_absolute": 9.094947017729282e-13,
+    "direct_float32_sigmoid_max_absolute": 7.011341918161662e-08
+  },
+  "metrics": {
+    "base": {
+      "windows": {
+        "tp": 732,
+        "fp": 491,
+        "fn": 331,
+        "tn": 7972,
+        "precision": 0.598528209321341,
+        "recall": 0.6886171213546566,
+        "f1": 0.6404199475065617
+      },
+      "answers": {
+        "tp": 100,
+        "fp": 39,
+        "fn": 51,
+        "tn": 408,
+        "precision": 0.7194244604316546,
+        "recall": 0.6622516556291391,
+        "f1": 0.6896551724137931
+      }
+    },
+    "slots_base": {
+      "windows": {
+        "tp": 738,
+        "fp": 451,
+        "fn": 325,
+        "tn": 8012,
+        "precision": 0.6206896551724138,
+        "recall": 0.6942615239887112,
+        "f1": 0.655417406749556
+      },
+      "answers": {
+        "tp": 94,
+        "fp": 27,
+        "fn": 57,
+        "tn": 420,
+        "precision": 0.7768595041322314,
+        "recall": 0.6225165562913907,
+        "f1": 0.6911764705882353
+      }
+    },
+    "r19_all": {
+      "windows": {
+        "tp": 720,
+        "fp": 456,
+        "fn": 343,
+        "tn": 8007,
+        "precision": 0.6122448979591837,
+        "recall": 0.6773283160865475,
+        "f1": 0.643144260830728
+      },
+      "answers": {
+        "tp": 102,
+        "fp": 26,
+        "fn": 49,
+        "tn": 421,
+        "precision": 0.796875,
+        "recall": 0.6754966887417219,
+        "f1": 0.7311827956989247
+      }
+    },
+    "base_harp_delta": {
+      "windows": {
+        "tp": 701,
+        "fp": 344,
+        "fn": 362,
+        "tn": 8119,
+        "precision": 0.6708133971291866,
+        "recall": 0.6594543744120414,
+        "f1": 0.6650853889943074
+      },
+      "answers": {
+        "tp": 103,
+        "fp": 48,
+        "fn": 48,
+        "tn": 399,
+        "precision": 0.6821192052980133,
+        "recall": 0.6821192052980133,
+        "f1": 0.6821192052980133
+      }
+    },
+    "lookback_tuned": {
+      "windows": {
+        "tp": 724,
+        "fp": 561,
+        "fn": 339,
+        "tn": 7902,
+        "precision": 0.5634241245136187,
+        "recall": 0.6810912511759172,
+        "f1": 0.616695059625213
+      },
+      "answers": {
+        "tp": 107,
+        "fp": 48,
+        "fn": 44,
+        "tn": 399,
+        "precision": 0.6903225806451613,
+        "recall": 0.7086092715231788,
+        "f1": 0.6993464052287581
+      }
+    },
+    "redeep_tuned": {
+      "windows": {
+        "tp": 572,
+        "fp": 1580,
+        "fn": 491,
+        "tn": 6883,
+        "precision": 0.26579925650557623,
+        "recall": 0.5380997177798683,
+        "f1": 0.3558320373250389
+      },
+      "answers": {
+        "tp": 110,
+        "fp": 192,
+        "fn": 41,
+        "tn": 255,
+        "precision": 0.36423841059602646,
+        "recall": 0.7284768211920529,
+        "f1": 0.4856512141280353
+      }
+    },
+    "verifier_direct_broadcast": {
+      "windows": {
+        "tp": 749,
+        "fp": 1989,
+        "fn": 314,
+        "tn": 6474,
+        "precision": 0.2735573411249087,
+        "recall": 0.7046095954844779,
+        "f1": 0.39410681399631675
+      },
+      "answers": {
+        "tp": 97,
+        "fp": 74,
+        "fn": 54,
+        "tn": 373,
+        "precision": 0.5672514619883041,
+        "recall": 0.6423841059602649,
+        "f1": 0.6024844720496895
+      }
+    },
+    "verifier_learned_broadcast": {
+      "windows": {
+        "tp": 853,
+        "fp": 1993,
+        "fn": 210,
+        "tn": 6470,
+        "precision": 0.29971890372452564,
+        "recall": 0.8024459078080903,
+        "f1": 0.43642875415707344
+      },
+      "answers": {
+        "tp": 129,
+        "fp": 29,
+        "fn": 22,
+        "tn": 418,
+        "precision": 0.8164556962025317,
+        "recall": 0.8543046357615894,
+        "f1": 0.8349514563106796
+      }
+    },
+    "verifier_direct_slots": {
+      "windows": {
+        "tp": 578,
+        "fp": 1301,
+        "fn": 485,
+        "tn": 7162,
+        "precision": 0.3076104310803619,
+        "recall": 0.5437441204139228,
+        "f1": 0.3929299796057104
+      },
+      "answers": {
+        "tp": 97,
+        "fp": 74,
+        "fn": 54,
+        "tn": 373,
+        "precision": 0.5672514619883041,
+        "recall": 0.6423841059602649,
+        "f1": 0.6024844720496895
+      }
+    },
+    "verifier_learned_slots": {
+      "windows": {
+        "tp": 668,
+        "fp": 592,
+        "fn": 395,
+        "tn": 7871,
+        "precision": 0.5301587301587302,
+        "recall": 0.6284101599247413,
+        "f1": 0.5751183814033577
+      },
+      "answers": {
+        "tp": 128,
+        "fp": 32,
+        "fn": 23,
+        "tn": 415,
+        "precision": 0.8,
+        "recall": 0.847682119205298,
+        "f1": 0.8231511254019293
+      }
+    }
+  },
+  "primary_method": "verifier_learned_slots",
+  "conclusion": "The frozen exploratory OOF answer-level improvement is numerically reproducible. The predeclared primary method remains weak at localization; its window F1 is lower than the old slots baseline. No implementation or split-integrity blocker was identified within this audit scope.",
+  "blocking_findings": [],
+  "no_refitting_retuning_gpu_or_old_file_changes": true,
+  "original_r16_validation_test_answers_or_labels_read": false,
+  "scope_limits": [
+    "Repeatedly developed R16 actual-train OOF folds are development evidence, not an independent final test.",
+    "This audit checks saved artifacts, runner code, fit metadata and numerical forward replay. It does not independently rerun randomized SVD or retrain the classifiers.",
+    "The six old methods were replayed from their frozen coefficients/formulas; this audit did not regenerate their GPU features.",
+    "Confusion counts, precision, recall, F1 and calibration selection were independently recomputed. Bootstrap confidence intervals were not independently rerun.",
+    "R16 uses assistant-reviewed labels and controlled source-faithfulness tasks; this audit does not establish human annotation truth or real-world OSINT generalization.",
+    "The verifier consumes a further same-Qwen evidence-check forward pass after seeing the full answer; this is not strictly online original-generation detection.",
+    "Class-weighted risk scores have not been shown to be calibrated hallucination probabilities.",
+    "The secondary broadcast answer F1 must not replace the predeclared primary method post hoc."
+  ]
+}

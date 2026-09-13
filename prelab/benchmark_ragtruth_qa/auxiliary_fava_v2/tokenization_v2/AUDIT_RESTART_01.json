@@ -1,0 +1,7 @@
+{
+  "reason": "Auditor repeatedly called tokenizer vocabulary-size retrieval once per token. This was unnecessarily slow. Interrupted auditor and cached the two fixed vocabulary sizes once; same range checks retained.",
+  "interrupted_audit_session": 28082,
+  "first_audit_exit_code": 1,
+  "frozen_input_or_labels_or_preparation_changed": false,
+  "checks_or_tolerances_relaxed": false
+}

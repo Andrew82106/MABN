@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "blockers": [],
+  "scope": "Independent read-only reconstruction of all3839 frozen LUMINA records and original159 calibration metrics; no refitting, GPU, test or existing artifact edits.",
+  "primary": "fixed author token formula:0.5IPR-0.5MMD_squared",
+  "unified_evaluation": "4rawBPE float64 mean then maximum over all eligible windows per answer",
+  "appendix": "Native-style all-raw-token answer mean, separately thresholded and reported",
+  "counts": {
+    "answers": 3839,
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "raw_tokens": 708506,
+    "windows": 696220,
+    "fit_windows": 653979,
+    "calibration_windows": 42241,
+    "calibration_positive_answers": 100,
+    "calibration_positive_windows": 5984,
+    "punctuation_slot_occurrences_in_windows": 437624,
+    "short_windows": 1,
+    "raw_tokens_outside_all_eligible_windows": 1,
+    "negative_first_raw_offsets_preserved": 3837
+  },
+  "all_token_and_score_arrays_exact": true,
+  "all9_calibration_thresholds_exact": true,
+  "maximum_metric_absolute_error": 1.1102230246251565e-16,
+  "model_asset_bytes_actual_SHA_verified": 13479255401,
+  "no_classifier_training_or_coefficient_search_or_fusion": true,
+  "files_sha256": {
+    "STATIC_REVIEW.json": "5003630591efcb1d23567be212badd0a60ef73ad93c6dede58abc136a4709002",
+    "NUMERIC_AUDIT.json": "c22154b239405f3a253b356ba40bf1d1e0e57946955426584c235357890b8205",
+    "PER_RECORD_CHECKS.jsonl": "f5af2ccd0f121e0025070c9a6e118e9077d36f14340f00fe370a3dd3e17c057c",
+    "VERIFIED_INPUT_HASHES.json": "88e0bf1c9311e77cae4ba399ca8af6f8b3ce1bce559fb564b5b67167bfa6fdc7",
+    "audit_numeric.py": "2c8a3b340feb01c68cd26042914ec7a9a843f64fe65faec16c397580cee73589"
+  },
+  "primary_calibration_metrics": {
+    "window": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3936,
+      "fp": 13841,
+      "fn": 2048,
+      "tn": 22416,
+      "precision": 0.221409686673792,
+      "recall": 0.6577540106951871,
+      "f1": 0.3312991877446235,
+      "auroc": 0.6914064188084499,
+      "average_precision": 0.27006244858146744
+    },
+    "answermax": {
+      "n": 159,
+      "positive": 100,
+      "tp": 84,
+      "fp": 30,
+      "fn": 16,
+      "tn": 29,
+      "precision": 0.7368421052631579,
+      "recall": 0.84,
+      "f1": 0.7850467289719626,
+      "auroc": 0.7022033898305085,
+      "average_precision": 0.7908760928061055
+    },
+    "paper_answer_mean": {
+      "n": 159,
+      "positive": 100,
+      "tp": 93,
+      "fp": 42,
+      "fn": 7,
+      "tn": 17,
+      "precision": 0.6888888888888889,
+      "recall": 0.93,
+      "f1": 0.7914893617021277,
+      "auroc": 0.7433898305084746,
+      "average_precision": 0.8400970063412581
+    }
+  },
+  "limitations": [
+    "Read-only score/geometry audit; no GPU model replay or independent world-truth relabeling.",
+    "Four-raw-BPE mean and answermax are the unified evaluation adaptation; raw whole-answer mean is separate.",
+    "All reported metrics are repeatedly exposed calibration results, not official sealed-test performance.",
+    "IPR and negative-MMD readouts are components/ablations, not alternatives selected as the formal LUMINA result."
+  ]
+}

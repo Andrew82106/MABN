@@ -1,0 +1,16 @@
+{
+  "version": "current-frozen-candidate-on-native-lookback8-v1",
+  "candidate": "semantic_claim__old_tree__large_weight0.4",
+  "scope": "Only existing native QA calibration159, never official test.",
+  "target_geometry": "All full native8BPE spans: start0..N-8, stride1, including nonlexical spans. No padding, truncation, or filtering.",
+  "target_label": "OR of unchanged original risk_mask across all eight raw tokens; original lexical labeling policy retained.",
+  "mapping": "At 8-span start s, require the five original complete4BPE windows at starts s,s+1,s+2,s+3,s+4, each same answer and original token/offset axis; score=max(five existing scores).",
+  "missing_policy": "Any missing or shifted constituent anywhere stops the entire evaluation before prediction loading. No zero filling, subset scoring, shorter windows, or baseline changes.",
+  "metrics": "Calibration8-span AUROC/AP; optional F1 uses only the candidate already-frozen original4-window threshold. No threshold reselection.",
+  "comparison_limit": "Task-scale mapping of our own4-window detector, not a modification of Lookback. Shared8-span scale does not equalize model inputs, training, or repeated calibration selection.",
+  "CPU_only": true,
+  "new_fits": 0,
+  "threshold_selection": false,
+  "baseline_files_written": false,
+  "official_test_opened": false
+}

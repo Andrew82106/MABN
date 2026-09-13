@@ -1,0 +1,27 @@
+{
+  "version": "ragognizer-adapter-run-audit-v2",
+  "status": "complete",
+  "adapter_scope": "formal_full",
+  "partition_filter": null,
+  "rows": 3839,
+  "partition_rows": {
+    "calibration": 159,
+    "fit": 3680
+  },
+  "windows": 696220,
+  "partition_windows": {
+    "calibration": 42241,
+    "fit": 653979
+  },
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "gpu_run_audit_sha256": "8c41ad1919fdb45ff94e21ec036cdc5ee89de81541d08261048f13608967c252",
+  "raw_sha256": "b0419fc5e156df29eb70f1d919a0223dd24cf0359a8a8aca80accfa9321190ca",
+  "raw_final_chain_sha256": "117087ef51a18925fd16d2ec8c1517cd7a4886a8a0cd12c3f1236c920bbba514",
+  "adapter_script_sha256": "1ccd640c461bbc05662176e0abfbe305fb34f12420e60ee45a9dd971bdae37fd",
+  "output_sha256": "ed2fb04db6b27166ebf0c5b4bedcc0facf90670c80564c74e630689e9fc37be1",
+  "adapted_final_chain_sha256": "7d55527fd96c8920297033b39bc41ef27b13b3f00be459c1bb729f651133520a",
+  "labels_read": false,
+  "thresholds_applied": false,
+  "subset_mode": false,
+  "gpu_audit_verified": true
+}

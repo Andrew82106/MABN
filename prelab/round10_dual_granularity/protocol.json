@@ -1,0 +1,132 @@
+{
+  "schema": "round10-dual-granularity-v1",
+  "status": "specified_before_new_test_generation_and_fit",
+  "model": {
+    "name": "Qwen2.5-7B-Instruct-bnb-4bit",
+    "frozen": true,
+    "quantization": "NF4",
+    "do_sample": false,
+    "max_new_tokens": 256
+  },
+  "dataset": {
+    "reuse_round9_splits": [
+      "train",
+      "validation"
+    ],
+    "new_test_groups": 60,
+    "categories": [
+      "time",
+      "quantity",
+      "location",
+      "relation",
+      "action"
+    ],
+    "new_test_per_category": 12,
+    "conditions": [
+      "complete",
+      "partial"
+    ],
+    "one_question_per_row": true,
+    "old_test_used_for_training_or_scoring": false,
+    "labels": "assistant initial plus independent review, not human gold"
+  },
+  "features": {
+    "lookback_dimensions": 784,
+    "new_dimensions": 16,
+    "surface_dimensions": 8,
+    "old_binding_dimensions": 32,
+    "question_sentence_embedding_temperature": 0.1,
+    "layers_bands": [
+      [
+        1,
+        7
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        15,
+        21
+      ],
+      [
+        22,
+        28
+      ]
+    ],
+    "visible_only": true,
+    "no_future_response": true
+  },
+  "feature_sets": [
+    "lb",
+    "lb_surface",
+    "lb_whitebox",
+    "lb_full",
+    "lb_old_binding"
+  ],
+  "primary_method": "lb_full",
+  "heads": [
+    "question_item_mean_lr",
+    "fine_token_lr"
+  ],
+  "broadcast_controls": {
+    "count": 5,
+    "threshold": "same question-head threshold",
+    "posthoc": true
+  },
+  "lr": {
+    "C": [
+      0.1,
+      1.0
+    ],
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "seed": 20260912,
+    "model_ties": [
+      "higher validation F1",
+      "higher validation precision",
+      "lower C"
+    ]
+  },
+  "threshold": {
+    "question": "validation question micro F1 including reviewed safe abstentions",
+    "token": "validation resolved lexical-token micro F1",
+    "ties": [
+      "higher precision",
+      "higher threshold"
+    ],
+    "no_test_retuning": true
+  },
+  "question_gold": {
+    "supported_asserted": 0,
+    "unsupported_or_contradicted_asserted": 1,
+    "reviewed_safe_abstention": 0,
+    "unresolved_or_missing": null,
+    "asserted_only_secondary": true
+  },
+  "token_gold": "unchanged Round9 BPE offsets and span labels; resolved asserted primary; refusals descriptive only",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260912,
+    "unit": "question group with both conditions"
+  },
+  "primary_contrasts": [
+    [
+      "lb_full",
+      "lb"
+    ],
+    [
+      "lb_full",
+      "lb_surface"
+    ]
+  ],
+  "limitations": [
+    "Custom source curation",
+    "English one-question short-answer retrieval simulation",
+    "One quantized model",
+    "Assistant annotations",
+    "Risk grounded in provided sources, not all real-world truth",
+    "No guaranteed score or SOTA claim"
+  ]
+}

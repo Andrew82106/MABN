@@ -1,0 +1,5034 @@
+{
+  "status": "passed_with_provenance_limitations",
+  "numerical_blockers": [],
+  "no_new_training_or_GPU": true,
+  "original_heldout_or_QA_test_read_by_auditor": false,
+  "no_production_imports": true,
+  "LR_candidates_replayed": 30,
+  "LR_thresholds_verified": 60,
+  "LR_threshold_dictionaries_bit_exact": 60,
+  "LR_calibration_keys_exact": 30,
+  "C_selections_exact": 10,
+  "max_LR_threshold_abs_error": 0.0,
+  "selected_raw_score_arrays_compared": 10,
+  "max_selected_raw_score_abs_error": 4.440892098500626e-16,
+  "smoothing_candidates_reconstructed": 120,
+  "smoothing_thresholds_verified": 240,
+  "smoothing_threshold_dictionaries_bit_exact": 222,
+  "max_smoothing_threshold_abs_error": 2.220446049250313e-16,
+  "smoothing_keys_exact": 120,
+  "smoothing_choices_exact": 10,
+  "identity_scores_and_thresholds_exact": 10,
+  "selected_smooth_score_arrays_compared": 10,
+  "max_selected_smooth_score_abs_error": 3.3306690738754696e-16,
+  "new_four_methods_selected_thresholds_on_reloaded_scores_exact": 40,
+  "all_new_OOF_scores_predictions_exact": true,
+  "OOF_window_score_comparisons": 48888,
+  "OOF_answer_score_comparisons": 2408,
+  "new_OOF_main_metric_blocks_exact": 8,
+  "new_OOF_main_metrics": {
+    "joint_mean": {
+      "windows": {
+        "tp": 787,
+        "fp": 469,
+        "fn": 276,
+        "tn": 7994,
+        "precision": 0.6265923566878981,
+        "recall": 0.7403574788334901,
+        "f1": 0.678740836567486,
+        "alert_rate": 0.13184967457484778,
+        "risk_rate": 0.1115893344530758,
+        "windows": 9526,
+        "risk_windows": 1063
+      },
+      "answers": {
+        "tp": 121,
+        "fp": 30,
+        "fn": 30,
+        "tn": 417,
+        "precision": 0.8013245033112583,
+        "recall": 0.8013245033112583,
+        "f1": 0.8013245033112583,
+        "alert_rate": 0.2525083612040134,
+        "risk_rate": 0.2525083612040134,
+        "answers": 598,
+        "risk_answers": 151
+      }
+    },
+    "joint_slots": {
+      "windows": {
+        "tp": 756,
+        "fp": 364,
+        "fn": 307,
+        "tn": 8099,
+        "precision": 0.675,
+        "recall": 0.7111947318908749,
+        "f1": 0.6926248282180486,
+        "alert_rate": 0.11757295821960949,
+        "risk_rate": 0.1115893344530758,
+        "windows": 9526,
+        "risk_windows": 1063
+      },
+      "answers": {
+        "tp": 120,
+        "fp": 37,
+        "fn": 31,
+        "tn": 410,
+        "precision": 0.7643312101910829,
+        "recall": 0.7947019867549668,
+        "f1": 0.7792207792207793,
+        "alert_rate": 0.2625418060200669,
+        "risk_rate": 0.2525083612040134,
+        "answers": 598,
+        "risk_answers": 151
+      }
+    },
+    "joint_mean_smooth": {
+      "windows": {
+        "tp": 772,
+        "fp": 459,
+        "fn": 291,
+        "tn": 8004,
+        "precision": 0.6271324126726239,
+        "recall": 0.7262464722483537,
+        "f1": 0.6730601569311246,
+        "alert_rate": 0.12922527818601723,
+        "risk_rate": 0.1115893344530758,
+        "windows": 9526,
+        "risk_windows": 1063
+      },
+      "answers": {
+        "tp": 118,
+        "fp": 26,
+        "fn": 33,
+        "tn": 421,
+        "precision": 0.8194444444444444,
+        "recall": 0.7814569536423841,
+        "f1": 0.8,
+        "alert_rate": 0.2408026755852843,
+        "risk_rate": 0.2525083612040134,
+        "answers": 598,
+        "risk_answers": 151
+      }
+    },
+    "joint_slots_smooth": {
+      "windows": {
+        "tp": 785,
+        "fp": 405,
+        "fn": 278,
+        "tn": 8058,
+        "precision": 0.6596638655462185,
+        "recall": 0.7384760112888052,
+        "f1": 0.6968486462494452,
+        "alert_rate": 0.12492126810833508,
+        "risk_rate": 0.1115893344530758,
+        "windows": 9526,
+        "risk_windows": 1063
+      },
+      "answers": {
+        "tp": 114,
+        "fp": 31,
+        "fn": 37,
+        "tn": 416,
+        "precision": 0.7862068965517242,
+        "recall": 0.7549668874172185,
+        "f1": 0.7702702702702703,
+        "alert_rate": 0.24247491638795987,
+        "risk_rate": 0.2525083612040134,
+        "answers": 598,
+        "risk_answers": 151
+      }
+    }
+  },
+  "smoothing_geometry": {
+    "whole_answer_chains": 602,
+    "raw_start_gaps_not_split": 0,
+    "all_candidate_windows": 12222,
+    "safe_refusal_nonmain_windows_retained": true,
+    "answermax_before_main_answer_filter": true
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "cal_groups": 56,
+      "cal_all_windows": 2908,
+      "cal_main_windows": 2364,
+      "cal_window_positive": 278,
+      "cal_all_answers": 134,
+      "cal_main_answers": 132,
+      "cal_answer_positive": 34,
+      "cal_safe_refusal_answers": 23,
+      "choices": {
+        "joint_mean": {
+          "C": 0.01,
+          "stay": 0.99,
+          "temperature": 1.0,
+          "cal_window_f1": 0.7403685092127303,
+          "cal_answer_f1": 0.8450704225352113
+        },
+        "joint_slots": {
+          "C": 0.01,
+          "stay": 0.95,
+          "temperature": 0.5,
+          "cal_window_f1": 0.7439613526570048,
+          "cal_answer_f1": 0.8787878787878788
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "cal_groups": 56,
+      "cal_all_windows": 2281,
+      "cal_main_windows": 1656,
+      "cal_window_positive": 182,
+      "cal_all_answers": 114,
+      "cal_main_answers": 113,
+      "cal_answer_positive": 27,
+      "cal_safe_refusal_answers": 27,
+      "choices": {
+        "joint_mean": {
+          "C": 0.01,
+          "stay": 0.5,
+          "temperature": 1.0,
+          "cal_window_f1": 0.7012987012987013,
+          "cal_answer_f1": 0.8679245283018868
+        },
+        "joint_slots": {
+          "C": 0.001,
+          "stay": 0.5,
+          "temperature": 1.0,
+          "cal_window_f1": 0.6790450928381963,
+          "cal_answer_f1": 0.8148148148148148
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "cal_groups": 55,
+      "cal_all_windows": 2125,
+      "cal_main_windows": 1546,
+      "cal_window_positive": 179,
+      "cal_all_answers": 110,
+      "cal_main_answers": 110,
+      "cal_answer_positive": 27,
+      "cal_safe_refusal_answers": 26,
+      "choices": {
+        "joint_mean": {
+          "C": 0.01,
+          "stay": 0.8,
+          "temperature": 0.5,
+          "cal_window_f1": 0.7327188940092166,
+          "cal_answer_f1": 0.8301886792452831
+        },
+        "joint_slots": {
+          "C": 0.001,
+          "stay": 0.8,
+          "temperature": 0.5,
+          "cal_window_f1": 0.7050691244239631,
+          "cal_answer_f1": 0.75
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "cal_groups": 55,
+      "cal_all_windows": 2750,
+      "cal_main_windows": 2242,
+      "cal_window_positive": 200,
+      "cal_all_answers": 132,
+      "cal_main_answers": 131,
+      "cal_answer_positive": 31,
+      "cal_safe_refusal_answers": 21,
+      "choices": {
+        "joint_mean": {
+          "C": 0.1,
+          "stay": 0.8,
+          "temperature": 0.5,
+          "cal_window_f1": 0.6192893401015228,
+          "cal_answer_f1": 0.7586206896551724
+        },
+        "joint_slots": {
+          "C": 0.01,
+          "stay": 0.5,
+          "temperature": 1.0,
+          "cal_window_f1": 0.6288659793814433,
+          "cal_answer_f1": 0.7575757575757576
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "cal_groups": 56,
+      "cal_all_windows": 2158,
+      "cal_main_windows": 1718,
+      "cal_window_positive": 224,
+      "cal_all_answers": 112,
+      "cal_main_answers": 112,
+      "cal_answer_positive": 32,
+      "cal_safe_refusal_answers": 20,
+      "choices": {
+        "joint_mean": {
+          "C": 0.1,
+          "stay": 0.5,
+          "temperature": 1.0,
+          "cal_window_f1": 0.7760532150776053,
+          "cal_answer_f1": 0.835820895522388
+        },
+        "joint_slots": {
+          "C": 0.1,
+          "stay": 0.8,
+          "temperature": 0.5,
+          "cal_window_f1": 0.7835990888382688,
+          "cal_answer_f1": 0.7936507936507936
+        }
+      }
+    }
+  ],
+  "LR_candidates": [
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7971955076758485,
+          "validation_f1": 0.680628272251309,
+          "validation_precision": 0.6610169491525424,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7987428896626243,
+          "validation_f1": 0.8493150684931506,
+          "validation_precision": 0.7948717948717948,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.680628272251309,
+        0.680628272251309,
+        0.6610169491525424,
+        -0.001
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6977306439460049,
+          "validation_f1": 0.7197231833910035,
+          "validation_precision": 0.6933333333333334,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7916863420236728,
+          "validation_f1": 0.8533333333333334,
+          "validation_precision": 0.7804878048780488,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.7197231833910035,
+        0.7197231833910035,
+        0.6933333333333334,
+        -0.01
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7626759840209681,
+          "validation_f1": 0.6994328922495274,
+          "validation_precision": 0.7370517928286853,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9120364116744147,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8484848484848485,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6994328922495274,
+        0.6994328922495274,
+        0.7370517928286853,
+        -0.1
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8226844127351802,
+          "validation_f1": 0.6961325966850829,
+          "validation_precision": 0.7132075471698113,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8705226987162016,
+          "validation_f1": 0.8732394366197183,
+          "validation_precision": 0.8378378378378378,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6961325966850829,
+        0.6961325966850829,
+        0.7132075471698113,
+        -0.001
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7029777849960457,
+          "validation_f1": 0.7204116638078902,
+          "validation_precision": 0.6885245901639344,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8660125855449576,
+          "validation_f1": 0.8888888888888888,
+          "validation_precision": 0.8421052631578947,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.7204116638078902,
+        0.7204116638078902,
+        0.6885245901639344,
+        -0.01
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7133894906675184,
+          "validation_f1": 0.7063063063063063,
+          "validation_precision": 0.7075812274368231,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9644932055902572,
+          "validation_f1": 0.8656716417910447,
+          "validation_precision": 0.8787878787878788,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.7063063063063063,
+        0.7063063063063063,
+        0.7075812274368231,
+        -0.1
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8023592864920462,
+          "validation_f1": 0.6666666666666666,
+          "validation_precision": 0.686046511627907,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8927601211784683,
+          "validation_f1": 0.84,
+          "validation_precision": 0.9130434782608695,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.686046511627907,
+        -0.001
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6268597973045508,
+          "validation_f1": 0.7012987012987013,
+          "validation_precision": 0.6650246305418719,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8503128506528443,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.7012987012987013,
+        0.7012987012987013,
+        0.6650246305418719,
+        -0.01
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.4341704626457731,
+          "validation_f1": 0.6928746928746928,
+          "validation_precision": 0.6266666666666667,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8418184848492737,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6928746928746928,
+        0.6928746928746928,
+        0.6266666666666667,
+        -0.1
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7827526968868921,
+          "validation_f1": 0.6790450928381963,
+          "validation_precision": 0.6564102564102564,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8902823632729725,
+          "validation_f1": 0.8148148148148148,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6790450928381963,
+        0.6790450928381963,
+        0.6564102564102564,
+        -0.001
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.672073693026261,
+          "validation_f1": 0.672,
+          "validation_precision": 0.6528497409326425,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9331691897134882,
+          "validation_f1": 0.84,
+          "validation_precision": 0.9130434782608695,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.672,
+        0.672,
+        0.6528497409326425,
+        -0.01
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.641070550379867,
+          "validation_f1": 0.6611570247933884,
+          "validation_precision": 0.6629834254143646,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9595847694115579,
+          "validation_f1": 0.8076923076923077,
+          "validation_precision": 0.84,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6611570247933884,
+        0.6611570247933884,
+        0.6629834254143646,
+        -0.1
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7602030485784601,
+          "validation_f1": 0.6915422885572139,
+          "validation_precision": 0.6233183856502242,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8570068590025197,
+          "validation_f1": 0.7931034482758621,
+          "validation_precision": 0.7419354838709677,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6915422885572139,
+        0.6915422885572139,
+        0.6233183856502242,
+        -0.001
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5452263799287601,
+          "validation_f1": 0.7158836689038032,
+          "validation_precision": 0.5970149253731343,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8721386570979693,
+          "validation_f1": 0.8461538461538461,
+          "validation_precision": 0.88,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.7158836689038032,
+        0.7158836689038032,
+        0.5970149253731343,
+        -0.01
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.32317484593975304,
+          "validation_f1": 0.683982683982684,
+          "validation_precision": 0.558303886925795,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8627181370324585,
+          "validation_f1": 0.8421052631578947,
+          "validation_precision": 0.8,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.683982683982684,
+        0.683982683982684,
+        0.558303886925795,
+        -0.1
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7706937592909777,
+          "validation_f1": 0.6987341772151898,
+          "validation_precision": 0.6388888888888888,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9226699745202839,
+          "validation_f1": 0.76,
+          "validation_precision": 0.8260869565217391,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6987341772151898,
+        0.6987341772151898,
+        0.6388888888888888,
+        -0.001
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5484078341657256,
+          "validation_f1": 0.6909090909090909,
+          "validation_precision": 0.5823754789272031,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9178601244803565,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6909090909090909,
+        0.6909090909090909,
+        0.5823754789272031,
+        -0.01
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6596707179547959,
+          "validation_f1": 0.6740947075208914,
+          "validation_precision": 0.6722222222222223,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9284585822703835,
+          "validation_f1": 0.8275862068965517,
+          "validation_precision": 0.7741935483870968,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6740947075208914,
+        0.6740947075208914,
+        0.6722222222222223,
+        -0.1
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8443615508720522,
+          "validation_f1": 0.5899280575539568,
+          "validation_precision": 0.5668202764976958,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8518436024761286,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.78125,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.5899280575539568,
+        0.5899280575539568,
+        0.5668202764976958,
+        -0.001
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8164308934273529,
+          "validation_f1": 0.60431654676259,
+          "validation_precision": 0.5806451612903226,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8953762375324917,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.8214285714285714,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.60431654676259,
+        0.60431654676259,
+        0.5806451612903226,
+        -0.01
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7398396495281558,
+          "validation_f1": 0.6098654708520179,
+          "validation_precision": 0.5528455284552846,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9550325054019895,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.7857142857142857,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6098654708520179,
+        0.6098654708520179,
+        0.5528455284552846,
+        -0.1
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8782943753047426,
+          "validation_f1": 0.6065573770491803,
+          "validation_precision": 0.6686746987951807,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9139627531793338,
+          "validation_f1": 0.7931034482758621,
+          "validation_precision": 0.8518518518518519,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6065573770491803,
+        0.6065573770491803,
+        0.6686746987951807,
+        -0.001
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.848698614584407,
+          "validation_f1": 0.6288659793814433,
+          "validation_precision": 0.648936170212766,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9044118737605821,
+          "validation_f1": 0.7575757575757576,
+          "validation_precision": 0.7142857142857143,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6288659793814433,
+        0.6288659793814433,
+        0.648936170212766,
+        -0.01
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6966864169832357,
+          "validation_f1": 0.6220302375809935,
+          "validation_precision": 0.5475285171102662,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9760611200492588,
+          "validation_f1": 0.7301587301587301,
+          "validation_precision": 0.71875,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6220302375809935,
+        0.6220302375809935,
+        0.5475285171102662,
+        -0.1
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7216696562550832,
+          "validation_f1": 0.6893939393939394,
+          "validation_precision": 0.5986842105263158,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9172923113735114,
+          "validation_f1": 0.8,
+          "validation_precision": 0.8571428571428571,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.6893939393939394,
+        0.6893939393939394,
+        0.5986842105263158,
+        -0.001
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7015047215066091,
+          "validation_f1": 0.7581967213114754,
+          "validation_precision": 0.7007575757575758,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9047872504762484,
+          "validation_f1": 0.8529411764705882,
+          "validation_precision": 0.8055555555555556,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7581967213114754,
+        0.7581967213114754,
+        0.7007575757575758,
+        -0.01
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7596854423727204,
+          "validation_f1": 0.7760532150776053,
+          "validation_precision": 0.7709251101321586,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9731151743232448,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7760532150776053,
+        0.7760532150776053,
+        0.7709251101321586,
+        -0.1
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7467148442671225,
+          "validation_f1": 0.7113821138211383,
+          "validation_precision": 0.6529850746268657,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9293057348771467,
+          "validation_f1": 0.7741935483870968,
+          "validation_precision": 0.8,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7113821138211383,
+        0.7113821138211383,
+        0.6529850746268657,
+        -0.001
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7803706148567343,
+          "validation_f1": 0.7688679245283019,
+          "validation_precision": 0.815,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9265958518431334,
+          "validation_f1": 0.7941176470588235,
+          "validation_precision": 0.75,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7688679245283019,
+        0.7688679245283019,
+        0.815,
+        -0.01
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7128871701424352,
+          "validation_f1": 0.7730337078651686,
+          "validation_precision": 0.7782805429864253,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9858214083251625,
+          "validation_f1": 0.78125,
+          "validation_precision": 0.78125,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7730337078651686,
+        0.7730337078651686,
+        0.7782805429864253,
+        -0.1
+      ]
+    }
+  ],
+  "smoothing_candidates": [
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8419792754595712,
+          "validation_f1": 0.7197231833910035,
+          "validation_precision": 0.6933333333333334,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9352476114955753,
+          "validation_f1": 0.8533333333333334,
+          "validation_precision": 0.7804878048780488,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7197231833910035,
+        0.7197231833910035,
+        0.6933333333333334,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6977306439460049,
+          "validation_f1": 0.7197231833910035,
+          "validation_precision": 0.6933333333333334,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7916863420236728,
+          "validation_f1": 0.8533333333333334,
+          "validation_precision": 0.7804878048780488,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7197231833910035,
+        0.7197231833910035,
+        0.6933333333333334,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6030661624315263,
+          "validation_f1": 0.7197231833910035,
+          "validation_precision": 0.6933333333333334,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.6609566282407409,
+          "validation_f1": 0.8533333333333334,
+          "validation_precision": 0.7804878048780488,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7197231833910035,
+        0.7197231833910035,
+        0.6933333333333334,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.848427501480221,
+          "validation_f1": 0.732484076433121,
+          "validation_precision": 0.6571428571428571,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9964760750526022,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.732484076433121,
+        0.732484076433121,
+        0.6571428571428571,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7453818477653771,
+          "validation_f1": 0.7319422150882825,
+          "validation_precision": 0.6608695652173913,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8087597220453162,
+          "validation_f1": 0.8533333333333334,
+          "validation_precision": 0.7804878048780488,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7319422150882825,
+        0.7319422150882825,
+        0.6608695652173913,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6561717480587085,
+          "validation_f1": 0.7223113964686998,
+          "validation_precision": 0.6521739130434783,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8043548817720113,
+          "validation_f1": 0.8493150684931506,
+          "validation_precision": 0.7948717948717948,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7223113964686998,
+        0.7223113964686998,
+        0.6521739130434783,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8434479349317913,
+          "validation_f1": 0.7323943661971831,
+          "validation_precision": 0.6481994459833795,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9993242199086388,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7323943661971831,
+        0.7323943661971831,
+        0.6481994459833795,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8888564751198442,
+          "validation_f1": 0.7384615384615385,
+          "validation_precision": 0.7035830618892508,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9669679125952101,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7384615384615385,
+        0.7384615384615385,
+        0.7035830618892508,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7782069233969693,
+          "validation_f1": 0.7368421052631579,
+          "validation_precision": 0.6977491961414791,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.5670833627792123,
+          "validation_f1": 0.8493150684931506,
+          "validation_precision": 0.7948717948717948,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7368421052631579,
+        0.7368421052631579,
+        0.6977491961414791,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.950047286346462,
+          "validation_f1": 0.7335526315789473,
+          "validation_precision": 0.6757575757575758,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9991270332937834,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7335526315789473,
+        0.7335526315789473,
+        0.6757575757575758,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8889245969791972,
+          "validation_f1": 0.7403685092127303,
+          "validation_precision": 0.6927899686520376,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7806084665668211,
+          "validation_f1": 0.8450704225352113,
+          "validation_precision": 0.8108108108108109,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7403685092127303,
+        0.7403685092127303,
+        0.6927899686520376,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9275497141486965,
+          "validation_f1": 0.689908256880734,
+          "validation_precision": 0.704119850187266,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.13005714189107792,
+          "validation_f1": 0.8493150684931506,
+          "validation_precision": 0.7948717948717948,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.689908256880734,
+        0.689908256880734,
+        0.704119850187266,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8485195709118416,
+          "validation_f1": 0.7204116638078902,
+          "validation_precision": 0.6885245901639344,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9766220654437782,
+          "validation_f1": 0.8888888888888888,
+          "validation_precision": 0.8421052631578947,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7204116638078902,
+        0.7204116638078902,
+        0.6885245901639344,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7029777849960457,
+          "validation_f1": 0.7204116638078902,
+          "validation_precision": 0.6885245901639344,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8660125855449576,
+          "validation_f1": 0.8888888888888888,
+          "validation_precision": 0.8421052631578947,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7204116638078902,
+        0.7204116638078902,
+        0.6885245901639344,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6060549386715981,
+          "validation_f1": 0.7204116638078902,
+          "validation_precision": 0.6885245901639344,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7176990811272992,
+          "validation_f1": 0.8888888888888888,
+          "validation_precision": 0.8421052631578947,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7204116638078902,
+        0.7204116638078902,
+        0.6885245901639344,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9427448015908905,
+          "validation_f1": 0.7298245614035088,
+          "validation_precision": 0.7123287671232876,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.999589327993184,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.9310344827586207,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7298245614035088,
+        0.7298245614035088,
+        0.7123287671232876,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8256014828621807,
+          "validation_f1": 0.7344827586206897,
+          "validation_precision": 0.7052980132450332,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9868938217919168,
+          "validation_f1": 0.8615384615384616,
+          "validation_precision": 0.9032258064516129,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7344827586206897,
+        0.7344827586206897,
+        0.7052980132450332,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7744214767751055,
+          "validation_f1": 0.7350746268656716,
+          "validation_precision": 0.7635658914728682,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8921174968458142,
+          "validation_f1": 0.8656716417910447,
+          "validation_precision": 0.8787878787878788,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7350746268656716,
+        0.7350746268656716,
+        0.7635658914728682,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8863925371166325,
+          "validation_f1": 0.7439613526570048,
+          "validation_precision": 0.673469387755102,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9998865497991671,
+          "validation_f1": 0.8787878787878788,
+          "validation_precision": 0.90625,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7439613526570048,
+        0.7439613526570048,
+        0.673469387755102,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8766210951544787,
+          "validation_f1": 0.7326388888888888,
+          "validation_precision": 0.7080536912751678,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9910746068633471,
+          "validation_f1": 0.8656716417910447,
+          "validation_precision": 0.8787878787878788,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7326388888888888,
+        0.7326388888888888,
+        0.7080536912751678,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8197712335674547,
+          "validation_f1": 0.7334525939177102,
+          "validation_precision": 0.7295373665480427,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.5695572095503156,
+          "validation_f1": 0.8450704225352113,
+          "validation_precision": 0.8108108108108109,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7334525939177102,
+        0.7334525939177102,
+        0.7295373665480427,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7802183960219776,
+          "validation_f1": 0.7389937106918238,
+          "validation_precision": 0.6564245810055865,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9999292503734449,
+          "validation_f1": 0.8656716417910447,
+          "validation_precision": 0.8787878787878788,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7389937106918238,
+        0.7389937106918238,
+        0.6564245810055865,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9496734814730339,
+          "validation_f1": 0.7362637362637363,
+          "validation_precision": 0.75,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9927177273670291,
+          "validation_f1": 0.84375,
+          "validation_precision": 0.9,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.7362637362637363,
+        0.7362637362637363,
+        0.75,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9299184688542852,
+          "validation_f1": 0.6921606118546845,
+          "validation_precision": 0.7387755102040816,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.2134423314322908,
+          "validation_f1": 0.8450704225352113,
+          "validation_precision": 0.8108108108108109,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "key": [
+        0.6921606118546845,
+        0.6921606118546845,
+        0.7387755102040816,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7383745583477168,
+          "validation_f1": 0.7012987012987013,
+          "validation_precision": 0.6650246305418719,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9699421855755483,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7012987012987013,
+        0.7012987012987013,
+        0.6650246305418719,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6268597973045508,
+          "validation_f1": 0.7012987012987013,
+          "validation_precision": 0.6650246305418719,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8503128506528443,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7012987012987013,
+        0.7012987012987013,
+        0.6650246305418719,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5644849428348497,
+          "validation_f1": 0.7012987012987013,
+          "validation_precision": 0.6650246305418719,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.7044394064414257,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7012987012987013,
+        0.7012987012987013,
+        0.6650246305418719,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6476813953463062,
+          "validation_f1": 0.6829268292682927,
+          "validation_precision": 0.6140350877192983,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9969960475414096,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6829268292682927,
+        0.6829268292682927,
+        0.6140350877192983,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9144701586186534,
+          "validation_f1": 0.6843657817109144,
+          "validation_precision": 0.7388535031847133,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9596771555841673,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6843657817109144,
+        0.6843657817109144,
+        0.7388535031847133,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8188788380440836,
+          "validation_f1": 0.6951219512195121,
+          "validation_precision": 0.7808219178082192,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8260244576352263,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6951219512195121,
+        0.6951219512195121,
+        0.7808219178082192,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9441402277751327,
+          "validation_f1": 0.6684491978609626,
+          "validation_precision": 0.6510416666666666,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9992816213244818,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6684491978609626,
+        0.6684491978609626,
+        0.6510416666666666,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.953374243351209,
+          "validation_f1": 0.6551724137931034,
+          "validation_precision": 0.6867469879518072,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9694991977248552,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6551724137931034,
+        0.6551724137931034,
+        0.6867469879518072,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9150608063894893,
+          "validation_f1": 0.636085626911315,
+          "validation_precision": 0.7172413793103448,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.7685973587889889,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.636085626911315,
+        0.636085626911315,
+        0.7172413793103448,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.810322098806097,
+          "validation_f1": 0.642512077294686,
+          "validation_precision": 0.5732758620689655,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9988308870161119,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.642512077294686,
+        0.642512077294686,
+        0.5732758620689655,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5942507583705159,
+          "validation_f1": 0.6334841628959276,
+          "validation_precision": 0.5384615384615384,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.7730846619279221,
+          "validation_f1": 0.8679245283018868,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6334841628959276,
+        0.6334841628959276,
+        0.5384615384615384,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.24540397690691101,
+          "validation_f1": 0.6,
+          "validation_precision": 0.4772727272727273,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.19617911598538673,
+          "validation_f1": 0.8888888888888888,
+          "validation_precision": 0.8888888888888888,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6,
+        0.6,
+        0.4772727272727273,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9284792828892569,
+          "validation_f1": 0.6790450928381963,
+          "validation_precision": 0.6564102564102564,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9850393341843281,
+          "validation_f1": 0.8148148148148148,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6790450928381963,
+        0.6790450928381963,
+        0.6564102564102564,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7827526968868921,
+          "validation_f1": 0.6790450928381963,
+          "validation_precision": 0.6564102564102564,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8902823632729725,
+          "validation_f1": 0.8148148148148148,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6790450928381963,
+        0.6790450928381963,
+        0.6564102564102564,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6549546700477988,
+          "validation_f1": 0.6790450928381963,
+          "validation_precision": 0.6564102564102564,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.7401626832515641,
+          "validation_f1": 0.8148148148148148,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6790450928381963,
+        0.6790450928381963,
+        0.6564102564102564,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9966396085701537,
+          "validation_f1": 0.6727272727272727,
+          "validation_precision": 0.75,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9980559961000933,
+          "validation_f1": 0.8363636363636363,
+          "validation_precision": 0.8214285714285714,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6727272727272727,
+        0.6727272727272727,
+        0.75,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9660613669520591,
+          "validation_f1": 0.6629526462395543,
+          "validation_precision": 0.672316384180791,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9795353756340294,
+          "validation_f1": 0.8363636363636363,
+          "validation_precision": 0.8214285714285714,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6629526462395543,
+        0.6629526462395543,
+        0.672316384180791,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8954027434699172,
+          "validation_f1": 0.6589595375722543,
+          "validation_precision": 0.6951219512195121,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9268130859354988,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6589595375722543,
+        0.6589595375722543,
+        0.6951219512195121,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9998572046306389,
+          "validation_f1": 0.6343042071197411,
+          "validation_precision": 0.7716535433070866,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9999499093568454,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6343042071197411,
+        0.6343042071197411,
+        0.7716535433070866,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9987681560066523,
+          "validation_f1": 0.6032786885245902,
+          "validation_precision": 0.7479674796747967,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9991095319120079,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6032786885245902,
+        0.6032786885245902,
+        0.7479674796747967,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9664634306182588,
+          "validation_f1": 0.5798525798525799,
+          "validation_precision": 0.5244444444444445,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.972793645038661,
+          "validation_f1": 0.7857142857142857,
+          "validation_precision": 0.7586206896551724,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.5798525798525799,
+        0.5798525798525799,
+        0.5244444444444445,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9999906447584315,
+          "validation_f1": 0.6092307692307692,
+          "validation_precision": 0.6923076923076923,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9999979043333306,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6092307692307692,
+        0.6092307692307692,
+        0.6923076923076923,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9983819986876389,
+          "validation_f1": 0.5598086124401914,
+          "validation_precision": 0.4957627118644068,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9998270769454659,
+          "validation_f1": 0.7692307692307693,
+          "validation_precision": 0.8,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.5598086124401914,
+        0.5598086124401914,
+        0.4957627118644068,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9927177821629577,
+          "validation_f1": 0.5317073170731708,
+          "validation_precision": 0.4780701754385965,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9883772338293056,
+          "validation_f1": 0.7692307692307693,
+          "validation_precision": 0.8,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.5317073170731708,
+        0.5317073170731708,
+        0.4780701754385965,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.589718708144664,
+          "validation_f1": 0.7158836689038032,
+          "validation_precision": 0.5970149253731343,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9789587355183492,
+          "validation_f1": 0.8461538461538461,
+          "validation_precision": 0.88,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7158836689038032,
+        0.7158836689038032,
+        0.5970149253731343,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5452263799287601,
+          "validation_f1": 0.7158836689038032,
+          "validation_precision": 0.5970149253731343,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8721386570979693,
+          "validation_f1": 0.8461538461538461,
+          "validation_precision": 0.88,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7158836689038032,
+        0.7158836689038032,
+        0.5970149253731343,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5226596337481485,
+          "validation_f1": 0.7158836689038032,
+          "validation_precision": 0.5970149253731343,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.7231220056922366,
+          "validation_f1": 0.8461538461538461,
+          "validation_precision": 0.88,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7158836689038032,
+        0.7158836689038032,
+        0.5970149253731343,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7896641145060891,
+          "validation_f1": 0.7327188940092166,
+          "validation_precision": 0.6235294117647059,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9982361906630398,
+          "validation_f1": 0.8301886792452831,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7327188940092166,
+        0.7327188940092166,
+        0.6235294117647059,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6345072734426089,
+          "validation_f1": 0.7248322147651006,
+          "validation_precision": 0.6044776119402985,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9815891124928702,
+          "validation_f1": 0.84,
+          "validation_precision": 0.9130434782608695,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7248322147651006,
+        0.7248322147651006,
+        0.6044776119402985,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5489442602677883,
+          "validation_f1": 0.7124463519313304,
+          "validation_precision": 0.578397212543554,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.7313307108330045,
+          "validation_f1": 0.8275862068965517,
+          "validation_precision": 0.7741935483870968,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7124463519313304,
+        0.7124463519313304,
+        0.578397212543554,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7983866680149774,
+          "validation_f1": 0.7244444444444444,
+          "validation_precision": 0.6014760147601476,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9851829792022884,
+          "validation_f1": 0.847457627118644,
+          "validation_precision": 0.78125,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7244444444444444,
+        0.7244444444444444,
+        0.6014760147601476,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.4754474580685445,
+          "validation_f1": 0.7063655030800822,
+          "validation_precision": 0.5584415584415584,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.7922463887345743,
+          "validation_f1": 0.847457627118644,
+          "validation_precision": 0.78125,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7063655030800822,
+        0.7063655030800822,
+        0.5584415584415584,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.38882163107635725,
+          "validation_f1": 0.672,
+          "validation_precision": 0.5233644859813084,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.4325213620927633,
+          "validation_f1": 0.8253968253968254,
+          "validation_precision": 0.7222222222222222,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.672,
+        0.672,
+        0.5233644859813084,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5621464907113782,
+          "validation_f1": 0.7098121085594989,
+          "validation_precision": 0.5666666666666667,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9493574672297326,
+          "validation_f1": 0.8421052631578947,
+          "validation_precision": 0.8,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7098121085594989,
+        0.7098121085594989,
+        0.5666666666666667,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.10419614029555348,
+          "validation_f1": 0.6590909090909091,
+          "validation_precision": 0.498567335243553,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.18912441955970644,
+          "validation_f1": 0.8253968253968254,
+          "validation_precision": 0.7222222222222222,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6590909090909091,
+        0.6590909090909091,
+        0.498567335243553,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.4440720747713907,
+          "validation_f1": 0.5944798301486199,
+          "validation_precision": 0.4794520547945205,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.09599910958493478,
+          "validation_f1": 0.8064516129032258,
+          "validation_precision": 0.7142857142857143,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.5944798301486199,
+        0.5944798301486199,
+        0.4794520547945205,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9186739866648677,
+          "validation_f1": 0.6987341772151898,
+          "validation_precision": 0.6388888888888888,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9930246889851095,
+          "validation_f1": 0.76,
+          "validation_precision": 0.8260869565217391,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6987341772151898,
+        0.6987341772151898,
+        0.6388888888888888,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7706937592909777,
+          "validation_f1": 0.6987341772151898,
+          "validation_precision": 0.6388888888888888,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9226699745202839,
+          "validation_f1": 0.76,
+          "validation_precision": 0.8260869565217391,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6987341772151898,
+        0.6987341772151898,
+        0.6388888888888888,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6470543796283987,
+          "validation_f1": 0.6987341772151898,
+          "validation_precision": 0.6388888888888888,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.7754934497930333,
+          "validation_f1": 0.76,
+          "validation_precision": 0.8260869565217391,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6987341772151898,
+        0.6987341772151898,
+        0.6388888888888888,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9759194356961365,
+          "validation_f1": 0.7050691244239631,
+          "validation_precision": 0.6,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9996391168460539,
+          "validation_f1": 0.75,
+          "validation_precision": 0.8571428571428571,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7050691244239631,
+        0.7050691244239631,
+        0.6,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9147719042842725,
+          "validation_f1": 0.704225352112676,
+          "validation_precision": 0.6072874493927125,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9890066024619951,
+          "validation_f1": 0.7547169811320755,
+          "validation_precision": 0.7692307692307693,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.704225352112676,
+        0.704225352112676,
+        0.6072874493927125,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7572336774338352,
+          "validation_f1": 0.6978723404255319,
+          "validation_precision": 0.563573883161512,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9104836170984436,
+          "validation_f1": 0.7333333333333333,
+          "validation_precision": 0.6666666666666666,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6978723404255319,
+        0.6978723404255319,
+        0.563573883161512,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9956138024704106,
+          "validation_f1": 0.7008928571428571,
+          "validation_precision": 0.5836431226765799,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9999602093880209,
+          "validation_f1": 0.7547169811320755,
+          "validation_precision": 0.7692307692307693,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.7008928571428571,
+        0.7008928571428571,
+        0.5836431226765799,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9861629009535453,
+          "validation_f1": 0.6948356807511737,
+          "validation_precision": 0.5991902834008097,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9982082967366378,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.6875,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6948356807511737,
+        0.6948356807511737,
+        0.5991902834008097,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9471409853048975,
+          "validation_f1": 0.6836027713625866,
+          "validation_precision": 0.5826771653543307,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9655833416466569,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.71875,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6836027713625866,
+        0.6836027713625866,
+        0.5826771653543307,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9998512958442932,
+          "validation_f1": 0.6909975669099757,
+          "validation_precision": 0.6120689655172413,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9999925118507408,
+          "validation_f1": 0.7419354838709677,
+          "validation_precision": 0.6571428571428571,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6909975669099757,
+        0.6909975669099757,
+        0.6120689655172413,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9981928651531625,
+          "validation_f1": 0.6732186732186732,
+          "validation_precision": 0.6008771929824561,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9991589813485675,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.7096774193548387,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6732186732186732,
+        0.6732186732186732,
+        0.6008771929824561,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9886543318699942,
+          "validation_f1": 0.6367924528301887,
+          "validation_precision": 0.5510204081632653,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9596024442616287,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.71875,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "key": [
+        0.6367924528301887,
+        0.6367924528301887,
+        0.5510204081632653,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.889953929778484,
+          "validation_f1": 0.6098654708520179,
+          "validation_precision": 0.5528455284552846,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9977879276845667,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.7857142857142857,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6098654708520179,
+        0.6098654708520179,
+        0.5528455284552846,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7398396495281558,
+          "validation_f1": 0.6098654708520179,
+          "validation_precision": 0.5528455284552846,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9550325054019895,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.7857142857142857,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6098654708520179,
+        0.6098654708520179,
+        0.5528455284552846,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6277479724089816,
+          "validation_f1": 0.6098654708520179,
+          "validation_precision": 0.5528455284552846,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8216992535602455,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.7857142857142857,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6098654708520179,
+        0.6098654708520179,
+        0.5528455284552846,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9957160092671575,
+          "validation_f1": 0.6192893401015228,
+          "validation_precision": 0.6288659793814433,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9998460073743096,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6192893401015228,
+        0.6192893401015228,
+        0.6288659793814433,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.962020032831229,
+          "validation_f1": 0.6095717884130982,
+          "validation_precision": 0.6142131979695431,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9961426232156022,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6095717884130982,
+        0.6095717884130982,
+        0.6142131979695431,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.841570000184809,
+          "validation_f1": 0.6091127098321343,
+          "validation_precision": 0.5852534562211982,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.962601069266362,
+          "validation_f1": 0.7719298245614035,
+          "validation_precision": 0.8461538461538461,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6091127098321343,
+        0.6091127098321343,
+        0.5852534562211982,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9991665100865214,
+          "validation_f1": 0.6119402985074627,
+          "validation_precision": 0.6089108910891089,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9999931037736635,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6119402985074627,
+        0.6119402985074627,
+        0.6089108910891089,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9895182781224611,
+          "validation_f1": 0.5969387755102041,
+          "validation_precision": 0.609375,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9982618571477532,
+          "validation_f1": 0.7540983606557377,
+          "validation_precision": 0.7666666666666667,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5969387755102041,
+        0.5969387755102041,
+        0.609375,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9094307164358723,
+          "validation_f1": 0.5841121495327103,
+          "validation_precision": 0.5482456140350878,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9750423859465088,
+          "validation_f1": 0.75,
+          "validation_precision": 0.84,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5841121495327103,
+        0.5841121495327103,
+        0.5482456140350878,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9997413440957709,
+          "validation_f1": 0.592964824120603,
+          "validation_precision": 0.5959595959595959,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9999976203671733,
+          "validation_f1": 0.7666666666666667,
+          "validation_precision": 0.7931034482758621,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.592964824120603,
+        0.592964824120603,
+        0.5959595959595959,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9880259578706349,
+          "validation_f1": 0.5801886792452831,
+          "validation_precision": 0.5491071428571429,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9993299405692079,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5801886792452831,
+        0.5801886792452831,
+        0.5491071428571429,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8240459322163213,
+          "validation_f1": 0.5701559020044543,
+          "validation_precision": 0.5140562248995983,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8988627683365461,
+          "validation_f1": 0.7457627118644068,
+          "validation_precision": 0.7857142857142857,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5701559020044543,
+        0.5701559020044543,
+        0.5140562248995983,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9691971465356158,
+          "validation_f1": 0.6288659793814433,
+          "validation_precision": 0.648936170212766,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9889528318514311,
+          "validation_f1": 0.7575757575757576,
+          "validation_precision": 0.7142857142857143,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6288659793814433,
+        0.6288659793814433,
+        0.648936170212766,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.848698614584407,
+          "validation_f1": 0.6288659793814433,
+          "validation_precision": 0.648936170212766,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9044118737605821,
+          "validation_f1": 0.7575757575757576,
+          "validation_precision": 0.7142857142857143,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6288659793814433,
+        0.6288659793814433,
+        0.648936170212766,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7031232607599969,
+          "validation_f1": 0.6288659793814433,
+          "validation_precision": 0.648936170212766,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.7546592254492968,
+          "validation_f1": 0.7575757575757576,
+          "validation_precision": 0.7142857142857143,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6288659793814433,
+        0.6288659793814433,
+        0.648936170212766,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9720699358186025,
+          "validation_f1": 0.6217391304347826,
+          "validation_precision": 0.55,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9990832908800158,
+          "validation_f1": 0.746268656716418,
+          "validation_precision": 0.6944444444444444,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6217391304347826,
+        0.6217391304347826,
+        0.55,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9163008964147032,
+          "validation_f1": 0.6174496644295302,
+          "validation_precision": 0.5587044534412956,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9776583612778892,
+          "validation_f1": 0.7246376811594203,
+          "validation_precision": 0.6578947368421053,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6174496644295302,
+        0.6174496644295302,
+        0.5587044534412956,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7860040337033537,
+          "validation_f1": 0.610989010989011,
+          "validation_precision": 0.5450980392156862,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9663177331091689,
+          "validation_f1": 0.72,
+          "validation_precision": 0.9473684210526315,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.610989010989011,
+        0.610989010989011,
+        0.5450980392156862,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9785699673101791,
+          "validation_f1": 0.6008230452674898,
+          "validation_precision": 0.5104895104895105,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9991377844516831,
+          "validation_f1": 0.7123287671232876,
+          "validation_precision": 0.6190476190476191,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.6008230452674898,
+        0.6008230452674898,
+        0.5104895104895105,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8682319868371982,
+          "validation_f1": 0.5900990099009901,
+          "validation_precision": 0.4885245901639344,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9996902877993573,
+          "validation_f1": 0.72,
+          "validation_precision": 0.9473684210526315,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5900990099009901,
+        0.5900990099009901,
+        0.4885245901639344,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8793857190010789,
+          "validation_f1": 0.5770065075921909,
+          "validation_precision": 0.5095785440613027,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9308196688452494,
+          "validation_f1": 0.71875,
+          "validation_precision": 0.696969696969697,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5770065075921909,
+        0.5770065075921909,
+        0.5095785440613027,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8843943398257593,
+          "validation_f1": 0.5924528301886792,
+          "validation_precision": 0.47575757575757577,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.939831011640885,
+          "validation_f1": 0.7088607594936709,
+          "validation_precision": 0.5833333333333334,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5924528301886792,
+        0.5924528301886792,
+        0.47575757575757577,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.614322782639503,
+          "validation_f1": 0.5703703703703704,
+          "validation_precision": 0.45294117647058824,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9937766657002215,
+          "validation_f1": 0.7076923076923077,
+          "validation_precision": 0.6764705882352942,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.5703703703703704,
+        0.5703703703703704,
+        0.45294117647058824,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7151911852960505,
+          "validation_f1": 0.541501976284585,
+          "validation_precision": 0.4477124183006536,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.7646110473202358,
+          "validation_f1": 0.7076923076923077,
+          "validation_precision": 0.6764705882352942,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "key": [
+        0.541501976284585,
+        0.541501976284585,
+        0.4477124183006536,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9090352222645801,
+          "validation_f1": 0.7760532150776053,
+          "validation_precision": 0.7709251101321586,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9992372985068572,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7760532150776053,
+        0.7760532150776053,
+        0.7709251101321586,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7596854423727204,
+          "validation_f1": 0.7760532150776053,
+          "validation_precision": 0.7709251101321586,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9731151743232448,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7760532150776053,
+        0.7760532150776053,
+        0.7709251101321586,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6400262011569826,
+          "validation_f1": 0.7760532150776053,
+          "validation_precision": 0.7709251101321586,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.8574744633030673,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7760532150776053,
+        0.7760532150776053,
+        0.7709251101321586,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8752472309308508,
+          "validation_f1": 0.7733887733887734,
+          "validation_precision": 0.7237354085603113,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9999532079911487,
+          "validation_f1": 0.8307692307692308,
+          "validation_precision": 0.8181818181818182,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7733887733887734,
+        0.7733887733887734,
+        0.7237354085603113,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8429030081738313,
+          "validation_f1": 0.7739130434782608,
+          "validation_precision": 0.7542372881355932,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9980264905776368,
+          "validation_f1": 0.8307692307692308,
+          "validation_precision": 0.8181818181818182,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7739130434782608,
+        0.7739130434782608,
+        0.7542372881355932,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6967779880238939,
+          "validation_f1": 0.7741935483870968,
+          "validation_precision": 0.7468879668049793,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.973037694659498,
+          "validation_f1": 0.84375,
+          "validation_precision": 0.84375,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7741935483870968,
+        0.7741935483870968,
+        0.7468879668049793,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9514351546567452,
+          "validation_f1": 0.7732181425485961,
+          "validation_precision": 0.7489539748953975,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9999993567299107,
+          "validation_f1": 0.8333333333333334,
+          "validation_precision": 0.8928571428571429,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7732181425485961,
+        0.7732181425485961,
+        0.7489539748953975,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8618392297460218,
+          "validation_f1": 0.771551724137931,
+          "validation_precision": 0.7458333333333333,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9998168285510403,
+          "validation_f1": 0.8524590163934426,
+          "validation_precision": 0.896551724137931,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.771551724137931,
+        0.771551724137931,
+        0.7458333333333333,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8729554198272931,
+          "validation_f1": 0.7752293577981652,
+          "validation_precision": 0.7971698113207547,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9812409105395866,
+          "validation_f1": 0.8333333333333334,
+          "validation_precision": 0.8928571428571429,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7752293577981652,
+        0.7752293577981652,
+        0.7971698113207547,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9887646157959316,
+          "validation_f1": 0.7723214285714286,
+          "validation_precision": 0.7723214285714286,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9999999076513336,
+          "validation_f1": 0.8524590163934426,
+          "validation_precision": 0.896551724137931,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7723214285714286,
+        0.7723214285714286,
+        0.7723214285714286,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9484575630749617,
+          "validation_f1": 0.7647058823529411,
+          "validation_precision": 0.7752293577981652,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9997265273879951,
+          "validation_f1": 0.819672131147541,
+          "validation_precision": 0.8620689655172413,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7647058823529411,
+        0.7647058823529411,
+        0.7752293577981652,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_mean",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5764063470195968,
+          "validation_f1": 0.7540322580645161,
+          "validation_precision": 0.6875,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9348186013397813,
+          "validation_f1": 0.847457627118644,
+          "validation_precision": 0.9259259259259259,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7540322580645161,
+        0.7540322580645161,
+        0.6875,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8604335760005352,
+          "validation_f1": 0.7730337078651686,
+          "validation_precision": 0.7782805429864253,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9997931860290689,
+          "validation_f1": 0.78125,
+          "validation_precision": 0.78125,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7730337078651686,
+        0.7730337078651686,
+        0.7782805429864253,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7128871701424352,
+          "validation_f1": 0.7730337078651686,
+          "validation_precision": 0.7782805429864253,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9858214083251625,
+          "validation_f1": 0.78125,
+          "validation_precision": 0.78125,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7730337078651686,
+        0.7730337078651686,
+        0.7782805429864253,
+        1,
+        -0.5,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.5,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6117618050811168,
+          "validation_f1": 0.7730337078651686,
+          "validation_precision": 0.7782805429864253,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.8929152415481277,
+          "validation_f1": 0.78125,
+          "validation_precision": 0.78125,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7730337078651686,
+        0.7730337078651686,
+        0.7782805429864253,
+        0,
+        -0.5,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9253059163764907,
+          "validation_f1": 0.7835990888382688,
+          "validation_precision": 0.8,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9999867803079687,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7835990888382688,
+        0.7835990888382688,
+        0.8,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7715661504629083,
+          "validation_f1": 0.7792792792792793,
+          "validation_precision": 0.7863636363636364,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9988142568784333,
+          "validation_f1": 0.8064516129032258,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7792792792792793,
+        0.7792792792792793,
+        0.7863636363636364,
+        0,
+        -0.8,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.8,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7706229571293993,
+          "validation_f1": 0.780952380952381,
+          "validation_precision": 0.8367346938775511,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9791936985471055,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.780952380952381,
+        0.780952380952381,
+        0.8367346938775511,
+        0,
+        -0.8,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9809944286002975,
+          "validation_f1": 0.7790973871733967,
+          "validation_precision": 0.8324873096446701,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.999999403423341,
+          "validation_f1": 0.8064516129032258,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7790973871733967,
+        0.7790973871733967,
+        0.8324873096446701,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8437165649095829,
+          "validation_f1": 0.7777777777777778,
+          "validation_precision": 0.8076923076923077,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9996915604860193,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7777777777777778,
+        0.7777777777777778,
+        0.8076923076923077,
+        0,
+        -0.95,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.95,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8538119880304968,
+          "validation_f1": 0.7745098039215687,
+          "validation_precision": 0.8586956521739131,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9804131393157691,
+          "validation_f1": 0.8064516129032258,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7745098039215687,
+        0.7745098039215687,
+        0.8586956521739131,
+        0,
+        -0.95,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 0.5,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9636027166773589,
+          "validation_f1": 0.7813953488372093,
+          "validation_precision": 0.8155339805825242,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9999998436474107,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7813953488372093,
+        0.7813953488372093,
+        0.8155339805825242,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 1.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.9628667186862025,
+          "validation_f1": 0.7733990147783252,
+          "validation_precision": 0.8626373626373627,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9996960037252997,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.7733990147783252,
+        0.7733990147783252,
+        0.8626373626373627,
+        0,
+        -0.99,
+        -0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "joint_slots",
+      "stay": 0.99,
+      "temperature": 2.0,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6683947807804291,
+          "validation_f1": 0.765375854214123,
+          "validation_precision": 0.7813953488372093,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.8631211117205972,
+          "validation_f1": 0.7936507936507936,
+          "validation_precision": 0.8064516129032258,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "key": [
+        0.765375854214123,
+        0.765375854214123,
+        0.7813953488372093,
+        0,
+        -0.99,
+        -0.6931471805599453
+      ]
+    }
+  ],
+  "bindings": {
+    "round27_joint_verifier_states\\results\\complete.json": "eca2b79f70962452cf3f17fb013ba13521feae9ce5370b6ef271fb3794e0e5cd",
+    "round27_joint_verifier_states\\results\\fit_freeze.json": "e512c97260d07c6c624c2ea73badb4f8ef1f3497ff30cd3b547f34b1bbc90e74",
+    "round27_joint_verifier_states\\protocol.json": "727538519d6c26704ef5117b8312ac1079033d358ae0f03feed6dcf9002716c5",
+    "round27_joint_verifier_states\\src\\run27.py": "f8b71b163ce94720829aacd324a2d93b006a4a1c4b22cb7b983609826b5f8e8a",
+    "round23b_local_evidence_probe\\results\\fit_freeze.json": "c97e3f0b7e705ed79f4c23f88349f2424bacccdbc81ff973618f0b8954143aaf",
+    "round23b_local_evidence_probe\\results\\designs.npz": "09069cbc7f03a62ceb0f1de7062d08ff4b70ce6df97a702ed82abf4acad4da73",
+    "round23b_local_evidence_probe\\results\\candidate_windows.jsonl": "e6523ca14cc83ac90404613724b5cbe6a9d53617de50287014497b6c8459c052",
+    "round22_evidence_verification\\results\\answer_index22.jsonl": "944ca65dcb20a976210b1387d706812f4bbbb1cbce2108936b7da85d4ad85429",
+    "round27_joint_verifier_states\\results\\fold_0_frozen.pkl": "41167ff62c82aa7347232a63fb333f85febf5b98051b128e2fc22c61b28d77bb",
+    "round27_joint_verifier_states\\results\\fold_0_scores.npz": "423172d51381b85cbb9b1ff5afddc376442f8c7fd60d2d90d01ade1b3463cf73",
+    "round27_joint_verifier_states\\results\\fold_1_frozen.pkl": "243ec2362c83a22fbc6a9f91b7eb557f54d2f88752adb90ed8c92b711c3af2a3",
+    "round27_joint_verifier_states\\results\\fold_1_scores.npz": "23c9dbe40360f664c29b25a26b429661152afe2ed203d93fc6287bd719831dba",
+    "round27_joint_verifier_states\\results\\fold_2_frozen.pkl": "5c90a2a6c2a70a8f45f205d9ece64c2714f45a37619d6afc98c060fa9ff3aa5a",
+    "round27_joint_verifier_states\\results\\fold_2_scores.npz": "9ae0e11be9354726f42fd1bdeb8e52817e1a783d400c4d95158cc1996ecda0d4",
+    "round27_joint_verifier_states\\results\\fold_3_frozen.pkl": "08a1192a2271d31c3e674462dad57a1179fe962650339d11ef600324c66c87dd",
+    "round27_joint_verifier_states\\results\\fold_3_scores.npz": "3a967bd4b673cd4f68cb8500465009071012ba2d8a9dfcec8101f1851103c8fa",
+    "round27_joint_verifier_states\\results\\fold_4_frozen.pkl": "eda0aac4dadb481eb23d8b9560bdad71c4b6b2c98fd3eeb3e80e8f681bbed6d5",
+    "round27_joint_verifier_states\\results\\fold_4_scores.npz": "92a343a91de5f5169eed9732f14d7d3bebc6cd53d2440d8d840e2b490d2d8511",
+    "round27_joint_verifier_states\\results\\window_scores_oof.jsonl": "b9b4f56cfea30c914d29a8b0a3414e2942fd76c275d3537644e743e7abf5a869",
+    "round27_joint_verifier_states\\results\\answer_scores_oof.jsonl": "0f845e2f95d72f36fb079b985417964ee9b791b97abb313ebef1ca57d736806a",
+    "round27_joint_verifier_states\\results\\summary.json": "b4c3d3678a8c3a29db1f83a47c8c9866219b045574316cc960c8965f7451ceea",
+    "round27_joint_verifier_states\\results\\test_started.json": "62ae2d53d8ab589df77fe002094a6a510d21beedd7b0d5d91c7a70dc3814b818",
+    "round27_joint_verifier_states\\results\\calibration_audit27_helper.py": "8970e22a3bf4f3b73364fbf6c7c87b5b5eb0f8e83aee6332b4b1e5cbff5ee545"
+  },
+  "helper_sha256": "8970e22a3bf4f3b73364fbf6c7c87b5b5eb0f8e83aee6332b4b1e5cbff5ee545",
+  "limits": [
+    "R27 prepare inherits R26 prepare/train_metadata, which parses mixed-split input before selecting actual train; cannot claim heldout input text was never parsed historically.",
+    "Freeze and outer-start records have no UTC execution timestamps; hash binding and code gates do not independently prove historical execution order.",
+    "Repeated assistant-labeled actual-train development folds, not a fresh final test or human QA evidence.",
+    "Used saved local65/global65; source mapping, old PCA fit isolation, weights and scaler derivation are delegated to parent.",
+    "Did not replay the17 old baseline sources, bootstrap, ranking or highlight metrics."
+  ]
+}

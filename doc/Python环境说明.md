@@ -6,6 +6,13 @@
 > Conda 位置：`D:\anaconda`  
 > Python 解释器：`D:\anaconda\envs\multi_agent_graph\python.exe`
 
+> **2026-09-09 用户授权的独立例外：** `prelab` 幻觉监测预实验使用
+> `D:\Projects\Multi_Agent_Graph_Analysis\prelab\.venv\Scripts\python.exe`（Python 3.11.15）。
+> 通过 `D:\anaconda\envs\CA\python.exe -m venv --system-site-packages prelab/.venv` 创建，
+> 复用 CA 的 PyTorch 2.5.1+cu121，专用依赖安装在 prelab 虚拟环境中。
+> 用户已明确允许新建或改造环境；以下统一环境规则对其他项目继续适用。
+> 具体依赖和复现步骤见 [prelab](../prelab/README.md)。
+
 ## 1. 强制规则
 
 本项目所有 Python 代码、测试、数据处理和实验运行统一使用：

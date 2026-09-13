@@ -1,0 +1,38 @@
+{
+  "seed": 20260909,
+  "task": "News summarization: explicit evidence conflict vs no annotated hallucination",
+  "generator": "mistral-7B-instruct",
+  "target_model": "Qwen2.5-0.5B-Instruct",
+  "mode": "teacher-forced replay",
+  "counts": {
+    "train": {
+      "0": 140,
+      "1": 100
+    },
+    "val": {
+      "0": 40,
+      "1": 25
+    },
+    "test": {
+      "0": 64,
+      "1": 25
+    }
+  },
+  "excluded": {
+    "not_pure_explicit_conflict": 435,
+    "length": 1,
+    "quality": 3
+  },
+  "total": 394,
+  "raw_sha256": {
+    "response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+    "source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b"
+  },
+  "split_sha256": {
+    "test.jsonl": "d4c02ccf86c40bc188c19eb15be8ebdbfeb6f8d9dc4b5654b372840d76c03aa9",
+    "train.jsonl": "ae2d8e84eabbb4d91722276cf345cb2d066aea389a9156271caaab575a2b610c",
+    "val.jsonl": "66aa7bce020713ee4489f5e9e65061aa737898b9ae48ac906d75207a8f91f02b"
+  },
+  "span_supervision": "None in fitting or model/layer/threshold selection; heldout spans only used for final localization evaluation",
+  "scope_limit": "Source-relative conflict labels do not independently establish real-world falsity. English news, fixed retrieved evidence, no live search agent."
+}

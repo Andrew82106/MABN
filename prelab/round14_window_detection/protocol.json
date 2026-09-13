@@ -1,0 +1,21 @@
+{
+  "schema": "round14-window-detection-v1",
+  "scope": "exploratory grouped CV on previously studied training source",
+  "widths": [1, 4, 8],
+  "stride": 1,
+  "features": "mean of all raw BPE lookback features in window, including punctuation",
+  "label": "any original eligible token inside window is risk",
+  "short_answer": "one actual-length window; no padding",
+  "unknown_or_refusal": "exclude from primary windows; report coverage",
+  "pool_baseline": "maximum frozen Round13 C=.01 token score over original eligible lexical tokens inside same window",
+  "C": 0.01,
+  "classifier_seed": 20260913,
+  "folds": "exact Round13 fit72/calibration24/evaluation24 question groups",
+  "weighting": "group/condition/item balanced, class factors fit-only, then total loss weight scaled to fit K1 token count",
+  "threshold": "per window size and method, calibration groups only; F1 then precision then higher threshold",
+  "bootstrap": {"draws": 2000, "seed": 20260914, "unit": "question group"},
+  "primary_comparisons": "window-trained minus token-max on same width, not across widths",
+  "auxiliary": ["union highlighted eligible tokens", "normal asserted answer false alarm", "gold region any-overlap recall"],
+  "original_validation_or_test_labels_used": false,
+  "new_generation_or_gpu": false
+}

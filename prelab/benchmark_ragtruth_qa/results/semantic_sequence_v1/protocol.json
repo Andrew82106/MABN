@@ -1,0 +1,29 @@
+{
+  "version": "qa-semantic-sequence-v1",
+  "scope": "Fixed fit634/cal159, no official test",
+  "method": "minicheck_hidden64_risk_tcn_w32",
+  "input": "All1024 original LB heads+NLL1+already-fit MiniCheck PCA64+per-token official claim risk logit1 =1090",
+  "extra_checker": true,
+  "checker_or_PCA_refit": false,
+  "architecture": "1090->32 GELU, two single residual Conv1d32 kernel3 dilation1/2 with GELU/dropout.2,32->1",
+  "parameters": 41153,
+  "fusion_receptive_field_raw_tokens": 7,
+  "offline": "MiniCheck states already see full claim and document; fusion RF7 does not limit total accessible future information to7 tokens.",
+  "seed": 20260926,
+  "epochs": 30,
+  "batch_answers": 8,
+  "cpu_threads": 4,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "all_parameters": true
+  },
+  "scaler": "Only fit raw tokens, base group/answer/lexical weights, partial_fit16384 blocks, float32transform. Punctuation stays context, loss0.",
+  "weights": "Reuse frozen sequence_v1 base/loss/classfactors/labels and30answer shuffles. Sum loss139518.",
+  "batch_objective": "sum(weight*BCE)*634/(actual_batch_answer_count*139518)",
+  "aggregation": "Token probability ->max lexical position in each unchanged4rawBPE window ->max all eligible windows for original answer.",
+  "selection": "Each epoch uses separate cal F1 thresholds, ties precision/higher cutoff; checkpoint maxminF1, windowF1,windowprecision,earlier epoch.",
+  "fixed_budget": "One network,one seed,30epochs,no early stop, no additional structure based on LR ranking.",
+  "comparison": "Preserve9LR, official MiniCheck scalar/fusion, old native LR/TCN and constants; no sealed-test claim."
+}

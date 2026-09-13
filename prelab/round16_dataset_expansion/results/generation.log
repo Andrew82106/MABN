@@ -1,0 +1,35 @@
+MODEL LOADED D:\Projects\Multi_Agent_Graph_Analysis\prelab\models\Qwen2.5-7B-Instruct-bnb-4bit GPU GiB 5.197
+Generated 1/800; current run 1.6s
+Generated 25/800; current run 28.3s
+Generated 50/800; current run 55.8s
+Generated 75/800; current run 83.4s
+Generated 100/800; current run 109.2s
+Generated 125/800; current run 137.2s
+Generated 150/800; current run 165.0s
+Generated 175/800; current run 194.6s
+Generated 200/800; current run 220.6s
+Generated 225/800; current run 248.6s
+Generated 250/800; current run 273.5s
+Generated 275/800; current run 301.1s
+Generated 300/800; current run 328.6s
+Generated 325/800; current run 355.5s
+Generated 350/800; current run 383.9s
+Generated 375/800; current run 412.8s
+Generated 400/800; current run 443.7s
+Generated 425/800; current run 471.3s
+Generated 450/800; current run 498.0s
+Generated 475/800; current run 523.4s
+Generated 500/800; current run 551.6s
+Generated 525/800; current run 579.0s
+Generated 550/800; current run 608.1s
+Generated 575/800; current run 640.9s
+Generated 600/800; current run 668.5s
+Generated 625/800; current run 698.0s
+Generated 650/800; current run 722.8s
+Generated 675/800; current run 753.3s
+Generated 700/800; current run 781.3s
+Generated 725/800; current run 810.2s
+Generated 750/800; current run 837.5s
+Generated 775/800; current run 866.9s
+Generated 800/800; current run 895.6s
+GENERATION_STAGE_COMPLETE

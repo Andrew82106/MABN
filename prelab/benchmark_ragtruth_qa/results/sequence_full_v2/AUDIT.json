@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "code_sha256": "32854bbd737ebe1571e38146bb73a0fbced7e33a934f1cb2931f2a25cc38e9fb",
+  "complete_sha256": "5d8d669869bb6188e3cd3829b36c59322f72507b3c877875259ddbec15ee2fd3",
+  "all_source_and_output_hashes_verified": true,
+  "all793_commonLB_NLL_and_bottom64_inputs_exact": true,
+  "PCA_reused_without_refit": true,
+  "same_frozen_weights_and_shuffle": true,
+  "methods": [
+    {
+      "method": "full_lb_pca64_tcn",
+      "selected_epoch": 3,
+      "all_30_epoch_thresholds_metrics_loss_exact": true,
+      "full_selected_checkpoint_prediction_reload_exact": true,
+      "scaler_mean_error": 2.220446049250313e-16,
+      "scaler_variance_error": 3.410605131648481e-13
+    },
+    {
+      "method": "full_lb_harp64_tcn",
+      "selected_epoch": 3,
+      "all_30_epoch_thresholds_metrics_loss_exact": true,
+      "full_selected_checkpoint_prediction_reload_exact": true,
+      "scaler_mean_error": 2.220446049250313e-16,
+      "scaler_variance_error": 8.171241461241152e-14
+    }
+  ],
+  "all_four_methods_type_window_and_span_recall_counts_independently_exact": true,
+  "no_frozen_training_files_changed": true,
+  "test_opened": false,
+  "gpu_used": false,
+  "seconds": 30.210842399974354,
+  "limitation": "Implementation self-audit; calibration and single-seed limits remain."
+}

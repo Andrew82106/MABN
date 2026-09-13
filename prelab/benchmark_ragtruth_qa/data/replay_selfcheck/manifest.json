@@ -1,0 +1,420 @@
+{
+  "passed": true,
+  "version": "ragtruth-qa-llama2-nf4-gpu-selfcheck-v1",
+  "signature_sha256": "35efb965ebd84fcff76a0954a3ca985122ca22eebe87829957423b9a83c5cb12",
+  "model_loading": {
+    "seconds": 8.65207310009282,
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 3070",
+    "gpu_capability": [
+      8,
+      6
+    ],
+    "total_gpu_bytes": 8589410304,
+    "allocated_after_load_gib": 3.603005886077881,
+    "quantization_config": {
+      "quant_method": "bitsandbytes",
+      "_load_in_8bit": false,
+      "_load_in_4bit": true,
+      "llm_int8_threshold": 6.0,
+      "llm_int8_skip_modules": [
+        "lm_head"
+      ],
+      "llm_int8_enable_fp32_cpu_offload": false,
+      "llm_int8_has_fp16_weight": false,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "load_in_4bit": true,
+      "load_in_8bit": false
+    },
+    "quantized_linear": {
+      "class": "Linear4bit",
+      "weight_dtype": "torch.uint8",
+      "compute_dtype": "torch.bfloat16",
+      "quant_type": "nf4",
+      "nested": true
+    },
+    "embedding_dtype": "torch.bfloat16",
+    "lm_head_dtype": "torch.bfloat16",
+    "attention_backend": "sdpa",
+    "architecture": {
+      "model_type": "llama",
+      "layers": 32,
+      "heads": 32,
+      "kv_heads": 32,
+      "head_dim": 128,
+      "hidden_size": 4096,
+      "lb_width": 1024,
+      "vocab_size": 32000
+    }
+  },
+  "checks": [
+    {
+      "passed": true,
+      "response_id": "16023",
+      "partition": "fit",
+      "signature_sha256": "35efb965ebd84fcff76a0954a3ca985122ca22eebe87829957423b9a83c5cb12",
+      "plan_sha256": "499593130b9d7f75569009de3a28b2e78ab000da5732934bf922982c05f613fb",
+      "base_feature_metadata": {
+        "version": "ragtruth-qa-reconstruction-layout-v1",
+        "response_id": "16023",
+        "partition": "fit",
+        "architecture": {
+          "model_type": "llama",
+          "layers": 32,
+          "heads": 32,
+          "kv_heads": 32,
+          "head_dim": 128,
+          "hidden_size": 4096,
+          "lb_width": 1024,
+          "vocab_size": 32000
+        },
+        "plan_sha256": "499593130b9d7f75569009de3a28b2e78ab000da5732934bf922982c05f613fb",
+        "total_input_tokens": 612,
+        "response_tokens": 306,
+        "schema_shapes": {
+          "lb": [
+            306,
+            1024
+          ],
+          "nll": [
+            306
+          ],
+          "hidden_last": [
+            306,
+            4096
+          ],
+          "token_ids": [
+            306
+          ],
+          "answer_token_positions": [
+            306
+          ],
+          "response_token_offsets": [
+            306,
+            2
+          ],
+          "response_token_offsets_raw": [
+            306,
+            2
+          ],
+          "token_start": [
+            306
+          ],
+          "token_end": [
+            306
+          ]
+        },
+        "lb_timing": "post-read actual answer token position; source attention mean divided by source+answer attention means, current answer token included",
+        "nll_timing": "pre-read position i-1 predicts actual reconstructed token at absolute position i",
+        "hidden_timing": "post-read final model RMSNorm output",
+        "precision": {
+          "model_parameter_dtype": "torch.bfloat16",
+          "is_loaded_in_4bit": true,
+          "attention_softmax_for_lb": "float32",
+          "feature_storage": "float32"
+        },
+        "harp_components_float64_sha256": null,
+        "harp_basis_model_binding_required_from_caller": false,
+        "padding": "one unpadded example; explicit all-ones attention mask, no inherited generation pad id",
+        "seconds": 1.083811299991794,
+        "peak_allocated_gpu_gib": 3.740537166595459,
+        "labels_used": false,
+        "response_regenerated": false,
+        "exact_original_generation_trace": false,
+        "optional_delta_changes_context_length_and_positions": false,
+        "future_token_smoothing_used": false
+      },
+      "repeat_base_feature_seconds": 0.8855418999446556,
+      "repeat_max_absolute_differences": {
+        "lb": 0.0,
+        "nll": 0.0,
+        "hidden_last": 0.0,
+        "token_ids": 0.0,
+        "answer_token_positions": 0.0,
+        "response_token_offsets": 0.0,
+        "response_token_offsets_raw": 0.0,
+        "token_start": 0.0,
+        "token_end": 0.0
+      },
+      "library_oracle": {
+        "lb_max_absolute_difference": 0.0,
+        "nll_max_absolute_difference": 0.0,
+        "hidden_max_absolute_difference": 0.0,
+        "lb_query_local_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          304,
+          305
+        ],
+        "nll_query_local_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "native_bf16_cast_lb_max_difference": 0.0010226964950561523,
+        "softmax_precision_policy": "Compare float32 softmax before official eager casts to BF16; native cast effect reported separately",
+        "seconds": 0.41829539998434484
+      },
+      "no_context_hidden_repeat_exact": true,
+      "no_context_seconds": 0.26378360006492585,
+      "no_context_repeat_seconds": 0.26369619998149574,
+      "answer_ids_and_clipped_offsets_same_both_views": true,
+      "boundary_crossing_positions_retained": [
+        306
+      ],
+      "raw_first_answer_offset": [
+        -1,
+        5
+      ],
+      "clipped_first_answer_offset": [
+        0,
+        5
+      ],
+      "labels_used": false,
+      "test_content_read": false,
+      "original_trace_claimed": false,
+      "arrays_sha256": "f7d0b57285cd125b021504290756c6807fe6ac94db2a8627d23baa8eb4f48a0e",
+      "arrays_bytes": 8289148,
+      "raw_array_bytes": 16307352
+    },
+    {
+      "passed": true,
+      "response_id": "15975",
+      "partition": "calibration",
+      "signature_sha256": "35efb965ebd84fcff76a0954a3ca985122ca22eebe87829957423b9a83c5cb12",
+      "plan_sha256": "b9f530f707e732a1c5fcff7de2a3fba5fd44ea1caeb7593790f61429a42562e3",
+      "base_feature_metadata": {
+        "version": "ragtruth-qa-reconstruction-layout-v1",
+        "response_id": "15975",
+        "partition": "calibration",
+        "architecture": {
+          "model_type": "llama",
+          "layers": 32,
+          "heads": 32,
+          "kv_heads": 32,
+          "head_dim": 128,
+          "hidden_size": 4096,
+          "lb_width": 1024,
+          "vocab_size": 32000
+        },
+        "plan_sha256": "b9f530f707e732a1c5fcff7de2a3fba5fd44ea1caeb7593790f61429a42562e3",
+        "total_input_tokens": 622,
+        "response_tokens": 239,
+        "schema_shapes": {
+          "lb": [
+            239,
+            1024
+          ],
+          "nll": [
+            239
+          ],
+          "hidden_last": [
+            239,
+            4096
+          ],
+          "token_ids": [
+            239
+          ],
+          "answer_token_positions": [
+            239
+          ],
+          "response_token_offsets": [
+            239,
+            2
+          ],
+          "response_token_offsets_raw": [
+            239,
+            2
+          ],
+          "token_start": [
+            239
+          ],
+          "token_end": [
+            239
+          ]
+        },
+        "lb_timing": "post-read actual answer token position; source attention mean divided by source+answer attention means, current answer token included",
+        "nll_timing": "pre-read position i-1 predicts actual reconstructed token at absolute position i",
+        "hidden_timing": "post-read final model RMSNorm output",
+        "precision": {
+          "model_parameter_dtype": "torch.bfloat16",
+          "is_loaded_in_4bit": true,
+          "attention_softmax_for_lb": "float32",
+          "feature_storage": "float32"
+        },
+        "harp_components_float64_sha256": null,
+        "harp_basis_model_binding_required_from_caller": false,
+        "padding": "one unpadded example; explicit all-ones attention mask, no inherited generation pad id",
+        "seconds": 0.7581224000314251,
+        "peak_allocated_gpu_gib": 3.7409515380859375,
+        "labels_used": false,
+        "response_regenerated": false,
+        "exact_original_generation_trace": false,
+        "optional_delta_changes_context_length_and_positions": false,
+        "future_token_smoothing_used": false
+      },
+      "repeat_base_feature_seconds": 0.7807581999804825,
+      "repeat_max_absolute_differences": {
+        "lb": 0.0,
+        "nll": 0.0,
+        "hidden_last": 0.0,
+        "token_ids": 0.0,
+        "answer_token_positions": 0.0,
+        "response_token_offsets": 0.0,
+        "response_token_offsets_raw": 0.0,
+        "token_start": 0.0,
+        "token_end": 0.0
+      },
+      "library_oracle": {
+        "lb_max_absolute_difference": 0.0,
+        "nll_max_absolute_difference": 0.0,
+        "hidden_max_absolute_difference": 0.0,
+        "lb_query_local_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238
+        ],
+        "nll_query_local_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "native_bf16_cast_lb_max_difference": 0.0010109543800354004,
+        "softmax_precision_policy": "Compare float32 softmax before official eager casts to BF16; native cast effect reported separately",
+        "seconds": 0.42334780003875494
+      },
+      "no_context_hidden_repeat_exact": true,
+      "no_context_seconds": 0.250565700000152,
+      "no_context_repeat_seconds": 0.25013180007226765,
+      "answer_ids_and_clipped_offsets_same_both_views": true,
+      "boundary_crossing_positions_retained": [
+        383
+      ],
+      "raw_first_answer_offset": [
+        -1,
+        5
+      ],
+      "clipped_first_answer_offset": [
+        0,
+        5
+      ],
+      "labels_used": false,
+      "test_content_read": false,
+      "original_trace_claimed": false,
+      "arrays_sha256": "949143f1af93fa416001b5995b816170b7303d145032b67243f91cfb621b487b",
+      "arrays_bytes": 6563625,
+      "raw_array_bytes": 12736788
+    }
+  ],
+  "budget": {
+    "development_rows": 793,
+    "development_response_tokens": 213159,
+    "measured_rows": 2,
+    "measured_response_tokens": 545,
+    "base_forward_feature_seconds_measured": 1.841933700023219,
+    "noctx_forward_seconds_measured": 0.5143493000650778,
+    "base_point_estimate_seconds_by_response_tokens": 720.412377180274,
+    "base_point_estimate_seconds_by_rows": 730.3267120592063,
+    "base_planning_range_seconds": [
+      540.3092828852054,
+      1095.4900680888095
+    ],
+    "additional_noctx_point_estimate_seconds_by_response_tokens": 201.1709769771962,
+    "additional_noctx_point_estimate_seconds_by_rows": 203.93949747580336,
+    "additional_noctx_planning_range_seconds": [
+      150.87823273289715,
+      305.90924621370505
+    ],
+    "range_is_not_a_statistical_confidence_interval": true,
+    "timing_excludes": [
+      "checkpoint verification/loading",
+      "most disk serialization/hashing",
+      "HARP basis/projection",
+      "classifier training"
+    ],
+    "raw_bytes_by_block": {
+      "lb": 873099264,
+      "nll": 852636,
+      "hidden_last": 3492397056,
+      "hidden_no_context": 3492397056,
+      "hidden_delta": 3492397056,
+      "harp256": 218274816,
+      "coordinate_arrays": 8526360
+    },
+    "raw_base_total_bytes": 4374875316,
+    "raw_base_plus_delta_harp_total_bytes": 11577944244,
+    "two_row_npz_raw_ratio_with_delta_no_harp": 0.5113862211103514,
+    "limitations": "Two selected examples do not span all sequence lengths. Attention work depends on prompt and answer length; compression and GPU timing vary. These are planning estimates, not measured all-data costs."
+  },
+  "wall_seconds_including_verification_loading_and_all_selfchecks": 29.43197080004029,
+  "peak_allocated_gpu_gib_base_checks": 3.7409515380859375,
+  "all_793_backbone_features_extracted": false,
+  "gpu_rows_selected": 2,
+  "test_or_withheld_content_read": false,
+  "labels_used": false,
+  "released_text_rewritten": false,
+  "exact_original_generation_trace": false
+}

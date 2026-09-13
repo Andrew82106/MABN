@@ -1,0 +1,104 @@
+{
+  "version": "native-qa-frozen-local-nli-cuda-evaluation-validation-fix-v1",
+  "status": "evaluation_only_repair_frozen_before_fitting",
+  "role": "ours_method_candidate; never a baseline",
+  "scope": {
+    "answers": "Exactly the original 634 fit and 159 calibration llama-2-7b-chat answers.",
+    "windows": "The existing eligible four-original-BPE, stride-one windows: 168123 fit and 42241 calibration.",
+    "test": "Official validation/test paths are never opened."
+  },
+  "segmentation": {
+    "inputs": "Only original answer characters and frozen original-BPE offsets; no label, gold span, evidence annotation, score, or model output is consulted.",
+    "rule": "Split at every newline and at .!?/CJK equivalents followed by whitespace/end, including adjacent closing quote/bracket characters. A line-initial numeric/alphabetic list marker such as 1. or a), a fixed common abbreviation, an initial, or a dotted acronym is kept with the following text. Trim boundary whitespace and discard fragments without an alphanumeric character.",
+    "trace": "Every original lexical BPE is assigned exactly once to the segment containing the greatest number of its alphanumeric characters; ties use the earlier segment. The inverse segment-to-BPE lists are saved."
+  },
+  "premises": {
+    "views": [
+      "full",
+      "passage_1",
+      "passage_2",
+      "passage_3"
+    ],
+    "full": "The byte-for-byte released retrieved_passages string.",
+    "individual": "Exact body slice after each passage N: header, with only outer whitespace removed; all three are required and retained.",
+    "hypothesis": "One deterministic answer fragment; question and prior answer text are not appended."
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "device": "CUDA0 FP32, eval/inference_mode; no autocast or TF32; SDPA math; reference_compile=False",
+    "batch_pairs": 8,
+    "truncation": false,
+    "maximum_pair_tokens": 2048,
+    "saved": "For every fragment and all four premise views, save entailment, neutral and contradiction probabilities.",
+    "independent_replay": "Original CPU independent-replay report is retained as upstream evidence. CUDA smoke compares its same108 pairs at fixed3e-5 probability tolerance; same-path CUDA repeats must be exact. No CPU/GPU bit-identity claim."
+  },
+  "window_projection": {
+    "nli_features": "For each of the 12 view/class probabilities, average segment values weighted by the count of lexical BPEs from that segment in the frozen four-BPE window.",
+    "raw_primary": "Maximum contradiction probability over all segments touched by the window and all four premise views; fixed before evaluation.",
+    "answer": "Maximum over every eligible frozen window in the answer."
+  },
+  "readouts": {
+    "raw": "No fitted model. Choose separate window/answer F1 thresholds on fit only, then freeze and report fit plus calibration AUROC/AP/F1.",
+    "nli_lr": "Only 12 frozen NLI probabilities; StandardScaler plus one L2 logistic regression with fixed C=0.1.",
+    "fusion_lr": "The same fixed readout over the unchanged current window score plus the 12 NLI probabilities; report separately as ours.",
+    "crossfit": "Five-fold GroupKFold by source-connected group produces every fit prediction for the two learned readouts. Thresholds use these fit OOF scores. Full-fit readouts predict calibration.",
+    "weights": "Within each training fold, source group, answer and window receive equal nested mass; fit-fold labels supply class balancing. Calibration never affects weights.",
+    "selection": "No C, feature, view, aggregation, fold count, epoch or formula search. Calibration is used once for reporting and never for selection or thresholding."
+  },
+  "current_score_limit": "The current score is a previously fixed development candidate that was selected on this calibration split. Fusion therefore remains a development diagnostic and inherits that upstream selection history; no clean final-test claim is allowed.",
+  "execution_gate": "Explicit prepare/check/gpu-smoke/extract/score/verify. No automatic queue or stage chaining.",
+  "device_transfer": {
+    "CPU_source": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_frozen_nli_local_signal_v1.py",
+    "CPU_result_directory": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\nli_local_signal_v1",
+    "input_policy": "Copy original793 inputs.jsonl byte-for-byte. Do not regenerate segments, sources or token ownership.",
+    "only_execution_changes": [
+      "device CPU->CUDA0",
+      "FP32 math SDPA selection, TF32 disabled",
+      "reference_compile=False to use the same uncompiled math on Windows"
+    ],
+    "weights_and_config": "Original checkpoint and all learned weights unchanged. No architecture/attention-mask/pooling/position configuration change.",
+    "batch_policy": "Same original pair order and per-answer batch8, including actual final short batch. No length sorting, merging, padding to fixed cap or truncation.",
+    "backend": "cuda_fp32_sdpa_math_batch8_v1",
+    "same_path_repeat_exact": true,
+    "CPU_GPU_probability_atol": 3e-05,
+    "CPU_GPU_probability_rtol": 0,
+    "memory_limit_bytes": 6979321856,
+    "minimum_free_before_load_bytes": 3221225472,
+    "smoke": "Original first/middle/last108 pairs with original CPU joint-batch geometry; also each anchor production-row geometry and the first longest prepared pair batch. No labels or score-based sample choice.",
+    "failure": "Record failure and stop. No automatic tolerance change, batch reduction, FP16/BF16 fallback or retry.",
+    "cache": "New directory and execution signature in every NPZ; CPU segment caches are never imported or accepted.",
+    "readout": "Private copy of the frozen CPU module reuses unchanged fit/weights/scaler/OOF/threshold/answermax functions. Only its output/check bindings differ; no CPU module globals or files are modified.",
+    "numerical_limit": "Device arithmetic may cause small probability differences. Passing smoke is tolerance agreement, never bit-exact CPU/GPU equivalence."
+  },
+  "evaluation_repair": {
+    "reason": "Original score failed before any fit: character_intervals are merged, not a per-token offset list.",
+    "authoritative_definition": "src/build_gold.py merge_intervals and window construction: sort intervals, omit empty intervals, merge when next.start <= previous.end.",
+    "change": "Only the equality check of existing window.character_intervals uses that existing merged definition.",
+    "unchanged": "Every input, segment, four-view probability, raw BPE, feature projection, gold label, readout, class/group weight, fold, C, threshold rule and answermax.",
+    "cache_root": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\nli_local_signal_cuda_v1",
+    "cache_identity": "Original CUDA signature and all793 NPZ hashes checked without rebinding or rewriting them.",
+    "execution_signature_sha256": "a3bfffa980c3079dccb68096732023023c4fd92a6475047abe76587a36341ea1",
+    "GPU_extraction_complete_sha256": "1e072a0712e100fcb254fc18f88b189196488b40f70ccb93d1ec8bf3e281ee8f",
+    "outputs": "Independent evaluation directory; original CPU/GPU directories remain unchanged.",
+    "readout_source": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_frozen_nli_local_signal_v1.py",
+    "readout_source_sha256": "e68b494b9dc713d317eaf2772ddaa3ad16b48797a496cf2ff5cee621ade038c1",
+    "GPU_runner_sha256": "ecbba278f5f5baf8532ea1b35bdc566236946a495a5240129d1e8cdd60a7ae82",
+    "learning_functions": [
+      "build_window_design",
+      "nested_weights",
+      "one_readout",
+      "fit_thresholds",
+      "result_record",
+      "score"
+    ],
+    "stage_order": "prepare/check then explicit score then verify; no GPU execution commands."
+  }
+}

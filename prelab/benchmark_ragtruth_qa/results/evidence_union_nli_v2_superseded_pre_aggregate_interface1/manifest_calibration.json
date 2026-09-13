@@ -1,0 +1,66 @@
+{
+  "status": "CPU_manifest_complete_all_candidates_cached",
+  "version": "attention-bm25-exact-evidence-union-nli-v2",
+  "cohort": "calibration",
+  "answers": 159,
+  "claims": 2267,
+  "candidate_instances": 15556,
+  "candidate_count_per_claim_histogram": {
+    "4": 27,
+    "5": 68,
+    "6": 656,
+    "7": 1030,
+    "8": 412,
+    "9": 74
+  },
+  "attention_bm25_overlap_instances": 4591,
+  "existing_cache_hit_instances": 15556,
+  "missing_cache_instances": 0,
+  "unique_candidate_requests": 14533,
+  "unique_missing_requests": 0,
+  "portable_reuse_instance_status": {
+    "portable_conflict_recompute": 468,
+    "portable_exact_hit": 15088
+  },
+  "candidate_files": {
+    "jsonl": {
+      "path": "candidates_calibration.jsonl",
+      "sha256": "15533e9117a600d5b370a14ae1096e28517323a86bc06538973f74a2c44e2625"
+    },
+    "arrays": {
+      "path": "candidate_arrays_calibration.npz",
+      "sha256": "8173c9b40217e88a63a21ccb78481da4505935c45f2cbbd151d201ca2e48767e"
+    },
+    "missing_requests": {
+      "path": "missing_requests_calibration.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_snapshot": {
+    "runner_sha256": "8350dff8d7ae1812db88ee14bbdd85b4c400ad65368cedbb773e1d1808192dac",
+    "protocol_sha256": "3107eda96aac758ff5fc23afeb9cc42c1d78d0df964b2b9f97ac5b69d75f30a7",
+    "attribution_manifest_sha256": "37f50d7ad939272149688b24ac91ef68a8996aa398716de113cb1c5004ac0d8b",
+    "attribution_layouts_sha256": "5e934e6b13483236deadb5f160c277d58e069c885856175484598b34efc27c51",
+    "atomic_input_sha256": "2df31cb90161e1fb9b7d560011dce2e2d338e60d984d48599e40f28ba58b2e36",
+    "atomic_extraction_sha256": "c0aa2f5cd4ab7c0623374fdbcb58bf34f5607d2e2e073ba3ce2a9c32e18cbec6",
+    "model": {
+      "checkpoint": "tasksource/ModernBERT-base-nli",
+      "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+      "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+      "class_order": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ],
+      "frozen": true,
+      "maximum_pair_tokens": 2048,
+      "truncation": false
+    }
+  },
+  "model_loaded": false,
+  "GPU_used": false,
+  "labels_used": false,
+  "rule_selected": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "scope": "Shortest and longest old training rows, no detector labels/scores/new test data read",
+  "checks": [
+    {
+      "old_training_row_id": "hotpot_5ab451f85542991779162c6c__complete",
+      "input_tokens": 180,
+      "response_tokens": 39,
+      "future_pivot": 19,
+      "same_shape_future_max_abs": {
+        "hidden_21": 0.0,
+        "hidden_28": 0.0,
+        "lookback_features": 0.0,
+        "binding_features": 0.0,
+        "token_nll": 0.0,
+        "token_entropy": 0.0
+      },
+      "independent_hidden_max_abs": {
+        "hidden_21": 0.0,
+        "hidden_28": 0.0
+      },
+      "old_global_lookback_max_abs": 0.0,
+      "core_seconds": 1.2104396999930032,
+      "peak_allocated_gib": 5.353559970855713,
+      "audit_seconds": 2.1604365999810398
+    },
+    {
+      "old_training_row_id": "hotpot_5a72b2695542991f9a20c56f__partial",
+      "input_tokens": 427,
+      "response_tokens": 50,
+      "future_pivot": 25,
+      "same_shape_future_max_abs": {
+        "hidden_21": 0.0,
+        "hidden_28": 0.0,
+        "lookback_features": 0.0,
+        "binding_features": 0.0,
+        "token_nll": 0.0,
+        "token_entropy": 0.0
+      },
+      "independent_hidden_max_abs": {
+        "hidden_21": 0.0,
+        "hidden_28": 0.0
+      },
+      "old_global_lookback_max_abs": 0.0,
+      "core_seconds": 1.046300699992571,
+      "peak_allocated_gib": 5.379890441894531,
+      "audit_seconds": 2.3317287000245415
+    }
+  ],
+  "model_config_sha256": "c9b481809ae2e99227ac323b77a9da0b5387a0a21f46329327132273435fa3f7"
+}

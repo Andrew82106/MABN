@@ -1,0 +1,31 @@
+{
+  "version": "r22-frozen-local-logit-normalization-v1",
+  "base_methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta"
+  ],
+  "temperatures": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "formula": "p * exp((logit(s)-max_item_logit)/T), p=max original window score within the visible answer",
+  "logit_numeric_clipping": {
+    "lower": 2.220446049250313e-16,
+    "upper": 0.9999999999999998
+  },
+  "windows": "all original output-defined raw four-BPE windows; no label filtering in normalization or answer max",
+  "selection": "Each T chooses cal window risk-F1 cutoff; cutoff ties precision then higher cutoff; T ties F1, precision, smaller T",
+  "answer_cutoff": "Original frozen cutoff unchanged; every answer maximum and decision must reproduce exactly",
+  "scope": "Repeated exploratory development on R16 actual train301 questions/278 groups and old frozen fivefold scores; not new training or unseen test",
+  "new_model_or_external_signal": false,
+  "old_validation_or_test_parsed": false,
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260922
+  }
+}

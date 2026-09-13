@@ -1,0 +1,47 @@
+{
+  "version": "relation-scope-localizer-v1",
+  "role": "standalone development method candidate; formal baselines unchanged",
+  "inputs": {
+    "window": "group-held-out Lookback and ModernBERT-large probabilities, frozen NLL, local NLI and citation features",
+    "relation": "group-held-out claim_evidence_meta score plus frozen 70-column retrieved-evidence E/N/C and citation features",
+    "scope": [
+      "source_or_step",
+      "number",
+      "negation",
+      "quantifier",
+      "condition",
+      "order_or_repeat",
+      "comparison",
+      "modal",
+      "attribution",
+      "evidence_absence",
+      "scope_punctuation",
+      "claim_local_start",
+      "claim_local_end",
+      "claim_local_center",
+      "claim_edge_distance",
+      "claim_first_fifth",
+      "claim_last_fifth",
+      "claim_overlap_fraction",
+      "log_claim_chars",
+      "answer_start_fraction",
+      "answer_end_fraction"
+    ]
+  },
+  "training": {
+    "model": "StandardScaler + L2 LogisticRegression",
+    "C": 0.01,
+    "seed": 20261018,
+    "folds": 5,
+    "crossfit": "GroupKFold by source-connected group; every fit prediction is downstream OOF and every learned upstream fit score is upstream OOF",
+    "weights": "Within each fold: equal group, then answer/window; binary balance; restore equal group loss mass"
+  },
+  "readout": "One probability per unchanged eligible 4-original-BPE stride-one window; answer is max window probability",
+  "thresholds": "Window and answer thresholds selected only from fit downstream OOF; calibration reporting only",
+  "limitations": [
+    "Lexical slot cues locate possible relation boundaries but do not parse full predicate-argument structure.",
+    "Claim NLI is still based on fixed sentence retrieval and an automatic claim splitter.",
+    "The same calibration split has been repeatedly inspected elsewhere and is development evidence only."
+  ],
+  "official_test_opened": false
+}

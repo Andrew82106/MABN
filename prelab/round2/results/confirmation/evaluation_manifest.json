@@ -1,0 +1,10 @@
+{
+  "n": 110,
+  "clean": 80,
+  "error": 30,
+  "source_disjoint": true,
+  "threshold_source": "original news validation only",
+  "labels_sha256": "2ce4910a4ba152c7db5f343c872b08be5a5220769ccda59574519a537357a718",
+  "annotation_sha256": "ecc78693a103e46649205e18b35f12e07366cbbaa8a71a919b7c4274ae1459e3",
+  "purpose": "confirmatory holdout for exploratory supervised alert controls; no selection on these results"
+}

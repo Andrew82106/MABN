@@ -1,0 +1,12 @@
+{
+  "scope": "All7482 fixed FAVA auxiliary candidates; only original train fields and existing parser.",
+  "selection": "Reuse previous top-level nonnested entity/relation nodes; exactly1 mark and1 delete; each projected side1..3 whitespace-delimited words; nonempty unequal sides; no descendant type.",
+  "pair_check": "Runtime only: replace one markup-coordinate slice in original corrupt answer, verify exact prefix/suffix and exact reverse patch. Never apply all edited projection changes.",
+  "output": "Counts and per-original-row count diagnostics only. No paired texts, new truth labels, tokenization, models, cal/test access.",
+  "inputs_sha256": {
+    "additional_data\\fava_training\\training.json": "5f6422b13b48b3f6fdff7bab4698b3702c90154c10cad519047f58600e6536a7",
+    "auxiliary_fava_v2\\candidate_fit.jsonl": "66f02fd14fbd0fe98ad93133c81d7eb7a84ce1f0b86f33ee3be911daa016b7c1",
+    "research\\fact_pair_data_feasibility_v1\\audit_fava_pairs.py": "4cd41abf8f569764ecc563d041fded21382374b93a96661aedc53de1c2c68f95",
+    "research\\fact_pair_data_feasibility_v1\\FAVA_PAIR_COUNTS.json": "7c2763af574560f5cc7e86696506be4695d45886733947851f35a982158a2f3b"
+  }
+}

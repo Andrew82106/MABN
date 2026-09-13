@@ -1,0 +1,49 @@
+{
+  "version": "qa-full-context-nli-encoder-initialization-v1",
+  "source": "https://arxiv.org/html/2502.17125v1",
+  "architecture": "ModernBERT-base AutoModelForTokenClassification equivalent, two output logits; all parameters trainable",
+  "initialization": {
+    "encoder": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "encoder_loading": "Copy only all134 model.* tensors into the same generic-base token detector; strict encoder state loading, all parameters trainable afterward.",
+    "inherited_head": "Keep generic answerdotai/ModernBERT-base head.dense.weight and head.norm.weight exactly as base v2.",
+    "new_head": "Same seed20261005 fresh binary classifier.weight/bias exactly as base v2; the entire prediction transform is not randomly reinitialized.",
+    "discarded_nli": [
+      "head.dense.weight",
+      "head.norm.weight",
+      "classifier.weight",
+      "classifier.bias"
+    ],
+    "discarded_generic": "Generic masked-LM decoder.bias is unused, exactly as in base v2.",
+    "runtime_config": "Generic-base token-detector configuration, except max_position_embeddings=2048. Compare all normalized architecture/forward config fields against pinned NLI; remaining differences must be task metadata only."
+  },
+  "input": "Tokenizer default CLS/SEP around retrieved_passages + literal SEP + question + literal SEP + complete original_response. Question is a separate input segment, not asserted source evidence.",
+  "context": "Whole unmodified passages, question and answer; no truncation. Explicit2048 cap from NLI model config, not the tokenizer unbounded sentinel. Current QA inputs must equal base v2 and max979.",
+  "mapping": "Per-encoder-token risk logit z1-z0 -> unchanged original raw BPE via nonwhitespace character overlap mean. Duplicate character coverage shares weight; pure whitespace logit0 and loss0.",
+  "labels": "All four original human span types unioned using unchanged original raw BPE risk labels. No new per-sentence or per-document label.",
+  "weights": "Exact expanded tail_finetune.token_weights; source groups equal, original/aux half base mass, fit-only class balancing and reequal group loss; target lexical mass560300.",
+  "training": {
+    "epochs": 6,
+    "seed": 20261005,
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "gradient_clip": 1.0,
+    "microbatch_answers": 1,
+    "effective_batch_answers": 8,
+    "scheduler": "none",
+    "precision": "CUDA-only BF16 autocast for model forward and native non-reentrant checkpoint recomputation; FP32 parameters, accumulated gradients and AdamW states. Cast both output logits to FP32 before difference, character mapping and BCE. CPU remains FP32 without autocast. No GradScaler; TF32 off.",
+    "attention": "SDPA native torch; reference_compile disabled",
+    "gradient_checkpointing": "non-reentrant per native transformer layer; torch checkpoint restores the original CUDA autocast context during recomputation"
+  },
+  "evaluation": "Original159 calibration answers/42241 windows, 4 raw BPE stride1 lexical-max, answer max. Refusals retained. Epoch0 diagnostic only.",
+  "selection": "Per-epoch calibration-only separate risk-F1 thresholds, original precision/higher-cutoff tie rule. Select epoch1..6 by min(windowF1,answerF1), windowF1,windowPrecision,earlier epoch.",
+  "scope": "Same3680 fit answers/615 groups, same159 calibration/154 groups; official test stays sealed.",
+  "comparison_limits": "Matched encoder-initialization comparison to base v2: same tokenizer output, complete input, inherited generic prediction transform, fresh classifier, supervision, optimizer, six epochs and selection. This still adds an offline semantic checker; it is not a pure generator-internal probe.",
+  "pretraining_limit": "Exploratory NLI initialization with limited source traceability. The inspected task list has no direct RAGTruth task evidence; upstream independence is not proven. Some upstream tasks use synthetic text or silver labels, including TrueTeacher. Do not call this contamination-free or a RAGTruth-specialized pretrained detector.",
+  "artifacts": "Preserve all epochs0..6 checkpoint/optimizer/RNG, complete predictions, thresholds, metrics and timing; no implicit resume/overwrite.",
+  "gpu_gate": "Actual longest-input repeated inference maxdiff<=2e-6, synthetic-zero-target finite nonzero backward, actual memory/runtime recorded before training. No gold labels in smoke objective.",
+  "v1_control": "Original base v2 source/preparation unchanged. All3839 input IDs, full offsets, original-BPE maps, loss weights and six answer orders are checked before byte reuse.",
+  "precision_limits": "Unchanged BF16 CUDA forward / FP32 parameters, gradients, optimizer, mapping and loss. Actual GPU smoke not yet run; CPU preparation is not a trained result.",
+  "smoke_comparison": "Same longest input and zero target as existing v1 smoke. Also record an untrained FP32-vs-BF16 logit difference descriptively, without using it to tune precision. Runtime comparison is a single-step diagnostic, not a throughput guarantee."
+}

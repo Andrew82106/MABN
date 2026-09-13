@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "selected_epoch": 3,
+  "epoch_reselected": false,
+  "source_snapshot": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\semantic_multitask_v1\\semantic_tcn_aux_types_w32\\epoch_003_scores.npz": "410e38af89d91578efbb412b5fd8fe8630722b533c89e2bf26dec93baab41760",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\sequence_v1\\token_index.json": "e15126cd8e8340fb811da2d451185eeafaa4c523cbdc99982ed9c4b31860067f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\existing_auxiliary_readout_v1\\protocol.json": "55c2a8d369f07f4f6d0993de61dfe67fc0be22edcc383dca532503e8200e68f0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\existing_auxiliary_readout_v1\\summary.json": "ca3d2046b717512ee85d71d42b47895c7c029c86396383b1ae36d8d0ecc28772",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\existing_auxiliary_readout_v1\\complete.json": "6b7d0ea109dd0aec7fff369105e0b3510958a546ffdcf5a4fd509dc4955490f4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\existing_auxiliary_readout_v1\\scores.npz": "087edd7ba55af7bc80a521a53da8f0c2582c02cd9472c246ee90190f9db62f09",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\semantic_multitask_v1\\summary.json": "bb30dab7190a89412a56f4521eec32215ece80b09661621ef545b02da45aeac1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\semantic_multitask_v1\\complete.json": "354fa76060332d5e7bc2ea5cb020af936694e7a78d6a65a9b9405d4f2cfcdc28",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_existing_auxiliary_readout.py": "b2b88170ea59974b4ef46eaa8eff7b2c52d1770e91b68a39d0199d9018b5d03f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_calibration.jsonl": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_calibration.jsonl": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_calibration.jsonl": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510"
+  },
+  "token_scores_maxdiff": 0.0,
+  "window_scores_maxdiff": 0.0,
+  "answer_scores_maxdiff": 0.0,
+  "old_primary_control_exact": true,
+  "fixed_two_aux_sigmoid_max_exact": true,
+  "all_210364_window_geometry_lexical_and_gold_checked": true,
+  "independent_threshold_and_metrics_exact": true,
+  "metrics": {
+    "control": {
+      "fit": {
+        "windows": {
+          "n": 168123,
+          "positive": 21477,
+          "tp": 13996,
+          "fp": 6729,
+          "fn": 7481,
+          "tn": 139917,
+          "precision": 0.675319662243667,
+          "recall": 0.6516738836895283,
+          "f1": 0.6632861001848254,
+          "auroc": 0.918423118213693,
+          "average_precision": 0.6975747551098654
+        },
+        "answers": {
+          "n": 634,
+          "positive": 328,
+          "tp": 271,
+          "fp": 75,
+          "fn": 57,
+          "tn": 231,
+          "precision": 0.7832369942196532,
+          "recall": 0.8262195121951219,
+          "f1": 0.8041543026706232,
+          "auroc": 0.8583811573409852,
+          "average_precision": 0.8631252547236758
+        }
+      },
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3716,
+          "fp": 1899,
+          "fn": 2268,
+          "tn": 34358,
+          "precision": 0.6617987533392699,
+          "recall": 0.6209893048128342,
+          "f1": 0.6407448918010173,
+          "auroc": 0.8901730819193461,
+          "average_precision": 0.6614741406148613
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 87,
+          "fp": 16,
+          "fn": 13,
+          "tn": 43,
+          "precision": 0.8446601941747572,
+          "recall": 0.87,
+          "f1": 0.8571428571428571,
+          "auroc": 0.8952542372881357,
+          "average_precision": 0.9415182673031004
+        }
+      }
+    },
+    "aux_max": {
+      "fit": {
+        "windows": {
+          "n": 168123,
+          "positive": 21477,
+          "tp": 14295,
+          "fp": 7568,
+          "fn": 7182,
+          "tn": 139078,
+          "precision": 0.653844394639345,
+          "recall": 0.6655957535968711,
+          "f1": 0.6596677434240886,
+          "auroc": 0.9169019066103902,
+          "average_precision": 0.6930328578675761
+        },
+        "answers": {
+          "n": 634,
+          "positive": 328,
+          "tp": 278,
+          "fp": 94,
+          "fn": 50,
+          "tn": 212,
+          "precision": 0.7473118279569892,
+          "recall": 0.8475609756097561,
+          "f1": 0.7942857142857143,
+          "auroc": 0.8531105531643552,
+          "average_precision": 0.8586716935267933
+        }
+      },
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3885,
+          "fp": 2168,
+          "fn": 2099,
+          "tn": 34089,
+          "precision": 0.6418304972740789,
+          "recall": 0.64923128342246,
+          "f1": 0.6455096784913185,
+          "auroc": 0.8880082547032407,
+          "average_precision": 0.6618271490092675
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 90,
+          "fp": 19,
+          "fn": 10,
+          "tn": 40,
+          "precision": 0.8256880733944955,
+          "recall": 0.9,
+          "f1": 0.861244019138756,
+          "auroc": 0.9057627118644068,
+          "average_precision": 0.9513785850266536
+        }
+      }
+    }
+  },
+  "new_fits": 0,
+  "neural_forward": false,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "original_primary_sigmoid_CPU_threads": 4,
+  "fixed_aux_readout_CPU_threads": 14,
+  "audit_context_correction": "Each sigmoid replays its original CPU thread context; see AUDIT_FAILURE_01. Saved source probabilities/thresholds unchanged.",
+  "seconds": 4.236170499934815
+}

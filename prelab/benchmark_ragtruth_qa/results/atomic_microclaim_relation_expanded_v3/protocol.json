@@ -1,0 +1,25 @@
+{
+  "version": "atomic-microclaim-relation-expanded-v3",
+  "purpose": "CPU data preparation for direct microclaim-level evidence-relation training",
+  "partitions": {
+    "fit": "Frozen deduplicated 3,680-answer fit expansion; 34,941 label-blind atomic records, of which 34,919 contain Unicode alphanumeric text.",
+    "calibration": "Reuse exactly the 2,267 already-scored calibration microclaims in atomic_microclaim_nli_v1; do not reconstruct or expand calibration claims.",
+    "official_test": "Absent and unopened."
+  },
+  "input": {
+    "retrieval": "For each microclaim, use the existing deterministic claim-only Unicode BM25 top-2 independently inside passages 1, 2 and 3. Calibration retrieval is copied exactly from the frozen current input.",
+    "premise": "Question followed by passage-labelled retrieved top-2 evidence from all three passages, in passage/rank order.",
+    "hypothesis": "The deterministic contextualized atomic microclaim; no answer-wide text is supplied.",
+    "tokenizer": "Local tasksource/ModernBERT-base-nli tokenizer; paired encoding, no truncation; hard limit 2,048 tokens."
+  },
+  "gold": {
+    "microclaim": "Positive iff at least one lexical original answer BPE assigned to the microclaim has the unchanged human risk mask.",
+    "window": "Original four-BPE stride-one window is eligible iff it contains a lexical BPE and positive iff any of its four BPEs has the unchanged risk mask.",
+    "projection": "A window receives the maximum score among microclaims owning a lexical BPE in that window. Character spans, BPE ownership and ragged window-to-example indices are frozen."
+  },
+  "groups": "The released source-connected group_id is the indivisible unit. Fit and calibration group/source sets must be disjoint.",
+  "folds": "Five deterministic GroupKFold folds on fit examples; every source-connected group occurs in exactly one held fold.",
+  "weights": "Within each partition: equal group mass, then equal answer mass, then equal microclaim mass. Fit training weights additionally balance binary classes and finally restore equal group loss mass; calibration training weight is null.",
+  "baselines": "No baseline file, structure, parameter, threshold or result is modified.",
+  "stage": "initialize -> CPU prepare -> CPU check -> independent CPU audit. No model load, model fit, inference or GPU use."
+}

@@ -1,0 +1,36 @@
+{
+  "status": "proposal_not_final_data_freeze",
+  "seed": "20260911",
+  "rule": "Keep official test sealed; hash-ranked 20% official train for calibration; no labels or answer text used; all six model responses follow source partition.",
+  "sources_by_proposed_partition": {
+    "fit": 671,
+    "calibration": 168,
+    "sealed_test": 150
+  },
+  "all_model_responses_by_proposed_partition": {
+    "fit": 4026,
+    "calibration": 1008,
+    "sealed_test": 900
+  },
+  "native_mistral_responses_by_proposed_partition": {
+    "fit": 671,
+    "calibration": 168,
+    "sealed_test": 150
+  },
+  "old_exact_question_overlap": [],
+  "old_unique_question_hash_count": 5849,
+  "remaining_required_audits": [
+    "Entity/alias and specific-event links across QA sources and all old news/TriviaQA/SQuAD/Hotpot/RAGognize inputs; exact source IDs and whole-text hashes do not establish this.",
+    "Repeated individual retrieval passages and partial-article overlap: the previous index only checked whole-context hashes.",
+    "Confirm original Mistral checkpoint/tokenizer/template or explicitly preregister a reconstruction assumption.",
+    "Fix label types/implicit_true/refusal/quality and character-to-token scoring policy using training material only, before any test-label analysis."
+  ],
+  "read_no_new_answers_or_labels": true,
+  "inputs_sha256": {
+    "round2\\data\\trivia_questions.jsonl": "f5f20d1fbee29744f69732869c06f51e69824ecfa879bc35aa49e450a6ea7fbb",
+    "round2\\data\\rag_questions.jsonl": "07deeba355bd31ea3787d451089b5a50595478400ced2253614e3a4233cce9af",
+    "round20_localization_optimization\\research\\ragtruth_qa_metadata_index.jsonl": "7f3f262bdfbe2895a9ec9b369a938d85955c01d3a35922609580ab5f4e4b5f1c"
+  },
+  "proposal_sha256": "3ef5ee9447ef2c7ef3d7169ccd47e2b7deed8795a061b4b37073f60adf8e6538",
+  "script_sha256": "947c3c273187596997ef1c436529b8a77746c105a0a4fcf9a885d53f19fe1ede"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "WAIT_FEATURE_CACHE",
+  "cache_status": {
+    "status": "WAIT_FEATURE_CACHE",
+    "projection_prepared": true,
+    "native": {
+      "complete": 634,
+      "total": 634,
+      "partial_uncommitted": 0,
+      "manifest_complete": true
+    },
+    "expanded": {
+      "complete": 1463,
+      "total": 3046,
+      "partial_uncommitted": 0,
+      "manifest_complete": false,
+      "gpu_started_elsewhere": true
+    },
+    "combined_complete": 2097,
+    "combined_total": 3680,
+    "full_cpu_audit_complete": false,
+    "gpu_started_by_this_runner": false,
+    "labels_opened_by_status": false,
+    "calibration_opened": false,
+    "official_test_opened": false
+  },
+  "labels_opened": false,
+  "gpu_started": false,
+  "calibration_opened": false,
+  "official_test_opened": false
+}

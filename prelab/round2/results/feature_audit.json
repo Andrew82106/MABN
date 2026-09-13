@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "sdpa_output_exactly_unchanged": true,
+  "independent_attention_ratio_max_error": 0.00015652179718017578,
+  "prefix_causality_relative_errors": [
+    0.0022184301633387804,
+    0.002208992373198271,
+    0.0019004250643774867,
+    0.0017954822396859527
+  ],
+  "cache_matches_fresh_extraction": true,
+  "before_after_shift_exact": true,
+  "datasets": {
+    "news_small": {
+      "rows_at_audit": 394,
+      "group_disjoint": true,
+      "finite_and_aligned": true
+    },
+    "trivia_small": {
+      "rows_at_audit": 585,
+      "group_disjoint": true,
+      "finite_and_aligned": true
+    }
+  },
+  "lookback_adaptation": "All prompt tokens versus prior answer tokens; official code places an extra response delimiter on generated side. Same ratio formula, different prompt boundary and backbone; not exact full reproduction."
+}

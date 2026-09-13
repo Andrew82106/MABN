@@ -1,0 +1,22 @@
+{
+  "schema": "round15-window-regularization-v1",
+  "scope": "exploratory training-source grouped CV, previously studied folds",
+  "width": 4,
+  "stride": 1,
+  "methods": ["baseline_c01", "ridge_c003", "ridge_c001", "heads64_c01", "heads128_c01", "ensemble_c01", "ensemble_c003"],
+  "C": {"baseline_c01": 0.01, "ridge_c003": 0.003, "ridge_c001": 0.001, "heads64_c01": 0.01, "heads128_c01": 0.01, "ensemble_c01": 0.01, "ensemble_c003": 0.003},
+  "head_counts": [64, 128],
+  "feature_selection": "fit-only absolute base-weighted Pearson correlation with risk label; feature variance <= float64 epsilon gives zero association; descending magnitude, ascending head index ties",
+  "ensemble_members": 24,
+  "ensemble_fit_groups": 54,
+  "ensemble_seed": 20260915,
+  "subset_seed": "ensemble_seed + fold; sequential choice without replacement from sorted full-fit group IDs, sorted selected groups",
+  "classifier_seed": 20260913,
+  "folds": "exact Round14 fit72/calibration24/evaluation24 question groups",
+  "weighting": "original group/condition/item weights; member-only class factors; total loss mass anchored to original full-fit K1 token count",
+  "ensemble_combination": "equal mean probabilities; calibrate one threshold on the mean, no member threshold tuning",
+  "threshold": "calibration F1, then precision, then higher threshold; same as Round14",
+  "bootstrap": {"draws": 2000, "seed": 20260915, "unit": "question group"},
+  "original_validation_or_test_labels_used": false,
+  "new_generation_or_gpu": false
+}

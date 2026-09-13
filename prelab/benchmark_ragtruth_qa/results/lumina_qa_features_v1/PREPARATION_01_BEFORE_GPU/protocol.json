@@ -1,0 +1,76 @@
+{
+  "version": "lumina-public-qa-seven-column-features-v1",
+  "signature_sha256": "92a61791c2cc6a95c1dbbf23754872e5a6f563fc44f1a2931234a6b7030171d5",
+  "commands": [
+    "check",
+    "gpu-smoke",
+    "extract"
+  ],
+  "explicit_GPU_only": true,
+  "automatic_queue": false,
+  "smoke_indices": [
+    0,
+    277
+  ],
+  "smoke_response_ids": [
+    "16023",
+    "12609"
+  ],
+  "longest_record_index": 277,
+  "longest_selection": "Maximum original_input_length + random_input_length, tie first index; no labels.",
+  "counts": {
+    "raw_answer_tokens": 708506,
+    "original_input_tokens": 2408466,
+    "random_input_tokens": 2381530,
+    "boundary_crossing_answers": 3837,
+    "two_pass_input_tokens": 4789996,
+    "all_layer_IPR_token_projections": 22672192
+  },
+  "max_original_input_tokens": 1232,
+  "max_random_input_tokens": 1248,
+  "longest_record_lengths": [
+    1011,
+    1248
+  ],
+  "oracle": "Dense HF hidden_states[1:] predictor slices from complete independent original/random forwards; same pinned mathematics and16-token norm/head projections. Core mathematics already checked separately on TinyLlama.",
+  "oracle_atol": 8e-06,
+  "oracle_rtol": 0,
+  "repeat_exact": true,
+  "causality": "Change answer suffix in both contexts at same total shape; all7 columns for unchanged earlier tokens must remain exact. Changed token itself is excluded because selected-token likelihood explicitly depends on its identity.",
+  "features": [
+    "ipr",
+    "mmd",
+    "lumina",
+    "original_answer_probability",
+    "original_max_probability",
+    "random_answer_probability",
+    "random_max_probability"
+  ],
+  "feature_array": "lumina_features float32[N,7]",
+  "diagnostic_only_columns": [
+    "original_answer_probability",
+    "original_max_probability",
+    "random_answer_probability",
+    "random_max_probability"
+  ],
+  "baseline_formula_unchanged": "Only .5IPR-.5MMD is official combined score; last4 likelihood columns do not alter baseline.",
+  "all_tokens": "All frozen raw answer BPE including punctuation, first boundary crossing and last token; no label/lexical filtering.",
+  "resume": "Atomic individually committed NPZ with signature/row/axes; validate all existing records, skip only valid; mismatch fails, never overwrites.",
+  "storage_estimate": {
+    "raw_7column_bytes": 19838168,
+    "raw_axis_bytes": 51012432,
+    "reserve_disk_GiB": 1,
+    "full_vocab_or_all_layer_hidden_persisted": false
+  },
+  "runtime": "7678 backbone forwards plus32*708506=22672192 layer-token vocabulary projections; actual input token total from frozen donor plans. QA runtime not yet measured; no scaling promise from Qwen R25.",
+  "limitations": [
+    "Whole fit-only donor material selection is a local fixed policy, not guaranteed semantically unrelated.",
+    "NF4/BF16 backbone and FP32 reductions; independent dense tolerance is not original fullprecision numeric identity.",
+    "Common Llama replay includes other-generator responses; not their original native internal traces.",
+    "This stage exports token signals only. Any later4BPE/window-max evaluation differs from paper response-token mean.",
+    "No original-paper dataset/accuracy reproduction or new classifier training is claimed."
+  ],
+  "GPU_used_during_check": false,
+  "trained": false,
+  "test_opened": false
+}

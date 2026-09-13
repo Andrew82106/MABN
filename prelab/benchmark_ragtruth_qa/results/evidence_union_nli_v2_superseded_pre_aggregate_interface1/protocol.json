@@ -1,0 +1,43 @@
+{
+  "version": "attention-bm25-exact-evidence-union-nli-v2",
+  "role": "new exact-evidence NLI candidate; formal baselines remain read-only",
+  "candidate_rule": {
+    "identity": "A candidate is one exact (passage_id, sentence_id) source-sentence instance.",
+    "attention": "Top min(3,N) source-sentence instances by the arithmetic mean of the exact float32 32-layer sentence relevance; stable ties use sentence_index.",
+    "bm25": "Top min(2,N_passage) exact sentences independently in passages 1, 2 and 3, using the frozen Unicode BM25 implementation.",
+    "union": "Set union of attention top3 and the three per-passage BM25 top2 sets. Canonical output order is sentence_index.",
+    "nli": {
+      "checkpoint": "tasksource/ModernBERT-base-nli",
+      "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+      "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+      "class_order": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ],
+      "frozen": true,
+      "maximum_pair_tokens": 2048,
+      "truncation": false
+    }
+  },
+  "cache_reuse": {
+    "native_occurrence": "For the existing 634+159 rows, use the exact probability bound to that answer/claim/sentence occurrence in atomic NLI or the completed attention-top3 cache.",
+    "portable": "For another occurrence, reuse an exact checkpoint+revision+premise+hypothesis request only if every existing cached occurrence is bit-identical. Conflicting FP32 repeats are missing and must be recomputed."
+  },
+  "cohorts": {
+    "fit_native": "Existing 634 fit answers and 9,055 scored atomic microclaims.",
+    "calibration": "Existing 159 calibration answers and 2,267 scored atomic microclaims.",
+    "fit_expanded": "Optional 3,046 additional fit answers and 25,864 scored microclaims; attach only after its attribution manifest is complete.",
+    "official_test": "No path or loader exists in this runner."
+  },
+  "score": {
+    "outputs": "Per-claim candidate count and best-entailment/best-contradiction coverage by attention, BM25, overlap and union.",
+    "fit_rule": "The prescribed union and per-class maximum/tie rule are frozen by the fit_native score command.",
+    "calibration": "Calibration score refuses to run before the fit rule freeze and reports diagnostics without selecting or changing a rule.",
+    "training": "No detector/model training is implemented."
+  },
+  "stage_gate": "initialize -> prepare fit_native/calibration -> score fit_native -> score calibration; later attach fit_expanded -> gpu-smoke -> extract -> score",
+  "labels_used_by_prepare_or_score": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

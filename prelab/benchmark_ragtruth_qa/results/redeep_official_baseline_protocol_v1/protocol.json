@@ -1,0 +1,322 @@
+{
+  "status": "official_baseline_incomplete_public_implementation_gaps",
+  "scope": "Read-only source review plus CPU SHA-256/AST checks. No detector execution, feature extraction, GPU, training or sealed-test data read.",
+  "paper": {
+    "title": "ReDeEP: Detecting Hallucination in Retrieval-Augmented Generation via Mechanistic Interpretability",
+    "venue": "ICLR 2025 Conference",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/7daf60e805e596c3bd1e843e72ea5560-Abstract-Conference.html",
+    "pdf_sha256": "cb18f3d21d8bff994b8e26b9f85392f26653ab8c48d33629807d6682650e4479"
+  },
+  "author_source": {
+    "repository": "https://github.com/Jeryi-Sun/ReDEeP-ICLR",
+    "commit": "4d081915b8fb4430fda65c411da61540cc73cc57",
+    "commit_date": "2025-06-03T00:36:07Z",
+    "main_at_review": "4d081915b8fb4430fda65c411da61540cc73cc57",
+    "source_checks": "source_checks.json",
+    "tree_inventory": "repository_inventory.json",
+    "downloaded_files": 14,
+    "parameter_files_under_test_named_directories": "Only head lists and hyperparameters, not responses or predicted scores.",
+    "source_code_executed": false,
+    "ast_only": true
+  },
+  "models": {
+    "paper_names": [
+      "meta-llama/Llama-2-7b-chat-hf",
+      "meta-llama/Llama-2-13b-chat-hf",
+      "meta-llama/Meta-Llama-3-8B-Instruct"
+    ],
+    "revisions_published": false,
+    "source_precision": "torch.float16, device_map=auto, custom bundled transformers",
+    "nf4": false,
+    "llama2_7b": {
+      "layers": 32,
+      "heads": 32,
+      "hidden": 4096,
+      "vocabulary": 32000
+    },
+    "chunk_embedding": "BAAI/bge-base-en-v1.5 via SentenceTransformer, normalize_embeddings=True",
+    "embedding_revision_published": false
+  },
+  "input": {
+    "fields": "Published source prompt, model-specific response and human span labels for evaluation/selection; chunk variant additionally requires prompt_spans/response_spans.",
+    "system": "You are a helpful assistant.",
+    "prefix": "apply_chat_template(system,user prompt[:12000], add_generation_prompt=True)",
+    "response": "Concatenate original published response; tokenize full string independently from prefix.",
+    "model_filter": "Only answers whose model equals selected detector model.",
+    "source_script_partition_filter": "split == test",
+    "prompt_truncation_chars": 12000,
+    "no_automatic_equivalence_to_existing_qa_prompt": true,
+    "current_scope": {
+      "fit_answers": 3680,
+      "cal_answers": 159,
+      "raw_answer_tokens": 708506,
+      "max_full_input_tokens": 1232,
+      "all_qa_partitions_are_development": true,
+      "official_test150_read": false
+    },
+    "extra_generated_answer_styles": "The added3046 cohort replayed with one Llama2 detector is cross-generator adaptation.",
+    "token_timing": {
+      "loop": "range(P-1,T-1)",
+      "positions": "P-1 through T-2 inclusive",
+      "target_interpretation": "predictor at target token position minus one",
+      "ecs_query_hidden": "same seq_i final hidden",
+      "pks_position": "same seq_i per-layer residual distributions",
+      "last_target": "Last target has predecessor score; no post-read last-token signal.",
+      "gold_mapping_issue": "Independent prefix tokenization, prefix-substring retokenization of annotation edges and inclusive end; labels are checked on seq_i without explicit +1 target alignment."
+    }
+  },
+  "signals": {
+    "token_ecs": {
+      "head_candidates": "Precomputed topk_heads.json; 7B32/13B40/3-8B32 heads, emitted in layer/head traversal order.",
+      "source_range_code": "entire prefix [0,P)",
+      "source_range_paper": "retrieved context q:c",
+      "selection": "torch.argsort(descending=True)[:floor(.1*prefix_length)]",
+      "minimum_one_guard": false,
+      "hidden": "mean selected prefix final states vs same-predictor final state cosine",
+      "output": "one scalar per token per candidate head",
+      "final_7b_head_zero_based": [
+        [
+          25,
+          0
+        ]
+      ]
+    },
+    "token_pks": {
+      "before": "attention-residual sum before post_attention_layernorm and FFN",
+      "after": "FFN residual sum",
+      "projection": "shared final RMSNorm and lm_head; full vocabulary softmax; final-layer hidden already normalized in original complete-layer path.",
+      "code_formula": "1e6/V * (0.5 KL(M||P) + 0.5 KL(M||Q)), M=(P+Q)/2",
+      "paper_formula": "0.5 KL(P||M)+0.5 KL(Q||M)",
+      "code_jensen_shannon": false,
+      "author_acknowledges_difference_in_source": true,
+      "issue": "https://github.com/Jeryi-Sun/ReDEeP-ICLR/issues/2",
+      "extracted_layers_7b": "0..31",
+      "final_7b_layers_zero_based": [
+        23,
+        24,
+        21,
+        25,
+        16,
+        17,
+        28,
+        18,
+        20,
+        29
+      ]
+    },
+    "chunk": {
+      "paper_splitter": {
+        "name": "RecursiveCharacterTextSplitter",
+        "chunk_size": 256,
+        "chunk_overlap": 20
+      },
+      "code_splitter": "Consumes precomputed spans; generation script absent from locked repository tree.",
+      "attention_pair_paper": "mean over query/key pairs",
+      "attention_pair_code": "sum over query/key pairs, argmax first",
+      "ecs": "BGE normalized embedding dot product of selected source chunk and response chunk",
+      "pks_paper": "mean per-token standard JSD within chunk",
+      "pks_code": "sum per-token reverse-KL mixture after vocabulary sum; no token function's 1e6/V factor",
+      "answer_aggregation": "Unweighted mean of chunk scores",
+      "code_extra_issues": [
+        "Llama3 extracts layers0..15 while reg expects32 PKS columns.",
+        "Llama2-13B extracts layers8..39 but emitted parameter keys enumerate0..31.",
+        "Prompt token mapping includes hard-coded minus4."
+      ]
+    }
+  },
+  "trainer": {
+    "actual_paper_choice": "Grid search over a fixed signed linear combination, not neural classifier training.",
+    "unused_lr": "linear_regression defines LogisticRegression(max_iter=10000) and an 80/20 random token split but is never invoked by main.",
+    "paper_rank": "Validation association/Pearson correlation",
+    "code_rank": "Per-feature AUROC, ECS against safe label and PKS against hallucination label; Pearson computed but not used.",
+    "hyperparameter_grid": {
+      "heads_k": [
+        1,
+        32
+      ],
+      "ffn_k": [
+        1,
+        32
+      ],
+      "alpha": 1,
+      "beta_open_interval": [
+        0,
+        2
+      ],
+      "beta_step": 0.1
+    },
+    "source_main_search": "run_all=False; fixed selected counts/beta rather than a complete published validation search loop",
+    "optimizer_or_epochs": null,
+    "class_group_weights": false,
+    "selection_data_identity_published": false,
+    "minmax": "Re-fitted on all rows of current input dataframe; component extrema and final answer extrema saved in parameter records but not applied by the standalone reg to independent holdout.",
+    "response_score_formula": "component MinMax, z_t = P_t_normalized - beta E_t_normalized; mean_t z_t; final MinMax across answers",
+    "regression_source_called_on_test_rows": true,
+    "frozen7b_token_params_file": "source_files/ReDeEP/log/test_llama2_7B/token_hyperparameter.json",
+    "published_configs_not_assumed_clean_of_our_cal_or_test": true,
+    "output_main": "Only answer AUC and PCC JSON",
+    "main_script_complete": false
+  },
+  "thresholds": {
+    "paper_ragtruth": {
+      "llama2-7b": {
+        "token": {
+          "heads": 1,
+          "layers": 10,
+          "alpha": 1,
+          "beta": 0.2,
+          "threshold": 0.6
+        },
+        "chunk": {
+          "heads": 3,
+          "layers": 4,
+          "alpha": 1,
+          "beta": 0.6,
+          "threshold": 0.3
+        }
+      },
+      "llama2-13b": {
+        "token": {
+          "heads": 2,
+          "layers": 17,
+          "alpha": 1,
+          "beta": 0.6,
+          "threshold": 0.6
+        },
+        "chunk": {
+          "heads": 9,
+          "layers": 3,
+          "alpha": 1,
+          "beta": 1.8,
+          "threshold": 0.6
+        }
+      },
+      "llama3-8b": {
+        "token": {
+          "heads": 3,
+          "layers": 30,
+          "alpha": 1,
+          "beta": 0.4,
+          "threshold": 0.4
+        },
+        "chunk": {
+          "heads": 2,
+          "layers": 5,
+          "alpha": 1,
+          "beta": 1.2,
+          "threshold": 0.4
+        }
+      }
+    },
+    "search_objective_and_ties": "Not specified by released detection code or paper threshold table.",
+    "thresholded_f1_main_implementation": "Not present in released reg main path.",
+    "paper_metrics_unit": "Answer, with response hallucination label=max local gold",
+    "primary_metrics": [
+      "AUROC",
+      "PCC",
+      "accuracy",
+      "recall",
+      "F1"
+    ],
+    "native_window4_or_window8": false,
+    "common_task_mapping": "Only after the complete method identity is frozen and run: copy each frozen native answer score unchanged to every eligible project 4-BPE window, then take the common answer max. This zero-parameter, label-free deterministic broadcast preserves the native answer score; internal token signals are not exposed as formal localization scores.",
+    "new_localization_from_internal_token_signals_would_be_ours": true
+  },
+  "blockers": [
+    {
+      "id": "split",
+      "evidence": "token_level_detect.py/chunk_level_detect.py and construct_dataframe retain split=test; feature selection and score calculation occur on those rows.",
+      "effect": "No faithful independent validation-to-test implementation. Does not establish what authors actually ran for paper."
+    },
+    {
+      "id": "column_slice",
+      "evidence": "calculate_auc_pcc(df.iloc[:, :int(df.shape[1]*0.5)], ...)",
+      "effect": "Removes required hallucination_label/PKS columns; static KeyError. Cannot silently infer intended row split."
+    },
+    {
+      "id": "paper_code",
+      "evidence": "JSD direction/scaling, source-only vs full prefix, Pearson vs AUROC, chunk sum vs mean differ.",
+      "effect": "Must separately name paper-formula and pinned-code reproduction."
+    },
+    {
+      "id": "source_provenance",
+      "evidence": "Head lists and token constants available, but selection sample/split manifests, candidate-head generator and chunk-span builder absent.",
+      "effect": "Cannot assert current cal/test independence or reconstruct entire selection process."
+    },
+    {
+      "id": "model_precision",
+      "evidence": "Official FP16; existing NF4.",
+      "effect": "NF4 is precision adaptation, not data-interface-only baseline."
+    },
+    {
+      "id": "chunk_geometry",
+      "evidence": "Precomputed spans, hardcoded offsets, 13B/3-8B layer column mismatches.",
+      "effect": "Chunk baseline requires additional verified interfaces and cannot be substituted by token variant."
+    }
+  ],
+  "local_cache_reuse": [
+    {
+      "artifact": "data/feature_preparation/plans.jsonl and fit_expansion/data/new_token_plans.jsonl; existing raw token/offset/group identity",
+      "reuse": "Input and metric identities only, conditional on explicit prompt adaptation.",
+      "missing": "No proven equality to author chat template/truncated prompt."
+    },
+    {
+      "artifact": "lb and lb_prefix_pre_header raw head ratios",
+      "reuse": "Boundary/timing diagnostics",
+      "missing": "No within-prefix attention rankings or chunk-pair matrix; cannot derive ECS."
+    },
+    {
+      "artifact": "hidden_last[N,4096]",
+      "reuse": "Post-read answer-state check under existing NF4 prompt",
+      "missing": "Full source hidden and first predictor state; official FP16 values."
+    },
+    {
+      "artifact": "nll[N]",
+      "reuse": "Selected-token diagnostic",
+      "missing": "Full per-layer FFN before/after vocabulary distributions."
+    },
+    {
+      "artifact": "HARP/GHOST/LUMINA summary features",
+      "reuse": "Independent methods only",
+      "missing": "Cannot invert into ReDeEP signals."
+    },
+    {
+      "artifact": "R7/R19 ECS/PKS",
+      "reuse": "Old Qwen adaptation results only",
+      "missing": "Different model, timing, JSD and pooling."
+    }
+  ],
+  "new_extraction_required": [
+    "Full-prefix final hidden for attention-selected tokens.",
+    "Candidate or fixed copying-head attention at exact predictor/chunk coordinates.",
+    "Selected/candidate FFN before and after residual logit-lens divergence, complete vocabulary and author dtype.",
+    "For chunk: exact spans and original BGE embeddings."
+  ],
+  "resources": {
+    "gpu_used": false,
+    "single8gb_original_all_gpu_possible": false,
+    "reason": "FP16 7B weights alone exceed8GB; original script retains all attentions and both per-layer vocabulary arrays.",
+    "static1232token_memory_GiB": {
+      "all_layer_attention_fp16": 2.89501953125,
+      "all_ffn_before_after_vocab_fp16": 4.69970703125,
+      "nominal7b_fp16_weights": 13.0385160446167
+    },
+    "exclusions": [
+      "KV/hidden states",
+      "temporary softmax and matmul memory",
+      "embedding model",
+      "framework buffers"
+    ],
+    "possible_exact_engineering": "Keep nonquantized FP16 weights with CPU/offload and sequential attention/logit reduction; requires numeric equivalence and memory checks, not executed.",
+    "nf4_route": "Possible adaptation only; cannot label identical official reproduction.",
+    "faithful_runtime_estimate_available": false
+  },
+  "disposition": {
+    "official_baseline_completed": false,
+    "code_signal_core_recoverable": true,
+    "full_published_pipeline_reproducible_from_locked_release": false,
+    "permissible_next_step": "Clarify/restore selection and scaling split provenance; fix explicitly logged input/axis/column bugs; select paper-formula or author-code contract; verify nonquantized low-memory execution. Not authorized/executed here.",
+    "local_methods_label": "ReDeEP-inspired/local adaptation; retain existing results without relabeling.",
+    "formal_common_window_and_answer_scores": "N/A until the complete method identity is frozen and executed"
+  }
+}

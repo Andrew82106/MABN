@@ -1,0 +1,40 @@
+{
+  "version": "completed-window-probability-fusion-v1",
+  "tail_weight": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "peers": {
+    "lookback": [
+      "lookback_regularization_v2",
+      "lb_prefix_pre_header"
+    ],
+    "harp_claim": [
+      "claim_pooling_v1",
+      "full_lb_harp64_tcn"
+    ],
+    "semantic_claim": [
+      "claim_pooling_v1",
+      "minicheck_hidden64_risk_tcn_w32"
+    ]
+  },
+  "selection_before_fusion": "Use each upstream already selected model/epoch and existing claim alpha; never reopen its epoch search.",
+  "formula": "window_probability=(1-alpha)*peer_probability+alpha*tail2_probability. This combines original four-BPE window scores, not raw token probabilities.",
+  "tail": "Completed all-doc MiniCheck tail2 selected epoch; trained on3680 QA answers.",
+  "peers_training": "All peers trained on634 original QA fit answers; tail adds the same3680 supervision to each combination.",
+  "answer_score": "Maximum over all original eligible windows, no gold filtering.",
+  "scope": "Original native634 fit subset and159 calibration. Fit is not full3680. No official test or new inference.",
+  "threshold": "Each candidate gets the same cal-only separate window/answer F1 thresholds; ties precision then higher cutoff.",
+  "weight_selection": "Same5 weights for every peer. Max min(windowF1,answerF1),windowF1,windowPrecision,then smaller alpha.",
+  "limits": [
+    "Uses repeatedly viewed development calibration; improvement does not prove held-out improvement.",
+    "Endpoints include each original model. A selected calibration score cannot establish a guarantee on future data.",
+    "Extra semantic checkers and whole-answer processing remain offline; not a pure generator probe.",
+    "All3 peers receive the same tail signal and five-weight budget. No baseline is deliberately held at an inferior configuration."
+  ],
+  "official_test_opened": false,
+  "GPU_used": false
+}

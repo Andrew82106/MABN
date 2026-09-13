@@ -1,0 +1,13 @@
+{
+  "status": "complete_extraction_and_claim_aggregates_ready",
+  "frozen_request_manifest_status": "CPU_manifest_complete_missing_NLI",
+  "frozen_request_count": 158929,
+  "extraction_status": "complete_frozen_probabilities",
+  "chunks_complete": 39,
+  "claims_aggregated": 25864,
+  "aggregate_sha256": "75c679c1988f17e883e3cc37633226481c61fee9b7efa4348753b18a94c0a307",
+  "status_field_interpretation": "missing_requests is the immutable originally-missing request manifest consumed by extraction, not a live count of absent outputs",
+  "score_after_complete_extraction": true,
+  "labels_used": false,
+  "official_test_opened": false
+}

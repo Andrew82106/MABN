@@ -1,0 +1,41 @@
+{
+  "version": "qa-unselected-documents-encoder22-and-claim-last-v1",
+  "scope": "New3046 fit answers plus original fit634/cal159; no official test, no labels or fitting",
+  "stages": "freeze-design CPU now; bind CPU only after stage1 inference_complete; infer only when root schedules GPU after stages1/2",
+  "checkpoint": "lytang/MiniCheck-RoBERTa-Large",
+  "revision": "74c8919647e61ed0f71bc177d94f10930f090068",
+  "expected": {
+    "new_answers": 3046,
+    "original_answers": 793,
+    "new_pairs": 5918,
+    "original_pairs": 2308,
+    "total_pairs": 8226,
+    "fit_answers": 3680,
+    "calibration_answers": 159
+  },
+  "selection": "Copy frozen stage1 selected-document metadata for new answers and old final-state cache decisions for original793. Verify against saved all-doc scores. Enumerate every (claim_index,document_index) except the one selected document; no new selection or filtering.",
+  "binding": "Require stage1 complete and its score/claim/encoder22 manifests; bind original plans, scores, selected metadata and used selected claim arrays by SHA256. New choices unavailable before completion are never guessed.",
+  "ordering": "New answer plan order then original answer plan order. Within answer: claim index ascending, then unselected document index ascending. Both sequence indices may repeat.",
+  "input": "Exact original document chunk + tokenizer eos_token + exact claim text; no question, generator identity or annotation input",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "batch_size": 4,
+  "TF32": false,
+  "autocast": false,
+  "encoder22_schema": "hidden22[sum_valid_input_tokens,1024]; input_ids/attention_mask/answer_token_start/answer_token_end[sum_valid_input_tokens]; sequence_offsets[n_unselected_pairs+1]; claim_index/document_index/batch_padding_length/original_all_doc_batch_padding_length[n_unselected_pairs]. Include all valid document/special/claim tokens; answer coordinates are absolute original-response positions, otherwise -1.",
+  "claim_last_schema": "hidden_last[sum_claim_tokens,1024]; token_ids/token_start/token_end/input_token_index/token_claim_index/token_document_index[sum_claim_tokens]; sequence_offsets[n_unselected_pairs+1]; claim_index/document_index[n_unselected_pairs]. Actual repeated claim/doc IDs; input_token_index belongs to this document input, not the old selected document.",
+  "state": "encoder.layer[21] output[0] and model.roberta last_hidden_state on claim tokens; shared frozen read-only observer implementation",
+  "scores": "Save logits[2] and class1 support for every unselected pair, plus true claim/doc indices; no per-document risk labels or threshold predictions",
+  "agreement": {
+    "logit_max_abs_tolerance": 0.0002,
+    "support_max_abs_tolerance": 2e-05,
+    "same_claim_token_ids_and_original_answer_offsets_vs_old_selected": "exact",
+    "input_positions": "checked within own full input; never compared to selected document positions",
+    "first_two_new_answer_forwards_observer_logits_support_last_state": "exact"
+  },
+  "downstream_label_rule": "Answer/claim/window risk is defined only after aggregating all retrieved documents. A single document lacking evidence is not an answer-level risk label. No global labels are loaded or assigned in this cache stage.",
+  "zero_complement": "One-document answers have no missing pairs; explicit zero-pair manifest record and no forward/cache arrays",
+  "cache_scope": "Dedicated minicheck_unselected directory, keyed by frozen bound plan and source snapshot hashes; never overwrite or mix selected caches",
+  "training": false,
+  "official_test_opened": false
+}

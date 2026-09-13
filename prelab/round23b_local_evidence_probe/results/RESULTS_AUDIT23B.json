@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "scope": "Only frozen R16 actual-train602 answers/301questions/278event groups. No original heldout or RAGTruth labels read; no GPU/refitting.",
+  "feature_rows": 602,
+  "all_feature_rows_batch1_no_cache_no_padding": true,
+  "feature_window_bindings": 12222,
+  "all_source_generation_hashes_actual_train": true,
+  "source_annotation_geometry_unchanged_from_R22": true,
+  "all_five_fold_groups_exact_disjoint": true,
+  "fold_group_counts": [
+    {
+      "fit_groups": 166,
+      "calibration_groups": 56,
+      "evaluation_groups": 56
+    },
+    {
+      "fit_groups": 166,
+      "calibration_groups": 56,
+      "evaluation_groups": 56
+    },
+    {
+      "fit_groups": 167,
+      "calibration_groups": 55,
+      "evaluation_groups": 56
+    },
+    {
+      "fit_groups": 168,
+      "calibration_groups": 55,
+      "evaluation_groups": 55
+    },
+    {
+      "fit_groups": 167,
+      "calibration_groups": 56,
+      "evaluation_groups": 55
+    }
+  ],
+  "all_OOF_windows_once": 12222,
+  "all_OOF_answers_once": 602,
+  "main_window_denominator": 9526,
+  "main_risk_windows": 1063,
+  "main_answer_denominator": 598,
+  "main_risk_answers": 151,
+  "safe_refusal_answers": 117,
+  "safe_refusal_method_max_checks": 1638,
+  "safe_refusal_policy": "All candidate windows enter each answer max even when excluded from localization. Only then main_eligible answers are scored; all117 safe refusals remain negative answers. Unlike QA, their windows are not added as negative localization examples.",
+  "all14_methods_OOF_scores_and_predictions_exact": true,
+  "all14_main_confusion_metrics_exact": true,
+  "old9_baseline_full_fold_values_exact": 549990,
+  "old9_complete_summary_dicts_exact": true,
+  "local_direct_cal_thresholds_exact": true,
+  "smoothing": [
+    {
+      "fold": 0,
+      "selected_index": 9,
+      "candidates": 12,
+      "selection_exact": true
+    },
+    {
+      "fold": 1,
+      "selected_index": 1,
+      "candidates": 12,
+      "selection_exact": true
+    },
+    {
+      "fold": 2,
+      "selected_index": 9,
+      "candidates": 12,
+      "selection_exact": true
+    },
+    {
+      "fold": 3,
+      "selected_index": 1,
+      "candidates": 12,
+      "selection_exact": true
+    },
+    {
+      "fold": 4,
+      "selected_index": 7,
+      "candidates": 12,
+      "selection_exact": true
+    }
+  ],
+  "smoothing_independent_logodds_max_abs": 2.4424906541753444e-15,
+  "smoothing_raw_start_gap_count": 0,
+  "smoothing_geometry": "Original R24 declared answer/item sequence over all candidate windows; no cross-answer or cross-fold propagation.",
+  "fit_freeze_precedes_test_recorded": true,
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\audit_results23b.py": "a7ff790f16bb81194f5853d37b808b1e9aafa97e537d74817aa2ea9b72faa6c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\protocol.json": "adf81273ea39a7b855f22cf889598c6321a07808872e6a65cb598a0ea897fe89",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\src\\run23.py": "3010a2d4512bd092b55db56e383ba6738259836fda4dcab4666fc84680f99213",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\data\\feature_manifest.json": "06835d883cdeafae277674c5a105e0d96b6a660c4c8008a171fc5f84b80e41c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\fit_freeze.json": "c97e3f0b7e705ed79f4c23f88349f2424bacccdbc81ff973618f0b8954143aaf",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\test_started.json": "0d6819139bfbf6ba3ad8579e1bc4ba0c6c08746cc97b6614fa2779a3259f5a44",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\complete.json": "b2cbe7886fa37dd12d85c758f9d6431e5f62fadcefb95e2fab8a401c020df6ab",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\summary.json": "a7d2ad34c45b6b738c0a254148176d41876164235dde84bc9c0ebde16740ac6d"
+  },
+  "selected_metrics": {
+    "base": {
+      "window_f1": 0.6404199475065617,
+      "answer_f1": 0.6896551724137931
+    },
+    "slots_base": {
+      "window_f1": 0.655417406749556,
+      "answer_f1": 0.6911764705882353
+    },
+    "r19_all": {
+      "window_f1": 0.643144260830728,
+      "answer_f1": 0.7311827956989247
+    },
+    "base_harp_delta": {
+      "window_f1": 0.6650853889943074,
+      "answer_f1": 0.6821192052980133
+    },
+    "lookback_tuned": {
+      "window_f1": 0.616695059625213,
+      "answer_f1": 0.6993464052287581
+    },
+    "redeep_tuned": {
+      "window_f1": 0.3558320373250389,
+      "answer_f1": 0.4856512141280353
+    },
+    "verifier_learned_broadcast": {
+      "window_f1": 0.43642875415707344,
+      "answer_f1": 0.8349514563106796
+    },
+    "verifier_learned_slots": {
+      "window_f1": 0.5751183814033577,
+      "answer_f1": 0.8231511254019293
+    },
+    "slots_base_smooth": {
+      "window_f1": 0.6791277258566978,
+      "answer_f1": 0.6931407942238267
+    },
+    "local_direct": {
+      "window_f1": 0.2598496240601504,
+      "answer_f1": 0.4421768707482993
+    },
+    "local_probe": {
+      "window_f1": 0.5450819672131147,
+      "answer_f1": 0.6584615384615384
+    },
+    "local_mean_fusion": {
+      "window_f1": 0.6851338873499538,
+      "answer_f1": 0.7292418772563177
+    },
+    "local_slots_fusion": {
+      "window_f1": 0.6728884741017266,
+      "answer_f1": 0.7222222222222222
+    },
+    "local_slots_fusion_smooth": {
+      "window_f1": 0.694059848146494,
+      "answer_f1": 0.7225806451612903
+    }
+  },
+  "limits": [
+    "This audit checks frozen artifact consistency; timestamps are not an external cryptographic proof of historical ordering.",
+    "No bootstrap draws or new-method highlight/conditional-ranking metrics were independently recomputed; main window/answer confusion and OOF scores were.",
+    "PCA/scaler/45LR numerical audit is separately delegated; no new fit was run.",
+    "Repeated development on assistant-annotated R16 is not fresh external testing or proof on human-annotated QA."
+  ],
+  "seconds": 15.765377400093712
+}

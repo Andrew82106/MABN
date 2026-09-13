@@ -1,0 +1,174 @@
+{
+  "version": "round7-unified-v1.2",
+  "written_utc": "2026-09-10T14:34:41.984532+00:00",
+  "status": "parameters_prespecified_before_main_generation_and_formal_fitting",
+  "objective": "Compare all prespecified detectors on the same Qwen answers under complete and locally missing retrieved evidence.",
+  "model": {
+    "schema_version": "round7-model-v1",
+    "model": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Qwen2.5-7B-Instruct-bnb-4bit",
+    "system": "You are a helpful assistant.",
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_input_tokens": 3072,
+    "repetition_penalty": 1.0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": null,
+    "seed": 20260910,
+    "attn_implementation": "sdpa",
+    "layers": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "hidden_size": 3584,
+    "feature_timing": "After last lexical content token has been read; causal replay of own exact generated IDs",
+    "final_layer": "Layer 28 after model final RMSNorm; layers 7/14/21 after decoder block, before final RMSNorm",
+    "self_confidence_max_new_tokens": 12
+  },
+  "cohorts": {
+    "development_groups": 20,
+    "train_groups": 120,
+    "validation_groups": 40,
+    "main_test_groups": 40,
+    "external_test_groups": 50,
+    "main_conditions_per_group": 2,
+    "main_items_per_response": 3,
+    "external_items_per_response": 1
+  },
+  "primary_unit": "answer item, not token or whole response",
+  "target": {
+    "positive": "An actual asserted fact is unsupported by or contradicts the model-visible search material.",
+    "negative": "All asserted facts in the item are supported by visible evidence.",
+    "separate": "Reference correctness, abstention, missing output, tentative hypothetical, unresolved ambiguity."
+  },
+  "primary_method": "hidden_probe",
+  "all_methods": [
+    "hidden_probe",
+    "hallurag_mlp_seed_20260910",
+    "hallurag_mlp_seed_20260911",
+    "hallurag_mlp_seed_20260912",
+    "lookback_lens",
+    "redeep",
+    "lumina",
+    "nll",
+    "entropy",
+    "surface",
+    "self_confidence",
+    "direct_check",
+    "all_positive",
+    "all_negative"
+  ],
+  "linear_probe": {
+    "layers": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "C": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "scaler": "StandardScaler fit on training items only",
+    "classifier": "L2 logistic regression; validation risk-class F1 chooses layer/C/threshold"
+  },
+  "mlp": {
+    "widths": [
+      256,
+      128,
+      64
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "batch_size": 32,
+    "max_epochs": 100,
+    "patience": 10,
+    "min_delta": 1e-06,
+    "layers": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "learning_rates": [
+      0.0001,
+      0.0003
+    ],
+    "seeds": [
+      20260910,
+      20260911,
+      20260912
+    ],
+    "selection": "Common layer/lr chosen by arithmetic mean of three validation F1s, individual seed thresholds. Report each seed and mean/SD, never choose a seed using test."
+  },
+  "lookback": "Source mean attention / (source mean attention + generated-prefix mean attention), post-read causal timing, item mean of all 28x28 head features; training LR.",
+  "redeep": {
+    "head_K": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "layer_K": [
+      1,
+      2,
+      4,
+      8,
+      14,
+      28
+    ],
+    "beta": [
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      1.0,
+      1.2,
+      1.6,
+      1.9
+    ],
+    "selection": "Train-only Pearson head/layer rankings and minmax; validation grid+threshold.",
+    "adaptation": "Qwen GQA/RoPE/NF4, item means, standardized Jensen-Shannon divergence correcting the upstream reverse-KL bug."
+  },
+  "lumina": {
+    "official_commit": "c43ff41d872b05f659dcb3ad3a6dd78226954319",
+    "top_k": 100,
+    "lambda": 0.5,
+    "same_answer_ids": true,
+    "layer_convention": "Pinned official code over all output layers including final normalized layer.",
+    "random_pool": "Previous Round6 development sources, excluded from new main subjects/sources; deterministic by question; same paired replacement set.",
+    "selection": "Only validation classification threshold; formula fixed."
+  },
+  "thresholds": "Validation risk F1, then precision, then prespecified simplicity tie rules. Test is opened only after every method is frozen.",
+  "operational_top20": "ceil(0.2 * all predeclared items), ranked only by available finite scores; no gold-label prefilter. Label-filtered ranking is a separately named oracle diagnostic.",
+  "test_statistics": {
+    "primary": "risk-class F1 with TP/FP/FN/TN, precision, recall and false-positive rate",
+    "additional": [
+      "average precision",
+      "complete/partial conditions",
+      "risk subtypes",
+      "within-answer risk ordering",
+      "unaffected-item false alerts",
+      "operational top20",
+      "feature and annotation coverage"
+    ],
+    "bootstrap": {
+      "unit": "independent question group preserving paired conditions and items",
+      "replicates": 2000,
+      "paired_comparison": true
+    }
+  },
+  "blinding": "Output annotators do not inspect detector scores; fit reads train/validation labels only. Curators do not use model outputs for selection.",
+  "annotation_status": "Assistant manual evidence/output review with second review; not independently human-reviewed gold.",
+  "cost": "Report original generation, feature extraction, CPU training and local Qwen verification separately; causal offline replay is not zero-cost online deployment.",
+  "score_target": {
+    "f1": 0.7,
+    "interpretation": "Aim, not a guaranteed result or permission to retune on test."
+  },
+  "source_document": "PLAN.md"
+}

@@ -1,0 +1,35 @@
+{
+ "date": "2026-09-10",
+ "purpose": "Identify whether weak pilot results arise from model/input distribution, token timing, weak supervision, or absence of evidence-specific features.",
+ "models": ["Qwen2.5-0.5B-Instruct-fp16", "Qwen2.5-7B-Instruct-bnb-nf4"],
+ "limitations": ["Model family differs from HaMI paper", "7B model is third-party quantized; size and precision confounded", "No paid API judge", "Automatic labels require manual-style audit", "No claim of novel algorithm before related-work review"],
+ "experiments": {
+  "news_timing": "Same 394 released news answers: before-token versus after-token states; 0.5B versus 7B; weak bag-label versus explicitly token-supervised diagnostic",
+  "trivia": "2000 train / 300 validation / 400 test own-generated short answers; aliases; HaMI official ori network and loss, last/mean linear, surprisal, text controls",
+  "rag": "700 train / 150 validation / 200 test independently generated three-fact answers from source-disjoint Wikipedia evidence. Train weak probes with bag labels; reserve per-answer labels for localization evaluation and explicitly supervised diagnostics."
+ },
+ "seeds": [42,43,44],
+ "layers_fraction": [0.25,0.5,0.75,1.0],
+ "probe_steps": 300,
+ "validation_interval": 20,
+ "negative_positive_bags_per_step": 16,
+ "learning_rate": 0.001,
+ "weight_decay": 0.0005,
+ "topk_ratio": 0.1,
+ "candidate": "Evidence sensitivity: same emitted tokens scored with evidence and without evidence; token log-probability difference, hidden-state changes, and/or attention to source vs generated prefix. Treat as existing-inspired features, not claimed invention.",
+ "selection": "Validation response AUROC for weak probes; no test-label tuning. Supervised diagnostics selected by validation token AUROC, explicitly separate supervision.",
+ "evaluation": ["response AUROC/AUPRC", "macro within-positive-answer token AUROC", "answer-span ranking when a response has both correct and incorrect facts", "top-10-percent precision/recall", "source-clustered bootstrap", "shuffled-label and length/text controls"],
+ "progress_criteria": "Find a reproducible predictive signal beyond weak controls in an independent heldout condition; if weak localization fails, identify by supervised diagnostics whether learnable local signal exists. Do not treat significance-free small improvements as a breakthrough.",
+ "amendments": [
+  "0.5B RAG stopped as a format/label feasibility pilot based on training outputs; full 7B RAG retained. See results/rag_small_pilot_decision.json.",
+  "Label matching revised after prediction-blind reference/answer audits; exact changes in results/label_rule_audit.json. Small Trivia test references were inspected for this purpose before fitting any Trivia probe.",
+  "Source string-match baseline added to test whether white-box scores offer more than literal copying cues.",
+  "After small-news supervised diagnostics, added an exploratory annotation-budget curve: 10/25/50/100 percent of training responses have local labels; three random seeds, attention-ratio linear classifier, validation selection uses response labels only. Larger-model outputs were not yet evaluated.",
+  "Selective layer hooks reduce GPU memory without changing the requested states; independent equivalence check recorded. GPU fitting and 7B extraction are serialized after observing Windows shared-memory contention.",
+  "Before 7B RAG generation/evaluation, added fact-level MIL: mean features within each of the three syntactically identified answer strings, then max-risk pooling over three facts with bag labels only. Project each fact score onto its answer tokens for evaluation. This tests whether reducing the attribution search space helps; no claim of within-fact pinpointing or algorithmic novelty.",
+  "After inspecting original news conditional-localization scores, added global token metrics and fixed alarm thresholds using the 95th percentile of clean validation-answer maxima (strict greater-than). This is exploratory evaluation; small validation sets do not guarantee a population false-alarm bound.",
+  "After original news and RAG results, froze 110 previously unused, source-disjoint human-news answers. Added only two supervised attention MLP controls, balanced token BCE plus alpha=0 or 0.5 clean-answer max-risk BCE, three seeds, 300 steps; select by original-validation low-false-alarm recall, tie global token AUROC. No fit, threshold calibration or model selection on the new holdout. See results/alarm_control_protocol.json and results/confirmation.",
+  "RAG whole-test candidate positives were reviewed against evidence: only 4 of 14 clear conflicts, 3 supported, 7 ambiguous/nonanswers/question flaws. Primary automatic scores remain unchanged and are reported as matching diagnostics, not factual-hallucination validation. Review is by the execution assistant, not independent human consensus.",
+  "RAG feature caches replay saved original generation token IDs; 11 alternate-retokenization cases repaired before fitting. Earlier Trivia runs lack full saved traces and only passed sampled seeded-regeneration checks."
+ ]
+}

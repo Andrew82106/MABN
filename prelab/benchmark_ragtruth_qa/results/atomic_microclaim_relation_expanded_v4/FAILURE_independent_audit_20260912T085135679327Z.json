@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "stage": "independent_audit",
+  "error_type": "AssertionError",
+  "error": "",
+  "record_retained": true,
+  "GPU_used": false,
+  "official_test_opened": false
+}

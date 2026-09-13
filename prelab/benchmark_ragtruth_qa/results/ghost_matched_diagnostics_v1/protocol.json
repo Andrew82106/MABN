@@ -1,0 +1,26 @@
+{
+  "scope": "Original exposed calibration159 answers,154 material groups,42241 raw4BPE windows only.",
+  "families": [
+    "prefix_pre_header",
+    "legacy_lb_nll",
+    "prefix_post_header",
+    "harp64_legacy_lb_nll"
+  ],
+  "new_C": 0.0001,
+  "old_C": 0.0001,
+  "contrasts": [
+    "new GHOST appended minus corresponding original same-C control; four pairs"
+  ],
+  "ghost_only": "Describe existing metrics/type recall only; not an increment over a raw original family.",
+  "selection": "None: keep each saved candidate and its original separate window/answer thresholds; >= is positive.",
+  "gate": "No actual scores or new summaries read before new complete.json confirms all5 fits. Hash-bind all5 saved candidates and the four original same-C controls.",
+  "sampling": "Sorted material group_id; NumPy default_rng PCG64 seed20261010,5000 samples of154 groups with replacement; identical draws for all methods and both units.",
+  "statistic": "Micro F1 from grouped TP/FP/FN; new-minus-old paired delta;2.5/97.5 linear percentiles; zero denominator F1=0.",
+  "types": "Reuse original span_token_mapping risk_token_indices and label_type from calibration only. A window is in a type if its unchanged token_indices overlap that type. Denominators4086/814/997/109; overlaps allowed, OR must reproduce5984 binary-positive windows. Report recall only.",
+  "checks": "Original159/154/42241/100 positive answers/5984 positive windows; same window order, labels, group, each saved answer score equals all eligible-window max; saved counts/F1 match.",
+  "limitations": "Conditional interval on repeatedly-developed calibration; upstream threshold/model/feature selection bias is not included. Not independent significance or sealed-test evidence. No type-specific threshold or candidate selection.",
+  "new_fits": 0,
+  "model_forward": false,
+  "GPU_used": false,
+  "test_opened": false
+}

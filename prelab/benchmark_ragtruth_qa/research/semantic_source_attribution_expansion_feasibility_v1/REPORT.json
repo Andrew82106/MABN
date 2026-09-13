@@ -1,0 +1,218 @@
+{
+  "version": "semantic-source-attribution-expansion-feasibility-v1",
+  "status": "feasible_with_fit_only_conversion",
+  "created_at_utc": "2026-09-12T18:30:15.952963+00:00",
+  "scope": {
+    "new_answers": 3046,
+    "retained_native_fit_answers": 634,
+    "combined_deduplicated_fit_answers": 3680,
+    "sources": 634,
+    "source_connected_groups": 615,
+    "calibration_rows_opened": 0,
+    "official_test_rows_opened": 0,
+    "model_loaded": false,
+    "GPU_started_by_this_audit": false
+  },
+  "identity_and_deduplication": {
+    "unique_response_ids": 3680,
+    "unique_source_exact_answer_pairs": 3680,
+    "new_ids_disjoint_from_retained_ids": true,
+    "label_conflict_rows": 0,
+    "all_634_sources_have_new_answers_and_stable_prompt_source_sentence_geometry": true
+  },
+  "source_sentence_mapping_new3046": {
+    "response_sentence_instances": 43867,
+    "unique_source_sentences": 9093,
+    "sentence_count_per_answer": {
+      "min": 3,
+      "median": 14.0,
+      "p90": 22,
+      "p95": 24,
+      "p99": 30,
+      "max": 48,
+      "mean": 14.401510177281681
+    },
+    "source_union_token_count_per_answer": {
+      "min": 118,
+      "median": 314.0,
+      "p90": 508,
+      "p95": 540,
+      "p99": 610,
+      "max": 700,
+      "mean": 338.89100459619175
+    },
+    "mapped_sentence_lexical_token_instances": 897144,
+    "sentence_spans_with_boundary_crossing_BPE": 26810,
+    "boundary_crossing_BPE_instances": 26810,
+    "passage_sentence_instances": {
+      "1": 14724,
+      "2": 14743,
+      "3": 14400
+    },
+    "all_nonwhitespace_characters_covered": true,
+    "all_alphanumeric_characters_covered": true,
+    "all_source_tokens_precede_answer_and_belong_to_frozen_context": true,
+    "exact_source_attention_query_work_sum_sequence_length_x_lexical_queries": 276299736
+  },
+  "microclaim_mapping": {
+    "combined": {
+      "answers": 3680,
+      "raw_claims": 34941,
+      "scored_claims": 34919,
+      "discarded_nonlexical_claims": 22,
+      "positive_claims": 3474,
+      "partial_positive_claims": 877,
+      "claim_token_edges": 560300,
+      "lexical_tokens": 560300,
+      "risk_tokens": 47398,
+      "risk_answers": 1127
+    },
+    "new": {
+      "answers": 3046,
+      "raw_claims": 25880,
+      "scored_claims": 25864,
+      "discarded_nonlexical_claims": 16,
+      "positive_claims": 2183,
+      "partial_positive_claims": 583,
+      "claim_token_edges": 420782,
+      "lexical_tokens": 420782,
+      "risk_tokens": 30239,
+      "risk_answers": 799
+    },
+    "retained": {
+      "answers": 634,
+      "raw_claims": 9061,
+      "scored_claims": 9055,
+      "discarded_nonlexical_claims": 6,
+      "positive_claims": 1291,
+      "partial_positive_claims": 294,
+      "claim_token_edges": 139518,
+      "lexical_tokens": 139518,
+      "risk_tokens": 17159,
+      "risk_answers": 328
+    },
+    "new_scored_claims_per_answer": {
+      "min": 1,
+      "median": 8.0,
+      "p90": 14,
+      "p95": 17,
+      "p99": 22,
+      "max": 38,
+      "mean": 8.49113591595535
+    },
+    "combined_scored_claims_per_answer": {
+      "min": 1,
+      "median": 9.0,
+      "p90": 17,
+      "p95": 19,
+      "p99": 26,
+      "max": 42,
+      "mean": 9.488858695652175
+    },
+    "all_claim_text_spans_exact": true,
+    "all_new_claim_lexical_BPEs_mapped_to_absolute_replay_positions": true,
+    "all_combined_lexical_BPEs_owned_by_at_least_one_claim": true
+  },
+  "four_bpe_window_gold": {
+    "combined": {
+      "eligible_windows": 653979,
+      "positive_windows": 58433,
+      "excluded_nonlexical_windows": 692
+    },
+    "new": {
+      "eligible_windows": 485856,
+      "positive_windows": 36956,
+      "excluded_nonlexical_windows": 356
+    },
+    "retained": {
+      "eligible_windows": 168123,
+      "positive_windows": 21477,
+      "excluded_nonlexical_windows": 336
+    },
+    "k": 4,
+    "stride": 1,
+    "eligible_definition_verified": "contains at least one lexical BPE",
+    "positive_definition_verified": "OR of unchanged fit risk mask over the raw-BPE window",
+    "all_window_token_ids_positions_and_labels_recomputed_exact": true
+  },
+  "claim_sentence_edges_and_storage": {
+    "new3046_scored_claim_sentence_edges": 390683,
+    "combined_fit3680_scored_claim_sentence_edges": 523930,
+    "new3046_exact_uncompressed_array_bytes": 977069767,
+    "new3046_exact_uncompressed_array_GiB": 0.9099671309813857,
+    "combined_fit3680_exact_uncompressed_array_bytes": 1311159320,
+    "combined_fit3680_exact_uncompressed_array_GiB": 1.22111227363348,
+    "main_CSR_tensor_bytes_per_edge": 2048,
+    "recommended_free_space_GiB_for_new_cache": 2.0,
+    "storage_note": "Exact sum of uncompressed v1 NPZ arrays; compressed NPZ size is data dependent and sidecar/manifest overhead is small."
+  },
+  "gpu_time_planning": {
+    "frozen_expansion_query_work_ratio_vs_native793": 2.0437244228037126,
+    "prior_frozen_llama_expansion_range_minutes": [
+      58.67532817869459,
+      80.01181115276535
+    ],
+    "live_native_attribution_observation": {
+      "snapshot_file": "results\\semantic_source_attribution_v1\\progress.json",
+      "snapshot": {
+        "status": "running",
+        "completed_this_invocation": 702,
+        "scheduled_this_invocation": 791,
+        "records_committed_total": 704,
+        "last_response_id": "12663",
+        "elapsed_seconds": 1270.5654085000278,
+        "labels_used": false,
+        "official_test_opened": false
+      },
+      "projected_native_793_minutes_from_live_partial_run": 23.86080812259074,
+      "frozen_new_to_native_query_work_ratio": 2.0437244228037126,
+      "projected_new3046_minutes_point": 48.764916307971895,
+      "planning_range_minutes": [
+        43.888424677174704,
+        65.83263701576206
+      ],
+      "status": "provisional; another authorized native extraction was already running; this audit did not start or control it"
+    },
+    "recommended_reservation_minutes": [
+      50,
+      70
+    ],
+    "caveat": "Estimate only. No GPU job was launched; final timing should use completed native v1 elapsed time times the frozen query-work ratio."
+  },
+  "required_conversion": {
+    "needed": true,
+    "reason": "No label-blind semantic-attribution layout currently joins the 3,046 replay plans to the fit3680 atomic claims and exact source-sentence token masks.",
+    "inputs": [
+      "fit_expansion\\data\\new_token_plans.jsonl",
+      "fit_expansion\\data\\new_fit.jsonl",
+      "research\\atomic_relation_expanded_fit_v1\\microclaims_fit3680.jsonl",
+      "fit_expansion\\data\\tokens_fit.jsonl"
+    ],
+    "steps": [
+      "Filter microclaims_fit3680 by the frozen 3,046 response IDs and discard their 16 punctuation-only records (22 across the full fit3,680 pool).",
+      "Parse each exact retrieved_passages block with the frozen sentence splitter and shift document spans by rendered_reference_character_range.",
+      "Intersect source sentence spans and claim spans with frozen full-string/response BPE offsets; write label-blind layouts plus a global CSR index.",
+      "Run the unchanged semantic attribution extractor only on these 3,046 layouts, then concatenate/reuse the existing native 634 fit caches for training.",
+      "Open tokens_fit/windows_k4_fit only in the later scoring stage to attach fit labels and project scores to the unchanged four-BPE windows."
+    ],
+    "do_not_use_as_extractor_input": "results/atomic_microclaim_relation_expanded_v4/examples.jsonl, because it mixes fit with calibration and contains gold-bearing fields.",
+    "old_native_cache_policy": "Reuse the 634 native fit attribution caches; do not recompute or overwrite them.",
+    "method_limit": "The 3,046 answers were generated by five other models but are teacher-forced through the common Llama-2-7B checkpoint, so their features are replay representations rather than native generator states."
+  },
+  "files_sha256": {
+    "fit_expansion\\data\\fit.jsonl": "798653054e03343966d426a43764a7320a2b5b16108d27110e6335edb435bef5",
+    "fit_expansion\\data\\new_fit.jsonl": "5af892c1dcaa22d193693b354affb76540041eeb35778b6d91898b72a0d5bea9",
+    "fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+    "fit_expansion\\data\\tokens_fit.jsonl": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+    "fit_expansion\\data\\answers_fit.jsonl": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+    "fit_expansion\\data\\windows_k4_fit.jsonl": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+    "fit_expansion\\data\\windows_excluded_fit.jsonl": "88de2b92aadcaf499c4e83d4e10cee4563cdb7bafadefc12eac60069053b2b3f",
+    "research\\atomic_relation_expanded_fit_v1\\microclaims_fit3680.jsonl": "c1731ab6ca68569f7811db46f594431751995d65d2468cdec51f8d63f37d585a",
+    "fit_expansion\\llama_features_v3\\preparation.json": "50f6d1ac9de3d95ff112569cdb656a1314bc79c9695814340ecc65bf1044c105"
+  },
+  "audit": {
+    "elapsed_cpu_seconds": 17.70834679994732,
+    "script_sha256_before_report_write": "13231a2acae304f273968d5e841015e88ff5133d280fb898437712a3166a8419",
+    "assertions_passed": true
+  }
+}

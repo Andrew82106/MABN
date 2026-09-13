@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "claims_checked": 11322,
+  "fold_weight_sets_checked": 6,
+  "positive_weight_entries_unchanged": 6455,
+  "max_positive_weight_abs_delta_after_hard_negative_redistribution": 4.613490851568258e-07,
+  "clean_weight_entries_changed": 38815,
+  "max_per_answer_clean_mass_abs_delta": 5.297651117786017e-07,
+  "source_connected_fold_overlap_zero": true,
+  "all_full_evidence_pair_lengths_below_768": true,
+  "official_test_opened": false,
+  "candidate_source_sha256": "aaf08424d7f8b129bd21ae11100f0c13a0f6bcc025edbe8805b6c1a00c9ebaa8",
+  "preparation_sha256": "6598aafcfadf6ecdebd84119101d2fe0ff02cff4758a143280cf669289adb9f5"
+}

@@ -1,0 +1,26 @@
+{
+  "version": "native-qa-citation-alignment-v1",
+  "answers": 793,
+  "fit": 634,
+  "calibration": 159,
+  "windows": 210364,
+  "columns": [
+    "any_source_coverage_mean",
+    "cited_source_coverage_mean",
+    "coverage_gap_mean",
+    "invalid_reference_ratio_mean",
+    "explicit_reference_claim_fraction",
+    "citation_alnum_overlap",
+    "coverage_gap_x_overlap",
+    "invalid_ratio_x_overlap"
+  ],
+  "citation_parser": "Answer text only. Case-insensitive passage(s) N / optional No. and numeric [N]; support comma,slash,semicolon,and lists plus hyphen/en/em-dash/to ranges. IDs1..99, ascending ranges expanded, unique IDs per claim. Four-digit years/descending/too-large expressions are unknown, never automatically labeled risk. Plain dates/numbers without citation syntax ignored.",
+  "source_parser": "Only line-start passage N: headers in unmodified retrieved_passages; require exactly original identifiers1,2,3, each once. Keep source numbering; remove header text for lexical comparison.",
+  "claim_geometry": "Reuse exact existing automatic claims in semantic_baseline/cuda_variant/plans.jsonl; each original lexical token assigned by maximum alphanumeric-character overlap, ties earlier claim, same run_claim_pooling.geometry. No gold-driven splitting or scope propagation between claims.",
+  "words": "Unicode alphanumeric word sets, lowercase, no stemming or stopword filtering. Remove recognized citation text from claim before words. Coverage(claim,source)=intersection word count/claim word count, empty claim coverage0.",
+  "per_claim": "a=max all three source coverages; c=max coverage among cited valid sources, else0; has=any recognized citation; gap=(a-c) if has else0; invalid=number unique cited IDs absent from source IDs/number unique cited IDs, else0. All parsed IDs enter invalid denominator. These are features, not labels.",
+  "per_window": "Mean a,c,gap,invalid,has over original lexical tokens assigned to claims. Citation overlap=unique alphanumeric characters inside recognized citation text intersect original window raw-token character intervals / unique alphanumeric characters in window. Last two features are mean gap or invalid times overlap. Nonlexical tokens never enter means, but original4rawBPE window positions remain unchanged.",
+  "no_citations": "Preserve all windows; a still records general lexical coverage, all seven citation-related features0. Unknown syntax exported as parser status, no forced label.",
+  "bounds_and_labels": "Exactly q.metadata answer/window order, original risk labels untouched; no official test. No models, probabilities, feature-fitting or calibration thresholds used.",
+  "limits": "Word overlap is not entailment; high overlap can accompany contradiction. Numeric brackets can be citations or other notation. Explicit-reference cues can concern a source mention rather than an assertion; this is not an automatic citation-error label."
+}

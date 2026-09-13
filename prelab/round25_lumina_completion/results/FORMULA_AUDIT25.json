@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "blockers": [],
+  "scope": "All602 R16 actual-train saved token arrays and source hashes; no original validation/test or human-QA test parsed.",
+  "feature_rows": 602,
+  "response_tokens": 14968,
+  "formula_token_score_comparisons": 29936,
+  "single_source_MMD_values_exact_R19": 29936,
+  "all_joint_plans_exact_union_of_original_two_body_masks": true,
+  "joint_changed_positions_total": 70318,
+  "frozen_source_answer_ids_offsets_and_feature_arrays_bound": true,
+  "raw_four_BPE_window_means_exact": 48888,
+  "all10_methods_all_candidate_answermax_and_OOF_exact": true,
+  "safe_refusal_max_checks": 1170,
+  "main_answer_count": 598,
+  "main_window_count": 9526,
+  "GPU_selfcheck_records_verified": 2,
+  "CPU_formula_selfcheck_record_verified": true,
+  "token_feature_ranges": {
+    "token_ipr": {
+      "min": 3.715383201097211e-08,
+      "max": 5.49022912979126,
+      "mean": 0.2362966886789607
+    },
+    "token_mmd_single_mean": {
+      "min": 0.0,
+      "max": 0.8517184257507324,
+      "mean": 0.0510093162787231
+    },
+    "token_mmd_joint_body": {
+      "min": 0.0,
+      "max": 1.1110388040542603,
+      "mean": 0.09255675146571961
+    }
+  },
+  "implementation_review": {
+    "IPR": "Original lumina7.ipr_from_hidden over all output layers; saved final statistics; extra final norm behavior retained.",
+    "MMD": "Original top100 unrenormalized cosine kernel MMD, not IPR substituted; same response states P+j-1 on original/joint prefixes.",
+    "combined_score": "float32 lambda*IPR-(1-lambda)*MMD; higher ranks as more risk, signed and not probability.",
+    "intervention": "Only the union of both original R19 body-token masks changes. Titles/question/template and token counts remain unchanged; not natural full-context replacement."
+  },
+  "limitations": [
+    "Saved IPR/MMD raw features checked for identity and formula integrity; no new full-model replay of all602 raw features in this CPU audit.",
+    "Pinned CPU oracle and two production GPU checks are verified saved records, not independently reexecuted GPU checks.",
+    "Original LUMINA answer aggregation differs: current experiment mean over raw4BPE then max over all windows.",
+    "Repeatedly inspected assistant-labeled development OOF, not a fresh final test or a human-QA baseline replication."
+  ],
+  "no_fit": true,
+  "no_GPU": true,
+  "seconds": 2.528035100083798,
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\audit_formula25.py": "cc64bc0a0a112a4c84de629f83f501533e1a0e5b8e2424202f09a5ed6ecb4612",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\src\\extract25.py": "d9a1a190165812653bf25b5c0fb282e183dae4af85039c6f9f6a296864ed17c4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\src\\run25.py": "c50ca9dae710cb41b31b0705e02d8382f363e0264dea704e4b3bc4f579db92e0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\data\\feature_manifest.json": "4318017b9bd772d19f7a99d6b882f60fb25710016b16ec2d49c6131f2d15b9a9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\data\\extraction_signature.json": "b1d5f00ed1facc39424d64a7d8c15f9364327ec9360bf30792f176e13b902671",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\data\\joint_plans.jsonl": "808ff968c096a1e9489c1909ec0ec370387579419ec565a7f9cc791e0681cd7b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\data\\cpu_selfcheck.json": "8a04ab10f63c86efd592da0c2466f9aba07073222da1f521869e19d1f70843c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\data\\gpu_selfcheck.json": "5d0d7bd2805edda1dd5bca67152880eb6416eda13e7f5dd5e1a8b347b81ba23c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\formula_window_scores25.npz": "3b907984b8a91ec7e1d9e1eb161f0f57f179b441b88676fc82906848f60b8bc5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\source_snapshot25.json": "2da5e3a2fa45b29089105c358b882628da0f4bb9e6e6961a9cd877774d659773",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\complete25.json": "a839104cbda45f65cd111c187ab2efe7e3a21a848d9cd42d5c87f8c1e50ca8cb"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "ambiguous_target_requests": 0,
+  "ambiguous_unique_requests_excluded": 150,
+  "calibration_cache_opened": false,
+  "finite_cache_occurrences": 26819,
+  "fully_cached_target_pairs": 0,
+  "missing_target_unique_requests": 7929,
+  "official_test_opened": false,
+  "partial_cache_cannot_produce_pair_metrics": true,
+  "reusable_endpoint_occurrences_by_type_and_role": {
+    "attribution": {
+      "corrupted": 0,
+      "supported": 0
+    },
+    "entity": {
+      "corrupted": 0,
+      "supported": 0
+    },
+    "negation": {
+      "corrupted": 0,
+      "supported": 8
+    },
+    "number": {
+      "corrupted": 0,
+      "supported": 0
+    },
+    "temporal": {
+      "corrupted": 0,
+      "supported": 1
+    }
+  },
+  "reusable_target_unique_requests": 9,
+  "reuse_rule": "Exact checkpoint+revision+premise+hypothesis identity; repeated cached probabilities must be bit-identical. Ambiguous repeats are not reused.",
+  "source_sha256": {
+    "results\\semantic_source_attribution_v1_score\\selected_nli_existing_fit.npz": "85f98e4beecd3cd890a64089ae21033d2e83b8400d1f7b76fb6ebcadf59e40ec",
+    "results\\semantic_source_attribution_v1_score\\selected_nli_manifest_fit.json": "82e72bbdc3413fec9d8886209a5bd593e67f38494685a82916ae2477101929a1",
+    "results\\semantic_source_attribution_v1_score\\selected_nli_missing_scores_fit.json": "dbff67ea5886bea9c3cc05ff875b5f4762e07242816aaf6d3266d3fe66c5f666",
+    "results\\semantic_source_attribution_v1_score\\selected_nli_missing_scores_fit.npz": "f84f3029f45ca26dff66577bf1e1926802f0af93af6cde1d4b3cf3b8db7f5c3b",
+    "results\\semantic_source_attribution_v1_score\\selected_nli_requests_fit.jsonl": "26506fedaacf527db42a43b7854da95afee5e07b2b35b843fb487a7b20d5ff42"
+  },
+  "target_unique_requests": 7938,
+  "unambiguous_unique_requests": 25917
+}

@@ -1,0 +1,7 @@
+# Keep reference and archive files out of text diffs and line-ending rewrites.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.gz binary

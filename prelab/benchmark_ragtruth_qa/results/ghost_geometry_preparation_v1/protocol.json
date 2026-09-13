@@ -1,0 +1,18 @@
+{
+  "status": "CPU_input_and_formula_preparation_only",
+  "model": "Existing Llama-2-7B-chat NF4/BF16 frozen reconstruction checkpoint; no new model download.",
+  "scope": "3680 fit answers /615 material groups and159 cal /154 disjoint groups; all raw answer tokens retained. No official test or gold labels opened.",
+  "layer_convention": "HF hidden_states indices3..29 inclusive, after decoder blocks3..29 of32; final RMSNorm state used as final reference.",
+  "token_timing": "All four signals use the state/logits at position P+i-1, before the target answer token. Same frozen complete sequence and BPE boundaries, no regeneration.",
+  "features": [
+    "adjacent_layer_cosine_change",
+    "layer_to_final_cosine",
+    "top10_normalized_entropy",
+    "top10_unweighted_embedding_divergence"
+  ],
+  "adaptation": "GHOST originally averages token features into an answer vector. Local4BPE window supervision would be a new adaptation, not completed author reproduction. No calibrated F1 currently exists.",
+  "future_gate": "Requires explicit GPU scheduling after the live crossfit queue, identity-aligned dense-vs-streaming and repeat checks on fixed short fit rows, then a longest-input resource check. No automatic GPU command exists here.",
+  "downstream": "Fit classifiers only after all3839 features finish. Preserve existing labels/windows/weights, group split and answermax. Give baseline families equivalent features and training budgets.",
+  "feature_payload_bytes_float32": 11336096,
+  "performance_estimate": "Old793-row all-attention extraction used662.55seconds GPU plus serialization. New four-signal hook omits attention reconstruction and large hidden exports; speed must be measured, not inferred as an accuracy gain."
+}

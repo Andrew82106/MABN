@@ -1,0 +1,84 @@
+{
+  "version": "semantic-source-attribution-expanded-fit-v1",
+  "role": "ours expanded fit feature cache; formal baselines and native v1 are untouched",
+  "scope": {
+    "answers": "Exactly the frozen 3,046 additional fit-only replay plans.",
+    "claims": "Exactly 25,864 lexical microclaims; 16 punctuation-only records are deterministically excluded.",
+    "calibration": "No calibration path is present or opened.",
+    "official_test": "No official-test path is present or opened."
+  },
+  "input_allowlist": [
+    "fit_expansion\\data\\new_token_plans.jsonl",
+    "research\\atomic_relation_expanded_fit_v1\\microclaims_fit3680.jsonl",
+    "research\\atomic_relation_expanded_fit_v1\\complete.json",
+    "research\\semantic_source_attribution_expansion_feasibility_v1\\REPORT.json"
+  ],
+  "input_denylist": [
+    "fit_expansion/data/new_fit.jsonl",
+    "fit_expansion/data/tokens_fit.jsonl",
+    "fit_expansion/data/windows_k4_fit.jsonl",
+    "fit_expansion/data/windows_excluded_fit.jsonl",
+    "data/calibration.jsonl",
+    "data/*calibration*",
+    "*test*"
+  ],
+  "native_formula_binding": {
+    "runner_sha256": "a87b4c8bcc232cead05cdaa23deb67642c8551f11870b5fd1a640513e78b977b",
+    "formula_objects": [
+      "SemanticAttributionHooks",
+      "extract_one",
+      "validate_arrays"
+    ],
+    "formula_sha256": "3e555bdda24dcdca861bc2a5913cf9d4150357c73858100ff5c3d60cdbf0a4ce",
+    "primitive": "float32 causal softmax attention(q,s) * repeated V-head L2 norm",
+    "fragment": "token maximum inside each head",
+    "claim": "mean over unique lexical post-token query positions",
+    "previous_answer": "strict position < query; current query token excluded",
+    "head_readout": "mean over heads; full claim-sentence layer-head CSR retained as float16"
+  },
+  "sentence_splitter_binding": {
+    "runner_sha256": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+    "formula_sha256": "218d3bb57be64fbaf12c0b8fd8e75f076100cc4c80ee3839a187eabb7531791f"
+  },
+  "window_geometry": {
+    "k": 4,
+    "stride": 1,
+    "new_eligible": 485856,
+    "retained_native_fit_eligible": 168123,
+    "combined_fit_eligible": 653979,
+    "statement": "Each new answer geometry is independently hashed from exact token IDs, absolute positions, offsets, and lexical eligibility. 653,979 is the frozen retained+new arithmetic; label-bearing window files are not opened here."
+  },
+  "outputs": {
+    "folder": "results\\semantic_source_attribution_expanded_fit_v1",
+    "layout": "One label-blind exact coordinate row per answer.",
+    "semantic_units": "Exact source-sentence and scored-claim text for later frozen NLI scoring.",
+    "exclusions": "The 16 punctuation-only microclaims with deterministic reason.",
+    "cache": "One independently committed/resumable NPZ per answer plus global CSR index."
+  },
+  "model": {
+    "checkpoint": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "load_config": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "llm_int8_skip_modules": [
+        "lm_head"
+      ],
+      "torch_dtype": "bfloat16",
+      "attn_implementation": "sdpa",
+      "device_map": {
+        "": "cuda:0"
+      },
+      "local_files_only": true,
+      "trust_remote_code": false,
+      "padding": "one unpadded sequence and explicit all-ones mask; generation_config is not used",
+      "tf32_allowed": false
+    },
+    "teacher_forced_replay": true,
+    "limitation": "These are common Llama-2-7B replay representations, not native states of the five original generators."
+  },
+  "stage_gate": "prepare -> cpu-check -> separately invoked extract -> status; no training/scoring command"
+}

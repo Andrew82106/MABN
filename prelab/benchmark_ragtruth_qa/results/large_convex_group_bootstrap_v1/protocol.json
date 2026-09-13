@@ -1,0 +1,42 @@
+{
+  "scope": "Already-exposed original159 QA calibration answers/154 source groups/42241 windows only.",
+  "primary": "semantic_claim__old_tree__large_weight0.4",
+  "comparators": [
+    "lookback__old_lr__large_weight0.4",
+    "lookback__old_tree__large_weight0.6",
+    "Previously selected HARP+tail+eight-citation-feature LR, original frozen threshold"
+  ],
+  "methods": [
+    "semantic_tree_large04",
+    "lookback_lr_large04",
+    "lookback_tree_large06",
+    "harp_citation_lr"
+  ],
+  "contrasts": [
+    [
+      "semantic_tree_large04_minus_lookback_lr_large04",
+      "semantic_tree_large04",
+      "lookback_lr_large04"
+    ],
+    [
+      "semantic_tree_large04_minus_lookback_tree_large06",
+      "semantic_tree_large04",
+      "lookback_tree_large06"
+    ],
+    [
+      "semantic_tree_large04_minus_harp_citation_lr",
+      "semantic_tree_large04",
+      "harp_citation_lr"
+    ]
+  ],
+  "replicates": 5000,
+  "seed": 20261009,
+  "sampling": "NumPy default_rng PCG64; sorted original group_id; integers(0,154,size=(5000,154)); all methods, answers and overlapping windows use the same group draws.",
+  "statistic": "Pooled micro F1 from grouped TP/FP/FN; paired primary-minus-comparator difference separately for window and answer. Each fixed candidate supplies both units.",
+  "interval": "2.5/97.5 percentiles, NumPy linear interpolation; zero-denominator F1=0, count degeneracy.",
+  "selection": "None. Keep every original C/model/epoch/convex weight and both thresholds fixed in every draw.",
+  "limitations": "Conditional interval on repeatedly-developed calibration, excluding all upstream model/epoch/threshold/alpha selection bias. Not independent significance evidence; no unseen-test claim.",
+  "new_fits": 0,
+  "GPU_used": false,
+  "test_opened": false
+}

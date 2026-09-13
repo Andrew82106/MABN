@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "diagnostic_not_automatic_test": true,
+  "original_human_labels_and_sources_verified": true,
+  "no_train_source_overlap": true,
+  "matched_units": 130,
+  "same_generator_unique_source_pairs": 65,
+  "queries_with_exact_text_alignment": 1191,
+  "cached_arrays_verified": 1012,
+  "no_verdict_labels_in_model_inputs": true,
+  "prior_transform_feature_assembly_verified": 21,
+  "all_unit_and_pipeline_metrics_recomputed": true,
+  "equal_call_budgets_and_unchanged_clean_inputs": true,
+  "code_sha256": {
+    "analyze_oracle.py": "a9f2d343062238c6e9076f17d936f8b2f5cc7309b6cc4982197daa7a4e999ab6",
+    "audit_oracle.py": "3edc7d92779eeb8563fcccc951f54ab1f31f78e242ccf3a027f054542fce873c",
+    "common5.py": "28c68c78858d844bdb3ee67f065dea4487af939e5c2a12ad5a23b26f314d99c6",
+    "prepare_oracle.py": "29a3b68712800f565bb111cfab4082fe290128727451a9fd1b19306b0ca06b81",
+    "report_oracle.py": "6787de373394753c4a89948ecdaf530e6b72acf499461cfd3898218a62d1683b",
+    "run_oracle.py": "57a0ca2fd0f8363296419b0883cad1c9bb1d13b52fbe5d2786c992bb49fc7552"
+  }
+}

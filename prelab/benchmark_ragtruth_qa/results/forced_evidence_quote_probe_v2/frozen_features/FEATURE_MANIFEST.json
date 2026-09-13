@@ -1,0 +1,45 @@
+{
+  "schema_version": "forced-evidence-quote-features-v2",
+  "status": "complete_label_free_features",
+  "rows": 3776,
+  "row_keys_sha256": "eac2fd22e7ee8a1728b93d69ee0136c555d088c40c1598a13e8fde2d8d2a026d",
+  "label_free_inputs_sha256": "ae6bf145a0e48ff310cdde5f54457eec7e8986c9b012d52cc463bb9e357e2777",
+  "protocol_sha256": "78e5558b61592238b0979c7c60aea23c79b8c7d3181e88113d3972b4d056f7aa",
+  "plan_sha256": "6d439ee257dde65d2ef2c9974cd3dd716f4f0d06890cfb7df9c8af6da562680c",
+  "GPU_runner_sha256": "eb4a51353ba4edaff2cff877f576ff206f1fca1d6bd820928fb0db4acebfcca2",
+  "numerical_protocol_sha256": "ad0a2198ba69e75c78852eab103e8a829b6f9fb21389f322d5879f016e989df1",
+  "GPU_extraction_complete_sha256": "7290ac3f8354fae35281373c62f097e0895b3bc2b112795d7cc79ad5dd8333b5",
+  "full_batch_cache_replay_QA_sha256": "15de7190e6899a1999c59249bd9b285957aa5622b9321a2b245731171a6958fb",
+  "arrays": {
+    "path": "claim_features.npz",
+    "sha256": "d975b6fcb715f9c86ff1eb84465711352f1cd81fea5aee1870acf66b1e9e139e",
+    "keys": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "dtypes": {
+      "P1": "float32",
+      "P2": "float32",
+      "P3": "float32"
+    },
+    "shapes": {
+      "P1": [
+        3776,
+        21
+      ],
+      "P2": [
+        3776,
+        549
+      ],
+      "P3": [
+        3776,
+        549
+      ]
+    }
+  },
+  "labels_used": false,
+  "gold_read": false,
+  "calibration_read": false,
+  "official_test_read": false
+}

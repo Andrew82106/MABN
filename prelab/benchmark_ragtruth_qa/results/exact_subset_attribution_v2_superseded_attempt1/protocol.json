@@ -1,0 +1,71 @@
+{
+  "version": "exact-three-passage-subset-attribution-v2-wddm-gate",
+  "scope": "GPU admission repair and new output lineage only",
+  "method": "All prepared inputs, model, eight-view extraction math, features, and future evaluation semantics remain v1.",
+  "prepared_input": {
+    "mode": "read-only reuse; no copy or rewrite",
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\exact_subset_attribution_v1\\prepared_inputs.jsonl",
+    "sha256": "55753d10aa79f2069acfed7161c9b64fa8bcc4ed21da97c1a403ec73e1ff1f2a",
+    "answers": 3839,
+    "raw_answer_tokens": 708506,
+    "labels": "absent; inherited label-free artifact"
+  },
+  "wddm_gpu_gate": {
+    "global_lock": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\.exclusive_gpu_runner.lock",
+    "lock_policy": "O_EXCL lock with random lease nonce; never auto-break a stale lock",
+    "process_queries": [
+      "nvidia-smi --query-compute-apps=pid,process_name,used_gpu_memory --format=csv,noheader,nounits",
+      "nvidia-smi full process table for PID->Type"
+    ],
+    "ignore_rule": "Ignore a foreign row only when used_gpu_memory is literally [N/A], the same PID is typed G or C+G in the process table, and the full query path basename is in the frozen GUI allowlist.",
+    "block_rule": "Block numeric memory even for a GUI name; block pure C, unknown or missing type, unknown executable, and every malformed/other memory value.",
+    "race_reduction": "Repeat the foreign-process scan after CUDA free-memory initialization; ignore only this runner's PID.",
+    "memory_gate": "Require at least 6442450944 free bytes before model load.",
+    "gui_allowlist": [
+      "applicationframehost.exe",
+      "chatgpt.exe",
+      "chrome.exe",
+      "cloudmusic.exe",
+      "code.exe",
+      "desktop lock.exe",
+      "doubao.exe",
+      "dwm.exe",
+      "explorer.exe",
+      "hipsdaemon.exe",
+      "msedgewebview2.exe",
+      "nutstoreclient.exe",
+      "nvidia overlay.exe",
+      "phoneexperiencehost.exe",
+      "promecefpluginhost.exe",
+      "searchhost.exe",
+      "shellexperiencehost.exe",
+      "shellhost.exe",
+      "snippingtool.exe",
+      "startmenuexperiencehost.exe",
+      "systemsettings.exe",
+      "tabtip.exe",
+      "textinputhost.exe",
+      "todesk.exe"
+    ]
+  },
+  "commands": {
+    "CPU": [
+      "initialize",
+      "prepare",
+      "check",
+      "audit",
+      "self-test"
+    ],
+    "GPU_after_review": [
+      "gpu-smoke",
+      "extract"
+    ]
+  },
+  "not_in_scope": [
+    "No GPU work in CPU stages.",
+    "No gold/label/test read in this runner.",
+    "No baseline modification.",
+    "No v1 artifact modification or overwrite.",
+    "Scoring remains a later separately reviewed stage after caches freeze."
+  ]
+}

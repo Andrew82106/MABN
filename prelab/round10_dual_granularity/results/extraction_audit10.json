@@ -1,0 +1,12 @@
+{
+  "expected_rows": 440,
+  "completed": {
+    "generate": 440,
+    "core": 440,
+    "soft": 440
+  },
+  "missing": [],
+  "complete": true,
+  "labels_read": false,
+  "model_loaded": false
+}

@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "audit_utc": "2026-09-11T18:03:12.109093+00:00",
+  "reviewer": "/root/data_build/extract_review",
+  "no_new_fit_SVD_or_GPU": true,
+  "production_imports": false,
+  "official_test_or_withheld_contents_read": false,
+  "annotation_values_inspected": false,
+  "frozen_files_modified": false,
+  "limits": [
+    "Source/cache consistency and CPU mapping/projection, not a replay of MiniCheck model inference.",
+    "PCA fitting provenance is checked by frozen-file binding and allfit sample identities/weights; no SVD is rerun.",
+    "Original793 reuse, window aggregation, detector fits and thresholds are reviewed separately by parent."
+  ],
+  "PCA": {
+    "frozen_sha256": "63a851f006b8d91bfdd88fb4ba9c1671b14902a1f244e870948bbc78c966432d",
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "sample_count": 20288,
+    "all_sample_identities_and_group_answer_balanced_weights_exact": true,
+    "calibration_and_auxiliary_sample_count": 0,
+    "fit_recomputed": false,
+    "projection": "Use frozen mean/components; float64 center/product then float32."
+  },
+  "coverage": {
+    "nonwhitespace_characters": 1601425,
+    "duplicated_character_coverage": 81,
+    "whitespace_only_raw_tokens_zeroed": 18343,
+    "answers": 3046,
+    "raw_llama_tokens": 495347,
+    "selected_minicheck_tokens": 417082,
+    "claims": 19699,
+    "document_chunks": 3810,
+    "pairs": 25617
+  },
+  "max_projection_abs": 0.0,
+  "max_token_risk_abs": 0.0,
+  "blockers": [],
+  "all3046_claim_cache_manifest_sidecar_score_plan_answer_partition_bindings_exact": true,
+  "all3046_argmax_selected_document_support_risk_consistent": true,
+  "all495347_token_projection_and_token_risk_exact": true,
+  "all_new_raw_and_clipped_coordinates_and_lexical_masks_exact": true,
+  "existing_pca_mean_components_unchanged": true,
+  "full_output_token_index_contiguous_and_correct": true,
+  "bytes_hashes": {
+    "probe_complete": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9",
+    "probe_preparation": "cbfa4608cbecb84308d38ad61dc97b3a5a9831ddc0b163fab7310de238f4d072",
+    "claim_feature_manifest": "8921a848b6b7239f2c6e5e37b1bf9605ece5b0d33cf180268d72da0ecd8a1182",
+    "inference_complete": "059a87fab65a9781bcf10dc8e894fb97cd714ee6aa8fbbaafee39088440b24c6",
+    "token_hidden64": "6fe758e94d94f614edeadba3f9e08543fb20d41903a4298ead0381707bc3cb9b",
+    "token_risk": "3bb66493bee1765ace44eddacdf2c43a23b595e03590576839797d9c5b566247",
+    "inventory_review": "5ad8d495e73e47aad582ac89ed50dd1478f5ec3376bf8681d61ae3fa2dd58b0d",
+    "audit_helper": "72cf369dafb769507252b6dcdc90328d4887d2269e4e9c4fc8e4a2868d926748"
+  }
+}

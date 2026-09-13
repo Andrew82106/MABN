@@ -1,0 +1,13 @@
+{
+  "scope": "Official FAVA training.json only; README/repository metadata allowed. No annotations/eval/test data opened or downloaded; no changes to current fit/cal; no GPU/training.",
+  "sample_count": 100,
+  "sample_seed": 20260912,
+  "sampling": "random.Random(seed).sample(range(N),100), sorted indices, from pinned raw training JSON array",
+  "checks": [
+    "field/schema presence",
+    "markup corruption and correction directions",
+    "machine exact character-span roundtrip",
+    "same-source grouping metadata availability"
+  ],
+  "labels_are": "synthetic, not human gold"
+}

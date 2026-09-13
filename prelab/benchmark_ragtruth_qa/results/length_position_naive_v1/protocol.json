@@ -1,0 +1,18 @@
+{
+  "version": "qa-length-position-naive-v1",
+  "scope": "Original793 answers:634fit/159calibration,210364 unchanged raw4BPE windows. No official test.",
+  "scores": {
+    "answer_length": "log1p(raw_token_count) of the answer, broadcast to all its eligible windows",
+    "absolute_window_end": "log1p(window.token_end), original exclusive raw-BPE endpoint; no length normalization"
+  },
+  "direction": "Higher score means higher risk, fixed before scoring. No sign search or fitted parameters.",
+  "thresholds": "Original q.choose_threshold separately for window and whole-answer on159cal only: max F1, then precision, then higher threshold.",
+  "answer_aggregation": "Original maximum across every eligible window, including normal answers and safe refusals retained by official good QA gold.",
+  "reporting": "All two scores fit/cal results; no score-family winner selected. Fit is descriptive, not in-sample learned performance.",
+  "motivation": "Findings EMNLP2025.952 studies spurious task correlations and distribution generalization; it does not prove this project has a length shortcut.",
+  "paper": "https://aclanthology.org/2025.findings-emnlp.952/",
+  "no_factual_input": true,
+  "trained": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

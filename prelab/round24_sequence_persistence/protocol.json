@@ -1,0 +1,47 @@
+{
+  "version": "r24-window-persistence-v1",
+  "source": "https://arxiv.org/html/2606.31033v1#S3.SS4",
+  "adaptation": "Forward/backward label-persistence applied to overlapping 4-raw-BPE window scores, not the full CORTEX method",
+  "scope": "Repeated R16 actual-train event fivefold development; no fresh test claim",
+  "base_methods": [
+    "slots_base",
+    "base_harp_delta",
+    "verifier_learned_slots",
+    "lookback_tuned"
+  ],
+  "methods": [
+    "slots_base",
+    "base_harp_delta",
+    "verifier_learned_slots",
+    "lookback_tuned",
+    "slots_base_smooth",
+    "base_harp_delta_smooth",
+    "verifier_learned_slots_smooth",
+    "lookback_tuned_smooth"
+  ],
+  "stay": [
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "temperature": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "primary": "verifier_learned_slots_smooth",
+  "uniform_initial": true,
+  "epsilon": 1e-12,
+  "sequence": "Every original answer item, sorted by raw-window start, all output-defined windows regardless of gold eligibility",
+  "emissions": "p=sigmoid(logit(clipped saved probability)/temperature); [1-p,p]",
+  "transition": "same label = stay; different label = 1-stay",
+  "selection": "Calibration max min(window F1,answer F1), then window F1, precision, prefer raw identity, lower stay, lower abs(log temperature)",
+  "threshold": "Calibration separate scales; F1 then precision then higher cutoff; answer=max all window posteriors",
+  "future_windows_used": true,
+  "online_detector": false,
+  "gold_changed": false,
+  "original_validation_or_test_used": false,
+  "additional_fit": false,
+  "all_calibration_choices_frozen_before_outer": true
+}

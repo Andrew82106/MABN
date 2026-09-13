@@ -1,0 +1,22 @@
+{
+  "version": "microclaim-indomain-pairs-v5",
+  "created_utc": "2026-09-12T09:46:43.513161+00:00",
+  "source_code_sha256": "d0011f84e7fd06deedb7493804eb8baa1a3f83d337119cca0cb9326272c06c0c",
+  "loss_code_sha256": "b74f1184c27e5b9c1fb84bdfc3fbd6f529a636faeab1b47f087940a630baddfc",
+  "v4_manifest_sha256": "35791a3b2881b098713d947273d7293f912f6f1a84ed2a50bedfe022a2c74370",
+  "v4_complete_sha256": "d6d6658a6aa82cc10fd56116ebd938b92b896155d85c706c2282939f29cd6c4e",
+  "files_sha256": {
+    "protocol.json": "eef0fe72c7ebf3a9aea913c71352545ecd0c9780c9c3cc003012b84ac3859dd0",
+    "pairs.jsonl": "3cf2b1d2f0571b536ed79948862651d98f92363a9aa56c53ecd2b628ca6b4eab",
+    "ambiguity_examples.jsonl": "8e8c9e002196c59213dfdc2f50cb330013f9816948d28b97a4d553ca60f058d9",
+    "AUDIT.json": "40e281405acd34f9bc0bf881e5fc4c73998f051547e90a182e47adb7705bac90",
+    "TRAINING_COST.json": "03d29a77ca667e52e899cde8565737f7656fabc51d98c0bd60470667d2287082",
+    "LOSS_CPU_CHECK.json": "4c49a3797fbc1d107c9aa0cd1578af894c73b525bcb74700af802e3023f105cb",
+    "REPORT.md": "2dba852e46b40cdaaef67e1f33fade8940959f0393a1bcfe4a5f89718d98ad07"
+  },
+  "selected_pairs": 56,
+  "calibration_rows_read": 0,
+  "official_test_opened": false,
+  "GPU_used": false,
+  "baselines_modified": false
+}

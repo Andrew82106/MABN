@@ -1,0 +1,79 @@
+{
+  "status": "frozen_future_protocol_not_executed",
+  "candidate_count": 36,
+  "weights": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "bases": [
+    {
+      "family": "lookback__old_lr",
+      "peer": "lookback",
+      "mode": "old_lr",
+      "candidate": "lookback__two_scores_and_citation__C0.001",
+      "C": 0.001,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_lr_v1\\lookback__two_scores_and_citation__C0.001_scores.npz",
+      "scores_sha256": "5ace9643aa73033bcee35581c2462731ec5c9f9b07338a10085048a315f53bc8"
+    },
+    {
+      "family": "lookback__old_tree",
+      "peer": "lookback",
+      "mode": "old_tree",
+      "candidate": "lookback",
+      "C": null,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_combiner_v1\\lookback_scores.npz",
+      "scores_sha256": "231b621b65ae0537a5ffece1c33a63be9d19c018f22f80888b7a60dab8428da9"
+    },
+    {
+      "family": "harp_claim__old_lr",
+      "peer": "harp_claim",
+      "mode": "old_lr",
+      "candidate": "harp_claim__two_scores_and_citation__C0.1",
+      "C": 0.1,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_lr_v1\\harp_claim__two_scores_and_citation__C0.1_scores.npz",
+      "scores_sha256": "9b3133f1c3f6150a49e5144bb5b70efc5d251cdc3f0b2ee614a8af720a7fc5a8"
+    },
+    {
+      "family": "harp_claim__old_tree",
+      "peer": "harp_claim",
+      "mode": "old_tree",
+      "candidate": "harp_claim",
+      "C": null,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_combiner_v1\\harp_claim_scores.npz",
+      "scores_sha256": "0e84d7188536ff5919e265ffaa8dee4e2abf1682cb02912c0fcef7a4ff942343"
+    },
+    {
+      "family": "semantic_claim__old_lr",
+      "peer": "semantic_claim",
+      "mode": "old_lr",
+      "candidate": "semantic_claim__two_scores_and_citation__C0.001",
+      "C": 0.001,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_lr_v1\\semantic_claim__two_scores_and_citation__C0.001_scores.npz",
+      "scores_sha256": "c25ec5759df9c80151de531baff919d9afcb4e12017e61b1b1a0e69068ad405a"
+    },
+    {
+      "family": "semantic_claim__old_tree",
+      "peer": "semantic_claim",
+      "mode": "old_tree",
+      "candidate": "semantic_claim",
+      "C": null,
+      "scores_path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_combiner_v1\\semantic_claim_scores.npz",
+      "scores_sha256": "55bf2ab766e01a858bb029cf0f6b9cfd16c9b6f34187fd0863900bc46de8e059"
+    }
+  ],
+  "base_identity": "Original3 two-score+8citation LR plus original3 two-score monotone trees; no large, NLI, FAVA or newly fitted score-combiner output as a base.",
+  "detector": "Wait for all3 QA epochs complete. Use one globally selected QA epoch from this transfer, never auxiliary_final or per-base epoch selection.",
+  "formula": "At each original eligible4rawBPE window: (1-alpha)*old_probability+alpha*PsiloQA_detector_probability. Then answermax across all original eligible windows.",
+  "scope": "Original634 fit answers/168123 windows and159 calibration answers/42241 windows; no labels, geometry, refusals or thresholds policy changed. Do not present fit634 as full3680.",
+  "selection": "Each candidate gets original two calibration F1 thresholds. One alpha per family by min(twoF1), windowF1, window precision, smaller alpha. Both metrics from the same candidate.",
+  "endpoints": "Require12 exact endpoint replays: alpha0 old scores/answermax/thresholds/fitcal metrics; alpha1 single selected transfer window/answer scores/thresholds/cal metrics.",
+  "limits": "Repeated development selection, different upstream supervision/compute, no independent test and no unseen-data nondegradation guarantee.",
+  "new_fits": 0,
+  "GPU_used": false,
+  "target_predictions_read": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,15 @@
+{
+  "status": "development_smoke_frozen_before_generation",
+  "scope": "Two reviewed train-only input variants; reuse identical outputs in later pilot if hashes match",
+  "utc": "2026-09-10T11:11:49.490982+00:00",
+  "root_source_review": "Dev33 question and all five original passages reviewed; removed Australian documentary is not evidenced by distinct1995 Hackers film. Remaining American documentary cannot establish both-American conclusion.",
+  "files_sha256": {
+    "design_v1.json": "b2598ec6f2932db8bbbf7a0a122b18960ec92684e40cbc037cc9c3d2adfb7c83",
+    "prompts/answer.txt": "f43d9ed78fdf9007a88442e6f82154d143a3cc74d4308cdeca0486a347a2c6e3",
+    "data/dev_inputs.jsonl": "0a8bcc5f803453c68e502b9781e11d7d49e588af443368b846f171d37b4c5112",
+    "data/curated/dev_review.json": "9a6b756280c14697235957fac368cb2f05fbae325e6db970cea792ce04d92191",
+    "src/model6.py": "41c2ec2b3a272ea6d5b1802ace9fcc169ff29060a9a6db3880ea97f16ace02a4",
+    "src/run_model.py": "4402debfdee970f22cd9a554a2d54c75e142237e8421907e9065bd8964f078a9"
+  },
+  "prior_attempt": "Encoding alias error before model load or generation; corrected utf8-sig to utf-8-sig."
+}

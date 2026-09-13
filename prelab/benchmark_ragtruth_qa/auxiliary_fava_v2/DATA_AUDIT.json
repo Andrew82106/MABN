@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "answers": 7482,
+  "factual_spans": 19729,
+  "span_types": {
+    "entity": 5743,
+    "contradictory": 4560,
+    "invented": 4109,
+    "relation": 5317
+  },
+  "fixed_candidates": 7483,
+  "groups": 7408,
+  "largest_material_group": 7,
+  "all_original_text_and_labels_exact": true,
+  "all_original_five_references_preserved": true,
+  "group_graph_independently_rebuilt": true,
+  "all_match_witnesses_verified": 1,
+  "blocked_only_matching_independently_rebuilt": true,
+  "retained_blocked_material_matches": 0,
+  "quarantine_raw_indices": [
+    3705
+  ],
+  "quarantine_notes": {
+    "3705": "Real consecutive 20-normalized-word evidence overlap."
+  },
+  "restored_raw_index": 11525,
+  "blank_reference_not_material_identity": true,
+  "empty_reference_match_records": 0,
+  "source_identity_reconstruction_scope": "Conservative confirmed-train complement, not complete original official split recovery.",
+  "candidate_manifest_sha256": "ae2df270257af5a17154dc62d01e27f42e92985e05afefc5ff50063e6e4ed2c9",
+  "candidate_data_unchanged": true,
+  "token_files_read_or_modified": false,
+  "raw_response_or_test_answers_read": false,
+  "GPU_used": false,
+  "model_loaded": false,
+  "seconds": 6.965065099997446
+}

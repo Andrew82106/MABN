@@ -1,0 +1,97 @@
+{
+  "version": "ragognizer-route-a-gpu-run-audit-v2",
+  "status": "complete",
+  "run_identity": {
+    "route": "model_card_default_transformer_heads_with_accelerate_cpu_offload",
+    "device_placement_change_only": true,
+    "checkpoint_revision": "2b58ab9aa73f6d499ec72a38ced0976caf78b26f",
+    "ragognizer_commit": "1d3e8fdd6de638dc2d06265829a4d9ced387e0ba",
+    "transformer_heads_commit": "6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+    "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+    "runner_script_sha256": "4eeec3e46f16d3be9efddb18059deb6a27568328bba8b66e79c39fda771469f7",
+    "model_manifest_sha256": "6b3b500ea5db7a4b0d29b7668b29e81bb449207e134e795b806a17d44a4367bf",
+    "source_audit_sha256": "64e08d84900fd671c2aba05bc8a081e0684a4339d545b0bfb98db3c55c1e656f",
+    "runtime_alias_audit_sha256": "c4d1f46c2c3a3435a18e1a36d9d3207e7b8dd95765f70e8fcb80488269747a8c",
+    "torch_dtype_argument": "torch.bfloat16",
+    "quantization": null,
+    "postprocessor": false,
+    "batch_size": 1,
+    "author_probability": "sigmoid(integrated hallu_head_neg_16 logit)",
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "transformers": "4.57.1",
+      "tokenizers": "0.22.2",
+      "peft": "0.18.1",
+      "accelerate": "1.13.0",
+      "safetensors": "0.7.0"
+    }
+  },
+  "route": "model_card_default_transformer_heads_with_accelerate_cpu_offload",
+  "device_placement_change_only": true,
+  "checkpoint_revision": "2b58ab9aa73f6d499ec72a38ced0976caf78b26f",
+  "ragognizer_commit": "1d3e8fdd6de638dc2d06265829a4d9ced387e0ba",
+  "transformer_heads_commit": "6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "runner_script_sha256": "4eeec3e46f16d3be9efddb18059deb6a27568328bba8b66e79c39fda771469f7",
+  "model_manifest_sha256": "6b3b500ea5db7a4b0d29b7668b29e81bb449207e134e795b806a17d44a4367bf",
+  "source_audit_sha256": "64e08d84900fd671c2aba05bc8a081e0684a4339d545b0bfb98db3c55c1e656f",
+  "runtime_alias_audit_sha256": "c4d1f46c2c3a3435a18e1a36d9d3207e7b8dd95765f70e8fcb80488269747a8c",
+  "torch_dtype_argument": "torch.bfloat16",
+  "quantization": null,
+  "postprocessor": false,
+  "batch_size": 1,
+  "author_probability": "sigmoid(integrated hallu_head_neg_16 logit)",
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "peft": "0.18.1",
+    "accelerate": "1.13.0",
+    "safetensors": "0.7.0"
+  },
+  "run_identity_sha256": "daeaae456bd14ab3a7685c215de1b28e887dbd7e258341d7424e1e5d58003e75",
+  "plan_version": "ragognizer-full-inference-plan-v1",
+  "rows": 3839,
+  "required_full_rows": 3839,
+  "run_scope": "formal_full",
+  "selection": {
+    "partition": null,
+    "limit": null,
+    "answer_ids_sha256": "9f39116b2b3205bb57e576e38acd9aa01a6d265c1935d80e1cd06f0d4ae97f5f"
+  },
+  "partition_rows": {
+    "calibration": 159,
+    "fit": 3680
+  },
+  "completed_before_resume": 0,
+  "rows_computed_this_invocation": 3839,
+  "resume_used": false,
+  "output_sha256": "b0419fc5e156df29eb70f1d919a0223dd24cf0359a8a8aca80accfa9321190ca",
+  "raw_final_chain_sha256": "117087ef51a18925fd16d2ec8c1517cd7a4886a8a0cd12c3f1236c920bbba514",
+  "loaded_parameter_dtype_tensor_counts": {
+    "torch.bfloat16": 746
+  },
+  "torch_no_grad": true,
+  "tf32_matmul_runtime_default": false,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3070",
+    "capability": [
+      8,
+      6
+    ],
+    "peak_allocated_bytes": 1367878144,
+    "peak_reserved_bytes": 1449132032
+  },
+  "timing_seconds": {
+    "model_load_and_offload": 20.160960200009868,
+    "inference_this_invocation": 8423.742576700053,
+    "per_answer_this_invocation": 2.1942543830945698,
+    "total_invocation": 8458.329063600046
+  },
+  "author_threshold_applied": false,
+  "shared_threshold_applied": false,
+  "labels_read": false,
+  "test_opened": false
+}

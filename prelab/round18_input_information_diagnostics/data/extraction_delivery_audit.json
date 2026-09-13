@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "actual_training_responses": 602,
+  "selected_questions": 301,
+  "selected_group_ids": 278,
+  "validation_or_test_features": 0,
+  "completed_count": 602,
+  "response_tokens": 14968,
+  "r17_lb_nll_max_absolute_differences": {
+    "lb": 0.0,
+    "nll": 0.0
+  },
+  "original_feature10_route_invalid_tokens": 0,
+  "npz_bytes": 148031521,
+  "extraction_seconds_sum": 194.30557819874957,
+  "peak_allocated_gib": 5.382488250732422,
+  "feature_manifest_sha256": "e44b2c60ccfdda088d734fa23da2269e84396e18cc3b7ebdc868a50c84413451",
+  "extract18_sha256": "d75d55fa372637627ce25d5265b6299d52abf736e27ccd0c37d936d1771123d7",
+  "selfcheck_sha256": "1b7abfd38caa083d8280a00edbb16965e6362c4a0c5abcea117e7a3c76cdbe98",
+  "input_sha256": "220124091292022aaa84f8fd50f9ffa43fb207186c03b2117564d615e6b6f609",
+  "selected_question_groups_field_clarification": "The unchanged manifest selected_question_groups=301 counts distinct question_id (paired questions), not independent group_id. Actual connected group_id count is278. This sidecar corrects the interpretation without changing extraction source, arrays, or pinned manifest.",
+  "independent_code_review": {
+    "reviewer": "/root/data_build/extract_review",
+    "verdict": "No extraction logic blockers. Verified original feature10 code hash, actual training split, tokenwise np.array_equal LB/NLL, final RMSNorm hidden_28 and cache validation. Count field interpretation clarified in this sidecar."
+  },
+  "labels_or_detector_scores_read": false,
+  "response_regenerated": false
+}

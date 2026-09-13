@@ -1,0 +1,30 @@
+{
+  "status": "passed_independent_read_only_full_extraction_audit",
+  "audit_source_sha256": "1e7e863443dd42a41eb4f662cc4bb94e8dfd2db08c35c579cde5eea6c6f1bf72",
+  "extraction_complete_sha256": "71de5ed9902d89561184cb51843b7ca8e2ff83b03abc2d17c84551d94bfbb809",
+  "selected_prepared_sha256": "f8c584e4c24565bf4e607d5673c9b54523e33a91b1365780d4f01e84ac06089b",
+  "counts": {
+    "answers": 256,
+    "raw_answer_tokens": 46481,
+    "subset_logprob_values": 371848,
+    "cache_npz": 256,
+    "cache_json": 256
+  },
+  "numeric": {
+    "selected_logprob_min": -32.4609375,
+    "selected_logprob_max": 0.0,
+    "independent_shapley_efficiency_max_abs": 7.105427357601002e-15
+  },
+  "checks": {
+    "all_256_record_hashes_and_metadata_hashes_exact": true,
+    "all_cache_signatures_independently_recomputed": true,
+    "all_answer_ids_and_citation_masks_exact": true,
+    "all_eight_view_arrays_finite": true,
+    "Shapley_efficiency_independently_recomputed": true,
+    "runtime_signature_matches_smoke": true
+  },
+  "fit_gold_files_opened": false,
+  "labels_accessed": false,
+  "official_test_opened": false,
+  "paper_baseline_modified_or_scored": false
+}

@@ -1,0 +1,188 @@
+{
+  "audit": "semantic_source_attribution_v1_score_read_only_audit",
+  "timestamp": "2026-09-13T02:21:08.7525325+08:00",
+  "status": "needs_fix_before_fit",
+  "scope": {
+    "runner": "prelab/benchmark_ragtruth_qa/src/run_semantic_source_attribution_v1_score.py",
+    "runner_sha256": "a4184101e6037524938a6713923bc4011a5b2bc17e90b8225fb436f53dea0034",
+    "protocol_sha256": "1b5e7339873a2d8e62d9f5e3a6f20dd50fcae76afeb977cb6646e44ca2ff3bf4",
+    "preparation_sha256": "d66097da637c5a2c299e187a59ae7ba987950bb2e0c312e12a48bef83bccadce",
+    "cpu_selfcheck_sha256": "e7845f8ab1a28b613bce3a0e82b52e0c088845a93f0c6a89d37df82b5728cdf4"
+  },
+  "leakage": {
+    "direct_calibration_leak_found": false,
+    "official_test_path_found": false,
+    "fit_cal_group_overlap": 0,
+    "fit_cal_response_overlap": 0,
+    "fit_cal_source_overlap": 0,
+    "qualification": "The 159 calibration answers are a repeatedly used project development set, so future numbers remain development-only."
+  },
+  "verified": {
+    "top3_identity_partial_real_audit": {
+      "answers": 320,
+      "claims": 4470,
+      "links": 13410,
+      "cached_links": 9281,
+      "missing_links": 4129,
+      "selection_errors": 0,
+      "identity_errors": 0,
+      "array_shape_errors": 0
+    },
+    "features": {
+      "semantic_components": [1024, 288, 66, 4, 12],
+      "semantic_width": 1394,
+      "semantic_unique_names": 1394,
+      "clean_components": [63, 432, 10, 12],
+      "clean_width": 517,
+      "clean_unique_names": 517,
+      "incumbent_features_removed": 6,
+      "incumbent_removal_real": true
+    },
+    "labels": {
+      "fit_claims": 9055,
+      "any_error_positive": 1291,
+      "conflict_positive": 195,
+      "conflict_subset_of_any": true
+    },
+    "group_kfold": {
+      "folds": 5,
+      "train_held_group_overlap_each_fold": [0, 0, 0, 0, 0],
+      "weights_finite_positive_on_train": true,
+      "held_weights_zero": true
+    },
+    "projection": {
+      "claim_to_window_independent_max_abs_error": 0.0,
+      "window_to_answer_independent_max_abs_error": 0.0,
+      "empty_eligible_windows": 0
+    },
+    "gate": {
+      "base_window_positives_retained": true,
+      "window_union_assertion_correct": true,
+      "answer_decisions_preserved_if_answer_threshold_gt_window_threshold": true
+    },
+    "formal_baselines_modified": false
+  },
+  "findings": [
+    {
+      "id": "weight-order-breaks-class-balance",
+      "severity": "high",
+      "action_before_fit": true,
+      "evidence": {
+        "any_error_negative_to_positive_weight_mass_range": [2.170936524676313, 2.22132034836301],
+        "conflict_negative_to_positive_weight_mass_range": [6.848682258368159, 7.384108350457051]
+      },
+      "cause": "Class balancing is followed by equal-group-mass rescaling, which undoes class balance.",
+      "recommendation": "Freeze the intended weighting semantics; if class balance is intended, make it the final step or use iterative balancing and log final class/group masses."
+    },
+    {
+      "id": "no-add-can-add-on-calibration",
+      "severity": "high",
+      "action_before_fit": true,
+      "evidence": {
+        "synthetic_fit_no_add_threshold": 0.30000000000000004,
+        "synthetic_calibration_score": 0.31,
+        "calibration_addition_triggered": true
+      },
+      "cause": "The no-add option stores nextafter(max_fit_score), not a disabled gate.",
+      "recommendation": "Persist gate_enabled=false or an infinite threshold and make gated_scores return base unchanged."
+    },
+    {
+      "id": "incomplete-provenance-freeze",
+      "severity": "high",
+      "action_before_fit": true,
+      "missing_hash_bindings": {
+        "run_aligned_evidence_head_v1.py": "3741358739571dadfabc1d183c586c4b606085097f0cd14fe411a3a8a70c4e0e",
+        "run_atomic_microclaim_nli_v1.py": "1b2412a4767fd0087868fc6a132f87348b709a81dbc5a93a49e37848a612f2ec",
+        "run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+        "answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+        "tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+        "windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+        "answers_calibration.jsonl": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+        "tokens_calibration.jsonl": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+        "windows_k4_calibration.jsonl": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510"
+      },
+      "recommendation": "Bind and revalidate all imported scoring sources, gold files, whitebox and partition NLI artifacts in fit/evaluate manifests."
+    },
+    {
+      "id": "stage-restart-gaps",
+      "severity": "medium",
+      "action_before_fit": false,
+      "details": "infer-nli and evaluate can become non-resumable after a mid-commit crash."
+    },
+    {
+      "id": "batch-dependent-continuous-gate-score",
+      "severity": "medium",
+      "action_before_fit": false,
+      "details": "gated_scores rescales hits with the current partition maximum; binary decisions stay fixed but continuous scores and AUROC/AP depend on the evaluation batch."
+    },
+    {
+      "id": "missing-infer-peak-memory-check",
+      "severity": "low",
+      "action_before_fit": false,
+      "details": "The inherited 3 GiB free-memory precheck is used, but the scorer does not call the available post-inference peak-memory gate."
+    },
+    {
+      "id": "missing-lr-convergence-assertion",
+      "severity": "low",
+      "action_before_fit": false
+    }
+  ],
+  "gpu": {
+    "observed_during_attribution": {
+      "name": "NVIDIA GeForce RTX 3070",
+      "total_mib": 8192,
+      "used_mib": 5209,
+      "free_mib": 2810
+    },
+    "modernbert_weights_bytes": 598442860,
+    "inherited_min_free_bytes": 3221225472,
+    "atomic_pair_token_max": 223,
+    "instruction": "Do not run infer-nli concurrently with the Llama attribution extractor; run it after extractor exit."
+  },
+  "decision": {
+    "attribution_extract": "continue",
+    "link_nli": "continue_after_extractor",
+    "infer_nli": "continue_serially_after_extractor",
+    "fit": "hold_until_high_findings_fixed_or_explicitly_reframed_and_frozen",
+    "evaluate": "hold_until_fit_is_valid"
+  },
+  "reaudit_after_fix": {
+    "runner_sha256": "627fb3bd47ae017a6d5b3b612585ef239f0681869ac3db6ed760db0b4f891ebb",
+    "core_fixes_verified": true,
+    "no_add": {
+      "enabled": false,
+      "threshold": null,
+      "scores_identical_to_base": true,
+      "added_hits": 0
+    },
+    "final_class_balance": {
+      "real_fit_folds_checked": 5,
+      "targets": ["any_error", "conflict_only"],
+      "maximum_absolute_class_mass_difference": 2.2328094928525388e-10,
+      "per_fold_runtime_assertion_present": true,
+      "full_fit_runtime_assertion_and_log_present": true
+    },
+    "provenance": {
+      "imported_source_hashes_stored_and_rechecked": [
+        "run_development.py",
+        "run_atomic_microclaim_nli_v1.py",
+        "run_aligned_evidence_head_v1.py"
+      ],
+      "six_gold_file_hashes_stored_and_rechecked": true,
+      "six_gold_files": [
+        "answers_fit.jsonl",
+        "tokens_fit.jsonl",
+        "windows_k4_fit.jsonl",
+        "answers_calibration.jsonl",
+        "tokens_calibration.jsonl",
+        "windows_k4_calibration.jsonl"
+      ]
+    },
+    "remaining_minor_gaps": [
+      "check_prepared does not yet compare snapshot.atomic_preparation_sha256 with the current atomic preparation file.",
+      "check_prepared does not yet compare PREPARATION.source_snapshot_sha256 with the current source_snapshot.json hash."
+    ],
+    "status": "core_fixes_passed_two_minor_hash_assertions_pending",
+    "next_action": "Add the two missing assertions and refreeze the scorer hash before fit."
+  }
+}

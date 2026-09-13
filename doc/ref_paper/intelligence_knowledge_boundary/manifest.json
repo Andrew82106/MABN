@@ -1,0 +1,42 @@
+[
+  {
+    "file": "01_EMNLP2024_KEEN.pdf",
+    "url": "https://aclanthology.org/2024.emnlp-main.232.pdf",
+    "bytes": 7470618,
+    "sha256": "0CC288F1CA081A2128FA8A48D37FD28EF0E5B3042FC7C814F91092EBBEA506E6",
+    "downloaded_at_utc": "2026-09-09T14:03:49.3325922Z",
+    "validation": "PDF header and EOF verified"
+  },
+  {
+    "file": "02_ICLR2026_Query_Level_Uncertainty.pdf",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/3a07c3a67cfe50d3236b71fb674c7f30-Paper-Conference.pdf",
+    "bytes": 742288,
+    "sha256": "D6C22BD0579325467B467A50875485D872746AA27BB51E4657C85E3317D0AE7E",
+    "downloaded_at_utc": "2026-09-09T14:03:51.1814414Z",
+    "validation": "PDF header and EOF verified"
+  },
+  {
+    "file": "03_ICLR2025_LLMs_Know_More_Than_They_Show.pdf",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/a712d461e57201efe35d429a6f1731c1-Paper-Conference.pdf",
+    "bytes": 2668210,
+    "sha256": "FA50705826C77E274B8D4F93E7AEFFDFB1FDB61BD9E8E4CAE383ABFA5F7BFB46",
+    "downloaded_at_utc": "2026-09-09T14:03:53.4323655Z",
+    "validation": "PDF header and EOF verified"
+  },
+  {
+    "file": "04_ACL2025_Knowledge_Boundary_Survey.pdf",
+    "url": "https://aclanthology.org/2025.acl-long.256.pdf",
+    "bytes": 831066,
+    "sha256": "E31C8FFC35EFD98010BBEC642EEEDD8C6D0EBC2CD0F25D2F7C6824C8737E18F9",
+    "downloaded_at_utc": "2026-09-09T14:03:54.8204501Z",
+    "validation": "PDF header and EOF verified"
+  },
+  {
+    "file": "05_ACL2026_Knowledge_Boundary_Aware_Agentic_Search.pdf",
+    "url": "https://aclanthology.org/2026.acl-long.1276.pdf",
+    "bytes": 2357543,
+    "sha256": "734BE35386C9AD5ED3C78D9F603D6947BD87837B638FD73C98C910ACEFBF9872",
+    "downloaded_at_utc": "2026-09-09T14:03:56.8701278Z",
+    "validation": "PDF header and EOF verified"
+  }
+]

@@ -1,0 +1,257 @@
+{
+  "status": "source_protocol_review_only_not_ready_to_train",
+  "method": "MVA author-code structure transfer to the existing public QA development partition",
+  "paper": {
+    "title": "Hallucinated Span Detection with Multi-View Attention Features",
+    "venue": "*SEM 2025",
+    "url": "https://aclanthology.org/2025.starsem-1.31/",
+    "pdf": "https://aclanthology.org/2025.starsem-1.31.pdf"
+  },
+  "source_commit": "f8b871a06b6c18dabe5881bd02a68854b2940b81",
+  "source_files": {
+    "features/optimize.py": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/features/optimize.py",
+      "sha256": "7af26fb2f299a505b3a985c0b827f9a076602615f49530d6769be4930a2fe730",
+      "bytes": 96720
+    },
+    "features/evaluate.py": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/features/evaluate.py",
+      "sha256": "1b4e0d92b69f4a2a14353325abe006843f91242398b14a2d30a203fc85d19039",
+      "bytes": 59656
+    },
+    "Readme.md": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/Readme.md",
+      "sha256": "aa5cfe49dd68d83faf191f08f1ae7eb6eb3766fe34ddb8e75e286d35ee4c9ae7",
+      "bytes": 9417
+    },
+    "features/2_ragtruth_preprocessing.ipynb": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/features/2_ragtruth_preprocessing.ipynb",
+      "sha256": "598925423cf62289b95bec1a180d1e5b028409857fdd21b080af840b8fe6c42b",
+      "bytes": 22538
+    },
+    "features/3_training.ipynb": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/features/3_training.ipynb",
+      "sha256": "a8a8b248e54a3f808215a4bea3aba8ab8784bcab53ab37007519687d6f2417b9",
+      "bytes": 32081
+    },
+    "docker/requirements.txt": {
+      "url": "https://github.com/Ogamon958/mva_hal_det/blob/f8b871a06b6c18dabe5881bd02a68854b2940b81/docker/requirements.txt",
+      "sha256": "150e45b18a7aacc9a018a67bc2b09e9f4ff3c4257fc06ee1b10033dee0c3c235",
+      "bytes": 835
+    }
+  },
+  "execution": {
+    "feature_extraction": false,
+    "gpu": false,
+    "training": false,
+    "sealed_test_read": false,
+    "runner_modified": false,
+    "author_data_contents_read": false,
+    "notebook_outputs_used": false
+  },
+  "scope": {
+    "answers": 3839,
+    "fit_answers": 3680,
+    "cal_answers": 159,
+    "source_partition": "Reuse existing material-group split; this is a task/data interface change from the paper.",
+    "raw_answer_tokens": 708506,
+    "input_model": "NousResearch/Llama-2-7b-chat-hf, existing locked NF4 replay",
+    "paper_feature_models": [
+      "Llama-3-8B-Instruct",
+      "Qwen2.5-7B-Instruct"
+    ],
+    "label_interface": "Map released human answer character spans to exact native answer tokens; preserve untouched existing lexical/window labels separately."
+  },
+  "feature_interface": {
+    "author_feature_order": [
+      "key_avg",
+      "query_entropy",
+      "key_entropy"
+    ],
+    "existing_extractor_order": [
+      "key_avg",
+      "key_entropy",
+      "query_entropy"
+    ],
+    "existing_extractor": "src/mva_attention_features_v1.py",
+    "existing_extractor_sha256": "6b40a1aa6afc31fe13e0da617d1f6b78b45864e49dad94493123e67575692dc6",
+    "pinned_gen_features_sha256": "d04da5ec2e457ed6105bc57a7a73b348274db9834179234cb941722f151eb696",
+    "dimensions": {
+      "layers": 32,
+      "heads": 32,
+      "per_type": 1024,
+      "total": 3072
+    },
+    "conversion": "Permute the second and third 1024-column blocks only; retain type-major, layer-major, head-major order.",
+    "signal_readout": "Keep pinned author-code full-sequence attention statistics at original answer token positions, including incoming attention from later positions; offline.",
+    "lookback_ratio_in_primary": false,
+    "compression_or_pca": false
+  },
+  "preprocessing": {
+    "unit": "One complete answer per sequence; no sliding-window or sentence splitting.",
+    "ignored_label": -1,
+    "ignored_handling": "Delete all -1 positions and corresponding feature rows, then compress the sequence. Not partial-label CRF.",
+    "padding": "Right-pad labels with -1 and features with zeros to the global maximum valid length. Supply both label mask and key-padding mask.",
+    "author_global_max": "Computed from train, validation and test lengths.",
+    "normalization": "Each partition separately, for each type/layer/head feature, mean and sample std over all answers and all padded positions; std==0 becomes 1. Padding participates. No fit-only scaler.",
+    "scaling_uses_gold_values": false,
+    "transductive_feature_statistics": true,
+    "current_scope_difference": "Only fit/cal are available. Do not open sealed test or pretend cal is an independent test. A development-only maximum over available partitions must be explicitly disclosed; final three-partition padding/normalization remains to be fixed before final test opening.",
+    "original_label_builder": "Notebook strips token-space markers and searches the first occurrence of label text in concatenated full input, with hard-coded answer boundary +7. It does not use original label start/end.",
+    "proposed_label_adapter": "Exact existing raw token offsets and original human character spans replace model-specific boundary/search heuristics only. Native labels include punctuation where an annotation intersects; common lexical evaluation keeps old gold unchanged.",
+    "skip_guard": "Original author code silently skips absent/all-ignored rows; interface must inventory such rows and must not silently remove any of the current 3839 answers."
+  },
+  "architecture": {
+    "input_projection": "Linear(3072,d)",
+    "projection_dropout": "p",
+    "positional_encoding": "Fixed sinusoidal encoding, base 10000; added after input dropout.",
+    "transformer_layer": "Bidirectional MultiheadAttention(d,h,p), residual dropout + post LayerNorm; Linear(d,2048), GELU, dropout, Linear(2048,d), residual dropout + post LayerNorm.",
+    "feedforward_width": 2048,
+    "causal": false,
+    "attention_weights": {
+      "need_weights": true,
+      "average_attn_weights": false,
+      "returned_list": true
+    },
+    "output": "Linear(d,2) -> torchcrf.CRF(2,batch_first=True)",
+    "crf_transition_initialization": [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "crf_start_end_initialization": "Library default; source does not overwrite.",
+    "constructor_defaults_not_published_best": {
+      "model_dim": 1024,
+      "num_heads": 4,
+      "num_layers": 4,
+      "dropout_prob": 0.3,
+      "max_length": 300
+    },
+    "pretrained_classifier": false,
+    "forbidden_as_official": [
+      "Our 256-dimensional/two-layer/FFN512 network",
+      "Partial-label CRF",
+      "Additional semantic features",
+      "Class/group-balanced BCE or answer loss",
+      "New smoothing or threshold decoder"
+    ]
+  },
+  "optimization": {
+    "loss": "-CRF(emissions,tags,mask) with library default summed reduction, divided by total valid tokens in this batch.",
+    "source_or_class_weights": false,
+    "optimizer": "torch.optim.AdamW, searched learning rate and weight decay, other defaults",
+    "precision": "Author CUDA autocast and GradScaler; no explicit BF16 conversion; FP32 parameters at initialization.",
+    "batch_size_qa": 64,
+    "train_shuffle": true,
+    "drop_last": false,
+    "accumulation": false,
+    "gradient_clipping": false,
+    "maximum_epochs_paper_and_notebook": 150,
+    "cli_default_epochs": 50,
+    "search_trials_notebook": 200,
+    "cli_default_trials": 50,
+    "search_scheduler": {
+      "name": "ReduceLROnPlateau",
+      "mode": "min",
+      "monitor": "mean batch validation CRF loss",
+      "factor": 0.5,
+      "patience": 5
+    },
+    "supplied_top_parameter_retraining_scheduler": null,
+    "early_stopping": {
+      "monitor": "validation token micro F1 after Viterbi",
+      "patience": 10,
+      "delta": 0.01,
+      "restore": "Last state accepted by delta criterion, not every numerical maximum."
+    },
+    "seed": {
+      "python_numpy_torch": 42,
+      "per_trial_reset": false,
+      "optuna_sampler_seed": "Not explicitly supplied"
+    },
+    "failed_trials": "Author search catches OOM/other exceptions and returns zero. Preserve failures and do not treat an incomplete or memory-restricted search as a full successful reproduction.",
+    "environment_limits": "Docker pins torch 1.12.1+cu113 and optuna 3.1.0; pytorch-crf/transformers are not version-pinned."
+  },
+  "search": {
+    "model_dim": [
+      256,
+      512,
+      1024
+    ],
+    "num_heads": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "num_layers_author_span_code": [
+      4,
+      6,
+      8
+    ],
+    "num_layers_paper_table": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "dropout": {
+      "low": 0.1,
+      "high": 0.5,
+      "scale": "linear"
+    },
+    "learning_rate": {
+      "low": 0.00001,
+      "high": 0.001,
+      "scale": "log"
+    },
+    "weight_decay": {
+      "low": 0.000001,
+      "high": 0.01,
+      "scale": "log"
+    },
+    "objective": "Maximize validation token micro F1; serial Optuna study.",
+    "top_five": "Save five parameter/model records sorted by validation F1. Retraining and evaluation are per-model; no ensemble.",
+    "paper_transfer": "Section 4.3 selects hyperparameters on Data2Text and transfers them to QA and summarization.",
+    "released_winning_datatotext_config_found": false,
+    "repository_inventory_result": "No winning/top5 JSON, trained classifier checkpoint or Optuna database in the locked repository tree.",
+    "author_test_callback": "Evaluates and records test after trials; objective returns validation F1. Must defer this callback in our sealed-test setting.",
+    "proposed_exact_selection_priority": [
+      "Recover the authors' Data2Text-selected parameter JSON and use the original supplied-parameter retraining branch.",
+      "If unavailable, separately reproduce the author Data2Text selection; not authorized/executed in this task."
+    ],
+    "alternate_name_if_qa_search": "MVA author-code QA-search transfer; not exact reproduction of the paper's Data2Text-to-QA hyperparameter selection.",
+    "fixed_config_chosen": null
+  },
+  "outputs": {
+    "official_decoder": "CRF Viterbi decode; binary sequence, consecutive positives form end-exclusive spans.",
+    "tuned_threshold": false,
+    "primary_metric": "Token micro precision/recall/F1: sum token-set intersections and predicted/gold positive lengths over all answers.",
+    "not_primary": [
+      "Exact span match F1",
+      "4-BPE window F1",
+      "Answer-level F1",
+      "CRF posterior AUROC"
+    ],
+    "saved_emissions_warning": "Two-dimensional output logits are local CRF emissions, not marginal probabilities.",
+    "common_task_reporting": "Only after the full method identity is frozen and run: deterministically map the frozen Viterbi binary token sequence to each project 4-BPE window by max over its token positions, then set the common answer score to max over every eligible mapped window. The adapter has no parameters, training, label access, re-decoding or smoothing. Freeze outputs before applying the common thresholds and F1/AUROC/AP; keep native token micro-F1 separate.",
+    "future_context": true
+  },
+  "unresolved_before_formal_run": [
+    "Published Data2Text-selected parameter record is absent; constructor defaults are not a justified substitute.",
+    "Choose and explicitly name paper-parameter transfer versus code-search transfer; do not silently resolve paper/code search differences.",
+    "Lock development-only/final-test padding and partition-wise standardization scope without reading sealed test now.",
+    "Freeze exact raw-token character label adapter and report native token metrics separately from old lexical 4-BPE metrics.",
+    "Original batch64/full bidirectional Transformer and retained attention may exceed 8GB; measure without changing structure/budget or silently selecting only fitting trials."
+  ],
+  "conclusion": "Classifier structure, loss and Viterbi are recoverable. Existing author-code-exact statistics are only MVA inputs. This document is a source-audited specification, not a completed baseline or selected configuration. Formal window and answer scores remain N/A."
+}

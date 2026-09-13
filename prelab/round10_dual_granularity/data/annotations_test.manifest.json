@@ -1,0 +1,7 @@
+{
+  "decisions_sha256": {
+    "data\\annotations\\test_adjudicated.json": "0df950291af6eeb84dc9c8f36b6942cf3993536f13dd0c817dad6c6c018242b1"
+  },
+  "output_sha256": "a14815db4dc597baaceec90fc4d50cfd477dcabb4726684a31bf4051434a796b",
+  "items": 120
+}

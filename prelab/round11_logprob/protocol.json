@@ -1,0 +1,18 @@
+{
+  "schema": "round11-logprob-exploratory-v1",
+  "comparison_status": "exploratory_retest_of_previously_exposed_round10_test",
+  "features": {"nll": 1, "lb": 784, "lb_nll": 785},
+  "primary_method": "lb_nll",
+  "baseline": "lb",
+  "heads": ["item", "token"],
+  "source": "../round10_dual_granularity",
+  "cache": "data/features/{row_id}.npz",
+  "nll": "token_nll; negative natural log probability from preceding position logits",
+  "aggregation": {"item": "mean all overlapping item BPE features", "token": "same token, no future or window"},
+  "C": [0.1, 1.0],
+  "seed": 20260912,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260912,
+  "test_retuning": false,
+  "no_new_gpu_or_generation": true
+}

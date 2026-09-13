@@ -1,0 +1,21 @@
+{
+  "schema": "round13-training-source-diagnostics-v1",
+  "scope": "training-source grouped cross-validation diagnostics; no new deployment or independent-test claim",
+  "source": "../round10_dual_granularity",
+  "granularity": "native token",
+  "seed": 20260913,
+  "outer_folds": "same fixed 5 training-group folds as Round12",
+  "groups_per_fold": {"outer_evaluation": 24, "inner_calibration": 24, "full_fit": 72},
+  "inner_group_order": "sort 96 non-outer groups then numpy default_rng(seed+fold).permutation; first24 calibration, remaining72 nested fit order",
+  "methods": ["lb_c01", "lb_c001", "lb_c0001", "pca16", "pca64", "layer_mean28", "fit24", "fit48"],
+  "C": {"lb_c01": 0.1, "lb_c001": 0.01, "lb_c0001": 0.001, "pca16": 0.1, "pca64": 0.1, "layer_mean28": 0.1, "fit24": 0.1, "fit48": 0.1},
+  "pca": "fit-only base-weighted StandardScaler then weighted covariance eigendecomposition; 16/64 components; no whitening or post-PCA standardization",
+  "layer_mean28": "raw layer-major 28x28 attention heads, average head axis then fit-only standardization",
+  "learning_curve": "24 subset of48 subset of72 fit groups; same24 calibration and24 evaluation; rescale loss weights to full72 token count to hold total loss mass constant",
+  "thresholds": "each method/fold selected only on24 calibration groups by F1, then precision, then larger threshold; no method selection on outer scores",
+  "bootstrap": {"draws": 2000, "seed": 20260913, "unit": "whole question group"},
+  "diagnostics": ["train/calibration/outer metrics", "foldwise and pooled ranking", "within-risk-answer ranking", "FP adjacency to gold spans", "posthoc per-fold oracle-threshold upper bound, never used as deployable result"],
+  "label_review": "30 training asserted answers;3 old-risk and3 old-nonrisk per category with distinct groups; seeded, anonymized, blinded to old labels and detector scores; no relabeling for training",
+  "test_or_original_validation_labels_used": false,
+  "new_generation_or_gpu": false
+}

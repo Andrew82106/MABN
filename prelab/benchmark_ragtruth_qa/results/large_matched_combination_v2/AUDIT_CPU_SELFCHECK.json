@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "synthetic_threshold_ties_and_endpoints": true,
+  "noncontiguous_answer_max": true,
+  "large_predictions_read": false,
+  "models_loaded": false,
+  "new_fits": 0,
+  "GPU_used": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,47 @@
+{
+  "version": "r26-global-local-logodds-v1",
+  "scope": "Repeated R16 actual-train development, not fresh test",
+  "global": "R22 frozen learned answer verifier broadcast",
+  "local": [
+    "slots_base_smooth",
+    "local_mean_fusion",
+    "local_slots_fusion_smooth"
+  ],
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta",
+    "lookback_tuned",
+    "redeep_tuned",
+    "verifier_learned_broadcast",
+    "verifier_learned_slots",
+    "slots_base_smooth",
+    "local_direct",
+    "local_probe",
+    "local_mean_fusion",
+    "local_slots_fusion",
+    "local_slots_fusion_smooth",
+    "slots_base_smooth_global",
+    "local_mean_fusion_global",
+    "local_slots_fusion_smooth_global"
+  ],
+  "alpha": [
+    0.0,
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "formula": "sigmoid(logit(local)+alpha*logit(global)); clip1e-12; alpha0 exact identity",
+  "selection": "Same six alpha candidates per local stream; cal max min(windowF1,answerF1), then windowF1, precision, smaller alpha",
+  "threshold": "Original separate cal thresholds, all-candidate-window max for answer including safe refusals",
+  "new_model_training": false,
+  "new_extraction": false,
+  "all5fold_choices_frozen_before_outer": true,
+  "original_labels_geometry_or_outputs_changed": false,
+  "human_gold": false,
+  "original_validation_or_test_used": false,
+  "interpretation": "Combines two learned risks; scores are not calibrated truth probabilities; no resubstitution fitting."
+}

@@ -1,0 +1,39 @@
+{
+  "version": "qa-full-context-generation-residual-v1",
+  "scope": "Same frozen3680 QA fit and159 calibration, complete input, human labels and4rawBPE metrics as full_context_encoder_v2. No auxiliary9678 and no official test.",
+  "controls": {
+    "fusion": "Actual aligned legacy LB1024 and NLL1.",
+    "semantic_only": "Identical residual architecture and budget, but LB and NLL inputs are identically zero. Extra learned semantic capacity control."
+  },
+  "signals": "Original793 and new3046 uniform Llama-2-7B-chat NF4 teacher-forced replay, source-only post-read legacy LB, selected token NLL from previous position. Same exact original full-string BPE IDs and offsets, no new tokenization.",
+  "representation": "One unchanged ModernBERT token-classifier forward. Map actual two-logit difference and final768 encoder state independently onto original raw BPE using existing nonwhitespace character map. FP32 mapping and fusion.",
+  "residual": "Semantic LayerNorm768→32 SiLU, Lookback LayerNorm1024→24 SiLU, log1p(NLL)→8 SiLU; concatenate semantic32+generation32+baseline_logit1, sigmoid65→1 gate times65→1 residual. Residual weight/bias initialized exactly zero.",
+  "initialization": {
+    "backbone_seed": 20261005,
+    "fusion_seed": 20261006,
+    "rng": "Construct fusion on CPU under fork_rng(devices=[]), seed only CPU default_generator, then move to device. Preserve all backbone/dropout CPU and CUDA RNG states. No reset during epochs."
+  },
+  "training": {
+    "epochs_per_mode": 6,
+    "backbone_lr": 1e-05,
+    "fusion_lr": 0.0001,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "clip_combined_gradient_norm": 1.0,
+    "effective_batch_answers": 8,
+    "microbatch_answers": 1,
+    "precision": "Unchanged v2 BF16 model forward/non-reentrant recompute, FP32 parameters/gradients/optimizer, hidden/logit mapping, residual head and BCE; TF32 off.",
+    "weights_orders": "Byte-identical v2 training_weights.npz and all6 answer_orders.npy; no learned feature scaler.",
+    "loss": "Original token risk BCE*loss weights; each answer sum scaled3680/(actual batch answers*560300); punctuation and whitespace keep original zero loss."
+  },
+  "selection": "Unchanged v2: every epoch full fit/cal; separate cal-only F1 thresholds with precision/higher-cutoff tie; choose epochs1..6 by min(windowF1,answerF1),windowF1,windowPrecision,earlier epoch. Epoch0 not selectable.",
+  "artifacts": "All7 per-mode model+fusion+optimizer/RNG checkpoints, raw token predictions, window/answer scores, thresholds, metrics, time and memory. No overwrite/resume.",
+  "execution": "CPU preparation first. Actual GPU smoke uses fixed longest QA input, zero synthetic targets and no real labels. Root must separately schedule either mode; never interrupt scheduled v2 baseline.",
+  "limits": [
+    "Adds a fully trained semantic checker, not a pure original-generator white-box probe.",
+    "ModernBERT sees the complete answer including future tokens: offline detection, not online.",
+    "Added3046 are texts from other generators replayed in one Llama checkpoint, not those generators native trajectories.",
+    "Comparing fusion with semantic_only isolates availability of generation signals conditional on this common architecture; comparison to plain v2 also changes capacity.",
+    "Threshold/epoch selection reuses development calibration; official held-out test remains sealed."
+  ]
+}

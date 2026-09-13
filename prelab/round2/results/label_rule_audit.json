@@ -1,0 +1,15 @@
+{
+  "reviewer": "Execution assistant, single review; not independent human annotation",
+  "prediction_blind": "No Trivia/RAG probes had been fitted at review time; reviewed only question/reference/response",
+  "rag_review": "First eight candidate-error training responses: found kiss/kissing false mismatch, Natural vs volcanic semantic ambiguity, and many exact-question answer-object outputs rejected solely by format.",
+  "trivia_review": "Fixed seed 481: 15 automatically matched and 15 mismatched heldout responses. Two matched responses were clearly wrong because a question-subject alias appeared in the repeated question; one matched response included an additional conflicting gestation duration; one mismatched response was a nonanswer.",
+  "revisions": [
+    "RAG accepts three answer objects only when the three accompanying questions exactly preserve order",
+    "RAG normalizes Unicode hyphens; simple inflection overlap is ambiguous, not automatically wrong",
+    "Trivia excludes aliases appearing in the question unless the complete response equals that alias",
+    "Trivia excludes multiple-sentence responses and a short conservative nonanswer list",
+    "Before any RAG probe fitting and before inspecting RAG test answers, training-output audit found nine versus9 numeric equivalence. RAG quantity/date/rank questions now compare explicit scalar numbers and common English numerals; 1.5 and15 are kept distinct. Trivia rules are unchanged."
+  ],
+  "remaining_limitations": "Automatic candidate-error labels can still confuse semantically equivalent answers, broad answers, ambiguous questions or bad references with factual mistakes. News released human conflict spans remain the primary factual-localization benchmark. Large-model QA is an additional, separately scoped answer-correctness experiment.",
+  "disclosure": "Small Trivia test labels were inspected for dataset quality before any Trivia probe was fitted. All revised labeling rules apply uniformly to every split and model. The 7B outputs had not yet been generated."
+}

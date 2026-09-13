@@ -1,0 +1,9 @@
+{
+  "test_n": 89,
+  "test_errors": 25,
+  "labels_sha256": "4f7c2e803a1563bdf0fda7e4a0cab7f4eb223aff7d62378802774db1b45c8799",
+  "annotations_sha256": "26a1e198386987d2c3f44f8557f377386f527b9650b3d06021c95a743540857c",
+  "local_label_scope": "RAG answer-content tokens only; news released spans; Trivia has no localization gold",
+  "evaluation_device": "cpu",
+  "linear_token_scores": "naive application of bag-trained classifier, not locally trained"
+}

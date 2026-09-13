@@ -1,0 +1,57 @@
+{
+  "status": "passed_CPU_only",
+  "cohort": {
+    "eligible_relation_pairs": 4704,
+    "material_groups": 3039,
+    "original_answers": 3056,
+    "auxiliary_input_tokens": 7457373,
+    "fraction_of_old_pairs": 0.4687126345157433,
+    "fraction_of_old_aux_tokens": 0.46908357906518716,
+    "cue_counts_descriptive_only": {
+      "negation": 996,
+      "other_author_relation_edit": 3450,
+      "temporal_order": 80,
+      "quantifier": 94,
+      "comparison": 43,
+      "numeric": 81,
+      "causal": 41
+    }
+  },
+  "weights": {
+    "sum": 1.0,
+    "equal_group_mass_max_minus_min": 1.0842021724855044e-19,
+    "answer_mass_max_error": 5.421010862427522e-20
+  },
+  "QA_inputs_weights_orders_byte_identical": {
+    "qa_inputs.jsonl": true,
+    "qa_training_weights.npz": true,
+    "qa_answer_orders.npy": true
+  },
+  "single_variant": {
+    "relation_rank025": 0.25
+  },
+  "runtime_minutes_empirical_estimate": [
+    35,
+    53
+  ],
+  "runtime_basis": [
+    {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\full_context_fava_transfer_v1\\transfer\\complete.json",
+      "sha256": "c418e510ff25a1643afb2b915c36cea6d625e39410eaeae559cb2bfc7d2df352",
+      "aux_tokens_per_second": 8875.018718405461,
+      "QA_three_epochs_seconds": 1156.060353799956,
+      "total_seconds": 1822.3690213999944
+    },
+    {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\full_context_aux_transfer_v1\\transfer\\complete.json",
+      "sha256": "af30e84825ee245c43e9c28de5bb1f70e4b1ea3c2d6eaba7414dd65d930a88fe",
+      "aux_tokens_per_second": 8916.668889970564,
+      "QA_three_epochs_seconds": 1207.8867244999856,
+      "total_seconds": 2234.2718728000764
+    }
+  ],
+  "GPU_used": false,
+  "trained": false,
+  "official_test_opened": false,
+  "baseline_files_modified": false
+}

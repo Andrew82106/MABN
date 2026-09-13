@@ -1,0 +1,77 @@
+{
+  "protocol_id": "CERP-v3.0-native-opcodes",
+  "status": "frozen_before_label_blind_structure_gate",
+  "objective": "Generate local counterfactual repairs directly from physically label-free claim/source pairs for later 4-BPE localization.",
+  "input": {
+    "path": "research/counterfactual_repair_v3/input/claim_source_pairs_fit_label_blind.jsonl",
+    "sha256": "961dee33b57376bfd6e311fc0933e416076bbf28036026d9bd32ad0f04f8eba6",
+    "manifest_sha256": "8ab57ecaf5c31486059ce1920b4b5221657e569fe6e441d9e176ffeb03a780b4",
+    "pairs": 237739,
+    "claims": 34919
+  },
+  "prohibited_inputs": [
+    "v1 or v2 repair candidate pools",
+    "QA error labels",
+    "conflict spans",
+    "window labels",
+    "held-out partitions",
+    "NLI scores or model inference"
+  ],
+  "opcode_rules": {
+    "algorithm": "difflib.SequenceMatcher over normalized lexical tokens with autojunk disabled",
+    "allowed": ["replace", "insert", "delete"],
+    "replace_old_tokens_max": 4,
+    "replace_new_tokens_max": 4,
+    "insert_delete_rule": "Only one or two frozen negation tokens may be inserted or deleted; negation replacements are rejected.",
+    "left_lexical_anchors_min": 1,
+    "right_lexical_anchors_min": 1,
+    "total_lexical_anchors_min": 3,
+    "anchor_radius_tokens": 6,
+    "total_factual_anchors_min": 1,
+    "coverage_metric": "multiset factual-token symmetric F1 between claim and source",
+    "repair_claim_coverage_min": 0.55,
+    "repair_claim_coverage_gain_min": 0.05,
+    "repair_sequence_similarity_must_increase": true,
+    "exclude_citation_intervals": true
+  },
+  "type_rules": {
+    "number": "both blocks are numbers of the same frozen subtype",
+    "temporal": "both blocks are dates/months/weekdays/years of the same subtype; modal may is excluded",
+    "entity": "both blocks satisfy the frozen proper-name pattern",
+    "direction": "both blocks form one frozen opposite pair",
+    "negation": "only constrained insert/delete",
+    "relation": "both blocks contain factual lexical content and trigger no typed mismatch"
+  },
+  "selection": {
+    "max_candidates_per_claim": 4,
+    "max_candidates_per_original_interval": 1,
+    "ranking": [
+      "more factual anchors",
+      "more lexical anchors",
+      "larger coverage gain",
+      "larger repaired coverage",
+      "larger sequence-similarity gain",
+      "lower retrieval union rank",
+      "shorter edit",
+      "stable candidate id"
+    ]
+  },
+  "capacity_gate": {
+    "candidate_count_min": 10000,
+    "candidate_count_max": 139676,
+    "claims_with_candidates_min": 5000,
+    "groups_with_candidates_min": 300,
+    "candidate_types_with_at_least_100_min": 3
+  },
+  "qc": {
+    "salt": "cerp-v3-native-opcode-qc-20260913",
+    "sample_size": 60,
+    "target_per_type": 10,
+    "clear_rate_min": 0.8,
+    "reject_rate_max": 0.1,
+    "labels": ["clear", "ambiguous", "reject"],
+    "decision": "Clear means one minimal, grammatical local edit whose replacement is locally plausible from the displayed source. Full entailment is deferred to NLI."
+  },
+  "stop_rule": "Stop before NLI if capacity fails or research-agent proxy QC is below threshold. If v3 fails, terminate this rule-based candidate-generation route without changing thresholds or inspecting held-out labels.",
+  "next_stage_if_passed": "Prepare a resumable paired original/repaired NLI manifest only and wait for the occupied GPU to be released."
+}

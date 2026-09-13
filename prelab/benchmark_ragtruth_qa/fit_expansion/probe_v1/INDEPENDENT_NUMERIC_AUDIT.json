@@ -1,0 +1,451 @@
+{
+  "status": "passed",
+  "scope": "Read-only CPU audit; no model/scaler/PCA fitting, GPU use or official-test answers/labels.",
+  "counts": {
+    "fit_answers_original": 634,
+    "fit_answers_expanded": 3680,
+    "aux_answers": 3046,
+    "fit_source_groups": 615,
+    "calibration_answers": 159,
+    "calibration_groups": 154,
+    "fit_windows_original": 168123,
+    "fit_windows_expanded": 653979,
+    "calibration_windows": 42241,
+    "raw_tokens_original_exact": 213159,
+    "all_raw_tokens": 708506,
+    "all_windows_aggregation_exact": 696220
+  },
+  "old793_token_and_window_features_exact": true,
+  "same_fit_and_calibration_gold_geometry": true,
+  "fit_calibration_groups_disjoint": true,
+  "original_PCA634_frozen_no_refit": true,
+  "weights": {
+    "original634": {
+      "fit_answers": 634,
+      "fit_windows": 168123,
+      "positive_windows": 21477,
+      "source_groups": 615,
+      "base_mass": 168123.0,
+      "loss_mass": 168123.0,
+      "native_base_fraction": 0.9999999999997087,
+      "base_max_abs": 8.881784197001252e-16,
+      "loss_max_abs": 0.0,
+      "class_factor_max_abs": 7.771561172376096e-13,
+      "group_base_max_abs": 1.7053025658242404e-13,
+      "group_loss_max_abs": 2.8421709430404007e-13
+    },
+    "expanded3680": {
+      "fit_answers": 3680,
+      "fit_windows": 653979,
+      "positive_windows": 58433,
+      "source_groups": 615,
+      "base_mass": 168123.0,
+      "loss_mass": 168123.0,
+      "native_base_fraction": 0.49999999999985434,
+      "base_max_abs": 3.552713678800501e-15,
+      "loss_max_abs": 0.0,
+      "class_factor_max_abs": 4.529709940470639e-14,
+      "group_base_max_abs": 1.1368683772161603e-13,
+      "group_loss_max_abs": 1.7053025658242404e-13
+    }
+  },
+  "scalers": {
+    "original634_hidden64": {
+      "frozen_original_exact": true
+    },
+    "original634_hidden64_risk": {
+      "mean_max_abs": 8.673617379884035e-19,
+      "var_max_abs": 0.0,
+      "scale_max_abs": 0.0,
+      "count_max_abs": 0.0,
+      "fit_rows": 168123,
+      "calibration_rows_used": 0
+    },
+    "expanded3680_hidden64": {
+      "mean_max_abs": 3.469446951953614e-18,
+      "var_max_abs": 0.0,
+      "scale_max_abs": 0.0,
+      "count_max_abs": 0.0,
+      "fit_rows": 653979,
+      "calibration_rows_used": 0
+    },
+    "expanded3680_hidden64_risk": {
+      "mean_max_abs": 3.469446951953614e-18,
+      "var_max_abs": 0.0,
+      "scale_max_abs": 0.0,
+      "count_max_abs": 0.0,
+      "fit_rows": 653979,
+      "calibration_rows_used": 0
+    }
+  },
+  "candidate_checks": [
+    {
+      "candidate": "original634_hidden64_C1e-05",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 5.551115123125783e-17,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": true
+    },
+    {
+      "candidate": "original634_hidden64_C0.0001",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 1.6653345369377348e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": true
+    },
+    {
+      "candidate": "original634_hidden64_C0.001",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 5.551115123125783e-17,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": true
+    },
+    {
+      "candidate": "original634_hidden64_risk_C1e-05",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 5.551115123125783e-17,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "original634_hidden64_risk_C0.0001",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "original634_hidden64_risk_C0.001",
+      "window_count": 210364,
+      "answer_count": 793,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_C1e-05",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_C0.0001",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_C0.001",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 2.220446049250313e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_risk_C1e-05",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_risk_C0.0001",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    },
+    {
+      "candidate": "expanded3680_hidden64_risk_C0.001",
+      "window_count": 696220,
+      "answer_count": 3839,
+      "score_max_abs": 1.3877787807814457e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0,
+      "reused": false
+    }
+  ],
+  "old_replays": [
+    {
+      "C": 1e-05,
+      "coefficients_scaler_exact": true,
+      "window_scores_max_abs": 0.0,
+      "answer_scores_max_abs": 0.0,
+      "thresholds_exact": true
+    },
+    {
+      "C": 0.0001,
+      "coefficients_scaler_exact": true,
+      "window_scores_max_abs": 0.0,
+      "answer_scores_max_abs": 0.0,
+      "thresholds_exact": true
+    },
+    {
+      "C": 0.001,
+      "coefficients_scaler_exact": true,
+      "window_scores_max_abs": 0.0,
+      "answer_scores_max_abs": 0.0,
+      "thresholds_exact": true
+    }
+  ],
+  "coefficient_values_checked": 5439504,
+  "answer_max_checks": 27792,
+  "coefficient_max_abs": 2.220446049250313e-16,
+  "metric_max_abs": 0.0,
+  "thresholds_exact_count": 24,
+  "selected_C_exact_count": 4,
+  "selected": {
+    "original634_hidden64": {
+      "C": 1e-05,
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 4033,
+          "fp": 3024,
+          "fn": 1951,
+          "tn": 33233,
+          "precision": 0.5714893014028624,
+          "recall": 0.6739639037433155,
+          "f1": 0.6185108503949084,
+          "auroc": 0.88307971398184,
+          "average_precision": 0.6398447127828345
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 84,
+          "fp": 15,
+          "fn": 16,
+          "tn": 44,
+          "precision": 0.8484848484848485,
+          "recall": 0.84,
+          "f1": 0.8442211055276382,
+          "auroc": 0.8654237288135593,
+          "average_precision": 0.9277459185729058
+        }
+      }
+    },
+    "original634_hidden64_risk": {
+      "C": 0.0001,
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3921,
+          "fp": 2700,
+          "fn": 2063,
+          "tn": 33557,
+          "precision": 0.5922066153149071,
+          "recall": 0.6552473262032086,
+          "f1": 0.622134073780246,
+          "auroc": 0.8878827925759937,
+          "average_precision": 0.6479303786128384
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 84,
+          "fp": 16,
+          "fn": 16,
+          "tn": 43,
+          "precision": 0.84,
+          "recall": 0.84,
+          "f1": 0.84,
+          "auroc": 0.8667796610169491,
+          "average_precision": 0.928607493608377
+        }
+      }
+    },
+    "expanded3680_hidden64": {
+      "C": 1e-05,
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 4201,
+          "fp": 3463,
+          "fn": 1783,
+          "tn": 32794,
+          "precision": 0.5481471816283925,
+          "recall": 0.7020387700534759,
+          "f1": 0.6156213364595545,
+          "auroc": 0.8854527574907534,
+          "average_precision": 0.6362190540511004
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 83,
+          "fp": 14,
+          "fn": 17,
+          "tn": 45,
+          "precision": 0.8556701030927835,
+          "recall": 0.83,
+          "f1": 0.8426395939086294,
+          "auroc": 0.8703389830508473,
+          "average_precision": 0.9271001823370856
+        }
+      }
+    },
+    "expanded3680_hidden64_risk": {
+      "C": 0.0001,
+      "calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3995,
+          "fp": 2908,
+          "fn": 1989,
+          "tn": 33349,
+          "precision": 0.5787338838186296,
+          "recall": 0.6676136363636364,
+          "f1": 0.6200046558547373,
+          "auroc": 0.8879341840904335,
+          "average_precision": 0.6435457393805415
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 86,
+          "fp": 18,
+          "fn": 14,
+          "tn": 41,
+          "precision": 0.8269230769230769,
+          "recall": 0.86,
+          "f1": 0.8431372549019608,
+          "auroc": 0.8666101694915255,
+          "average_precision": 0.9257572562515559
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The3046 extra published responses reuse615 existing source-connected fit groups; no new independent questions are added.",
+    "MiniCheck is an additional frozen checker; these hidden states are not white-box states of each original answer generator.",
+    "Only already-open development/calibration results are examined. Repeated calibration selection is optimistic.",
+    "This helper checks every final window and old793 token reuse; a separate mapping audit covers additional3046 claim-cache identity/alignment/projection.",
+    "Recorded timestamps/hash chain establish internal consistency, not externally attested historical execution."
+  ],
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\audit_probe_expansion.py": "b293d5ef00d27bfb01e37f093419fd3439974a5621b5125b57f269e7cf9e9c5c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_weights.npz": "a3f40d8aa4c942e7c35ae2944b97b9f3d4d1ff5ecae15ab69793d5eeee5143f8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C1e-05.pkl": "6fd02cf65ce2334a74798a8fa974dad68cd171559e8d13f1cf513bd31a01c425",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C1e-05_scores.npz": "1d315d840d089fc4db716ce8065039417e96e03aa3ccce5ab8b71fc75cb4d006",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C1e-05_result.json": "98c9bd783e0a461e679732251a45382c87ec37d4bf750a363cf7946d16737d4a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.0001.pkl": "ca4256b33636d46e66cf103ee53e939161818862d6fd6080b65c66ff13faa289",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.0001_scores.npz": "6da7ec771276dd81b426dccddf7d040866ca3473808295009cb1a9b906665290",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.0001_result.json": "d018d93b4e013acdc164d3d12c8b4784cbdd7ed80683fdc498dad92a54b94f07",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.001.pkl": "068455593b6191a57fe97dbd927c632b5d772eb1034a2eadac60024bf18325a1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.001_scores.npz": "e83fc55d0c1f4306af46cccfafe452551cde58f3f8307defc07d75d2b92b2bb0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_C0.001_result.json": "fab90bd16ff443447db8da15f822bb406ac69af6aeb711f319f5c0d1223d55df",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C1e-05.pkl": "f0c70742a8f2718cf63c739386d84e652ecd9e35a4acf88d7cc37b5fd2fbd6be",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C1e-05_scores.npz": "07b2478664c9617ee1b8881714ca108bba02a4302c19fd07d70d7ebfc0e1e06f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C1e-05_result.json": "6f30ce69e7dfab52a71170b79a719e8173023d022ca58a35e0225f24ec2eb5c5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.0001.pkl": "66a2cb98332b3b30fada8e571bef30b76a7278bbfc64db7880861f22b0e8e459",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.0001_scores.npz": "23cc010582314dfe626c9b12dad7f5c8949e2cf4be2d785d447aa35ff129ae2d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.0001_result.json": "7984accc5345c3e5d45203174686a1920a9f6b667bbeeca699a03fa3c709a959",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.001.pkl": "f7fec8fa0423d0e421d359a7ed071961ab00c660418512ca4fcd410a5b599167",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.001_scores.npz": "637a42b4742eb6058db1ec2b97a79e08090fbb864fac07034965700a48dc875e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\original634_hidden64_risk_C0.001_result.json": "166ca75dec9bec5a0fc31cd4205d08a49fd2e32772953eb573bea1f41823cb3c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_weights.npz": "4cd9e49e2bf7df873ed9592a9e9ce7221b43a827d0093e905f306c9ee3dd8950",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C1e-05.pkl": "592e4564b0da816294f89632068f476bc44081e069b65c516e9e16c26914d061",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C1e-05_scores.npz": "684025ee214cdf1d6db226508dbf5110dac33c7c01af07f28d53d4e5fd9856d9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C1e-05_result.json": "c24e352f0c029b5280f9523beb518885d32860d8219c9edf8e1cb099ab1bfb9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.0001.pkl": "4cd2c1e51aa578b0d0219e1f864e4719a8c50c871b21e212b2e92502a40016c4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.0001_scores.npz": "ab0883a21e98b70aaf10fd7535fa3b1234cecd82800e88e4530294ce08cfc27c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.0001_result.json": "86954194a3a48b8d36f198642613fe3d348dfa3f3ab63924277fd744477b4caa",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.001.pkl": "f762e82c4481eb74cd396a33ec14c3458f2434f6b590ab5948f2c1b2db84203a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.001_scores.npz": "522055d670240f3fa5f655152e018076cb39e5dad6c4817515912d971c3d6d27",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_C0.001_result.json": "a365ed30f019fadc82b90d2ec4763d4b8568181d1b5a8c7a4aa4c9ea82f5fd47",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C1e-05.pkl": "a9697d3af4043fd6014dbced52e412664dd58da2278714c91e652fa4ff849941",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C1e-05_scores.npz": "046cd69802572aea3fcfa2cf19270f8e1125740007373825a1d4ccb4c1148176",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C1e-05_result.json": "90a4870591acdbd2e1d84a3b0091e3c70348a3c9f51f376dd11d130a42557e03",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.0001.pkl": "4449b899a4c1c000d6bbffc051720a3036f00a87da23f84bf5bc0561bbb57dd3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.0001_scores.npz": "96c287114c3a9967789ac56752af2cfea512059f6afb417ed8195d1428db2c04",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.0001_result.json": "480ba9f1031b3adae1befa4d0e389204965a9bebe5d0308d0f14cf9a125126f6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.001.pkl": "55655cc7dbc6a6143e99796f74235bd59cfab7df631d493d034133ed7d21e76e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.001_scores.npz": "43430ebe1f324c7416c30f6f0854957b886580b05cea7b8f33a31184deefa512",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_hidden64_risk_C0.001_result.json": "4ac7f5a5d34283b866b472ccf10f82032d6f760666f10400b1329c0df9b7bc17",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\summary.json": "726ffb8b6710ae0b349340a26164e3fa52a205f4a33d5d83dfaae4bdd6ef35c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\protocol.json": "0a674dbc1c08dceb5f207cb62442eab3ceed0babdd10c7887a0e5cc4e3448247",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\preparation_complete.json": "cbfa4608cbecb84308d38ad61dc97b3a5a9831ddc0b163fab7310de238f4d072",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\fit_started.json": "0a15449458970e4ff8f24f5b37180d78f74c8d97b23f764a315336b0add813ac",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\token_index.json": "fb5af32803033f9cad1825aaf7a4971f8effb219d0b4087664483816386fe1fe",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\matrices\\token_hidden64.npy": "6fe758e94d94f614edeadba3f9e08543fb20d41903a4298ead0381707bc3cb9b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\matrices\\token_risk.npy": "3bb66493bee1765ace44eddacdf2c43a23b595e03590576839797d9c5b566247",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\matrices\\window65.npy": "0bfd38bab5e1b3ae4ee621b38c34ad464099b912ae9fcd970f7a30ddf901c285",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\minicheck\\inference_complete.json": "059a87fab65a9781bcf10dc8e894fb97cd714ee6aa8fbbaafee39088440b24c6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\minicheck\\claim_feature_manifest.json": "8921a848b6b7239f2c6e5e37b1bf9605ece5b0d33cf180268d72da0ecd8a1182",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\minicheck\\new_plans.jsonl": "cf60714d45850cb1111b75daf66f416ccb4cd92a79339c9dda3f32b12ea6a14f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\export_freeze.json": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\semantic_hidden_v1\\preparation_complete.json": "a32e875544fc68e57154aab9ea7f92084fd9acfc4092cbac8a9da026d6f8a432",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\semantic_hidden_v1\\hidden_pca.pkl": "63a851f006b8d91bfdd88fb4ba9c1671b14902a1f244e870948bbc78c966432d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\manifest.json": "f387ad182267c5c67f0acab816850bcdbef4775c8c16d1739e65c5c72979312a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\additional_good_candidates.jsonl": "ffd2e110645526cc4332b2ea8e5d4696bdf387f76018fbd4be51f8a00a5a1d72",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\fit_source_whitelist.jsonl": "e22e6412ee3455bff7fdcd2b4fbaab2197bf924a657819e23285f9b3c18edfa2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\prepare_expansion.py": "b1c2f68c2cfc308e27cc6cc9d88699be56910cc815ad1f7f32b5347e93c708ad",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_minicheck_expansion.py": "654dcf3b65ae505dc57aa01b4769b8a796cc6148891ddabf79c4e66cdac3ddf8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\protocol.json": "b0554214de688d1dd5f924264b10bf54f506fae8325c28cdf32dc22e4c357a7d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_gold.py": "55e217a2eddf9b443d5dab2547292ac072d451f1dedac148764732be49bf51d7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\run_semantic.py": "24fc06a5d9260eda2fae300acba9c7ac940d8b0b72c739f759bd3e310dc68ecb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\run_semantic_cuda.py": "e29f8df2126c387a33aa5fedff69229a956697dc0a26e974427d5bb8923fc26b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\download_manifest.json": "dc0ac31fd72953c058d008dfda08f20d22198d04530882161a7b4d799e040c4b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\claim_feature_manifest.json": "cd49c44cc41fdcf059773fbafaf3a9da102ccfce7efcbef9210b257353104a41",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\inference_complete.json": "6baced1ff52d4766838ca1bb030c1ea5cd8026bfaea7d8fa318bd32ada0a22aa",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\protocol.json": "2be77d75a4b1fd29c6902b7157d4ced0991b81d465b35b24e4d032f94199596e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\development_manifest.json": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_excluded_fit.jsonl": "f00141eb5954de3c371b45cd67c56c775873742c65c96686f9995a7d99dd9c47",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\calibration.jsonl": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_calibration.jsonl": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_calibration.jsonl": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_calibration.jsonl": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\answers_fit.jsonl": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\answer_provenance.jsonl": "b2ae292e6c7c7d25012fa0d1c8a2693b8b7d7e23dfe885544680d58375d20dc4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\fit.jsonl": "798653054e03343966d426a43764a7320a2b5b16108d27110e6335edb435bef5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\label_conflicts.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\new_fit.jsonl": "5af892c1dcaa22d193693b354affb76540041eeb35778b6d91898b72a0d5bea9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\tokens_fit.jsonl": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\windows_excluded_fit.jsonl": "88de2b92aadcaf499c4e83d4e10cee4563cdb7bafadefc12eac60069053b2b3f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\windows_k4_fit.jsonl": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\preparation_statistics.json": "78d431915620bb2bcb4db8d27c0021b6ee1a028a4894e18e1895ea8802f13fea",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\tokenizer_signature.json": "7ee5b3f5cefe71e36d8e220bbc3741a77396802ff5d0acc31635f0389bfea338",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\minicheck\\reuse_manifest.json": "bb3b38e44bd8f0c61d2280fb43ef59f5e90edea079885de574aa085ff20f8d45",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\minicheck\\storage_estimate.json": "887216a41bb08b5cfc316aa34a43f5e547da228aec0fe62e01ccd74a5e09f76b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_probe_expansion.py": "9f1683f4bfd9fc41add103606bcb259d94c6ca7ce5191bf453a6d6690dcae4ee",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_semantic_hidden.py": "627845fff7bd6944615c13674ae23f04e8b5977f8dfe32382dcf5c5bfd7ae1a9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f"
+  },
+  "seconds": 19.24552319990471
+}

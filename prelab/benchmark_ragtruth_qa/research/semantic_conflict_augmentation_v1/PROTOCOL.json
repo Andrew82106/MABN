@@ -1,0 +1,35 @@
+{
+  "schema_version": "semantic-conflict-augmentation-v1",
+  "status": "frozen_fit_only_feasibility",
+  "purpose": "Auxiliary source-grounded minimal-pair supervision for the conflict sub-head of our method.",
+  "scope": {
+    "input": "data/fit.jsonl",
+    "expected_answers": 634,
+    "expected_groups": 615,
+    "human_labels_used_for_pair_selection": false,
+    "calibration_read": false,
+    "official_test_read": false,
+    "gpu_used": false,
+    "trained": false
+  },
+  "labels": {
+    "supported": "mechanically entailed by an exact source sentence or exact passage identity",
+    "corrupted": "synthetic silver controlled corruption",
+    "human_gold": false,
+    "allowed_use": "auxiliary fit-only training or stress testing",
+    "forbidden_use": "evaluation ground truth or whole-answer correctness"
+  },
+  "types": ["entity", "number", "negation", "temporal", "attribution"],
+  "isolation": {
+    "unit": "split_component_groups",
+    "edges": ["same RAGTruth source group", "entity owner-to-donor group", "shared exact support sentence"],
+    "oof_rule": "For each fixed QA held fold, exclude every synthetic pair whose split_component_groups intersects the held groups."
+  },
+  "planned_stages": [
+    "Frozen NLI paired stress test by type",
+    "Small conflict head with genuine QA gold as main loss and silver pairwise ranking as auxiliary loss",
+    "Group-OOF learned calibration with the incumbent; no unconditional max/OR",
+    "One frozen development report only after fit-OOF acceptance"
+  ],
+  "baseline_policy": "Formal baseline architecture, parameters, training recipe and readout remain unchanged; all baselines use our shared evaluation geometry only."
+}

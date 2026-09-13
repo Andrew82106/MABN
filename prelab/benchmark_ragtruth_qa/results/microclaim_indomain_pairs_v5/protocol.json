@@ -1,0 +1,33 @@
+{
+  "version": "microclaim-indomain-pairs-v5",
+  "purpose": "Add in-domain relation-sensitive ranking supervision to expanded-v4 without changing any gold label.",
+  "source": {
+    "examples": "Only the leading 34,919 fit rows of frozen expanded-v4 examples.jsonl.",
+    "answers": "Only the leading 3,680 fit rows of frozen expanded-v4 answers.jsonl.",
+    "calibration": "Never parsed or used.",
+    "official_test": "No path; never opened."
+  },
+  "pair_definition": {
+    "same_context": "Both endpoints have the exact same source_id, question and three underlying passage hashes, and different generated responses.",
+    "opposite_labels": "Positive endpoint has frozen v4 gold_label=1; negative endpoint has frozen v4 gold_label=0.",
+    "surface": "Deterministic token/character similarity >= 0.52; object-only contrasts require >= 0.72.",
+    "relation": "Require matched subject/predicate anchors or a strong ordered lexical skeleton plus a differing quantity, negation, temporal, source-reference or object slot.",
+    "gold_alignment": "For partial positives, a positive-side changed term must overlap the unchanged risk-BPE terms; no new factual judgment is made.",
+    "ambiguity_filters": "Exclude same-response pairs, normalized exact text with opposite projected labels, low-content scaffolds, pairs without explicit slot contrast, anchor mismatch and partial-label scope mismatch.",
+    "caps": {
+      "per_positive": 2,
+      "per_negative": 3
+    }
+  },
+  "crossfit": "Each pair inherits its single source-connected held_fold. OOF model f may train only on pairs whose held_fold != f; full-fit uses all pairs.",
+  "proposed_loss": {
+    "base": "Unchanged expanded-v4 weighted BCE over all training microclaims.",
+    "ranking": "Weighted RankNet softplus(risk_negative - risk_positive), with equal source-group mass then equal pair mass; weights are recomputed inside each OOF training split.",
+    "single_candidate_weight": 0.25,
+    "epoch_objective": "mean_weighted_BCE + 0.25 * mean_group_balanced_pair_rank_loss",
+    "endpoint_inputs": "Reuse each endpoint's unchanged expanded-v4 top-2 cross-encoder input."
+  },
+  "evaluation": "Unchanged v4 fit-OOF thresholding and calibration evaluation; this artifact performs no training or scoring.",
+  "baselines": "Untouched.",
+  "GPU_used": false
+}

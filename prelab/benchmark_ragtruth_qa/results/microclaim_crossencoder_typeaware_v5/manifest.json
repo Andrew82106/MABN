@@ -1,0 +1,21 @@
+{
+  "version": "microclaim-crossencoder-typeaware-v5",
+  "status": "CPU_prepared_checked_tiny_passed_fold0_GPU_pilot_not_run",
+  "files_sha256": {
+    "protocol.json": "61815a79ea8a3f2fa672931626c128785a58876359e2420b8cdae9e4044e56d8",
+    "type_examples.jsonl": "6fd3728baeebce3e86f18066760c58ba5126a1030255eef337ba6a6901d2f928",
+    "type_labels.npz": "1b9b82f84ac9490da52cb20135fcc6f99aa829c6a596800b2b6cefe3e778db82",
+    "TYPE_COVERAGE_AUDIT.json": "2645c42bbbeee1c863edddd51a6f8b927f2763238d8be80ce03fe31c70185fb8",
+    "FOLD0_GPU_PILOT_PLAN.json": "f9c3475d38459a6fdfe2639f096075889ae614a7ce88136d2bcd7428a166f6fe",
+    "preparation_complete.json": "c20e4943da365345699a48818767cf417feabb74697938ab3a4767b7f38cbc9b",
+    "CPU_CHECK.json": "495187da227f786c7ca36aa69bd3ef089c9077634cc023a7596d8e4fe213547c",
+    "CPU_TINY_TRAIN.json": "2ea576eb95d53f1a41d6cc9d475099ba14fb774d85d9cce1b428697fda6afe71",
+    "REPORT.md": "00516c2c4af5203fc2701f73671ca07bc03717203a28819b736d8e0e642ce7ef"
+  },
+  "source_code_sha256": "15a761fef83904d597b82f3dc7e81124737487cba3fa69421a473906799a8e86",
+  "calibration_rows_read": 0,
+  "calibration_labels_used": false,
+  "official_test_opened": false,
+  "GPU_used": false,
+  "baselines_modified": false
+}

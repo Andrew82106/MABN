@@ -1,0 +1,193 @@
+{
+  "status": "independent_fold0_pilot_audit_passed_stop_candidate",
+  "training_integrity": {
+    "warm_start_exact": true,
+    "train_pairs": 5348,
+    "held_pairs_excluded": 1289,
+    "held_claims": 6983,
+    "BF16_forward": true,
+    "calibration_labels_used_for_training_or_selection": false
+  },
+  "metrics": {
+    "candidate": {
+      "microclaims": {
+        "threshold": 0.980021059513092,
+        "n": 6983,
+        "positive": 703,
+        "tp": 386,
+        "fp": 308,
+        "fn": 317,
+        "tn": 5972,
+        "precision": 0.5561959654178674,
+        "recall": 0.5490753911806543,
+        "f1": 0.5526127415891195,
+        "auroc": 0.8835855886057025,
+        "average_precision": 0.5205507166389508
+      },
+      "windows": {
+        "threshold": 0.9846397638320923,
+        "n": 132213,
+        "positive": 11734,
+        "tp": 6937,
+        "fp": 5242,
+        "fn": 4797,
+        "tn": 115237,
+        "precision": 0.569586994006076,
+        "recall": 0.5911880006817795,
+        "f1": 0.5801865094300171,
+        "auroc": 0.905653846492782,
+        "average_precision": 0.5654827742800027
+      },
+      "answers": {
+        "threshold": 0.95355224609375,
+        "n": 747,
+        "positive": 230,
+        "tp": 181,
+        "fp": 124,
+        "fn": 49,
+        "tn": 393,
+        "precision": 0.5934426229508196,
+        "recall": 0.7869565217391304,
+        "f1": 0.6766355140186916,
+        "auroc": 0.8259524009755277,
+        "average_precision": 0.660073671521898
+      }
+    },
+    "v4": {
+      "microclaims": {
+        "threshold": 0.6480876207351685,
+        "n": 6983,
+        "positive": 703,
+        "tp": 472,
+        "fp": 379,
+        "fn": 231,
+        "tn": 5901,
+        "precision": 0.554641598119859,
+        "recall": 0.6714082503556188,
+        "f1": 0.6074646074646075,
+        "auroc": 0.9152166329923621,
+        "average_precision": 0.6482768492003093
+      },
+      "windows": {
+        "threshold": 0.8502532839775085,
+        "n": 132213,
+        "positive": 11734,
+        "tp": 7259,
+        "fp": 4321,
+        "fn": 4475,
+        "tn": 116158,
+        "precision": 0.6268566493955094,
+        "recall": 0.618629623316857,
+        "f1": 0.6227159646564296,
+        "auroc": 0.9282869926602688,
+        "average_precision": 0.6390503697171015
+      },
+      "answers": {
+        "threshold": 0.8745519518852234,
+        "n": 747,
+        "positive": 230,
+        "tp": 148,
+        "fp": 47,
+        "fn": 82,
+        "tn": 470,
+        "precision": 0.7589743589743589,
+        "recall": 0.6434782608695652,
+        "f1": 0.6964705882352941,
+        "auroc": 0.8553864267092759,
+        "average_precision": 0.7540429234080726
+      }
+    }
+  },
+  "delta_candidate_minus_v4": {
+    "microclaims": {
+      "f1": -0.05485186587548796,
+      "auroc": -0.031631044386659646,
+      "average_precision": -0.12772613256135845
+    },
+    "windows": {
+      "f1": -0.042529455226412494,
+      "auroc": -0.022633146167486795,
+      "average_precision": -0.07356759543709879
+    },
+    "answers": {
+      "f1": -0.019835074216602466,
+      "auroc": -0.029434025733748204,
+      "average_precision": -0.09396925188617455
+    }
+  },
+  "diagnostics": {
+    "candidate_score_by_label": {
+      "safe": {
+        "mean": 0.21919989486994151,
+        "p10": 0.002532507898285985,
+        "median": 0.05649596080183983,
+        "p90": 0.8711942076683047,
+        "p99": 0.9992524981498718,
+        "above_0.95": 0.07006369426751592,
+        "above_0.99": 0.03805732484076433
+      },
+      "risk": {
+        "mean": 0.794899453236132,
+        "p10": 0.13489589393138887,
+        "median": 0.9879218935966492,
+        "p90": 0.9996748924255371,
+        "p99": 0.9999586248397827,
+        "above_0.95": 0.6145092460881935,
+        "above_0.99": 0.48079658605974396
+      }
+    },
+    "v4_score_by_label": {
+      "safe": {
+        "mean": 0.11362939842123289,
+        "p10": 0.0030703359749168157,
+        "median": 0.01922871731221676,
+        "p90": 0.3801064759492889,
+        "p99": 0.9224348723888398,
+        "above_0.95": 0.004299363057324841,
+        "above_0.99": 0.0
+      },
+      "risk": {
+        "mean": 0.6847475559605023,
+        "p10": 0.08801595866680145,
+        "median": 0.8634940385818481,
+        "p90": 0.9772751450538636,
+        "p99": 0.9914176607131958,
+        "above_0.95": 0.23470839260312945,
+        "above_0.99": 0.021337126600284494
+      }
+    },
+    "held_pair_order": {
+      "pairs": 1289,
+      "candidate_accuracy": 0.8634600465477114,
+      "v4_accuracy": 0.8836307214895268,
+      "candidate_margin": {
+        "mean": 0.49918461593010305,
+        "p10": -0.01808798313140866,
+        "median": 0.6589778661727905,
+        "p90": 0.9881769418716431,
+        "p99": 0.9985781145095826,
+        "above_0.95": 0.2117920868890613,
+        "above_0.99": 0.08688906128782002
+      },
+      "v4_margin": {
+        "mean": 0.4835313808207622,
+        "p10": -0.010340372473001472,
+        "median": 0.5772532224655151,
+        "p90": 0.9352840065956116,
+        "p99": 0.9688130807876586,
+        "above_0.95": 0.05973622963537626,
+        "above_0.99": 0.0
+      }
+    }
+  },
+  "pilot_gate": {
+    "pass": false,
+    "reason": "Candidate loses window F1, AUROC and AP and also loses held-pair ordering versus its v4 warm start."
+  },
+  "remaining_formal_models_started": [],
+  "calibration_answer_rows_parsed": 0,
+  "official_test_opened": false,
+  "formal_baselines_modified": false,
+  "fold_complete_sha256": "c3645c67b9fb3eab088b57390686d100f1c613a4cd6b44b715bd6d40f77cc8b6",
+  "predictions_sha256": "33a8278a767bb5d559209aaaf909fbe7da2bd91db4c2a239543effa7856a2de2"
+}

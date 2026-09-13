@@ -1,0 +1,20 @@
+{
+  "status": "passed_independent_label_free_cpu_audit",
+  "answers": 793,
+  "scored_claims": 8845,
+  "discarded_nonlexical_claims": 7,
+  "pairs": 51953,
+  "available_sentences": 11341,
+  "lexical_BPEs": 174518,
+  "max_BM25_numeric_abs_error": 0.0,
+  "exact_claim_text_spans": true,
+  "exact_passage_and_sentence_coordinates": true,
+  "independent_BM25_top2_exact": true,
+  "independent_token_claim_owner_exact": true,
+  "input_sha256": "aaad043a5ecae7ff881758cc7b0717b2771168c8473a3f84096045f7fe151408",
+  "runner_sha256": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+  "annotations_accessed": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

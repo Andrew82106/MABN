@@ -1,0 +1,438 @@
+{
+  "status": "passed_with_provenance_limits",
+  "utc": "2026-09-11T23:50:18.602521+00:00",
+  "blockers": [],
+  "new_source_branch": {
+    "answers": 37,
+    "claims": 387,
+    "pairs": 1161,
+    "disjoint_from_old2084_claims6252_pairs": true,
+    "pair_softmax_max_abs": 8.748815805148524e-08,
+    "all210364_new_window_feature_rows_exact": true,
+    "all_common14_prefix_of_gap15_exact": true,
+    "anchor_response_id": "16023",
+    "anchor_record": {
+      "response_id": "16023",
+      "logit_max_abs_diff": 0.0,
+      "support_max_abs_diff": 0.0,
+      "passed": true,
+      "reference_sha256": "5a63b425877a892a7e83498e904235ead8d2167a8ed38e840f4fa9aee3fcdcb6"
+    },
+    "anchor_was_hash_bound_not_reexecuted_by_auditor": true
+  },
+  "weights": {
+    "fit_windows": 168123,
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "fit_label_counts": [
+      146646,
+      21477
+    ],
+    "base_max_abs": 8.881784197001252e-16,
+    "class_factors_max_abs": 7.771561172376096e-13,
+    "loss_max_abs": 1.9984014443252818e-12,
+    "base_group_mass_max_abs": 1.7053025658242404e-13,
+    "base_answer_mass_max_abs": 1.7053025658242404e-13,
+    "loss_group_mass_max_abs": 2.2737367544323206e-13,
+    "loss_total_mass": 168123.0,
+    "expected_loss_mass": 168123,
+    "formula": "b_i=(N/G)/(answers_in_group*eligible_windows_in_answer); f_y=sum(b)/(2*sum_class_y(b)); u=b*f_y; loss_i=(N/G)*u_i/sum_group(u)."
+  },
+  "families": {
+    "lookback__any_source_control": {
+      "width": 14,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.001,
+      "cal_window_F1": 0.6477487703367385,
+      "cal_answer_F1": 0.867579908675799
+    },
+    "lookback__inherited_source_gap": {
+      "width": 15,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.001,
+      "cal_window_F1": 0.6475571018000302,
+      "cal_answer_F1": 0.867579908675799
+    },
+    "harp_claim__any_source_control": {
+      "width": 14,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.01,
+      "cal_window_F1": 0.6796085092615061,
+      "cal_answer_F1": 0.8686868686868687
+    },
+    "harp_claim__inherited_source_gap": {
+      "width": 15,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.01,
+      "cal_window_F1": 0.6797153024911032,
+      "cal_answer_F1": 0.8686868686868687
+    },
+    "semantic_claim__any_source_control": {
+      "width": 14,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.001,
+      "cal_window_F1": 0.6606973058637085,
+      "cal_answer_F1": 0.86
+    },
+    "semantic_claim__inherited_source_gap": {
+      "width": 15,
+      "fit_only_scaler": {
+        "mean_max_abs": 1.8107737531636303e-13,
+        "var_max_abs": 5.3540505362548174e-14,
+        "scale_max_abs": 6.300515664747763e-14,
+        "weighted_count_max_abs": 4.898174665868282e-08
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.01,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        },
+        {
+          "C": 0.1,
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "stored_answermax_exact": true
+        }
+      ],
+      "selected_C": 0.001,
+      "cal_window_F1": 0.6606973058637085,
+      "cal_answer_F1": 0.86
+    }
+  },
+  "matched_gap_minus_common_cal_F1": {
+    "lookback": {
+      "window_F1": -0.0001916685367082671,
+      "answer_F1": 0.0
+    },
+    "harp_claim": {
+      "window_F1": 0.00010679322959716853,
+      "answer_F1": 0.0
+    },
+    "semantic_claim": {
+      "window_F1": 0.0,
+      "answer_F1": 0.0
+    }
+  },
+  "coefficient_candidates": 18,
+  "scalers_checked": 6,
+  "max_coefficient_abs": 2.220446049250313e-16,
+  "thresholds_exact": 36,
+  "selection_keys_exact": 18,
+  "selected_Cs_exact": 6,
+  "metric_blocks_checked": 72,
+  "max_metric_abs": 2.220446049250313e-16,
+  "window_scores_replayed": 3786552,
+  "answermax_checks": 14274,
+  "denominators": {
+    "fit": {
+      "answers": 634,
+      "positive_answers": 328,
+      "groups": 615,
+      "windows": 168123,
+      "positive_windows": 21477
+    },
+    "calibration": {
+      "answers": 159,
+      "positive_answers": 100,
+      "groups": 154,
+      "windows": 42241,
+      "positive_windows": 5984
+    }
+  },
+  "complete_sha256": "d1739b8bd2fb68e203c9999b453a8c3888db9672debe0b33492b6499c4c0ae01",
+  "script_sha256": "0e4f4b21a03911a6bae507d4b08246f69bbd73fc3f51fe574e7831dc94b7e702",
+  "verified_files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\summary.json": "600be95ec0d344ed241946baee5a79fbd46f1e48065f74c15529ea1f7a75f3f8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\protocol.json": "25944e7b43ab40d60fe2066f23d3e7f0398c6583734146ea757628eb1b200aa1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\train_citation_heading_semantic.py": "09f83d1539dbaa1e5f3ec4361ee10348018526b75a9ccb31e0baee9dd23473f1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_completed_score_fusion.py": "c811a0eba795188a7565b54ce3d2ea80561154fd03bf873d0b6e49d17696ab5d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_citation_heading_semantic.py": "b44fe4abf0a056046647dbe5546b241191fc00c42d708ece6bebf5c39fb6ac89",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\preparation_freeze.json": "dbceeb017e4625bf88e8706a2bcf2829655e924e8b6316346610384aea847544",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\training_protocol.json": "a7b403b8b7e5db70b15fd8b16c68dadeaac320a484a1fc474fd0fee02d39b782",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\complete.json": "7c5f88872df74691a3cde83a5540d46f92ff0b772a246f6ab837bf9527a3eeb0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\summary.json": "01b1db8f525a6dbca031325d9ffe22775d3528271af01546a42891c78dd49059",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\features_complete.json": "87014d483c73e53e820d066bbbd5a339d2ab27ced1deb9cd831deb65bd3cfe94",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\complete.json": "55cd0e6a72d54aaad1c3e61f1acfb9087be2c279062afe4f807f4f6578ce5cb5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\complete.json": "76bd370540f64e40a23e3d1aa151ae606e66495b7f4066cda8ad5d67ba7429ae",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\CPU_SELFCHECK.json": "36fc14404000e6c84228af02830130292ffba9e7e5626d74d6fc34dc1a7ed83f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\PREVIOUS_SCOPE_REFERENCES.json": "7a70796d3ee408c8cb012de99e8aaaed5a44b3010659943540adcc1fdd7432ed",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\design_freeze.json": "c65b3b77c7647fd3f4a03baf764d6dbfa2546afce85bfcb77e3b2f471dc8bd08",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\features_complete.json": "cd27d2f82ea502c292672c02f5dd3bce5e8883309b17dcb33ed048888c94aa2b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\lookback_controls_v2\\audit_lookback_controls_v2.py": "dc5f32fed2666604907e2474fdb6a9bec46b30f4953b1109b43112c6494414eb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\pair_plans.jsonl": "623308131214cbcf0381bf7794307aba65963801d309af46ed137afdaedb65b9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\claims.jsonl": "d406f71a5945247db43e1f763b20933b5267fd6a9426bf2c5659bace85dd0251",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\window_geometry.npz": "daec322d23b153677a118f44842fbc05e06c2b8a4391b192defacb8be8d8081d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\feature_names.json": "2585aa134a42bcc75fdbb03d3a7d863779533011fcad5f59bdea47ddc2966c62",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\geometry.json": "d00bc2e952e0ce996294a37a01e5d3277c0774c93189cf77e13befc6870549cc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\protocol.json": "0c448896f1f965174013e3aca9bf1a37a442b6e5e772ddd28277261e7ff04669",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\CPU_SELFCHECK.json": "333a970590ecb7016f42b3ce645d5522e81d24deff0b91611022ac8334fbb634",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\preparation_statistics.json": "680c3c3b092a4101551834f70b8c8a30433028108df87e9975c90f2f64d9d4cb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_cited_source_semantic.py": "284c30a7ddc0a6d69d6f4404ed54fb0b0305a69ab5d753f311bd1871ed90482e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_citation_alignment.py": "50238f798a3ae7e361cfe74a94350763a5e865654fb9a4a072dc9ba6c3901843",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\run_semantic.py": "24fc06a5d9260eda2fae300acba9c7ac940d8b0b72c739f759bd3e310dc68ecb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\run_semantic_cuda.py": "e29f8df2126c387a33aa5fedff69229a956697dc0a26e974427d5bb8923fc26b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\download_manifest.json": "dc0ac31fd72953c058d008dfda08f20d22198d04530882161a7b4d799e040c4b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\scores\\16023.json": "5a63b425877a892a7e83498e904235ead8d2167a8ed38e840f4fa9aee3fcdcb6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\inherited_claims.json": "e29991aff8c8ab671a5c60e3e4cbf95c4c3fa286066d664d67d6314db273f002",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\window_features.npy": "fdf66ab47dc6520af05937aaaf3a7b46e2c16c1b000bcfe0d073ad90ba17ff00",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\geometry.json": "511d37f5725edf97e4b0e83545b44d67c7097d92c803f96d4720549085260a91",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\design_freeze.json": "24add5ceae910f7d72f6d28823832fc36d961978ad30cec9e0af1128ffd02fa6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\cited_source_semantic_v1\\preparation_freeze.json": "7e00adc4f6d53f4b9a966157af43f8d5e17ea7b57b18ea729b29d003d83b1bf6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\cited_source_semantic_v1\\claims.jsonl": "c24ccdaf08b2334d9b7fb2624f1a498fbe98331e18afd41ad884c72212d7bcf4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\cited_source_semantic_v1\\pair_plans.jsonl": "b0f51e01aee075bfd29e71b7f74c037f0cf72918fc517385668bb504f8700788",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\cited_source_semantic_v1\\window_geometry.npz": "daec322d23b153677a118f44842fbc05e06c2b8a4391b192defacb8be8d8081d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\cited_source_semantic_v1\\geometry.json": "71cd0392e03f8ee159f9092b48e662d6f7611556f7e5462064add280e2ff4bf5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\calibration.jsonl": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\features.npz": "36c6d902a6b8ba1a9761ffa61582ae50fe115a61ac7b2af5070d0ddbaf2fc24c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\window_features.npy": "c227c3607de03cf705bbfd2cb3c0a2b7039e35a9979afe34d3a769d96e57a0dc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\feature_names.json": "201473dd571124fb003340ed693d043c060a2ae433ed297b8404e4a0eb66bec3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\claims.jsonl": "67d7684d6464b4f7d1afbe2e846294a53e6f72169cd8054fb90d93c3d1bf13d3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\geometry.json": "8669cd21a31e325bf7956af52ffe29c48458d306d65cfca4eabbf9416051c86c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\protocol.json": "62e3600036f63be5a1839380bfdf5bbd896a18357f6c2aa50714c67aa8a3d80f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_alignment_v1\\design_freeze.json": "9763fba9d8abef76f35a1ce55de66dded32a31bda079a0c60b2f02e56197dbff",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\feature_names.json": "17233487be8cd57d17c66d5b9c5dbe151bde277555e91cb60ae716a36be60441",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\coverage.json": "7cac4e0aaceb74444d46492e08b628f4eff812cfef3d8d06589af065b7ea8956",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\window_features.npy": "adae11d36ca4d9983381915ab92c48f68a674869bff9702fcade2c909f04b5b5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\features.npz": "ed574d56c7cfd9440651e4dc3d153d4e8bdf29ec2e195ab115a1d6670d965ec9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\export_statistics.json": "6982323a56490f68b272a3f713ac3394111958a98ce11407896d6c6a71afed40",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\inference_complete.json": "58fcebcd1c33119aa1982c1c658f309534832932db7e7cb1d989810e2205ff18",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\numeric_agreement.json": "2ecf945e7c7c1fb9008147715f3c015d3fee0dc6c870180170db1e443d253940",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\16185.json": "d7dc8ac2331d184d2daa6b9f35b65f469f2a224b8e7b620e4a585a73789e1330",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\16737.json": "96cf2df1ce937f8b37f69edde14aff2d2681b35b4873c5219db11d2126d9f701",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\16749.json": "a7601fb3fa582a79f500c19b6e550bc5e9699922b07e46d0b08e72be1854c12e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\16779.json": "c2637198275c8b2fa0b80e35936832d4ae022e7bedf7701d9a558f9ee83dc324",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17025.json": "10144acc7e76af46a5429dc74164d1597b187207bed044a72f0d0f61945be932",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17145.json": "39b5b3e4d41414b04193aa14c040fad2c52e3f34ea286c199bab939940c5f1ce",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17157.json": "8cbcfcede3176be6106bcaee2c72ce82da56cb56cbd82994d8fbe67ee89dafa7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17187.json": "1ca1fe715888243ca37e7144453b05c7ad373c734d74192115e5188e68d7d49b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17229.json": "6c3c514ac3ec104b64f238b4840e72afe2c26f1377ced9e14112e07b6cc468ed",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17343.json": "f288f83cf0f9d9362fbb69615e3260c1c8925c2b4b901ece5945f050e636f3d5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17349.json": "e8e74ccdca20d4eab33ed8d327272bb78decacfe2925c6a50928cbd29f162da8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17451.json": "cfb67cbc96aaa26a2b450c5afc61f59000545c811d5c3b199da8f4698cc401ad",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17487.json": "74fb1a52529b6aefa3945a89af1920d74998807367779c10268a16ca484c7ef1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17529.json": "5e545fb62b12920077e62608cf179b757ac7cbeedb2537378afce139f0842fbe",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\12213.json": "71439d476c60627b0b6df75f80003ba94af6780690fe4d7b464f8c490a73f85b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\12981.json": "9051fac213ca3349cce38c4b84afb68978100dc970cd5a7839b76edb6bd44cf9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13023.json": "a1bc9f9318f5efcde0dccaea6f156899bf73f14941315f840edd4a48b807b8ed",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13149.json": "18b52c35ed532eedf8068700c27c375938b93d5e2d5b8011b5c4d167c16cefd1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13173.json": "e0e2927cb79a10e90ba49ce0e0dffc0b887d9fba96f4b218882408869292ce73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13359.json": "e5dc1fff7a5c23327dc95123b075356911235fe0f9dd40cc28194911d55c1dbc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13401.json": "8061e53f0e5925ab476e5e7e9c0e30641c6e3afffaba46abd04ec1831913185e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13629.json": "3b3d4d8de71858fb40091a1e6c44d296284c864c9248454b75558afa97af8eee",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13761.json": "4ec670add723f4a5ed5af3063112013cfc70d5d3576bc5941a02ca7e071db8c2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13767.json": "ec166e2b47d513d0fac9ce79981151fd74d966c1adf4d1d29fa684977b07c22f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13827.json": "10ce9f3cf9a0de7e56632b4a58ca52d686f026b553d6f03572aea1e8292212eb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13899.json": "e550afe33cae4b2715761e623fd32b2d8b8b936635e52f2b3c1e2f7253ae1831",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\14877.json": "d4e81ab6652a004dedc55aa68a9b924152fa7c3d2621f88866451279ff84d320",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\14895.json": "c12e47de9d3844d3d585873e3950badfe074b871d6477902fd7ac34b83c33ea7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15135.json": "b65dda3963d9eeeb0f34ae7f7631df6ce1da374bc535820b62563c1533e585d7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15645.json": "7847399fdc67ed5a3d1952641a38750cab684c5ab6b516c23f0dd76c30231719",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15657.json": "9052c46d0fc94976697cf26db8d379b861baf73babc84d4cf7f3fc9c5f43d454",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15669.json": "f406acd6f06680f200c9755ea0da63f4e7f4d13835ba5ca2a513897f6007ecff",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15999.json": "466af552ef5e865256b13e7409ac5b950a5b72721979a88e230ce65b01c8750b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17499.json": "290514f007c49dc7f3a1b137af220350d8c35772b97d36c5283bfbf042300220",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\17739.json": "aa3b911198736fc9cd7bc02b5378d89e4fb86422587432104335cfbdd55f15a1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\13389.json": "7b67869f2065c1e9f6bf5884dc48ebc4cf0369f951962a850a119c9c764f3b7b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_v1\\scores\\15693.json": "66bde35c83e3a62161edf3ded9faf7a7bf3e9c1ca6d504f8f894f5800e5ddde1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.001.pkl": "a6fee3303cb39b22218c0223034646ac0416f8b82bb237960e339a0149efa24f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.001_scores.npz": "f415ee171fb8585779fb4bd4c2236e6d47d1fb9e1439469666e70545ae72aa17",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope_scaler.pkl": "2629bed547183f4e430df549935029fb1c20bffbd8a6a026c94e4f798664f071",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.01.pkl": "73bc373458af891522d26efcf263a0ea79ef6afacbc709e5a4b3c21bf4774021",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.01_scores.npz": "c95755f681f19ee8e5046ed050228b6444bf4024d0f72a5fdb430bbb201e7602",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.1.pkl": "5fc6c675081878b866d47b2944ffc537bcd0a6b164763752b3be588209fa837a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\lookback__heading_scope__C0.1_scores.npz": "86b3e752fa59657286061ad53b086d2027f50bff9b666620aa405fad04ba1359",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.001.pkl": "55539b95d9f11ed0ff1a74edc6e248fbe16c24c13fd99f8551d5c483054e1b6c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.001_scores.npz": "421f065f26686f51c4ac524cc43d372a011dd0a7ad5eb31bb346df74cc9f80e9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope_scaler.pkl": "e821ffd7b9238eb0386b20ee841529c70206f920c156fe9118e8ebad97cadc13",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.01.pkl": "5bad110091600326aabaafda775b7594eaeff1e646d834c830143fadbfddd37e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.01_scores.npz": "58876a94c5c718995d3ad8993dc9456ed64b3eb189ba3741a50e462ece3e8dc2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.1.pkl": "a796f3a98d85991316eb2f6dede7b2d5e619fe0e709abc746e484919d3f18bdf",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\harp_claim__heading_scope__C0.1_scores.npz": "85c84e22b53e7118258b8642eefedb2589dd7be3dec96834910720d4d391f086",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.001.pkl": "da116c871570a15a52bbccad12b82014b5bbe77eba968754147c3f2afd77545b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.001_scores.npz": "735037674234a40910e5d9cf75058ccab9e00e37454414a3a8b8531b3a4141c0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope_scaler.pkl": "bda662fec855fceaf5f603e391c75c8b48aba9363cd01570cf42a99bcbf26c7e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.01.pkl": "da6bf290fabd83e03e8c41afcd1bd0d735c78ce50f2d850e70ebdec4b4e4e8a7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.01_scores.npz": "18485718e5a552507267e4df23f5874727e39f9b5a363108f58f3ba2d4929c4a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.1.pkl": "a240f756484d8f3de76f322e576fdeb7c261990970ee0791d065c847aeeb08c1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_scope_v1\\semantic_claim__heading_scope__C0.1_scores.npz": "ed961bdebbd802dcf8dc93b3a58d2105db00bf1f786e6ef9a8426df314f0a759",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\summary.json": "6eb1efe044371ba5cbf89755e142a39f7049665d7840ff120c5860675326dc60",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\lookback_tail0_scores.npz": "0a3ae4ab215c2b396660d69d00fd5e59fe585385f310ef1833d366da21bcf44f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\lookback_tail1_scores.npz": "41c21af27c7a88f76006979db1d6d06c8045efe7be85d4bb6e64bbad34231dd0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.001.pkl": "f58ee29dfdd1bf9b19e0aed9675dcf650723fe6a6e2f9c29cac563564ddacef3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control_scaler.pkl": "1a8ccbb36d410ce4a58b63b5b1917047711e4d4f794cde50d25473bcac5d3fa9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.001_scores.npz": "32c269cddcd44bb56179ef8b32561ddaef3f34f6a8141fc05e4bc3dee07c84fd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.01.pkl": "04e1ef65d0a5b89cd7d0baf7e6cb938d0115eb1e0dc626cf7e534aae716697ea",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.01_scores.npz": "7db206bc6a09f3e38025060968b0c61bd6dd771c6e4ba027424b1bd2dbd7c64f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.1.pkl": "b1694dcf74a1439a3b1ad32a2a6ecfb8b49b8c4585e1f897ba0e74085ff4e61a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__any_source_control__C0.1_scores.npz": "2fe08f0b5a36acb2e2975f43b16a6637d075f4cc55e7fda6607f8cdbc9359c15",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.001.pkl": "83eff16dd95616ab4680fff15d5de838cfd7ca9e4f34d2e7678774ff9c7b2eb7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap_scaler.pkl": "907fc9c713119ee1e1916a94b898eb84eaf6313a00bf11d325bd8ac152dabaa8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.001_scores.npz": "7da92dd323942ea84215fe1b7c9cd2f6c722c7adb692c26822d1a52e9e9287e2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.01.pkl": "313b9450bcdc7ba9674e674a83c221e737a84d1cd0536cc8cdffb6000ad69695",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.01_scores.npz": "6385853bb1892167d2c596c8c1e65aa5e702005799e7c506d0c04aa89315e62e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.1.pkl": "4b4cccea0a3e0a71337fd9bfc87fad4304f8afb872a4d5e57332929bde6b4697",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\lookback__inherited_source_gap__C0.1_scores.npz": "83696d79eaa1ef1a758bda8a10aa5ed27602f676b872b16edb11e2703b19eb71",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\harp_claim_tail0_scores.npz": "b662896fd4770634fee8247f530bb48820919f0765d7be025398b5e668a6b50a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\harp_claim_tail1_scores.npz": "41c21af27c7a88f76006979db1d6d06c8045efe7be85d4bb6e64bbad34231dd0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.001.pkl": "77eccc09fab9b4dd5803d55fccb84137ab9fa72d30f8ddfe308dd7e399536075",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control_scaler.pkl": "6c9892674ef72c9df2ccb35f18172d66b9d1e9a8c7d6206f386fc11ad3e3c2fe",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.001_scores.npz": "86da8d3d40592a7d19f12548f67229659469bfa9e76c3d120558257f7692a9d7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.01.pkl": "daf0023e3c3754d8cf89ea2bd3e65a9a5a241fe905865095103fab1f12dc02d4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.01_scores.npz": "d17874cef8f72eaf8c8c53214896455b4178664ca69a76be60e8ef99cdb9e524",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.1.pkl": "3ea89fcbc943e229ee0d605ad731f59f8aa261ae998fc0430c13132f0c380312",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__any_source_control__C0.1_scores.npz": "11ec36514526065d3652c958f76e465767d656eaad353d5ba38aca3c03ffc3c0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.001.pkl": "4d539eb72da0b17b49fe0684552b50dcb316e160351548619a1058e5a763b6c2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap_scaler.pkl": "98b827ea72c5edf672f2a8f2e172e95a6df92fd03d9c4334a38643c2aaae0eca",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.001_scores.npz": "4fa42a1d8290c533e90d39c953152aaf0498606462378d8934248db2012d1d18",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.01.pkl": "20173ba4a834c1a8185306f59369fc4cc4b63af08634cccfdb9a6dd3356020e3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.01_scores.npz": "b79d214c0dd328fcf675ebe2fd79ea24c26ea5af4c577b7fd147e90571974377",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.1.pkl": "2d58277f63d5b658f5c8e29d03d80517f6ce8139216659220c2a7da32be0b4cf",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\harp_claim__inherited_source_gap__C0.1_scores.npz": "cc5c2c8a9b9df62d4359fc7a021dfdd1b5247a4080e1513c2cd05de55f8e266f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\semantic_claim_tail0_scores.npz": "6786e55a2646d9c0e39c51cd3e4a8c8fa590a87d981f115de23fa8babd77cf8b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\completed_score_fusion_v1\\semantic_claim_tail1_scores.npz": "41c21af27c7a88f76006979db1d6d06c8045efe7be85d4bb6e64bbad34231dd0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.001.pkl": "53a67b45cfe591bd90c511b7bcd558b20eba0b99390bdb3508fdf4582fda498b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control_scaler.pkl": "52416f398df0620a46054dcf912c51c194fbde6a9f5d2c24dd1af13cb35b740d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.001_scores.npz": "dd665d6c85c2c7e5c0c85acf3c21c540798dead2385cfafa7d06aed0dae0b829",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.01.pkl": "bae09d128a846d77b1482fb3ded1afc7b3945cb57f32de9cfe3df7273fbbc02b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.01_scores.npz": "823f579dbcba696af3eb71e716736b711f8e050b6463b57596fc232e119afa24",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.1.pkl": "636a68c361274fa8e579591bf89314cd340525dca305b13205a96328e285d337",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__any_source_control__C0.1_scores.npz": "f6d8f13f2fa3477ca4b820b1ea5580992e626b8f7423c53122cdbd988ec6f32b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.001.pkl": "bb8d30dfa59d73b4779746735c1c5c041c0cbad08bf0af425e6375f483e034b0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap_scaler.pkl": "42a86246a8e5245594592adf4b907ef024b0175714265e7a4ce1d3c88c39a603",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.001_scores.npz": "8300d4ad9f02f8a2caebeb978f886ebd2209b21cb8ec7aabceff5e17274dbc9d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.01.pkl": "e6b289fc88fd665c875d2f17af64835179a698e069b8fd0b83ae85c187260308",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.01_scores.npz": "fef2c23e162e051723165643a683b6ed39f3504e833b03b559018c694ae6f45b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.1.pkl": "99f2b3276b22d4fcc12de9325708d62ecf3862924fc1146a6b9ce1c831c9f33f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\semantic_claim__inherited_source_gap__C0.1_scores.npz": "c4f17b27f5970bc7c338147e8a38c00922dfcb542db189795ff351c6a65c94c6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\complete.json": "d1739b8bd2fb68e203c9999b453a8c3888db9672debe0b33492b6499c4c0ae01",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\citation_heading_semantic_lr_v1\\independent_audit.py": "0e4f4b21a03911a6bae507d4b08246f69bbd73fc3f51fe574e7831dc94b7e702"
+  },
+  "no_fit_no_GPU": true,
+  "production_modules_imported": false,
+  "official_test_read": false,
+  "frozen_outputs_modified": false,
+  "limits": [
+    "Read-only replay of frozen matrices/coefficient artifacts cannot independently attest training history; fit-only ranges and weights also checked in hashed source.",
+    "Original16023 GPU arithmetic comparison is validated through its frozen report/reference binding; no GPU arithmetic was rerun.",
+    "Upstream fit scores are not cross-fitted and calibration has been repeatedly inspected; tiny selected deltas are development comparisons, not independent-test improvement."
+  ]
+}

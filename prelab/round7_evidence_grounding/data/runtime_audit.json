@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "data_file": "data/inputs.jsonl",
+  "data_sha256": "ea7aa03f0296b0c48ec8ae219ecf17552b81ea1847d5eacbfe9f441d9c7b23b9",
+  "counts": {
+    "features": 500,
+    "attention": 500,
+    "lumina": 500,
+    "baselines": 500,
+    "generation": 500,
+    "items": 1300,
+    "truncated_responses": 0
+  },
+  "max_input_tokens": 619,
+  "parse_failures": [],
+  "nonfinite_valid_item_features": [],
+  "labels_read": false,
+  "detector_performance_computed": false,
+  "checks": [
+    "Exact input/output identities and source hashes",
+    "Frozen extractor code signatures",
+    "All requested methods and items present",
+    "Saved array hashes, shapes and finite item values",
+    "UTF-8 response character spans and identical token offsets across methods",
+    "All aggregated token positions within the declared item",
+    "Hidden-state last-content position and attention/LUMINA availability timing",
+    "LUMINA same original answer IDs and paired random context"
+  ]
+}

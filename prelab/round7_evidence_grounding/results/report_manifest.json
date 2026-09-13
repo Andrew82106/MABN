@@ -1,0 +1,10 @@
+{
+  "report_sha256": "6b58cbe9bb6f3beb8e4e9f7d8d53dbe802a48325c0bf2f0f4d7f42bfd550d6d0",
+  "writer_sha256": "3cfaadae91b610566ec9f034ffcae6a9e45e08401b3a097188a70cad75a96cff",
+  "metrics_sha256": {
+    "main": "f9b7bfe6cb8e7e1ba5620a5f2a2330f8685f620ff8b373e31b29380539d81566",
+    "external": "37a004181da7c37bac657b1bc76eec2057be986244145a0365b166908b2af7d7"
+  },
+  "freeze_sha256": "80e135f07c13d950bc79aa6d47ff23e32361c6c16e61647df5256cf44e9956aa",
+  "interpretation": "Root-authored interpretation with frozen values; no detector modification."
+}

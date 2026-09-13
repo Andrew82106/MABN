@@ -1,0 +1,71 @@
+{
+  "version": "ragognize-llama2-unified-k4-train-only-v1",
+  "cohort": "all_train",
+  "official_split": "train",
+  "source_revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "model_subset": "Llama-2-7b-chat-hf",
+  "membership_index": "ALL_TRAIN_INDEX.jsonl",
+  "membership_is_label_blind": true,
+  "group_split_required": true,
+  "counts": {
+    "answers": 1842,
+    "risk_answers": 1007,
+    "valid_spans": 1483,
+    "tokens": 203286,
+    "lexical_tokens": 174928,
+    "risk_tokens": 45664,
+    "windows": 197760,
+    "lexical_windows": 197452,
+    "risk_windows": 53841,
+    "groups": 917,
+    "risk_answer_rate": 0.5466883821932682,
+    "risk_token_rate_among_lexical": 0.2610445440409769,
+    "risk_window_rate_among_lexical": 0.2726789295626279
+  },
+  "tokenizer": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Llama-2-7b-chat-hf",
+    "class": "LlamaTokenizerFast",
+    "is_fast": true,
+    "vocab_size": 32000,
+    "length_with_added_tokens": 32000,
+    "files_sha256": {
+      "tokenizer.json": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+      "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "tokenizer_config.json": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+      "special_tokens_map.json": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+      "config.json": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2"
+    },
+    "transformers": "4.51.3",
+    "tokenizers": "0.21.4"
+  },
+  "conversion_design_sha256": "bc16e304d76b04fcc1184485d6e231c9019f21c3ac01ed1bedf790301d5c71c7",
+  "automatic_not_human_gold": true,
+  "unmarked_positions_silver_not_verified_negative": true,
+  "historical_native_generation_trace": false,
+  "test_or_validation_content_read": false,
+  "model_forward": false,
+  "training": false,
+  "GPU_used": false,
+  "files": {
+    "answers.jsonl": {
+      "bytes": 11755934,
+      "sha256": "c57ac1e958fb5c8c6ba8ded82c1e8d485f571590ea74e8ea44f1070f0ce98cfb"
+    },
+    "sequences.jsonl": {
+      "bytes": 21435057,
+      "sha256": "620919d00814bc8cd3fec6194a208211a175877bc521786290fa0ab004a023c4"
+    },
+    "tokens.jsonl": {
+      "bytes": 87798749,
+      "sha256": "b20216056928aece504c451e300693f9dc414972e9b83e7046751b0336796f35"
+    },
+    "windows.jsonl": {
+      "bytes": 97166852,
+      "sha256": "1d113229aa603381bcf4c753b26bc1c9db50a71056869c1c623e4b94db8335b1"
+    },
+    "groups.jsonl": {
+      "bytes": 319199,
+      "sha256": "277c53f76fcda3ca99c18c5391874dea222a8e7106f75c84d10c4ed2fe45fbde"
+    }
+  }
+}

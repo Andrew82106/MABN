@@ -1,0 +1,24 @@
+{
+  "total_questions": 620,
+  "total_answers": 1240,
+  "split_questions": {
+    "train": 421,
+    "validation": 89,
+    "test": 110
+  },
+  "legacy_files_sha256": {
+    "round10_dual_granularity\\data\\inputs.jsonl": "586565cdeb6059776ad418e83607c1c07fc7b77a8766099761441ba782e8fee0",
+    "round10_dual_granularity\\data\\generated.jsonl": "92539537e74ff66f47bc3d7660a81b548045c872ba2e51894c017bf5aec026c0",
+    "round10_dual_granularity\\data\\annotations_train.jsonl": "aa75ecc84b455143b92275018ec632a1d61fbc7472eb8084758bdf46ed77aabb",
+    "round10_dual_granularity\\data\\annotations_validation.jsonl": "ab17622dd1f357460f1e9c0fffd505dc910ea659a627246039df81edcac623b5",
+    "round10_dual_granularity\\data\\annotations_test.jsonl": "a14815db4dc597baaceec90fc4d50cfd477dcabb4726684a31bf4051434a796b",
+    "round10_dual_granularity\\data\\question_label_policy.json": "6f1fddf908af13459868139cf57455ee525e9024996a8f8abda8e152dd36bc64",
+    "round10_dual_granularity\\data\\safe_refusals_train.json": "78c2ab5848b1c0fbbf49fdc7473747b297d23214ec8f996bdf11614437080780",
+    "round10_dual_granularity\\data\\safe_refusals_validation.json": "ee68dac8ef16acd807d8d296df6bffa2222fa0945b63ecb97af19bcab0f0a3c3",
+    "round10_dual_granularity\\data\\safe_refusals_test.json": "dc259da2c70a46fad61971aa176c4769c86f3789530e23c317b6fac484eebea9"
+  },
+  "combined_index_sha256": "610ed4c1562c10faf9980e9a60adcab61158c6e31dce989d078012da492c3a4e",
+  "fresh_evaluation": "Use new_round16 validation/test separately; legacy holdouts have already been exposed.",
+  "grouping_limit": "New related sources/events are grouped; old group ids are preserved, not re-certified as globally independent.",
+  "training_features": "New white-box features are not yet extracted. Retain exact generation IDs for later extraction."
+}

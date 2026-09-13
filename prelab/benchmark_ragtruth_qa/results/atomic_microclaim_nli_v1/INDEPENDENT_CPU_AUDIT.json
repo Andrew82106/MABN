@@ -1,0 +1,15 @@
+{
+  "status": "passed_independent_CPU_only",
+  "answers": 793,
+  "scored_microclaims": 11322,
+  "nonlexical_audit_records": 7,
+  "pairs": 98854,
+  "lexical_BPEs": 174518,
+  "multi_microclaim_boundary_BPEs": 0,
+  "forbidden_annotation_keys_absent": true,
+  "source_hashes_revalidated": true,
+  "model_loaded": false,
+  "GPU_used": false,
+  "labels_accessed": false,
+  "official_test_opened": false
+}

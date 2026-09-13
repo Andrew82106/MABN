@@ -1,0 +1,40 @@
+{
+  "version": "cited-source-semantic-matched-lr-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "modes": [
+    "source_agnostic_control",
+    "cited_source_gap"
+  ],
+  "fits": 18,
+  "fit": "Original634 fit answers /168123 unchanged 4BPE windows, original group/class loss weights.",
+  "common_inputs": "Same frozen peer/tail2 two scores, same eight lexical/citation features, valid-reference claim fraction and any-source MiniCheck support from new independent three-source forwards.",
+  "additional_inputs": "Only two: mean(any-source support minus max valid-cited-source support), and the same gap times citation overlap. No gold or raw source identity is a predictor.",
+  "matched_control": "Both modes receive identical new MiniCheck pair outputs and their source-agnostic signal. This separates citation correspondence from merely changing document splitting or adding model calls.",
+  "standardization": "Same fit-only weighted StandardScaler, original base weights; each mode fitted separately.",
+  "optimizer": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "seed": 20261010
+  },
+  "calibration": "Same159 answers /42241 windows, original independent F1 thresholds and q.selection_key per family. No cal gradients.",
+  "aggregation": "Predictions remain at original4BPE windows; whole-answer score is max across every eligible original window. No citation-only evaluation.",
+  "limits": [
+    "Claim text is unchanged, including reference wording; source-specific support is a learned cue, not proof.",
+    "Multiple cited sources use max individual support; joint multi-source entailment is not evaluated.",
+    "Unrecognized/invalid-only references give no new semantic citation features, not automatic risk labels.",
+    "Underlying models and last-stage inputs are not cross-fitted; calibration has been repeatedly used for development.",
+    "Extra MiniCheck calls make this an offline semantic-plus-generation detector, not a pure generator white-box probe."
+  ],
+  "GPU_used_by_training": false,
+  "official_test_opened": false
+}

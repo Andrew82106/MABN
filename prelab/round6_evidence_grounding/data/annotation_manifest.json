@@ -1,0 +1,36 @@
+{
+  "status": "annotations_frozen_before_fit_or_detector_score_inspection",
+  "utc": "2026-09-10T11:29:51.808636+00:00",
+  "items": 180,
+  "labels": {
+    "('asserted', 'supported')": 116,
+    "('abstained', 'unresolved')": 14,
+    "('asserted', 'unresolved')": 7,
+    "('asserted', 'unsupported')": 41,
+    "('asserted', 'contradicted')": 2
+  },
+  "annotators": "Three assigned assistant annotators plus root source review/adjudication; not independent human gold",
+  "root_review": "All180 actual item texts and final labels reviewed; full sources reviewed for ownvalidation and delegated specialists covered remaining sources; independent validationpositive/ambiguous review completed. No probe or baseline scores read before gold freeze.",
+  "unresolved_reason_counts": {
+    "negation_scope": 5,
+    "question_presupposition": 2
+  },
+  "construction_issue": "Source229 partial1/3 preserve original generated answers but exclude ambiguous support due possible forced-choice question presupposition. Discovered in blind label review before any model fitting.",
+  "no_response_resampling": true,
+  "files_sha256": {
+    "data/annotations_train_first.jsonl": "88eca37be7618eca05d1f1a1a69eb7ea2957243e4257b83537722f736e732f22",
+    "data/annotations_train_last.jsonl": "2230e223e890a512ef67c0587a795569ae16e3174457a6dceb0608a375f4363f",
+    "data/annotations_validation.jsonl": "3aee3ade230374e055b42b448cbe317d20056548e389b21be5d43c99d1576fab",
+    "data/annotations_test.jsonl": "af10d552e6605c8e8ca20add743bb26f4252467b53d15f89cf645c145d704c92",
+    "data/annotations.jsonl": "f703738e505c99187bad53cfce6eb3f54b53c1f2c03aeaa80a7ddaba8ccd6c09",
+    "data/annotation_adjudication_rules.json": "36df926704ff1d25c15443387a5b10f986d73236cf2548e1f20c70520c678193",
+    "data/validation_annotation_review.json": "f6d9562a6cd15190fd567ccc33b2f579c3654de589804b6357e204f112518091",
+    "data/annotations_train_first_notes.json": "41f65bb9b622623c0b2c34888e39b65f7fc9f342c7857b35733940b0770c0a42",
+    "data/annotations_train_last_notes.json": "903615a1b3adf2598409c7b6531a7079024abceac16cf5a3f03d5b71c0a99a7b",
+    "data/annotations_validation_notes.json": "449eda8959ee748051dc9bebc9a91bb7063c8046c3ffc6f9c73563ecf610ebe9",
+    "data/annotations_test_notes.json": "450a3a08458c34964209ab6a419bcf0eaca5d1cf54f967a211067f0d34c89a60",
+    "data/generated.jsonl": "8cf2f5ad7cce0ef9cf0c799de71a866bfb849014930a2235fc92550614fd971b",
+    "data/features/items.npz": "a059380ea5869f019fe21ca8a579144e76f7188d4cced2d647435888856170de",
+    "data/baselines.jsonl": "a03fb262e31b4cea33dee18c0d6698ca9118ec0d1a751dc0f996b9ba0340f895"
+  }
+}

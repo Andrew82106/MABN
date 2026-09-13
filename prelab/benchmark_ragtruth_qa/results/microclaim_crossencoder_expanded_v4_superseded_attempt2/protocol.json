@@ -1,0 +1,50 @@
+{
+  "version": "microclaim-crossencoder-expanded-v4-v1",
+  "scope": "Frozen expanded-v4 fit3680 plus unchanged calibration159; official test absent.",
+  "data_binding": {
+    "v4_manifest_sha256": "35791a3b2881b098713d947273d7293f912f6f1a84ed2a50bedfe022a2c74370",
+    "v4_complete_sha256": "d6d6658a6aa82cc10fd56116ebd938b92b896155d85c706c2282939f29cd6c4e",
+    "base_runner_sha256": "aaf08424d7f8b129bd21ae11100f0c13a0f6bcc025edbe8805b6c1a00c9ebaa8"
+  },
+  "unit": "One audited factual atomic microclaim: 34,919 fit and exactly the reused 2,267 calibration microclaims.",
+  "input": {
+    "premise": "Exact frozen v4 question plus claim-selected top-2 evidence independently from each of passages 1, 2 and 3.",
+    "hypothesis": "Exact frozen v4 contextualized atomic microclaim.",
+    "tokenizer": "Exact local tasksource/ModernBERT-base-nli paired tokenizer; no truncation.",
+    "maximum_tokens": 768
+  },
+  "only_trained_candidate": {
+    "name": "expanded_top_evidence_crossencoder",
+    "initialization": "Exact tasksource/ModernBERT-base-nli three-way checkpoint.",
+    "architecture": "Unchanged three-way NLI cross-encoder; risk logit=logsumexp(neutral, contradiction)-entailment.",
+    "parameters": "All original encoder and NLI-head parameters fine-tuned; no added head.",
+    "loss": "Binary BCE with the frozen v4 source-group/answer/microclaim/class weights; fold weights are recomputed by the same canonical claim_weights function on each fold's training groups.",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 1e-05,
+      "weight_decay": 0.01,
+      "clip_norm": 1.0,
+      "epochs": 1,
+      "scheduler": null
+    },
+    "precision": "Same production loop: FP32 parameters/optimizer, BF16 CUDA forward, non-reentrant gradient checkpointing, TF32 off."
+  },
+  "frozen_control": "The untouched initialization on identical inputs may be scored as a control; it is not a second trained candidate.",
+  "crossfit": "Use the exact v4 held_fold: five source-connected fit OOF models plus one full-fit model for calibration. Calibration labels never enter GPU training or selection.",
+  "weights": "Same v4 hierarchy and class-balancing rule; no new hard-negative redistribution or score-derived weighting.",
+  "batching": {
+    "train_padded_token_budget": 1536,
+    "train_max_examples": 8,
+    "accumulated_microbatches": 4,
+    "eval_padded_token_budget": 4096,
+    "eval_max_examples": 16
+  },
+  "evaluation": "Use the frozen v4 ragged microclaim-to-original-4-BPE-window mapping. Fit OOF chooses window and answer thresholds; the full-fit model predicts calibration.",
+  "reuse": "Training, inference, risk-logit, optimizer, batching, checkpoint and GPU-smoke functions are called directly from run_microclaim_crossencoder_v1 after binding only constants and manifests.",
+  "selection": "Exactly one trained candidate; one epoch; no grid, alternate seed, checkpoint selection or calibration selection.",
+  "baselines": "Read-only; no baseline structure, parameter, threshold or score is modified.",
+  "stage_gate": "prepare -> check -> cpu-tiny -> gpu-smoke -> later explicit fold/full/control runs -> finalize.",
+  "GPU_authorization": "This preparation task may expose gpu-smoke but must not start smoke or formal GPU work.",
+  "seed": 20261023,
+  "official_test_opened": false
+}

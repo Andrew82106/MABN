@@ -1,0 +1,11 @@
+{
+  "auditor_sha256": "a56cb08954fba46823a63abb18909efb7882eb5e662e198c57c1f206caaad3ba",
+  "trainer_sha256": "dafbe3ae87a2d6f9a321740ba191faf1a5dc87ecadb86e7c692ac4106d80b9b2",
+  "preparation_sha256": "dca21a58674c99f008063db5c5cf3815537f707e1e7cb37963a84c83227ec494",
+  "controls": 12,
+  "new_models": 12,
+  "probability_replay": "exact array equality",
+  "weighted_moment_atol": 1e-10,
+  "gate": "Both large and combination complete.json must exist before loading predictions or models.",
+  "scope": "Original native634 fit/159 calibration only. This audit does not prove global process history or independence of repeatedly inspected calibration."
+}

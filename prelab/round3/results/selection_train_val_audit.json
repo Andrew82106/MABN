@@ -1,0 +1,38 @@
+{
+  "train_active": {
+    "summaries": 240,
+    "error_summaries": 100,
+    "selected_error_summaries": 44,
+    "error_summary_coverage": 0.44,
+    "error_spans": 113,
+    "selected_error_spans": 45,
+    "span_coverage": 0.39823008849557523
+  },
+  "train_random": {
+    "summaries": 240,
+    "error_summaries": 100,
+    "selected_error_summaries": 27,
+    "error_summary_coverage": 0.27,
+    "error_spans": 113,
+    "selected_error_spans": 27,
+    "span_coverage": 0.23893805309734514
+  },
+  "val_active": {
+    "summaries": 65,
+    "error_summaries": 25,
+    "selected_error_summaries": 14,
+    "error_summary_coverage": 0.56,
+    "error_spans": 30,
+    "selected_error_spans": 14,
+    "span_coverage": 0.4666666666666667
+  },
+  "val_random": {
+    "summaries": 65,
+    "error_summaries": 25,
+    "selected_error_summaries": 8,
+    "error_summary_coverage": 0.32,
+    "error_spans": 30,
+    "selected_error_spans": 8,
+    "span_coverage": 0.26666666666666666
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "feasibility_only_not_selected_or_semantically_qualified",
+  "scope": "Official train and test source-only projections, no official validation split; Round8 reuses Round7 sources.",
+  "isolation_level": "Exact casefold titles across every official pair document plus exact target-title against old subject names, including Round6 preview. Alias, co-reference, event and within-new-pool connected-group review still required.",
+  "old_title_count": 1336,
+  "old_subject_count": 586,
+  "counts": {
+    "train": {
+      "raw_rows": 1842,
+      "raw_question_ids": 943,
+      "preliminary_pairs": 899,
+      "by_original_type": {
+        "OTHER": 298,
+        "TEMPORAL": 211,
+        "IDENTITY": 230,
+        "NUMERICAL": 134,
+        "SPATIAL": 26
+      }
+    },
+    "test": {
+      "raw_rows": 2781,
+      "raw_question_ids": 1416,
+      "preliminary_pairs": 953,
+      "by_original_type": {
+        "IDENTITY": 276,
+        "TEMPORAL": 272,
+        "OTHER": 261,
+        "NUMERICAL": 114,
+        "SPATIAL": 30
+      }
+    }
+  },
+  "total_preliminary_pairs": 1852,
+  "unique_target_titles": 1852,
+  "by_original_type": {
+    "OTHER": 559,
+    "TEMPORAL": 483,
+    "IDENTITY": 506,
+    "NUMERICAL": 248,
+    "SPATIAL": 56
+  },
+  "non_draft_by_original_type": {
+    "OTHER": 536,
+    "TEMPORAL": 464,
+    "IDENTITY": 491,
+    "NUMERICAL": 242,
+    "SPATIAL": 55
+  },
+  "source_hashes": {
+    "prelab\\round9_evidence_binding\\data\\raw\\ragognize\\train_sources.jsonl": "73c151daec66145488d49a691f433876a6ed24652885e6f47cf94a83805536b3",
+    "prelab\\round7_evidence_grounding\\data\\external_ragognize\\raw\\test_sources.jsonl": "11ee5681c42046b15e4a59eca0e2ee467b89865f838d1acb66482c28a56ceb0f"
+  },
+  "old_input_hashes": {
+    "prelab\\round6_evidence_grounding\\data\\inputs.jsonl": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+    "prelab\\round6_evidence_grounding\\data\\dev_inputs.jsonl": "0a8bcc5f803453c68e502b9781e11d7d49e588af443368b846f171d37b4c5112",
+    "prelab\\round7_evidence_grounding\\data\\inputs.jsonl": "ea7aa03f0296b0c48ec8ae219ecf17552b81ea1847d5eacbfe9f441d9c7b23b9",
+    "prelab\\round7_evidence_grounding\\data\\dev_inputs.jsonl": "32180b1f240b6011742f6e60336f32feba0ee28cc3c84ee45a6f5312a9a42dfb",
+    "prelab\\round6_evidence_grounding\\planning\\hotpotqa_preview.json": "93f3b1bc101be1b6057e403eb75362d38a9ebd96afe8d895b2bbb38ec65cd444"
+  },
+  "pool_sha256": "cdf0386fcb43cd1c832a8579034781735c8376adf87fe1d3b85a75a2cad3fc08",
+  "exclusions_sha256": "dab8ed2b6db0d3363f12e260b501620d32a8c1c873664f3f871bbf0dc2df852a"
+}

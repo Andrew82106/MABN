@@ -1,0 +1,62 @@
+{
+  "version": "r27-joint-check-states-v1",
+  "scope": "Repeated R16 actual-train event5fold development",
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta",
+    "lookback_tuned",
+    "redeep_tuned",
+    "verifier_learned_broadcast",
+    "verifier_learned_slots",
+    "slots_base_smooth",
+    "local_direct",
+    "local_probe",
+    "local_mean_fusion",
+    "local_slots_fusion",
+    "local_slots_fusion_smooth",
+    "slots_base_smooth_global",
+    "local_mean_fusion_global",
+    "local_slots_fusion_smooth_global",
+    "joint_mean",
+    "joint_slots",
+    "joint_mean_smooth",
+    "joint_slots_smooth"
+  ],
+  "primary": "joint_mean_smooth",
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260927,
+  "loss_mass": 3854,
+  "features": {
+    "joint_mean": "OriginalLB784+NLL1, local fitPCA64+ABlogitgap1, global fitPCA64+ABlogitgap1 =915",
+    "joint_slots": "Original ordered3144 slots +same local65+global65 =3274"
+  },
+  "exclude": "A+B full-vocabulary mass omitted from both check streams because almost constant; no old features changed",
+  "projections": "Reuse each corresponding fold R23b local/R22 global PCA; fit group subsets checked, no new PCA",
+  "fit": "Same fit windows/labels/group-balanced loss and fit-only scaler; 30new LR fits",
+  "C_selection": "Cal max min(windowF1,answerF1), windowF1, precision, lowerC",
+  "smooth": "Same12 R24 candidates per new family after C fixed; identity included",
+  "stay": [
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "temperature": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "answer": "Max all original candidate windows including safe refusals; separate cal cutoff",
+  "all_five_fold_choices_frozen_before_outer": true,
+  "new_extraction": false,
+  "new_labels": false,
+  "human_gold": false,
+  "original_validation_or_test_used": false,
+  "future_windows_used_by_smoothing": true
+}

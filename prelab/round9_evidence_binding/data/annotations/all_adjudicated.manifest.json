@@ -1,0 +1,10 @@
+{
+  "decisions_sha256": {
+    "data\\annotations\\adjudicated_root.json": "34279e00f250e7dbca4c0415a24183a879210517a181f484017794acf486ad28",
+    "data\\annotations\\adjudicated_evaluation.json": "c2a9d249492a21df4acf99be3d9befe4a87306f06bc920cd250e97b79d64a2ed",
+    "data\\annotations\\adjudicated_redeep.json": "a85faea34b53e408af7b7065dfac77a08fc3652a62eb118b9e661d8590e1ed07",
+    "data\\annotations\\adjudicated_data_build.json": "7022a7a74266811c77c5b8efa490f1ab5ff9b190aca23c1993fa98d7b4053876"
+  },
+  "output_sha256": "b318737b0ca2f97a683125cbfa56ec39751d60725b918a1563b9306fbe5ec030",
+  "items": 400
+}

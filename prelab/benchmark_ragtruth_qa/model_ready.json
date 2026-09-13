@@ -1,0 +1,11 @@
+{
+  "status": "model_and_cpu_development_data_ready",
+  "model_loaded_on_gpu": false,
+  "native_original_trace_claimed": false,
+  "checkpoint_revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+  "model_download_manifest_sha256": "a78209b43b6725f5d5e8fe446f801e7f04498ee53f360345cb67999e1aa511c1",
+  "checkpoint_document_sha256": "d723966f3b689ac22d834ab517af298ea5bfab5b3fe010491eb40f6de6dd9bf5",
+  "development_manifest_sha256": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+  "source_index_sha256": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+  "note": "data/delivery_audit.json is the earlier CPU handoff snapshot before the checkpoint document received its completion appendix. Source partitions and development data have not changed. Official QA test answers/labels remain sealed; the GPU is controlled by root."
+}

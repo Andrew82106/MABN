@@ -1,0 +1,8 @@
+{
+  "files": {
+    "trivia_questions.jsonl": "f5f20d1fbee29744f69732869c06f51e69824ecfa879bc35aa49e450a6ea7fbb",
+    "rag_questions.jsonl": "07deeba355bd31ea3787d451089b5a50595478400ced2253614e3a4233cce9af"
+  },
+  "design": "2700 own-generation closed-book QA; 1050 three-fact RAG outputs; fixed source-group splits before generation",
+  "automatic_label_limit": "Alias matching for QA; exact extractive match / zero-overlap candidate errors / ambiguous exclusion for RAG. Review sampled outputs; not independently human-annotated factuality."
+}

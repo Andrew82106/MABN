@@ -1,0 +1,63 @@
+{
+  "status": "development_data_prepared_test_sealed_not_model_trace_freeze",
+  "seed": "20260911",
+  "native_response_model": "llama-2-7b-chat",
+  "source_counts_by_partition": {
+    "sealed_official_test": 150,
+    "withheld_train_linked_to_test": 31,
+    "calibration": 162,
+    "fit": 646
+  },
+  "group_counts_by_partition": {
+    "calibration": 157,
+    "fit": 624,
+    "sealed_official_test": 147,
+    "withheld_train_linked_to_test": 8
+  },
+  "eligible_answers_by_partition": {
+    "fit": 634,
+    "calibration": 159
+  },
+  "quality_excluded_answers_by_partition": {
+    "calibration": 3,
+    "fit": 12
+  },
+  "development_quality_counts": {
+    "good": 793,
+    "truncated": 15
+  },
+  "development_span_types_all_quality_rows": {
+    "Evident Baseless Info": 474,
+    "Subtle Baseless Info": 240,
+    "Evident Conflict": 160,
+    "Subtle Conflict": 12
+  },
+  "span_integrity_issue_rows": 0,
+  "quality_policy": "Official quality==good only. Preserve all released labels, including implicit_true/due_to_null flags, original start/end/text/meta. Do not filter by label type or prediction. Non-good rows retained separately for audit.",
+  "grouping_policy": "All 20 material overlap edges and 78 explicitly reviewed narrow-question/platform/possible-recipe-family links grouped. Every group touching official test stays sealed: official train members are withheld, not moved to fitting. All six model answers follow source/group assignment.",
+  "source_grouping_limitations": [
+    "Not an exhaustive entity-alias/event audit; no claim of new-entity/new-event test.",
+    "Weather-template overlaps are conservatively grouped even across cities.",
+    "Remaining generic lexical candidate links were not all manually reviewed."
+  ],
+  "exact_original_trace_claimed": false,
+  "intended_replay": "Fixed disclosed Llama2-7B-chat family checkpoint, explicit original RAGTruth wrapper, NF4 teacher-forced reconstruction; original token trajectory unavailable.",
+  "development_exporter_parsed_official_test_rows": false,
+  "development_exporter_parsed_withheld_train_rows": false,
+  "official_test_response_text_or_labels_inspected_or_exported": false,
+  "source_files_sha256": {
+    "data\\raw\\source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b",
+    "data\\raw\\response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+    "round20_localization_optimization\\research\\ragtruth_qa_metadata_index.jsonl": "7f3f262bdfbe2895a9ec9b369a938d85955c01d3a35922609580ab5f4e4b5f1c"
+  },
+  "files_sha256": {
+    "data\\source_index.jsonl": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+    "data\\sealed_source_index.jsonl": "dbf18655c86dc6da729596ed3553debd7ec5e34ead7f8d80d6e515ac39fc69db",
+    "data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "data\\calibration.jsonl": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "data\\quality_excluded_development.jsonl": "88db3ea87c9f7e1d1f406e873353ccbf3e2b51e7d50f2819be0d185ee3ca5d36",
+    "data\\semantic_group_review.json": "a5121009131e5dc47775c95d371e250bc888b86e7769478fb27c4a61d72b555e",
+    "data\\span_integrity_review.json": "916cfeafe3bf01621967655366096a85df612fa56f875b1492c2eaea4891ce57"
+  },
+  "code_sha256": "8954650841af604eb9444f14ac7c822ee664ab2d8399c2edcc8f3c566f736a94"
+}

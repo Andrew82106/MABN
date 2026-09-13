@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "name": "ALCE_EMNLP2023.pdf",
+      "url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+      "bytes": 481920,
+      "sha256": "ae9868f07f0f7ffaae5346778f79b7827d9ec6b13b1e6aae4dff6b2ffc37a2e1",
+      "status": "downloaded"
+    },
+    {
+      "name": "ContextCite_NeurIPS2024.pdf",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/adbea136219b64db96a9941e4249a857-Paper-Conference.pdf",
+      "bytes": 1657898,
+      "sha256": "b67c84f1324443ccc645a9c31587510bd7614e83db821f45e1fc8d3fe24d405e",
+      "status": "downloaded"
+    }
+  ]
+}

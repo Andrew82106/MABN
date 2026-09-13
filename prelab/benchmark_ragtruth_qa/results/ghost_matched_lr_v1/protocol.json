@@ -1,0 +1,77 @@
+{
+  "version": "ghost-matched-local-lr-v1",
+  "methods": [
+    "prefix_pre_header",
+    "legacy_lb_nll",
+    "prefix_post_header",
+    "harp64_legacy_lb_nll",
+    "ghost_only"
+  ],
+  "widths": {
+    "prefix_pre_header": 1028,
+    "legacy_lb_nll": 1029,
+    "prefix_post_header": 1028,
+    "harp64_legacy_lb_nll": 1093,
+    "ghost_only": 4
+  },
+  "C": [
+    0.0001
+  ],
+  "new_fits": 5,
+  "reused_old_fits": 20,
+  "seed": 20260924,
+  "old_C_history": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "fixed_parameter_design": "Before any new GHOST feature or result, fix new C=1e-4, matching all four previously selected old families. No new C search; conservative same-C signal comparison, not25-fit matched search.",
+  "cohort": {
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "fit_windows": 653979,
+    "calibration_windows": 42241,
+    "all_windows": 696220,
+    "raw_answer_tokens": 708506
+  },
+  "append": "Each original raw family followed by the same four mean GHOST columns; standalone four columns also reported.",
+  "feature_names": [
+    "adjacent_layer_cosine_change",
+    "layer_to_final_cosine",
+    "top10_normalized_entropy",
+    "top10_unweighted_embedding_divergence"
+  ],
+  "pool": "Mean all actual raw BPE token_indices in the frozen4BPE window, INCLUDING punctuation; short window uses actual slots only.",
+  "base_features": {
+    "prefix_pre_header": "original pre-header prefix LB1024",
+    "legacy_lb_nll": "original source-only post-read legacy LB1024 then NLL1",
+    "prefix_post_header": "original post-read prefix LB1024",
+    "harp64_legacy_lb_nll": "original legacy LB1024 then NLL1 then frozen HARP64"
+  },
+  "weights": "Exact expanded3680 base/loss arrays, group/native-aux/answer/window weighting and original class factors; total loss168123; no new class_weight.",
+  "scaler": "Separate per family; fit-only base-weighted partial_fit in original16384-row blocks; all transformed inputs float32.",
+  "LR": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "random_state": 20260924,
+    "cpu_threads": 4,
+    "convergence_warning": "fail and preserve, do not increase budget"
+  },
+  "threshold": "Original q.choose_threshold: calibration only, each scale separately; >= threshold, ties F1 then precision then higher threshold.",
+  "C_selection": "No new C selection: one fixed1e-4 candidate per family serves both scales. Preserve original q.selection_key in output only for schema compatibility. Original old5C selection history retained.",
+  "answer_score": "Maximum of ALL original eligible windows per answer, unchanged answer gold/refusal policy.",
+  "gates": "No feature matrix or fitting from partial3839 input; features_complete must bind every record, identities, raw coordinates and ordered manifest. fit requires completed preparation.",
+  "old_controls": "Read-only original20 models/scores/results; verify hashes, saved scores answermax, thresholds, metrics and selections. Never refit.",
+  "storage": "Keep5 models/scores/results/scalers; raw four-column matrix. One temporary standardized float32 family memmap, hash recorded, deleted after that family. Original raw matrices stay in place.",
+  "adaptation": "Local4rawBPE mean and linear supervised probe; NOT original GHOST RF answer-level reproduction or its paper scores.",
+  "provenance": "Existing3680 replay includes3046 other-generator answers; common Llama reconstruction, not their historical native trajectories.",
+  "limitation": "Repeated public-QA fit/cal development, no independent final-test claim; labels/denominators and existing experiments unchanged.",
+  "official_test_opened": false,
+  "GPU_used": false,
+  "new_generation": false
+}

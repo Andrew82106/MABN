@@ -1,0 +1,63 @@
+{
+  "version": "qa-lookback-definition-scoring-v1",
+  "scope": "Frozen official-train fit634/calibration159 only; no sealed official-test or withheld content",
+  "methods": [
+    "lb_source_pre_header",
+    "lb_prefix_pre_header",
+    "lb_source_post_header",
+    "lb_prefix_post_header",
+    "lb_source_post_legacy"
+  ],
+  "primary_closer_official": "lb_prefix_pre_header",
+  "width": 1024,
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260924,
+  "candidate_count": 15,
+  "new_LR_fits": 12,
+  "legacy_frozen_model_replays": 3,
+  "extract_protocol_sha256": "e3c076aee951f56c3f2c5853854d2613019589874202525e82bdafa5427abfbc",
+  "original_protocol_sha256": "d572f97ff57b179cab8f5fa89fcfaa8fd33b8fbee4b2a082c346f2a7dc6ef34e",
+  "original_runner_sha256": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+  "gold_manifest_sha256": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+  "geometry": "Every frozen eligible 4 raw BPE window, stride1, mean all four raw token LB vectors. N<4 mean all actual raw tokens. No lexical compression, future smoothing, or positive-window selection.",
+  "counts": {
+    "fit_answers": 634,
+    "calibration_answers": 159,
+    "fit_windows": 168123,
+    "calibration_windows": 42241
+  },
+  "base_weight": "Source-connected group -> answer -> eligible window equal mass, normalized mean1",
+  "loss_weight": "Fit-only class factors from base weights; re-equalize group loss; total mass168123 for every family/C",
+  "standardization": "StandardScaler fit-only weighted partial_fit in fixed16384-row blocks; float32 transform; same scaler reused across family Cs",
+  "lr": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "cpu_threads": 4
+  },
+  "threshold": "Each candidate separately maximizes cal window or cal answer riskF1; ties precision then higher threshold; all/none endpoints included",
+  "selection": "Max min(cal windowF1,cal answerF1), then windowF1, window precision, smaller C",
+  "answer_score": "Maximum over every eligible window for that answer; no gold-positive prefilter",
+  "answer_label": "Official nonempty original span list; never reconstructed from token/window OR",
+  "safe_refusals": "No additional refusal classifier or exclusions; every quality-good answer and its eligible windows uses unchanged human labels",
+  "no_NLL_PCA_or_hidden": true,
+  "no_calibration_refit": true,
+  "legacy_gate": "All new anchor token arrays already equal old cached LB. Require all210364 window vectors, standardized fit matrix, all three old-model score arrays, calibration thresholds, selection keys and every metric to match original lookback_mean exactly.",
+  "legacy_fit_policy": "Reuse three original frozen models rather than re-fit identical data; preserve original weights/scaler and list them as replays, not new training runs.",
+  "eligibility_gate": "Require complete793 feature manifest with exact original identities and per-file/coordinate/layout signature checks BEFORE any fit. Partial feature cohorts are errors, never evaluation subsets.",
+  "resource_estimate": {
+    "raw_matrix_gib": 4.0123748779296875,
+    "standardized_fit_matrix_gib": 2.5653533935546875,
+    "reserve_free_disk_gib": 9,
+    "cpu_minutes_planning": [
+      12,
+      30
+    ],
+    "not_measured": true
+  },
+  "reporting": "All15 candidate fit/cal results, five within-family calibration-selected C values. Report adaptations and original-code mismatch. Calibration selection remains optimistic, not final test."
+}

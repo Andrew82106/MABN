@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "input_shape_each": [
+    213159,
+    1089
+  ],
+  "source_snapshot_sha256": "46494dc93bf3007aae312024a3a41af9c97f8df222b795b7b0386c3221cefc06",
+  "files_sha256": {
+    "matrices\\common1025.npy": "a6c64827f600b1fd5d7af7e231b9afea6a7743a5bdc4b20bcb72427a83a3e7c5",
+    "matrices\\harp64.npy": "0c614ac345dfdbd10da16cfeb248f2e53f1cc6f181df2a18f740bb767bfccf3e",
+    "matrices\\full_lb_pca64_tcn.npy": "eea09d8eeba36bb9306982c40bfcada1ba901317de0c5b9c2eafd4826fcd9553",
+    "matrices\\full_lb_harp64_tcn.npy": "7029777d7809ca0aa747b77f355e0acd367780201b70a92dcbf58160fca0b408",
+    "full_lb_pca64_tcn_scaler.pkl": "fb0b69bc5d11ec0f3d39841fd005d30027e279a3281fc502ac547adb66e1afb1",
+    "full_lb_harp64_tcn_scaler.pkl": "8712f937ba51f55a450cac0d36ffaf6e2c0fc83b5f1ac24a9675aa7979a41798"
+  },
+  "same_standardized_common1025_exact": true,
+  "weights_sha256": "5d23d8421a5f8cca488a836feb8970fd7f4d3d33e11e89a61fc0ed4a3c73be02",
+  "shuffle_sha256": "aca11001b418539cc76789bc799e18ec676f4d551f40fc770ac8cf2ebca144bf",
+  "test_opened": false,
+  "gpu_used": false
+}

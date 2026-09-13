@@ -1,0 +1,36 @@
+{
+  "version": "r28-semantic-scene-cache-v1",
+  "answers": 602,
+  "raw_Qwen_BPE": 14968,
+  "checkpoint": "Fixed auxiliary->QA2 selected solely by prior QA calibration; never reselect on R16.",
+  "input": "Existing unchanged control_scene_transfer_v1 input_ids/mapping/raw Qwen IDs and offsets; all only R16 original train.",
+  "features": "One unchanged BF16 ModernBERT eval forward per answer; actual classifier z1-z0 and last hidden mapped independently in FP32. Whole-answer offline evidence checker, not native Qwen states.",
+  "cache": {
+    "hidden.npy": [
+      14968,
+      768
+    ],
+    "logit.npy": [
+      14968
+    ],
+    "gpu_probability.npy": [
+      14968
+    ],
+    "bounds.npy": [
+      602,
+      2
+    ]
+  },
+  "numerics": {
+    "old_probability_absolute_tolerance": 2e-06,
+    "relative_tolerance": 0,
+    "old_logit_available": false,
+    "old_logit_not_reconstructed_from_probability": true,
+    "repeat_first_and_last_same_ids_logit_and_hidden_absolute_tolerance": 2e-06,
+    "all_nonexact_differences_and_original_window_answer_scores_recorded": true
+  },
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "new_training": false,
+  "historical_limit": "No old R16 validation/test reads in THIS run; those old splits were exposed in prior rounds. This is not a fresh test."
+}

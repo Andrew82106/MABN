@@ -1,0 +1,221 @@
+{
+  "status": "passed",
+  "binary_labels_and_original_base_weights_exact": true,
+  "type_geometry_independently_rebuilt_from_alnum_char_overlap": true,
+  "fit_raw_tokens_checked": 665708,
+  "fit_windows": 653979,
+  "calibration_windows": 42241,
+  "fit_answers": 3680,
+  "calibration_answers": 159,
+  "type_weighting_calibration_inputs": 0,
+  "types_are_not_predictor_features": true,
+  "classes": [
+    "negative",
+    "baseless",
+    "conflict"
+  ],
+  "mixed_windows": 85,
+  "type_mass_before": [
+    153095.15569206973,
+    12889.28806942197,
+    2138.556238508129
+  ],
+  "type_factors": [
+    0.5490800778117263,
+    3.260905472328768,
+    19.65379691362287
+  ],
+  "loss_mass": 168123.0,
+  "type_mass_after_group_renormalization": [
+    110228.58484050297,
+    36193.757003645485,
+    21700.658155902427
+  ],
+  "loss_max_abs": 0.0,
+  "group_loss_equal": true,
+  "frozen_PCA_and_scalers_reused": true,
+  "coefficient_values_checked": 4177320,
+  "answer_max_checks": 23034,
+  "score_max_abs": 1.1102230246251565e-16,
+  "metric_max_abs": 0.0,
+  "thresholds_exact": 12,
+  "C_selections_exact": 2,
+  "candidate_checks": [
+    {
+      "candidate": "hidden64_C1e-05",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    },
+    {
+      "candidate": "hidden64_C0.0001",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    },
+    {
+      "candidate": "hidden64_C0.001",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    },
+    {
+      "candidate": "hidden64_risk_C1e-05",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    },
+    {
+      "candidate": "hidden64_risk_C0.0001",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    },
+    {
+      "candidate": "hidden64_risk_C0.001",
+      "scaler_same_as_binary_loss_exact": true,
+      "score_max_abs": 1.1102230246251565e-16,
+      "thresholds_exact": true,
+      "metrics_max_abs": 0.0
+    }
+  ],
+  "selected": {
+    "hidden64": {
+      "new_C": 1e-05,
+      "new_calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3984,
+          "fp": 3409,
+          "fn": 2000,
+          "tn": 32848,
+          "precision": 0.5388881374272961,
+          "recall": 0.6657754010695187,
+          "f1": 0.5956492487104732,
+          "auroc": 0.8784324784268102,
+          "average_precision": 0.596319094933602
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 86,
+          "fp": 20,
+          "fn": 14,
+          "tn": 39,
+          "precision": 0.8113207547169812,
+          "recall": 0.86,
+          "f1": 0.8349514563106796,
+          "auroc": 0.851864406779661,
+          "average_precision": 0.9132219917999884
+        }
+      },
+      "old_binary_C": 1e-05,
+      "old_binary_calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 4201,
+          "fp": 3463,
+          "fn": 1783,
+          "tn": 32794,
+          "precision": 0.5481471816283925,
+          "recall": 0.7020387700534759,
+          "f1": 0.6156213364595545,
+          "auroc": 0.8854527574907534,
+          "average_precision": 0.6362190540511004
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 83,
+          "fp": 14,
+          "fn": 17,
+          "tn": 45,
+          "precision": 0.8556701030927835,
+          "recall": 0.83,
+          "f1": 0.8426395939086294,
+          "auroc": 0.8703389830508473,
+          "average_precision": 0.9271001823370856
+        }
+      }
+    },
+    "hidden64_risk": {
+      "new_C": 1e-05,
+      "new_calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 4143,
+          "fp": 3544,
+          "fn": 1841,
+          "tn": 32713,
+          "precision": 0.5389618836997528,
+          "recall": 0.692346256684492,
+          "f1": 0.6061005047180162,
+          "auroc": 0.883719536032061,
+          "average_precision": 0.6105500295650632
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 86,
+          "fp": 19,
+          "fn": 14,
+          "tn": 40,
+          "precision": 0.819047619047619,
+          "recall": 0.86,
+          "f1": 0.8390243902439024,
+          "auroc": 0.8533898305084745,
+          "average_precision": 0.9161577452652239
+        }
+      },
+      "old_binary_C": 0.0001,
+      "old_binary_calibration": {
+        "windows": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3995,
+          "fp": 2908,
+          "fn": 1989,
+          "tn": 33349,
+          "precision": 0.5787338838186296,
+          "recall": 0.6676136363636364,
+          "f1": 0.6200046558547373,
+          "auroc": 0.8879341840904335,
+          "average_precision": 0.6435457393805415
+        },
+        "answers": {
+          "n": 159,
+          "positive": 100,
+          "tp": 86,
+          "fp": 18,
+          "fn": 14,
+          "tn": 41,
+          "precision": 0.8269230769230769,
+          "recall": 0.86,
+          "f1": 0.8431372549019608,
+          "auroc": 0.8666101694915255,
+          "average_precision": 0.9257572562515559
+        }
+      }
+    }
+  },
+  "official_test_read": false,
+  "reviewer_fits": 0,
+  "reviewer_GPU": false,
+  "seconds": 19.742008699919097,
+  "production_complete_sha256": "3d3f711727f1a3c5ece672d1ca35c288a4209dcabd46f2b3aeeb75812baf6dd8",
+  "source_complete_sha256": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9",
+  "helper_sha256": "440d1f0ba5296b1f9ca71658c28eb9467dcc607f5e639b88912f21227a513397",
+  "limitations": [
+    "Type50/25/25 target applies before restoring equal source-group loss; final class totals need not retain that ratio.",
+    "This is already-used development calibration, not independent test.",
+    "PCA/scaler/source mapping reuse is inherited from the completed full expansion audit; no additional model fine-tuning or GPU audit was run."
+  ]
+}

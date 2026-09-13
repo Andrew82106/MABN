@@ -1,0 +1,47 @@
+{
+  "version": "r28-frozen-semantic-scene-adaptation-v1",
+  "seed": 20261008,
+  "scope": "Repeated original R16 train602/301questions/278groups only; human_gold=false. Not a replacement for public human-gold QA results.",
+  "encoder": "Frozen auxiliary->QA2 selected previously using QA only. Whole-input bidirectional semantic checker; extra model, not native Qwen white-box state.",
+  "semantic_input": "For each unchanged candidate4rawBPE window, mean hidden768 over raw_token_indices INCLUDING punctuation/whitespace positions; concatenate max actual semantic logit over original lexical_token_indices. No gold in feature construction.",
+  "projection": {
+    "components": 32,
+    "n_iter": 3,
+    "seed": "20261008+fold",
+    "whiten": false,
+    "fit_scope": "Only main_eligible windows in original fold fit groups; original group/condition/answer/window BASE weights, no class weighting in PCA."
+  },
+  "probe": {
+    "input_dimension": 33,
+    "C": 0.01,
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "scaler": "Original fit-only base-weighted StandardScaler; float32 transformed design.",
+    "weights": "Reuse original R20/R13 group/condition/answer/window weights, fit-only class factors then equal group loss, total3854.",
+    "LR_fits": 5,
+    "PCA_fits": 5,
+    "no_C_search_or_refit_on_fit_plus_cal": true
+  },
+  "baselines": [
+    "lookback_tuned",
+    "local_slots_fusion_smooth_global"
+  ],
+  "fusion_alpha": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "fusion": "sigmoid(logit(prior)+alpha*logit(same semantic probe)); clip1e-12, alpha0 exact identity. Each baseline receives the SAME semantic branch and six-alpha budget.",
+  "selection": "For each baseline in each fold, select one alpha shared by window/answer scoring using calibration min(windowF1,answerF1), then windowF1, windowPrecision, smaller alpha. Separate original two thresholds; preserve all12 candidates per fold.",
+  "folds": "Original outer=f, calibration=(f+1)%5, other3 fit. No question/condition/answer/token/window split across these event groups.",
+  "prior_scores": "Only corresponding R26 fold_f_scores.npz in original candidate window order. Never train with concatenated OOF feature scores.",
+  "eligibility": "Only original eligible asserted windows train/score localization. Unknown/refusal windows never relabeled0. Answer max uses ALL candidate windows;117 reviewed-safe-refusal answers retain existing negative label;4 unresolved answers excluded.",
+  "evaluation": "Freeze all5 fitted probes/calibration choices before outer metrics. No selection on outer results; alpha0 does not guarantee unseen-fold improvement.",
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "public_QA_test_opened": false,
+  "historical_limit": "Old R16 validation/test were exposed in earlier rounds; only no reads in THIS run are promised. Public QA official_test150 remains sealed."
+}

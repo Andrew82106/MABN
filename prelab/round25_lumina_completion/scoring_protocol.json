@@ -1,0 +1,56 @@
+{
+  "version": "r25-signed-lumina-calibration-v1",
+  "scope": "Exploratory same R16 actual-train 301 questions/278 event groups/602 answers; no original validation/test",
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta",
+    "lookback_tuned",
+    "redeep_tuned",
+    "slots_base_smooth",
+    "lumina_single_mean_lambda05",
+    "lumina_joint_body_lambda05",
+    "lumina_joint_body_lambda_cal"
+  ],
+  "primary_method": "lumina_joint_body_lambda05",
+  "additional_fixed_method": "lumina_single_mean_lambda05",
+  "fixed_lambda": 0.5,
+  "secondary_method": "lumina_joint_body_lambda_cal",
+  "secondary_lambda_grid": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "secondary_selection": "Calibration max min(window F1,answer F1), then window F1, window precision, prefer lambda=.5, then lower lambda",
+  "formula": "lambda*IPR-(1-lambda)*MMD, computed per raw response token in unchanged float32 arithmetic",
+  "single_mean": "Both original R19 single-source MMD columns are averaged equally per token before fixed formula",
+  "joint_body": "Independent original-versus-joint-two-body intervention MMD; informative source titles remain unchanged",
+  "window": "Original 4 raw BPE/stride1 geometry including punctuation positions; arithmetic float32 mean of token formula scores, exported as float64; original short windows retained",
+  "answer": "Maximum over ALL output-defined candidate windows for each original answer, without gold eligibility filtering",
+  "score_transform": "None; signed raw scores retained. Helpers support actual min/max nextafter endpoints. Scores are not calibrated probabilities.",
+  "threshold": "Calibration-only risk F1, then precision, then higher actual score cutoff; separate window and answer thresholds",
+  "folds": "Existing fixed event assignment: evaluation f, calibration (f+1)%5, remaining3 listed as legacy-fit only; no parameters fitted for new methods",
+  "gold": "Unchanged R16 train assistant-reviewed labels and R22 geometry; 598 evaluable answers/151 risk, 9526 evaluable windows/1063 risk",
+  "safe_refusals": "Reviewed safe refusal is answer label0; its candidate windows still contribute to answer max but are excluded from localization denominator",
+  "unresolved": "Excluded according to original eligibility, not mapped to negative; all feature rows must be present",
+  "old_baselines": "Manual frozen-coefficient/formula replay of six R22 baselines; R24 slots_base_smooth recomputed from its frozen stay/temperature; scores/cutoffs/pooled summaries must match exactly",
+  "new_lr_fits": 0,
+  "new_pca_fits": 0,
+  "new_generation": false,
+  "gpu_used_by_runner": false,
+  "freeze": "All five calibration tables/lambda selections/thresholds and full score arrays freeze before separate outer entrypoint",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260925,
+    "unit": "event group",
+    "fixed_models_and_thresholds": true
+  },
+  "human_gold": false,
+  "original_validation_test_used": false,
+  "limits": [
+    "Development OOF has been repeatedly inspected, not a fresh final test",
+    "Pinned LUMINA formula with NF4 Qwen/body-token perturbation and window-max answer aggregation is an adaptation",
+    "Secondary calibrated lambda cannot replace the fixed lambda=.5 primary after results are seen"
+  ]
+}

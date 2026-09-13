@@ -1,0 +1,99 @@
+{
+  "version": "qa-expanded-llama-four-baselines-v1",
+  "methods": [
+    "prefix_pre_header",
+    "legacy_lb_nll",
+    "prefix_post_header",
+    "harp64_legacy_lb_nll"
+  ],
+  "widths": {
+    "prefix_pre_header": 1024,
+    "legacy_lb_nll": 1025,
+    "prefix_post_header": 1024,
+    "harp64_legacy_lb_nll": 1089
+  },
+  "C": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260924,
+  "fit_count": 20,
+  "frozen_old_comparisons_not_refitted": true,
+  "cohort": {
+    "fit_answers": 3680,
+    "native_fit_answers": 634,
+    "aux_fit_answers": 3046,
+    "fit_source_groups": 615,
+    "fit_windows": 653979,
+    "calibration_answers": 159,
+    "calibration_groups": 154,
+    "calibration_windows": 42241
+  },
+  "features": {
+    "prefix_pre_header": "Mean1024 LB across all raw tokens in each eligible4BPE window; full input prefix, prediction-before-current, real chat header.",
+    "legacy_lb_nll": "Original source-only post-read no-header LB1024 window mean + NLL1 window mean.",
+    "prefix_post_header": "Mean1024 LB; full input prefix, read-current state, same real chat header.",
+    "harp64_legacy_lb_nll": "Same legacyLB+NLL1025 followed by mean frozen HARP bottom64 projection; dimension1089."
+  },
+  "shared_projection": "Reuse frozen HARP bottom256 head basis, compute all256 in original order then keep first64. Also preserve frozen original fit-PCA64 projections as a nonpredictor cache for future controls. Neither projection is refit.",
+  "PCA_used_in_these_four_classifiers": false,
+  "harp_adaptation": "Projection only, not the original complete HARP weak-supervision method.",
+  "cohort_gate": "Require frozen Llama v3 full3046 complete manifest, exact identities/plans/layouts/signature, per-array/JSON hashes and all raw coordinates before any formal preparation or fit. Partial cohorts are never fitted/reported.",
+  "old_reuse": "Original634 fit and159 calibration cached LB/NLL/hidden and four Lookback definitions are read-only. Every original210364 window and HARP/PCA representation must match old caches exactly.",
+  "base_weights": "Reuse audited probe_v1 expanded3680 weights: equal615 groups; within group native/aux eachhalf; within stratum equal answers then windows.",
+  "loss_weights": "Reuse exact class factors then group-renormalized loss; total168123, identical to original634 training. No sample-count-induced C change.",
+  "scaler": "Separate fit-only base-weighted StandardScaler per family; partial_fit blocks16384; transformed float32; one scaler shared by all five Cs.",
+  "LR": "liblinear L2 max_iter2000 random_state20260924; four CPU threads; no class_weight beyond frozen explicit sample_weight.",
+  "threshold_and_selection": "Same q calibration-only separate risk F1 thresholds, tieprecision then higherthreshold; select C by maxmin(windowF1,answerF1),windowF1,windowprecision,smallerC.",
+  "geometry": "All653979 fit and42241 calibration windows. Mean all4 raw BPE tokens including punctuation; N<4 only actual tokens; unchanged human labels, QA safe-refusal policy. Answer=max every eligible window.",
+  "provenance": "Original793 are published Llama-family responses. Auxiliary3046 answers from other generators are teacher-forced through one fixed Llama NF4 checkpoint; not their native internal trajectories.",
+  "test_opened": false,
+  "new_generation": false,
+  "GPU_used_by_this_runner": false,
+  "refit_PCA_or_head_basis": false,
+  "development_limit": "Families and C budget chosen after earlier calibration experiments. This is development, not new independent test performance. Expanded3680 reuses615 source groups, not3680 independent questions.",
+  "resource_estimate": {
+    "matrix_raw_gib": 8.136190995573997,
+    "fit_standardized_gib": 10.139720879495144,
+    "projection_token_caches_gib": 0.3378419876098633,
+    "reserve_free_gib": 30,
+    "CPU_minutes_planning": [
+      15,
+      60
+    ],
+    "not_measured": true
+  },
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_llama_baselines.py": "d338b15b64ee7768d8bfd1ed576dddb602b38357169c6637ef6a7be26dcc3f91",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_probe_expansion.py": "9f1683f4bfd9fc41add103606bcb259d94c6ca7ce5191bf453a6d6690dcae4ee",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\export_freeze.json": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\answers_fit.jsonl": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\tokens_fit.jsonl": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\windows_k4_fit.jsonl": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\signature.json": "f498a0c9b59d13ddf6499ad480534d6deb6665e6c938c4715a8b1966e03c928a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\protocol.json": "0a638d7a69374de3620edc838866d3b02003a0f55eb277a847ee5140caa264df",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\preparation_freeze.json": "2b6d71fcda3e91300cd752be93bbcacd2e9f2757ad0115c287beef5ff18d2fcc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_manifest.json": "1731cc532289ad927cb8b9bd5eea3fc9a9916105f3695bb71e0b593c34ef883d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_signature.json": "131815b0e3b53a978c9a462ff289e6b95ab8e56dc7921d925538518691ee9f09",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\feature_manifest.json": "5f9e6569325cc54e37163d977e78f91501e37a22205617a2976ec06bbce0dd11",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\signature.json": "d71393febe535d30c158a8743a6602b0146867a3714413407521c136c617fbe6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\layouts.jsonl": "2de5dc758cf1036fe11378af8b5aaf47fc265e1a8789a9af5dba451c7f0a2f5f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_basis.npz": "cc69e4d72b52e0a5e91e036feee847867ce492c80eb894ae9e373207e116c5f6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_basis.json": "9f5bd619dd28c03e8af912af788c6c0a10caa588e2f2f40bdafbea5370be250b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_manifest.json": "fbc7e5e7f74fd8ae7be318d512b5dce298f9b500a3ab83668a1004f38ae371d8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_signature.json": "86749e3d48fedb1aa5ec47ec388bcc8543d9a882b329037e3cbcb47bb69414cb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\hidden_pca.pkl": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\complete.json": "c4c0efc2a806775c50e406575677f88962db3ed10a2c98604ec04d029be44c9a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\harp_development_v1\\complete.json": "cbbdeff57e35d69359bdd421e44a560a6c2d3ff1ab86e4ed07dc58c531109a60",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\lookback_controls_v2\\complete.json": "7b13837857a20e0320d63c5b84ccd1af07d6821c13ef4b1cf0230f7f90eefaa0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\complete.json": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_weights.npz": "4cd9e49e2bf7df873ed9592a9e9ce7221b43a827d0093e905f306c9ee3dd8950"
+  }
+}

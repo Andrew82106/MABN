@@ -1,0 +1,22 @@
+{
+  "status": "passed_without_reopening_calibration_labels",
+  "three_recipes_preregistered_before_fit": true,
+  "only_max_leaf_nodes_varied": true,
+  "all_domain_selection_key_replayed_exactly": true,
+  "native_diagnostics_did_not_affect_selection": true,
+  "upstream_supervised_columns_source_group_OOF": true,
+  "in_sample_supervised_columns": 0,
+  "expanded_LR_design_byte_identical": true,
+  "same_five_group_folds_as_expanded_LR": true,
+  "downstream_five_fold_window_coverage_exactly_once": true,
+  "all_candidate_fit_metrics_replayed_exactly": true,
+  "all_candidate_native_diagnostics_replayed_exactly": true,
+  "full_model_loadable_and_parameter_exact": true,
+  "calibration_score_shapes_and_finiteness_valid": true,
+  "calibration_labels_reopened_by_audit": false,
+  "calibration_thresholds_fitted": 0,
+  "calibration_evaluations": 1,
+  "formal_baseline_files_unchanged": true,
+  "official_test_opened": false,
+  "GPU_used": false
+}

@@ -1,0 +1,208 @@
+{
+  "version": "semantic-window-v3-evidence-union-native634",
+  "scope": {
+    "fit": "Native 634-answer fit cohort only; 615 source-connected groups.",
+    "calibration": "159 answers, evaluated once after the full fit freeze.",
+    "expanded_fit": "Not used in this version.",
+    "official_test": "No path or loader exists in this runner."
+  },
+  "features": {
+    "union_width": 106,
+    "backbone": {
+      "width": 26,
+      "source": "Exact frozen semantic-window v2 whitebox12+geometry14 columns.",
+      "names": [
+        "claim_token_weighted_mean__whitebox_max__oof_lookback",
+        "claim_token_weighted_mean__whitebox_max__oof_large",
+        "claim_token_weighted_mean__whitebox_max__generation_nll",
+        "claim_token_weighted_mean__whitebox_mean__oof_lookback",
+        "claim_token_weighted_mean__whitebox_mean__oof_large",
+        "claim_token_weighted_mean__whitebox_mean__generation_nll",
+        "claim_token_weighted_mean__whitebox_min__oof_lookback",
+        "claim_token_weighted_mean__whitebox_min__oof_large",
+        "claim_token_weighted_mean__whitebox_min__generation_nll",
+        "claim_token_weighted_mean__whitebox_std__oof_lookback",
+        "claim_token_weighted_mean__whitebox_std__oof_large",
+        "claim_token_weighted_mean__whitebox_std__generation_nll",
+        "geometry__lexical_token_fraction_of_k4",
+        "geometry__ownerless_lexical_fraction",
+        "geometry__log1p_distinct_claims",
+        "geometry__claim_boundary_crossing",
+        "geometry__dominant_claim_owner_mass_fraction",
+        "geometry__mean_claim_fraction_covered",
+        "geometry__dominant_claim_fraction_covered",
+        "geometry__mean_relative_position_in_claim",
+        "geometry__mean_center_distance_in_claim",
+        "geometry__fraction_at_claim_start",
+        "geometry__fraction_at_claim_end",
+        "geometry__fraction_within_two_lexical_tokens_of_start",
+        "geometry__fraction_within_two_lexical_tokens_of_end",
+        "geometry__log1p_dominant_claim_length"
+      ]
+    },
+    "evidence_union": {
+      "width": 44,
+      "source": "Frozen evidence_union_nli_v2 per-claim aggregate interface.",
+      "claim_names": [
+        "union__candidate_count",
+        "union__max_entailment",
+        "union__max_neutral",
+        "union__max_contradiction",
+        "union__mean_entailment",
+        "union__mean_neutral",
+        "union__mean_contradiction",
+        "union__lack_of_entailment",
+        "union__or_risk",
+        "union__max_entailment_minus_max_contradiction",
+        "union__best_entailment_class_margin",
+        "union__best_contradiction_class_margin",
+        "attention__candidate_count",
+        "attention__max_entailment",
+        "attention__max_neutral",
+        "attention__max_contradiction",
+        "attention__mean_entailment",
+        "attention__mean_neutral",
+        "attention__mean_contradiction",
+        "attention__lack_of_entailment",
+        "attention__or_risk",
+        "attention__max_entailment_minus_max_contradiction",
+        "attention__best_entailment_class_margin",
+        "attention__best_contradiction_class_margin",
+        "bm25__candidate_count",
+        "bm25__max_entailment",
+        "bm25__max_neutral",
+        "bm25__max_contradiction",
+        "bm25__mean_entailment",
+        "bm25__mean_neutral",
+        "bm25__mean_contradiction",
+        "bm25__lack_of_entailment",
+        "bm25__or_risk",
+        "bm25__max_entailment_minus_max_contradiction",
+        "bm25__best_entailment_class_margin",
+        "bm25__best_contradiction_class_margin",
+        "union_gain_max_entailment_over_attention",
+        "union_gain_max_entailment_over_bm25",
+        "union_gain_max_contradiction_over_attention",
+        "union_gain_max_contradiction_over_bm25",
+        "attention_covers_union_best_entailment",
+        "bm25_covers_union_best_entailment",
+        "attention_covers_union_best_contradiction",
+        "bm25_covers_union_best_contradiction"
+      ],
+      "window_mapping": "Lexical-token ownership weighted mean; no claim-risk max projection."
+    },
+    "attribution": {
+      "width": 36,
+      "source": "Exact frozen semantic-window v2 four-band attribution columns.",
+      "names": [
+        "claim_token_weighted_mean__attribution_band_0__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_0__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_1__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_1__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_2__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_2__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_3__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_3__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_0__source_share",
+        "claim_token_weighted_mean__attribution_band_1__source_share",
+        "claim_token_weighted_mean__attribution_band_2__source_share",
+        "claim_token_weighted_mean__attribution_band_3__source_share",
+        "claim_token_weighted_mean__attribution_band_0__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_1__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_2__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_3__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_0__other_context_share",
+        "claim_token_weighted_mean__attribution_band_1__other_context_share",
+        "claim_token_weighted_mean__attribution_band_2__other_context_share",
+        "claim_token_weighted_mean__attribution_band_3__other_context_share",
+        "claim_token_weighted_mean__attribution_band_0__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_1__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_2__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_3__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_0__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_1__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_2__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_3__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_0__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_1__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_2__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_3__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_0__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_1__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_2__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_3__passage_hhi"
+      ]
+    },
+    "labels_used_to_build_features": false
+  },
+  "candidates": {
+    "variants_in_order": [
+      "backbone_union",
+      "backbone_union_attribution"
+    ],
+    "variant_blocks": {
+      "backbone_union": [
+        "backbone",
+        "evidence_union"
+      ],
+      "backbone_union_attribution": [
+        "backbone",
+        "evidence_union",
+        "attribution"
+      ]
+    },
+    "widths": {
+      "backbone_union": 70,
+      "backbone_union_attribution": 106
+    },
+    "C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "model": "Hierarchy-weighted StandardScaler plus L2 logistic regression/liblinear.",
+    "target": "Native any-error four-BPE window label.",
+    "backbone_only_selectable": false
+  },
+  "fit": {
+    "crossfit": "Five-fold GroupKFold on source-connected group_id.",
+    "weights": "Group equal, answer equal within group, window equal within answer, then one binary-class balance step.",
+    "thresholds": "Separate fit-OOF window and answer thresholds: F1, precision, then higher cutoff.",
+    "selection": "Maximize min(window F1, answer F1), window F1, answer F1, window AP, answer AP, fewer dimensions, smaller C, earlier preregistered variant.",
+    "full_fit": "Refit only the selected variant and C after fit-only selection."
+  },
+  "evaluation": {
+    "strict": "Apply frozen fit-OOF thresholds once to calibration.",
+    "diagnostic": "Calibration F1-opt thresholds are reported only as diagnostics.",
+    "references": {
+      "semantic_window_v2_strict": {
+        "windows": 0.6539950721576909,
+        "answers": 0.8545454545454545
+      },
+      "semantic_window_v2_cal_F1Opt": {
+        "windows": 0.6604922390875568,
+        "answers": 0.8708133971291866
+      },
+      "Lookback_common_cal_F1Opt": {
+        "windows": 0.6008821240162587,
+        "answers": 0.8454545454545455
+      },
+      "historical_incumbent_cal_selected": {
+        "windows": 0.6902813989031736,
+        "answers": 0.8910891089108911
+      }
+    }
+  },
+  "disabled": [
+    "conflict head",
+    "conflict-max",
+    "add-gate",
+    "claim-risk max projection",
+    "learned layer/head selection"
+  ],
+  "seed": 20260913,
+  "cpu_threads": 4,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

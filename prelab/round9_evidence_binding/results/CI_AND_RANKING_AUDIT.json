@@ -1,0 +1,441 @@
+{
+  "status": "passed",
+  "input_metrics_sha256": "46bbc1cb6cc0f88beedeaa16a95608f443b5c0daaeb7923772c0367074593001",
+  "input_predictions_sha256": "e9894dea9e1fbfec853c14d14a5c2cd074d8892ffce5b82e47ad5756eb80447c",
+  "seed": 20260911,
+  "draws": 2000,
+  "groups": 40,
+  "unit": "whole question including both conditions",
+  "subsets": {
+    "all_resolved_items": {
+      "methods": {
+        "lb_coarse": {
+          "ci95": [
+            0.2178048090523338,
+            0.5126622849724115
+          ],
+          "defined_draws": 2000
+        },
+        "lb_fine": {
+          "ci95": [
+            0.3583605128039526,
+            0.711468682120856
+          ],
+          "defined_draws": 2000
+        },
+        "binding_coarse": {
+          "ci95": [
+            0.27240073637086315,
+            0.5248344233794188
+          ],
+          "defined_draws": 2000
+        },
+        "binding_fine": {
+          "ci95": [
+            0.38234185634052614,
+            0.7124319172113289
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_lr": {
+          "ci95": [
+            0.1714163614163614,
+            0.5077027027027026
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260910": {
+          "ci95": [
+            0.4019199583575247,
+            0.6667279411764702
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260911": {
+          "ci95": [
+            0.4257373077733305,
+            0.6929846274101095
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260912": {
+          "ci95": [
+            0.35555555555555557,
+            0.6745109641489733
+          ],
+          "defined_draws": 2000
+        },
+        "nll": {
+          "ci95": [
+            0.18811881188118812,
+            0.4747398589065255
+          ],
+          "defined_draws": 2000
+        },
+        "entropy": {
+          "ci95": [
+            0.19827179570592063,
+            0.48807286588068427
+          ],
+          "defined_draws": 2000
+        },
+        "redeep": {
+          "ci95": [
+            0.15342753720940688,
+            0.29327902240325865
+          ],
+          "defined_draws": 2000
+        },
+        "lumina": {
+          "ci95": [
+            0.21347940074906366,
+            0.5016557273704898
+          ],
+          "defined_draws": 2000
+        },
+        "all_positive": {
+          "ci95": [
+            0.09704870981849989,
+            0.23074278296517386
+          ],
+          "defined_draws": 2000
+        },
+        "all_negative": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 2000
+        },
+        "lb_coarse_broadcast": {
+          "ci95": [
+            0.3412167056437427,
+            0.5889355135632682
+          ],
+          "defined_draws": 2000
+        },
+        "binding_coarse_broadcast": {
+          "ci95": [
+            0.3908523267336744,
+            0.607410692288741
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "contrasts": {
+        "fine_minus_coarse_global": {
+          "ci95": [
+            0.09500997572573407,
+            0.2755606283220456
+          ],
+          "defined_draws": 2000
+        },
+        "fine_minus_coarse_binding": {
+          "ci95": [
+            0.07184820110879132,
+            0.26434612284574943
+          ],
+          "defined_draws": 2000
+        },
+        "binding_minus_global_fine": {
+          "ci95": [
+            -0.02726861159878097,
+            0.0654169396407866
+          ],
+          "defined_draws": 2000
+        },
+        "binding_minus_global_coarse": {
+          "ci95": [
+            -0.033369266969823085,
+            0.09820101260818913
+          ],
+          "defined_draws": 2000
+        },
+        "coarse_global_minus_broadcast": {
+          "ci95": [
+            -0.2287895915356155,
+            0.03479931205958433
+          ],
+          "defined_draws": 2000
+        },
+        "coarse_binding_minus_broadcast": {
+          "ci95": [
+            -0.1960247746244044,
+            -0.015782129111177774
+          ],
+          "defined_draws": 2000
+        },
+        "interaction": {
+          "ci95": [
+            -0.07614009046743915,
+            0.048929033787302505
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "mlp_seed_metric_mean": {
+        "ci95": [
+          0.397445794904512,
+          0.6762043429388921
+        ],
+        "defined_draws": 2000
+      }
+    },
+    "risk_items_only": {
+      "methods": {
+        "lb_coarse": {
+          "ci95": [
+            0.2480333046224519,
+            0.5448515269020705
+          ],
+          "defined_draws": 2000
+        },
+        "lb_fine": {
+          "ci95": [
+            0.4028057553956835,
+            0.7465530238379701
+          ],
+          "defined_draws": 2000
+        },
+        "binding_coarse": {
+          "ci95": [
+            0.35173675394516446,
+            0.5948002025289469
+          ],
+          "defined_draws": 2000
+        },
+        "binding_fine": {
+          "ci95": [
+            0.4470474014848658,
+            0.7685484577637572
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_lr": {
+          "ci95": [
+            0.1855521125081938,
+            0.5416666666666666
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260910": {
+          "ci95": [
+            0.4779624220415252,
+            0.7561053783614758
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260911": {
+          "ci95": [
+            0.5272692036645524,
+            0.7905015197568387
+          ],
+          "defined_draws": 2000
+        },
+        "hidden_mlp_seed_20260912": {
+          "ci95": [
+            0.4099007085994226,
+            0.7579313256403037
+          ],
+          "defined_draws": 2000
+        },
+        "nll": {
+          "ci95": [
+            0.30455665390209874,
+            0.6271959322583258
+          ],
+          "defined_draws": 2000
+        },
+        "entropy": {
+          "ci95": [
+            0.3221913580246914,
+            0.6449102619771312
+          ],
+          "defined_draws": 2000
+        },
+        "redeep": {
+          "ci95": [
+            0.3506883751103743,
+            0.49327354260089684
+          ],
+          "defined_draws": 2000
+        },
+        "lumina": {
+          "ci95": [
+            0.2941073632250103,
+            0.5901825633383009
+          ],
+          "defined_draws": 2000
+        },
+        "all_positive": {
+          "ci95": [
+            0.38064322856146876,
+            0.5943163665102826
+          ],
+          "defined_draws": 2000
+        },
+        "all_negative": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 2000
+        },
+        "lb_coarse_broadcast": {
+          "ci95": [
+            0.3908523267336744,
+            0.607410692288741
+          ],
+          "defined_draws": 2000
+        },
+        "binding_coarse_broadcast": {
+          "ci95": [
+            0.3908523267336744,
+            0.607410692288741
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "contrasts": {
+        "fine_minus_coarse_global": {
+          "ci95": [
+            0.10624667699832832,
+            0.29263517514332166
+          ],
+          "defined_draws": 2000
+        },
+        "fine_minus_coarse_binding": {
+          "ci95": [
+            0.049708539346610625,
+            0.27061994734626055
+          ],
+          "defined_draws": 2000
+        },
+        "binding_minus_global_fine": {
+          "ci95": [
+            0.0010326211788608101,
+            0.08419466441082918
+          ],
+          "defined_draws": 2000
+        },
+        "binding_minus_global_coarse": {
+          "ci95": [
+            0.010088869463869528,
+            0.14576833580726611
+          ],
+          "defined_draws": 2000
+        },
+        "coarse_global_minus_broadcast": {
+          "ci95": [
+            -0.22017729915133022,
+            0.022931642910571162
+          ],
+          "defined_draws": 2000
+        },
+        "coarse_binding_minus_broadcast": {
+          "ci95": [
+            -0.11051815475613079,
+            0.047094277101903996
+          ],
+          "defined_draws": 2000
+        },
+        "interaction": {
+          "ci95": [
+            -0.09979073046990664,
+            0.030233405497199776
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "mlp_seed_metric_mean": {
+        "ci95": [
+          0.47908641091076937,
+          0.7675641069908592
+        ],
+        "defined_draws": 2000
+      }
+    }
+  },
+  "independent_within_answer_ranking": {
+    "lb_coarse": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.565526594647421,
+      "mean_average_precision": 0.4905450377955998
+    },
+    "lb_fine": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.8805173715477493,
+      "mean_average_precision": 0.8331132020602044
+    },
+    "binding_coarse": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5824084759429586,
+      "mean_average_precision": 0.5165918280161118
+    },
+    "binding_fine": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.8861373419501499,
+      "mean_average_precision": 0.8535424460555753
+    },
+    "hidden_lr": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.880785034311307,
+      "mean_average_precision": 0.8364491945442958
+    },
+    "hidden_mlp_seed_20260910": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.8849147557727196,
+      "mean_average_precision": 0.835996051339818
+    },
+    "hidden_mlp_seed_20260911": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.9100291561354781,
+      "mean_average_precision": 0.8606828045846208
+    },
+    "hidden_mlp_seed_20260912": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.9060628391252364,
+      "mean_average_precision": 0.8475003333842582
+    },
+    "nll": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.6934646272912556,
+      "mean_average_precision": 0.6311247790119539
+    },
+    "entropy": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.69473747261172,
+      "mean_average_precision": 0.6338731008773889
+    },
+    "redeep": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.6559166642212619,
+      "mean_average_precision": 0.5030303828734132
+    },
+    "lumina": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5186472553830243,
+      "mean_average_precision": 0.5132400117287081
+    },
+    "all_positive": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5,
+      "mean_average_precision": 0.30734154178207884
+    },
+    "all_negative": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5,
+      "mean_average_precision": 0.30734154178207884
+    },
+    "lb_coarse_broadcast": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5,
+      "mean_average_precision": 0.30734154178207884
+    },
+    "binding_coarse_broadcast": {
+      "mixed_answers": 18,
+      "mean_auroc": 0.5,
+      "mean_average_precision": 0.30734154178207884
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "PsiloQA-official-train-auxiliary-tokenization-v1",
+  "cohort": "Exactly15847 staged candidates; retain635 unmarked answers and4 null complexity. No metadata-based filtering, refit, official validation/test read or new download.",
+  "encoder_input": "Exact wiki_passage + ModernBERT sep_token + exact original question + sep_token + exact original llm_answer, add_special_tokens=True, truncation=False, no padding. No golden_answer, annotated markup or generator identity is read for input construction.",
+  "raw_BPE": "Same local Llama tokenizer and encode_view full-string wrapper as original QA. Auxiliary prompt=exact wiki_passage + two newline characters + original question; reference_range=(0,len(wiki_passage)). Preserve clipped and raw answer boundary offsets, punctuation, byte fallback duplicates. This is only an auxiliary shared-coordinate tokenization, NOT the original generator trace or a Llama forward.",
+  "labels": "Unchanged automatic spans through original gold.map_characters and independent interval oracle; lexical=any isalnum character, risk=any gold span intersecting an isalnum character. Answer label=bool(original labels); punctuation-only positive may have no lexical risk, recorded not relabeled. Unmarked positions are silver negatives, not verified truth.",
+  "mapping": "Original nonwhitespace-character-average encoder-to-raw mapping; reuse frozen strict NFC helper for proven single-character compositions only, with full proof ledger. No text/offset/label repair and no old module global mutations.",
+  "windows": "Original4rawBPE stride1; punctuation consumes slots, short answer gives one short window, all-punctuation windows excluded only from lexical window count.",
+  "failure_policy": "Attempt every fixed candidate and retain full exception ledger; no silent truncation, filtering or fallback. Record over8192 and missing lexical coverage. Failed mapping cannot fabricate a successful row; expected/attempted/mapped identities audited. Any exception blocks training-ready status.",
+  "output": "IndexedAuxiliary-compatible token_inputs.jsonl plus byte offsets and per-answer index. automatic_not_human_gold and unmarked_positions_silver_not_verified_negative are true. Separate original labels and provenance stay unchanged.",
+  "operations": "CPU tokenizers only, local_files_only; no model weights, CUDA, training, data changes, global status edits or GPU queue."
+}

@@ -1,0 +1,241 @@
+{
+  "schema": "round9-token-localization-protocol-v1",
+  "status": "specified_before_generation_and_fit",
+  "objective": "Locate unsupported or contradicted expressions relative to current retrieved passages. No review strategy change.",
+  "dataset": {
+    "upstream": "F4biian/RAGognize",
+    "revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+    "own_split": true,
+    "categories": [
+      "time",
+      "quantity",
+      "location",
+      "relation",
+      "action"
+    ],
+    "target_groups_per_category": 40,
+    "split_groups_per_category": {
+      "train": 24,
+      "validation": 8,
+      "test": 8
+    },
+    "split_seed": 20260911,
+    "conditions": [
+      "complete",
+      "partial"
+    ],
+    "expected_items": 1,
+    "generation_model_output_based_selection": false,
+    "annotation": "assistant initial plus independent review; not researcher human gold"
+  },
+  "model": {
+    "name": "Qwen2.5-7B-Instruct-bnb-4bit",
+    "path": "../models/Qwen2.5-7B-Instruct-bnb-4bit",
+    "frozen_weights": true,
+    "quantization": "NF4",
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "do_sample": false,
+    "max_input_tokens": 3072,
+    "max_new_tokens": 256,
+    "seed": 20260910,
+    "no_missing_context_or_abstention_hint": true
+  },
+  "features": {
+    "version": "binding9-v1",
+    "binding_dimensions": 32,
+    "layer_bands": [
+      [
+        1,
+        7
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        15,
+        21
+      ],
+      [
+        22,
+        28
+      ]
+    ],
+    "channels": [
+      "body_mass",
+      "target_share",
+      "target_other_density_ratio",
+      "target_prev_density_ratio",
+      "entity_only_share",
+      "attribute_distractor_share",
+      "self_mass",
+      "pair_balance"
+    ],
+    "hidden_layer": 28,
+    "lookback_dimensions": 784,
+    "matcher_visible_only": true,
+    "hidden_gold_subjects_forbidden": true,
+    "postread": [
+      "hidden",
+      "lookback",
+      "binding",
+      "redeep"
+    ],
+    "predictive": [
+      "nll",
+      "entropy",
+      "lumina"
+    ],
+    "no_future_for_native_scores": true,
+    "candidate_empty_values_retained": true
+  },
+  "methods": [
+    "lb_coarse",
+    "lb_fine",
+    "binding_coarse",
+    "binding_fine",
+    "hidden_lr",
+    "hidden_mlp_seed_20260910",
+    "hidden_mlp_seed_20260911",
+    "hidden_mlp_seed_20260912",
+    "nll",
+    "entropy",
+    "redeep",
+    "lumina",
+    "all_positive",
+    "all_negative",
+    "lb_coarse_broadcast",
+    "binding_coarse_broadcast"
+  ],
+  "lr": {
+    "C": [
+      0.1,
+      1.0
+    ],
+    "penalty": "l2",
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "seed": 20260910
+  },
+  "mlp": {
+    "widths": [
+      128,
+      64
+    ],
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 8,
+    "min_delta": 1e-06,
+    "learning_rates": [
+      0.0001,
+      0.0003
+    ],
+    "seeds": [
+      20260910,
+      20260911,
+      20260912
+    ],
+    "shared_learning_rate_selection": "mean validation token F1 across three seeds; mean precision then smaller lr"
+  },
+  "redeep": {
+    "heads": [
+      1,
+      4
+    ],
+    "layers": [
+      4,
+      8
+    ],
+    "beta": [
+      0.1,
+      0.5,
+      1
+    ],
+    "ranking_and_scaling": "train only"
+  },
+  "lumina": {
+    "lambda": 0.5,
+    "random_context": "frozen independent Round7 development passage pool; same donor for paired conditions"
+  },
+  "weights": {
+    "base": "equal group -> condition -> item -> token",
+    "scaler": "train only with base weights, shared across coarse/fine labels",
+    "loss": "train class factors, then group renormalization, mean one; no double class_weight"
+  },
+  "threshold": {
+    "target": "unweighted validation lexical-token micro F1, all resolved answers",
+    "ties": [
+      "higher precision",
+      "higher threshold"
+    ],
+    "global_per_method": true,
+    "fine_validation_for_both_coarse_and_fine": true,
+    "no_test_retuning": true
+  },
+  "primary_contrast": [
+    "binding_fine",
+    "lb_fine"
+  ],
+  "contrasts": {
+    "fine_minus_coarse_global": [
+      "lb_fine",
+      "lb_coarse"
+    ],
+    "fine_minus_coarse_binding": [
+      "binding_fine",
+      "binding_coarse"
+    ],
+    "binding_minus_global_fine": [
+      "binding_fine",
+      "lb_fine"
+    ],
+    "binding_minus_global_coarse": [
+      "binding_coarse",
+      "lb_coarse"
+    ],
+    "coarse_global_minus_broadcast": [
+      "lb_coarse",
+      "lb_coarse_broadcast"
+    ],
+    "coarse_binding_minus_broadcast": [
+      "binding_coarse",
+      "binding_coarse_broadcast"
+    ]
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260911,
+    "unit": "whole question group including both conditions"
+  },
+  "metrics": [
+    "token_micro_precision",
+    "token_micro_recall",
+    "token_micro_f1",
+    "tp_fp_fn_tn",
+    "auroc",
+    "average_precision",
+    "risk_item_only",
+    "within_answer_auroc_ap",
+    "span_coverage",
+    "extra_alert_coverage",
+    "normal_answer_false_alert",
+    "category_condition_strata"
+  ],
+  "limitations": [
+    "English single-question short-answer source-excerpt simulation",
+    "One frozen quantized model",
+    "Assistant annotations",
+    "Candidate-existence cues not independently isolated",
+    "Custom split, not official leaderboard",
+    "No SOTA claim"
+  ],
+  "details": [
+    "PLAN.md",
+    "ANNOTATION_GUIDE.md",
+    "EVALUATION_DRAFT.md",
+    "FEATURES_DRAFT.md"
+  ]
+}

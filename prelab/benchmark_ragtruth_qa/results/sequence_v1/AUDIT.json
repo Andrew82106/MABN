@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "audit_code_sha256": "bc85bb26002bb7a82ae0fa5118d5e6596970837c64e41ff5ce2af8d73c889713",
+  "complete_sha256": "ac075e8a7a0c08c9634da3ae3853b306aa170344b3fce61319e50e1247d47652",
+  "source_files_and_all_60_epoch_hashes_verified": true,
+  "gpu_used": false,
+  "test_opened": false,
+  "loss_mass": 139518.0,
+  "fit_lexical_tokens": 139518,
+  "groups_and_answer_and_lexical_weights_recomputed": true,
+  "punctuation_loss_is_zero": true,
+  "scaler_incremental_mean_max_absolute_error": 1.1102230246251565e-16,
+  "scaler_incremental_variance_max_absolute_error": 3.410605131648481e-13,
+  "single_global_moment_mean_difference": 1.712883845872426e-08,
+  "single_global_moment_variance_difference": 1.4837974049441982e-07,
+  "scaler_audit_note": "Initial global-moment check exposed float32 n_samples_seen_ recasting between sklearn partial_fit blocks; independent weighted merge now reproduces that documented frozen library behavior. No training artifact or tolerance changed.",
+  "full_standardized_matrix_recomputed_exact": true,
+  "fixed_LR_design_crosschecks": 31,
+  "pca_reused_without_refit": true,
+  "same_per_epoch_answer_order_both_models": true,
+  "unchanged_4_raw_BPE_geometry_lexical_only_max_verified": true,
+  "models": [
+    {
+      "method": "token_mlp",
+      "all_30_epochs_probabilities_aggregation_thresholds_counts_loss_exact": true,
+      "selected_epoch": 6,
+      "selected_checkpoint_full_predictions_reloaded_exact": true
+    },
+    {
+      "method": "token_tcn",
+      "all_30_epochs_probabilities_aggregation_thresholds_counts_loss_exact": true,
+      "selected_epoch": 6,
+      "selected_checkpoint_full_predictions_reloaded_exact": true
+    }
+  ],
+  "seconds": 17.840613199979998,
+  "limitations": "Implementation self-audit; calibrated development selection remains optimistic and the seed is not repeated."
+}

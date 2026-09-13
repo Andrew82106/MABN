@@ -1,0 +1,22 @@
+{
+  "version": "fava-local-pair-tokenization-v1",
+  "pairs": 10040,
+  "side_inputs": 20080,
+  "scope": "Only the reviewed official-train FAVA local-pair candidates, their whitelist inputs and inherited isolation metadata. No QA fit/cal/test text, labels, scores or weights consumed.",
+  "encoder_input": "Exact retrieved_passages + ModernBERT SEP + exact empty question + SEP + one original/preferred response. Special tokens added, no padding or truncation. Never concatenate both versions or target/provenance fields.",
+  "raw_axis": "Existing Llama encode_view over exact retrieved_passages + two newlines + empty question in its full chat wrapper, followed by this response. Preserve original and clipped answer offsets, punctuation and overlapping byte tokens. Auxiliary coordinates only, not native generation or a forward pass.",
+  "target": "Keep each side original independent [start,end) Unicode-character range and exact text. target_raw_token_indices/target_encoder_token_indices use nonwhitespace intersection; *_lexical_indices require isalnum characters INSIDE the target. Do not select punctuation merely because its BPE also contains an outside-target letter.",
+  "unknown_outside": "No risk_mask, answer_risk, whole-answer truth label, full corrected-answer negative, or outside-target binary supervision is created. original/preferred are noisy author-relative roles, not factual certificates.",
+  "mapping": "All original nonwhitespace answer characters map to encoder owners; raw BPE receives equal original-character mass, overlap owners split mass. Reuse strict NFC helper only for proven single-character canonical compositions. Text and target coordinates never changed; repeated text resolved solely by original offsets, not find().",
+  "eligibility": "Retain every10040 pair/20080 sides. Eligible pair requires both sides fully mapped, complete encoder input <=8192, local raw and encoder lexical targets, and upstream structural eligibility. Keep four punctuation-target pairs with no lexical supervision. All other mapping/length failures explicitly retained; no silent subset or truncation.",
+  "weights_suggestion": "If later using only eligible pairs, recompute equal participating material groups -> original answers -> eligible pairs:1/(G*A_g*P_a). Both sides remain one pair unit. This is an explicit eligible-subset base-weight suggestion, not a loss or training choice.",
+  "outputs": "One token_inputs.jsonl record per side including failed sides, byte offsets, full text inputs and complete token/character mapping when successful; input_index.jsonl and paired_index.jsonl for later paired readers. All lengths attempted; failed raw mapping does not suppress encoder tokenization.",
+  "tokenizer_limit": 8192,
+  "operations": {
+    "CPU_only": true,
+    "GPU_used": false,
+    "trained": false,
+    "QA_data_modified": false,
+    "new_downloads": false
+  }
+}

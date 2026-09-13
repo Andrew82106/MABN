@@ -1,0 +1,77 @@
+{
+  "version": "exact-three-passage-subset-attribution-v1",
+  "role": "ours_method_candidate; not ContextCite; not LUMINA; baselines remain unchanged",
+  "method_boundary": "Our exact three-source attribution candidate. It does not modify, retrain, tune, or relabel any ContextCite, LUMINA, Lookback Lens, ReDeEP, HalluRAG, or other baseline.",
+  "cohort": {
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "source_input": "Frozen label-free LUMINA preparation artifact; original view only.",
+    "official_test": "Never opened."
+  },
+  "intervention": {
+    "sources": "The exact original Passage 1/2/3 character segments, including headers and inter-passage whitespace.",
+    "views": "All masks 000..111 in integer order; selected segments retain original source order. Empty removes only the exact material block.",
+    "fixed_content": "Prompt text outside that block and the published answer bytes are identical in all eight views.",
+    "tokenization": "One full-string fast-tokenizer call per view, literal existing Llama wrapper, no added tokens, padding, truncation, or generation.",
+    "frozen_coordinates": "Prompt/shell/passage hashes, prefix token IDs, full-input hashes, answer/predictor positions, response offsets, and kept-source token positions."
+  },
+  "extraction": {
+    "checkpoint": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "quantization": "NF4 double quantization; BF16 compute/storage conventions copied from the audited QA replay.",
+    "score": "For every published answer token and every subset, log softmax probability of the selected next token at its teacher-forced predictor position.",
+    "execution": "Eight views run sequentially. gpu-smoke and extract are separate explicit commands guarded by a cross-run lock, foreign-compute-process check, and free-memory gate.",
+    "historical_trace": false
+  },
+  "features": {
+    "axis": "One unchanged raw answer BPE axis shared by all views.",
+    "full_empty": "f(111)-f(000), plus full and empty NLL.",
+    "shapley": "Exact n=3 Shapley values over all eight log-probability coalitions; efficiency sum(phi)=f(111)-f(000) checked per token.",
+    "source_effects": "Three empty-to-single gains and three full leave-one-source-out drops.",
+    "dispersion": "Eight-view range and population standard deviation.",
+    "interactions": "Three pair and one triple exact Mobius/Harsanyi interactions, plus fixed summaries.",
+    "citations": "A token inherits valid Passage IDs cited in its fixed automatic sentence claim; cited Shapley/gain/drop summaries use that frozen bit mask. Missing citations remain explicit zero-indicator cases.",
+    "names": [
+      "full_nll",
+      "empty_nll",
+      "full_minus_empty",
+      "shapley_passage_1",
+      "shapley_passage_2",
+      "shapley_passage_3",
+      "single_gain_passage_1",
+      "single_gain_passage_2",
+      "single_gain_passage_3",
+      "loo_drop_passage_1",
+      "loo_drop_passage_2",
+      "loo_drop_passage_3",
+      "subset_range",
+      "subset_std",
+      "pair_interaction_12",
+      "pair_interaction_13",
+      "pair_interaction_23",
+      "triple_interaction",
+      "interaction_l1",
+      "shapley_abs_max",
+      "shapley_positive_sum",
+      "shapley_negative_mass",
+      "citation_any",
+      "citation_source_fraction",
+      "citation_shapley_sum",
+      "citation_shapley_mean",
+      "citation_positive_shapley_sum",
+      "citation_single_gain_max",
+      "citation_loo_drop_max"
+    ],
+    "width": 29
+  },
+  "readout": {
+    "labels": "Opened only by score after every GPU cache is frozen. Train only on lexical raw BPE labels.",
+    "model": "Fixed StandardScaler plus L2 LogisticRegression, C=0.1, liblinear, seed fixed; no architecture or hyperparameter search.",
+    "crossfit": "Five GroupKFold splits by source-connected group produce every fit token prediction; one all-fit model predicts calibration.",
+    "weights": "Within each training fold: equal source-group mass, then equal answer/token mass; binary class balance, then restore equal source-group loss mass.",
+    "thresholds": "Window and answer thresholds selected only on fit OOF predictions. Calibration is reporting only.",
+    "projection": "Unchanged eligible stride-one 4-original-BPE windows receive max lexical-token risk; answer receives max eligible-window risk."
+  },
+  "stage_gate": "initialize -> prepare -> check -> audit; after review only gpu-smoke -> extract -> score",
+  "limitations": "Teacher-forced source removal measures conditional evidence influence, not a historical causal trace. Removing passages also changes length and positions. Correlated passages make individual attribution share-dependent."
+}

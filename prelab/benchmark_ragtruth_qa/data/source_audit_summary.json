@@ -1,0 +1,15 @@
+{
+  "qa_sources": 989,
+  "old_news_sources": 734,
+  "old_source_documents_or_input_rows": 4024,
+  "qa_qa_material_edges": 20,
+  "qa_old_material_edges": 0,
+  "question_candidate_pairs": 865,
+  "source_info_sha256": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b",
+  "limitations": [
+    "MS MARCO release lacks original source URLs per retrieved passage.",
+    "Question linking and exact text checks do not certify all entity aliases or specific-event relationships.",
+    "Current source review is not independent researcher human annotation."
+  ],
+  "new_response_or_label_file_opened": false
+}

@@ -1,0 +1,53 @@
+{
+  "status": "complete_fit_only_exact_census",
+  "scope": {
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "calibration_read": false,
+    "test_read": false,
+    "gpu_used": false,
+    "trained": false
+  },
+  "gold_spans": {
+    "Evident Baseless Info": 343,
+    "Evident Conflict": 109,
+    "Subtle Baseless Info": 187,
+    "Subtle Conflict": 7
+  },
+  "conflict_span_surface_cues_not_mutually_exclusive": {
+    "number": 74,
+    "temporal": 11,
+    "negation": 18,
+    "passage_attribution": 42,
+    "proper_entity_proxy": 33
+  },
+  "gold_answers": {
+    "any_conflict": 91,
+    "any_baseless": 275,
+    "both": 38,
+    "any_risk": 328
+  },
+  "gold_4bpe_windows": {
+    "eligible": 168123,
+    "any_conflict": 3261,
+    "any_baseless": 18266,
+    "conflict_and_baseless": 50,
+    "any_risk_rebuilt": 21477,
+    "positive_label_field": 21477,
+    "Evident Baseless Info": 14001,
+    "Evident Conflict": 3120,
+    "Subtle Baseless Info": 4281,
+    "Subtle Conflict": 141
+  },
+  "imbalance": {
+    "subtle_conflict_share_of_all_error_spans": 0.010835913312693499,
+    "all_conflict_share_of_all_error_spans": 0.17956656346749225,
+    "conflict_window_share_of_all_eligible_windows": 0.019396513267072323,
+    "conflict_window_share_of_all_positive_windows": 0.15183684872188855
+  },
+  "sha256": {
+    "fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73"
+  }
+}

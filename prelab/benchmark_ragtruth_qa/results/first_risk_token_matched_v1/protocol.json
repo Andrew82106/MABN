@@ -1,0 +1,22 @@
+{
+  "version": "first-risk-wordstart-matched-v1",
+  "scope": "Only original634fit tokens and fixed existing NLL. No calibration/test, GPU, model fitting, relabeling or deployable feature creation.",
+  "first_risk": "For each original human span, first raw BPE overlapping at least one alphanumeric risk character; deduplicate identical first token indices within an answer, as original diagnosis.",
+  "normal": "Original lexical_mask true and risk_mask false; no model-score filtering.",
+  "word_start": "Find first Python str.isalnum character within original raw token offset. Word start iff its preceding answer character is absent or not isalnum. This is a character-boundary diagnostic, not a language-aware word tokenizer.",
+  "character_class": "First alphanumeric character within raw offset: digit using isdigit, else upper using isupper, else lower using islower, else other. Unicode Python character rules, order fixed.",
+  "position": "Decile=min(9,floor(10*raw_token_index/raw_token_count)); raw positions include punctuation and whitespace. No learned bins.",
+  "pooled": [
+    "all first risk versus all normal word-start tokens",
+    "word-start first risk versus normal word-start tokens",
+    "word-start continuation risk versus normal word-start tokens"
+  ],
+  "matching": "Same answer, same word_start Boolean, same character_class and same position decile. Use ALL eligible normal tokens in that exact bucket. No cross-answer fallback, nearest-neighbor search, or score-based matching.",
+  "percentile": "(count(normal NLL < first NLL)+0.5*count(equal))/number of matched normal tokens. HigherNLL direction fixed. Each distinct first risk token equal weight; also report answer-equal mean and word-start-only subset.",
+  "missing": "No matching normal bucket means unmatched, retained with reason and all strata. No imputation or exclusion from reported coverage denominator.",
+  "review": "Original implementation minimum overlapping lexical BPE and unique-first/remaining-risk/normal masks verified; independent rerun must reproduce its pooled counts and AUROCs.",
+  "limits": "Gold-known diagnostic, not deployment F1. Controls are coarse; residual lexical/content, citation, answer and boundary differences remain. Does not establish a causal word-start mechanism or validate new detector features.",
+  "bootstrap": "None",
+  "trained": false,
+  "GPU_used": false
+}

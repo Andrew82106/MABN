@@ -1,0 +1,14 @@
+{
+  "status": "cpu_only_ready_for_review",
+  "files_sha256": {
+    "PROTOCOL.md": "4ab452c90dac2240406a701756844b8899823b4c0a1c6d495605a4aa6486eaa7",
+    "examples.jsonl": "8dc775b59bbf786f9ff6bfcb46faf1798a4c9d6bf6d7ef58667eae6fcde1dc35",
+    "conflict_span_trace.jsonl": "d8c33aa67f74191fbe85892a4cd09197411df1b08a4bdbc296c4eeff70e6e4ec",
+    "arrays.npz": "665af43d0ecf58c1ec9beba048085dd645b1555e1538f80021d0ab863d969b19",
+    "preparation_complete.json": "5757abfca65d65a85732bf3edda90f57d70c7431b76155cdee2dd6b37aaf521b"
+  },
+  "calibration_rows_read": 0,
+  "test_rows_read": 0,
+  "model_weights_loaded": false,
+  "GPU_used": false
+}

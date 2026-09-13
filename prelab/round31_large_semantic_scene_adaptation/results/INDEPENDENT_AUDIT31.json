@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "counts": {
+    "lookback_tuned": {
+      "windows": {
+        "n": 9526,
+        "positive": 1063,
+        "tp": 724,
+        "fp": 561,
+        "fn": 339,
+        "tn": 7902,
+        "precision": 0.5634241245136187,
+        "recall": 0.6810912511759172,
+        "f1": 0.616695059625213
+      },
+      "answers": {
+        "n": 598,
+        "positive": 151,
+        "tp": 107,
+        "fp": 48,
+        "fn": 44,
+        "tn": 399,
+        "precision": 0.6903225806451613,
+        "recall": 0.7086092715231788,
+        "f1": 0.6993464052287581
+      },
+      "safe_refusal_false_positives": 37
+    },
+    "local_slots_fusion_smooth_global": {
+      "windows": {
+        "n": 9526,
+        "positive": 1063,
+        "tp": 759,
+        "fp": 319,
+        "fn": 304,
+        "tn": 8144,
+        "precision": 0.7040816326530612,
+        "recall": 0.7140169332079022,
+        "f1": 0.7090144792153199
+      },
+      "answers": {
+        "n": 598,
+        "positive": 151,
+        "tp": 114,
+        "fp": 20,
+        "fn": 37,
+        "tn": 427,
+        "precision": 0.8507462686567164,
+        "recall": 0.7549668874172185,
+        "f1": 0.8
+      },
+      "safe_refusal_false_positives": 11
+    },
+    "semantic_probe": {
+      "windows": {
+        "n": 9526,
+        "positive": 1063,
+        "tp": 707,
+        "fp": 546,
+        "fn": 356,
+        "tn": 7917,
+        "precision": 0.5642458100558659,
+        "recall": 0.665098777046096,
+        "f1": 0.6105354058721935
+      },
+      "answers": {
+        "n": 598,
+        "positive": 151,
+        "tp": 115,
+        "fp": 63,
+        "fn": 36,
+        "tn": 384,
+        "precision": 0.6460674157303371,
+        "recall": 0.7615894039735099,
+        "f1": 0.6990881458966566
+      },
+      "safe_refusal_false_positives": 28
+    },
+    "lookback_plus_semantic": {
+      "windows": {
+        "n": 9526,
+        "positive": 1063,
+        "tp": 777,
+        "fp": 436,
+        "fn": 286,
+        "tn": 8027,
+        "precision": 0.640560593569662,
+        "recall": 0.7309501411100658,
+        "f1": 0.6827768014059754
+      },
+      "answers": {
+        "n": 598,
+        "positive": 151,
+        "tp": 112,
+        "fp": 40,
+        "fn": 39,
+        "tn": 407,
+        "precision": 0.7368421052631579,
+        "recall": 0.7417218543046358,
+        "f1": 0.7392739273927392
+      },
+      "safe_refusal_false_positives": 31
+    },
+    "r26_plus_semantic": {
+      "windows": {
+        "n": 9526,
+        "positive": 1063,
+        "tp": 810,
+        "fp": 341,
+        "fn": 253,
+        "tn": 8122,
+        "precision": 0.7037358818418766,
+        "recall": 0.761994355597366,
+        "f1": 0.7317073170731707
+      },
+      "answers": {
+        "n": 598,
+        "positive": 151,
+        "tp": 124,
+        "fp": 24,
+        "fn": 27,
+        "tn": 423,
+        "precision": 0.8378378378378378,
+        "recall": 0.8211920529801324,
+        "f1": 0.8294314381270903
+      },
+      "safe_refusal_false_positives": 14
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "fit_windows": 5444,
+      "width": 1025,
+      "base_mass": 5444.0,
+      "loss_mass": 3853.9999999999995,
+      "weighted_scaler_and_group_class_weights_verified": true,
+      "manual_probability_maxdiff": 0.0,
+      "all12_calibration_candidates_verified": true
+    },
+    {
+      "fold": 1,
+      "fit_windows": 5506,
+      "width": 1025,
+      "base_mass": 5506.0,
+      "loss_mass": 3853.9999999999995,
+      "weighted_scaler_and_group_class_weights_verified": true,
+      "manual_probability_maxdiff": 0.0,
+      "all12_calibration_candidates_verified": true
+    },
+    {
+      "fold": 2,
+      "fit_windows": 6324,
+      "width": 1025,
+      "base_mass": 6324.0,
+      "loss_mass": 3854.0,
+      "weighted_scaler_and_group_class_weights_verified": true,
+      "manual_probability_maxdiff": 0.0,
+      "all12_calibration_candidates_verified": true
+    },
+    {
+      "fold": 3,
+      "fit_windows": 5738,
+      "width": 1025,
+      "base_mass": 5738.0,
+      "loss_mass": 3854.0000000000005,
+      "weighted_scaler_and_group_class_weights_verified": true,
+      "manual_probability_maxdiff": 0.0,
+      "all12_calibration_candidates_verified": true
+    },
+    {
+      "fold": 4,
+      "fit_windows": 5566,
+      "width": 1025,
+      "base_mass": 5566.0,
+      "loss_mass": 3854.0,
+      "weighted_scaler_and_group_class_weights_verified": true,
+      "manual_probability_maxdiff": 0.0,
+      "all12_calibration_candidates_verified": true
+    }
+  ],
+  "all12222_hidden_means_and_lexical_logit_maxima_exact": true,
+  "original_R29_controls_not_refitted_and_unchanged": true,
+  "all60_alpha_candidates_verified": true,
+  "all_outer_windows_answers_assigned_once": true,
+  "new_model_fits": 0,
+  "GPU_used": false,
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "seconds": 6.542558099958114,
+  "source_differences": "Backbone, width and prior QA-only versus auxiliary->QA supervision differ together.",
+  "complete_sha256": "0307b6e2aa747d415e5dcf91593174b3ca57b8e0d32b23c4ccf22a4ad74fcdd8",
+  "audit_code_sha256": "8f8680694b7e44f5ed009eb0c102d0f9bd0d0fe22ca7a8e4f1ac74ed7694171e"
+}

@@ -1,0 +1,39 @@
+{
+  "version": "qa-expanded-frozen-state-probe-v1",
+  "regimes": [
+    "original634",
+    "expanded3680"
+  ],
+  "methods": [
+    "hidden64",
+    "hidden64_risk"
+  ],
+  "C": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "new_fits": 9,
+  "reused_fits": 3,
+  "projection": "Reuse exactly original fit634-only PCA64, never refit on auxiliary or calibration; isolate added training examples",
+  "features": "Frozen MiniCheck mapped original raw BPE state mean64 per4raw window, optionally official claim risk logit maximum over lexical BPEs",
+  "mapping": "Same run_semantic_hidden.align: character-overlap hidden averaging; all nonwhitespace covered; original Llama token geometry retained",
+  "base_weights": "Expanded: each source-connected group equal; native634 and auxiliary3046 each half within group, then answer/window uniform in each stratum. If one stratum absent give existing stratum all mass. Original634 reuse exact old weights.",
+  "loss_weights": "Same fit-only binary class factors then re-equalize group loss, total mass168123 for BOTH training sizes; no inadvertent C change from expanded window count",
+  "standardization": "Fit-only base-weighted StandardScaler, blocks16384, float32 transformed features; common scaler across C within regime/method",
+  "classifier": "liblinear L2, max_iter2000, seed20260924,4 CPU threads",
+  "selection": "Calibration-only separate window/answer F1 thresholds and same q.selection_key across three Cs; test unopened",
+  "evaluation": "Unchanged159 calibration answers/42241 windows; answer max all eligible windows including refusals",
+  "scope": "All original634 plus3046 unique published human fit answers; same615 source groups, no extra independent questions",
+  "generator_id": "Only native/aux loss stratum and provenance, never a predictor input",
+  "extra_checker": true,
+  "encoder_finetuned": false,
+  "native_generator_whitebox": false,
+  "script_sha256": "9f1683f4bfd9fc41add103606bcb259d94c6ca7ce5191bf453a6d6690dcae4ee",
+  "mapping_code_sha256": "627845fff7bd6944615c13674ae23f04e8b5977f8dfe32382dcf5c5bfd7ae1a9",
+  "base_code_sha256": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+  "export_freeze_sha256": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+  "old_pca_sha256": "63a851f006b8d91bfdd88fb4ba9c1671b14902a1f244e870948bbc78c966432d",
+  "old_preparation_sha256": "a32e875544fc68e57154aab9ea7f92084fd9acfc4092cbac8a9da026d6f8a432",
+  "old_full_complete_sha256": "9e76e8cfbdab8895eb93777b04fc498fe35de363bfdda84c01a0ee9847cf25c0"
+}

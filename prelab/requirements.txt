@@ -1,0 +1,9 @@
+# Windows CUDA runtime, inherited from D:/anaconda/envs/CA in the executed environment.
+# For a standalone fresh environment install this separately from the official cu121 index:
+# python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+transformers==4.51.3
+scikit-learn==1.6.1
+matplotlib==3.10.3
+requests==2.32.4
+jinja2==3.1.6

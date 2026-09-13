@@ -1,0 +1,209 @@
+{
+  "schema_version": "formal-baseline-integrity-audit-v1",
+  "audit_time_local": "2026-09-12T12:11:14+08:00",
+  "scope": "Read-only audit of frozen formal baseline runners, locally archived papers/author sources, protocols, source bindings, and completed outputs. No internet, training, test-set access, or baseline mutation.",
+  "overall": {
+    "status": "pass_with_material_reproduction_limitations",
+    "frozen_entry_hashes_match": true,
+    "completed_output_hashes_match": true,
+    "completed_source_bindings_match": true,
+    "unauthorized_project_feature_or_postprocess_in_formal_runners": false,
+    "deliberate_baseline_weakening_found": false,
+    "exact_end_to_end_official_reproductions": 0,
+    "safe_publication_claim": "Three formal transferred baselines; Lookback and GHOST are paper-structure transfers, while LUMINA is an official-code-formula transfer. None is an end-to-end official reproduction."
+  },
+  "verification_checks": {
+    "freeze_lookback": true,
+    "freeze_ghost": true,
+    "freeze_lumina_extract": true,
+    "freeze_lumina_score": true,
+    "lookback_complete_files": true,
+    "lookback_source_binding": true,
+    "lookback_upstream_code_binding": true,
+    "ghost_complete_files": true,
+    "ghost_source_binding": true,
+    "ghost_feature_complete_files": true,
+    "ghost_upstream_code_binding": true,
+    "lumina_current_code_binding": true,
+    "official_test_opened": false
+  },
+  "baselines": {
+    "lookback_lens": {
+      "integrity_status": "acceptable_paper_structure_transfer_not_official_end_to_end",
+      "formal_runner_sha256": "a4d1a7feb10974a5707749b9da6a3781882e6653b18580f92c43f01227d7d99b",
+      "locked_author_step03_sha256": "8039386cc1d43eec1752d88184e62ab1969532b2b05c8ea2e5eb1a3084915c93",
+      "locked_author_revision": "e0a1fa3a898fbf6512af7be5567dea8ffe7a6620",
+      "upstream_local_extractor_sha256": "b49629aa5370444f74afe9e313b01330bf31e6210156e8c0069088aabb84426f",
+      "preserved": [
+        "complete native 8-BPE windows with stride 1",
+        "risk OR label equivalent to author minimum factual label",
+        "unweighted span mean over all 32x32 layer-head features",
+        "LogisticRegression(max_iter=1000) with all other sklearn defaults",
+        "no scaler, sample/class weights, C search, fusion, or smoothing"
+      ],
+      "differences": [
+        {
+          "severity": "material",
+          "item": "Only author step03 is locally archived and hashed; attention extraction is a custom local implementation and author step01 is not locally auditable."
+        },
+        {
+          "severity": "material",
+          "item": "Local predictor timing and assistant-header allocation are explicit conventions whose exact equality to author extraction is not established."
+        },
+        {
+          "severity": "material",
+          "item": "NF4/BF16 teacher-forced replay and 3046 cross-generator responses replace native author generation traces."
+        },
+        {
+          "severity": "protocol",
+          "item": "Material-group 3680/159 split replaces author random/two-fold evaluation."
+        },
+        {
+          "severity": "reporting",
+          "item": "Fit-threshold window F1 and answer-max F1 are local evaluation adaptations; native paper comparison is 8-BPE span AUROC."
+        }
+      ],
+      "completed_result": {
+        "primary_calibration_span_auroc": 0.8556005053667685,
+        "primary_unit": "native 8-BPE sliding span",
+        "extra_window_f1": 0.587705918242831,
+        "extra_answer_max_f1": 0.8177339901477833
+      },
+      "forbidden_claims": [
+        "official end-to-end reproduction",
+        "bitwise author extraction reproduction",
+        "answer-max as author-native Lookback output"
+      ]
+    },
+    "ghost": {
+      "integrity_status": "acceptable_paper_structure_reimplementation_not_official_code_reproduction",
+      "formal_runner_sha256": "e2cb7bfc6466392b83c1e285230c56a1944f473a2e90c7c5711e6b5e5019572a",
+      "upstream_geometry_sha256": "2d3976a0c22c122e4ea95c2b68b9122d984b1dca8b4bbd516ce476553d98b17e",
+      "upstream_extractor_sha256": "55898518b3d0f7fc9f9bf068e09c7631532bc0785d03d200339cd1b1e3bd6a57",
+      "author_code_available_locally": false,
+      "preserved": [
+        "four paper feature families",
+        "unweighted mean over all answer tokens",
+        "RandomForestClassifier with 750 trees, depth 40, split 8, leaf 2, sqrt, balanced_subsample",
+        "whole-answer output only; token/window output is N/A",
+        "no scaler, external weight, projection, fusion, or smoothing"
+      ],
+      "differences": [
+        {
+          "severity": "material",
+          "item": "No official author code is available; feature extraction is locally reconstructed from the paper."
+        },
+        {
+          "severity": "material",
+          "item": "Pre-token P+i-1 timing, HF states 3..29, and final-state convention are local executable choices not resolved by the paper."
+        },
+        {
+          "severity": "material",
+          "item": "Llama2-7B-chat NF4 is outside the paper's four reported GHOST backbones; expanded answers are proxy replays."
+        },
+        {
+          "severity": "protocol",
+          "item": "The final published RF parameters are used directly; the paper's 50-configuration five-fold RandomizedSearchCV is not rerun, and seed 42 is local."
+        },
+        {
+          "severity": "reporting",
+          "item": "The same 159 calibration answers select and report the F1 threshold; the paper's validation threshold procedure is underspecified."
+        }
+      ],
+      "completed_result": {
+        "answer_f1": 0.7722007722007722,
+        "answer_auroc": 0.5889830508474576,
+        "answer_average_precision": 0.7349417224200967,
+        "prediction_behavior": "all 159 calibration answers predicted risk at selected threshold",
+        "window_metric": null
+      },
+      "forbidden_claims": [
+        "official code reproduction",
+        "paper training-pipeline reproduction",
+        "token-level GHOST localization result"
+      ]
+    },
+    "lumina": {
+      "integrity_status": "official_code_formula_equivalent_transfer_pending_full_extraction",
+      "formal_extractor_sha256": "b7038aefefe82de948955d25d4bd616805aa104e451413887f28ee324a03d76d",
+      "formal_scorer_sha256": "e5fcdb74d3c07290330235aa8928ac7984dcaf9b8c3b4d7bc6ce881e0a36f2b9",
+      "thin_formula_adapter_sha256": "15910f994e66ebc88bd5f826c9081b292fd13c4259ce35bd7214d17987983626",
+      "memory_bounded_port_sha256": "ea1d1e45e22a510450a4428335a5b3f3366d09459f41db40aaf83ea98278aab8",
+      "locked_official_source_sha256": "1b5ecd8c08982b40dae59f299e580219074ee83673768feb53cf15612b7d8a5f",
+      "locked_official_revision": "c43ff41d872b05f659dcb3ad3a6dd78226954319",
+      "preserved": [
+        "lambda 0.5 and score 0.5*IPR-0.5*MMD_squared",
+        "top-100 unnormalized probability masses",
+        "cosine-kernel MMD with algebraically equivalent streaming reduction",
+        "official-code all-output-layer convention including repeated final norm",
+        "same answer token IDs under original and random contexts",
+        "no classifier fit, coefficient search, fusion, smoothing, sigmoid, clipping, or normalization",
+        "diagnostic probability columns excluded from baseline score"
+      ],
+      "differences": [
+        {
+          "severity": "source",
+          "item": "Pinned official code includes the final output state and repeats final norm, while paper Eq.8 ends at L-1; this transfer follows code."
+        },
+        {
+          "severity": "material",
+          "item": "Random-document assignment and full evidence-block replacement are local deterministic data interventions."
+        },
+        {
+          "severity": "material",
+          "item": "Frozen prompt IDs omit official extra-space retokenization and 12000-character truncation."
+        },
+        {
+          "severity": "numerical",
+          "item": "NF4/BF16 model replay with FP32 vocabulary projection, softmax, and streaming reductions is mathematically checked but not bitwise official execution."
+        },
+        {
+          "severity": "reporting",
+          "item": "Four-BPE window means and answer-max are local localization adaptations; paper-native response aggregation is the all-token mean stored separately."
+        }
+      ],
+      "audit_snapshot": {
+        "progress_file_time_local": "2026-09-12T12:07:43+08:00",
+        "completed_feature_records": 1975,
+        "required_feature_records": 3839,
+        "formal_scores_available": false
+      },
+      "forbidden_claims": [
+        "complete formal result before 3839 records validate",
+        "four-BPE answer-max as paper-native LUMINA aggregation",
+        "bitwise official run reproduction"
+      ]
+    }
+  },
+  "documentation_findings": [
+    {
+      "severity": "medium",
+      "item": "FORMAL_BASELINE_FREEZE.md freezes only the final Lookback/GHOST runners, while their formal identity also depends on upstream local feature extractors. Existing source bindings currently protect the completed artifacts."
+    },
+    {
+      "severity": "medium",
+      "item": "The LUMINA freeze omits hashes for the thin formula adapter, memory-bounded port, and archived official source; signature.json currently binds them."
+    },
+    {
+      "severity": "medium",
+      "item": "BASELINE_PROTOCOL.md cites Lookback step01 but no local step01 snapshot/hash was found; only step03 is locally locked."
+    },
+    {
+      "severity": "info",
+      "item": "Lookback answer-max and LUMINA window/answer-max readouts are already disclosed as evaluation adaptations and must remain separate from author-native outputs."
+    }
+  ],
+  "source_hashes": {
+    "BASELINE_PROTOCOL.md": "423b34fca200a27cd8debb346e05ba1e423db4a9ea55a5371d8297e8eb2aefdf",
+    "FORMAL_BASELINE_FREEZE.md": "020877997b0c63b18972b466a0efa54bcf100537679e3e7be7c60db28be7f8f3",
+    "Lookback_Lens_EMNLP2024.pdf": "050036edacecdd41c4c75cfdb1d6840f7bb8e88cd23c41c73b293fd67069289c",
+    "GHOST_ACL2026.pdf": "a6f6b1d2c74565a53b659a3999c708c39a1701d367081a8d6a9f6262586c512c",
+    "LUMINA_ICLR2026.pdf": "7861780075ee9585b85d869c75eeefd5d8781f5f60412fae15adea6d9b93b121",
+    "src/prepare_lumina_qa_inputs_v1.py": "97a03d6ccbd54fea4c17eb0145d264b9e5c1e7191bbc5c5c8fd1c58fe561e9be",
+    "results/lookback_official_span_v1/protocol.json": "794259eada83f4f8fbaa96bde048a4a441b8dd8f1fe09f799b48e6d188a28e53",
+    "results/ghost_official_answer_rf_v1/protocol.json": "cb1c16b008cc694464144cd294578131a45d44ba8f062fb5775630f67548ff5d",
+    "results/lumina_qa_preparation_v1/protocol.json": "34f0c515b06663cffcc3788b783d150f5fca9fb6a84318e64424d40f985f5aa4",
+    "results/lumina_qa_features_v1/protocol.json": "af0b15fe9648a869192747c581c9d631f6f8b1cb359aaf7388049dad3285cb5b",
+    "results/lumina_qa_scoring_v1/protocol.json": "b2e29f4643cc4728e73b0129765f3befc8a5d11dfdf8d89b54338cbda02f71b1"
+  }
+}

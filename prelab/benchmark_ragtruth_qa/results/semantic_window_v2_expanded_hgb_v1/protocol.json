@@ -1,0 +1,177 @@
+{
+  "version": "semantic-window-v2-expanded-hgb-v1",
+  "identity": "Our nonlinear semantic-window readout; it does not modify or relabel any baseline.",
+  "preregistration": {
+    "candidate_count": 3,
+    "candidates_in_fixed_order": [
+      {
+        "candidate": "whitebox_geometry__hgb_leaf7",
+        "parameters": {
+          "learning_rate": 0.05,
+          "max_iter": 150,
+          "min_samples_leaf": 100,
+          "l2_regularization": 2.0,
+          "max_bins": 255,
+          "early_stopping": false,
+          "random_state": 20260913,
+          "max_leaf_nodes": 7
+        },
+        "effective_parameters": {
+          "categorical_features": "from_dtype",
+          "class_weight": null,
+          "early_stopping": false,
+          "interaction_cst": null,
+          "l2_regularization": 2.0,
+          "learning_rate": 0.05,
+          "loss": "log_loss",
+          "max_bins": 255,
+          "max_depth": null,
+          "max_features": 1.0,
+          "max_iter": 150,
+          "max_leaf_nodes": 7,
+          "min_samples_leaf": 100,
+          "monotonic_cst": null,
+          "n_iter_no_change": 10,
+          "random_state": 20260913,
+          "scoring": "loss",
+          "tol": 1e-07,
+          "validation_fraction": 0.1,
+          "verbose": 0,
+          "warm_start": false
+        }
+      },
+      {
+        "candidate": "whitebox_geometry__hgb_leaf15",
+        "parameters": {
+          "learning_rate": 0.05,
+          "max_iter": 150,
+          "min_samples_leaf": 100,
+          "l2_regularization": 2.0,
+          "max_bins": 255,
+          "early_stopping": false,
+          "random_state": 20260913,
+          "max_leaf_nodes": 15
+        },
+        "effective_parameters": {
+          "categorical_features": "from_dtype",
+          "class_weight": null,
+          "early_stopping": false,
+          "interaction_cst": null,
+          "l2_regularization": 2.0,
+          "learning_rate": 0.05,
+          "loss": "log_loss",
+          "max_bins": 255,
+          "max_depth": null,
+          "max_features": 1.0,
+          "max_iter": 150,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 100,
+          "monotonic_cst": null,
+          "n_iter_no_change": 10,
+          "random_state": 20260913,
+          "scoring": "loss",
+          "tol": 1e-07,
+          "validation_fraction": 0.1,
+          "verbose": 0,
+          "warm_start": false
+        }
+      },
+      {
+        "candidate": "whitebox_geometry__hgb_leaf31",
+        "parameters": {
+          "learning_rate": 0.05,
+          "max_iter": 150,
+          "min_samples_leaf": 100,
+          "l2_regularization": 2.0,
+          "max_bins": 255,
+          "early_stopping": false,
+          "random_state": 20260913,
+          "max_leaf_nodes": 31
+        },
+        "effective_parameters": {
+          "categorical_features": "from_dtype",
+          "class_weight": null,
+          "early_stopping": false,
+          "interaction_cst": null,
+          "l2_regularization": 2.0,
+          "learning_rate": 0.05,
+          "loss": "log_loss",
+          "max_bins": 255,
+          "max_depth": null,
+          "max_features": 1.0,
+          "max_iter": 150,
+          "max_leaf_nodes": 31,
+          "min_samples_leaf": 100,
+          "monotonic_cst": null,
+          "n_iter_no_change": 10,
+          "random_state": 20260913,
+          "scoring": "loss",
+          "tol": 1e-07,
+          "validation_fraction": 0.1,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    ],
+    "only_varied_parameter": "max_leaf_nodes",
+    "parameters_frozen_before_any_HGB_fit": true,
+    "no_additional_recipe_after_fit": true
+  },
+  "inputs": {
+    "feature_family": "whitebox_geometry",
+    "blocks": [
+      "whitebox",
+      "geometry"
+    ],
+    "width": 26,
+    "source": "Byte-identical audited fit_whitebox_geometry.npy from semantic_window_v2_expanded_fit_v1.",
+    "windows": "The same 653,979 eligible stride-one four-original-BPE windows and unchanged any-error labels.",
+    "weights": "The exact semantic_window_v2 hierarchy_weights rule: equal group/answer/window base mass, followed by fit-only binary class balance.",
+    "preprocessing": "No scaling. HistGradientBoosting learns bins from each fold's fit rows only.",
+    "answer_score": "Maximum eligible-window probability per answer, unchanged."
+  },
+  "fit": {
+    "answers": 3680,
+    "source_connected_groups": 615,
+    "windows": 653979,
+    "positive_windows": 58433,
+    "crossfit": "Five-fold sklearn GroupKFold over the same locked source-connected group IDs as the expanded LR run.",
+    "internal_validation": "Disabled: early_stopping=False.",
+    "thresholds": "For each candidate, window and answer thresholds independently maximize pooled all-domain fit OOF F1, then precision, then higher cutoff.",
+    "selection": "All-domain fit OOF only: maximize min(window F1, answer F1), then window F1, answer F1, window AP, answer AP, fewer leaves, earlier preregistered recipe.",
+    "full_fit": "Refit only the selected recipe once on all fit windows with the same hierarchy loss weights; freeze model and both OOF thresholds before calibration."
+  },
+  "native_diagnostic": {
+    "scope": "The first 634 native Llama2-7B answers and first 168,123 windows, using their already-held all-domain OOF predictions.",
+    "reported_for_every_candidate": [
+      "metrics at each candidate's frozen all-domain OOF thresholds",
+      "native-subset F1-opt metrics and thresholds"
+    ],
+    "selection_or_threshold_effect": "None. Native diagnostics cannot alter candidate selection, full fit, or frozen all-domain thresholds."
+  },
+  "calibration": {
+    "answers": 159,
+    "windows": 42241,
+    "rule": "Single reporting-only evaluation of the selected full-fit model at its frozen all-domain fit-OOF thresholds; no calibration threshold fitting."
+  },
+  "comparison": {
+    "expanded_LR": "Same design, weights, folds, windows and answer max; strict calibration at LR's frozen fit-OOF thresholds.",
+    "incumbent": "Historical calibration-selected semantic_claim tree plus large score; calibration F1-opt, so threshold provenance is less strict.",
+    "Lookback": "Frozen baseline adapted to project 4-BPE windows; calibration F1-opt, so threshold provenance is less strict."
+  },
+  "limitations": [
+    "The upstream Lookback/large fit columns are frozen three-fold source-group OOF predictions, not retrained inside each downstream five-fold split.",
+    "The 3,680 fit answers cover only 615 source-connected groups and mix native Llama2-7B with five auxiliary generators.",
+    "Calibration has been reused in project development and is not fresh final-test evidence."
+  ],
+  "software": {
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.6.1",
+    "scikit_learn_distribution": "1.6.1"
+  },
+  "CPU_threads": 4,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,14 @@
+{
+  "scope": "Original634 fit/159 calibration only; no new model, data, labels, or epoch choice.",
+  "source_sha256": "b2b88170ea59974b4ef46eaa8eff7b2c52d1770e91b68a39d0199d9018b5d03f",
+  "selected_epoch": 3,
+  "score_sha256": "410e38af89d91578efbb412b5fd8fe8630722b533c89e2bf26dec93baab41760",
+  "index_sha256": "e15126cd8e8340fb811da2d451185eeafaa4c523cbdc99982ed9c4b31860067f",
+  "control": "Exact saved primary binary-risk output of the same frozen selected model.",
+  "candidate": "For each raw token, max(sigmoid(saved baseless logit),sigmoid(saved conflict logit)). Original lexical4rawBPE window max, then answermax.",
+  "thresholds": "One candidate only, original two calibration F1 thresholds. No per-type threshold or further pooling rule.",
+  "limits": "The original model was selected using its primary head, trained634 answers with auxiliary coefficient.25 and head-specific auxiliary weighting. This is a frozen readout experiment, not a matched retraining of direct-type heads. Repeated development calibration.",
+  "new_fits": 0,
+  "GPU_used": false,
+  "official_test_opened": false
+}

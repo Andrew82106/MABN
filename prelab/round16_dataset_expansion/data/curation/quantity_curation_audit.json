@@ -1,0 +1,2663 @@
+{
+  "task": "Round16 source-only quantity curation",
+  "reviewer": "data_build assistant; not human gold",
+  "accepted_questions": 100,
+  "rejected_sources": 10,
+  "used_primary": 91,
+  "used_backups": 9,
+  "allocation_inspected_range_inclusive": [
+    0,
+    109
+  ],
+  "allocation_remaining_unselected_range_inclusive": [
+    110,
+    129
+  ],
+  "unique_target_urls": 100,
+  "within_quantity_provisional_group_count": 90,
+  "repeated_event_groups": {
+    "2025 Asian Winter Games": [
+      "ragognize_train_2234",
+      "ragognize_train_2254",
+      "ragognize_test_2250",
+      "ragognize_train_2243",
+      "ragognize_test_2240",
+      "ragognize_test_2252",
+      "ragognize_train_2245"
+    ],
+    "Seven Stars FF": [
+      "ragognize_train_1579",
+      "ragognize_test_0542"
+    ],
+    "FIS Freestyle Ski and Snowboarding World Championships 2025": [
+      "ragognize_test_1503",
+      "ragognize_train_1502",
+      "ragognize_test_2099"
+    ],
+    "Eurovision Song Contest 2025": [
+      "ragognize_train_1930",
+      "ragognize_test_0856"
+    ]
+  },
+  "cross_owner_target_id_overlap": {
+    "relation_candidates.jsonl": [],
+    "action_time_candidates.jsonl": [],
+    "root_candidates.jsonl": []
+  },
+  "notes": [
+    "Every item was selected by reading the original source sentences, before any Round16 generation.",
+    "Question qualifiers, measurement objects and units were retained; ambiguous original claims were changed only to independent clearly stated source facts or rejected.",
+    "Event groups here are provisional. Root performs global alias/event connectivity and split isolation across all categories and old data; 100 questions are not claimed to be 100 independent events.",
+    "The original source is an English Wikipedia snapshot. Source support is not an independent audit of current real-world truth.",
+    "Donor matching and final pair length controls are not yet performed by this curation file.",
+    "Quote minimum word count was approximate, not forced: short complete explicit factual sentences were kept instead of padding."
+  ],
+  "hashes": {
+    "quantity_candidates.jsonl": "6d076fc1d3e61bf29037ffebcd3fbae8afd0f55f8e7262fb62c1ce1682592b27",
+    "quantity_rejections.jsonl": "9a9e9f6f9891dde74e21f84f26902f91ea338beda4661655ddd1907fb2f40888",
+    "available_source_pool.jsonl": "664de3747aeedf1f814026d31d60ea1e7a21b2abff2c046080289e91c489406d",
+    "allocation_data_build.jsonl": "a1b88bb3b3772aa268871930747cbedac5eb5926abbe4e190142072aa8caea4d"
+  },
+  "items": [
+    {
+      "candidate_id": "ragognize_test_2060",
+      "allocation_index": 1,
+      "source_title": "Bangladesh Sammilito Peshajibi Parishad",
+      "source_url": "https://en.wikipedia.org/wiki/Bangladesh_Sammilito_Peshajibi_Parishad",
+      "source_content_sha256": "883baa24619d0fc95b5a196304c9cf8c305ee8bc12d79781e3a14c308293931b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 153,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 154,
+          "end": 244,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 261,
+          "end": 452,
+          "words": 27
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0319",
+      "allocation_index": 2,
+      "source_title": "2025 Aerion Women's FC season",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Aerion_Women%27s_FC_season",
+      "source_content_sha256": "f07f7a9e5d4e9cd7d1ee2371933830205fb8ed0937f7940ccbd67058fd3545bb",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 155,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 220,
+          "end": 358,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 156,
+          "end": 219,
+          "words": 11
+        }
+      },
+      "event_group": "2025 Singapore Women's Premier League",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0969",
+      "allocation_index": 3,
+      "source_title": "International Masters League",
+      "source_url": "https://en.wikipedia.org/wiki/International_Masters_League",
+      "source_content_sha256": "966d9a4eefcbf4bc30273832426342902cfbc6770d7bcb652c80d2a3d101e69b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 96,
+          "words": 13
+        },
+        "evidence_quote": {
+          "start": 97,
+          "end": 163,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 164,
+          "end": 273,
+          "words": 19
+        }
+      },
+      "event_group": "2025 International Masters League",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2330",
+      "allocation_index": 4,
+      "source_title": "Egypt women's national futsal team",
+      "source_url": "https://en.wikipedia.org/wiki/Egypt_women%27s_national_futsal_team",
+      "source_content_sha256": "8b25bfea5a8cb8b9525d0dd821e2f6457fa5d00ba4bcd31874686d76f74d20da",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 251,
+          "words": 37
+        },
+        "evidence_quote": {
+          "start": 778,
+          "end": 873,
+          "words": 18
+        },
+        "partial_quote": {
+          "start": 268,
+          "end": 528,
+          "words": 41
+        }
+      },
+      "event_group": "Egypt women's national futsal team training camp 8–12 February 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2327",
+      "allocation_index": 5,
+      "source_title": "2025 European Athletics Indoor Championships – Men's high jump",
+      "source_url": "https://en.wikipedia.org/wiki/2025_European_Athletics_Indoor_Championships_%E2%80%93_Men%27s_high_jump",
+      "source_content_sha256": "46f5e5d3cc8c439931b3144e958bb2654ff4df66f3a4d4022999a6095a6cb514",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 177,
+          "words": 31
+        },
+        "evidence_quote": {
+          "start": 1569,
+          "end": 1706,
+          "words": 23
+        },
+        "partial_quote": {
+          "start": 178,
+          "end": 275,
+          "words": 16
+        }
+      },
+      "event_group": "2025 European Athletics Indoor Championships",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1380",
+      "allocation_index": 6,
+      "source_title": "Mick Fleming (hurler)",
+      "source_url": "https://en.wikipedia.org/wiki/Mick_Fleming_(hurler)",
+      "source_content_sha256": "0ed4fd0d720227f7a9a0a6d46d34bd236df0802aaee3143e4e607c89d3022d41",
+      "quotes": {
+        "common_quote": {
+          "start": 184,
+          "end": 243,
+          "words": 10
+        },
+        "evidence_quote": {
+          "start": 929,
+          "end": 980,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 577,
+          "end": 678,
+          "words": 17
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0958",
+      "allocation_index": 7,
+      "source_title": "Chen Shihan",
+      "source_url": "https://en.wikipedia.org/wiki/Chen_Shihan",
+      "source_content_sha256": "458f2759f28d3f3cea081f8249c14c2f8f6adbf647918b4459310c2b39f75a75",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 151,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 741,
+          "end": 906,
+          "words": 27
+        },
+        "partial_quote": {
+          "start": 334,
+          "end": 474,
+          "words": 23
+        }
+      },
+      "event_group": "Chen Shihan 2024 club season",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2137",
+      "allocation_index": 8,
+      "source_title": "2025 MLS Next Pro season",
+      "source_url": "https://en.wikipedia.org/wiki/2025_MLS_Next_Pro_season",
+      "source_content_sha256": "df107d70870e96751c17898b34efefcad3a6d0ab50550e2f82443705478f22ee",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 113,
+          "words": 21
+        },
+        "evidence_quote": {
+          "start": 526,
+          "end": 591,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 349,
+          "end": 442,
+          "words": 15
+        }
+      },
+      "event_group": "2025 MLS Next Pro season",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2234",
+      "allocation_index": 9,
+      "source_title": "Uzbekistan at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Uzbekistan_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "5858497c2ea0fc8cc26dce6407504a17ce5f559cdd9e51ca0b0c7bcef55cc62b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 91,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 92,
+          "end": 162,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 281,
+          "end": 384,
+          "words": 18
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0124",
+      "allocation_index": 10,
+      "source_title": "Pratik Waikar",
+      "source_url": "https://en.wikipedia.org/wiki/Pratik_Waikar",
+      "source_content_sha256": "a7f6b541a130d47c9131e0a069c441590a9dbe00b3fe26fc874b0173b0d3ac6e",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 77,
+          "words": 13
+        },
+        "evidence_quote": {
+          "start": 463,
+          "end": 508,
+          "words": 9
+        },
+        "partial_quote": {
+          "start": 385,
+          "end": 462,
+          "words": 12
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0986",
+      "allocation_index": 11,
+      "source_title": "Shirley A. Pomponi",
+      "source_url": "https://en.wikipedia.org/wiki/Shirley_A._Pomponi",
+      "source_content_sha256": "98499b0995a9867ef69deb3577e2cf3b071eee22626700318e0e0dca2ea51081",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 75,
+          "words": 12
+        },
+        "evidence_quote": {
+          "start": 1671,
+          "end": 1860,
+          "words": 27
+        },
+        "partial_quote": {
+          "start": 503,
+          "end": 641,
+          "words": 20
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0595",
+      "allocation_index": 12,
+      "source_title": "2025–26 Indiana Hoosiers men's basketball team",
+      "source_url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Indiana_Hoosiers_men%27s_basketball_team",
+      "source_content_sha256": "3be50d111b883f970ee90edad655facfe06ddc26f6c881c4e735c71cec45cc9d",
+      "quotes": {
+        "common_quote": {
+          "start": 618,
+          "end": 736,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 955,
+          "end": 1010,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 781,
+          "end": 954,
+          "words": 29
+        }
+      },
+      "event_group": "Darian DeVries Indiana head-coach appointment March 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0400",
+      "allocation_index": 13,
+      "source_title": "2025 Spanish Motocross Championship",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Spanish_Motocross_Championship",
+      "source_content_sha256": "cbbd8398123d84e38cbe6a5be41d5d406c46a9a3e0c65104b941596bd9aee2e0",
+      "quotes": {
+        "common_quote": {
+          "start": 98,
+          "end": 179,
+          "words": 13
+        },
+        "evidence_quote": {
+          "start": 0,
+          "end": 97,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 180,
+          "end": 286,
+          "words": 18
+        }
+      },
+      "event_group": "2025 Spanish Motocross Championship",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1780",
+      "allocation_index": 14,
+      "source_title": "Sachin Bhargo",
+      "source_url": "https://en.wikipedia.org/wiki/Sachin_Bhargo",
+      "source_content_sha256": "9924e83ef69e4a93b973784b05e7ce471a2d2ead0fddb3acd1fbd12ccb948ea3",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 81,
+          "words": 15
+        },
+        "evidence_quote": {
+          "start": 498,
+          "end": 533,
+          "words": 7
+        },
+        "partial_quote": {
+          "start": 440,
+          "end": 497,
+          "words": 10
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0573",
+      "allocation_index": 15,
+      "source_title": "Jump Out (album)",
+      "source_url": "https://en.wikipedia.org/wiki/Jump_Out_(album)",
+      "source_content_sha256": "aaf352e3e9ec463605a7fa576980c34bd73b0d7550c5d71efd7317cda7f069d2",
+      "quotes": {
+        "common_quote": {
+          "start": 18,
+          "end": 81,
+          "words": 11
+        },
+        "evidence_quote": {
+          "start": 448,
+          "end": 543,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 169,
+          "end": 218,
+          "words": 10
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1905",
+      "allocation_index": 16,
+      "source_title": "Mahama government from 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Mahama_government_from_2025",
+      "source_content_sha256": "ad985f59cfa634adb35c784f455a0f6f792153dcc31297c8d2dcc46b214be7fe",
+      "quotes": {
+        "common_quote": {
+          "start": 511,
+          "end": 696,
+          "words": 30
+        },
+        "evidence_quote": {
+          "start": 1527,
+          "end": 1656,
+          "words": 22
+        },
+        "partial_quote": {
+          "start": 412,
+          "end": 510,
+          "words": 16
+        }
+      },
+      "event_group": "Mahama government appointments January–February 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1419",
+      "allocation_index": 17,
+      "source_title": "Carlos Arellano Lennox",
+      "source_url": "https://en.wikipedia.org/wiki/Carlos_Arellano_Lennox",
+      "source_content_sha256": "761fb415e76a30e0eb53ca6b25f58923872ddce4cbca2356c1065d0ff651edb9",
+      "quotes": {
+        "common_quote": {
+          "start": 3756,
+          "end": 3855,
+          "words": 15
+        },
+        "evidence_quote": {
+          "start": 539,
+          "end": 588,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 3856,
+          "end": 3987,
+          "words": 22
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1377",
+      "allocation_index": 18,
+      "source_title": "1 nm process",
+      "source_url": "https://en.wikipedia.org/wiki/1_nm_process",
+      "source_content_sha256": "8419ffc8d18365f6f800150ac04c49cff5aa46607a658d9206e6afc0f8121d8a",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 199,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 544,
+          "end": 860,
+          "words": 52
+        },
+        "partial_quote": {
+          "start": 405,
+          "end": 543,
+          "words": 24
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1720",
+      "allocation_index": 19,
+      "source_title": "2024 Caribbean Baseball Cup",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Caribbean_Baseball_Cup",
+      "source_content_sha256": "d3ac20e9adbf291c7ceace2a634931c99eb54ad2b52613ea37f06842255f7e74",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 207,
+          "words": 29
+        },
+        "evidence_quote": {
+          "start": 749,
+          "end": 816,
+          "words": 12
+        },
+        "partial_quote": {
+          "start": 461,
+          "end": 540,
+          "words": 13
+        }
+      },
+      "event_group": "2024 Caribbean Baseball Cup",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1579",
+      "allocation_index": 20,
+      "source_title": "Varsénia da Luz",
+      "source_url": "https://en.wikipedia.org/wiki/Vars%C3%A9nia_da_Luz",
+      "source_content_sha256": "6eff182aa0af66809b82cb1e2ccad7f8b1e8cb8a7d0ab3d1633da605d09924f1",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 249,
+          "words": 39
+        },
+        "evidence_quote": {
+          "start": 852,
+          "end": 1012,
+          "words": 25
+        },
+        "partial_quote": {
+          "start": 270,
+          "end": 376,
+          "words": 17
+        }
+      },
+      "event_group": "Seven Stars FF",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0670",
+      "allocation_index": 21,
+      "source_title": "Cammy Murray",
+      "source_url": "https://en.wikipedia.org/wiki/Cammy_Murray",
+      "source_content_sha256": "93c70537bba3e6656cbe0138104bacf7497854d6b7bd2ca703797f9ed1e51d5d",
+      "quotes": {
+        "common_quote": {
+          "start": 240,
+          "end": 436,
+          "words": 33
+        },
+        "evidence_quote": {
+          "start": 657,
+          "end": 834,
+          "words": 30
+        },
+        "partial_quote": {
+          "start": 127,
+          "end": 223,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2254",
+      "allocation_index": 22,
+      "source_title": "Japan at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Japan_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "353a6e6c50a8f1c154c8055e06ae68444333cce682029c71644315667b0cd54e",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 86,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 454,
+          "end": 506,
+          "words": 8
+        },
+        "partial_quote": {
+          "start": 159,
+          "end": 274,
+          "words": 16
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1826",
+      "allocation_index": 23,
+      "source_title": "2025 Table Mountain fire",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Table_Mountain_fire",
+      "source_content_sha256": "0e103064007a57aaf3d02b05480c7b76fdf142c15b2cdb8cbc3fab322cf6e85e",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 199,
+          "words": 35
+        },
+        "evidence_quote": {
+          "start": 469,
+          "end": 569,
+          "words": 17
+        },
+        "partial_quote": {
+          "start": 200,
+          "end": 392,
+          "words": 33
+        }
+      },
+      "event_group": "2025 Table Mountain fire",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1503",
+      "allocation_index": 24,
+      "source_title": "FIS Freestyle Ski and Snowboarding World Championships 2025 – Women's parallel giant slalom",
+      "source_url": "https://en.wikipedia.org/wiki/FIS_Freestyle_Ski_and_Snowboarding_World_Championships_2025_%E2%80%93_Women%27s_parallel_giant_slalom",
+      "source_content_sha256": "8d4b26c4c88fbc1cb8ebc270849315ed4707a3ddbd5b730acf18395699025369",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 139,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 338,
+          "end": 391,
+          "words": 9
+        },
+        "partial_quote": {
+          "start": 162,
+          "end": 311,
+          "words": 26
+        }
+      },
+      "event_group": "FIS Freestyle Ski and Snowboarding World Championships 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1602",
+      "allocation_index": 25,
+      "source_title": "Linden Hall, Pennsylvania",
+      "source_url": "https://en.wikipedia.org/wiki/Linden_Hall,_Pennsylvania",
+      "source_content_sha256": "81ec168201cdba5b1aa8755444a9cd3c6163e415be45152a5cd8c5b57baf7e78",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 120,
+          "words": 17
+        },
+        "evidence_quote": {
+          "start": 208,
+          "end": 394,
+          "words": 31
+        },
+        "partial_quote": {
+          "start": 434,
+          "end": 508,
+          "words": 13
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0404",
+      "allocation_index": 26,
+      "source_title": "2024–25 Liga 4 Banten",
+      "source_url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_Liga_4_Banten",
+      "source_content_sha256": "b2e0feec1ae9060b39858d883ef76dc9929a6433b37d68ec7dff65b4d0551322",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 139,
+          "words": 27
+        },
+        "evidence_quote": {
+          "start": 231,
+          "end": 280,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 140,
+          "end": 216,
+          "words": 11
+        }
+      },
+      "event_group": "2024–25 Liga 4 Banten",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1164",
+      "allocation_index": 27,
+      "source_title": "Ryan Wiebe",
+      "source_url": "https://en.wikipedia.org/wiki/Ryan_Wiebe",
+      "source_content_sha256": "d5e18cf657599efeb2e52693534974416b0a69464165818ed31074edb10c34e1",
+      "quotes": {
+        "common_quote": {
+          "start": 4779,
+          "end": 4924,
+          "words": 23
+        },
+        "evidence_quote": {
+          "start": 4925,
+          "end": 5195,
+          "words": 47
+        },
+        "partial_quote": {
+          "start": 5218,
+          "end": 5296,
+          "words": 12
+        }
+      },
+      "event_group": "2024 Canadian Mixed Curling Championship",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1087",
+      "allocation_index": 28,
+      "source_title": "2025 West Virginia Mountaineers baseball team",
+      "source_url": "https://en.wikipedia.org/wiki/2025_West_Virginia_Mountaineers_baseball_team",
+      "source_content_sha256": "bc9ab68e15cc3ee929f9167099033437d725698e75002263d72ad8ee8e3ddb16",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 134,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 375,
+          "end": 481,
+          "words": 20
+        },
+        "partial_quote": {
+          "start": 135,
+          "end": 241,
+          "words": 18
+        }
+      },
+      "event_group": "2025 Big 12 baseball coaches preseason poll 23 January 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1502",
+      "allocation_index": 29,
+      "source_title": "FIS Freestyle Ski and Snowboarding World Championships 2025 – Men's parallel giant slalom",
+      "source_url": "https://en.wikipedia.org/wiki/FIS_Freestyle_Ski_and_Snowboarding_World_Championships_2025_%E2%80%93_Men%27s_parallel_giant_slalom",
+      "source_content_sha256": "f6c97755c7d0de44c6110e34a0dc1ab6fd332d374c459277cee8830dc24fca28",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 137,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 200,
+          "end": 309,
+          "words": 20
+        },
+        "partial_quote": {
+          "start": 336,
+          "end": 389,
+          "words": 9
+        }
+      },
+      "event_group": "FIS Freestyle Ski and Snowboarding World Championships 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0153",
+      "allocation_index": 30,
+      "source_title": "Eriks Mateiko",
+      "source_url": "https://en.wikipedia.org/wiki/Eriks_Mateiko",
+      "source_content_sha256": "d15f62a46a5b78b0ce4a4edeb0b4ac3e5fe134c669dc70907d86e664abf4da69",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 150,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 598,
+          "end": 701,
+          "words": 18
+        },
+        "partial_quote": {
+          "start": 258,
+          "end": 349,
+          "words": 17
+        }
+      },
+      "event_group": "2024 NHL entry draft",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0549",
+      "allocation_index": 31,
+      "source_title": "Chimwemwe Madise",
+      "source_url": "https://en.wikipedia.org/wiki/Chimwemwe_Madise",
+      "source_content_sha256": "474ee96844a00ea982e8cc837374a684ca7017f27833755add72c54f256c7c08",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 63,
+          "words": 10
+        },
+        "evidence_quote": {
+          "start": 574,
+          "end": 647,
+          "words": 14
+        },
+        "partial_quote": {
+          "start": 215,
+          "end": 301,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0716",
+      "allocation_index": 32,
+      "source_title": "Alice, Doko Made mo",
+      "source_url": "https://en.wikipedia.org/wiki/Alice,_Doko_Made_mo",
+      "source_content_sha256": "6bb44c5ce2bfc56a77eb9ac12a6f530c0218dfcdfed577a7f36bf2f2c0d86b56",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 165,
+          "words": 26
+        },
+        "evidence_quote": {
+          "start": 556,
+          "end": 612,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 166,
+          "end": 268,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1788",
+      "allocation_index": 33,
+      "source_title": "Climate change in Hamburg",
+      "source_url": "https://en.wikipedia.org/wiki/Climate_change_in_Hamburg",
+      "source_content_sha256": "5a5742063b18f093e59c0a9d4f6db302246428491bd99002960bfa7806fadb3d",
+      "quotes": {
+        "common_quote": {
+          "start": 862,
+          "end": 960,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 962,
+          "end": 1053,
+          "words": 17
+        },
+        "partial_quote": {
+          "start": 0,
+          "end": 110,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0910",
+      "allocation_index": 34,
+      "source_title": "2025 NCAA Division III Wrestling Championships",
+      "source_url": "https://en.wikipedia.org/wiki/2025_NCAA_Division_III_Wrestling_Championships",
+      "source_content_sha256": "d3105c9548eca471b5cc44b13c6c3676e54b77506978d4e1f21ad4646ce3c769",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 143,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 144,
+          "end": 212,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 383,
+          "end": 472,
+          "words": 14
+        }
+      },
+      "event_group": "2025 NCAA Division III Wrestling Championships",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1738",
+      "allocation_index": 35,
+      "source_title": "Vittoria (film)",
+      "source_url": "https://en.wikipedia.org/wiki/Vittoria_(film)",
+      "source_content_sha256": "d836376cca4d68699d2833eddb1550899338d75f7165919830be2d455e505778",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 103,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 672,
+          "end": 783,
+          "words": 16
+        },
+        "partial_quote": {
+          "start": 292,
+          "end": 443,
+          "words": 23
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1093",
+      "allocation_index": 36,
+      "source_title": "2025 Mississippi Valley State Delta Devils baseball team",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Mississippi_Valley_State_Delta_Devils_baseball_team",
+      "source_content_sha256": "4a9eb4cfd33e970df8e0efb14c81235216dceee9d26f213cd8dd87b3625ee057",
+      "quotes": {
+        "common_quote": {
+          "start": 181,
+          "end": 320,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 679,
+          "end": 776,
+          "words": 16
+        },
+        "partial_quote": {
+          "start": 321,
+          "end": 375,
+          "words": 10
+        }
+      },
+      "event_group": "2025 Southwestern Athletic Conference baseball preseason poll",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0894",
+      "allocation_index": 37,
+      "source_title": "Guatemala women's national futsal team",
+      "source_url": "https://en.wikipedia.org/wiki/Guatemala_women%27s_national_futsal_team",
+      "source_content_sha256": "5d26d043490c717633cd346f83e676d680251ef0ae5e9d52e5d61239267c63c4",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 214,
+          "words": 29
+        },
+        "evidence_quote": {
+          "start": 1789,
+          "end": 1903,
+          "words": 20
+        },
+        "partial_quote": {
+          "start": 671,
+          "end": 845,
+          "words": 34
+        }
+      },
+      "event_group": "Guatemala women's national futsal training camp 3–9 February 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1407",
+      "allocation_index": 38,
+      "source_title": "Pickme girl",
+      "source_url": "https://en.wikipedia.org/wiki/Pickme_girl",
+      "source_content_sha256": "16151c3e2a9458ca02fb626ef515ea6dbbba2fcfb54fff097a9e2aaa8c49578c",
+      "quotes": {
+        "common_quote": {
+          "start": 1341,
+          "end": 1430,
+          "words": 13
+        },
+        "evidence_quote": {
+          "start": 1431,
+          "end": 1517,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 852,
+          "end": 930,
+          "words": 12
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2250",
+      "allocation_index": 39,
+      "source_title": "Saudi Arabia at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Saudi_Arabia_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "7b118395aaee5e707ff26c27cfa28d815c8c6595a9de251a4ebfa88a6cc42f7a",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 93,
+          "words": 17
+        },
+        "evidence_quote": {
+          "start": 590,
+          "end": 655,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 373,
+          "end": 469,
+          "words": 13
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1496",
+      "allocation_index": 40,
+      "source_title": "João Vitor (footballer, born 2007)",
+      "source_url": "https://en.wikipedia.org/wiki/Jo%C3%A3o_Vitor_(footballer,_born_2007)",
+      "source_content_sha256": "50b16a222dd84671d83440878e290ffcc427fe7f2f3fe740d597838d5a1aabdd",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 140,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 553,
+          "end": 687,
+          "words": 24
+        },
+        "partial_quote": {
+          "start": 156,
+          "end": 284,
+          "words": 26
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0219",
+      "allocation_index": 41,
+      "source_title": "Belgium women's national futsal team",
+      "source_url": "https://en.wikipedia.org/wiki/Belgium_women%27s_national_futsal_team",
+      "source_content_sha256": "5e99248060f31c9328566093e560adbe87ab355565392341ce94fcb8d241e355",
+      "quotes": {
+        "common_quote": {
+          "start": 1019,
+          "end": 1203,
+          "words": 27
+        },
+        "evidence_quote": {
+          "start": 1204,
+          "end": 1290,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 257,
+          "end": 353,
+          "words": 15
+        }
+      },
+      "event_group": "2025 FIFA Women's Futsal World Cup European qualifiers Group 5",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1517",
+      "allocation_index": 42,
+      "source_title": "Emma Torres",
+      "source_url": "https://en.wikipedia.org/wiki/Emma_Torres",
+      "source_content_sha256": "9a4300e372b2153b1441247ee3cb1b5fac302e045f563ae7608d49f9a03449d1",
+      "quotes": {
+        "common_quote": {
+          "start": 2638,
+          "end": 2711,
+          "words": 10
+        },
+        "evidence_quote": {
+          "start": 3318,
+          "end": 3400,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 2092,
+          "end": 2305,
+          "words": 31
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0481",
+      "allocation_index": 43,
+      "source_title": "Beverly Longid",
+      "source_url": "https://en.wikipedia.org/wiki/Beverly_Longid",
+      "source_content_sha256": "03d0b0e6e81aecdc9d140baab195bcc29681a14395e22a68b49b3218ee744610",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 111,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 2327,
+          "end": 2668,
+          "words": 43
+        },
+        "partial_quote": {
+          "start": 112,
+          "end": 223,
+          "words": 17
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0173",
+      "allocation_index": 44,
+      "source_title": "2025 Republican People's Party presidential primary",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Republican_People%27s_Party_presidential_primary",
+      "source_content_sha256": "3263ef240d499a588b1be7bd53d6e79eec7c888a83aec84f3dfccea447235da0",
+      "quotes": {
+        "common_quote": {
+          "start": 2397,
+          "end": 2520,
+          "words": 20
+        },
+        "evidence_quote": {
+          "start": 2626,
+          "end": 2884,
+          "words": 43
+        },
+        "partial_quote": {
+          "start": 2522,
+          "end": 2625,
+          "words": 17
+        }
+      },
+      "event_group": "2025 Republican People's Party presidential primary",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2312",
+      "allocation_index": 45,
+      "source_title": "2025 Yocalla bus crash",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Yocalla_bus_crash",
+      "source_content_sha256": "5314607d1dcdba88e780782ad763716d3b0df10802bc8ef8e8663b69167e8e9a",
+      "quotes": {
+        "common_quote": {
+          "start": 388,
+          "end": 532,
+          "words": 23
+        },
+        "evidence_quote": {
+          "start": 896,
+          "end": 923,
+          "words": 5
+        },
+        "partial_quote": {
+          "start": 670,
+          "end": 895,
+          "words": 36
+        }
+      },
+      "event_group": "2025 Yocalla bus crash",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1935",
+      "allocation_index": 46,
+      "source_title": "If You Hadn't Been There",
+      "source_url": "https://en.wikipedia.org/wiki/If_You_Hadn%27t_Been_There",
+      "source_content_sha256": "bc888e15f48d38cdc63734cec15d86d0d0686a50550c194ba29fe549c512f542",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 107,
+          "words": 18
+        },
+        "evidence_quote": {
+          "start": 847,
+          "end": 1012,
+          "words": 29
+        },
+        "partial_quote": {
+          "start": 235,
+          "end": 397,
+          "words": 25
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2042",
+      "allocation_index": 47,
+      "source_title": "2nd Pacquiao–Elorde Awards",
+      "source_url": "https://en.wikipedia.org/wiki/2nd_Pacquiao%E2%80%93Elorde_Awards",
+      "source_content_sha256": "4ad07e82700feea317473e72b3b2a859d5fc4cd1f472b0ad621e264f35603cda",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 149,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 400,
+          "end": 565,
+          "words": 27
+        },
+        "partial_quote": {
+          "start": 150,
+          "end": 313,
+          "words": 24
+        }
+      },
+      "event_group": "2nd Pacquiao–Elorde Awards",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2294",
+      "allocation_index": 48,
+      "source_title": "Imran Memet",
+      "source_url": "https://en.wikipedia.org/wiki/Imran_Memet",
+      "source_content_sha256": "4d6a164473434da5a2978e1835c9cd8b59d735bbea82334835ea78de799a7f6e",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 201,
+          "words": 33
+        },
+        "evidence_quote": {
+          "start": 871,
+          "end": 997,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 772,
+          "end": 870,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0536",
+      "allocation_index": 49,
+      "source_title": "Keeping room",
+      "source_url": "https://en.wikipedia.org/wiki/Keeping_room",
+      "source_content_sha256": "3a7eb16392e1ed8661467627f3252aeae8c0f05a9d08420f76b1ccb38dd22a01",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 138,
+          "words": 25
+        },
+        "evidence_quote": {
+          "start": 1055,
+          "end": 1120,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 1121,
+          "end": 1222,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0923",
+      "allocation_index": 50,
+      "source_title": "Personal life of Mahathir Mohamad",
+      "source_url": "https://en.wikipedia.org/wiki/Personal_life_of_Mahathir_Mohamad",
+      "source_content_sha256": "d6229466c40e9d9422a2afe8e77eba8d02234d1bbc1e45bab729472fa3ebea2f",
+      "quotes": {
+        "common_quote": {
+          "start": 7532,
+          "end": 7619,
+          "words": 15
+        },
+        "evidence_quote": {
+          "start": 7620,
+          "end": 7701,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 7071,
+          "end": 7115,
+          "words": 9
+        }
+      },
+      "event_group": "Mahathir Mohamad Sepang driving video 23 September 2024",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1157",
+      "allocation_index": 52,
+      "source_title": "2025 FIM JuniorGP World Championship",
+      "source_url": "https://en.wikipedia.org/wiki/2025_FIM_JuniorGP_World_Championship",
+      "source_content_sha256": "16eed08be4478ce9e1f1b82c5afc9c57ac263f11a242bc39faf7176f197f2a50",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 149,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 151,
+          "end": 272,
+          "words": 24
+        },
+        "partial_quote": {
+          "start": 424,
+          "end": 518,
+          "words": 17
+        }
+      },
+      "event_group": "2025 FIM JuniorGP World Championship",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1464",
+      "allocation_index": 53,
+      "source_title": "Patrick Ogoegbunem Ukah",
+      "source_url": "https://en.wikipedia.org/wiki/Patrick_Ogoegbunem_Ukah",
+      "source_content_sha256": "8cd97d8457661f2f5d6737b3cf699063b6dfadadd780eb035bd4576dfc9ee92d",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 127,
+          "words": 17
+        },
+        "evidence_quote": {
+          "start": 718,
+          "end": 810,
+          "words": 17
+        },
+        "partial_quote": {
+          "start": 492,
+          "end": 630,
+          "words": 22
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1519",
+      "allocation_index": 54,
+      "source_title": "Club Aamal Sportif Bikfaya",
+      "source_url": "https://en.wikipedia.org/wiki/Club_Aamal_Sportif_Bikfaya",
+      "source_content_sha256": "0189679bfddb571aef457c2ccc564e1c3bbf66ddb953ad62036c34e476871f93",
+      "quotes": {
+        "common_quote": {
+          "start": 114,
+          "end": 221,
+          "words": 13
+        },
+        "evidence_quote": {
+          "start": 360,
+          "end": 595,
+          "words": 38
+        },
+        "partial_quote": {
+          "start": 627,
+          "end": 690,
+          "words": 11
+        }
+      },
+      "event_group": "2022–23 Lebanese Futsal League",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1417",
+      "allocation_index": 56,
+      "source_title": "FC Sokol Seltso",
+      "source_url": "https://en.wikipedia.org/wiki/FC_Sokol_Seltso",
+      "source_content_sha256": "e625be25121b4097ec6ebb77348d223685ca7ebfeac1a3d5d66a976b4a88b91a",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 106,
+          "words": 17
+        },
+        "evidence_quote": {
+          "start": 186,
+          "end": 308,
+          "words": 22
+        },
+        "partial_quote": {
+          "start": 326,
+          "end": 370,
+          "words": 8
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1802",
+      "allocation_index": 57,
+      "source_title": "R.A.W Hitman 2: The Assassinations",
+      "source_url": "https://en.wikipedia.org/wiki/R.A.W_Hitman_2:_The_Assassinations",
+      "source_content_sha256": "f49a0ad0b88e11a2b75bf364292cce5ee724f562abd2ce522b7764507a09a7aa",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 126,
+          "words": 21
+        },
+        "evidence_quote": {
+          "start": 243,
+          "end": 376,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 127,
+          "end": 242,
+          "words": 22
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1393",
+      "allocation_index": 58,
+      "source_title": "Miss Grand South Africa 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Miss_Grand_South_Africa_2025",
+      "source_content_sha256": "bd9d7f46c0584fea0fab95f56783a190680413c502861216001ae581f6c6885a",
+      "quotes": {
+        "common_quote": {
+          "start": 261,
+          "end": 442,
+          "words": 29
+        },
+        "evidence_quote": {
+          "start": 463,
+          "end": 522,
+          "words": 6
+        },
+        "partial_quote": {
+          "start": 0,
+          "end": 165,
+          "words": 27
+        }
+      },
+      "event_group": "Miss Grand South Africa 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2341",
+      "allocation_index": 59,
+      "source_title": "Bad Senator",
+      "source_url": "https://en.wikipedia.org/wiki/Bad_Senator",
+      "source_content_sha256": "720946c1e326d7a378f138145759cb6c8f3ecb6079e8d1fc531b4a90c07ceb88",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 112,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 2138,
+          "end": 2296,
+          "words": 24
+        },
+        "partial_quote": {
+          "start": 1742,
+          "end": 1819,
+          "words": 13
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0208",
+      "allocation_index": 60,
+      "source_title": "Quembol Guadalupe",
+      "source_url": "https://en.wikipedia.org/wiki/Quembol_Guadalupe",
+      "source_content_sha256": "8946a45bf605868735c8cf5f14a281424ca24314da8848db26c234e08cef9bc1",
+      "quotes": {
+        "common_quote": {
+          "start": 1211,
+          "end": 1287,
+          "words": 12
+        },
+        "evidence_quote": {
+          "start": 1368,
+          "end": 1571,
+          "words": 35
+        },
+        "partial_quote": {
+          "start": 155,
+          "end": 266,
+          "words": 18
+        }
+      },
+      "event_group": "Quembol Guadalupe Comerciantes Unidos loan 2024",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0108",
+      "allocation_index": 61,
+      "source_title": "The Blue Trail",
+      "source_url": "https://en.wikipedia.org/wiki/The_Blue_Trail",
+      "source_content_sha256": "4293502f5cfeca7da9deebe41d0118caaa026ed0f967f87243e4580053466245",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 116,
+          "words": 18
+        },
+        "evidence_quote": {
+          "start": 304,
+          "end": 551,
+          "words": 38
+        },
+        "partial_quote": {
+          "start": 1218,
+          "end": 1311,
+          "words": 13
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2243",
+      "allocation_index": 62,
+      "source_title": "Lebanon at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Lebanon_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "9e418eb173585be09dc6510766f30b325efd6172f1bd1101f438e3d8babc3b22",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 88,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 89,
+          "end": 157,
+          "words": 11
+        },
+        "partial_quote": {
+          "start": 247,
+          "end": 396,
+          "words": 21
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0664",
+      "allocation_index": 63,
+      "source_title": "2025 Bat Yam bus bombings",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Bat_Yam_bus_bombings",
+      "source_content_sha256": "c9d3ab3197270e59bcbbf338efee5ee7be5ac418d07f94224f7f479a9cf0413a",
+      "quotes": {
+        "common_quote": {
+          "start": 906,
+          "end": 970,
+          "words": 11
+        },
+        "evidence_quote": {
+          "start": 1132,
+          "end": 1177,
+          "words": 7
+        },
+        "partial_quote": {
+          "start": 1383,
+          "end": 1532,
+          "words": 26
+        }
+      },
+      "event_group": "2025 Bat Yam bus bombings",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0186",
+      "allocation_index": 64,
+      "source_title": "Miles Russell (golfer)",
+      "source_url": "https://en.wikipedia.org/wiki/Miles_Russell_(golfer)",
+      "source_content_sha256": "9bc15e4b575f8963c488c4732565c7a5b231fcfe2379eabf81d81ccb98777070",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 68,
+          "words": 11
+        },
+        "evidence_quote": {
+          "start": 314,
+          "end": 428,
+          "words": 22
+        },
+        "partial_quote": {
+          "start": 266,
+          "end": 313,
+          "words": 6
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1930",
+      "allocation_index": 66,
+      "source_title": "New Day Will Rise",
+      "source_url": "https://en.wikipedia.org/wiki/New_Day_Will_Rise",
+      "source_content_sha256": "5db188dbc9eb1e1041d80c722bedbf2e2c7f5ec9a7431ae1d8c68bb8d238b028",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 62,
+          "words": 12
+        },
+        "evidence_quote": {
+          "start": 656,
+          "end": 872,
+          "words": 30
+        },
+        "partial_quote": {
+          "start": 63,
+          "end": 147,
+          "words": 16
+        }
+      },
+      "event_group": "Eurovision Song Contest 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2099",
+      "allocation_index": 67,
+      "source_title": "FIS Freestyle Ski and Snowboarding World Championships 2025 – Women's parallel slalom",
+      "source_url": "https://en.wikipedia.org/wiki/FIS_Freestyle_Ski_and_Snowboarding_World_Championships_2025_%E2%80%93_Women%27s_parallel_slalom",
+      "source_content_sha256": "299ba8478a4ef0b068b97828370deb334e052ad8bee7121466f27036c67af8d3",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 133,
+          "words": 21
+        },
+        "evidence_quote": {
+          "start": 196,
+          "end": 305,
+          "words": 20
+        },
+        "partial_quote": {
+          "start": 156,
+          "end": 195,
+          "words": 6
+        }
+      },
+      "event_group": "FIS Freestyle Ski and Snowboarding World Championships 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1627",
+      "allocation_index": 68,
+      "source_title": "Separation referendums in Illinois",
+      "source_url": "https://en.wikipedia.org/wiki/Separation_referendums_in_Illinois",
+      "source_content_sha256": "4296937322b98a252ccaa603c5492191cc481fbf81658cbe77b6d613bdde7270",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 186,
+          "words": 31
+        },
+        "evidence_quote": {
+          "start": 10295,
+          "end": 10397,
+          "words": 17
+        },
+        "partial_quote": {
+          "start": 614,
+          "end": 708,
+          "words": 15
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1100",
+      "allocation_index": 69,
+      "source_title": "Hitozuma no Kuchibiru wa Kan Chūhai no Aji ga Shite",
+      "source_url": "https://en.wikipedia.org/wiki/Hitozuma_no_Kuchibiru_wa_Kan_Ch%C5%ABhai_no_Aji_ga_Shite",
+      "source_content_sha256": "9ad974e8f2922257d224eaf3033bb1ac46a35268e9774827c04389b910bf6fd0",
+      "quotes": {
+        "common_quote": {
+          "start": 313,
+          "end": 504,
+          "words": 31
+        },
+        "evidence_quote": {
+          "start": 572,
+          "end": 652,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 505,
+          "end": 571,
+          "words": 10
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1936",
+      "allocation_index": 70,
+      "source_title": "Military Council for the Liberation of Syria",
+      "source_url": "https://en.wikipedia.org/wiki/Military_Council_for_the_Liberation_of_Syria",
+      "source_content_sha256": "59bbf89f10123201d5771df011fa3df5b9231e484846a2ae47a961b1da8fff5e",
+      "quotes": {
+        "common_quote": {
+          "start": 1833,
+          "end": 1967,
+          "words": 18
+        },
+        "evidence_quote": {
+          "start": 2736,
+          "end": 2853,
+          "words": 18
+        },
+        "partial_quote": {
+          "start": 1456,
+          "end": 1582,
+          "words": 18
+        }
+      },
+      "event_group": "Syrian coastal clashes March 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0544",
+      "allocation_index": 71,
+      "source_title": "2025 deportation of Uyghurs in Thailand",
+      "source_url": "https://en.wikipedia.org/wiki/2025_deportation_of_Uyghurs_in_Thailand",
+      "source_content_sha256": "d931fb7ae8a70676689c7a31dee0746f66e2179c9406a8de1e3eaff474c129ad",
+      "quotes": {
+        "common_quote": {
+          "start": 1842,
+          "end": 1925,
+          "words": 14
+        },
+        "evidence_quote": {
+          "start": 0,
+          "end": 89,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 2168,
+          "end": 2314,
+          "words": 20
+        }
+      },
+      "event_group": "Thailand Uyghur deportation 27 February 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0804",
+      "allocation_index": 72,
+      "source_title": "Fighting Nerds",
+      "source_url": "https://en.wikipedia.org/wiki/Fighting_Nerds",
+      "source_content_sha256": "93687809ac7078e3390fef9cae7ae07011f223a14b72ba010ff3c485165afa4e",
+      "quotes": {
+        "common_quote": {
+          "start": 1235,
+          "end": 1436,
+          "words": 30
+        },
+        "evidence_quote": {
+          "start": 1909,
+          "end": 1959,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 1437,
+          "end": 1567,
+          "words": 23
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1015",
+      "allocation_index": 74,
+      "source_title": "2024 Big West Conference men's soccer tournament",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Big_West_Conference_men%27s_soccer_tournament",
+      "source_content_sha256": "f9264c69a85b4af514a1d6948530926baa6bf240e060fcc2c3839bff4fb7cb4c",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 160,
+          "words": 26
+        },
+        "evidence_quote": {
+          "start": 236,
+          "end": 358,
+          "words": 16
+        },
+        "partial_quote": {
+          "start": 161,
+          "end": 235,
+          "words": 13
+        }
+      },
+      "event_group": "2024 Big West Conference men's soccer tournament",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2262",
+      "allocation_index": 75,
+      "source_title": "Mr India 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Mr_India_2025",
+      "source_content_sha256": "fd38c245fda774e4c48996c372b4e915d29f27610bb326fb4af09bf49292abb8",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 109,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 788,
+          "end": 880,
+          "words": 14
+        },
+        "partial_quote": {
+          "start": 696,
+          "end": 787,
+          "words": 15
+        }
+      },
+      "event_group": "Mr India 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0310",
+      "allocation_index": 76,
+      "source_title": "Embassy of China, Bangkok",
+      "source_url": "https://en.wikipedia.org/wiki/Embassy_of_China,_Bangkok",
+      "source_content_sha256": "be043480998a337a2f195f48fdd939eb8a08adc4b7fea49286a27a2c452e1e3b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 278,
+          "words": 36
+        },
+        "evidence_quote": {
+          "start": 522,
+          "end": 654,
+          "words": 22
+        },
+        "partial_quote": {
+          "start": 279,
+          "end": 347,
+          "words": 11
+        }
+      },
+      "event_group": "Thailand–China diplomatic relations 50th anniversary 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0499",
+      "allocation_index": 77,
+      "source_title": "Miru: Paths To My Future",
+      "source_url": "https://en.wikipedia.org/wiki/Miru:_Paths_To_My_Future",
+      "source_content_sha256": "374582ff20af8879b7227d4f914e6229865528dc2fe6f6daf9ae3bd55619ee73",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 146,
+          "words": 23
+        },
+        "evidence_quote": {
+          "start": 270,
+          "end": 402,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 147,
+          "end": 203,
+          "words": 10
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0033",
+      "allocation_index": 79,
+      "source_title": "Battle of Jebel Moya",
+      "source_url": "https://en.wikipedia.org/wiki/Battle_of_Jebel_Moya",
+      "source_content_sha256": "8c6ce551079d9f6742fba16f462d24f0d9fe73f6c0fa63cf1f2583e823cb3cfe",
+      "quotes": {
+        "common_quote": {
+          "start": 296,
+          "end": 437,
+          "words": 27
+        },
+        "evidence_quote": {
+          "start": 2935,
+          "end": 3102,
+          "words": 28
+        },
+        "partial_quote": {
+          "start": 1123,
+          "end": 1336,
+          "words": 39
+        }
+      },
+      "event_group": "Battle of Jebel Moya 2024",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0194",
+      "allocation_index": 80,
+      "source_title": "2025 Sun Belt Conference men's basketball tournament",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Sun_Belt_Conference_men%27s_basketball_tournament",
+      "source_content_sha256": "df62169a4c23e0a2f981ebcdb5090d4b76256fb6b549715f52b15de943d39756",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 191,
+          "words": 28
+        },
+        "evidence_quote": {
+          "start": 856,
+          "end": 903,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 738,
+          "end": 855,
+          "words": 19
+        }
+      },
+      "event_group": "2025 Sun Belt Conference men's basketball tournament",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1244",
+      "allocation_index": 81,
+      "source_title": "Miss Grand Cuba 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Miss_Grand_Cuba_2025",
+      "source_content_sha256": "99e83b2556c7ad3fd94e11426ad975a48969aa6b4efb5fb7ca99427c569c9855",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 127,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 128,
+          "end": 171,
+          "words": 7
+        },
+        "partial_quote": {
+          "start": 402,
+          "end": 555,
+          "words": 26
+        }
+      },
+      "event_group": "Miss Grand Cuba 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0542",
+      "allocation_index": 82,
+      "source_title": "Seven Stars FF",
+      "source_url": "https://en.wikipedia.org/wiki/Seven_Stars_FF",
+      "source_content_sha256": "f59752f4eb732ce2bda5853c8a406c74f18e9a3027a6d42f1905d8e6c04ac1bb",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 215,
+          "words": 34
+        },
+        "evidence_quote": {
+          "start": 709,
+          "end": 835,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 216,
+          "end": 432,
+          "words": 36
+        }
+      },
+      "event_group": "Seven Stars FF",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0447",
+      "allocation_index": 83,
+      "source_title": "2025–26 Bangladesh Super Cup",
+      "source_url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Bangladesh_Super_Cup",
+      "source_content_sha256": "958a78b8820887ec3b3f0455ada530df15cdc43599ccf661e27de55d580b549c",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 192,
+          "words": 28
+        },
+        "evidence_quote": {
+          "start": 193,
+          "end": 247,
+          "words": 8
+        },
+        "partial_quote": {
+          "start": 248,
+          "end": 392,
+          "words": 23
+        }
+      },
+      "event_group": "2025–26 Bangladesh Super Cup",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0840",
+      "allocation_index": 84,
+      "source_title": "Mahmoud Khrouba",
+      "source_url": "https://en.wikipedia.org/wiki/Mahmoud_Khrouba",
+      "source_content_sha256": "d6ed33c8c33f5d31aaa7a34ddca306ee2f9978d723f07c7ec5bfb9eb87a6474d",
+      "quotes": {
+        "common_quote": {
+          "start": 374,
+          "end": 428,
+          "words": 9
+        },
+        "evidence_quote": {
+          "start": 645,
+          "end": 727,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 884,
+          "end": 1020,
+          "words": 20
+        }
+      },
+      "event_group": "Mahmoud Khrouba Al-Hussein contract extension 17 July 2024",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0989",
+      "allocation_index": 85,
+      "source_title": "Flintstone Homes",
+      "source_url": "https://en.wikipedia.org/wiki/Flintstone_Homes",
+      "source_content_sha256": "53409def81bfe5410cb5a045abfd90948e354d1d352336f39be2402f7b0ebbff",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 148,
+          "words": 21
+        },
+        "evidence_quote": {
+          "start": 833,
+          "end": 931,
+          "words": 16
+        },
+        "partial_quote": {
+          "start": 149,
+          "end": 257,
+          "words": 15
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2240",
+      "allocation_index": 86,
+      "source_title": "Malaysia at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Malaysia_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "4e3b0a43519250da3b268080df6b61d9ae55df82e2046193af2321824901546c",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 89,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 566,
+          "end": 612,
+          "words": 6
+        },
+        "partial_quote": {
+          "start": 377,
+          "end": 418,
+          "words": 6
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0627",
+      "allocation_index": 87,
+      "source_title": "Chaithra B.",
+      "source_url": "https://en.wikipedia.org/wiki/Chaithra_B.",
+      "source_content_sha256": "68f7a3e81954ec46d876bf1244efc833704d15a746aca1f5088330d16d60e51f",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 77,
+          "words": 14
+        },
+        "evidence_quote": {
+          "start": 1424,
+          "end": 1489,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 430,
+          "end": 495,
+          "words": 10
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_2252",
+      "allocation_index": 88,
+      "source_title": "Bhutan at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Bhutan_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "6de4b16758c88578c18b0437939efc51307ad66591d5b973054380f2199f559f",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 87,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 397,
+          "end": 434,
+          "words": 6
+        },
+        "partial_quote": {
+          "start": 88,
+          "end": 145,
+          "words": 10
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1836",
+      "allocation_index": 89,
+      "source_title": "Tunyawaj Kamolwongwat",
+      "source_url": "https://en.wikipedia.org/wiki/Tunyawaj_Kamolwongwat",
+      "source_content_sha256": "696c3495e16e66fb0b813d50f05e9d58e140e07af3c48ffc06d169136f33aad2",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 164,
+          "words": 23
+        },
+        "evidence_quote": {
+          "start": 564,
+          "end": 809,
+          "words": 33
+        },
+        "partial_quote": {
+          "start": 218,
+          "end": 356,
+          "words": 23
+        }
+      },
+      "event_group": "Thailand marriage equality enactment January 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1274",
+      "allocation_index": 90,
+      "source_title": "Evil J0rdan",
+      "source_url": "https://en.wikipedia.org/wiki/Evil_J0rdan",
+      "source_content_sha256": "40a4f22bb0a1bc2db58f3b870e657b91355e29ef37adc1c479fd0ad4d09a44a9",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 85,
+          "words": 14
+        },
+        "evidence_quote": {
+          "start": 86,
+          "end": 176,
+          "words": 17
+        },
+        "partial_quote": {
+          "start": 261,
+          "end": 322,
+          "words": 10
+        }
+      },
+      "event_group": "Playboi Carti Music album 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0372",
+      "allocation_index": 92,
+      "source_title": "Tiago Gabriel",
+      "source_url": "https://en.wikipedia.org/wiki/Tiago_Gabriel",
+      "source_content_sha256": "ec64fe69f7b624262868ca724284d595791feb634ba930e5d13f85096f474276",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 131,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 357,
+          "end": 560,
+          "words": 38
+        },
+        "partial_quote": {
+          "start": 147,
+          "end": 280,
+          "words": 23
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0842",
+      "allocation_index": 93,
+      "source_title": "Red Sebastian",
+      "source_url": "https://en.wikipedia.org/wiki/Red_Sebastian",
+      "source_content_sha256": "693e76f36892bdee48b310b17ba603d6135b640f96289f4fccdb07a66a177bae",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 118,
+          "words": 17
+        },
+        "evidence_quote": {
+          "start": 712,
+          "end": 760,
+          "words": 9
+        },
+        "partial_quote": {
+          "start": 557,
+          "end": 650,
+          "words": 16
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_2245",
+      "allocation_index": 94,
+      "source_title": "Iran at the 2025 Asian Winter Games",
+      "source_url": "https://en.wikipedia.org/wiki/Iran_at_the_2025_Asian_Winter_Games",
+      "source_content_sha256": "3d627a0ec56259e872a9c184d049514975803dec2c25e8d867b8cfdafdaec26a",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 85,
+          "words": 16
+        },
+        "evidence_quote": {
+          "start": 581,
+          "end": 633,
+          "words": 8
+        },
+        "partial_quote": {
+          "start": 169,
+          "end": 300,
+          "words": 17
+        }
+      },
+      "event_group": "2025 Asian Winter Games",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0644",
+      "allocation_index": 95,
+      "source_title": "2025 Argentine motorcycle Grand Prix",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Argentine_motorcycle_Grand_Prix",
+      "source_content_sha256": "ce02522e20b3529b43ea9846ccc5a9436a7f154e28e880de53496ae5bb350f95",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 177,
+          "words": 29
+        },
+        "evidence_quote": {
+          "start": 3788,
+          "end": 3909,
+          "words": 20
+        },
+        "partial_quote": {
+          "start": 178,
+          "end": 278,
+          "words": 21
+        }
+      },
+      "event_group": "2025 Argentine motorcycle Grand Prix",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1569",
+      "allocation_index": 98,
+      "source_title": "Texas State Guard Good Conduct Medal",
+      "source_url": "https://en.wikipedia.org/wiki/Texas_State_Guard_Good_Conduct_Medal",
+      "source_content_sha256": "23317b062da61a3d3f0bc353df8422259a3d285a671c7c73a449a4b385f0cbef",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 154,
+          "words": 26
+        },
+        "evidence_quote": {
+          "start": 1635,
+          "end": 1823,
+          "words": 34
+        },
+        "partial_quote": {
+          "start": 175,
+          "end": 294,
+          "words": 18
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1907",
+      "allocation_index": 99,
+      "source_title": "Jungle (Sugababes song)",
+      "source_url": "https://en.wikipedia.org/wiki/Jungle_(Sugababes_song)",
+      "source_content_sha256": "32ff66c69ef8d4ea4928ade94e7aeb0d012040b6d4d76af2ea6849933427e5d9",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 51,
+          "words": 9
+        },
+        "evidence_quote": {
+          "start": 3895,
+          "end": 4006,
+          "words": 21
+        },
+        "partial_quote": {
+          "start": 305,
+          "end": 373,
+          "words": 12
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0856",
+      "allocation_index": 100,
+      "source_title": "La poupée monte le son",
+      "source_url": "https://en.wikipedia.org/wiki/La_poup%C3%A9e_monte_le_son",
+      "source_content_sha256": "2b584ea58f4f745f534ea23327dbc25129011263828febf06331c01694747339",
+      "quotes": {
+        "common_quote": {
+          "start": 1261,
+          "end": 1386,
+          "words": 20
+        },
+        "evidence_quote": {
+          "start": 1387,
+          "end": 1650,
+          "words": 44
+        },
+        "partial_quote": {
+          "start": 1651,
+          "end": 1816,
+          "words": 26
+        }
+      },
+      "event_group": "Eurovision Song Contest 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0139",
+      "allocation_index": 101,
+      "source_title": "Saudi Futsal Premier League",
+      "source_url": "https://en.wikipedia.org/wiki/Saudi_Futsal_Premier_League",
+      "source_content_sha256": "14a3c556f57c95d76d438993d8adc11fb8c61f364c52636d56eb4bd5646d8363",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 140,
+          "words": 21
+        },
+        "evidence_quote": {
+          "start": 437,
+          "end": 496,
+          "words": 10
+        },
+        "partial_quote": {
+          "start": 141,
+          "end": 264,
+          "words": 22
+        }
+      },
+      "event_group": "2024–25 Saudi Futsal Premier League",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0210",
+      "allocation_index": 102,
+      "source_title": "2025 UAE Tour",
+      "source_url": "https://en.wikipedia.org/wiki/2025_UAE_Tour",
+      "source_content_sha256": "1a367cdac24861cf1568af3d95e9acd453aca13dd132fa93ec5676bb09717f5b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 123,
+          "words": 24
+        },
+        "evidence_quote": {
+          "start": 276,
+          "end": 348,
+          "words": 13
+        },
+        "partial_quote": {
+          "start": 219,
+          "end": 261,
+          "words": 9
+        }
+      },
+      "event_group": "2025 UAE Tour",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_1426",
+      "allocation_index": 103,
+      "source_title": "Margaree Seawright Crosby",
+      "source_url": "https://en.wikipedia.org/wiki/Margaree_Seawright_Crosby",
+      "source_content_sha256": "991a55a16f1bd22661080f90f2da17b68fc1e0f3782249a3db28748c2d592137",
+      "quotes": {
+        "common_quote": {
+          "start": 1433,
+          "end": 1546,
+          "words": 19
+        },
+        "evidence_quote": {
+          "start": 2612,
+          "end": 2677,
+          "words": 15
+        },
+        "partial_quote": {
+          "start": 238,
+          "end": 365,
+          "words": 21
+        }
+      },
+      "event_group": null,
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1932",
+      "allocation_index": 104,
+      "source_title": "Stardom Cinderella Tournament 2025",
+      "source_url": "https://en.wikipedia.org/wiki/Stardom_Cinderella_Tournament_2025",
+      "source_content_sha256": "4946d1d81ea70983d34364feedc5ff190067d3d4d836f61a7d186b8040378bf2",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 212,
+          "words": 22
+        },
+        "evidence_quote": {
+          "start": 4131,
+          "end": 4204,
+          "words": 9
+        },
+        "partial_quote": {
+          "start": 534,
+          "end": 613,
+          "words": 14
+        }
+      },
+      "event_group": "Stardom Cinderella Tournament 2025",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0886",
+      "allocation_index": 106,
+      "source_title": "2025 TCR Europe Touring Car Series",
+      "source_url": "https://en.wikipedia.org/wiki/2025_TCR_Europe_Touring_Car_Series",
+      "source_content_sha256": "6dec21421c1275b216edc65161d891e29652d06539a5758ccbf82b911d793282",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 97,
+          "words": 18
+        },
+        "evidence_quote": {
+          "start": 246,
+          "end": 316,
+          "words": 12
+        },
+        "partial_quote": {
+          "start": 343,
+          "end": 410,
+          "words": 11
+        }
+      },
+      "event_group": "2025 TCR Europe Touring Car Series",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_1609",
+      "allocation_index": 107,
+      "source_title": "CS Hilal Temara",
+      "source_url": "https://en.wikipedia.org/wiki/CS_Hilal_Temara",
+      "source_content_sha256": "f38cb8b0d3281af01b3dee65ac8ffe166b6c622ce9fa11f7f13b51b7ed3f7b0b",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 249,
+          "words": 38
+        },
+        "evidence_quote": {
+          "start": 425,
+          "end": 558,
+          "words": 24
+        },
+        "partial_quote": {
+          "start": 266,
+          "end": 424,
+          "words": 23
+        }
+      },
+      "event_group": "2023–24 Moroccan Women’s Championship",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_train_0991",
+      "allocation_index": 108,
+      "source_title": "2024 Los Angeles County Measure G",
+      "source_url": "https://en.wikipedia.org/wiki/2024_Los_Angeles_County_Measure_G",
+      "source_content_sha256": "b14f70e6323067a2607961c82284c6548450e367c27ae2753514de8e875cd824",
+      "quotes": {
+        "common_quote": {
+          "start": 0,
+          "end": 232,
+          "words": 35
+        },
+        "evidence_quote": {
+          "start": 518,
+          "end": 683,
+          "words": 26
+        },
+        "partial_quote": {
+          "start": 308,
+          "end": 517,
+          "words": 30
+        }
+      },
+      "event_group": "2024 Los Angeles County Measure G",
+      "assistant_source_review": true
+    },
+    {
+      "candidate_id": "ragognize_test_0341",
+      "allocation_index": 109,
+      "source_title": "2025 Coupe de France Féminine final",
+      "source_url": "https://en.wikipedia.org/wiki/2025_Coupe_de_France_F%C3%A9minine_final",
+      "source_content_sha256": "3af19a1c2b418821bb87810165efea6f72a9db2fcff4bc8ed812a526472420d6",
+      "quotes": {
+        "common_quote": {
+          "start": 225,
+          "end": 379,
+          "words": 26
+        },
+        "evidence_quote": {
+          "start": 524,
+          "end": 728,
+          "words": 34
+        },
+        "partial_quote": {
+          "start": 395,
+          "end": 522,
+          "words": 21
+        }
+      },
+      "event_group": "2025 Coupe de France Féminine final",
+      "assistant_source_review": true
+    }
+  ]
+}

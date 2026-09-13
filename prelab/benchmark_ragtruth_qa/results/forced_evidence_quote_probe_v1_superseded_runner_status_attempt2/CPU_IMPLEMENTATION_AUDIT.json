@@ -1,0 +1,68 @@
+{
+  "status": "passed_CPU_implementation_audit",
+  "counts": {
+    "groups": 256,
+    "answers": 256,
+    "claims": 3776
+  },
+  "AST_allowlist_proof": {
+    "fit_source_full_JSON_parse_disclosed": true,
+    "only_raw_subscript_in_sanitizer": [
+      "raw[key]"
+    ],
+    "raw_is_immediately_projected_through_fixed_allowlist_then_deleted": true,
+    "output_schema_exact": [
+      "response_id",
+      "source_id",
+      "group_id",
+      "model",
+      "question",
+      "passage_1",
+      "passage_2",
+      "passage_3",
+      "microclaim_id",
+      "microclaim_index",
+      "claim_start",
+      "claim_end",
+      "claim_text_raw",
+      "claim_prompt_text"
+    ],
+    "forbidden_payload_absent_recursively": true
+  },
+  "runner": {
+    "executable_CLI_stages": [
+      "cpu-selfcheck",
+      "describe"
+    ],
+    "GPU_methods_raise": true,
+    "whitebox_contract": "generation token IDs followed by full-sequence no-cache replay",
+    "use_cache_in_whitebox_replay": false
+  },
+  "files_sha256": {
+    "prepare_code": "fb71081166421a01e9a73e6f3ca873ebd1d8e2b738b5dc5f1b028803a20c6c17",
+    "runner_code": "2d127b9d6b3ed71c2188d519e559bce138ed193bb44347f2c814d0c8cf690387",
+    "protocol": "78e5558b61592238b0979c7c60aea23c79b8c7d3181e88113d3972b4d056f7aa",
+    "plan": "6d439ee257dde65d2ef2c9974cd3dd716f4f0d06890cfb7df9c8af6da562680c",
+    "label_free_inputs": "ae6bf145a0e48ff310cdde5f54457eec7e8986c9b012d52cc463bb9e357e2777",
+    "preparation": "400f577f9e805ddfbfb385c13ed312e8394e8304a1a667ff69181a398a1cefc6",
+    "resource_estimate": "edeb81d7184e72ce08a6f31f879ac80d2d0bb808837cbbef006a06fb9cdf48f6",
+    "CPU_SELFCHECK": "0cd73227538a69b3d656ebabc61089b732435ed41e0a0018da5e9de37616d6b4"
+  },
+  "files_opened": [
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\prepare_forced_evidence_quote_probe_v1.py",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_forced_evidence_quote_probe_v1.py",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\forced_evidence_quote_probe_v1\\PLAN.json",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\forced_evidence_quote_probe_v1\\PROTOCOL.md",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\forced_evidence_quote_probe_v1\\MANIFEST.json",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\forced_evidence_quote_probe_v1\\PREPARATION.json",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\forced_evidence_quote_probe_v1\\CPU_SELFCHECK.json",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\forced_evidence_quote_probe_v1\\label_free_inputs.jsonl"
+  ],
+  "fit_payload_opened": false,
+  "gold_payload_opened": false,
+  "calibration_or_test_opened": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "scoring_run": false,
+  "baseline_modified": false
+}

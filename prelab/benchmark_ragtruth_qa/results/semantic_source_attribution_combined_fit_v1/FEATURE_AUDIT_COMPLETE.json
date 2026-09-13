@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "responses": 3680,
+  "claims": 34919,
+  "claim_sentence_edges": 523930,
+  "native_claims": 9055,
+  "expanded_claims": 25864,
+  "native_edges": 133247,
+  "expanded_edges": 390683,
+  "max_csr_float16_head_mean_abs_drift": 0.00011897087097167969,
+  "projection_signature_sha256": "3a7d12015d00b4d03a0aae3384f1d94a626f4dd86e786fe4c04f873f0837d0a5",
+  "native_manifest_sha256": "37f50d7ad939272149688b24ac91ef68a8996aa398716de113cb1c5004ac0d8b",
+  "expanded_manifest_sha256": "b01addad0b38050cffc50ab497d542dd6c13c8aa926c0ef85f58983a1fd536a0",
+  "files_sha256": {
+    "compact_features.npz": "c1b99fadd9850f0c3e5ec17e007b4c1904263dee7236f44a7825a19c333dd861",
+    "feature_records.jsonl": "c12a814230c3e02ca2c8caf715c6fe3a3e8e896a4ac251bb428ac839be881dff",
+    "projection.npz": "62ff5a621b9a727fa7c70d41cbe2685d5988b2a96045b91ce17c3a2cdb7a1f62",
+    "axes.json": "88423e0d08ecff130e0dc693492f562c4e7745afbb46ec92298854c66bb37f98"
+  },
+  "models_or_thresholds_selected": 0,
+  "gpu_used": false,
+  "labels_used": true,
+  "label_partition": "fit",
+  "calibration_opened": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,56 @@
+{
+  "version": "qa-full-head-matched-tcn-v2",
+  "scope": "Only frozen fit634/calibration159; no test",
+  "methods": [
+    "full_lb_pca64_tcn",
+    "full_lb_harp64_tcn"
+  ],
+  "input_dimensions": 1089,
+  "input_A": "Each raw token: all1024 layer-major/head-minor LB heads + NLL1 + exact reused fit-only hiddenPCA64",
+  "input_B": "Same all1024 LB + NLL1 + first64 columns of frozen HARP256, ascending smallest head eigenvalues",
+  "harp": "Reuse frozen data/harp_features and data/harp_basis; no basis fit, no reprojection during formal preparation",
+  "pca": "Reuse exact sequence_v1 raw_token_features columns129:193, bound to original development_v1 fit-only PCA64",
+  "network": "1089->64 GELU, two residual ONE-Conv1d64->64 blocks kernel3 dilation1/2 GELU dropout.2, ->1",
+  "padding": "Same zero state masking after projection/each block as sequence_v1; each answer separate",
+  "receptive_field_raw_tokens": 7,
+  "offline_future_tokens": true,
+  "seed": 20260926,
+  "epochs_per_model": 30,
+  "batch_answers": 8,
+  "cpu_threads": 4,
+  "initialization": "Reset same seed before each same-shape network, so all initial parameter tensors exactly match",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "all_parameters": true
+  },
+  "weights": "Reuse exact sequence_v1 fit_token_weights: group/answer/lexical equal base, class factors then group rebalance, loss mass139518",
+  "scaler": "Separate fit-only lexical-base-weighted StandardScalers, same partial_fit blocks16384 and float32 transform; shared1025 dimensions must match exactly",
+  "shuffle": "Reuse identical sequence_v1 epoch_answer_order.npy, not a new random schedule",
+  "loss": "Same sum(w*BCE_logits)*634/(actual_batch_answers*139518); punctuation/padding weight0",
+  "aggregation": "Same unchanged eligible4 raw BPE windows; max only over output-defined lexical tokens, then all-window max for answer",
+  "selection": "Same cal max min(windowF1,answerF1), then windowF1/precision, earlier epoch; separate global thresholds",
+  "early_stop": false,
+  "new_seeds_or_hyperparameters": false,
+  "diagnostics": {
+    "types": [
+      "Evident Conflict",
+      "Subtle Conflict",
+      "Evident Baseless Info",
+      "Subtle Baseless Info"
+    ],
+    "window_recall": "Unique positive windows intersecting lexical risk tokens of each original type; overlap between types allowed",
+    "span_recall": "Per original span with lexical risk tokens: any token covered / every token covered by alerted windows",
+    "empty_lexical_spans": "Report original count and unlocalizable count, never change official answer labels",
+    "thresholds": "Use same selected global window threshold; never tune by error type",
+    "case_selection": "For cal Conflict spans: first3 newly hit and first3 lost B versus A, response_id then span_index order"
+  },
+  "comparisons": "Retain selected sequence_v1 MLP/193dimTCN; frozen LR and HARP LR candidates reported without refit",
+  "limitations": [
+    "Cal selects30 checkpoints and thresholds; not fresh-test performance.",
+    "A/B input widths and parameter counts match. Comparing A to193dimTCN also increases projection parameters, so it is not a pure information intervention.",
+    "A/B are different64dim hidden projections. A poor result cannot establish absence of information in full hidden states.",
+    "One fixed seed only; no significance or unseen-generalization claim."
+  ]
+}

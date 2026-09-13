@@ -1,0 +1,77 @@
+{
+  "version": "specificity-gate-v1",
+  "purpose": "Filter or propagate localization evidence without changing any external baseline.",
+  "scope": "RAGTruth QA fit634 plus calibration159 development data; official test is absent.",
+  "inputs": {
+    "incumbent": "Frozen semantic_claim__old_tree__large_weight0.4 window score. Its historical calibration-selected result remains a read-only comparison only.",
+    "atomic_nli": "Frozen atomic_microclaim_nli_v1; fit entries are its stored source-group OOF predictions and calibration entries are its stored full-fit predictions."
+  },
+  "atomic_propagation": {
+    "seed_windows": "All eligible 4-BPE windows touching a deterministic label-blind atomic microclaim.",
+    "claim_aggregates": [
+      "max",
+      "90th percentile",
+      "75th percentile"
+    ],
+    "projection": "Each 4-BPE window receives the maximum aggregate among atomic microclaims touched by its lexical tokens."
+  },
+  "gate_pool": "All windows below the fit-selected incumbent window cutoff. No calibration statistic defines this pool.",
+  "gate_features": {
+    "same_answer_relative": [
+      "nli_minus_answer_median",
+      "nli_minus_answer_max",
+      "nli_within_answer_rank",
+      "incumbent_minus_answer_median",
+      "incumbent_minus_answer_max",
+      "incumbent_within_answer_rank",
+      "incumbent_answer_max",
+      "incumbent_distance_to_fit_cutoff"
+    ],
+    "nli_relation": [
+      "entailment",
+      "contradiction",
+      "contradiction-entailment margin"
+    ],
+    "retrieval": [
+      "BM25",
+      "lexical query coverage",
+      "relation coverage",
+      "cited/source consistency"
+    ],
+    "incumbent": [
+      "raw window",
+      "atomic max/q90/q75/mean",
+      "distance to cutoff"
+    ]
+  },
+  "candidates": [
+    "atomic_max",
+    "atomic_q90",
+    "atomic_q75",
+    "gate_relative_lr",
+    "gate_full_lr",
+    "gate_full_hgb"
+  ],
+  "models": {
+    "gate_relative_lr": "StandardScaler + L2 logistic regression, C=0.01",
+    "gate_full_lr": "StandardScaler + L2 logistic regression, C=0.01",
+    "gate_full_hgb": "HistGradientBoosting, 7 leaves, 150 iterations, min leaf 100, L2=2"
+  },
+  "crossfit": "Five-fold GroupKFold by locked source-connected group. Every learned fit gate score is held-group prediction.",
+  "weights": "Equal source-group mass, equal answer mass inside group, equal window mass inside answer, then binary class balance.",
+  "thresholds": {
+    "incumbent": "Window and answer cutoffs independently maximize F1 on fit only.",
+    "gate": "Fit OOF only; maximize union F1 subject to at least 32 additions and incremental precision >= 0.55.",
+    "deterministic": "Window and answer cutoffs independently maximize F1 on fit only."
+  },
+  "selection": "Fit only: maximize min(window F1, answer F1), then window F1, window precision, incremental precision, then earlier candidate order.",
+  "calibration": "Only the selected frozen candidate is strictly evaluated once. Calibration-F1-optimal values are a separately marked non-independent diagnostic.",
+  "acceptance": "Replace neither incumbent nor baseline unless strict calibration window F1 exceeds 0.6902813989031736 and answer F1 is at least 0.8910891089108911.",
+  "limitations": [
+    "The incumbent source artifact itself was historically selected on calibration; this experiment does not retune or alter it.",
+    "Its fit score provenance is fixed upstream and is not newly cross-fitted here; only learned gate predictions are source-group OOF.",
+    "Calibration remains a repeatedly observed development split, not an independent test."
+  ],
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

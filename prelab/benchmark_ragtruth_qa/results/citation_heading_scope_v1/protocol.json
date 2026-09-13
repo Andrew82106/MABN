@@ -1,0 +1,45 @@
+{
+  "version": "citation-heading-scope-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "new_fits": 9,
+  "fit": "Original634 fit /168123 windows; calibration159 /42241 windows. Original4rawBPE, all answers, no test.",
+  "header": "Complete standalone Passage1/2/3: line (space optional), case-insensitive; optionally a paired Markdown ** wrapper around header or name. No narrative source mentions.",
+  "scope": "Only subsequent explicit *,+,-,bullet-dot or numbered N./N) lines. Blank lines allowed. Plain prose, summary, unsupported heading or other nonempty line immediately closes. Valid new source heading switches. Wrapped plain continuation closes; no inferred multiline propagation.",
+  "claim_rule": "Existing claim boundaries unchanged. Whole claim must lie within one scoped list line. Only old parser status none may inherit; inline/unknown references never overwritten. Header itself not attributed as content.",
+  "new_features": [
+    "inherited_scope_token_fraction",
+    "inherited_source_coverage_mean",
+    "inherited_source_coverage_gap_mean"
+  ],
+  "calculation": "Per inherited claim: 1, word-set coverage in inherited source, max of original three source word-coverages minus that coverage; per noninherited claim all0. Mean over existing lexical-token->claim assignment in each original4raw window. Header/source IDs are metadata, never numeric predictors.",
+  "common": "Exact frozen peer+tail2 two probabilities and exact original8 lexical/citation features; new model13 columns. Old10-column threeC models reused, no control refits.",
+  "weights": "Exactly q.base_weights: same train-only group/class weighting and168123 loss mass. Fit-only base-weighted StandardScaler.",
+  "LR": {
+    "C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "seed": 20261010
+  },
+  "selection": "Each candidate gets original cal F1-optimal window/answer thresholds; choose C by q.selection_key(min twoF1,windowF1,windowprecision,smallerC). Answer score max over every original eligible window.",
+  "limits": [
+    "Does not fix step IDs, temporal sequence, sentence-final detached citations, narrative scope, or entailment.",
+    "No new semantic forward. Existing upstream MiniCheck scores remain part of both models: not a pure white-box probe.",
+    "Upstream fit scores are in-sample, not cross-fitted; cal repeatedly exposed. Exploration, not independent test."
+  ],
+  "GPU_used": false,
+  "official_test_opened": false
+}

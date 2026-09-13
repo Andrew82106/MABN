@@ -1,0 +1,24 @@
+{
+  "status": "partial_interface_smoke_passed_waiting_for_full_cache",
+  "verified_feature_shards": 30,
+  "coverage": "10 native + first 20 currently committed expanded shards",
+  "checks": [
+    "commit and content hashes",
+    "source/group/fit identity",
+    "signature binding",
+    "all array shapes and dtypes",
+    "claim microclaim-axis equality",
+    "answer absolute token-axis equality",
+    "finite nonnegative values",
+    "float16 CSR reconstruction drift"
+  ],
+  "strict_incomplete_cache_gate_passed": true,
+  "full_audit_run": false,
+  "reason": "expanded feature extraction incomplete",
+  "runner_sha256": "a1a5f11fea66e12feaca198aac813794e29a33a5dfdc3e0116944ab1ccea5e79",
+  "projection_sha256": "62ff5a621b9a727fa7c70d41cbe2685d5988b2a96045b91ce17c3a2cdb7a1f62",
+  "gpu_used": false,
+  "labels_used_by_feature_smoke": false,
+  "calibration_opened": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,74 @@
+{
+  "protocol_id": "CERP-v2.0-structure",
+  "status": "frozen_before_label_blind_structure_gate",
+  "objective": "Generate high-precision local counterfactual repairs for later 4-BPE localization, without reading any QA correctness annotation.",
+  "input": {
+    "path": "research/counterfactual_repair_v1_design/fit_cpu_gate/candidates_fit_label_blind.jsonl",
+    "sha256": "387de4fd7d0fb7299c20df88bcb414f10c93d27c12c15e3e24ad97100c8e77aa",
+    "required_parent_prepare_sha256": "111c9bc097e3113ca13d6361dd17bcdd050746a58cfd103b97ced6b805c15c8c",
+    "allowed_parent_candidate_types": [
+      "aligned_relation",
+      "citation"
+    ]
+  },
+  "prohibited_inputs": [
+    "QA error labels",
+    "conflict spans",
+    "window labels",
+    "held-out partitions",
+    "NLI scores or model inference"
+  ],
+  "aligned_candidate_rules": {
+    "old_lexical_tokens_max": 4,
+    "new_lexical_tokens_max": 4,
+    "left_content_anchors_min": 1,
+    "right_content_anchors_min": 1,
+    "total_content_anchors_min": 3,
+    "anchor_radius_lexical_tokens": 6,
+    "repair_claim_coverage_min": 0.6,
+    "repair_claim_coverage_gain_min": 0.05,
+    "repair_sequence_similarity_must_increase": true,
+    "numeric_and_temporal_subtype_must_match": true,
+    "proper_name_rule": "both sides multi-token proper names or all-cap acronyms",
+    "polarity_rule": "only frozen opposite-pair replacements"
+  },
+  "citation_candidate_rules": {
+    "replacement_must_equal_source_passage_id": true,
+    "citation_stripped_claim_coverage_min": 0.6,
+    "shared_factual_tokens_min": 3
+  },
+  "selection": {
+    "max_candidates_per_claim": 4,
+    "max_candidates_per_original_interval": 1,
+    "ranking": [
+      "more two-sided content anchors",
+      "larger coverage gain",
+      "larger repaired coverage",
+      "lower union rank",
+      "shorter edit",
+      "stable candidate id"
+    ]
+  },
+  "capacity_gate": {
+    "candidate_count_min": 10000,
+    "candidate_count_max": 139676,
+    "claims_with_candidates_min": 5000,
+    "groups_with_candidates_min": 300,
+    "candidate_types_with_at_least_100_min": 3
+  },
+  "qc": {
+    "salt": "cerp-v2-structure-qc-20260913",
+    "sample_size": 60,
+    "target_per_type": 10,
+    "clear_rate_min": 0.8,
+    "reject_rate_max": 0.1,
+    "labels": [
+      "clear",
+      "ambiguous",
+      "reject"
+    ],
+    "decision": "A clear item is a grammatical, single-local-slot repair for which the displayed source makes the replacement locally plausible. It need not pass NLI yet."
+  },
+  "stop_rule": "Stop before NLI if any capacity condition fails, or if research-agent proxy QC is clearly below 0.80. Proxy QC is never called human review.",
+  "next_stage_if_passed": "Write a resumable NLI request manifest and runbook only; do not start inference while the GPU is occupied."
+}

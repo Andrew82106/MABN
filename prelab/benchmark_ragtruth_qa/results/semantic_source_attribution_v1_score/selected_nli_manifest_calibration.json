@@ -1,0 +1,19 @@
+{
+  "status": "linked_missing_pairs_not_inferred",
+  "partition": "calibration",
+  "answers": 159,
+  "claims": 2267,
+  "selected_links": 6801,
+  "cached_links": 4591,
+  "missing_links": 2210,
+  "unique_missing_requests": 2104,
+  "links_sha256": "49853abf528f7cbafc739b64fab426c2d3d1c95bc97a7fa510c017bcb3d1d722",
+  "requests_sha256": "a45ff2539d5db5af82d70f3b791c89bc143cfe47f87ca1f0e0efa19f6d4db517",
+  "existing_npz_sha256": "44923981aa577223c6c8851f77c7e5fa6e81f036e8ca166c886bb3fc5f0f4afc",
+  "attribution_manifest_sha256": "37f50d7ad939272149688b24ac91ef68a8996aa398716de113cb1c5004ac0d8b",
+  "labels_opened": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

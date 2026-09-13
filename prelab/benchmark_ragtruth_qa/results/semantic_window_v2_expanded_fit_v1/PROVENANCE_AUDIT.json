@@ -1,0 +1,46 @@
+{
+  "status": "passed_all_supervised_whitebox_inputs_are_source_group_OOF",
+  "upstream_folds": 3,
+  "source_groups": 615,
+  "answer_coverage_exactly_once": true,
+  "lookback_models_fit_only_on_complement_groups": true,
+  "large_models_fit_only_on_complement_groups": true,
+  "generation_nll_label_blind": true,
+  "expanded_raw_lookback_definition_matches_native_fit_exactly": true,
+  "expanded_raw_nll_definition_matches_native_fit_exactly": true,
+  "in_sample_supervised_columns": 0,
+  "folds": [
+    {
+      "fold": 0,
+      "fit_groups": 410,
+      "held_groups": 205,
+      "held_answers": 1206,
+      "held_tokens": 216028,
+      "lookback_training_excludes_all_held_groups": true,
+      "large_training_excludes_all_held_groups": true
+    },
+    {
+      "fold": 1,
+      "fit_groups": 410,
+      "held_groups": 205,
+      "held_answers": 1224,
+      "held_tokens": 215664,
+      "lookback_training_excludes_all_held_groups": true,
+      "large_training_excludes_all_held_groups": true
+    },
+    {
+      "fold": 2,
+      "fit_groups": 410,
+      "held_groups": 205,
+      "held_answers": 1250,
+      "held_tokens": 234016,
+      "lookback_training_excludes_all_held_groups": true,
+      "large_training_excludes_all_held_groups": true
+    }
+  ],
+  "calibration_opened": false,
+  "official_test_opened": false,
+  "native_fit_complete_sha256": "081411cfd852036562ccda548ef2454b9ca21554e5697d7307619893fcea5124",
+  "selected_candidate": "whitebox_geometry__C0.1",
+  "native_selection_used_calibration": false
+}

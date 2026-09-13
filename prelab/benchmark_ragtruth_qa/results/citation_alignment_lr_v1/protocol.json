@@ -1,0 +1,40 @@
+{
+  "version": "citation-alignment-matched-lr-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "modes": [
+    "two_scores_only",
+    "two_scores_and_citation"
+  ],
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "fits": 18,
+  "training": "Same original634 fit/168123 windows. Both modes use q.base_weights base and loss weights unchanged; no new labels.",
+  "base_inputs": "Frozen peer and tail2 probabilities for the exact original4BPE windows, no raw source ID or generator ID.",
+  "additional_inputs": "All predeclared CPU citation alignment features, no type label or human span metadata.",
+  "standardization": "StandardScaler fit-only, sample_weight=original base weights, same deterministic ordering.",
+  "LR": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "seed": 20261010,
+    "sample_weight": "Original source group/class loss, total168123."
+  },
+  "calibration": "Same159 answers/42241 windows; separate F1-optimal thresholds, precision/higher-threshold ties. Choose C per peer/mode using existing q.selection_key; no gradients or fit using cal.",
+  "answer": "Maximum over every original eligible window, original human answer label; no citation-only filtering.",
+  "scope": "Offline original native634 subset. Tail2 base model trained3680; peers trained634. Same base supervision for both feature modes.",
+  "limits": [
+    "Upstream scores on fit are in-sample, not cross-fitted stacking.",
+    "Lexical evidence overlap is an inexpensive cue, not semantic proof or a new gold label.",
+    "Features cannot check world truth beyond the supplied evidence.",
+    "Already repeatedly selected development calibration; final test remains unopened."
+  ],
+  "GPU_used": false,
+  "official_test_opened": false
+}

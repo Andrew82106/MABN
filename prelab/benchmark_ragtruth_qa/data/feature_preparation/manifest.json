@@ -1,0 +1,55 @@
+{
+  "status": "tokenization_prepared_no_pretrained_model_features",
+  "version": "ragtruth-qa-reconstruction-layout-v1",
+  "records": 793,
+  "partitions": {
+    "fit": 634,
+    "calibration": 159
+  },
+  "response_tokens": 213159,
+  "max_input_tokens": 1232,
+  "boundary_crossing_records": 793,
+  "noctx_answer_ids_and_clipped_offsets_match_all": true,
+  "raw_negative_offsets_preserved_clipped_eval_offsets_exported": true,
+  "no_nonwhitespace_answer_character_lost": true,
+  "no_test_or_withheld_rows_read": true,
+  "no_pretrained_model_loaded": true,
+  "gpu_initialized": false,
+  "plans_jsonl_sha256": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+  "signature": {
+    "version": "ragtruth-qa-reconstruction-layout-v1",
+    "code_sha256": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "development_manifest_sha256": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "development_data_sha256": {
+      "fit": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+      "calibration": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7"
+    },
+    "tokenizer": {
+      "tokenizer_class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 32000,
+      "length_with_added_tokens": 32000,
+      "files_sha256": {
+        "tokenizer.json": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+        "tokenizer_config.json": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+        "special_tokens_map.json": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+        "config.json": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2"
+      },
+      "transformers_version": "4.51.3",
+      "tokenizers_version": "0.21.4",
+      "explicit_wrapper": "<s>[INST] {released_prompt} [/INST] {original_response}",
+      "add_special_tokens": false,
+      "add_eos": false,
+      "padding": false,
+      "truncation": false,
+      "historical_original_token_ids_available": false
+    },
+    "backbone_weights_frozen": false,
+    "test_content_read": false,
+    "labels_used_for_features": false
+  },
+  "official_quality_filter_not_redefined": true,
+  "released_prompt_including_original_refusal_instruction_preserved": true,
+  "remaining_gate": "Downloaded weights, NF4 loading configuration, GPU selfcheck and replay signature must be frozen separately before feature extraction"
+}

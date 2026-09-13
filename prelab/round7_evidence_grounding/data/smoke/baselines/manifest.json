@@ -1,0 +1,13 @@
+{
+  "stage": "baselines",
+  "expected_rows": 4,
+  "completed_rows": 2,
+  "complete": false,
+  "seconds": 2.9447628000052646,
+  "peak_allocated_gib": 5.389088153839111,
+  "record_files": [
+    "hotpot_5a7a02235542996c55b2dcd3__complete.json",
+    "hotpot_5a7a02235542996c55b2dcd3__partial.json"
+  ],
+  "labels_read": false
+}

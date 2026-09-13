@@ -1,0 +1,185 @@
+{
+  "version": "retrieved-evidence-refchecker-nli-backbone-ablation-v1",
+  "status": "frozen_before_GPU_extraction_and_any_label_access",
+  "role": "ours_backbone_ablation; not_complete_RefChecker; never_a_formal_baseline",
+  "controlled_change": {
+    "unchanged": "Byte-identical v1 inputs: 793 answers, 8845 scored claims, 51953 selected claim/evidence-sentence pairs, pair order/provenance, BM25 retrieval, claim/token/window geometry, 35 feature formulas, source-group OOF LR readout, C/weights/labels/projection/thresholds/metrics.",
+    "changed": "Only frozen NLI tokenizer/checkpoint: v1 tasksource/ModernBERT-base-nli -> official NLIChecker default ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli.",
+    "v1_expected_sha256": {
+      "runner": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+      "protocol": "a7e55e74cf87e734b6948f49aae47bc8ec8e8418fc742e81c797412598c56c52",
+      "inputs": "aaad043a5ecae7ff881758cc7b0717b2771168c8473a3f84096045f7fe151408",
+      "preparation": "4f5f34fd6404c33a03c46b52b6a8abc331a404143f36498bee1e16bf4cd334ec"
+    },
+    "v1_semantics": {
+      "version": "native-qa-retrieved-evidence-nli-v1",
+      "status": "refrozen_after_label_free_preparation_failure_01_before_any_label_or_model_access",
+      "role": "ours_method_candidate; never a baseline",
+      "scope": {
+        "answers": "Exactly the existing 634 fit and 159 calibration llama-2-7b-chat QA answers.",
+        "claims": "Reuse exact automatic claim text/spans from semantic_baseline/cuda_variant/plans.jsonl. Retain punctuation-only records in an explicit audit list but do not treat them as factual claims or NLI hypotheses; this fixed isalnum rule uses no annotation.",
+        "windows": "Evaluation later uses the unchanged eligible four-original-BPE stride-one windows; preparation derives only label-free token-to-claim geometry.",
+        "test": "No official validation/test file or path is opened."
+      },
+      "evidence_units": {
+        "passages": "Parse exactly the original line-start passage 1/2/3 headers and retain body plus original document coordinates and hashes.",
+        "sentences": "Within each passage body, split at newline or .!?/CJK equivalents followed by whitespace/end; retain closing punctuation, protect fixed abbreviations, initials, dotted acronyms and list markers; trim only outer whitespace.",
+        "provenance": "Every selected item retains passage id, sentence id, passage-relative and document-relative character ranges, exact text and SHA256."
+      },
+      "retrieval": {
+        "unit": "Independently rank sentences inside each of the three passages for every answer claim.",
+        "tokenization": "Unicode alphanumeric words, casefolded; no stemming, stopword removal, synonym expansion, question expansion or citation deletion.",
+        "formula": "Robertson BM25: idf=ln(1+(N-df+0.5)/(df+0.5)), k1=1.2, b=0.75; sum once per unique query term.",
+        "selection": "Top min(2,N) sentences per passage by descending BM25; exact ties use earlier sentence id. Zero-overlap claims still receive the deterministic first two sentences.",
+        "labels": "Question labels, hallucination spans, token risk, prior detector scores and NLI outputs are unavailable to retrieval."
+      },
+      "nli": {
+        "checkpoint": "tasksource/ModernBERT-base-nli",
+        "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+        "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+        "frozen": true,
+        "pair": "Premise is one exact selected evidence sentence; hypothesis is one exact automatic answer claim. Source markers are metadata, not added to text.",
+        "pair_order": "answer order, claim id, passage id 1/2/3, retrieval rank 1/2.",
+        "class_order": [
+          "entailment",
+          "neutral",
+          "contradiction"
+        ],
+        "maximum_pair_tokens": 2048,
+        "truncation": false,
+        "extraction": "Separate explicit CUDA FP32 eval/inference command, cuda_fp32_sdpa_math_batch16_v1; batch 16; no training."
+      },
+      "claim_features": {
+        "per_passage": "Over its selected one/two evidence pairs: max/mean E, max/mean N, max/mean C, union query-term coverage, and top BM25 score (8 x 3).",
+        "global": "Across every selected pair/source: max/mean E, N and C; max/mean per-passage query coverage; 1-maxE; max(maxC,1-maxE); and maxC*(1-maxE) (11).",
+        "width": 35,
+        "names": [
+          "passage_1_max_entailment",
+          "passage_1_mean_entailment",
+          "passage_1_max_neutral",
+          "passage_1_mean_neutral",
+          "passage_1_max_contradiction",
+          "passage_1_mean_contradiction",
+          "passage_1_selected_union_query_coverage",
+          "passage_1_top_bm25",
+          "passage_2_max_entailment",
+          "passage_2_mean_entailment",
+          "passage_2_max_neutral",
+          "passage_2_mean_neutral",
+          "passage_2_max_contradiction",
+          "passage_2_mean_contradiction",
+          "passage_2_selected_union_query_coverage",
+          "passage_2_top_bm25",
+          "passage_3_max_entailment",
+          "passage_3_mean_entailment",
+          "passage_3_max_neutral",
+          "passage_3_mean_neutral",
+          "passage_3_max_contradiction",
+          "passage_3_mean_contradiction",
+          "passage_3_selected_union_query_coverage",
+          "passage_3_top_bm25",
+          "global_max_entailment",
+          "global_mean_entailment",
+          "global_max_neutral",
+          "global_mean_neutral",
+          "global_max_contradiction",
+          "global_mean_contradiction",
+          "global_max_selected_union_query_coverage",
+          "global_mean_selected_union_query_coverage",
+          "global_lack_of_entailment",
+          "global_or_risk",
+          "global_contradiction_x_lack_of_entailment"
+        ],
+        "raw_risk": "max(global maximum contradiction, 1-global maximum entailment)."
+      },
+      "readout": {
+        "label": "Opened only after all frozen NLI caches exist. A scored fit claim is positive iff any original lexical BPE assigned to it has the unchanged human risk label.",
+        "learned": "One StandardScaler plus L2 logistic regression, liblinear, fixed C=0.1 and seed; no architecture or hyperparameter selection.",
+        "crossfit": "Five-fold GroupKFold by locked source-connected group supplies every fit claim prediction; full-fit model predicts calibration claims.",
+        "weights": "Within each training fold: equal source-group mass, then equal answer mass, then equal claim mass; labels supply binary class balance.",
+        "projection": "Assign each lexical original BPE its claim score. A four-BPE window receives the maximum score among its lexical BPE claims; answer score is its maximum eligible window.",
+        "thresholds": "For raw and learned scores separately, select window and answer F1 thresholds only on fit (learned uses OOF fit predictions); ties use precision then higher threshold; freeze for calibration.",
+        "report": "Report both raw and learned fit/calibration window and answer AUROC/AP/F1. Calibration is reporting only, never model/threshold/feature selection."
+      },
+      "stage_gate": "initialize -> CPU prepare -> CPU check. After code review only: gpu-smoke -> extract. A separate CPU score command then opens development gold and trains the readout.",
+      "preparation_repair": "First label-free prepare stopped because 7/8852 inherited automatic records contain punctuation only (``` or \"\":\") and therefore cannot own a lexical BPE or form a BM25 query. The failure is retained. Before any label/model access, v1 was refrozen to retain those 7 records in an audit list and score the other 8845 alphanumeric claims.",
+      "limitations": "Retrieval failure and NLI failure remain conflated. Sentence-level claim broadcasting is intentionally coarser than token attribution. This is a new candidate, not a modified formal baseline."
+    }
+  },
+  "official_identity": {
+    "RefChecker_repository": "https://github.com/amazon-science/RefChecker",
+    "commit": "1df1b25cee792ba2b171302e31ca4f768bd67703",
+    "source_files": {
+      "nli_checker.py": {
+        "repo_path": "refchecker/checker/nli_checker.py",
+        "sha256": "d3d9ed0318f04a1e68c0149b4ad413a38dfbad05a6e0b96ea72a3e15a236883e"
+      },
+      "checker_base.py": {
+        "repo_path": "refchecker/checker/checker_base.py",
+        "sha256": "64eb4329bffaf1ccf54bcfc5cf25e4cd112c7ae76fee6a702b167bf6750ef7f5"
+      }
+    },
+    "NLIChecker_default_model": "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli",
+    "official_label_order": [
+      "Entailment",
+      "Neutral",
+      "Contradiction"
+    ],
+    "official_pair_orientation": "NLIChecker._check tokenizes batch_references first and batch_claims second: reference is premise, claim is hypothesis.",
+    "is_joint_false": "CheckerBase.check flattens each claim across each reference passage and each optional reference segment, then calls _check(..., is_joint=False). Our already flattened evidence-sentence/claim pairs match only this individual-pair orientation/order concept.",
+    "official_tokenization": "max_length=512, truncation=True, padding=True, return_token_type_ids=True, batch_size default16.",
+    "official_nonjoint_segment_merge": "Per reference passage, official merge_ret gives Entailment priority, then Contradiction, else Neutral. This ablation does not use that discrete merge."
+  },
+  "checkpoint": {
+    "model_id": "ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli",
+    "revision": "5b605abab9b75bc87ab66cfc049ef58d9d64b8ed",
+    "pytorch_weights_sha256": "a51c55cb7dc41c4c862f06a3d9c413a8aa0619222bc56f06cb6f2f5b2d3ee14a",
+    "download_manifest_sha256": "fd40f0eb0a68123064cd97e770640604788f591b6da9d42bde048d29963ff6f2",
+    "files_sha256": {
+      "README.md": "bb8affaa741b518e536d09ac6ff8f85d7ea3aee215c56e111379c78eaed8a17c",
+      "config.json": "9d074204b668902ea51bd8ecb323f01cd37040cb54e8601d872c8fdb0687131e",
+      "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "pytorch_model.bin": "a51c55cb7dc41c4c862f06a3d9c413a8aa0619222bc56f06cb6f2f5b2d3ee14a",
+      "special_tokens_map.json": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00",
+      "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+      "vocab.json": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab"
+    },
+    "architecture": "RobertaForSequenceClassification; 24 layers, hidden1024, 16 heads, 356412419 parameters, FP32 weights.",
+    "config_class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "training": false
+  },
+  "execution": {
+    "pair": "Exact v1 evidence sentence as reference/premise and exact v1 automatic answer claim as claim/hypothesis.",
+    "pair_count": 51953,
+    "tokenization": "Use official max_length512/truncation/padding/token-type setting. CPU prepare first proves every untruncated pair <=512 and official encoding is therefore lossless.",
+    "GPU": "Explicit later CUDA0 FP32 eval/inference, SDPA math, batch16, TF32/autocast/compile disabled; no automatic fallback.",
+    "readout": "Private import of v1 reuses its learning/projection/score functions; only output path and validated probability-cache loader are rebound.",
+    "stages": "initialize -> CPU prepare -> CPU check; after review only gpu-smoke -> extract; score is a separate CPU process and only then opens development gold."
+  },
+  "not_full_RefChecker": [
+    "No RefChecker LLM extractor or its triplet/subsentence RCClaim representation; uses the pre-existing v1 automatic sentence claims.",
+    "No RefChecker reference splitting/retriever or full-reference checking; uses v1 BM25 top-2 evidence sentences.",
+    "No official argmax merge_ret, multi-passage merge, strict/major/soft response aggregator, localization component, or RefChecker benchmark labels/metrics.",
+    "Uses our supervised RAGTruth claim-risk LR and original four-BPE window projection. Therefore report only as an in-house checkpoint/backbone ablation, never as RefChecker reproduction or formal baseline."
+  ],
+  "resource_estimate": {
+    "weights_on_disk_bytes": 1425814813,
+    "FP32_tensor_bytes": 1425649676,
+    "RTX3070_8GB_peak_GiB_before_smoke": [
+      2.0,
+      5.0
+    ],
+    "full_51953_pair_minutes_before_measurement": [
+      10,
+      25
+    ],
+    "hard_peak_limit_GiB": 6.5,
+    "warning": "Estimate only; gpu-smoke must measure before extraction. No fit/score or GPU has run at protocol freeze."
+  },
+  "official_test_opened": false
+}

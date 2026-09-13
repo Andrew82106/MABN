@@ -1,0 +1,48 @@
+{
+  "version": "qa-token-sequence-v1",
+  "scope": "Only frozen fit634/calibration159, never official test",
+  "methods": [
+    "token_mlp",
+    "token_tcn"
+  ],
+  "seed": 20260926,
+  "epochs_per_model": 30,
+  "batch_answers": 8,
+  "cpu_threads": 4,
+  "input_dimensions": 193,
+  "input": "Each raw token: four contiguous 8-layer bands retaining32 heads =128 LB; NLL1; reused fit-only hidden PCA64",
+  "pca": "Reuse development_v1/hidden_pca.pkl exactly; no additional PCA fit or whitening",
+  "scaler": "One common fit-only StandardScaler, lexical label-independent base weights, partial_fit fixed16384 blocks; transform float32",
+  "token_geometry": "All raw answer tokens remain in order, including punctuation; no cross-answer propagation or truncation",
+  "labels": "Frozen human lexical risk_mask. Fit139518 lexical tokens; punctuation/context tokens loss weight0",
+  "window_score": "Max probability only over output-defined lexical positions inside each unchanged eligible4-raw-BPE window",
+  "answer_score": "Max over every eligible window, official original-span answer label unchanged",
+  "base_weight": "Source-connected group equal -> answer equal -> lexical token equal; mean1 on139518 fit lexical tokens",
+  "loss_weight": "Fit-only weighted binary class factors, re-equalize group loss, total139518; both models identical",
+  "minibatch_objective": "sum(loss_weight * BCE_logits) * 634 / (actual_batch_answers * 139518); padding/punctuation weight0",
+  "shuffle": "Fixed numpy default_rng(seed) answer permutations for every epoch, shared by both models",
+  "mlp": "193->64 GELU dropout.2 ->64 GELU dropout.2 ->1, pointwise token head",
+  "tcn": "193->64 GELU; two residual blocks each ONE Conv1d64->64 kernel3 dilation1/2, GELU/dropout.2; ->1",
+  "tcn_padding": "Symmetric zero padding; zero padded states after projection and every residual block",
+  "receptive_field_raw_tokens": 7,
+  "future_tokens_used_by_tcn": true,
+  "online_detector": false,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "all_parameters_including_bias": true
+  },
+  "selection": "Cal max min(windowF1,answerF1), then windowF1, window precision, earlier epoch; separate cal thresholds",
+  "threshold": "Same fixed baseline F1, then precision, then higher cutoff; every eligible cal row retained",
+  "early_stopping": false,
+  "additional_seed_selection": false,
+  "test_opened": false,
+  "save": "Every epoch model+optimizer state, full fit/cal raw-token/window/answer probabilities, thresholds and metrics",
+  "comparisons": "All12 frozen LR candidates and all-risk/no-risk baselines on same fit/cal labels and geometry",
+  "interpretation": [
+    "Cal selects checkpoints and thresholds, so its reported performance is selection optimistic.",
+    "TCN has more parameters than MLP; this comparison does not isolate context width alone.",
+    "Fixed PCA64 and layer averaging can discard useful directions; failure cannot establish absent internal information."
+  ]
+}

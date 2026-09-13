@@ -1,0 +1,166 @@
+{
+  "version": "redeep-formal-final-artifact-manifest-v1",
+  "status": "calibration_complete_and_verified",
+  "scope": "shared fit/calibration only; independent untouched holdout remains N/A",
+  "entries": [
+    {
+      "path": "src/audit_redeep_raw_features_v1.py",
+      "bytes": 4311,
+      "sha256": "b16f3074f5e2c4e8d3f16dbb965b249a303501cf6030f1a9d5156efe96aace89"
+    },
+    {
+      "path": "src/build_redeep_final_manifest_v1.py",
+      "bytes": 3907,
+      "sha256": "7a89bfcf0b29242a7ef6c75a0f43a4eb0e04cd2914e99d5aebbb0b255bfb1934"
+    },
+    {
+      "path": "src/prepare_redeep_formal_baseline_v1.py",
+      "bytes": 17221,
+      "sha256": "996467be1777059b94365180953cbb32cf4b2ccf1a59ab5470f959b4c59e6eea"
+    },
+    {
+      "path": "src/redeep_formal_core_v1.py",
+      "bytes": 9750,
+      "sha256": "8fded50579a701c27d43be2edd83fe0303cc7f4df9cae7561028181e26d5efdb"
+    },
+    {
+      "path": "src/run_redeep_formal_baseline_v1.py",
+      "bytes": 20180,
+      "sha256": "63e350bfaa77a614cfdec88218c31d5a8cd692c363c00976551adc91983191a2"
+    },
+    {
+      "path": "src/score_redeep_formal_baseline_v1.py",
+      "bytes": 20630,
+      "sha256": "c5ffa368b6e91780f863bfb2ff523941bb0273651ef2f9475b2df66f4585417f"
+    },
+    {
+      "path": "src/selftest_redeep_formal_baseline_v1.py",
+      "bytes": 8782,
+      "sha256": "1650fc7b3e3e6269a766bdf5c617e88df0325be58b95a28b0f0f2b557f1ab9d7"
+    },
+    {
+      "path": "src/verify_redeep_extraction_identity_v1.py",
+      "bytes": 13977,
+      "sha256": "9313fbfbef60c804c75207246f0117e5592ed6af7c0b406eef2cce696a1676c0"
+    },
+    {
+      "path": "src/verify_redeep_scoring_v1.py",
+      "bytes": 14238,
+      "sha256": "0540fbda297a677111762bf8a94a86afc1270089d02810811ff76cd55d54ffef"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/CACHE_REUSE_AUDIT.json",
+      "bytes": 2568,
+      "sha256": "3eb11fe63daee18a79f59d543be09a21fcee6c4a68656cb884245cddc1168dec"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/CAL_RESULTS.json",
+      "bytes": 2615,
+      "sha256": "ad2e980ac34a6103842808d8d851dca1008296a6532d1393efcac3e5a8995143"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/CPU_SELFTEST.json",
+      "bytes": 913,
+      "sha256": "1c20513fee972d2f6388aa642507b68471ffbb7e1e7629f2113452901aec71ed"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/DATA_JOIN_AUDIT.json",
+      "bytes": 3705,
+      "sha256": "17a1e9b897384a2bbe19d151f8effbab28257c6c14a50964a1a8bb890dbe9d7a"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/evaluation_geometry.jsonl",
+      "bytes": 161060197,
+      "sha256": "b87c570dd0536d61bd0d720fc7b46906a046f1f523dd83365fc71d4862a06b07"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/EXTRACTION_IDENTITY_VERIFICATION.json",
+      "bytes": 9804,
+      "sha256": "d4328191547eb6b79076fac944b05a4292b1538c9680efc3a9b0d55503aae928"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/feature_inputs.jsonl",
+      "bytes": 30484675,
+      "sha256": "cd44ebf504d86088ba7b039a1d7263994780ded9ea7a22ba95636e25c4862cb8"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/frozen_scores.npz",
+      "bytes": 12833135,
+      "sha256": "c084ca4e62a8d072f05f558cb26eb84c4d29e7318554fdd9055c4518abf5d1fc"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/INCIDENT_OFFICIAL_TEST_SEAL.md",
+      "bytes": 1783,
+      "sha256": "630b34cb6ffe85de10fcce3344c6dbe146ed710923f3dea1c8c866c70522798d"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/METHOD_FREEZE_PRE_EXTRACTION.json",
+      "bytes": 5294,
+      "sha256": "0a03b59c24060dcaa6062d6299d191c5044b26fbce40259472cf91aacb0cf03b"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/METHOD_FREEZE.json",
+      "bytes": 7803,
+      "sha256": "12c3aa0bfa0333be6a23ecfc4233883adb7e3ea390bca387f8d3cce3edc9cf76"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/RAW_FEATURE_COMPLETE.json",
+      "bytes": 449,
+      "sha256": "d8e4bdaa19ff48cae07696df97f7300787b605675450e31cc5d573ca9d5c50af"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/RAW_FEATURE_MANIFEST.json",
+      "bytes": 1466403,
+      "sha256": "68223bcef639ccea07e4f4ac906272557fff5a6c766fdc8d5f3d034b50aa1498"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/REPORT.md",
+      "bytes": 7805,
+      "sha256": "2803a14e7818de3a95b04adecf8d8b87e3f7dc76f99995b620c1ba323853e869"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/RESOURCE_ESTIMATE.json",
+      "bytes": 1705,
+      "sha256": "75f21218ba3a9a118b3185a29e85cb9eba46faf8340f78a363cf87383aad5087"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/RUN_IDENTITY_EVIDENCE.json",
+      "bytes": 1615,
+      "sha256": "964667a20f30b644d11377de57f38ae42a062b5d0a751c98b4499b1dd2c32aa3"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/RUNBOOK.md",
+      "bytes": 1732,
+      "sha256": "ccf560c699956532527c54ef2fe5499ffdc7f8d8896f5fefbcd91c0cf889dd00"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/SCORE_FREEZE.json",
+      "bytes": 19939,
+      "sha256": "d29dae3392490a04fd437cf12fc0a30559c75ebe9b163e8fcfaf5bbd58dec9fe"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/SCORING_INDEPENDENT_VERIFICATION.json",
+      "bytes": 4273,
+      "sha256": "4e3a9c03328041273037cbb329f374e970462c04348358ae22f839de9b522bf8"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/SCORING_STATUS.json",
+      "bytes": 1861,
+      "sha256": "2604fa2bc0afc8311a9c51d25b9d4a62aa779bced226c3d33ca408eca10d40dc"
+    },
+    {
+      "path": "research/redeep_formal_baseline_v1/SOURCE_AUDIT.json",
+      "bytes": 3533,
+      "sha256": "76e474054436e5862f4f70d9c70ff7a6a4578eed3286b773c5deb29259b5c2f8"
+    }
+  ],
+  "entry_count": 30,
+  "raw_feature_payload": {
+    "individual_files": 3839,
+    "individual_file_hashes_in": "research/redeep_formal_baseline_v1/RAW_FEATURE_MANIFEST.json",
+    "native_tokens": 710970
+  },
+  "formal_primary": "paper-explicit ReDeEP(Token) identity; official-code identity is diagnostic only",
+  "test_artifacts_accessed_by_this_stage": false,
+  "historical_official_test_status": "retired_after_prior_documented_access_incident"
+}

@@ -1,0 +1,23 @@
+{
+  "version": "ragognizer-adapter-run-audit-v2",
+  "status": "smoke_complete",
+  "rows": 1,
+  "partition_rows": {
+    "fit": 1
+  },
+  "windows": 303,
+  "partition_windows": {
+    "fit": 303
+  },
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "gpu_run_audit_sha256": "c0c731fb3ff5a879e83f5c30b560219b97c80d2c854004488e10c1208877208f",
+  "raw_sha256": "6e138fb87c6e5ee930fbd46765ec82972fd75723d0ccc329926956ac5febc751",
+  "raw_final_chain_sha256": "97f4cbfd3b6c305c5ad17f8867797cb6b7f2b6c09a7e00393fc24f75f6d22704",
+  "adapter_script_sha256": "83ab433c5bb043f0ebcbef90295bcf436713261bf6224bbe004fdce83318c197",
+  "output_sha256": "e8632d4f7c770ed40624771c6d3ddc512226e0f13ceb6ee0c8f66025b3405577",
+  "adapted_final_chain_sha256": "a23d554e7ec11c113c00ec318d3bf51d816df557339222c830512d1040992060",
+  "labels_read": false,
+  "thresholds_applied": false,
+  "subset_mode": true,
+  "gpu_audit_verified": true
+}

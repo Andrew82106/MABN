@@ -1,0 +1,48 @@
+{
+  "status": "fit_only_candidates_inventoried_not_added_to_training",
+  "scope": "Only the 634 current eligible fit source IDs and their original 615 groups; five other released generators.",
+  "access": {
+    "raw_mixed_file_streamed": true,
+    "raw_lines_streamed": 17790,
+    "raw_json_rows_decoded": 3804,
+    "decoded_official_splits": [
+      "train"
+    ],
+    "decoded_source_ids_exactly_fit_whitelist": true,
+    "calibration_content_or_labels_opened": false,
+    "official_test_content_or_labels_opened": false,
+    "nonwhitelisted_raw_rows_json_decoded": 0
+  },
+  "existing_fit_answers": 634,
+  "fit_sources": 634,
+  "fit_groups": 615,
+  "other_model_rows": 3170,
+  "good_additional_answers": 3078,
+  "quality_excluded_other_answers": 92,
+  "other_models": [
+    "gpt-3.5-turbo-0613",
+    "gpt-4-0613",
+    "llama-2-13b-chat",
+    "llama-2-70b-chat",
+    "mistral-7B-instruct"
+  ],
+  "span_integrity_issue_good_answers": 0,
+  "no_relabeling_or_resplitting": true,
+  "no_feature_extraction_or_training": true,
+  "original_llama_native_trace_claimed": false,
+  "source_files_sha256_before_and_after_equal": {
+    "benchmark_ragtruth_qa\\data\\answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "benchmark_ragtruth_qa\\data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "benchmark_ragtruth_qa\\data\\development_manifest.json": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "data\\raw\\response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073"
+  },
+  "files_sha256": {
+    "additional_good_candidates.jsonl": "ffd2e110645526cc4332b2ea8e5d4696bdf387f76018fbd4be51f8a00a5a1d72",
+    "additional_quality_excluded.jsonl": "7b33d1e852101697192eef7061ab1ad9d06f14638d8a3de2eca15ed08e3975a1",
+    "fit_source_whitelist.jsonl": "e22e6412ee3455bff7fdcd2b4fbaab2197bf924a657819e23285f9b3c18edfa2",
+    "statistics.json": "abf31431f4d8047408783b478d76df2b47d4e3fd290b6ed2b4417011b246143e",
+    "REPORT.md": "95508c0e2bbd16a47c2db08844ade81ad4d95a95075bd102797c608388cc703e"
+  },
+  "audit_code_sha256": "826fd18e348e2ea3c809dfa6b2697e7ab84ff7fc418f93af59e97081d8af4dd4"
+}

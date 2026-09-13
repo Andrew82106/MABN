@@ -1,0 +1,15 @@
+{
+  "rows": 210364,
+  "fit_rows": 168123,
+  "calibration_rows": 42241,
+  "width": 1024,
+  "files_sha256": {
+    "lb_source_pre_header": "dad34d4594952f43267673c3a0a1fb8431d7c831ebc24034907370f982febb4f",
+    "lb_prefix_pre_header": "301c184e3875316db66fa926251d8ec9e50ded8295a2d6d4b78fce488937343b",
+    "lb_source_post_header": "bb01ab434f99c66bcc010ef2e9ad793188662d27c01093594f31f3bb283000e9",
+    "lb_prefix_post_header": "31ea347222951b20883d88097d5c396a0cc525329ec560cf5e3802782a157d2b",
+    "lb_source_post_legacy": "c351c12bbe096fa93b072a291c3b329a26d1e82bcd577d6b13bf53248d4cfae7"
+  },
+  "all_anchor_windows_exact": true,
+  "source_snapshot_sha256": "4df918382e416f646ce74162ba263510f5aceacefb16c80916d925d97b6f2be2"
+}

@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "missing_or_failed": [],
+  "checked": {
+    "news_small": {
+      "rows": 394,
+      "usable_test": 89,
+      "test_errors": 25,
+      "method_runs": 42,
+      "independent_auc_max_difference": 1.1102230246251565e-16,
+      "group_disjoint": true,
+      "finite_features": true,
+      "scores_and_spans_aligned": true
+    },
+    "news_large": {
+      "rows": 394,
+      "usable_test": 89,
+      "test_errors": 25,
+      "method_runs": 48,
+      "independent_auc_max_difference": 1.1102230246251565e-16,
+      "group_disjoint": true,
+      "finite_features": true,
+      "scores_and_spans_aligned": true
+    },
+    "trivia_small": {
+      "rows": 2700,
+      "usable_test": 345,
+      "test_errors": 270,
+      "method_runs": 16,
+      "independent_auc_max_difference": 1.1102230246251565e-16,
+      "group_disjoint": true,
+      "finite_features": true,
+      "scores_and_spans_aligned": true
+    },
+    "trivia_large": {
+      "rows": 2700,
+      "usable_test": 390,
+      "test_errors": 175,
+      "method_runs": 16,
+      "independent_auc_max_difference": 1.1102230246251565e-16,
+      "group_disjoint": true,
+      "finite_features": true,
+      "scores_and_spans_aligned": true
+    },
+    "rag_large": {
+      "rows": 1050,
+      "usable_test": 105,
+      "test_errors": 14,
+      "method_runs": 36,
+      "independent_auc_max_difference": 1.1102230246251565e-16,
+      "group_disjoint": true,
+      "finite_features": true,
+      "scores_and_spans_aligned": true
+    },
+    "confirmation": {
+      "rows": 110,
+      "clean": 80,
+      "errors": 30,
+      "source_disjoint_from_all_previous_news": true,
+      "frozen_checkpoint_hashes_match": true,
+      "finite_features": true
+    }
+  },
+  "sha256": {
+    "src\\alarm_control.py": "c898e69773e3e6f18b0fe60ffed6807721bf76544961847b921592a111520cd8",
+    "src\\analyze_run.py": "21b7c5d5861b816a380e18ad87d657847116bea863253c266efd05559efbce0b",
+    "src\\audit_features.py": "0b5fde0c4e9f6f23ee062367fb84c56143852253bea5e2afaf39a6da78af0095",
+    "src\\audit_generation.py": "3ef5a9a38bbaa7bf543457d83e456bdc7b90d413ca82ff20719e48b3fde544a5",
+    "src\\build_report.py": "17ba36d03decb3f05e564acf4e73c468e9065d84a1a164759e36412dc98f0af5",
+    "src\\cache_confirmation.py": "0c806b32853b4d91e09c31ebf9fb9d2b46a99c89313a9878d3477d4f65eb0041",
+    "src\\check_selective_capture.py": "8a83d0b9f4e93f80802ed1db5375540c13b07e274e5f63a0aa86223052b37f27",
+    "src\\common.py": "d7e624640b30e376b29b363af75a24020f6a40b0c881efc83bff0e4368d31179",
+    "src\\confirmation_intervals.py": "5e42122592750d621f7547a4cf63fb935448171e81bcb8d4da2270792e386c69",
+    "src\\download_assets.py": "c7f7d50dfa94b9f13321d15b34352e86bae10112e26a1795becbc3ae3695180e",
+    "src\\engine.py": "ba5171ad00e0c984a5fcbc8d56e11703e970fc1906b5a71d15152321296d0b74",
+    "src\\evaluate.py": "44d2dc839c1229664501b7189afd24c0fae2f8080d9357be7beabb30552d6744",
+    "src\\evaluate_confirmation.py": "41b16d5966c583ca80f5d05c376b2413e733caf466dbc46c39f6c5c15404ce1e",
+    "src\\fix_generation_tokens.py": "d4c56c51612189bed576d8dbe1c6ef9908ac04dcbe2e5518b862918c6da42976",
+    "src\\label_outputs.py": "122117403b83087bc818bb98372729cfc7214ce221b64bc0ef5ce14778a310a7",
+    "src\\limited_labels.py": "87193b939615c9d747e6c60b5038fa81f3f868684b1edd0d17f01e3f41c5c559",
+    "src\\prepare_benchmarks.py": "4d2ad70de3176edb2a4bfbce427da568b74c4dfc8bff76ae11cfd8fe52f6d533",
+    "src\\prepare_confirmation.py": "7283ed64abdabd6609180b228b0487b7d8d5c75d9b5e2283b436b57aacaab6d3",
+    "src\\probes.py": "730c11eb24cdb224d1fbe75f989d80c98a2fca874528a9d2ef8d59969f698a51",
+    "src\\review_bundle.py": "5195910e11b7b85f9ab8f12ac34ca305c7c225534bcd0ef14b05d004467ef50c",
+    "src\\reviewed_sample_metrics.py": "5481d53da70581a039de5dcf5ec7c9217d843e56f788541319caeebb3763180e",
+    "src\\run_inference.py": "70af5b7cf43078ad02102c21401144ebf74694c33aa31f3f6a7cdb1692b06e87",
+    "src\\verify_alerts.py": "e91f6f3926fa7bf8aea3867dc1cb1d5844b4fec3b0cb23725fc9efd35e13d395",
+    "src\\verify_round2.py": "6564b3b9e8f5b5328b894685f2c6d31703a4125b09b8e73c55c6130199666392"
+  },
+  "scope": "Numerical/artifact integrity, not proof of label validity, real-world deployment, causality or novel algorithm",
+  "report_only_changes_after_metric_audit": [
+    "src\\build_report.py"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "fixed-R29-R31-OOF-complementarity-v1",
+  "systems": ["R29 r26_plus_semantic", "R31 r26_plus_semantic"],
+  "input": "Completed original five-fold R16 train OOF scores only, using each system's already selected per-fold window and answer thresholds.",
+  "counts": {"candidate_windows": 12222, "eligible_windows": 9526, "candidate_answers": 602, "eligible_answers": 598, "safe_refusals": 117, "groups": 278},
+  "identity": "Require exact metadata, labels, eligibility, original fold membership, and one outer fold per group. Each answer score is max over all its original candidate windows.",
+  "analysis": "For positive and negative eligible windows/answers, count both predicted risk, base only, large only, neither. Separately count the same intersection on reviewed safe refusals. Preserve cell IDs and distinct source-group counts.",
+  "selection": "None: no threshold search, new score combination, oracle F1, training, or GPU.",
+  "limits": "Repeated R16 development with human_gold=false. Old R16 heldouts were exposed historically; they are not read in this analysis. Public official QA test is not read. Disagreement of two completed systems does not isolate model size, upstream initialization/training, semantic information, or different selected fusion weights, and does not establish trainable fusion benefit."
+}

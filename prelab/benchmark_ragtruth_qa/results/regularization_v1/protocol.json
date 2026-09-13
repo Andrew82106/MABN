@@ -1,0 +1,30 @@
+{
+  "version": "qa-regularization-v1",
+  "methods": [
+    "lookback_mean",
+    "lookback_nll",
+    "layerband_slots",
+    "hidden64_lookback_nll"
+  ],
+  "new_C": [
+    1e-06,
+    1e-05,
+    0.0001
+  ],
+  "reused_C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "hypothesis": "All four previous best Cs hit the smallest tried value. Test stronger shrinkage; not evidence that labels or loss scaling are wrong.",
+  "fit": "Same 168123 fit windows, frozen fit-only weighted scalers, exact frozen labels and loss weights; no new PCA or feature fit",
+  "solver": "liblinear l2, max_iter2000, seed20260924, four CPU threads",
+  "selection": "Same q.selection_key across six Cs separately per family, calibration-only thresholds for windows and answers",
+  "answer": "Maximum all eligible windows, no gold-dependent filtering",
+  "scope": "634 fit and 159 calibration published QA answers only; cal selection optimistic, official test unopened",
+  "fairness": "All four original families receive the same three additional Cs; all old scores replayed exactly",
+  "implementation_sha256": "e61f4a59a3937f6b1698262f02764fc6bd41f3326af5531a0359ee6742f03689",
+  "base_complete_sha256": "c4c0efc2a806775c50e406575677f88962db3ed10a2c98604ec04d029be44c9a",
+  "base_code_sha256": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+  "seed": 20260924
+}

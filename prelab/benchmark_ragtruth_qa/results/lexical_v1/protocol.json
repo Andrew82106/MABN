@@ -1,0 +1,43 @@
+{
+  "version": "qa-lexical-evidence-overlap-v1",
+  "scope": "Existing fit634/cal159; official test sealed",
+  "features": [
+    "lexical",
+    "log_word_length",
+    "has_digit",
+    "initial_upper",
+    "all_upper",
+    "stopword",
+    "source_unigram",
+    "log_source_frequency",
+    "question_unigram",
+    "source_left_bigram",
+    "source_right_bigram",
+    "source_left_trigram",
+    "source_right_trigram",
+    "source_center_fivegram",
+    "missing_numeric",
+    "missing_content"
+  ],
+  "normalization": "Unicode casefold regex words; no fitted vocabulary or external language model",
+  "source": "Only actual retrieved_passages; question separately; no standard answer or span used",
+  "word_to_bpe": "Character intersection weighted by alphanumeric overlap; punctuation-only BPE gets zeros",
+  "window": "Mean over unchanged four raw BPE, including punctuation; no labels used for feature computation",
+  "ngram": "Contiguous normalized word tuples in full retrieved text; lexical overlap only, not semantic entailment",
+  "methods": {
+    "lexical_only": 16,
+    "lookback_nll_lexical": 1041
+  },
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260928,
+  "fit": "Same168123 windows, frozen group/answer/class weights, weighted fit-only scaler and liblinear L2",
+  "selection": "Same cal max min(windowF1,answerF1), windowF1, precision, lowerC; separate cal thresholds",
+  "new_lr_fits": 6,
+  "original_output_or_gold_changed": false,
+  "gpu_used": false,
+  "interpretation": "Calibration-selected development only. Additional text features are not model-internal signals."
+}

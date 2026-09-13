@@ -1,5 +1,12 @@
 # 项目文档导航
 
+## 参考论文
+
+- [MAS 安全文献调研（2026-09-11）](./ref_paper/mas_safety_2026-09-11/README.md)：本轮 67 项 API 多智能体安全文献、综述、索引与本地 PDF；属于参考资料，不代表选题已确定。
+- [《情报杂志》项目参考论文](./ref_paper/intelligence_knowledge_boundary/README.md)：知识探针、内部置信度和知识边界研究。
+- [《情报杂志》独立项目](../intelligence_knowledge_boundary/README.md)：代码、数据与实验产出入口。
+- [当前幻觉监测预实验](../prelab/README.md)：整段标签训练探针、错误片段定位与实际测试结果。
+
 本目录按文档生命周期分为两个区域：
 
 - [临时](./临时/)：尚在执行、验收、返工或等待整合的任务说明、原始返回和中间材料；

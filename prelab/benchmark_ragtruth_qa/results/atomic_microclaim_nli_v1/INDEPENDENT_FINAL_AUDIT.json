@@ -1,0 +1,16 @@
+{
+  "status": "passed_independent_final_audit",
+  "prepared_answers": 793,
+  "microclaims": 11322,
+  "pairs": 98854,
+  "reused_old_pairs": 37785,
+  "new_model_pairs": 61069,
+  "selected": "fusion__hist_leaf7",
+  "strict_metrics_exactly_recomputed": true,
+  "common_calibration_diagnostic_exactly_recomputed": true,
+  "frozen_file_hashes_match": true,
+  "bound_source_hashes_match": true,
+  "formal_baselines_modified": false,
+  "official_test_opened": false,
+  "final_test_claim": false
+}

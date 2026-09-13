@@ -1,0 +1,29 @@
+{
+  "version": "ragognize-train-only-intake-v1",
+  "repository": "F4biian/RAGognize",
+  "pinned_revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "allowed_remote_files": [
+    "README.md",
+    "data/train-00000-of-00001.parquet"
+  ],
+  "allowed_remote_metadata": [
+    "https://huggingface.co/api/datasets/F4biian/RAGognize",
+    "https://huggingface.co/api/datasets/F4biian/RAGognize/tree/aab54518c2a7c0d25fff8bffbf5337d0321de142?recursive=true&expand=true"
+  ],
+  "forbidden_content": [
+    "data/test-00000-of-00001.parquet",
+    "any validation content",
+    "RAGognize-with-samples-test"
+  ],
+  "scope": "Inspect only the official train shard and metadata. Audit the Llama-2-7b-chat-hf response subset, source/question grouping, span integrity, and CPU tokenizer compatibility with stride-1 4-raw-BPE windows.",
+  "operations_forbidden": [
+    "model forward",
+    "training",
+    "GPU use",
+    "baseline modification",
+    "test or validation download/read"
+  ],
+  "label_policy": "Use only released valid=true end-exclusive character spans whose text exactly matches response[start:end]. Preserve automatic-label status; do not repair, expand, or infer missing labels.",
+  "group_policy": "Within train, group transitively by identical official question index, normalized question, source-article identity, or exact retrieved context. Cross-split isolation remains unverified because test rows stay sealed.",
+  "window_policy": "Use the local Llama-2-7b-chat-hf fast tokenizer over exact released full_prompt + one space + exact answer, no added special tokens or truncation. Map end-exclusive spans by alphanumeric-character overlap. Form stride-1 windows of 4 raw answer BPE tokens; all-punctuation windows are not lexically evaluable."
+}

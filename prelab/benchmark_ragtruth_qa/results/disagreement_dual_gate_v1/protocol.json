@@ -1,0 +1,110 @@
+{
+  "version": "our-disagreement-dual-gate-v1",
+  "identity": "Our method; never part of a paper baseline",
+  "scope": {
+    "fit_answers": 634,
+    "cal_answers": 159,
+    "fit_windows": 168123,
+    "cal_windows": 42241,
+    "fit_groups": 615,
+    "cal_groups": 154
+  },
+  "sources": [
+    "current",
+    "semantic_claim",
+    "tail2",
+    "large"
+  ],
+  "current_candidate": "semantic_claim__old_tree__large_weight0.4",
+  "model": {
+    "max_iter": 100,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "max_depth": 3,
+    "min_samples_leaf": 50,
+    "l2_regularization": 1.0,
+    "random_state": 20261014,
+    "early_stopping": false
+  },
+  "CPU_threads": 4,
+  "features": {
+    "width": 40,
+    "logit_clip": 1e-06,
+    "columns": "4 logit(p),4 p-old_window_threshold,6 signed pairwise logit differences,6 equal old-threshold decisions,16 local probability max/mean (4 sources x radii1,3),4 source answermax probabilities",
+    "neighborhood": "Symmetric clipped radius on each same-answer token_start-contiguous eligible-window chain. Break at missing starts; never bridge answers. Offline use of future neighbors is explicit.",
+    "identity": "IDs locate boundaries/folds only, never numeric/text features. No gold, original text, label-derived boundaries, spans or risk types enter feature generation."
+  },
+  "gates": {
+    "keep": "Only windows where frozen current >= its old window threshold. Target is original risk label.",
+    "rescue": "Only current-negative windows with at least one of semantic_claim/tail2/large >= its own old window threshold. Same original risk target.",
+    "outside": "Current-negative windows without any component alert stay negative.",
+    "weights": "Slice byte-bound original native group->answer->window base_weights by this gate and fold-fit indices. Compute class factors mass/(2*class_mass) using ONLY those labels; preserve this subset original base mass. No original binary loss reuse, second balancing, or postbalance group renormalization. Gate restriction changes group exposure.",
+    "missing_class": "Fail explicitly if a real fold/gate lacks either class; no constant model or changed structure fallback."
+  },
+  "folds": {
+    "count": 3,
+    "seed": 20261012,
+    "rule": "Sort615 fit group IDs; NumPy default_rng permutation; strided3 folds of205 groups. The same fold assignments apply to both gates and all answers/windows in a group.",
+    "interpretation": "Only the two gates are group-OOF. Frozen upstream fit scores and historical choices remain in-sample/cal-developed; this is not leakage-free end-to-end cross-fitting."
+  },
+  "selection": {
+    "grid": [
+      0.05,
+      0.08,
+      0.11,
+      0.14,
+      0.17,
+      0.2,
+      0.23,
+      0.26,
+      0.29,
+      0.32,
+      0.35,
+      0.38,
+      0.41,
+      0.44,
+      0.47,
+      0.5,
+      0.53,
+      0.56,
+      0.59,
+      0.62,
+      0.65,
+      0.68,
+      0.71,
+      0.74,
+      0.77,
+      0.8,
+      0.83,
+      0.86,
+      0.89,
+      0.92,
+      0.95
+    ],
+    "grid_count": 961,
+    "include_identity": true,
+    "rule": "Use the two gate OOF probabilities on fit only. Joint unweighted whole-fit-window F1, then precision, then smaller L1 threshold distance to0.5. Stable enumeration breaks exact remaining ties. Identity is first with neutral distance0 and exact original current decisions.",
+    "identity": "No keep/rescue thresholds applied; preserve current window predictions exactly. This adds no learned fallback classifier.",
+    "no_cal_selection": true
+  },
+  "training": {
+    "gate_models": 8,
+    "OOF_models": 6,
+    "final_models": 2,
+    "order": "Fit3 folds x2 gates and save all OOF scores/models/weights. Select and freeze thresholds on fit OOF. Then fit each gate on all its fit subset once; freeze both models before predicting/scoring cal.",
+    "all_fit_thresholds": "Same OOF-selected thresholds apply to final fit and cal predictions; no final-fit threshold reselection."
+  },
+  "output": {
+    "window": "Binary decision: keep/current-positive or rescue/eligible-negative threshold decisions. Gate probabilities separately saved; no fabricated unified calibrated window score.",
+    "answer": "A separate unchanged head: retain exact original current answer_scores and its old answer threshold. It is intentionally NOT max over gated windows.",
+    "reporting": "Whole fit OOF window metrics for threshold selection, final-model in-sample fit window metrics, and cal window metrics; answer metrics always original frozen current head. No window AUROC/AP invented from binary output."
+  },
+  "limitations": [
+    "Repeated calibration was used to develop/select the upstream models, current candidate and this hypothesis.",
+    "Group OOF at gate level cannot remove own-label exposure in the upstream fit scores.",
+    "The answer head and local decisions may disagree; this is one shared backbone with two output heads, not an all-window-max claim.",
+    "This is offline extra-semantic-model plus generator-signal decoding, not a pure generator probe or baseline modification."
+  ],
+  "official_test_opened": false,
+  "GPU_used": false
+}

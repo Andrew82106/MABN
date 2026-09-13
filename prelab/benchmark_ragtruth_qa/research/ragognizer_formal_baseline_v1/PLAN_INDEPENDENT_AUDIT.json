@@ -1,0 +1,63 @@
+{
+  "version": "ragognizer-full-plan-independent-audit-v1",
+  "status": "pass",
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "answers": 3839,
+  "partition_answers": {
+    "fit": 3680,
+    "calibration": 159
+  },
+  "groups": {
+    "fit": 615,
+    "calibration": 154
+  },
+  "fit_calibration_group_intersection": 0,
+  "windows": 696220,
+  "partition_windows": {
+    "fit": 653979,
+    "calibration": 42241
+  },
+  "local_bpe_slots": 708506,
+  "partition_local_bpe_slots": {
+    "fit": 665708,
+    "calibration": 42798
+  },
+  "author_response_tokens": 697623,
+  "partition_author_response_tokens": {
+    "fit": 655748,
+    "calibration": 41875
+  },
+  "row_exact_tokenizations": 1499,
+  "partition_row_exact_tokenizations": {
+    "fit": 1479,
+    "calibration": 20
+  },
+  "mapping_rows": {
+    "character_overlap": 3839
+  },
+  "author_coordinate_modes": {
+    "author_pack_exact_fast_positions_verified": 3836,
+    "fast_offsets_author_pack_byte_fallback": 3
+  },
+  "author_pack_byte_fallback_answer_ids": [
+    "15069",
+    "12426",
+    "15066"
+  ],
+  "short_window_rows": [
+    {
+      "answer_id": "14641",
+      "partition": "fit",
+      "shared_bpe_tokens": 1
+    }
+  ],
+  "all_plan_row_hashes_recomputed": true,
+  "all_ordinary_native_packed_text_reconstructs_original_response": true,
+  "all_fallback_coordinate_unions_cover_original_response": true,
+  "all_probability_indices_match_author_token_ids": true,
+  "all_stored_maps_recomputed_exactly": true,
+  "all_window_geometry_recomputed_exactly": true,
+  "labels_read": false,
+  "gpu_workload_started": false,
+  "test_opened": false
+}

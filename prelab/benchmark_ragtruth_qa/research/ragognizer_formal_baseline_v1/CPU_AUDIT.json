@@ -1,0 +1,213 @@
+{
+  "version": "ragognizer-full-plan-cpu-audit-v1",
+  "status": "cpu_plan_complete_gpu_not_started",
+  "sealed_test_opened": false,
+  "gpu_workload_started": false,
+  "inputs": {
+    "feature_inputs": {
+      "sha256": "cd44ebf504d86088ba7b039a1d7263994780ded9ea7a22ba95636e25c4862cb8",
+      "partitions_used": [
+        "fit",
+        "calibration"
+      ]
+    },
+    "evaluation_geometry": {
+      "sha256": "b87c570dd0536d61bd0d720fc7b46906a046f1f523dd83365fc71d4862a06b07",
+      "partitions_used": [
+        "fit",
+        "calibration"
+      ]
+    }
+  },
+  "counts": {
+    "answers": 3839,
+    "groups": 769,
+    "eligible_windows": 696220,
+    "author_response_tokens": 697623,
+    "shared_bpe_tokens": 708506
+  },
+  "partition_counts": {
+    "fit": {
+      "answers": 3680,
+      "groups": 615,
+      "eligible_windows": 653979,
+      "author_response_tokens": 655748,
+      "shared_bpe_tokens": 665708,
+      "row_exact_tokenizations": 1479,
+      "author_model_input_tokens": {
+        "sum": 2305910,
+        "min": 266,
+        "p50": 614,
+        "p95": 908,
+        "max": 1235
+      }
+    },
+    "calibration": {
+      "answers": 159,
+      "groups": 154,
+      "eligible_windows": 42241,
+      "author_response_tokens": 41875,
+      "shared_bpe_tokens": 42798,
+      "row_exact_tokenizations": 20,
+      "author_model_input_tokens": {
+        "sum": 114073,
+        "min": 287,
+        "p50": 714,
+        "p95": 988,
+        "max": 1146
+      }
+    }
+  },
+  "group_isolation": {
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "intersection": 0
+  },
+  "generator_counts": {
+    "gpt-3.5-turbo-0613": 578,
+    "gpt-4-0613": 614,
+    "llama-2-13b-chat": 631,
+    "llama-2-70b-chat": 629,
+    "llama-2-7b-chat": 793,
+    "mistral-7B-instruct": 594
+  },
+  "author_model_input_tokens": {
+    "sum": 2419983,
+    "min": 266,
+    "p50": 617,
+    "p95": 914,
+    "max": 1235,
+    "llama2_context_limit": 4096,
+    "all_within_limit": true
+  },
+  "assistant_lookup": {
+    "exact": 3839
+  },
+  "author_coordinate_audit": {
+    "mode_counts": {
+      "author_pack_exact_fast_positions_verified": 3836,
+      "fast_offsets_author_pack_byte_fallback": 3
+    },
+    "ordinary_rows_author_pack_exact_and_fast_positions_equal": 3836,
+    "byte_fallback_row_count": 3,
+    "byte_fallback_rows": [
+      {
+        "answer_id": "15069",
+        "partition": "fit",
+        "probability_indices": [
+          1143,
+          1144,
+          1145
+        ],
+        "native_token_count": 441,
+        "response_characters": 1423,
+        "characters_with_multiple_native_tokens": 1,
+        "official_pack_failure_sha256": "4d0e64ff4a290e4a542d5bf8572bbb67246f45f218fd42d14f259fc5cd497f25"
+      },
+      {
+        "answer_id": "12426",
+        "partition": "fit",
+        "probability_indices": [
+          420,
+          421,
+          422,
+          435,
+          436,
+          437,
+          451,
+          452,
+          453,
+          465,
+          466,
+          467
+        ],
+        "native_token_count": 69,
+        "response_characters": 266,
+        "characters_with_multiple_native_tokens": 4,
+        "official_pack_failure_sha256": "4d0e64ff4a290e4a542d5bf8572bbb67246f45f218fd42d14f259fc5cd497f25"
+      },
+      {
+        "answer_id": "15066",
+        "partition": "fit",
+        "probability_indices": [
+          879,
+          880,
+          881
+        ],
+        "native_token_count": 188,
+        "response_characters": 627,
+        "characters_with_multiple_native_tokens": 1,
+        "official_pack_failure_sha256": "4d0e64ff4a290e4a542d5bf8572bbb67246f45f218fd42d14f259fc5cd497f25"
+      }
+    ],
+    "all_response_characters_covered": true,
+    "all_author_readable_probability_positions_retained": true,
+    "fallback_is_model_external_and_label_free": true
+  },
+  "short_window_geometry": {
+    "rule": "N>=4 uses four slots; N<4 keeps one start-0 window over all N slots",
+    "row_count": 1,
+    "rows": [
+      {
+        "answer_id": "14641",
+        "partition": "fit",
+        "shared_bpe_tokens": 1,
+        "eligible_windows": 1
+      }
+    ]
+  },
+  "tokenizer_identity": {
+    "author_meta_llama_revision": "f5db02db724555f92da89c216ac04704f23d4590",
+    "author": {
+      "path": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db",
+      "class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 32000,
+      "length_with_added_tokens": 32000,
+      "files_sha256": {
+        "config.json": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer_config.json": "04aaa6eedd97412f3e63dd2493d2388b82347dd512b89192d3e9b4973a176417",
+        "tokenizer.json": "bcd04f0eadf90287bd26e1a183ac487d8a141b09b06aecb7725bbdd343640f2e",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      }
+    },
+    "shared_bpe": {
+      "path": "prelab\\models\\Llama-2-7b-chat-hf",
+      "class": "LlamaTokenizerFast",
+      "is_fast": true,
+      "vocab_size": 32000,
+      "length_with_added_tokens": 32000,
+      "files_sha256": {
+        "config.json": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2",
+        "special_tokens_map.json": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+        "tokenizer_config.json": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+        "tokenizer.json": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      }
+    },
+    "identical": false,
+    "decisive_difference": "tokenizer.json SHA256 differs"
+  },
+  "mapping": {
+    "global_mode": "character_overlap",
+    "rows_whose_observed_tokens_happen_to_match_exactly": 1499,
+    "rows_requiring_nontrivial_overlap": 2340,
+    "local_slot_source_count_histogram": {
+      "1": 708468,
+      "2": 20,
+      "3": 18
+    },
+    "max_local_slots_receiving_one_author_token": 4,
+    "labels_read_by_plan_builder": false
+  },
+  "software": {
+    "python": "3.11.15",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2"
+  },
+  "plan": {
+    "path": "INFERENCE_PLAN.jsonl",
+    "sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76"
+  }
+}

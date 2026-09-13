@@ -1,0 +1,1669 @@
+{
+  "status": "ready_for_root_final_review_and_freeze_no_model_outputs_used",
+  "groups": 60,
+  "input_rows": 120,
+  "expected_response_items": 120,
+  "per_category": {
+    "time": 12,
+    "quantity": 12,
+    "location": 12,
+    "relation": 12,
+    "action": 12
+  },
+  "conditions": {
+    "complete": 60,
+    "partial": 60
+  },
+  "split": "test",
+  "source_owners": [
+    {
+      "question_id": "ragognize_train_0017",
+      "role": "target",
+      "source_id": "ragognize_train_0017",
+      "title": "Timo Boers",
+      "url": "https://en.wikipedia.org/wiki/Timo_Boers",
+      "revision_id": 1278259342,
+      "source_content_sha256": "17c91854ce5c16150ddb4da88eb4fe6433de525c2eed651f99a94a14c41eaa0a"
+    },
+    {
+      "question_id": "ragognize_train_0017",
+      "role": "donor",
+      "source_id": "ragognize_test_1735",
+      "title": "Savo Radanović",
+      "url": "https://en.wikipedia.org/wiki/Savo_Radanovi%C4%87",
+      "revision_id": 1278453670,
+      "source_content_sha256": "5a70ad2f03bb8863154f37107a7698a4ffd8a597d992b6258590990f2519274a"
+    },
+    {
+      "question_id": "ragognize_train_0085",
+      "role": "target",
+      "source_id": "ragognize_train_0085",
+      "title": "Beth May",
+      "url": "https://en.wikipedia.org/wiki/Beth_May",
+      "revision_id": 1279419244,
+      "source_content_sha256": "1b6250fd23b1f5e6462ac79f819a4ae9e36f6a31a483d6033e02ce85bf5394e6"
+    },
+    {
+      "question_id": "ragognize_train_0085",
+      "role": "donor",
+      "source_id": "ragognize_train_0585",
+      "title": "Baapu",
+      "url": "https://en.wikipedia.org/wiki/Baapu",
+      "revision_id": 1277283651,
+      "source_content_sha256": "d985279d06ccf43edf555c30ec75ca0c95afab623bdf1b0b35d4e85b261d11ef"
+    },
+    {
+      "question_id": "ragognize_train_0115",
+      "role": "target",
+      "source_id": "ragognize_train_0115",
+      "title": "Laoling Film Studio",
+      "url": "https://en.wikipedia.org/wiki/Laoling_Film_Studio",
+      "revision_id": 1271258848,
+      "source_content_sha256": "0cc7bfed370e4411e0c41430d21c376ffcfc21e73c12d5812bc0dcee5e0e2db4"
+    },
+    {
+      "question_id": "ragognize_train_0115",
+      "role": "donor",
+      "source_id": "ragognize_test_0864",
+      "title": "Mongol Olle Trail",
+      "url": "https://en.wikipedia.org/wiki/Mongol_Olle_Trail",
+      "revision_id": 1274194670,
+      "source_content_sha256": "5edb65619cbe91f8306ddb4ad79133885c2b977c0bd9863354106741d060c26a"
+    },
+    {
+      "question_id": "ragognize_train_0168",
+      "role": "target",
+      "source_id": "ragognize_train_0168",
+      "title": "Milan Karvaš",
+      "url": "https://en.wikipedia.org/wiki/Milan_Karva%C5%A1",
+      "revision_id": 1275483790,
+      "source_content_sha256": "63a66c305f47f2d170bc4e80bee7bd717fc7ca15f4cd8109c317fa9cd479abc2"
+    },
+    {
+      "question_id": "ragognize_train_0168",
+      "role": "donor",
+      "source_id": "ragognize_test_0090",
+      "title": "Martin Fallon",
+      "url": "https://en.wikipedia.org/wiki/Martin_Fallon",
+      "revision_id": 1275289430,
+      "source_content_sha256": "a1a3c5b1e331edc570a366d2d9490dba849e895a18782d0d5f512e88f01063c7"
+    },
+    {
+      "question_id": "ragognize_train_0307",
+      "role": "target",
+      "source_id": "ragognize_train_0307",
+      "title": "Kun Khalifat FC",
+      "url": "https://en.wikipedia.org/wiki/Kun_Khalifat_FC",
+      "revision_id": 1279087088,
+      "source_content_sha256": "e736ef2131c2e7e77cbdae2e1adde69b1496df829057429caeb95105c3743b84"
+    },
+    {
+      "question_id": "ragognize_train_0307",
+      "role": "donor",
+      "source_id": "ragognize_train_1141",
+      "title": "Eloy Alberto Santiago",
+      "url": "https://en.wikipedia.org/wiki/Eloy_Alberto_Santiago",
+      "revision_id": 1277868949,
+      "source_content_sha256": "4396c15765440ab8a4f35d535c07ac571d040a060a0dca17c7541dd21e38329a"
+    },
+    {
+      "question_id": "ragognize_train_0348",
+      "role": "target",
+      "source_id": "ragognize_train_0348",
+      "title": "Bhale Unnade",
+      "url": "https://en.wikipedia.org/wiki/Bhale_Unnade",
+      "revision_id": 1281668559,
+      "source_content_sha256": "a057bf6e85622d3459c6fbe85bb4976029cfecc719dc6c90343660a4fd224922"
+    },
+    {
+      "question_id": "ragognize_train_0348",
+      "role": "donor",
+      "source_id": "ragognize_train_0715",
+      "title": "Heard Noises",
+      "url": "https://en.wikipedia.org/wiki/Heard_Noises",
+      "revision_id": 1274735288,
+      "source_content_sha256": "c142e0879ebbc933fd3a9cf5e8f30a1705f690469afca057dc228e8b8121dff0"
+    },
+    {
+      "question_id": "ragognize_train_0407",
+      "role": "target",
+      "source_id": "ragognize_train_0407",
+      "title": "Our Wildest Days",
+      "url": "https://en.wikipedia.org/wiki/Our_Wildest_Days",
+      "revision_id": 1275841956,
+      "source_content_sha256": "22712e431129dfc4c124aef6af842ace21a15cf708c6795da65f4a4e91e402a1"
+    },
+    {
+      "question_id": "ragognize_train_0407",
+      "role": "donor",
+      "source_id": "ragognize_test_1494",
+      "title": "We Believe You",
+      "url": "https://en.wikipedia.org/wiki/We_Believe_You",
+      "revision_id": 1273949824,
+      "source_content_sha256": "411341a927e600f61ebe5aa0da620f3fb87359459d8724733a8f06c737a8178f"
+    },
+    {
+      "question_id": "ragognize_train_0434",
+      "role": "target",
+      "source_id": "ragognize_train_0434",
+      "title": "Adamu Ahmed",
+      "url": "https://en.wikipedia.org/wiki/Adamu_Ahmed",
+      "revision_id": 1274361920,
+      "source_content_sha256": "119a082712f8ac5bdaa84d4db1e2b0d0ef1f51d8af59a96388adadf2e757e096"
+    },
+    {
+      "question_id": "ragognize_train_0434",
+      "role": "donor",
+      "source_id": "ragognize_test_2019",
+      "title": "Brian Yuliarto",
+      "url": "https://en.wikipedia.org/wiki/Brian_Yuliarto",
+      "revision_id": 1276539597,
+      "source_content_sha256": "0dbe30042b4f0ef35a5afbb94e7779ba7ec9b4153cb162bdb5a07978ed34de96"
+    },
+    {
+      "question_id": "ragognize_train_0925",
+      "role": "target",
+      "source_id": "ragognize_train_0925",
+      "title": "American Dog Derby",
+      "url": "https://en.wikipedia.org/wiki/American_Dog_Derby",
+      "revision_id": 1281480862,
+      "source_content_sha256": "04699e42ee4260ba50bd2d835c74a5784525b5fef0878d66eb8a13559b6dd750"
+    },
+    {
+      "question_id": "ragognize_train_0925",
+      "role": "donor",
+      "source_id": "ragognize_test_2297",
+      "title": "Bon Secours Memorial Regional Medical Center",
+      "url": "https://en.wikipedia.org/wiki/Bon_Secours_Memorial_Regional_Medical_Center",
+      "revision_id": 1276472971,
+      "source_content_sha256": "433159f8733b9c20606c56b36af4bc029a93155b0cf0441156d09ecc6bf61a3c"
+    },
+    {
+      "question_id": "ragognize_train_0883",
+      "role": "target",
+      "source_id": "ragognize_train_0883",
+      "title": "Culmination Brewing",
+      "url": "https://en.wikipedia.org/wiki/Culmination_Brewing",
+      "revision_id": 1274483381,
+      "source_content_sha256": "ff63a33c68631d7732c69a0e9df68a7a78973a2f6f82288c03eb7024143764b7"
+    },
+    {
+      "question_id": "ragognize_train_0883",
+      "role": "donor",
+      "source_id": "ragognize_test_0424",
+      "title": "X1 Michigan Towers",
+      "url": "https://en.wikipedia.org/wiki/X1_Michigan_Towers",
+      "revision_id": 1274320758,
+      "source_content_sha256": "94b0bf9642235e3fc44e6066972cccdcfddcbc59b4f604a20f612bb001c82d1a"
+    },
+    {
+      "question_id": "ragognize_train_1060",
+      "role": "target",
+      "source_id": "ragognize_train_1060",
+      "title": "Muhammad Junaid Ghaffar",
+      "url": "https://en.wikipedia.org/wiki/Muhammad_Junaid_Ghaffar",
+      "revision_id": 1275824344,
+      "source_content_sha256": "a9af73205fd4d8c4099b3e26174db53e3517a8efa622a9c7b6467f362f072375"
+    },
+    {
+      "question_id": "ragognize_train_1060",
+      "role": "donor",
+      "source_id": "ragognize_test_2318",
+      "title": "Eliseo Napiere",
+      "url": "https://en.wikipedia.org/wiki/Eliseo_Napiere",
+      "revision_id": 1277634074,
+      "source_content_sha256": "fb95f6ef86192ce0bb6f709d8c34bb1506d8d815bd3ffe9450ddad611e596941"
+    },
+    {
+      "question_id": "ragognize_train_1126",
+      "role": "target",
+      "source_id": "ragognize_train_1126",
+      "title": "Myroslava Kocherzhuk",
+      "url": "https://en.wikipedia.org/wiki/Myroslava_Kocherzhuk",
+      "revision_id": 1277760507,
+      "source_content_sha256": "f04f8a5ab4bf0cd0aa928ccb28553169e61d32155a6a79db2dedac381e0a8298"
+    },
+    {
+      "question_id": "ragognize_train_1126",
+      "role": "donor",
+      "source_id": "ragognize_test_0917",
+      "title": "Reid Gardner Battery Energy Storage System",
+      "url": "https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System",
+      "revision_id": 1281625818,
+      "source_content_sha256": "38a228c9a78fda14e684dd423dae1323b6d849b920fe4a44c2a7c1e5a7722316"
+    },
+    {
+      "question_id": "ragognize_train_0107",
+      "role": "target",
+      "source_id": "ragognize_train_0107",
+      "title": "Harvey (software)",
+      "url": "https://en.wikipedia.org/wiki/Harvey_(software)",
+      "revision_id": 1273242460,
+      "source_content_sha256": "7f97ab8a6d6d613d3b4ce5f9efb8976ce23439c479cd26b9281f78cfc73154fb"
+    },
+    {
+      "question_id": "ragognize_train_0107",
+      "role": "donor",
+      "source_id": "ragognize_test_0541",
+      "title": "2024 Jonesboro mayoral election",
+      "url": "https://en.wikipedia.org/wiki/2024_Jonesboro_mayoral_election",
+      "revision_id": 1278955995,
+      "source_content_sha256": "81f15400392c3dddf069ceea31f03fc01d4323589d639e44cd79efe55e1e3c14"
+    },
+    {
+      "question_id": "ragognize_train_0355",
+      "role": "target",
+      "source_id": "ragognize_train_0355",
+      "title": "Tony Harbison",
+      "url": "https://en.wikipedia.org/wiki/Tony_Harbison",
+      "revision_id": 1279381925,
+      "source_content_sha256": "53676ef54de2224a56e1e05c59bfb0e003ea20639200ab686e5bf6da1c7c704f"
+    },
+    {
+      "question_id": "ragognize_train_0355",
+      "role": "donor",
+      "source_id": "ragognize_train_1351",
+      "title": "Mike Zimmer (politician)",
+      "url": "https://en.wikipedia.org/wiki/Mike_Zimmer_(politician)",
+      "revision_id": 1275874215,
+      "source_content_sha256": "69dac0c07992baaabd56345a474d7ba9844d6cd2d0efd55967ac9f130cfe197e"
+    },
+    {
+      "question_id": "ragognize_train_0472",
+      "role": "target",
+      "source_id": "ragognize_train_0472",
+      "title": "Climate change in the Northern Territory",
+      "url": "https://en.wikipedia.org/wiki/Climate_change_in_the_Northern_Territory",
+      "revision_id": 1279780036,
+      "source_content_sha256": "b7cfaa2c29bb44bcd06b575f61bf37c1d1f880033d288f295b8c17cc63b1cc30"
+    },
+    {
+      "question_id": "ragognize_train_0472",
+      "role": "donor",
+      "source_id": "ragognize_train_0389",
+      "title": "Spring Bayou Wildlife Management Area",
+      "url": "https://en.wikipedia.org/wiki/Spring_Bayou_Wildlife_Management_Area",
+      "revision_id": 1275893755,
+      "source_content_sha256": "93e290e347e92ea30b971c728425a8fd6735a33e6c0df5b9b94b0d9fe64fd8d7"
+    },
+    {
+      "question_id": "ragognize_train_0609",
+      "role": "target",
+      "source_id": "ragognize_train_0609",
+      "title": "Izzy's Pizza",
+      "url": "https://en.wikipedia.org/wiki/Izzy%27s_Pizza",
+      "revision_id": 1281557745,
+      "source_content_sha256": "02960ce706c78954330de70768cc8d1039b58d30858d2e3cd2eabdbbfa67b6ef"
+    },
+    {
+      "question_id": "ragognize_train_0609",
+      "role": "donor",
+      "source_id": "ragognize_train_0888",
+      "title": "C. Richard Kramlich",
+      "url": "https://en.wikipedia.org/wiki/C._Richard_Kramlich",
+      "revision_id": 1274461038,
+      "source_content_sha256": "a2434f7eebfcb045e9c4520fa52f8b57ca72e31504829fda44c1383b3fbe8ff8"
+    },
+    {
+      "question_id": "ragognize_train_0693",
+      "role": "target",
+      "source_id": "ragognize_train_0693",
+      "title": "Lawrence Emmanuel",
+      "url": "https://en.wikipedia.org/wiki/Lawrence_Emmanuel",
+      "revision_id": 1277725403,
+      "source_content_sha256": "892b8fb67526d17974268254766b00c683ad8df0c763e494df620aa72b497394"
+    },
+    {
+      "question_id": "ragognize_train_0693",
+      "role": "donor",
+      "source_id": "ragognize_train_0689",
+      "title": "Andreas Laupacis",
+      "url": "https://en.wikipedia.org/wiki/Andreas_Laupacis",
+      "revision_id": 1277113074,
+      "source_content_sha256": "90d4b81fc6e5ee2907d5e3584bd53212b7abb5590a1e540f3be666b077fe35a5"
+    },
+    {
+      "question_id": "ragognize_train_1546",
+      "role": "target",
+      "source_id": "ragognize_train_1546",
+      "title": "Moinabad Municipality",
+      "url": "https://en.wikipedia.org/wiki/Moinabad_Municipality",
+      "revision_id": 1273790944,
+      "source_content_sha256": "8f6fde975e881b512cfe001a06fbff85414cbcfa551e6a8d7321b055a92f8ee4"
+    },
+    {
+      "question_id": "ragognize_train_1546",
+      "role": "donor",
+      "source_id": "ragognize_train_0036",
+      "title": "Al-Sallumiyah",
+      "url": "https://en.wikipedia.org/wiki/Al-Sallumiyah",
+      "revision_id": 1278792439,
+      "source_content_sha256": "57c3db2ee5e217cf3678729c34b1a1093b128a645d1d52a3e471589d896c24e5"
+    },
+    {
+      "question_id": "ragognize_train_1329",
+      "role": "target",
+      "source_id": "ragognize_train_1329",
+      "title": "The Book of Belonging",
+      "url": "https://en.wikipedia.org/wiki/The_Book_of_Belonging",
+      "revision_id": 1274835302,
+      "source_content_sha256": "507e2527f32adf423ae2eb7bc682a59e5d2424d706f33b4f50cd780a40d0c934"
+    },
+    {
+      "question_id": "ragognize_train_1329",
+      "role": "donor",
+      "source_id": "ragognize_train_0198",
+      "title": "Beed Custard Apple",
+      "url": "https://en.wikipedia.org/wiki/Beed_Custard_Apple",
+      "revision_id": 1274008016,
+      "source_content_sha256": "6f35be156597c177b9564e2be9cacd2498e7fc3ed01c32738da75ff8c9f6adf2"
+    },
+    {
+      "question_id": "ragognize_test_0064",
+      "role": "target",
+      "source_id": "ragognize_test_0064",
+      "title": "Toxicator",
+      "url": "https://en.wikipedia.org/wiki/Toxicator",
+      "revision_id": 1278789460,
+      "source_content_sha256": "700b7fdf781e8a710a338b6706e19bfca21c1c2411bc65b296ab1180c2dc7332"
+    },
+    {
+      "question_id": "ragognize_test_0064",
+      "role": "donor",
+      "source_id": "ragognize_train_1786",
+      "title": "Dustin Yu",
+      "url": "https://en.wikipedia.org/wiki/Dustin_Yu",
+      "revision_id": 1281492943,
+      "source_content_sha256": "a9cf79f88e46b95cba400fe22a2411b9bf64cdfe41359dff3db0145fb74b1623"
+    },
+    {
+      "question_id": "ragognize_test_1848",
+      "role": "target",
+      "source_id": "ragognize_test_1848",
+      "title": "Herman T. Tavani",
+      "url": "https://en.wikipedia.org/wiki/Herman_T._Tavani",
+      "revision_id": 1270749351,
+      "source_content_sha256": "5bc6b0cf35b65f92152eae5aefbcdf68af70d3877f5b17ebcf4ccfd0c653329c"
+    },
+    {
+      "question_id": "ragognize_test_1848",
+      "role": "donor",
+      "source_id": "ragognize_test_1859",
+      "title": "Sughra Humayun Mirza",
+      "url": "https://en.wikipedia.org/wiki/Sughra_Humayun_Mirza",
+      "revision_id": 1274616955,
+      "source_content_sha256": "ae08ae149457d67778bbcbf1b4a7a98042b464887da026ca0a3933476aa8a74a"
+    },
+    {
+      "question_id": "ragognize_test_1924",
+      "role": "target",
+      "source_id": "ragognize_test_1924",
+      "title": "Sonair (technology firm)",
+      "url": "https://en.wikipedia.org/wiki/Sonair_(technology_firm)",
+      "revision_id": 1279341088,
+      "source_content_sha256": "fec0cb08b248d88da8443242ac18c25b422c911b1af3c3105152b6767b887189"
+    },
+    {
+      "question_id": "ragognize_test_1924",
+      "role": "donor",
+      "source_id": "ragognize_test_2069",
+      "title": "IT Park Uzbekistan",
+      "url": "https://en.wikipedia.org/wiki/IT_Park_Uzbekistan",
+      "revision_id": 1279111084,
+      "source_content_sha256": "819dd69a00fc17bc4c43232045085605a3f59bc5ca53b1a3c22374da7649d21b"
+    },
+    {
+      "question_id": "ragognize_test_1321",
+      "role": "target",
+      "source_id": "ragognize_test_1321",
+      "title": "BrainCo",
+      "url": "https://en.wikipedia.org/wiki/BrainCo",
+      "revision_id": 1276183126,
+      "source_content_sha256": "b6a1636776fab089fc6e21b972c1fecbefed79217c996b703880c03b39babcaa"
+    },
+    {
+      "question_id": "ragognize_test_1321",
+      "role": "donor",
+      "source_id": "ragognize_test_1328",
+      "title": "Lykos Therapeutics",
+      "url": "https://en.wikipedia.org/wiki/Lykos_Therapeutics",
+      "revision_id": 1275891008,
+      "source_content_sha256": "7ed17722054102bb2ce462ede59907b522b0fcfbb2b92aa380f7053c6cb49e77"
+    },
+    {
+      "question_id": "ragognize_test_1482",
+      "role": "target",
+      "source_id": "ragognize_test_1482",
+      "title": "RoboSense",
+      "url": "https://en.wikipedia.org/wiki/RoboSense",
+      "revision_id": 1274288131,
+      "source_content_sha256": "2a75205f8f11b6f44a259972ba50bf474e7179375ac152d21d1a3375cfb85abf"
+    },
+    {
+      "question_id": "ragognize_test_1482",
+      "role": "donor",
+      "source_id": "ragognize_train_0803",
+      "title": "Little Red Sweet",
+      "url": "https://en.wikipedia.org/wiki/Little_Red_Sweet",
+      "revision_id": 1280783065,
+      "source_content_sha256": "f9bbf2e2193b1447059ed49b10d7a5a3ab776d139bba1bc41d5c774293110975"
+    },
+    {
+      "question_id": "ragognize_train_2000",
+      "role": "target",
+      "source_id": "ragognize_train_2000",
+      "title": "Topsham Museum",
+      "url": "https://en.wikipedia.org/wiki/Topsham_Museum",
+      "revision_id": 1276622645,
+      "source_content_sha256": "944e136828dda3e5a9aaa115dc413b813fb0bd0f45f9d0af15c14cd4e85081fd"
+    },
+    {
+      "question_id": "ragognize_train_2000",
+      "role": "donor",
+      "source_id": "ragognize_test_1059",
+      "title": "Denver Academy of Torah",
+      "url": "https://en.wikipedia.org/wiki/Denver_Academy_of_Torah",
+      "revision_id": 1277764729,
+      "source_content_sha256": "7735a02b39dc95132a8f2c0f8cf3673dde0064907769c906102aee09d816035e"
+    },
+    {
+      "question_id": "ragognize_test_0850",
+      "role": "target",
+      "source_id": "ragognize_test_0850",
+      "title": "Humanhood (album)",
+      "url": "https://en.wikipedia.org/wiki/Humanhood_(album)",
+      "revision_id": 1272658143,
+      "source_content_sha256": "a8bcaf316944fdbfe2fb6ff15636a811bcb93df5d2ab1d94df230a67f4aafc13"
+    },
+    {
+      "question_id": "ragognize_test_0850",
+      "role": "donor",
+      "source_id": "ragognize_test_0333",
+      "title": "Theatre Baton Rouge",
+      "url": "https://en.wikipedia.org/wiki/Theatre_Baton_Rouge",
+      "revision_id": 1278539012,
+      "source_content_sha256": "073004776d0f10eb591df0d77724f42483061ce2a2cccadb7b8f5b7d8081dce0"
+    },
+    {
+      "question_id": "ragognize_train_0339",
+      "role": "target",
+      "source_id": "ragognize_train_0339",
+      "title": "Villa Latomia",
+      "url": "https://en.wikipedia.org/wiki/Villa_Latomia",
+      "revision_id": 1281700287,
+      "source_content_sha256": "965aa9b2c511d01fb5236366cc6ba9da96e574c0966a746722474bad1be98750"
+    },
+    {
+      "question_id": "ragognize_train_0339",
+      "role": "donor",
+      "source_id": "ragognize_test_0395",
+      "title": "Female Artists of Mougins Museum",
+      "url": "https://en.wikipedia.org/wiki/Female_Artists_of_Mougins_Museum",
+      "revision_id": 1275018745,
+      "source_content_sha256": "a3e96d822644eda933da273d278a2610d3a6e5ab6975aa4650561d888196cfa5"
+    },
+    {
+      "question_id": "ragognize_train_1132",
+      "role": "target",
+      "source_id": "ragognize_train_1132",
+      "title": "Cagnis Castle",
+      "url": "https://en.wikipedia.org/wiki/Cagnis_Castle",
+      "revision_id": 1278061526,
+      "source_content_sha256": "8e7ebb859dd70d253727823f5970e7a49fae037d2a2b356500ea8943451f428d"
+    },
+    {
+      "question_id": "ragognize_train_1132",
+      "role": "donor",
+      "source_id": "ragognize_test_2193",
+      "title": "Kirti Mandir, Barsana",
+      "url": "https://en.wikipedia.org/wiki/Kirti_Mandir,_Barsana",
+      "revision_id": 1277718552,
+      "source_content_sha256": "46e4deb29bedcd5781d3fad0ac79850d59c847ccf1577ea9ddbff9186d655022"
+    },
+    {
+      "question_id": "ragognize_train_1521",
+      "role": "target",
+      "source_id": "ragognize_train_1521",
+      "title": "Allora Racecourse",
+      "url": "https://en.wikipedia.org/wiki/Allora_Racecourse",
+      "revision_id": 1281585658,
+      "source_content_sha256": "d2a741074dc8337b87dadd9949b6c79a24f3f117a2b4036e17a5a34b90bb1841"
+    },
+    {
+      "question_id": "ragognize_train_1521",
+      "role": "donor",
+      "source_id": "ragognize_test_0413",
+      "title": "Federal University Teaching Hospital Wukari",
+      "url": "https://en.wikipedia.org/wiki/Federal_University_Teaching_Hospital_Wukari",
+      "revision_id": 1274514132,
+      "source_content_sha256": "f06d8cd98b29a63442798bafef60742e821854f8a9b9ac9663a3174e573f1419"
+    },
+    {
+      "question_id": "ragognize_test_1508",
+      "role": "target",
+      "source_id": "ragognize_test_1508",
+      "title": "Rivers Nursery",
+      "url": "https://en.wikipedia.org/wiki/Rivers_Nursery",
+      "revision_id": 1281441265,
+      "source_content_sha256": "f83e4f21127d5f47be2bc79fff80577dd36e88e61fe27f2b75c9960062383b9a"
+    },
+    {
+      "question_id": "ragognize_test_1508",
+      "role": "donor",
+      "source_id": "ragognize_train_2269",
+      "title": "Volvo Island",
+      "url": "https://en.wikipedia.org/wiki/Volvo_Island",
+      "revision_id": 1277083128,
+      "source_content_sha256": "1346a05739f9ae22a8021dd97cdd766af13f0d6c5cae89b790fdb04545f56a1d"
+    },
+    {
+      "question_id": "ragognize_test_2014",
+      "role": "target",
+      "source_id": "ragognize_test_2014",
+      "title": "Bilton Grange Estate",
+      "url": "https://en.wikipedia.org/wiki/Bilton_Grange_Estate",
+      "revision_id": 1278042281,
+      "source_content_sha256": "a9162009e1688a491d2c31f743ce5eedd547ba021c98f1c75245970feaf1d102"
+    },
+    {
+      "question_id": "ragognize_test_2014",
+      "role": "donor",
+      "source_id": "ragognize_test_2351",
+      "title": "YWCA Building (Fresno, California)",
+      "url": "https://en.wikipedia.org/wiki/YWCA_Building_(Fresno,_California)",
+      "revision_id": 1279039818,
+      "source_content_sha256": "06206b2cb3e899d5579890da37fda01eb37ae102e8c674f1792fe25606bb8793"
+    },
+    {
+      "question_id": "ragognize_test_1433",
+      "role": "target",
+      "source_id": "ragognize_test_1433",
+      "title": "Studio Saar",
+      "url": "https://en.wikipedia.org/wiki/Studio_Saar",
+      "revision_id": 1275675016,
+      "source_content_sha256": "c4e0259f68a8bcc5035c65041b722504d91d16ae7dfd30761eef116e4f168e3c"
+    },
+    {
+      "question_id": "ragognize_test_1433",
+      "role": "donor",
+      "source_id": "ragognize_train_1902",
+      "title": "Adel Yazdi Gallery",
+      "url": "https://en.wikipedia.org/wiki/Adel_Yazdi_Gallery",
+      "revision_id": 1273338423,
+      "source_content_sha256": "a288ab179f36d1850256ef74a487fe5726eca2a17ece33d3f8db32dfc195e683"
+    },
+    {
+      "question_id": "ragognize_test_0952",
+      "role": "target",
+      "source_id": "ragognize_test_0952",
+      "title": "Hôtel de Ville, Rueil-Malmaison",
+      "url": "https://en.wikipedia.org/wiki/H%C3%B4tel_de_Ville,_Rueil-Malmaison",
+      "revision_id": 1276248936,
+      "source_content_sha256": "deed79a2d1ea29b8775ca57927eda6346a57435cfe4f498a5a1c3b963c884a04"
+    },
+    {
+      "question_id": "ragognize_test_0952",
+      "role": "donor",
+      "source_id": "ragognize_test_1705",
+      "title": "Piazza Pietro Ottinetti",
+      "url": "https://en.wikipedia.org/wiki/Piazza_Pietro_Ottinetti",
+      "revision_id": 1274850236,
+      "source_content_sha256": "4d2f056076f2185c88d68dfc9b75a9f81fa8ac6a12b0bb0ece47be75a282e2cf"
+    },
+    {
+      "question_id": "ragognize_test_1400",
+      "role": "target",
+      "source_id": "ragognize_test_1400",
+      "title": "The Castles (South Dakota)",
+      "url": "https://en.wikipedia.org/wiki/The_Castles_(South_Dakota)",
+      "revision_id": 1270700264,
+      "source_content_sha256": "97dcf499204ee425dbc0f4ccc6b3674a6f5b06af46191a556004e33f5ac1c1f2"
+    },
+    {
+      "question_id": "ragognize_test_1400",
+      "role": "donor",
+      "source_id": "ragognize_train_1787",
+      "title": "Chatham Waterfront",
+      "url": "https://en.wikipedia.org/wiki/Chatham_Waterfront",
+      "revision_id": 1281245173,
+      "source_content_sha256": "f0874ac9b32da0fa4bcca384556ad43b277865a7ea1a43ccd3ad494c04b0965b"
+    },
+    {
+      "question_id": "ragognize_train_1770",
+      "role": "target",
+      "source_id": "ragognize_train_1770",
+      "title": "Caitlin McGurk",
+      "url": "https://en.wikipedia.org/wiki/Caitlin_McGurk",
+      "revision_id": 1281549705,
+      "source_content_sha256": "14e83e7263b90b1058ac935c87e2d98f9d1bcf34573f1db3f67f97a8689dcd9c"
+    },
+    {
+      "question_id": "ragognize_train_1770",
+      "role": "donor",
+      "source_id": "ragognize_train_1776",
+      "title": "Ayatollah Boroujerdi University",
+      "url": "https://en.wikipedia.org/wiki/Ayatollah_Boroujerdi_University",
+      "revision_id": 1280928817,
+      "source_content_sha256": "08bcf3760d920347b0d2403b2e13821ea2ea3b576b76fe47a38ce8c9aeebc2ce"
+    },
+    {
+      "question_id": "ragognize_test_0312",
+      "role": "target",
+      "source_id": "ragognize_test_0312",
+      "title": "Atalaya Mining",
+      "url": "https://en.wikipedia.org/wiki/Atalaya_Mining",
+      "revision_id": 1279348932,
+      "source_content_sha256": "3e3cc24bb9972d125fd4de1d64f6980ecb37fd415db8191f8bec7290b4d251e6"
+    },
+    {
+      "question_id": "ragognize_test_0312",
+      "role": "donor",
+      "source_id": "ragognize_test_1622",
+      "title": "Sakafia Islamic Senior High School",
+      "url": "https://en.wikipedia.org/wiki/Sakafia_Islamic_Senior_High_School",
+      "revision_id": 1274910130,
+      "source_content_sha256": "733ae5cf6909375f4a1d07362c175fbf07d2ef0d561937e0b20d4e3445440b67"
+    },
+    {
+      "question_id": "ragognize_train_0035",
+      "role": "target",
+      "source_id": "ragognize_train_0035",
+      "title": "Peace Over Violence",
+      "url": "https://en.wikipedia.org/wiki/Peace_Over_Violence",
+      "revision_id": 1278342962,
+      "source_content_sha256": "317ce04b9f226ee2ce43b8e82ab5b6a61d8479e6572f9841e2b8744adce54ef0"
+    },
+    {
+      "question_id": "ragognize_train_0035",
+      "role": "donor",
+      "source_id": "ragognize_train_1785",
+      "title": "Graciela Sanchez",
+      "url": "https://en.wikipedia.org/wiki/Graciela_Sanchez",
+      "revision_id": 1280896138,
+      "source_content_sha256": "d1aae5982798baed3d088ff3008afc87ba44752bc8d4394d3d5bee773def5394"
+    },
+    {
+      "question_id": "ragognize_train_0083",
+      "role": "target",
+      "source_id": "ragognize_train_0083",
+      "title": "Robin Lennox",
+      "url": "https://en.wikipedia.org/wiki/Robin_Lennox",
+      "revision_id": 1279382939,
+      "source_content_sha256": "01b14b8f199d2436d45c9e2e199d4fa91deb0837f23deea5f6572dd20bc0b5f8"
+    },
+    {
+      "question_id": "ragognize_train_0083",
+      "role": "donor",
+      "source_id": "ragognize_train_2056",
+      "title": "Martha Wheelock",
+      "url": "https://en.wikipedia.org/wiki/Martha_Wheelock",
+      "revision_id": 1280828975,
+      "source_content_sha256": "b0803ff3e2bdd9d0e03621a32093269c4ad38cdfc7922412e66b957a8697dc00"
+    },
+    {
+      "question_id": "ragognize_train_0089",
+      "role": "target",
+      "source_id": "ragognize_train_0089",
+      "title": "Paddy Cole",
+      "url": "https://en.wikipedia.org/wiki/Paddy_Cole",
+      "revision_id": 1275288717,
+      "source_content_sha256": "a6d6d3dd4e509e1035dd8dea7db06124bd8589d2a6cb934adebae8807286b0fe"
+    },
+    {
+      "question_id": "ragognize_train_0089",
+      "role": "donor",
+      "source_id": "ragognize_train_0067",
+      "title": "T18 (TV channel)",
+      "url": "https://en.wikipedia.org/wiki/T18_(TV_channel)",
+      "revision_id": 1278083068,
+      "source_content_sha256": "ab07be2dc9743822a5a8a5c89d5e27d6503d0a5a6bdd78dd1479562589752576"
+    },
+    {
+      "question_id": "ragognize_train_0182",
+      "role": "target",
+      "source_id": "ragognize_train_0182",
+      "title": "Li Li (poet)",
+      "url": "https://en.wikipedia.org/wiki/Li_Li_(poet)",
+      "revision_id": 1275321062,
+      "source_content_sha256": "2326667c5a329bbc3605d2058107433037e9a4cbfe7ab3fecb7eef06b61a4b54"
+    },
+    {
+      "question_id": "ragognize_train_0182",
+      "role": "donor",
+      "source_id": "ragognize_test_0992",
+      "title": "Komkrit Uitekkeng",
+      "url": "https://en.wikipedia.org/wiki/Komkrit_Uitekkeng",
+      "revision_id": 1275834129,
+      "source_content_sha256": "c5d8baba07a698b36609fc8a32df2eb9d2c43b150928168a8ead2c6d925a6928"
+    },
+    {
+      "question_id": "ragognize_train_0256",
+      "role": "target",
+      "source_id": "ragognize_train_0256",
+      "title": "Cairn (video game)",
+      "url": "https://en.wikipedia.org/wiki/Cairn_(video_game)",
+      "revision_id": 1276475906,
+      "source_content_sha256": "8902cf474ced604df8f17b407be4888b68d29c29422857ffc364b1c19ac9bd6e"
+    },
+    {
+      "question_id": "ragognize_train_0256",
+      "role": "donor",
+      "source_id": "ragognize_train_0501",
+      "title": "I Was Sold Dirt Cheap, But My Power Level Is Off the Charts",
+      "url": "https://en.wikipedia.org/wiki/I_Was_Sold_Dirt_Cheap,_But_My_Power_Level_Is_Off_the_Charts",
+      "revision_id": 1275775664,
+      "source_content_sha256": "d0ad9d94468a2f605d77391014b7903773dafbdd8e7cb0bfedb0e43062dde3ec"
+    },
+    {
+      "question_id": "ragognize_train_0504",
+      "role": "target",
+      "source_id": "ragognize_train_0504",
+      "title": "Abbie Stockard",
+      "url": "https://en.wikipedia.org/wiki/Abbie_Stockard",
+      "revision_id": 1272973347,
+      "source_content_sha256": "226da87008f5e864f4258e923ae2782eead50885b51ac805393e4d94a1703768"
+    },
+    {
+      "question_id": "ragognize_train_0504",
+      "role": "donor",
+      "source_id": "ragognize_test_0013",
+      "title": "Allen Cheng",
+      "url": "https://en.wikipedia.org/wiki/Allen_Cheng",
+      "revision_id": 1278624734,
+      "source_content_sha256": "41bb6bc55f9aa9db54681e41bad3941314bc22ca3c145532b0965e515daf7731"
+    },
+    {
+      "question_id": "ragognize_train_0513",
+      "role": "target",
+      "source_id": "ragognize_train_0513",
+      "title": "Shahnaz Huda",
+      "url": "https://en.wikipedia.org/wiki/Shahnaz_Huda",
+      "revision_id": 1271021940,
+      "source_content_sha256": "973d39d743115216accea63a539779ba47ac8174e8675ec60e0cc6ef7a254f28"
+    },
+    {
+      "question_id": "ragognize_train_0513",
+      "role": "donor",
+      "source_id": "ragognize_test_0735",
+      "title": "Jackie King",
+      "url": "https://en.wikipedia.org/wiki/Jackie_King",
+      "revision_id": 1274796572,
+      "source_content_sha256": "9789c97ffbd8e59b6cbe7fa057a975662e1371fafab0859703f6c1f1c45e4d7f"
+    },
+    {
+      "question_id": "ragognize_train_0557",
+      "role": "target",
+      "source_id": "ragognize_train_0557",
+      "title": "Mohamad Noureddine",
+      "url": "https://en.wikipedia.org/wiki/Mohamad_Noureddine",
+      "revision_id": 1277987152,
+      "source_content_sha256": "aa9ceb3dced5b7a7e318fa396f6ab25cf2ec602db7b44eac0ee06d7e20723a6a"
+    },
+    {
+      "question_id": "ragognize_train_0557",
+      "role": "donor",
+      "source_id": "ragognize_train_2291",
+      "title": "Nick Oberheiden",
+      "url": "https://en.wikipedia.org/wiki/Nick_Oberheiden",
+      "revision_id": 1277298397,
+      "source_content_sha256": "ee4f44c4a433f92f88d66dc43602c708a35b11abb17d2379b382e76870812d35"
+    },
+    {
+      "question_id": "ragognize_train_0667",
+      "role": "target",
+      "source_id": "ragognize_train_0667",
+      "title": "Salihu Shola Taofeek",
+      "url": "https://en.wikipedia.org/wiki/Salihu_Shola_Taofeek",
+      "revision_id": 1277375338,
+      "source_content_sha256": "55e95374077083d7f842bddf0998c78328df84bf42cdffb3d1a7bbbacdf9d649"
+    },
+    {
+      "question_id": "ragognize_train_0667",
+      "role": "donor",
+      "source_id": "ragognize_train_1970",
+      "title": "Osama Rabie",
+      "url": "https://en.wikipedia.org/wiki/Osama_Rabie",
+      "revision_id": 1277738421,
+      "source_content_sha256": "1818bce6b07e48778badbad61287d7ab84ef8338e654da8c0eba232719ac7651"
+    },
+    {
+      "question_id": "ragognize_train_0724",
+      "role": "target",
+      "source_id": "ragognize_train_0724",
+      "title": "American Sweatshop",
+      "url": "https://en.wikipedia.org/wiki/American_Sweatshop",
+      "revision_id": 1275721966,
+      "source_content_sha256": "5e4c3c2ab8ff4bf6595978b2c8d8e6b209082a9000ae9aeffa97da815b683f81"
+    },
+    {
+      "question_id": "ragognize_train_0724",
+      "role": "donor",
+      "source_id": "ragognize_train_0183",
+      "title": "Anamadheya Ashok Kumar",
+      "url": "https://en.wikipedia.org/wiki/Anamadheya_Ashok_Kumar",
+      "revision_id": 1275737584,
+      "source_content_sha256": "12d7ae1f938febcfef272bba566600da3b02454b78be8453fb6f5c7f899c7bc4"
+    },
+    {
+      "question_id": "ragognize_train_0734",
+      "role": "target",
+      "source_id": "ragognize_train_0734",
+      "title": "Where the Wind Comes From",
+      "url": "https://en.wikipedia.org/wiki/Where_the_Wind_Comes_From",
+      "revision_id": 1275721962,
+      "source_content_sha256": "6aa69f08231999934afee3798b6ea21478292e2b4cdac9f8124f5c226b82db6c"
+    },
+    {
+      "question_id": "ragognize_train_0734",
+      "role": "donor",
+      "source_id": "ragognize_train_2065",
+      "title": "Kaasi Vaasi",
+      "url": "https://en.wikipedia.org/wiki/Kaasi_Vaasi",
+      "revision_id": 1279255268,
+      "source_content_sha256": "cd7f0a0881656d9f94d6bf0be2069f3395451d0fe6e28d66e1a24017d151249c"
+    },
+    {
+      "question_id": "ragognize_train_0833",
+      "role": "target",
+      "source_id": "ragognize_train_0833",
+      "title": "Hanumantha Lamani",
+      "url": "https://en.wikipedia.org/wiki/Hanumantha_Lamani",
+      "revision_id": 1275013117,
+      "source_content_sha256": "c556fe927b4c24a209044e81fd8f04f3e47d71aa2d7d17275ce072cc07fa129d"
+    },
+    {
+      "question_id": "ragognize_train_0833",
+      "role": "donor",
+      "source_id": "ragognize_test_0060",
+      "title": "Arun Kapur",
+      "url": "https://en.wikipedia.org/wiki/Arun_Kapur",
+      "revision_id": 1279276716,
+      "source_content_sha256": "513a58c9eb10bfb8975f872cb9f1185f496809ba5bcf3da53ab6c68cf0458373"
+    },
+    {
+      "question_id": "ragognize_train_0081",
+      "role": "target",
+      "source_id": "ragognize_train_0081",
+      "title": "White Collar Support Group",
+      "url": "https://en.wikipedia.org/wiki/White_Collar_Support_Group",
+      "revision_id": 1278642255,
+      "source_content_sha256": "413c167b7aceb01594820f8ddad63923343e4664db7d7c488fe20ed99dd46bf0"
+    },
+    {
+      "question_id": "ragognize_train_0081",
+      "role": "donor",
+      "source_id": "ragognize_test_1076",
+      "title": "Kaya Natin!",
+      "url": "https://en.wikipedia.org/wiki/Kaya_Natin!",
+      "revision_id": 1276481665,
+      "source_content_sha256": "d075d7aae5527c789461f04b81480726b95496c53d61a5eed199e37cb11f74b5"
+    },
+    {
+      "question_id": "ragognize_train_0102",
+      "role": "target",
+      "source_id": "ragognize_train_0102",
+      "title": "Frank Asiedu Bekoe",
+      "url": "https://en.wikipedia.org/wiki/Frank_Asiedu_Bekoe",
+      "revision_id": 1275742909,
+      "source_content_sha256": "76517c6bd8fc61730ae54a002567a7fe48a2df0915a9d125bdb19fd17cabf0a5"
+    },
+    {
+      "question_id": "ragognize_train_0102",
+      "role": "donor",
+      "source_id": "ragognize_train_1636",
+      "title": "Mary Navicha",
+      "url": "https://en.wikipedia.org/wiki/Mary_Navicha",
+      "revision_id": 1271925770,
+      "source_content_sha256": "3081b25c4071e986a6e0bf0e6172f81c533d49aa33df4ea2237c83553c889c57"
+    },
+    {
+      "question_id": "ragognize_train_0121",
+      "role": "target",
+      "source_id": "ragognize_train_0121",
+      "title": "Shaldon Zoo",
+      "url": "https://en.wikipedia.org/wiki/Shaldon_Zoo",
+      "revision_id": 1280945636,
+      "source_content_sha256": "739357a995828d160ea7c243e67e0ae80a72e4932fe024065a82a452e0c5ece0"
+    },
+    {
+      "question_id": "ragognize_train_0121",
+      "role": "donor",
+      "source_id": "ragognize_test_1444",
+      "title": "Muslim Welfare Association",
+      "url": "https://en.wikipedia.org/wiki/Muslim_Welfare_Association",
+      "revision_id": 1275507562,
+      "source_content_sha256": "dbeb0b5958fa5804682efb491759555d927e236e840c517230f076ecf847f3df"
+    },
+    {
+      "question_id": "ragognize_train_0145",
+      "role": "target",
+      "source_id": "ragognize_train_0145",
+      "title": "Mark Freeman (politician)",
+      "url": "https://en.wikipedia.org/wiki/Mark_Freeman_(politician)",
+      "revision_id": 1281450873,
+      "source_content_sha256": "559a81af0bcbf97c5d4c6a82817bc893358e7fc52ea11bdb3a27925e53ea1762"
+    },
+    {
+      "question_id": "ragognize_train_0145",
+      "role": "donor",
+      "source_id": "ragognize_train_2016",
+      "title": "Suleiman Shahbal",
+      "url": "https://en.wikipedia.org/wiki/Suleiman_Shahbal",
+      "revision_id": 1277444923,
+      "source_content_sha256": "f74900fb89674cd6b7a0d10ba14ffe750bebb014313d2a03f212b68bebc04f78"
+    },
+    {
+      "question_id": "ragognize_train_0572",
+      "role": "target",
+      "source_id": "ragognize_train_0572",
+      "title": "Barnes-Hecker Mine Disaster",
+      "url": "https://en.wikipedia.org/wiki/Barnes-Hecker_Mine_Disaster",
+      "revision_id": 1277524369,
+      "source_content_sha256": "f7c303739cd38f9597924c76fde37328e4ea1ce6a3d142f5cf43e0a81bf62e2f"
+    },
+    {
+      "question_id": "ragognize_train_0572",
+      "role": "donor",
+      "source_id": "ragognize_train_2200",
+      "title": "Grace Malera",
+      "url": "https://en.wikipedia.org/wiki/Grace_Malera",
+      "revision_id": 1272986950,
+      "source_content_sha256": "a62c2fd436bce33b1ad9e97532f41a1770e99ecb507d0ae27d112a90fd9bfeea"
+    },
+    {
+      "question_id": "ragognize_train_0583",
+      "role": "target",
+      "source_id": "ragognize_train_0583",
+      "title": "People's School Program",
+      "url": "https://en.wikipedia.org/wiki/People%27s_School_Program",
+      "revision_id": 1277658679,
+      "source_content_sha256": "50f15cafbe16897e8d8e3e2cf94d081f1be14024fda5a520c9f8c3ae9fa691e0"
+    },
+    {
+      "question_id": "ragognize_train_0583",
+      "role": "donor",
+      "source_id": "ragognize_train_1162",
+      "title": "Rona Glynn-McDonald",
+      "url": "https://en.wikipedia.org/wiki/Rona_Glynn-McDonald",
+      "revision_id": 1278013061,
+      "source_content_sha256": "ee1716d396e7ea2891b258af1c11c973cf72df118d98c4de1ad8b8029e664fe2"
+    },
+    {
+      "question_id": "ragognize_train_0597",
+      "role": "target",
+      "source_id": "ragognize_train_0597",
+      "title": "Deaf Movie Database",
+      "url": "https://en.wikipedia.org/wiki/Deaf_Movie_Database",
+      "revision_id": 1281195767,
+      "source_content_sha256": "d8c69939aab0b20ca979fa149dc4663aa88ce20b87ed4adbb552f33e47ba097c"
+    },
+    {
+      "question_id": "ragognize_train_0597",
+      "role": "donor",
+      "source_id": "ragognize_test_2113",
+      "title": "AppyPie",
+      "url": "https://en.wikipedia.org/wiki/AppyPie",
+      "revision_id": 1281622176,
+      "source_content_sha256": "f97d5ff232539774ebb60b7b293d2b6f306d1e0a82338941b48e83716cbde675"
+    },
+    {
+      "question_id": "ragognize_train_0649",
+      "role": "target",
+      "source_id": "ragognize_train_0649",
+      "title": "Third Eye Stimuli Records",
+      "url": "https://en.wikipedia.org/wiki/Third_Eye_Stimuli_Records",
+      "revision_id": 1281406350,
+      "source_content_sha256": "b24e1200b1743e8acdcb3346812a3578d8162459696bcff00afdb9975e0f0fbb"
+    },
+    {
+      "question_id": "ragognize_train_0649",
+      "role": "donor",
+      "source_id": "ragognize_train_1978",
+      "title": "Bakiga Nation",
+      "url": "https://en.wikipedia.org/wiki/Bakiga_Nation",
+      "revision_id": 1277888371,
+      "source_content_sha256": "557a0040992c0daf8a14caf78cb75d26424acd73aaf7cf17dcfe8d6747c58b73"
+    },
+    {
+      "question_id": "ragognize_train_0904",
+      "role": "target",
+      "source_id": "ragognize_train_0904",
+      "title": "PLA Navy landing barges",
+      "url": "https://en.wikipedia.org/wiki/PLA_Navy_landing_barges",
+      "revision_id": 1281526802,
+      "source_content_sha256": "845992f376d03605b6c288463a209d26fe4dd84da63c005902013b16e2cb2b01"
+    },
+    {
+      "question_id": "ragognize_train_0904",
+      "role": "donor",
+      "source_id": "ragognize_train_0576",
+      "title": "Havelsan Bulut",
+      "url": "https://en.wikipedia.org/wiki/Havelsan_Bulut",
+      "revision_id": 1277272199,
+      "source_content_sha256": "ce9c4e03d6727ee6d80e47150391a7aa80a55a3a1350aed198bf373e6fe26e2b"
+    },
+    {
+      "question_id": "ragognize_train_0911",
+      "role": "target",
+      "source_id": "ragognize_train_0911",
+      "title": "Exorcism Chronicles: The Beginning",
+      "url": "https://en.wikipedia.org/wiki/Exorcism_Chronicles:_The_Beginning",
+      "revision_id": 1281798639,
+      "source_content_sha256": "2b8738a146c8086abe66b7c409cc715da76f331e53bb3eedb072937bd034c0dc"
+    },
+    {
+      "question_id": "ragognize_train_0911",
+      "role": "donor",
+      "source_id": "ragognize_train_1764",
+      "title": "PicWish",
+      "url": "https://en.wikipedia.org/wiki/PicWish",
+      "revision_id": 1281475431,
+      "source_content_sha256": "55db97b6d06b9429d030abb031250c2a2f2cf424b510d3d1051d8a13c54d0ae9"
+    },
+    {
+      "question_id": "ragognize_train_0961",
+      "role": "target",
+      "source_id": "ragognize_train_0961",
+      "title": "Cecelie Williams",
+      "url": "https://en.wikipedia.org/wiki/Cecelie_Williams",
+      "revision_id": 1275892255,
+      "source_content_sha256": "f1bfbe2df5226babb83e52d3d21182f9d5887c3fa6c6e5690fc2a2dfe43ec877"
+    },
+    {
+      "question_id": "ragognize_train_0961",
+      "role": "donor",
+      "source_id": "ragognize_test_1837",
+      "title": "Gender Recognition Bill (Thailand)",
+      "url": "https://en.wikipedia.org/wiki/Gender_Recognition_Bill_(Thailand)",
+      "revision_id": 1279220413,
+      "source_content_sha256": "579b65db2f0602d3738965d4df21f23af14a367db10622db186d7b77b3504866"
+    },
+    {
+      "question_id": "ragognize_train_0443",
+      "role": "target",
+      "source_id": "ragognize_train_0443",
+      "title": "Shaban Ramadhan Mubaje",
+      "url": "https://en.wikipedia.org/wiki/Shaban_Ramadhan_Mubaje",
+      "revision_id": 1274858327,
+      "source_content_sha256": "264e43f2aaf028269c9e9002bb0fa86d4f27507ffa5ae12da76ea47189c1be05"
+    },
+    {
+      "question_id": "ragognize_train_0443",
+      "role": "donor",
+      "source_id": "ragognize_train_0131",
+      "title": "Basu Gautam",
+      "url": "https://en.wikipedia.org/wiki/Basu_Gautam",
+      "revision_id": 1281909374,
+      "source_content_sha256": "3a1becbe6b359e440b00717b3d7350ced15b6df8fa169f3e1f2073d89e79a9f6"
+    }
+  ],
+  "unique_source_ids": 120,
+  "unique_source_urls": 120,
+  "unique_source_content_hashes": 120,
+  "legacy_input_hashes_verified": {
+    "prelab\\round6_evidence_grounding\\data\\inputs.jsonl": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+    "prelab\\round6_evidence_grounding\\data\\dev_inputs.jsonl": "0a8bcc5f803453c68e502b9781e11d7d49e588af443368b846f171d37b4c5112",
+    "prelab\\round7_evidence_grounding\\data\\inputs.jsonl": "ea7aa03f0296b0c48ec8ae219ecf17552b81ea1847d5eacbfe9f441d9c7b23b9",
+    "prelab\\round7_evidence_grounding\\data\\dev_inputs.jsonl": "32180b1f240b6011742f6e60336f32feba0ee28cc3c84ee45a6f5312a9a42dfb",
+    "prelab\\round9_evidence_binding\\data\\inputs.jsonl": "137059b3d05e8ee124d23ceed9a44c2182d6075e32a2328a269c7b9531b2f4d7",
+    "prelab\\round6_evidence_grounding\\planning\\hotpotqa_preview.json": "93f3b1bc101be1b6057e403eb75362d38a9ebd96afe8d895b2bbb38ec65cd444"
+  },
+  "old_and_new_row_or_group_id_overlap": [],
+  "principal_subject_old_visible_hits": [
+    {
+      "question_id": "ragognize_train_0107",
+      "role": "target",
+      "term": "Harvey",
+      "old_visible_matches": [
+        "among others it features harvey keitel william hurt victor argo forest whitaker ashley judd stockard channing and harold perrineau jr",
+        "on 3 february 2025 15 year old harvey willgoose was fatally stabbed at all saints catholic high school sheffield at around 12 17 gmt a teenager was also arrested on suspicion of murder and is currently in police custody",
+        "the film stars lee tracy sally blane paul harvey sterling holloway c henry gordon and isabel jewell"
+      ]
+    }
+  ],
+  "principal_subject_hit_adjudication": [
+    {
+      "question_id": "ragognize_train_0107",
+      "term": "Harvey",
+      "decision": "distinct_entities",
+      "reason": "New target is Harvey legal AI software. Old occurrences are actors Harvey Keitel and Paul Harvey and the pupil Harvey Willgoose; no shared target or election/event."
+    }
+  ],
+  "additional_screen_findings": [
+    {
+      "type": "old_15word_window",
+      "question_id": "ragognize_test_1482",
+      "role": "evidence_quote",
+      "matches": [
+        "held its initial public offering ipo becoming a listed company on the hong kong stock",
+        "initial public offering ipo becoming a listed company on the hong kong stock exchange the",
+        "ipo becoming a listed company on the hong kong stock exchange the offering raised hk",
+        "its initial public offering ipo becoming a listed company on the hong kong stock exchange",
+        "offering ipo becoming a listed company on the hong kong stock exchange the offering raised",
+        "public offering ipo becoming a listed company on the hong kong stock exchange the offering"
+      ]
+    },
+    {
+      "type": "new_cross_group_15word_window",
+      "question_ids": [
+        "ragognize_train_0355",
+        "ragognize_train_0961"
+      ],
+      "matches": [
+        "an american politician who was elected member of the missouri house of representatives for the",
+        "is an american politician who was elected member of the missouri house of representatives for"
+      ]
+    }
+  ],
+  "additional_screen_adjudications": [
+    {
+      "type": "old_15word_window",
+      "question_id": "ragognize_test_1482",
+      "decision": "distinct_entities_and_events_shared_financial_boilerplate",
+      "reason": "The new quotation identifies RoboSense, 5 January 2024 and HK$990 million. The old passage identifies Innoscience, 30 December 2024 and HK$1.4 billion. The matching words are a generic description of a Hong Kong initial public offering, not the same offering or company."
+    },
+    {
+      "type": "new_cross_group_15word_window",
+      "question_ids": [
+        "ragognize_train_0355",
+        "ragognize_train_0961"
+      ],
+      "decision": "distinct_people_and_target_facts_shared_biographical_boilerplate",
+      "reason": "Tony Harbison represents district 144; Cecelie Williams represents district 111. Their common state and 2024 electoral cycle are background only. The requested and hidden facts are Harbison's number of grandchildren and Williams's marital-law proposal, with no shared answer evidence. Both groups belong to this fresh test split."
+    }
+  ],
+  "screen_limit": "Substring and 15-word checks assist the independent semantic source and paired-input reviews; empty matches are not a proof against every implicit world-knowledge relation.",
+  "max_relative_material_char_gap": 0.18803418803418803,
+  "max_relative_material_word_gap": 0.19444444444444445,
+  "min_prompt_tokens": 127,
+  "max_prompt_tokens": 294,
+  "prompt_token_counts": [
+    {
+      "row_id": "ragognize_train_0017__complete",
+      "prompt_tokens": 214
+    },
+    {
+      "row_id": "ragognize_train_0017__partial",
+      "prompt_tokens": 213
+    },
+    {
+      "row_id": "ragognize_train_0085__complete",
+      "prompt_tokens": 188
+    },
+    {
+      "row_id": "ragognize_train_0085__partial",
+      "prompt_tokens": 189
+    },
+    {
+      "row_id": "ragognize_train_0115__complete",
+      "prompt_tokens": 266
+    },
+    {
+      "row_id": "ragognize_train_0115__partial",
+      "prompt_tokens": 261
+    },
+    {
+      "row_id": "ragognize_train_0168__complete",
+      "prompt_tokens": 168
+    },
+    {
+      "row_id": "ragognize_train_0168__partial",
+      "prompt_tokens": 163
+    },
+    {
+      "row_id": "ragognize_train_0307__complete",
+      "prompt_tokens": 186
+    },
+    {
+      "row_id": "ragognize_train_0307__partial",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_0348__complete",
+      "prompt_tokens": 164
+    },
+    {
+      "row_id": "ragognize_train_0348__partial",
+      "prompt_tokens": 165
+    },
+    {
+      "row_id": "ragognize_train_0407__complete",
+      "prompt_tokens": 252
+    },
+    {
+      "row_id": "ragognize_train_0407__partial",
+      "prompt_tokens": 239
+    },
+    {
+      "row_id": "ragognize_train_0434__complete",
+      "prompt_tokens": 175
+    },
+    {
+      "row_id": "ragognize_train_0434__partial",
+      "prompt_tokens": 180
+    },
+    {
+      "row_id": "ragognize_train_0925__complete",
+      "prompt_tokens": 199
+    },
+    {
+      "row_id": "ragognize_train_0925__partial",
+      "prompt_tokens": 207
+    },
+    {
+      "row_id": "ragognize_train_0883__complete",
+      "prompt_tokens": 196
+    },
+    {
+      "row_id": "ragognize_train_0883__partial",
+      "prompt_tokens": 190
+    },
+    {
+      "row_id": "ragognize_train_1060__complete",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_1060__partial",
+      "prompt_tokens": 176
+    },
+    {
+      "row_id": "ragognize_train_1126__complete",
+      "prompt_tokens": 237
+    },
+    {
+      "row_id": "ragognize_train_1126__partial",
+      "prompt_tokens": 236
+    },
+    {
+      "row_id": "ragognize_train_0107__complete",
+      "prompt_tokens": 253
+    },
+    {
+      "row_id": "ragognize_train_0107__partial",
+      "prompt_tokens": 254
+    },
+    {
+      "row_id": "ragognize_train_0355__complete",
+      "prompt_tokens": 127
+    },
+    {
+      "row_id": "ragognize_train_0355__partial",
+      "prompt_tokens": 132
+    },
+    {
+      "row_id": "ragognize_train_0472__complete",
+      "prompt_tokens": 168
+    },
+    {
+      "row_id": "ragognize_train_0472__partial",
+      "prompt_tokens": 173
+    },
+    {
+      "row_id": "ragognize_train_0609__complete",
+      "prompt_tokens": 182
+    },
+    {
+      "row_id": "ragognize_train_0609__partial",
+      "prompt_tokens": 190
+    },
+    {
+      "row_id": "ragognize_train_0693__complete",
+      "prompt_tokens": 138
+    },
+    {
+      "row_id": "ragognize_train_0693__partial",
+      "prompt_tokens": 133
+    },
+    {
+      "row_id": "ragognize_train_1546__complete",
+      "prompt_tokens": 224
+    },
+    {
+      "row_id": "ragognize_train_1546__partial",
+      "prompt_tokens": 207
+    },
+    {
+      "row_id": "ragognize_train_1329__complete",
+      "prompt_tokens": 263
+    },
+    {
+      "row_id": "ragognize_train_1329__partial",
+      "prompt_tokens": 266
+    },
+    {
+      "row_id": "ragognize_test_0064__complete",
+      "prompt_tokens": 166
+    },
+    {
+      "row_id": "ragognize_test_0064__partial",
+      "prompt_tokens": 156
+    },
+    {
+      "row_id": "ragognize_test_1848__complete",
+      "prompt_tokens": 229
+    },
+    {
+      "row_id": "ragognize_test_1848__partial",
+      "prompt_tokens": 233
+    },
+    {
+      "row_id": "ragognize_test_1924__complete",
+      "prompt_tokens": 215
+    },
+    {
+      "row_id": "ragognize_test_1924__partial",
+      "prompt_tokens": 198
+    },
+    {
+      "row_id": "ragognize_test_1321__complete",
+      "prompt_tokens": 187
+    },
+    {
+      "row_id": "ragognize_test_1321__partial",
+      "prompt_tokens": 188
+    },
+    {
+      "row_id": "ragognize_test_1482__complete",
+      "prompt_tokens": 294
+    },
+    {
+      "row_id": "ragognize_test_1482__partial",
+      "prompt_tokens": 244
+    },
+    {
+      "row_id": "ragognize_train_2000__complete",
+      "prompt_tokens": 178
+    },
+    {
+      "row_id": "ragognize_train_2000__partial",
+      "prompt_tokens": 177
+    },
+    {
+      "row_id": "ragognize_test_0850__complete",
+      "prompt_tokens": 163
+    },
+    {
+      "row_id": "ragognize_test_0850__partial",
+      "prompt_tokens": 177
+    },
+    {
+      "row_id": "ragognize_train_0339__complete",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_0339__partial",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_1132__complete",
+      "prompt_tokens": 186
+    },
+    {
+      "row_id": "ragognize_train_1132__partial",
+      "prompt_tokens": 184
+    },
+    {
+      "row_id": "ragognize_train_1521__complete",
+      "prompt_tokens": 164
+    },
+    {
+      "row_id": "ragognize_train_1521__partial",
+      "prompt_tokens": 159
+    },
+    {
+      "row_id": "ragognize_test_1508__complete",
+      "prompt_tokens": 170
+    },
+    {
+      "row_id": "ragognize_test_1508__partial",
+      "prompt_tokens": 160
+    },
+    {
+      "row_id": "ragognize_test_2014__complete",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_test_2014__partial",
+      "prompt_tokens": 179
+    },
+    {
+      "row_id": "ragognize_test_1433__complete",
+      "prompt_tokens": 188
+    },
+    {
+      "row_id": "ragognize_test_1433__partial",
+      "prompt_tokens": 183
+    },
+    {
+      "row_id": "ragognize_test_0952__complete",
+      "prompt_tokens": 247
+    },
+    {
+      "row_id": "ragognize_test_0952__partial",
+      "prompt_tokens": 223
+    },
+    {
+      "row_id": "ragognize_test_1400__complete",
+      "prompt_tokens": 185
+    },
+    {
+      "row_id": "ragognize_test_1400__partial",
+      "prompt_tokens": 192
+    },
+    {
+      "row_id": "ragognize_train_1770__complete",
+      "prompt_tokens": 224
+    },
+    {
+      "row_id": "ragognize_train_1770__partial",
+      "prompt_tokens": 227
+    },
+    {
+      "row_id": "ragognize_test_0312__complete",
+      "prompt_tokens": 189
+    },
+    {
+      "row_id": "ragognize_test_0312__partial",
+      "prompt_tokens": 182
+    },
+    {
+      "row_id": "ragognize_train_0035__complete",
+      "prompt_tokens": 192
+    },
+    {
+      "row_id": "ragognize_train_0035__partial",
+      "prompt_tokens": 175
+    },
+    {
+      "row_id": "ragognize_train_0083__complete",
+      "prompt_tokens": 149
+    },
+    {
+      "row_id": "ragognize_train_0083__partial",
+      "prompt_tokens": 142
+    },
+    {
+      "row_id": "ragognize_train_0089__complete",
+      "prompt_tokens": 173
+    },
+    {
+      "row_id": "ragognize_train_0089__partial",
+      "prompt_tokens": 176
+    },
+    {
+      "row_id": "ragognize_train_0182__complete",
+      "prompt_tokens": 198
+    },
+    {
+      "row_id": "ragognize_train_0182__partial",
+      "prompt_tokens": 184
+    },
+    {
+      "row_id": "ragognize_train_0256__complete",
+      "prompt_tokens": 195
+    },
+    {
+      "row_id": "ragognize_train_0256__partial",
+      "prompt_tokens": 191
+    },
+    {
+      "row_id": "ragognize_train_0504__complete",
+      "prompt_tokens": 183
+    },
+    {
+      "row_id": "ragognize_train_0504__partial",
+      "prompt_tokens": 188
+    },
+    {
+      "row_id": "ragognize_train_0513__complete",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_0513__partial",
+      "prompt_tokens": 183
+    },
+    {
+      "row_id": "ragognize_train_0557__complete",
+      "prompt_tokens": 264
+    },
+    {
+      "row_id": "ragognize_train_0557__partial",
+      "prompt_tokens": 233
+    },
+    {
+      "row_id": "ragognize_train_0667__complete",
+      "prompt_tokens": 180
+    },
+    {
+      "row_id": "ragognize_train_0667__partial",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_0724__complete",
+      "prompt_tokens": 175
+    },
+    {
+      "row_id": "ragognize_train_0724__partial",
+      "prompt_tokens": 181
+    },
+    {
+      "row_id": "ragognize_train_0734__complete",
+      "prompt_tokens": 291
+    },
+    {
+      "row_id": "ragognize_train_0734__partial",
+      "prompt_tokens": 265
+    },
+    {
+      "row_id": "ragognize_train_0833__complete",
+      "prompt_tokens": 191
+    },
+    {
+      "row_id": "ragognize_train_0833__partial",
+      "prompt_tokens": 163
+    },
+    {
+      "row_id": "ragognize_train_0081__complete",
+      "prompt_tokens": 204
+    },
+    {
+      "row_id": "ragognize_train_0081__partial",
+      "prompt_tokens": 198
+    },
+    {
+      "row_id": "ragognize_train_0102__complete",
+      "prompt_tokens": 223
+    },
+    {
+      "row_id": "ragognize_train_0102__partial",
+      "prompt_tokens": 210
+    },
+    {
+      "row_id": "ragognize_train_0121__complete",
+      "prompt_tokens": 189
+    },
+    {
+      "row_id": "ragognize_train_0121__partial",
+      "prompt_tokens": 211
+    },
+    {
+      "row_id": "ragognize_train_0145__complete",
+      "prompt_tokens": 186
+    },
+    {
+      "row_id": "ragognize_train_0145__partial",
+      "prompt_tokens": 210
+    },
+    {
+      "row_id": "ragognize_train_0572__complete",
+      "prompt_tokens": 220
+    },
+    {
+      "row_id": "ragognize_train_0572__partial",
+      "prompt_tokens": 208
+    },
+    {
+      "row_id": "ragognize_train_0583__complete",
+      "prompt_tokens": 182
+    },
+    {
+      "row_id": "ragognize_train_0583__partial",
+      "prompt_tokens": 189
+    },
+    {
+      "row_id": "ragognize_train_0597__complete",
+      "prompt_tokens": 211
+    },
+    {
+      "row_id": "ragognize_train_0597__partial",
+      "prompt_tokens": 213
+    },
+    {
+      "row_id": "ragognize_train_0649__complete",
+      "prompt_tokens": 174
+    },
+    {
+      "row_id": "ragognize_train_0649__partial",
+      "prompt_tokens": 167
+    },
+    {
+      "row_id": "ragognize_train_0904__complete",
+      "prompt_tokens": 229
+    },
+    {
+      "row_id": "ragognize_train_0904__partial",
+      "prompt_tokens": 211
+    },
+    {
+      "row_id": "ragognize_train_0911__complete",
+      "prompt_tokens": 214
+    },
+    {
+      "row_id": "ragognize_train_0911__partial",
+      "prompt_tokens": 218
+    },
+    {
+      "row_id": "ragognize_train_0961__complete",
+      "prompt_tokens": 168
+    },
+    {
+      "row_id": "ragognize_train_0961__partial",
+      "prompt_tokens": 164
+    },
+    {
+      "row_id": "ragognize_train_0443__complete",
+      "prompt_tokens": 210
+    },
+    {
+      "row_id": "ragognize_train_0443__partial",
+      "prompt_tokens": 212
+    }
+  ],
+  "files": {
+    "test_inputs.jsonl": "17896476d2059e6d0c248f28a2016977b732ded8eedd2fe1a50ee0aa2f0a60a6",
+    "test_references.jsonl": "43ea8bf7c3975fc69a292f04fb1237f0b5fc0a0b3d79bfea85106015d24ec606",
+    "curation\\paired_review_all.jsonl": "3f80ca89bae3508b269b6cca1d70e9057a17e8d74ae41065b2d24ce1cfc71d04",
+    "curation\\remaining_source_pool.jsonl": "47f6cc66e4be1a5f03b30338c1109631661951f0d2a4ff474132aaacfa607ef4",
+    "curation\\legacy_isolation_inventory.json": "fc877c79db477620f70c2b6f007aca8f7a179c9fa75a6aa6c2f8e667347b484c"
+  }
+}

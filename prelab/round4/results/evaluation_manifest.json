@@ -1,0 +1,8 @@
+{
+  "completed": true,
+  "n_test": 100,
+  "primary": "selected answer-level error-class F1",
+  "selection_sha256": "5b9d7322f64c902bc61197b09fb6ad9073c9272f68e89a7baf33da95151096a8",
+  "thresholds_tuned_on_test": false,
+  "selected_primary_target_met": false
+}

@@ -1,0 +1,12 @@
+{
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_psiloqa_review_v1\\audit_train.py": "2e9462873efad0a769f69d28817c71c3f8e8719a209670940a6b502f0a477862",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_psiloqa_review_v1\\download_manifest.json": "6883dda134966b00789f816ad67550d828a2ab73ad63a89acffd2ba3998b6569",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\data\\raw\\source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\prepare_auxiliary_human.py": "98c622e245973096abbc70b6596e97d04129d9c50e4aace526afc482af3a2645",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_fava_v2\\manifest.json": "ae2df270257af5a17154dc62d01e27f42e92985e05afefc5ff50063e6e4ed2c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_fava_v2\\rt_source_identity_index.jsonl": "bf883b295e10712abae45714da3690933fdce81f80bf35f014cf04a5c20a9e84",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_fava_v2\\rt_material_group_index.jsonl": "8a60d398b7fa553feb59bb8c59c0a80c9810437f9930afa49efdcbcf10d6a94b"
+  },
+  "protocol_sha256": "be81a1f241f920a5b37cfbfab2dddf3248ed2e10254e21f0912779436e79e774"
+}

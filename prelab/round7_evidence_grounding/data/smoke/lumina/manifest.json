@@ -1,0 +1,13 @@
+{
+  "stage": "lumina",
+  "expected_rows": 4,
+  "completed_rows": 2,
+  "complete": false,
+  "seconds": 1.6747061000205576,
+  "peak_allocated_gib": 5.368590831756592,
+  "record_files": [
+    "hotpot_5a7a02235542996c55b2dcd3__complete.json",
+    "hotpot_5a7a02235542996c55b2dcd3__partial.json"
+  ],
+  "labels_read": false
+}

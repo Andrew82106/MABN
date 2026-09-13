@@ -1,0 +1,24 @@
+{
+  "all_passed": true,
+  "checks": {
+    "60_unique_rows_30_question_groups": true,
+    "four_original_unedited_paragraphs_per_input": true,
+    "exact_neutral_template": true,
+    "one_replacement_only_and_stable_order": true,
+    "original_reference_sentence_alignment": true,
+    "question_pair_same_split": true,
+    "dev33_exact_json_object_reuse": true,
+    "cross_group_other_subject_name_mentions_zero": true,
+    "token_length_tolerance_all_pass": true,
+    "HF_API_truncated_cells_zero": true
+  },
+  "replacement_scope_counts": {
+    "other_question_natural_paragraph": 9,
+    "same_question": 21
+  },
+  "all_used_title_count": 150,
+  "max_replacement_token_difference": 27,
+  "input_sha256": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+  "reference_sha256": "ac3d7a78eb97dea43d5dd933c99fc86d9379ce9c0c1d1da8542e4cd00ca12c95",
+  "note": "Mechanical audit complements documented semantic review, does not prove correctness of future generated-output labels."
+}

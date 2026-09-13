@@ -1,0 +1,182 @@
+{
+  "version": "ragognize-train-only-intake-v1",
+  "status": "complete_train_only_audited_not_trained",
+  "created_at_utc": "2026-09-12T22:03:58.049361+00:00",
+  "source": {
+    "provider": "Hugging Face official dataset API",
+    "repository": "F4biian/RAGognize",
+    "revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+    "last_modified": "2026-04-20T06:05:13.000Z",
+    "private": false,
+    "gated": false,
+    "license": "cc-by-sa-4.0",
+    "dataset_api_url": "https://huggingface.co/api/datasets/F4biian/RAGognize",
+    "pinned_tree_api_url": "https://huggingface.co/api/datasets/F4biian/RAGognize/tree/aab54518c2a7c0d25fff8bffbf5337d0321de142?recursive=true&expand=true",
+    "pinned_train_url": "https://huggingface.co/datasets/F4biian/RAGognize/resolve/aab54518c2a7c0d25fff8bffbf5337d0321de142/data/train-00000-of-00001.parquet?download=true"
+  },
+  "physical_split_check": {
+    "separable": true,
+    "repository_files": [
+      {
+        "path": "data",
+        "type": "directory",
+        "size": 0,
+        "oid": "8862f29943eb24d050d550995e53919b7b9c7d03",
+        "lfs": null
+      },
+      {
+        "path": ".gitattributes",
+        "type": "file",
+        "size": 2519,
+        "oid": "7d740ccbc54d8889c5f97293a167f1dd7dfc2cd2",
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "type": "file",
+        "size": 59478,
+        "oid": "c65c16d62fdb8e7d0b3085c29441f3cb1b825a47",
+        "lfs": null
+      },
+      {
+        "path": "data/test-00000-of-00001.parquet",
+        "type": "file",
+        "size": 46570537,
+        "oid": "63a2c194661a6d389e28e439bac8de8abddc5917",
+        "lfs": {
+          "oid": "8fbfe21df70a07926e0983fd03b77ae53ce0543471b92386a5d7156b71bf3a8c",
+          "size": 46570537,
+          "pointerSize": 133
+        }
+      },
+      {
+        "path": "data/train-00000-of-00001.parquet",
+        "type": "file",
+        "size": 30129198,
+        "oid": "67ce7ea7000578181630ea51faf4d7d9eebf5f0b",
+        "lfs": {
+          "oid": "6ad56f84a06863b4dea28e86014cc16e37a64fefe8965c53902b370f51839a44",
+          "size": 30129198,
+          "pointerSize": 133
+        }
+      }
+    ],
+    "downloaded_content_files": [
+      "README.md",
+      "data/train-00000-of-00001.parquet"
+    ],
+    "test_or_validation_content_downloaded": false,
+    "test_or_validation_content_read": false,
+    "forbidden_local_parquet_matches": []
+  },
+  "train": {
+    "file": "train-00000-of-00001.parquet",
+    "bytes": 30129198,
+    "sha256": "6ad56f84a06863b4dea28e86014cc16e37a64fefe8965c53902b370f51839a44",
+    "official_lfs_oid": "6ad56f84a06863b4dea28e86014cc16e37a64fefe8965c53902b370f51839a44",
+    "rows": 1842,
+    "model_subset": "Llama-2-7b-chat-hf",
+    "model_response_rows": 1842
+  },
+  "frozen_label_blind_subsets": {
+    "all_train": {
+      "index": "ALL_TRAIN_INDEX.jsonl",
+      "rows": 1842,
+      "questions": 943,
+      "recommended_groups": 917,
+      "index_sha256": "3d21aaf585cde6e4214ee6e5bccf15191a38a89c7b9eaeb3df6ebb73c01f155c"
+    },
+    "no_unanswerability_hint": {
+      "index": "NO_UNANSWERABILITY_HINT_INDEX.jsonl",
+      "selection": "template_details.settings.unanswerability_hint == false only",
+      "rows": 971,
+      "questions": 498,
+      "recommended_groups": 491,
+      "index_sha256": "968812185890af072fede436f1c63dd622ade3b69da09928c8e09382691d1763"
+    },
+    "selection_used_labels_or_model_performance": false
+  },
+  "quality_summary": {
+    "required_count_fields": [
+      "question_present",
+      "documents_present",
+      "documents_str_present",
+      "rag_prompt_present",
+      "llama_response_present",
+      "response_text_present",
+      "full_prompt_present"
+    ],
+    "required_field_failures": 0,
+    "span_list_present_in_schema": true,
+    "valid_spans": 1483,
+    "span_coordinate_or_text_failures": 0,
+    "four_bpe_mapping_ready": true,
+    "canonical_official_token_start_mismatch_rows": 29,
+    "overlapping_span_rows": 1,
+    "human_gold": false
+  },
+  "operations": {
+    "model_forward": false,
+    "training": false,
+    "GPU_used": false,
+    "baseline_modified": false
+  },
+  "artifacts": {
+    "HF_DATASET_API.json": {
+      "bytes": 11870,
+      "sha256": "5602eebd9ed06e3801c801c805e0f7aeb80dbab1231270b413647ad55ee20b14"
+    },
+    "HF_TREE_API.json": {
+      "bytes": 3177,
+      "sha256": "15c8416853651a53f554ccc85cd4d07c1a46aff15d0bdb9cc4246ef4064c1281"
+    },
+    "OFFICIAL_README.md": {
+      "bytes": 59478,
+      "sha256": "d007ca16c19a9c8fa5ed8e2154cb002de5e160e58ac9e1ae09f0e40629f582f4"
+    },
+    "train-00000-of-00001.parquet": {
+      "bytes": 30129198,
+      "sha256": "6ad56f84a06863b4dea28e86014cc16e37a64fefe8965c53902b370f51839a44"
+    },
+    "PROTOCOL.json": {
+      "bytes": 1756,
+      "sha256": "2e4f1cd2fd2b767668c951b8a869a699d551668093cf6276249006fd557f1b57"
+    },
+    "audit_train.py": {
+      "bytes": 32205,
+      "sha256": "81f02b5ad64255d6e406af7c4687ac772112eec1cf96227d6d538dfcb4334a26"
+    },
+    "build_manifest.py": {
+      "bytes": 6722,
+      "sha256": "8054aede0b15bf4eb38fe2c188966c5a4542f07b46dec88358f2562ef20d5b3c"
+    },
+    "AUDIT.json": {
+      "bytes": 75727,
+      "sha256": "251c30b5ee084a9fc628103bb97982c2e00bbf0ee297140f8cc30d166b7e13a8"
+    },
+    "SCHEMA.json": {
+      "bytes": 19697,
+      "sha256": "ed560eaeac42f8b2006f1ab3bc3e0b152d50886dfba18e2337b4cbf655bf84d9"
+    },
+    "GROUP_INDEX.jsonl": {
+      "bytes": 1408430,
+      "sha256": "468bde0468dc8e3cbac3eca04cbddd102054159f348d60290a605be5b5b157b3"
+    },
+    "ALL_TRAIN_INDEX.jsonl": {
+      "bytes": 405128,
+      "sha256": "3d21aaf585cde6e4214ee6e5bccf15191a38a89c7b9eaeb3df6ebb73c01f155c"
+    },
+    "NO_UNANSWERABILITY_HINT_INDEX.jsonl": {
+      "bytes": 213598,
+      "sha256": "968812185890af072fede436f1c63dd622ade3b69da09928c8e09382691d1763"
+    },
+    "DATA_QUALITY_REPORT.md": {
+      "bytes": 6759,
+      "sha256": "cf3878e40681cf09db7b40e406578472198ade8ab6144f6eb7b1adb93e3f11d1"
+    },
+    "REPORT.md": {
+      "bytes": 2728,
+      "sha256": "bbdf632598c4783f676e3dbbfdd17e69191e9d8128acd2f7c71b684904ac6c7d"
+    }
+  }
+}

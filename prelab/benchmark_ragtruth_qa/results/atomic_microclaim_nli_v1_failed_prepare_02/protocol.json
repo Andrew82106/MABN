@@ -1,0 +1,67 @@
+{
+  "version": "atomic-microclaim-retrieved-nli-v1",
+  "role": "ours_atomic_microclaim_candidate; formal baselines untouched",
+  "scope": {
+    "dataset": "Only original RAGTruth QA fit634 + calibration159 development answers.",
+    "microclaims": "Exact label-blind output of atomic_relation_audit_r32_v1 (9,061 fit; 2,268 calibration).",
+    "windows": "Unchanged eligible 4-original-BPE stride-one windows, used only in score stage.",
+    "test": "Official test paths are absent from this runner and never opened.",
+    "expansion_hook": "The loader is partition-manifest based; a future 3,680-answer run must use a new output/version and a separately frozen microclaim manifest. It may not be mixed into v1."
+  },
+  "hypothesis": {
+    "unsplit": "Exact microclaim text.",
+    "split": "Remove only a leading discourse/attribution scaffold. For noninitial fragments with a deterministic previous-sibling antecedent, prepend that exact surface subject after removing a leading connector.",
+    "labels": "No label, score, corpus statistic, or model output affects the transformation."
+  },
+  "retrieval": {
+    "query": "The deterministic contextualized microclaim hypothesis.",
+    "per_passage": "Reuse the frozen v1 Unicode-token BM25 implementation and choose top two sentences independently in passage 1, 2 and 3.",
+    "nli_pairs": "Each selected sentence separately plus their in-rank-order concatenation when two sentences exist. Premise=evidence, hypothesis=contextualized microclaim."
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "frozen": true,
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "maximum_pair_tokens": 2048,
+    "truncation": false,
+    "backend": "cuda_fp32_sdpa_math_batch16_atomic_v1",
+    "reuse": "An exact premise+hypothesis pair may reuse a probability from the already frozen v1 cache; all other pairs use the identical frozen checkpoint and numerical path."
+  },
+  "features": {
+    "evidence_relation_width": 315,
+    "whitebox_optional_width": 12,
+    "relation": "Label-blind claim flags plus lexical subject/entity/predicate, negation, comparator direction, quantity/unit, temporal direction, condition, and source-specific compatibility with retrieved evidence.",
+    "whitebox": "Optional microclaim pooling of clean fit group-OOF Lookback/large probabilities and frozen generation NLL. Candidate family is selected on fit OOF only."
+  },
+  "readout": {
+    "label": "A microclaim is positive iff any lexical original BPE assigned to it has the unchanged human risk label; labels open only in score stage after NLI caches freeze.",
+    "candidates": [
+      "evidence__lr_C0.001",
+      "evidence__lr_C0.01",
+      "evidence__lr_C0.1",
+      "evidence__hist_leaf7",
+      "evidence__hist_leaf15",
+      "evidence__extra_depth8",
+      "fusion__lr_C0.001",
+      "fusion__lr_C0.01",
+      "fusion__lr_C0.1",
+      "fusion__hist_leaf7",
+      "fusion__hist_leaf15",
+      "fusion__extra_depth8"
+    ],
+    "crossfit": "Five-fold GroupKFold by locked source-connected group supplies every fit microclaim prediction. Full-fit selected model predicts calibration.",
+    "weights": "Equal source-group mass, then answer mass, then microclaim mass, followed by binary class balance and restored equal group loss mass.",
+    "selection": "Fit OOF only: maximize minimum(window F1, answer F1), then window F1, answer F1, precision, and simpler candidate order.",
+    "projection": "Each lexical BPE inherits every microclaim whose alphanumeric characters it overlaps (normally one; a boundary-straddling BPE may map to both). Each unchanged four-BPE window and answer take the maximum overlapping score.",
+    "strict": "Window and answer thresholds selected on fit OOF and frozen for calibration.",
+    "diagnostic": "Also report calibration F1-optimal thresholds explicitly as a non-independent common development diagnostic."
+  },
+  "baselines": "Read-only references only. No baseline file, structure, feature, parameter, threshold, or score is changed.",
+  "stage_gate": "initialize -> CPU prepare -> CPU check -> explicit GPU smoke -> explicit extraction -> CPU score"
+}

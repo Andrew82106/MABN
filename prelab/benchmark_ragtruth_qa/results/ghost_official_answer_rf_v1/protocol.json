@@ -1,0 +1,79 @@
+{
+  "version": "ghost-paper-structure-answer-rf-v1",
+  "classification_unit": "Whole original answer; windows are N/A and never predicted or broadcast.",
+  "features": [
+    "adjacent_layer_cosine_change",
+    "layer_to_final_cosine",
+    "top10_normalized_entropy",
+    "top10_unweighted_embedding_divergence"
+  ],
+  "aggregation": "Unweighted arithmetic mean over ALL raw answer BPE tokens, including punctuation and boundary/header-overlap token. Float32 mean; no lexical/gold filtering.",
+  "shape": [
+    3839,
+    4
+  ],
+  "fit_answers": 3680,
+  "calibration_answers": 159,
+  "fit_groups": 615,
+  "calibration_groups": 154,
+  "label": "Original whole-answer binary label from nonempty official human span list. Not token/window OR; keep all good answers and safe refusals.",
+  "classifier": "RandomForestClassifier",
+  "parameters": {
+    "n_estimators": 750,
+    "max_depth": 40,
+    "min_samples_split": 8,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "n_jobs": 4
+  },
+  "effective_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced_subsample",
+    "criterion": "gini",
+    "max_depth": 40,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 8,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 750,
+    "n_jobs": 4,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "sample_weight": null,
+  "scaler": null,
+  "projection": null,
+  "new_real_fits": 1,
+  "class_balance": "Only paper balanced_subsample; no external source/answer/window loss weights.",
+  "fit_scope": "First3680 answers only; no calibration passed to fit, no hyperparameter search, no early stopping.",
+  "threshold": "One answer threshold from original cal159 choose_threshold: maximum F1, then precision, then higher threshold; >= means risk. AUROC/AP and confusion also reported.",
+  "model_selection": "One fixed RF; no alternative seeds, hyperparameters, window versions, smoothing or further postprocessing.",
+  "method_identity": "GHOST paper classifier structure and final RF hyperparameters transferred to current public-QA cohort. Author official code was unavailable; do not describe this local file as author code.",
+  "seed_convention": "The paper did not disclose a numeric final seed;42 is a fixed local transfer convention, not a recovered author seed.",
+  "feature_transfer_limits": [
+    "Existing NousResearch/Llama-2-7b-chat-hf checkpoint and NF4 unified teacher-forced replay are retained; not original released generators trajectories.",
+    "Existing features use prediction-before-current state at answer_token_position-1, with states3..29 and fixed arithmetic; backbone/reading point/precision equivalence to the authors run is not established.",
+    "Additional3046 answers came from other generators and share source groups with native fit answers; human answer labels remain unchanged.",
+    "Repeated development calibration; no independent-test or bitwise-reproduction claim. Window F1 is not applicable."
+  ],
+  "prior_work": "Earlier GHOST window LR/shallow-tree variants remain separate self-developed local adaptations and are not substituted for this formal answer baseline.",
+  "GPU_used": false,
+  "official_test_opened": false,
+  "resource_estimate": {
+    "answer_matrix_KiB": 59.984375,
+    "real_fit_minutes_planning": [
+      0.1,
+      3
+    ],
+    "not_measured": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Only previously downloaded pinned official PsiloQA TRAIN, lang=en. No new download, validation/test read, tokenizer, model, GPU or training.",
+  "selection": "Use existing strict_coordinate_pass ledger, excluding263 character/markup failures. Retain4 null complexity if coordinates pass. Quarantine all6 rows in3 fixed same-material/question/answer conflicting-label groups; report intersection, never choose one label or repair. Reuse completed source-only quarantine without a new scan.",
+  "input_fields": [
+    "retrieved_passages",
+    "question",
+    "original_response"
+  ],
+  "input_mapping": {
+    "retrieved_passages": "exact wiki_passage",
+    "question": "exact question",
+    "original_response": "exact llm_answer"
+  },
+  "never_inputs": "golden_answer, llm_checkpoint, original model-bearing id, annotated_span, complexity, wiki title/url and released markup are only in provenance, not in candidate records or model-input file.",
+  "labels": "Original Python Unicode end-exclusive label pairs, order and answer untouched. candidate labels add text only by original answer[start:end]. One binary inconsistency label; do not invent a four-type human taxonomy.",
+  "identity": "response_id=psilo_train_{zero_based_parquet_row_index}; source_id=psilo_material_{raw_passage_sha256}; group_id unchanged from reviewed original article/material group. These keys are bookkeeping, never numeric/text features.",
+  "groups": "Preserve all6888 original groups and each member decision, including groups with no retained members. No new split; all retained candidates are auxiliary_candidate_fit.",
+  "provenance": "Separate full original English records for all16115 rows, stable id mapping, dataset revision and original row/text/labels hashes. Copy existing267-row failure ledger and original article group ledger byte-for-byte; extra4 metadata-only entries remain kept.",
+  "limits": "Automatic GPT annotation, no-context response generation, refusals prefiltered, language field not verified per sentence. High risk share is not deployment prevalence. Coordinate integrity is not semantic truth verification. No human gold and no current training inclusion."
+}

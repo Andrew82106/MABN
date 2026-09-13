@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "code_sha256": "5318e42ea6dc4e056a5e2170f13770567a6f5bc9e4643afc71b6a125d011a63c",
+  "complete_sha256": "4a49c36e295df26c2d40a496c6d18779b3c326e2e3e2955fbf0852b3d0f163d4",
+  "source_hashes_and_exact1090_input_order_verified": true,
+  "fit_only_scaler_moments_checked": true,
+  "full213159_normalized_token_input_exact": true,
+  "all30_epoch_aggregation_threshold_counts_BCE_exact": true,
+  "selected_epoch": 3,
+  "selected_full213159token_checkpoint_reload_exact": true,
+  "old_PCA_mapping_and_model_extraction_not_repeated": true,
+  "test_opened": false,
+  "GPU_used": false,
+  "seconds": 18.94073319993913
+}

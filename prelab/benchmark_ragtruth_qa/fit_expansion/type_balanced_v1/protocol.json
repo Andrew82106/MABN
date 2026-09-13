@@ -1,0 +1,33 @@
+{
+  "version": "expanded-frozen-probe-type-balanced-loss-v1",
+  "data": "Same3680fit/159cal, source615/154, unchanged original human labels and4rawBPE windows; no test",
+  "features": "Exactly existing expanded frozen MiniCheck PCA64 and optional claim risk logit; old PCA and expanded fit-only scalers unchanged",
+  "classes_for_weights_only": [
+    "negative",
+    "baseless",
+    "conflict"
+  ],
+  "target_base_class_mass": [
+    0.5,
+    0.25,
+    0.25
+  ],
+  "mixed_positive_window": "Half type mass to each when both baseless/conflict overlap actual lexical risk positions; one unchanged binary target1",
+  "weights": "Original expanded source/native-aux base weights; fit-only type mass inverse weighting, then reequalize each615sourcegroup; total loss mass168123. No type enters model input or cal selection.",
+  "methods": [
+    "hidden64",
+    "hidden64_risk"
+  ],
+  "C": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "new_fits": 6,
+  "classifier": "Same liblinear L2/maxiter2000/seed20260924/4CPU threads",
+  "selection": "Same original q.selection_key and separate cal risk-F1 thresholds as binary-loss control",
+  "comparison": "Old6 expanded candidates retained as binary-balanced controls; change loss type weighting only, not data/scaler/PCA/model/metric",
+  "scope_limit": "Extra frozen semantic checker, not native generator whitebox. Development calibration repeatedly used; no independent test claim.",
+  "code_sha256": "4cee403f331b30927612a6c2feac031150e8b5ef094856997ae270c9a21f3341",
+  "source_complete_sha256": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9"
+}

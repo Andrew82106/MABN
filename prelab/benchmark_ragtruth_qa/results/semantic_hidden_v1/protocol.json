@@ -1,0 +1,55 @@
+{
+  "version": "qa-minicheck-state-fusion-v1",
+  "scope": "Only frozen fit634/calibration159; no official test",
+  "methods": [
+    "minicheck_hidden64",
+    "minicheck_hidden64_lookback_nll",
+    "minicheck_hidden64_lookback_nll_risk"
+  ],
+  "widths": {
+    "minicheck_hidden64": 64,
+    "minicheck_hidden64_lookback_nll": 1089,
+    "minicheck_hidden64_lookback_nll_risk": 1090
+  },
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260924,
+  "extra_model": "Frozen MiniCheck-RoBERTa-large revision74c8919647e61ed0f71bc177d94f10930f090068, float32 CUDA variant",
+  "native_generator_whitebox_only": false,
+  "checker_finetuned": false,
+  "claim_trace": "Last RoBERTa encoder hidden1024, selected document block = maximum official support for each automatically split claim; first tie; no gold",
+  "hidden_alignment": "Use original-answer half-open character offsets. For each nonwhitespace character average all MiniCheck token states covering it, then average those character states within each original Llama raw BPE. This prevents duplicated Unicode offsets from overweighting characters. Pure-whitespace raw BPE gets zero1024.",
+  "coverage_gate": "Every original-answer nonwhitespace character and every lexical raw BPE must be covered; any missing coverage stops preparation, never removes a row.",
+  "risk_alignment": "For each lexical raw BPE, maximum claim risk among claims intersecting at least one actual alphanumeric character; risk =1-selected support in float64. Nonlexical token risk is0.",
+  "risk_logit": "Clip risk to[1e-6,1-1e-6] then log(p/(1-p)). LR scalar uses max lexical token risk in original4raw window before logit; token scalar retained for separately frozen later TCN.",
+  "PCA": {
+    "components": 64,
+    "n_iter": 3,
+    "seed": 20260924,
+    "whiten": false,
+    "sample": "Exact existing PCA sample identities: each fit answer floor(linspace(0,N-1,min(N,32))) raw BPE positions.",
+    "weight": "Reuse frozen source-group/answer/sample-token balanced weights; sum1. Fit only on mapped fit states, never calibration.",
+    "apply": "(raw hidden1024-fit mean)@components.T in float64, castfloat32; window mean over four actual original raw BPE tokens, including punctuation."
+  },
+  "training": "All168123 fit windows, same frozen source/group/answer/window base weights and class-balanced group-renormalized loss mass168123 as development_v1.",
+  "standardization": "Fit-only base-weighted StandardScaler partial_fit in16384-row blocks; float32 transform, same scaler across three Cs.",
+  "LR": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "cpu_threads": 4
+  },
+  "threshold_selection": "Separate calibration risk F1 thresholds for window/answer, then precision/higher threshold; family C selected maxmin F1, windowF1, windowprecision, lowerC.",
+  "geometry_and_labels": "Original human span labels, lexical masks, all210364 eligible4raw windows, stride1 and original answer labels unchanged. Answer score=max all eligible windows.",
+  "reporting": "All9 candidates plus frozen baselines. No test or final-generalization claim.",
+  "future_information": "Offline whole claim and retrieved document block are visible to bidirectional MiniCheck. Earlier token states can use later claim words.",
+  "next_stage": "Only after LR complete, a separately frozen single width32 RF7 TCN on LB1024+NLL1+mappedPCA64+per-token risk logit1090; not implemented or run in this stage.",
+  "limitations": [
+    "Additional checker parameters, semantic computation and selected-block conditioning change available information.",
+    "PCA64 may discard useful low-variance state directions; this fixed stage does not establish full-state information absence.",
+    "Repeated calibration selection is optimistic; these development numbers are not sealed-test results."
+  ]
+}

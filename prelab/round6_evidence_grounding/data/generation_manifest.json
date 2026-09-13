@@ -1,0 +1,51 @@
+{
+  "runtime_hash": "b5db174084519d1abf3e091066cb8ed41752cdc0b6c33a662327dbd53d81af00",
+  "runtime": {
+    "schema_version": "round6-model-v1",
+    "model": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Qwen2.5-7B-Instruct-bnb-4bit",
+    "system": "You are a helpful assistant.",
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_input_tokens": 3072,
+    "repetition_penalty": 1.0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": null,
+    "seed": 20260910,
+    "attn_implementation": "sdpa",
+    "layers": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "hidden_size": 3584,
+    "feature_timing": "After last lexical content token has been read; causal replay of own exact generated IDs",
+    "final_layer": "Layer 28 after model final RMSNorm; layers 7/14/21 after decoder block, before final RMSNorm",
+    "self_confidence_max_new_tokens": 12,
+    "code_hashes": {
+      "model6.py": "41c2ec2b3a272ea6d5b1802ace9fcc169ff29060a9a6db3880ea97f16ace02a4",
+      "run_model.py": "4402debfdee970f22cd9a554a2d54c75e142237e8421907e9065bd8964f078a9"
+    },
+    "model_config_hash": "c9b481809ae2e99227ac323b77a9da0b5387a0a21f46329327132273435fa3f7"
+  },
+  "input_file": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round6_evidence_grounding\\data\\inputs.jsonl",
+  "input_file_sha256": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+  "expected_rows": 60,
+  "completed_rows": 60,
+  "complete": true,
+  "generation_origin_counts": {
+    "exact_frozen_training_development_smoke_reuse": 2,
+    "fresh_primary_generation": 58
+  },
+  "generated_file_sha256": "8cf2f5ad7cce0ef9cf0c799de71a866bfb849014930a2235fc92550614fd971b",
+  "stage": "generate",
+  "primary_resampling": false,
+  "primary_labels_used": false,
+  "prefix_audit_tolerance": {
+    "minimum_layer_cosine": 0.999,
+    "maximum_next_logit_absolute_difference": 0.5,
+    "same_next_argmax_required": true
+  },
+  "wall_seconds_this_stage": 137.22210070001893
+}

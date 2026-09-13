@@ -1,0 +1,220 @@
+{
+  "schema_version": "onset-segment-probe-protocol-v1",
+  "status": "design_frozen_human_only_diagnostic_complete_v1_stopped",
+  "date": "2026-09-13",
+  "objective": "Detect the start of a released hallucination span, then model whether risk continues or stops, while preserving the frozen 4-raw-BPE evaluation geometry.",
+  "hard_constraints": {
+    "current_run_device": "CPU only",
+    "current_run_actions": [
+      "label census",
+      "geometry audit",
+      "protocol design",
+      "hashing",
+      "CPU human-only strict group OOF diagnostic",
+      "label-blind RAGognize replay planning and static selfcheck"
+    ],
+    "model_training_in_current_run": "CPU-only human-fit diagnostic heads; no silver pretraining and no final candidate fit",
+    "gpu_started_in_current_run": false,
+    "allowed_label_splits": [
+      "RAGTruth native Llama-2 QA fit634",
+      "RAGognize official train conversion_v1"
+    ],
+    "forbidden_label_splits": [
+      "calibration",
+      "validation",
+      "test",
+      "official_test"
+    ],
+    "baseline_mutation": false
+  },
+  "current_execution_gate": {
+    "status": "STOP_971_REPLAY_AFTER_HUMAN_ONLY_OOF",
+    "reason": "The strict human-only fit OOF diagnostic shows useful local ranking but structural failure under recurrence and answer=max: window F1 0.366242, answer AUROC 0.547944, released-onset-window recall 0.297922, and continuation targets are 96.6898% continue. A false onset therefore persists and contaminates later windows and answer max.",
+    "next_allowed_action": "Design v2 on fit/train only with a direct risk-emission anchor and balanced or prior-corrected continue/stop transitions, then require a new human-only group-OOF gate before reconsidering the 971-row replay.",
+    "calibration_allowed": false,
+    "fit_oof_training_run_in_this_audit": true,
+    "ragognize_feature_replay_started": false
+  },
+  "data": {
+    "human_finetune": {
+      "name": "ragtruth_fit_human",
+      "answers": "../../data/answers_fit.jsonl",
+      "records": "../../data/fit.jsonl",
+      "tokens": "../../data/tokens_fit.jsonl",
+      "annotation": "RAGTruth released human character spans"
+    },
+    "silver_pretrain_primary": {
+      "name": "ragognize_train_no_hint_silver",
+      "answers": "../../auxiliary_ragognize_train_v1/conversion_v1/no_unanswerability_hint/answers.jsonl",
+      "sequences": "../../auxiliary_ragognize_train_v1/conversion_v1/no_unanswerability_hint/sequences.jsonl",
+      "annotation": "RAGognize released automatic spans; unmarked tokens are silver negatives, not human-verified negatives"
+    },
+    "silver_capacity_ablation": {
+      "name": "ragognize_train_all_silver",
+      "answers": "../../auxiliary_ragognize_train_v1/conversion_v1/all_train/answers.jsonl",
+      "sequences": "../../auxiliary_ragognize_train_v1/conversion_v1/all_train/sequences.jsonl",
+      "rule": "This superset replaces the no-hint cohort in an OOF-only ablation; never concatenate the two cohorts and never send this ablation to the one-shot calibration run."
+    },
+    "cross_source_collision_rule": "Before every fold, union groups sharing an exact NFC-and-whitespace-normalized question, retrieved-passage block, or response hash across sources; the v1 census found zero such intersections."
+  },
+  "label_geometry": {
+    "tokenizer_axis": "Frozen local Llama-2 raw BPE offsets already stored by each conversion.",
+    "lexical_rule": "A BPE is lexical iff its clipped response interval contains at least one Unicode alphanumeric character.",
+    "risk_rule": "A lexical BPE is risky iff an alphanumeric character in its interval lies inside at least one valid released character span.",
+    "released_span_onset_target": "For every valid released span, select its first intersecting lexical raw BPE. Duplicate starts collapse to one y_first=1 position for the start-head auxiliary loss; the original span count remains reported.",
+    "binary_state_target": "z_i is the union risk mask on the lexical-BPE-only sequence. Binary segment starts are its 0->1 transitions. Overlapping or punctuation-separated released spans that have no clean lexical BPE between them become one realizable binary segment.",
+    "nonlexical_tokens": "Context only. They receive no start, continuation, stop, or risk loss.",
+    "terminal_stop": "Append one EOS stop event when the last lexical BPE is risky; EOS is not an evaluation token.",
+    "window_mapping": {
+      "width_raw_bpe": 4,
+      "stride": 1,
+      "eligible": "At least one lexical BPE in the raw-BPE window.",
+      "token_to_window_score": "Maximum decoded risk probability over lexical BPEs in the window.",
+      "gold_onset_window": "Contains at least one mapped released-span onset; this category takes priority over continuation.",
+      "gold_internal_continuation_window": "Risk-positive and contains no mapped released-span onset.",
+      "gold_clean_window": "Contains no released lexical risk BPE.",
+      "answer_score": "Maximum score over all eligible 4-BPE windows in the answer."
+    }
+  },
+  "input_signals": {
+    "required_reference_conditioned": [
+      {
+        "name": "generator_hidden",
+        "source": "Teacher-forced final-layer hidden state aligned to the answer token; RAGTruth fit cache key hidden_last has 4096 dimensions.",
+        "projection": "Frozen Rademacher 4096->32 projection, NumPy PCG64 seed 20260913, entries +/-1/sqrt(32)."
+      },
+      {
+        "name": "lookback",
+        "source": "Per-layer/per-head reference-vs-generated-prefix attention ratio; RAGTruth fit cache key lb has 1024 dimensions.",
+        "projection": "Frozen Rademacher 1024->32 projection, NumPy PCG64 seed 20260914, entries +/-1/sqrt(32)."
+      },
+      {
+        "name": "chosen_token_nll",
+        "source": "Teacher-forced chosen-token negative log probability; RAGTruth fit cache key nll.",
+        "derived_causal_scalars": [
+          "nll_i",
+          "nll_i - nll_previous_lexical (0 at the first lexical token)",
+          "mean nll over current and previous three lexical tokens",
+          "raw-BPE position / max(1, answer_raw_BPE_count-1)"
+        ]
+      }
+    ],
+    "base_dimension": 68,
+    "normalization": "Mean and standard deviation learned from the human outer-training groups only, separately in every OOF fold; zero-variance columns map to zero.",
+    "historical_trace_claim": "All signals are teacher-forced replay features unless an actual native trace exists; do not describe replay as the original sampling trajectory.",
+    "optional_cortex_feature_ablation": {
+      "prerequisite": "Two token-aligned post-hoc inputs containing the same question and answer, one with retrieved references and one without; no such RAGognize cache exists now.",
+      "features": [
+        "Delta h_i = h_i(reference) - h_i(no-reference)",
+        "c_i = Delta h_i - sum_{j<i} attention_ref(i,j) * Delta h_j"
+      ],
+      "projection": "Apply separate frozen 32-dimensional Rademacher projections before concatenation.",
+      "scope": "Fit-OOF-only ablation until selected and frozen; using these features inside the asymmetric onset/continuation model is not an original CORTEX baseline."
+    }
+  },
+  "model": {
+    "name": "OSR-Linear-68",
+    "capacity": "Two L2-regularized linear heads; no learned encoder, convolution, Transformer, or hidden MLP.",
+    "heads": {
+      "onset": "p_on(i)=sigmoid(w_on^T x_i+b_on)",
+      "continuation": "p_cont(i)=sigmoid(w_cont^T x_i+b_cont); 1 means continue risk and 0 means stop"
+    },
+    "asymmetric_chain": {
+      "initial": "p(z_1=1)=p_on(1)",
+      "recurrence": "p(z_i=1)=(1-p(z_{i-1}=1))*p_on(i)+p(z_{i-1}=1)*p_cont(i)",
+      "hard_span_readout": "Optional Viterbi path under transitions 0->1=p_on, 0->0=1-p_on, 1->1=p_cont, 1->0=1-p_cont.",
+      "reported_score": "Use the soft risk probability from the recurrence for token/window/answer metrics; Viterbi spans are descriptive only."
+    },
+    "parameter_count_excluding_frozen_projection": 138,
+    "regularization": {
+      "optimizer": "AdamW on CPU",
+      "weight_decay": 0.01,
+      "gradient_clip_norm": 1.0,
+      "seeds": [
+        20260913
+      ]
+    }
+  },
+  "loss": {
+    "transition_nll": "Gold-path negative log likelihood: use p_on at lexical positions whose previous gold union state is 0, and p_cont at positions whose previous gold state is 1, including the terminal EOS stop.",
+    "released_onset_auxiliary": "Balanced binary cross entropy on y_first over all lexical BPEs, sharing the onset head. This preserves supervision for released span starts that binary union geometry merges.",
+    "total": "L_transition + 0.25 * L_released_onset",
+    "balancing": "Give each material group equal total mass, answers equal mass within a group, then balance positive and negative cells within each head using training-fold counts only.",
+    "no_synthetic_labels": "Every target is a deterministic transformation of a released span. Do not inject, rewrite, negate, or rule-generate answer text."
+  },
+  "training_stages": {
+    "outer_folds": 5,
+    "fold_assignment": "fold = uint64_be(SHA256(namespace + NUL + group_id)[0:8]) mod 5; namespace is ragtruth_fit_human for human OOF.",
+    "per_fold": [
+      "Hold out every RAGTruth answer in one material group fold before normalization or fitting.",
+      "Fit normalization on the four human training folds only.",
+      "Pretrain the two heads for 15 fixed epochs on all no-hint RAGognize train groups after applying that fold's human normalization; batch by complete answers; learning rate 0.001.",
+      "Fine-tune for 25 fixed epochs on the four human RAGTruth folds; learning rate 0.0003.",
+      "Score only the held human groups to create OOF predictions. No early stopping or fold-specific hyperparameter choice."
+    ],
+    "final_fit": "After the protocol and OOF thresholds are frozen, repeat silver pretraining and human fine-tuning once using all RAGTruth fit groups; fit normalization on all human fit only.",
+    "silver_group_rule": "RAGognize groups never split across batches used as validation/diagnostic units. Silver labels never enter the held human fold. Any future cross-source exact collision is excluded from the corresponding fold.",
+    "feature_generation_rule": "Frozen, label-blind replay may be cached once, but learned projections, scaling, head weights, thresholds, and any score-level feature must obey the group split."
+  },
+  "oof_selection": {
+    "model_variants_eligible_for_v1": [
+      "OSR-Linear-68 with no-hint silver pretraining"
+    ],
+    "diagnostic_variants_not_eligible_for_calibration": [
+      "human-only initialization",
+      "all-train silver superset",
+      "CORTEX feature ablation unless a new protocol version freezes it before calibration"
+    ],
+    "threshold_candidates": "Every distinct pooled human-fit OOF score plus 1.0+epsilon; predict positive when score >= threshold.",
+    "window_threshold_tie_break": [
+      "maximum F1",
+      "maximum precision",
+      "maximum recall",
+      "largest threshold"
+    ],
+    "answer_threshold": "Selected independently by the same tie-break on answer=max pooled human-fit OOF scores.",
+    "freeze_before_calibration": [
+      "feature signature",
+      "model and optimizer settings",
+      "all five OOF predictions",
+      "window threshold",
+      "answer threshold",
+      "final-fit checkpoint hash"
+    ]
+  },
+  "one_shot_calibration_development_validation": {
+    "runs": 1,
+    "allowed_after_freeze": "Open calibration labels once, compute the frozen metrics, and stop. No threshold optimization, checkpoint choice, feature change, or rerun based on calibration errors.",
+    "primary_metrics": [
+      "4-BPE window precision/recall/F1/AP/AUROC",
+      "answer=max precision/recall/F1/AP/AUROC"
+    ],
+    "diagnostics_same_threshold": [
+      "released-span any-hit",
+      "released-span full lexical coverage",
+      "onset-window recall",
+      "internal-continuation-window recall",
+      "clean-window false-positive rate",
+      "RAGTruth error-type recall"
+    ],
+    "acceptance_gate": {
+      "window_f1_strictly_greater_than": 0.6902813989031736,
+      "answer_f1_at_least": 0.8910891089108911,
+      "interpretation": "These are historical repeatedly calibration-selected development references, not independent test claims."
+    },
+    "failure_rule": "Retain the incumbent and archive this v1 candidate. Any redesign becomes v2 and cannot turn the same calibration set into confirmatory evidence.",
+    "official_test": "Remain sealed until a separate final-release protocol authorizes one evaluation."
+  },
+  "method_identity": {
+    "first_hallucination_tokens_original": "Position-aware analysis of logit-derived scalar signals on RAGTruth; it reports stronger first-token detectability and explicitly leaves a deployable classifier for future work.",
+    "cortex_original": "Paired reference/no-reference final hidden-state delta, attention contextual residual, token MLP with weighted BCE, and symmetric label-persistence smoothing; answer score is token max.",
+    "new_in_this_design": [
+      "A supervised released-span onset auxiliary target",
+      "Separate asymmetric start and continuation/stop heads",
+      "A transition recurrence that turns those heads into span risk",
+      "Silver automatic-span pretraining followed by human-span group-OOF fine-tuning",
+      "The frozen raw-4-BPE onset/continuation/clean mapping"
+    ],
+    "naming_rule": "Report the proposed model as OSR-Linear-68 (ours). Do not call it First-Hallucination-Tokens, CORTEX, Lookback, or an original baseline."
+  }
+}

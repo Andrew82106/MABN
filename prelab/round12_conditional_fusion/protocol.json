@@ -1,0 +1,21 @@
+{
+  "schema": "round12-conditional-fusion-v1",
+  "comparison_status": "exploratory_retest_of_previously_exposed_round10_test",
+  "methods": ["lb", "lb_nll", "score_only", "additive", "interaction"],
+  "primary_method": "interaction",
+  "primary_comparator": "additive",
+  "heads": ["item", "token"],
+  "base_C": 0.1,
+  "C_candidates": [0.1, 1.0],
+  "folds": 5,
+  "fold_assignment": "sorted training question groups, numpy default_rng(seed) permutation, array_split into five folds",
+  "seed": 20260912,
+  "fusion": "weighted train OOF standardization of a,n; standardize centered product separately; LR",
+  "deployment": "base refit on all training groups; fixed OOF-trained fusion head",
+  "aggregation": {"item": "mean raw overlapping BPE features before base and fusion", "token": "current token only"},
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260912,
+  "contrasts": ["interaction_minus_additive", "interaction_minus_lb", "interaction_minus_lb_nll", "additive_minus_score_only"],
+  "test_retuning": false,
+  "new_gpu_or_generation": false
+}

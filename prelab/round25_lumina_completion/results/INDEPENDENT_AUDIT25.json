@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "blockers": [],
+  "reviewer": "/root/data_build/extract_review",
+  "type": "Consolidation of completed independent formula and calibration audits; no new feature/model execution",
+  "complete25_sha256": "a839104cbda45f65cd111c187ab2efe7e3a21a848d9cd42d5c87f8c1e50ca8cb",
+  "components": {
+    "FORMULA_AUDIT25.json": {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\FORMULA_AUDIT25.json",
+      "sha256": "0c55f59e1691d2246f1828486b1ff613993dfc9cef4a39ef19a63c5b4a01055d",
+      "status": "passed"
+    },
+    "CALIBRATION_AUDIT25.json": {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\CALIBRATION_AUDIT25.json",
+      "sha256": "25e9b0faceeb4a7e1a2205958fbc74891c7e7eae2a07e86ec819eae283091700",
+      "status": "passed"
+    },
+    "LAMBDA_CALIBRATION_AUDIT25.json": {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round25_lumina_completion\\results\\LAMBDA_CALIBRATION_AUDIT25.json",
+      "sha256": "b41c7d6fb281029c285cead8175c34669a82da9a9964c3eaca4b7439c4a5ba41",
+      "status": "passed"
+    }
+  },
+  "scope": "All602 R16 actual-train saved token arrays and source hashes; no original validation/test or human-QA test parsed.",
+  "feature_rows": 602,
+  "response_tokens": 14968,
+  "formula_token_score_comparisons": 29936,
+  "single_source_MMD_values_exact_R19": 29936,
+  "joint_plans_exact_union": true,
+  "raw_four_BPE_window_means_exact": 48888,
+  "all_candidate_answermax_and_OOF_exact": true,
+  "safe_refusal_max_checks": 1170,
+  "saved_GPU_selfchecks_verified_not_reexecuted": 2,
+  "calibration_threshold_dictionaries_recomputed": 120,
+  "lambda_candidate_keys_exact": 15,
+  "selected_lambdas": [
+    0.75,
+    0.75,
+    0.75,
+    0.75,
+    0.75
+  ],
+  "primary_method": "lumina_joint_body_lambda05",
+  "primary_lambda": 0.5,
+  "secondary_lambda_cannot_replace_primary": true,
+  "all_five_tables_and_scores_bound_before_outer": true,
+  "all7_old_pooled_summaries_exact": true,
+  "old_saved_score_arrays_compared": 427770,
+  "old_manual_replay_max_abs": 9.992007221626409e-16,
+  "OOF_candidate_windows": 12222,
+  "OOF_answers": 602,
+  "evaluable_windows": 9526,
+  "risk_windows": 1063,
+  "evaluable_answers": 598,
+  "risk_answers": 151,
+  "safe_refusals": 117,
+  "OOF_each_row_once": true,
+  "new_formula_results": {
+    "lumina_single_mean_lambda05": {
+      "windows": {
+        "windows": 9526,
+        "risk_windows": 1063,
+        "tp": 508,
+        "fp": 829,
+        "fn": 555,
+        "tn": 7634,
+        "precision": 0.37995512341062077,
+        "recall": 0.477892756349953,
+        "f1": 0.42333333333333334,
+        "alert_rate": 0.14035271887465883,
+        "risk_rate": 0.1115893344530758
+      },
+      "answers": {
+        "answers": 598,
+        "risk_answers": 151,
+        "tp": 117,
+        "fp": 205,
+        "fn": 34,
+        "tn": 242,
+        "precision": 0.36335403726708076,
+        "recall": 0.7748344370860927,
+        "f1": 0.49471458773784355,
+        "alert_rate": 0.5384615384615384,
+        "risk_rate": 0.2525083612040134
+      }
+    },
+    "lumina_joint_body_lambda05": {
+      "windows": {
+        "windows": 9526,
+        "risk_windows": 1063,
+        "tp": 525,
+        "fp": 922,
+        "fn": 538,
+        "tn": 7541,
+        "precision": 0.36281962681409813,
+        "recall": 0.49388523047977423,
+        "f1": 0.41832669322709165,
+        "alert_rate": 0.15190006298551334,
+        "risk_rate": 0.1115893344530758
+      },
+      "answers": {
+        "answers": 598,
+        "risk_answers": 151,
+        "tp": 114,
+        "fp": 203,
+        "fn": 37,
+        "tn": 244,
+        "precision": 0.35962145110410093,
+        "recall": 0.7549668874172185,
+        "f1": 0.48717948717948717,
+        "alert_rate": 0.5301003344481605,
+        "risk_rate": 0.2525083612040134
+      }
+    },
+    "lumina_joint_body_lambda_cal": {
+      "windows": {
+        "windows": 9526,
+        "risk_windows": 1063,
+        "tp": 511,
+        "fp": 823,
+        "fn": 552,
+        "tn": 7640,
+        "precision": 0.3830584707646177,
+        "recall": 0.48071495766698025,
+        "f1": 0.42636629119733,
+        "alert_rate": 0.14003779130799915,
+        "risk_rate": 0.1115893344530758
+      },
+      "answers": {
+        "answers": 598,
+        "risk_answers": 151,
+        "tp": 118,
+        "fp": 207,
+        "fn": 33,
+        "tn": 240,
+        "precision": 0.3630769230769231,
+        "recall": 0.7814569536423841,
+        "f1": 0.4957983193277311,
+        "alert_rate": 0.5434782608695652,
+        "risk_rate": 0.2525083612040134
+      }
+    }
+  },
+  "no_fit": true,
+  "no_GPU": true,
+  "original_heldout_or_QA_test_read": false,
+  "implementation_review": {
+    "IPR": "Original lumina7.ipr_from_hidden over all output layers; saved final statistics; extra final norm behavior retained.",
+    "MMD": "Original top100 unrenormalized cosine kernel MMD, not IPR substituted; same response states P+j-1 on original/joint prefixes.",
+    "combined_score": "float32 lambda*IPR-(1-lambda)*MMD; higher ranks as more risk, signed and not probability.",
+    "intervention": "Only the union of both original R19 body-token masks changes. Titles/question/template and token counts remain unchanged; not natural full-context replacement."
+  },
+  "limitations": [
+    "Saved IPR/MMD raw features checked for identity and formula integrity; no new full-model replay of all602 raw features in this CPU audit.",
+    "Pinned CPU oracle and two production GPU checks are verified saved records, not independently reexecuted GPU checks.",
+    "Original LUMINA answer aggregation differs: current experiment mean over raw4BPE then max over all windows.",
+    "Repeatedly inspected assistant-labeled development OOF, not a fresh final test or a human-QA baseline replication.",
+    "Raw-token formula/4BPE extraction-source audit belongs to parent; not repeated here.",
+    "New-method highlight-token/ranking/bootstrap details are outside this OOF main-count audit.",
+    "Repeated development OOF is not a fresh final test; secondary lambda selection does not replace fixed primary.",
+    "Artifact hashes and recorded timestamps support freeze-before-outer order; they do not independently prove unrecorded external execution history."
+  ],
+  "lambda_calibration_component_fields": {
+    "thresholds_exact": {
+      "lambda_candidates": 30,
+      "fixed_methods": 20,
+      "old_baselines": 70
+    },
+    "total_threshold_dictionaries_exact": 120,
+    "lambda_candidates": 15,
+    "lambda_selection_keys_exact": 15,
+    "selected_lambda_exact": 5,
+    "selected_lambdas": [
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "signed_scores_unchanged": true,
+    "fixed_and_selected_formula_arrays_exact": true
+  }
+}

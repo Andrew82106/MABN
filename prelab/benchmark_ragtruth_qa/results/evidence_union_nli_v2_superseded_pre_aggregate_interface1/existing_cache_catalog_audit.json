@@ -1,0 +1,31 @@
+{
+  "status": "complete_existing_cache_catalog",
+  "unique_requests_seen": 72081,
+  "portable_exact_requests": 71273,
+  "portable_conflicting_requests": 808,
+  "cached_occurrences": 76883,
+  "source_occurrences": {
+    "atomic_microclaim_nli_v1_individual": 66410,
+    "semantic_top3_missing_calibration": 2104,
+    "semantic_top3_missing_fit": 8369
+  },
+  "conflict_occurrences": 2136,
+  "reuse_policy": "bit-identical across every cached occurrence",
+  "model": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "maximum_pair_tokens": 2048,
+    "truncation": false
+  },
+  "model_loaded": false,
+  "GPU_used": false,
+  "labels_used": false,
+  "official_test_opened": false
+}

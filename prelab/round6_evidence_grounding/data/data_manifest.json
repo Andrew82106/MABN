@@ -1,0 +1,138 @@
+{
+  "status": "frozen_pilot_data",
+  "dataset": "hotpotqa/hotpot_qa",
+  "config": "distractor",
+  "upstream_split": "validation",
+  "source_rows_fetched": 600,
+  "source_comparison_rows": 114,
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://hotpotqa.github.io/",
+  "retrievals": [
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=0&length=100",
+      "retrieved_utc": "2026-09-10T10:57:30.111164+00:00",
+      "sha256": "d2d4806c1337dc8e60958ac06647c630716479695bac029336f0e8ae3ba2234b",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=100&length=100",
+      "retrieved_utc": "2026-09-10T10:57:30.388649+00:00",
+      "sha256": "442a605c314ce2e4554b8b65e4e822ccee0d27918ad9734107e33046797ca79c",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=200&length=100",
+      "retrieved_utc": "2026-09-10T10:57:30.327988+00:00",
+      "sha256": "576d3d3e67a2df3ed7b91cb4dcb962afc8787b1197855e43f5ae651f28a2d231",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=300&length=100",
+      "retrieved_utc": "2026-09-10T10:57:30.283412+00:00",
+      "sha256": "8cb9add5c8fef5ca9d6f1465c7e126b9e26b5b07324a2bebc463d2282f75729e",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=400&length=100",
+      "retrieved_utc": "2026-09-10T10:57:31.992009+00:00",
+      "sha256": "83646e9e4ffc30e7cad7b73b91ec7974b035b580dab6d181f467e43e36b70e3e",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/rows?dataset=hotpotqa%2Fhotpot_qa&config=distractor&split=validation&offset=500&length=100",
+      "retrieved_utc": "2026-09-10T10:57:32.049509+00:00",
+      "sha256": "5236429db4456260c23f9c322178a6ef390b612a7aa0050e434247ff69c62960",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://hotpotqa.github.io/"
+    }
+  ],
+  "seed": 20260910,
+  "question_groups": 30,
+  "input_rows": 60,
+  "facts_max": 180,
+  "splits": {
+    "test": 6,
+    "train": 18,
+    "validation": 6
+  },
+  "removal_counts": {
+    "1": 15,
+    "0": 15
+  },
+  "attribute_counts": {
+    "country of origin": 3,
+    "film country": 1,
+    "US state": 1,
+    "birth year": 6,
+    "death year": 1,
+    "first publication year": 2,
+    "highest singles ranking": 1,
+    "nationality": 3,
+    "film year": 3,
+    "height in feet": 1,
+    "province": 1,
+    "number of species": 2,
+    "city": 1,
+    "headquarters state": 1,
+    "battle years": 1,
+    "formation city": 1,
+    "formation year": 1
+  },
+  "source_and_subject_disjoint": true,
+  "preview_groups_excluded": [
+    "5a85ea095542994775f606a8",
+    "5a8b57f25542995d1e6f1371",
+    "5a8c7595554299585d9e36b6",
+    "5a8e3ea95542995a26add48d",
+    "5adbf0a255429947ff17385a"
+  ],
+  "full_natural_source_paragraphs_only": true,
+  "material_length_matching": "absolute Qwen token difference <= max(20, 20% removed full paragraph tokens)",
+  "maximum_chat_tokens": 784,
+  "semantic_review": "Assistant evidence-based source curation before generation; not independent human gold. No Qwen generation or score consulted.",
+  "files_sha256": {
+    "data/curated/candidate_decisions.json": "bf6b0f9694f1185f1171ad7901c58a644834a03425bf45905043e40f7b1c75f2",
+    "data/curated/candidate_specs.json": "cd6a81b531ff4f49caa27ff9a56859a6080653006b42caecc15f6f3bae7c934c",
+    "data/curated/data_audit.json": "b84551cbc61ebdaada4ef9caa17ef41ee183d7d54cef0a64866e4b67c9897845",
+    "data/curated/dev_review.json": "9a6b756280c14697235957fac368cb2f05fbae325e6db970cea792ce04d92191",
+    "data/curated/first_review_notes.json": "abcb5fa59603fd7e1bfe63e4324e0b61d1198e9807154b0e70fce57711dafb84",
+    "data/curated/independent_review_head.json": "d54b4f289fb5f31602dfa317b7c831ff4d8cdb646096078ca86c68acd924638c",
+    "data/curated/independent_review_tail.json": "925132cdbc7c9db190c91acf9e47056f6f9a31b7e47afb631a279b38987c713c",
+    "data/curated/mechanical_candidate_exclusions.json": "1718beeb007695f61aa734c83294ecc56fd166fa49b09777913a0c4c7db17516",
+    "data/curated/proposals.json": "ee8ae8ed122fa696ccb068afde1dbc3afdb9b29ee15bb5fada9cfcd8e9411702",
+    "data/curated/review_draft.json": "fef610907a7d01cda504c21a2fbcb3067ecb47c483b68a4b08c1ffda8e03602b",
+    "data/curated/review_draft_v2.json": "ef98e9eaff23dad6fdb87bc1e77e81c1c7929800567a3af749c5c4405e0797a0",
+    "data/curated/review_notes.json": "9017ea1b2798ad1a6fa6c458044aa8f4bf16dd819ba61e0ff57cd5d2c3ef38ce",
+    "data/curated/selected_groups.json": "41994abaa6107abc72b16463c9a7feff4cf00bd945d7b0b8b303a4896bf25dd9",
+    "data/curated/split_assignment.json": "02b4101ec73c78d6509282823b66c67b0f96ecb13ce8373b2e1b8d9c44418081",
+    "data/dev_inputs.jsonl": "0a8bcc5f803453c68e502b9781e11d7d49e588af443368b846f171d37b4c5112",
+    "data/inputs.jsonl": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+    "data/raw/hotpotqa_validation_0000.json": "d2d4806c1337dc8e60958ac06647c630716479695bac029336f0e8ae3ba2234b",
+    "data/raw/hotpotqa_validation_0000.meta.json": "d76713fa91ca6ee57144731ceb348c711437fa39d493730004ebc0d17ad2b957",
+    "data/raw/hotpotqa_validation_0100.json": "442a605c314ce2e4554b8b65e4e822ccee0d27918ad9734107e33046797ca79c",
+    "data/raw/hotpotqa_validation_0100.meta.json": "658aef93910099fd7e38f7faa2cf258f02a40000f8d26927c7f57d8d9d395329",
+    "data/raw/hotpotqa_validation_0200.json": "576d3d3e67a2df3ed7b91cb4dcb962afc8787b1197855e43f5ae651f28a2d231",
+    "data/raw/hotpotqa_validation_0200.meta.json": "d5f3ff4ae2f3af3fb45169fece9f0a9619a4eb3e18bb340e7763c79887d02217",
+    "data/raw/hotpotqa_validation_0300.json": "8cb9add5c8fef5ca9d6f1465c7e126b9e26b5b07324a2bebc463d2282f75729e",
+    "data/raw/hotpotqa_validation_0300.meta.json": "2d3fc39b24ea80ee460d476eae83edbc1f1913ca1dbc1c70c34e35ef37dabff2",
+    "data/raw/hotpotqa_validation_0400.json": "83646e9e4ffc30e7cad7b73b91ec7974b035b580dab6d181f467e43e36b70e3e",
+    "data/raw/hotpotqa_validation_0400.meta.json": "70368fbe2591da2ad8980d05e54fd7d242482ce5328d5d5ec6d43e593d85d3b7",
+    "data/raw/hotpotqa_validation_0500.json": "5236429db4456260c23f9c322178a6ef390b612a7aa0050e434247ff69c62960",
+    "data/raw/hotpotqa_validation_0500.meta.json": "eb1b219231dc394ba2f0d75da34c1d506ed7619002fa90f5cdc2ffc89fd9e4e9",
+    "data/raw/huggingface_repository_info.json": "9a0e9483af20f74394241a3b6f08aa363fafd46ffdf6505778dea4a2419c110d",
+    "data/raw/huggingface_repository_info.meta.json": "d2413c7291012d5993b2a9e748846cf254f784adc83e217fedab351023dcbe70",
+    "data/references.jsonl": "ac3d7a78eb97dea43d5dd933c99fc86d9379ce9c0c1d1da8542e4cd00ca12c95",
+    "prompts/answer.txt": "f43d9ed78fdf9007a88442e6f82154d143a3cc74d4308cdeca0486a347a2c6e3",
+    "src/prepare_data.py": "7b5d392df5e707253b82f522ed965b0cf4da883deb494842bbb10f2d6b8c6091"
+  },
+  "frozen_utc": "2026-09-10T11:17:30.900001+00:00",
+  "freeze_note": "Root authorized freeze after independent head/tail source reviews and exact input/reference hash checks. Development train question33 smoke is reused unchanged; no generated answer or score was used by the data curator.",
+  "frozen_protocol_file": "protocol.json",
+  "frozen_protocol_sha256": "e81da5db697f901823d0f306d148f0d67be21650fbeaeff1ca27ca30f06e1e4e",
+  "upstream_repository_revision_observed": "1908d6afbbead072334abe2965f91bd2709910ab"
+}

@@ -1,0 +1,79 @@
+{
+  "version": "semantic-window-v2-target-domain-weighted-v1",
+  "preregistered_candidates": {
+    "auxiliary_total_mass_relative_to_native": [
+      0.0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "candidate_count": 4,
+    "target_generator": "llama-2-7b-chat",
+    "native_total_mass": 1.0,
+    "each_of_five_auxiliary_generator_masses": "alpha / 5",
+    "C": 0.1,
+    "feature_variant": "whitebox_geometry",
+    "feature_width": 26
+  },
+  "provenance_gate": {
+    "must_pass_before_fit": true,
+    "evidence": "Hash-bound development_manifest plus its exact exporter code; the exporter selects and asserts llama-2-7b-chat for every fit/calibration row.",
+    "on_failure": "Stop before any fit; do not infer calibration generator identity."
+  },
+  "folds": {
+    "count": 5,
+    "definition": "The exact native-634 sklearn GroupKFold source-connected splits used by semantic_window_v2.",
+    "training": "For each fold, any generator is eligible only when its source-connected group is outside the held native groups.",
+    "selection_and_thresholds": "Only held native-634 target-generator windows and answers.",
+    "all_domain_OOF": "Saved and reported only as a diagnostic at target-native thresholds; never used for selection."
+  },
+  "training_weights": {
+    "hierarchy_within_each_generator": "Equal source-connected group mass; equal answer mass within source group; equal eligible-window mass within answer.",
+    "class_balance": "Binary window classes balanced separately inside every generator after hierarchy weighting.",
+    "domain_mass": "Native generator mass 1; all auxiliaries together alpha, split equally across the five auxiliary generators.",
+    "global_normalization": "Every candidate/fold has total sample-weight mass equal to its native training-window count, preserving C=.1 effective regularization across alpha.",
+    "scaler": "Uses generator-domain hierarchy weights before class balance.",
+    "logistic_loss": "Uses generator-domain hierarchy weights after per-generator binary class balance.",
+    "alpha_zero": "Every auxiliary row has exact zero weight; native OOF scores must replay semantic_window_v2 whitebox_geometry C=.1 within one float64 ULP, with identical threshold decisions and confusion counts."
+  },
+  "model": "StandardScaler plus liblinear L2 LogisticRegression; fixed C=.1 and seed.",
+  "selection_rule": "Maximize native OOF min(window F1, answer F1), then window F1, answer F1, window AP, answer AP, then prefer smaller alpha.",
+  "answer_score": "Maximum eligible-window probability per answer.",
+  "inference_identity_boundary": {
+    "feature_names": [
+      "claim_token_weighted_mean__whitebox_max__oof_lookback",
+      "claim_token_weighted_mean__whitebox_max__oof_large",
+      "claim_token_weighted_mean__whitebox_max__generation_nll",
+      "claim_token_weighted_mean__whitebox_mean__oof_lookback",
+      "claim_token_weighted_mean__whitebox_mean__oof_large",
+      "claim_token_weighted_mean__whitebox_mean__generation_nll",
+      "claim_token_weighted_mean__whitebox_min__oof_lookback",
+      "claim_token_weighted_mean__whitebox_min__oof_large",
+      "claim_token_weighted_mean__whitebox_min__generation_nll",
+      "claim_token_weighted_mean__whitebox_std__oof_lookback",
+      "claim_token_weighted_mean__whitebox_std__oof_large",
+      "claim_token_weighted_mean__whitebox_std__generation_nll",
+      "geometry__lexical_token_fraction_of_k4",
+      "geometry__ownerless_lexical_fraction",
+      "geometry__log1p_distinct_claims",
+      "geometry__claim_boundary_crossing",
+      "geometry__dominant_claim_owner_mass_fraction",
+      "geometry__mean_claim_fraction_covered",
+      "geometry__dominant_claim_fraction_covered",
+      "geometry__mean_relative_position_in_claim",
+      "geometry__mean_center_distance_in_claim",
+      "geometry__fraction_at_claim_start",
+      "geometry__fraction_at_claim_end",
+      "geometry__fraction_within_two_lexical_tokens_of_start",
+      "geometry__fraction_within_two_lexical_tokens_of_end",
+      "geometry__log1p_dominant_claim_length"
+    ],
+    "generator_identity_feature_count": 0,
+    "generator_identity_use": "Training-weight construction and reporting only.",
+    "prediction_inputs": "Exactly 26 numeric whitebox+geometry columns; no generator/source/group/answer identifier."
+  },
+  "calibration": "One evaluation after selected alpha, full-fit model, and native-OOF thresholds are frozen; cal-F1Opt is reported only as a post-hoc diagnostic.",
+  "formal_baselines_modified": false,
+  "official_test_opened": false,
+  "GPU_used": false
+}

@@ -1,0 +1,263 @@
+{
+  "status": "passed",
+  "audit_utc": "2026-09-11T17:42:29.334309+00:00",
+  "reviewer": "/root/data_build/extract_review",
+  "no_new_fit_or_GPU": true,
+  "official_test_or_withheld_content_read": false,
+  "production_imports": false,
+  "frozen_files_modified": false,
+  "limits": [
+    "New five-definition scoring audit only; previous geometry helper is hash-pinned and its independent formulas reused.",
+    "No fitting, tokenizer/model replay or redundant complete old-source review. Calibration selects C and thresholds; outcomes remain selection optimistic."
+  ],
+  "weights": {
+    "fit_windows": 168123,
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "fit_label_counts": [
+      146646,
+      21477
+    ],
+    "base_max_abs": 8.881784197001252e-16,
+    "class_factors_max_abs": 7.771561172376096e-13,
+    "loss_max_abs": 1.9984014443252818e-12,
+    "base_group_mass_max_abs": 1.7053025658242404e-13,
+    "base_answer_mass_max_abs": 1.7053025658242404e-13,
+    "loss_group_mass_max_abs": 2.2737367544323206e-13,
+    "loss_total_mass": 168123.0,
+    "expected_loss_mass": 168123,
+    "formula": "b_i=(N/G)/(answers_in_group*eligible_windows_in_answer); f_y=sum(b)/(2*sum_class_y(b)); u=b*f_y; loss_i=(N/G)*u_i/sum_group(u)."
+  },
+  "complete_feature_gate": {
+    "rows": 793,
+    "fit": 634,
+    "calibration": 159,
+    "order_exact": true,
+    "signature_exact": true
+  },
+  "families": {
+    "lb_source_pre_header": {
+      "fit_only_scaler": {
+        "mean_max_abs": 1.1102230246251565e-16,
+        "variance_max_abs": 2.0816681711721685e-17,
+        "scale_max_abs": 5.551115123125783e-17,
+        "weight_count_max_abs": 0.0
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        }
+      ],
+      "fit_standardized_exact": true,
+      "selected_C": 0.001,
+      "cal_window_F1": 0.549413988657845,
+      "cal_answer_F1": 0.8598130841121495
+    },
+    "lb_prefix_pre_header": {
+      "fit_only_scaler": {
+        "mean_max_abs": 2.220446049250313e-16,
+        "variance_max_abs": 1.3877787807814457e-17,
+        "scale_max_abs": 5.551115123125783e-17,
+        "weight_count_max_abs": 0.0
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 1.1102230246251565e-16
+        }
+      ],
+      "fit_standardized_exact": true,
+      "selected_C": 0.001,
+      "cal_window_F1": 0.5624651644239191,
+      "cal_answer_F1": 0.8454545454545455
+    },
+    "lb_source_post_header": {
+      "fit_only_scaler": {
+        "mean_max_abs": 1.1102230246251565e-16,
+        "variance_max_abs": 1.3877787807814457e-17,
+        "scale_max_abs": 5.551115123125783e-17,
+        "weight_count_max_abs": 0.0
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        }
+      ],
+      "fit_standardized_exact": true,
+      "selected_C": 0.001,
+      "cal_window_F1": 0.5555287882437967,
+      "cal_answer_F1": 0.8532110091743119
+    },
+    "lb_prefix_post_header": {
+      "fit_only_scaler": {
+        "mean_max_abs": 2.220446049250313e-16,
+        "variance_max_abs": 2.0816681711721685e-17,
+        "scale_max_abs": 5.551115123125783e-17,
+        "weight_count_max_abs": 0.0
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "mode": "new_fit",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        }
+      ],
+      "fit_standardized_exact": true,
+      "selected_C": 0.001,
+      "cal_window_F1": 0.5664834714133377,
+      "cal_answer_F1": 0.8518518518518519
+    },
+    "lb_source_post_legacy": {
+      "fit_only_scaler": {
+        "mean_max_abs": 2.220446049250313e-16,
+        "variance_max_abs": 2.0816681711721685e-17,
+        "scale_max_abs": 5.551115123125783e-17,
+        "weight_count_max_abs": 0.0
+      },
+      "candidates": [
+        {
+          "C": 0.001,
+          "mode": "frozen_legacy_replay",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "mode": "frozen_legacy_replay",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "mode": "frozen_legacy_replay",
+          "coefficient_max_abs": 2.220446049250313e-16,
+          "answermax_max_abs": 2.220446049250313e-16
+        }
+      ],
+      "fit_standardized_exact": true,
+      "selected_C": 0.001,
+      "cal_window_F1": 0.558252427184466,
+      "cal_answer_F1": 0.8611111111111112
+    }
+  },
+  "thresholds_exact": 30,
+  "selection_keys_exact": 15,
+  "selected_Cs_exact": 5,
+  "metric_blocks": 60,
+  "max_metric_abs": 2.220446049250313e-16,
+  "manual_window_score_count": 3155460,
+  "manual_answermax_count": 11895,
+  "max_coefficient_score_abs": 2.220446049250313e-16,
+  "old_three_models_scalers_scores_thresholds_metrics_exact": true,
+  "all_original_weights_and_fit_keys_exact": true,
+  "blockers": [],
+  "feature_geometry": {
+    "all793_source_plan_layout_cache_identities_exact": true,
+    "all_five_raw_window_mean_arrays_exact": true,
+    "all793_legacy_token_LB_arrays_exact": true,
+    "window_vectors_compared": 1051820,
+    "window_scalar_elements_compared": 1077063680,
+    "counts": {
+      "windows_with_nonlexical_raw_slots": 102946,
+      "short_windows": 0,
+      "windows": 210364,
+      "answers": 793,
+      "raw_tokens": 213159,
+      "negative_raw_first_offset_answers": 793,
+      "duplicate_adjacent_offsets": 2
+    }
+  },
+  "verified_top_level_files": 66,
+  "complete_sha256": "7b13837857a20e0320d63c5b84ccd1af07d6821c13ef4b1cf0230f7f90eefaa0",
+  "audit_script_sha256": "dc5f32fed2666604907e2474fdb6a9bec46b30f4953b1109b43112c6494414eb",
+  "denominators": {
+    "fit": {
+      "answers": 634,
+      "positive_answers": 328,
+      "groups": 615,
+      "windows": 168123,
+      "positive_windows": 21477
+    },
+    "calibration": {
+      "answers": 159,
+      "positive_answers": 100,
+      "groups": 154,
+      "windows": 42241,
+      "positive_windows": 5984
+    }
+  },
+  "additional_metadata_verification": {
+    "passed": true,
+    "checked_files_sha256": {
+      "src\\feature_lookback_controls_v2.py": "b49629aa5370444f74afe9e313b01330bf31e6210156e8c0069088aabb84426f",
+      "src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+      "src\\run_feature_qa.py": "9d9bd6ba68e297f2986420ea5265546d6c48bd4fec8090f20eac08d70d3d9957",
+      "lookback_controls_protocol.json": "e3c076aee951f56c3f2c5853854d2613019589874202525e82bdafa5427abfbc",
+      "data/feature_preparation/plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+      "data/feature_manifest.json": "1731cc532289ad927cb8b9bd5eea3fc9a9916105f3695bb71e0b593c34ef883d",
+      "data/feature_signature.json": "131815b0e3b53a978c9a462ff289e6b95ab8e56dc7921d925538518691ee9f09",
+      "data/gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+      "development_protocol.json": "d572f97ff57b179cab8f5fa89fcfaa8fd33b8fbee4b2a082c346f2a7dc6ef34e",
+      "model_download_manifest.json": "a78209b43b6725f5d5e8fe446f801e7f04498ee53f360345cb67999e1aa511c1",
+      "data/lookback_controls_v2/layouts.jsonl": "2de5dc758cf1036fe11378af8b5aaf47fc265e1a8789a9af5dba451c7f0a2f5f"
+    },
+    "note": "Additional read-only metadata verification; no model weight load/forward or source-chain re-fit."
+  }
+}

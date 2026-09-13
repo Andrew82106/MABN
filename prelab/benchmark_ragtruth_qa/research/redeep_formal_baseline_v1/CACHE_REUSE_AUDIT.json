@@ -1,0 +1,53 @@
+{
+  "version": "redeep-cache-reuse-audit-v1",
+  "conclusion": "no existing cache contains sufficient statistics for a faithful ReDeEP(Token) score; full new FP16 extraction is required",
+  "requirements": {
+    "ecs": "for each of 32 published candidate heads and every response predictor: exact top-10-percent prefix/reference token identities plus final-layer hidden states at those positions and the predictor",
+    "pks": "for every one of 32 layers and every response predictor: final-RMSNorm+LM-head vocabulary distributions from residual states immediately before and after that FFN",
+    "backbone": "full unquantized FP16 Llama-2-7B-Chat under the released double-BOS chat wrapper"
+  },
+  "reviewed_cache_classes": [
+    {
+      "cache": "Lookback/LB attention ratios",
+      "usable": false,
+      "reason": "aggregated context/new attention ratios cannot reconstruct the selected top-prefix token identities or their final hidden-state cosine"
+    },
+    {
+      "cache": "post-read/final hidden-state probes",
+      "usable": false,
+      "reason": "do not retain all candidate-head Q/K rankings and do not contain every FFN's before/after residual"
+    },
+    {
+      "cache": "NLL/log-probability features",
+      "usable": false,
+      "reason": "one next-token likelihood cannot reconstruct two full vocabulary distributions at every FFN layer"
+    },
+    {
+      "cache": "LUMINA IPR/MMD features",
+      "usable": false,
+      "reason": "their seven frozen aggregate columns are irreversible and use a different perturbation method"
+    },
+    {
+      "cache": "HARP/GHOST/semantic features",
+      "usable": false,
+      "reason": "different activations, quantization and/or learned readouts; substituting them would modify the baseline"
+    },
+    {
+      "cache": "existing NF4 Llama feature replay",
+      "usable": false,
+      "reason": "quantization changes both attention ranking and residual LogitLens distributions; formal ReDeEP specifies FP16"
+    },
+    {
+      "cache": "author-bundled test JSON",
+      "usable": false,
+      "reason": "prohibited and retired after the documented access incident; it is not the shared fit/cal input"
+    }
+  ],
+  "safe_reuse": [
+    "released_prompt, original_response and immutable answer/prompt hashes from shared fit/cal",
+    "shared response-character and eligible 4-BPE window geometry after labels are physically stripped",
+    "the author's fixed 32-head candidate list and published K/alpha/beta values",
+    "the locally downloaded full-FP16 checkpoint after shard hash verification"
+  ]
+}
+

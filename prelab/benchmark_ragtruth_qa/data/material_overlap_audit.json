@@ -1,0 +1,157 @@
+{
+  "rule": "same >=8-word entire passage or any exact normalized 20-word source window; no answer/labels used",
+  "edges": [
+    {
+      "a": "qa:12310",
+      "b": "qa:15164",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 18,
+      "example_window_hash": "02cd139b9441ec91227ef949de5f16ba1046d181a0fcc806e462ad34fb4883dc"
+    },
+    {
+      "a": "qa:12429",
+      "b": "qa:15164",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 36,
+      "example_window_hash": "e79ea4b52f12a4dc741f412319f1e977057783e92bc6f23184fff7d80a23bacf"
+    },
+    {
+      "a": "qa:12429",
+      "b": "qa:15388",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 6,
+      "example_window_hash": "6ab7e7c0f227fef8e744ed706172d5b04b54c71922d6ec3c2817bc0b5ea10863"
+    },
+    {
+      "a": "qa:12433",
+      "b": "qa:14311",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 37,
+      "example_window_hash": "d69cc19d7dc804f694ffb0a0335b6ae5f4d5697a7a2e43961ccd8b82f51cd30a"
+    },
+    {
+      "a": "qa:14303",
+      "b": "qa:14437",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 19,
+      "example_window_hash": "ea1815d218d41c515ec220048124e1173ee85398dcda9ad53094e2e24277a148"
+    },
+    {
+      "a": "qa:14325",
+      "b": "qa:15545",
+      "exact_passage_hashes": [
+        "d09b4df703058f17f2524f7b3eb123b9786dd1de3807cbfc6122884cdab2e678"
+      ],
+      "shared_20word_window_count": 90,
+      "example_window_hash": "f33808e950c4fece0d941244ff1a80eb51ba9079cf95b03b3b2d18a99ecd3abb"
+    },
+    {
+      "a": "qa:14352",
+      "b": "qa:15121",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 7,
+      "example_window_hash": "2338db2b31f1b7a96bc2dc6de0404eb0bed568fe89522c8c2b8ba10b1ceb87a3"
+    },
+    {
+      "a": "qa:14424",
+      "b": "qa:15215",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 41,
+      "example_window_hash": "9d5c5be296eaee6387b8253170a80c6fd0fca79009e12ee300bd71685eeb3a82"
+    },
+    {
+      "a": "qa:14426",
+      "b": "qa:14440",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 74,
+      "example_window_hash": "3adadebacac9cb0732deb0ad6ed532ad5a5ab86ff90c258588e8abd11eb3c305"
+    },
+    {
+      "a": "qa:14426",
+      "b": "qa:15181",
+      "exact_passage_hashes": [
+        "0674535884ae4dc367dba9d7f6bdb1a4888d41f771095069632ab2dac9fa398a"
+      ],
+      "shared_20word_window_count": 94,
+      "example_window_hash": "9bb805e4bf649fd7791117e783cc8980dd0342ba660f91e08095051b5e6518c6"
+    },
+    {
+      "a": "qa:14426",
+      "b": "qa:15272",
+      "exact_passage_hashes": [
+        "0674535884ae4dc367dba9d7f6bdb1a4888d41f771095069632ab2dac9fa398a"
+      ],
+      "shared_20word_window_count": 94,
+      "example_window_hash": "9bb805e4bf649fd7791117e783cc8980dd0342ba660f91e08095051b5e6518c6"
+    },
+    {
+      "a": "qa:14440",
+      "b": "qa:15181",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 74,
+      "example_window_hash": "3adadebacac9cb0732deb0ad6ed532ad5a5ab86ff90c258588e8abd11eb3c305"
+    },
+    {
+      "a": "qa:14440",
+      "b": "qa:15272",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 88,
+      "example_window_hash": "54f91e1c49fef0a2911eb316c569070e846d983680d17e8cff351710099ebb79"
+    },
+    {
+      "a": "qa:14468",
+      "b": "qa:15522",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 70,
+      "example_window_hash": "93f09bdd7c11274ad6c6984238eb66621cf30a1a2493c641976fcf6ee081af4e"
+    },
+    {
+      "a": "qa:15112",
+      "b": "qa:15419",
+      "exact_passage_hashes": [
+        "cc57fa224e973f5517c138a9440cd199d61b4e21fb9dd6dafd60cc5d94bdb433"
+      ],
+      "shared_20word_window_count": 51,
+      "example_window_hash": "9a5e1df2711eb526985578797d7da1db5d1c3cba574360cd7badc16f529e73de"
+    },
+    {
+      "a": "qa:15149",
+      "b": "qa:15313",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 96,
+      "example_window_hash": "1a241c460fe44a140ef4282dd6e28ecc0e8550844b6fed123c919a053e393a46"
+    },
+    {
+      "a": "qa:15166",
+      "b": "qa:15191",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 65,
+      "example_window_hash": "374a1f7179be2fde6cbde20f2fc43159a9ad8ef0592a90bfef93e755e6136dce"
+    },
+    {
+      "a": "qa:15181",
+      "b": "qa:15272",
+      "exact_passage_hashes": [
+        "0674535884ae4dc367dba9d7f6bdb1a4888d41f771095069632ab2dac9fa398a"
+      ],
+      "shared_20word_window_count": 94,
+      "example_window_hash": "9bb805e4bf649fd7791117e783cc8980dd0342ba660f91e08095051b5e6518c6"
+    },
+    {
+      "a": "qa:15203",
+      "b": "qa:15317",
+      "exact_passage_hashes": [
+        "4d3b772738928434aa8032be8d6542fa2cfc8cac4b637b403cfde35a2777cc25"
+      ],
+      "shared_20word_window_count": 70,
+      "example_window_hash": "f8d00a84dd4f7bd3a8e2722ec2d234f239832fe750ecf7a242c0cfcff7714459"
+    },
+    {
+      "a": "qa:15347",
+      "b": "qa:15351",
+      "exact_passage_hashes": [],
+      "shared_20word_window_count": 49,
+      "example_window_hash": "9e93e51429e3aa4affd26289edba0bd90bda67be1d74a61ef8b0c72b5510f0a7"
+    }
+  ]
+}

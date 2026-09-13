@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "sample_seed": 8197,
+  "samples": [
+    {
+      "task": "trivia",
+      "id": "trivia_bb_14",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_50",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 2,
+      "n_replay_tokens": 2
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_qb_10282",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_15140",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_qw_5100",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_bb_952",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_sfq_21710",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_7032",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 4,
+      "n_replay_tokens": 4
+    },
+    {
+      "task": "rag",
+      "id": "squad_57277fbedd62a815002e9ed0",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 36,
+      "n_replay_tokens": 36
+    },
+    {
+      "task": "rag",
+      "id": "squad_5726afeb708984140094cdda",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 16,
+      "n_replay_tokens": 16
+    },
+    {
+      "task": "rag",
+      "id": "squad_57332442d058e614000b5721",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 29,
+      "n_replay_tokens": 29
+    },
+    {
+      "task": "rag",
+      "id": "squad_572901d03f37b31900477f75",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 14,
+      "n_replay_tokens": 14
+    },
+    {
+      "task": "rag",
+      "id": "squad_572bb385111d821400f38f4d",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 20,
+      "n_replay_tokens": 20
+    },
+    {
+      "task": "rag",
+      "id": "squad_5726f074708984140094d68b",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 24,
+      "n_replay_tokens": 24
+    },
+    {
+      "task": "rag",
+      "id": "squad_57301e6bb2c2fd14005688bd",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 21,
+      "n_replay_tokens": 21
+    },
+    {
+      "task": "rag",
+      "id": "squad_5727fb092ca10214002d9aa7",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 24,
+      "n_replay_tokens": 24
+    }
+  ],
+  "scope": "Sampled seeded regeneration, not saved live state traces for every prior response. RAG runs after the trace addition also record actual generation token IDs."
+}

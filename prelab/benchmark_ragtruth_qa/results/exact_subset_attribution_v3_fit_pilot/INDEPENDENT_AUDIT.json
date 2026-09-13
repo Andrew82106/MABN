@@ -1,0 +1,45 @@
+{
+  "status": "passed_independent_CPU_fit_pilot_audit",
+  "audit_source_sha256": "26b140db37df01369b544180fee2d1c3b586ee67c1a8b6c873057233ef76ce3b",
+  "production_source_sha256": "4c9b7e01fc77dfb97509144e64145396d948f60d7b7a2b66f6549d53efab980b",
+  "selection_manifest_sha256": "1c438ce9e70c64c0538000589a3e276c8354da1983df8fe5d3e01712ed90eb04",
+  "selected_prepared_sha256": "f8c584e4c24565bf4e607d5673c9b54523e33a91b1365780d4f01e84ac06089b",
+  "source_prepared_sha256": "55753d10aa79f2069acfed7161c9b64fa8bcc4ed21da97c1a403ec73e1ff1f2a",
+  "statistics": {
+    "population_answers": 3839,
+    "fit_groups": 615,
+    "selected_answers_groups_sources": [
+      256,
+      256,
+      256
+    ],
+    "fold_counts": {
+      "0": 52,
+      "1": 51,
+      "2": 51,
+      "3": 51,
+      "4": 51
+    },
+    "raw_answer_tokens": 46481,
+    "all_eight_view_input_tokens": 904496,
+    "forward_calls": 2048
+  },
+  "checks": {
+    "selection_independently_recomputed_exact": true,
+    "selection_uses_no_label_length_risk_or_score": true,
+    "selected_rows_equal_upstream_label_free_objects": true,
+    "five_GroupKFold_assignments_recomputed": true,
+    "all_upstream_v1_v2_hashes_unchanged": true,
+    "same_v1_extraction_and_v2_gate_bound": true,
+    "three_fixed_internal_LR_ablations": true,
+    "unified_window_answer_projection_bound": true,
+    "GPU_cache_and_score_outputs_absent": true,
+    "paper_baseline_untouched": true
+  },
+  "fit_gold_files_opened": false,
+  "labels_accessed": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "production_imported": false
+}

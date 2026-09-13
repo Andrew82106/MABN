@@ -1,0 +1,129 @@
+{
+  "schema_version": "osr-emission-anchor-fit-oof-protocol-v2",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "date": "2026-09-13",
+  "objective": "Test whether a direct lexical-token risk emission can prevent false onset persistence while retaining asymmetric onset and continuation/stop structure.",
+  "hard_constraints": {
+    "device": "CPU only",
+    "allowed_labels": [
+      "RAGTruth native Llama-2 QA fit634"
+    ],
+    "allowed_cached_features": [
+      "fit hidden_last",
+      "fit lb (Lookback)",
+      "fit nll"
+    ],
+    "forbidden_splits": [
+      "calibration",
+      "validation",
+      "test",
+      "official_test"
+    ],
+    "silver_pretraining": false,
+    "baseline_mutation": false,
+    "gpu_started": false
+  },
+  "data_and_split": {
+    "answers": "../../data/answers_fit.jsonl",
+    "tokens": "../../data/tokens_fit.jsonl",
+    "features": "../../data/features/<response_id>.{npz,json}",
+    "answers_expected": 634,
+    "groups_expected": 615,
+    "outer_folds": 5,
+    "fold_formula": "uint64_be(SHA256('ragtruth_fit_human' + NUL + group_id)[0:8]) mod 5",
+    "leakage_rule": "Every group is wholly held out before scaler, weights, priors, or heads are fit."
+  },
+  "geometry": {
+    "token_axis": "lexical raw Llama-2 BPEs from the frozen fit token cache",
+    "risk_target": "released character-span union mapped to lexical BPEs",
+    "window": "fixed width 4 raw BPE, stride 1, eligible iff at least one lexical BPE",
+    "window_score": "maximum lexical-token score in the window",
+    "answer_score": "maximum eligible 4-BPE window score",
+    "window_categories": [
+      "released_onset",
+      "internal_continuation",
+      "clean"
+    ]
+  },
+  "features": {
+    "dimension": 68,
+    "hidden_projection": "frozen PCG64 Rademacher 4096->32, seed 20260913",
+    "lookback_projection": "frozen PCG64 Rademacher 1024->32, seed 20260914",
+    "causal_scalars": [
+      "nll_i",
+      "nll_i - nll_previous_lexical",
+      "mean nll over current and previous three lexical tokens",
+      "raw-BPE normalized position"
+    ],
+    "normalization": "unweighted lexical-token mean/std from the outer-training groups only"
+  },
+  "model": {
+    "name": "OSR-Emission-Anchor-68-v2",
+    "learned_heads": {
+      "emission": "sigmoid(w_emit*x_i+b_emit), target z_i at every lexical token",
+      "onset": "sigmoid(w_on*x_i+b_on), target z_i only where gold z_(i-1)=0",
+      "continuation": "sigmoid(w_cont*x_i+b_cont), target z_i only where gold z_(i-1)=1"
+    },
+    "learned_parameter_count": 207,
+    "terminal_rule": "No fabricated EOS representation. A terminal risky token has no next lexical transition and contributes no duplicated stop cell.",
+    "balancing": "Within each head, first give groups equal mass, answers equal mass within group, and cells equal mass within answer; then give the two classes equal mass using outer-training rows only.",
+    "prior_correction": "For each head and fold, add logit(pi_train) to the balanced-head logit, where pi_train is the pre-class-balance hierarchical positive mass from that outer-training fold.",
+    "optimizer": {
+      "name": "AdamW",
+      "epochs": 25,
+      "learning_rate": 0.0003,
+      "answer_batch_size": 16,
+      "weight_decay": 0.01,
+      "gradient_clip_norm_per_head": 1.0,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08,
+      "initialization": "all zeros",
+      "seed": "20260913 + outer_fold"
+    }
+  },
+  "decoder_candidates_frozen_before_oof": [
+    {
+      "name": "anchored_filter",
+      "role": "primary",
+      "definition": "a_i=(1-q_(i-1))*p_on(i)+q_(i-1)*p_cont(i); q_i=sigmoid(logit(a_i)+logit(p_emit_balanced(i))). The balanced emission logit is a likelihood-ratio anchor, so sufficiently clean direct evidence can exit a false risk state."
+    },
+    {
+      "name": "emission_identity",
+      "role": "identity/no-transition control",
+      "definition": "q_i=p_emit(i) after outer-training prior correction"
+    },
+    {
+      "name": "transition_only",
+      "role": "no-emission ablation",
+      "definition": "q_i=(1-q_(i-1))*p_on(i)+q_(i-1)*p_cont(i) after outer-training prior correction"
+    }
+  ],
+  "selection": {
+    "primary_fixed_before_oof": "anchored_filter",
+    "candidate_switching_after_results": false,
+    "thresholds": "For each frozen decoder and level separately, select one pooled fit-OOF threshold by maximum F1, then precision, recall, and largest threshold.",
+    "calibration_use": "None. No calibration threshold, label, error, score, or file may be read."
+  },
+  "required_reporting": [
+    "window and answer precision/recall/F1/AUROC/AP",
+    "released-onset recall, internal-continuation recall, and clean FPR at the primary window threshold",
+    "head metrics and natural priors",
+    "all five fold metrics plus mean/std/min/max stability",
+    "identity/no-transition and transition-only controls",
+    "code, protocol, data, cache, and output hashes"
+  ],
+  "calibration_investment_gate": {
+    "all_required": true,
+    "primary_window_f1_at_least": 0.6902813989031736,
+    "primary_answer_f1_at_least": 0.8910891089108911,
+    "primary_answer_auroc_at_least": 0.60,
+    "released_onset_window_recall_at_least": 0.50,
+    "internal_continuation_window_recall_at_least": 0.50,
+    "clean_window_fpr_at_most": 0.10,
+    "folds_with_window_auroc_above_0_55_at_least": 4,
+    "anchored_window_f1_at_least_identity": true,
+    "anchored_answer_auroc_at_least_identity": true,
+    "interpretation": "The F1 floors are the already-recorded development reference in v1, used only as a conservative investment bar. Passing would authorize consideration of one later frozen calibration run; failing stops v2 without reading calibration."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "version": "lumina-author-code-full-answer-mean-v1",
+  "role": "Appendix native-aggregation verification: author-code formula transfer and paper Eq2 full-answer mean; not the main unified-task comparison or original-paper numerical reproduction.",
+  "unified_task_comparison": "Existing score_lumina_qa_v1.py and lumina_qa_scoring_v1 remain the main fixed4-BPE/answermax task evaluation. External granularity mapping and uniform thresholds do not modify the frozen detector; this appendix neither replaces nor edits them.",
+  "official_commit": "c43ff41d872b05f659dcb3ad3a6dd78226954319",
+  "official_code_sha256": "1b5ecd8c08982b40dae59f299e580219074ee83673768feb53cf15612b7d8a5f",
+  "primary": "lumina",
+  "ablations": [
+    "ipr",
+    "negative_mmd"
+  ],
+  "token_score": "Saved float32 column2 = .5*IPR - .5*MMD_squared, unchanged. No new coefficients.",
+  "aggregation": "Float64 arithmetic mean over ALL original raw answer BPE, including punctuation, boundary-crossing first and final token. No lexical mask, windows, answermax, clipping or sigmoid.",
+  "cohort": {
+    "fit": 3680,
+    "calibration": 159,
+    "all_answers": 3839,
+    "all_raw_answer_tokens": 708506
+  },
+  "labels": "Unchanged official answer label (nonempty original annotation list), never reconstructed from token or window labels. All answers and refusals retained.",
+  "main_metrics": [
+    "AUROC",
+    "AUPRC_trapezoid",
+    "PCC"
+  ],
+  "metric_definitions": {
+    "AUROC": "Unweighted roc_auc_score, risk-positive direction.",
+    "AUPRC_trapezoid": "Unweighted trapezoidal auc(recall, precision) from precision_recall_curve, tied scores grouped.",
+    "AP": "Also report noninterpolated average_precision_score explicitly; do not silently equate AP with trapezoidal PR-AUC.",
+    "PCC": "Pearson correlation between answer risk score and original binary answer label.",
+    "F1Opt": "Secondary Appendix E.1 evaluation statistic: maximum F1 over all achievable distinct-score cuts on the reported cohort. Return only the scalar optimum, never a threshold or a deployable policy."
+  },
+  "selection": "None: no trained readout, feature/weight/model selection, deployable threshold or cross-method winner. Report all three fixed scores.",
+  "reporting": "Calibration159 is the main development cohort; fit3680 is a separate descriptive cohort. No combined fit+cal result and no official-test claim.",
+  "interface_adaptations": [
+    "Original question, wrapper and all frozen answer IDs retained; two contexts share the same answer IDs.",
+    "Whole fit-only donor material, shared across generators of a source, chosen without labels or scores.",
+    "No author extra response-leading space, retokenization or12000-character truncation."
+  ],
+  "numerical_disclosures": [
+    "Llama2 NF4/BF16 replay with FP32 statistics is not historical native traces or fullprecision identity.",
+    "Streaming all-layer IPR and algebraically equivalent unnormalized-top100 cosine MMD; memory reduction does not alter mathematical coefficients.",
+    "Follow pinned code hidden_states[1:] including final layer and its repeated norm, rather than silently adopting paper Eq8 L-1."
+  ],
+  "complete_gate": "Require all3839/708506 and validate extractor signatures/hashes/axes before any score is computed. Missing records never reduce the denominator.",
+  "commands": [
+    "prepare",
+    "check",
+    "score",
+    "verify"
+  ],
+  "automatic_score": false,
+  "new_fits": 0,
+  "GPU_used": false,
+  "official_test_opened": false
+}

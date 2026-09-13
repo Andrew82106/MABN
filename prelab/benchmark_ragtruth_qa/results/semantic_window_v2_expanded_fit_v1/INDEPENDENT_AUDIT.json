@@ -1,0 +1,16 @@
+{
+  "status": "passed_without_reopening_calibration_labels",
+  "upstream_supervised_columns_source_group_OOF": true,
+  "in_sample_supervised_columns": 0,
+  "native_feature_rows_exact": 168123,
+  "downstream_five_fold_group_coverage_exactly_once": true,
+  "saved_fit_metrics_exact": true,
+  "per_generator_fit_OOF_counts_and_metrics_exact": true,
+  "full_model_loadable": true,
+  "calibration_score_shapes_and_finiteness_valid": true,
+  "calibration_labels_reopened_by_audit": false,
+  "calibration_thresholds_fitted": 0,
+  "formal_baseline_files_unchanged": true,
+  "official_test_opened": false,
+  "GPU_used": false
+}

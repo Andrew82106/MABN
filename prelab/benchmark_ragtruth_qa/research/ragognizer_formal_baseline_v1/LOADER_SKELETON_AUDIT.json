@@ -1,0 +1,54 @@
+{
+  "version": "ragognizer-loader-skeleton-cpu-audit-v1",
+  "status": "pass",
+  "base_class": "LlamaForCausalLM",
+  "model_type": "llama",
+  "hidden_layers": 32,
+  "integrated_heads": [
+    "hallu_head_neg_16"
+  ],
+  "detection_head_layers": [
+    [
+      4096,
+      1024,
+      true
+    ],
+    [
+      1024,
+      1024,
+      true
+    ],
+    [
+      1024,
+      1,
+      false
+    ]
+  ],
+  "saved_detection_head_shapes": {
+    "lins.0.bias": [
+      1024
+    ],
+    "lins.0.weight": [
+      1024,
+      4096
+    ],
+    "lins.1.bias": [
+      1024
+    ],
+    "lins.1.weight": [
+      1024,
+      1024
+    ],
+    "lins.2.weight": [
+      1,
+      1024
+    ]
+  },
+  "lm_head": [
+    4096,
+    32000
+  ],
+  "model_weights_loaded": false,
+  "labels_read": false,
+  "gpu_workload_started": false
+}

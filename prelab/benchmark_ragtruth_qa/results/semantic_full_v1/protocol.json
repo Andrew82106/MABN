@@ -1,0 +1,32 @@
+{
+  "version": "qa-minicheck-full-state-v1",
+  "methods": [
+    "minicheck_hidden64",
+    "minicheck_hidden1024"
+  ],
+  "C": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ],
+  "hypothesis": "PCA retains most variance but can remove low-variance error information; compare full1024 to identical frozen PCA64 with matched five-C search.",
+  "new_fits": 7,
+  "reused_fits": "Three existing PCA64 Cs .001/.01/.1 replayed, not refitted",
+  "state": "Same frozen MiniCheck selected-document final hidden state, already character-aligned to original Llama raw tokens; punctuation retained, whitespace zero",
+  "features": "Mean states over the same 4 actual raw BPE tokens for all210364 eligible windows; no labels used in construction",
+  "fit": "Same168123 fit rows, frozen base/loss weights. Fit-only weighted StandardScaler in16384rowblocks, float32 transform.",
+  "model": "liblinear L2, max_iter2000, seed20260924, four CPU threads",
+  "selection": "Same calibration window and answer thresholds and q.selection_key, separate per family across five Cs",
+  "answer_score": "Max over all eligible windows, including safe refusals",
+  "scope": "Published human QA fit634/calibration159, selection optimistic, official test unopened",
+  "extra_model": true,
+  "generator_native_signal": false,
+  "checker_finetuned": false,
+  "new_GPU_inference": false,
+  "script_sha256": "8607df2467eeb32720c155da2bde509dc9b1e30cf76af3bcf9e7b91c9118e838",
+  "base_code_sha256": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+  "source_complete_sha256": "cab8cf378db3691ed50e4945391cbcdd92197ecec1e736678212c2382fe56433",
+  "source_preparation_sha256": "a32e875544fc68e57154aab9ea7f92084fd9acfc4092cbac8a9da026d6f8a432"
+}

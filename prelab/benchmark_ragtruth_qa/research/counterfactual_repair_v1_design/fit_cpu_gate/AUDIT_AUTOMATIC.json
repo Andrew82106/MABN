@@ -1,0 +1,57 @@
+{
+  "automatic_gate_checks": {
+    "all_conflict_span_coverage": true,
+    "clean_answer_window_touch": false,
+    "conflict_to_clean_enrichment": false,
+    "conflict_window_touch": false,
+    "ec_span_coverage": true
+  },
+  "automatic_gate_pass": false,
+  "candidate_sha256": "387de4fd7d0fb7299c20df88bcb414f10c93d27c12c15e3e24ad97100c8e77aa",
+  "conflict_to_clean_touch_enrichment": 1.0424740455913786,
+  "fit_labels_read_only_after_candidate_sha_freeze": true,
+  "fit_windows_sha256": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+  "gpu_used": false,
+  "model_loaded": false,
+  "negative_pollution_interpretation": "Candidate presence is never a positive pseudo-label. Clean and risky-answer negative windows remain explicit human-negative training controls; NLI repair margin must suppress them.",
+  "span_metrics": {
+    "Evident Conflict": {
+      "coverage": 0.7527675276752768,
+      "covered": 204,
+      "total": 271
+    },
+    "Subtle Conflict": {
+      "coverage": 0.8,
+      "covered": 24,
+      "total": 30
+    },
+    "all_conflict": {
+      "coverage": 0.7574750830564784,
+      "covered": 228,
+      "total": 301
+    }
+  },
+  "status": "fit_cpu_automatic_gate_complete_pending_frozen_qc_review",
+  "window_metrics": {
+    "baseless": {
+      "total": 52438,
+      "touch_rate": 0.24682482169419123,
+      "touched": 12943
+    },
+    "clean_answer_negative": {
+      "total": 403265,
+      "touch_rate": 0.43800478593480713,
+      "touched": 176632
+    },
+    "conflict": {
+      "total": 7006,
+      "touch_rate": 0.45660862118184414,
+      "touched": 3199
+    },
+    "risky_answer_negative": {
+      "total": 191270,
+      "touch_rate": 0.41316463637789513,
+      "touched": 79026
+    }
+  }
+}

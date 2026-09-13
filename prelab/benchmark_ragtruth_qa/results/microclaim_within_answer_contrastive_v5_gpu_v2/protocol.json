@@ -1,0 +1,26 @@
+{
+  "version": "microclaim-within-answer-contrastive-v5-gpu-v2",
+  "frozen_design_complete_sha256": "5de78361f49fff89b49fc5923a493a1c16ab4111f2418b4bfc7a953d26d55967",
+  "initialization": "Each OOF/full-fit model loads only its matching completed expanded-v4 model.pt; fresh AdamW state.",
+  "architecture": "Unchanged ModernBERT-base NLI encoder/head and unchanged scalar risk logit; no added parameters.",
+  "training": {
+    "data": "Frozen fit-only pair manifest; no calibration/test labels.",
+    "extra_epochs": 1,
+    "scope": "Selected pair endpoints only",
+    "loss": "occurrence-corrected v4 endpoint BCE + 0.25 * group/positive-balanced RankNet",
+    "lambda": 0.25,
+    "optimizer": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "accumulated_pair_microbatches": 4,
+    "precision": "FP32 parameters/optimizer and BF16 CUDA forward; TF32 off"
+  },
+  "crossfit": "Fold f excludes every pair and claim whose source-connected held_fold=f; full-fit trains all fit pairs.",
+  "prediction": "Each fold scores every held claim; full-fit scores calibration claims. No label is needed for inference.",
+  "evaluation": "After all predictions are frozen, reuse exact expanded-v4 4-BPE projection; select thresholds on fit OOF only and apply to calibration.",
+  "selection": "One frozen candidate; calibration never selects pair rule, lambda, LR, epoch or checkpoint.",
+  "control": "Completed expanded-v4 scores are a read-only warm-start reference.",
+  "baselines": "No baseline model, parameter, score, or threshold is written.",
+  "official_test_opened": false
+}

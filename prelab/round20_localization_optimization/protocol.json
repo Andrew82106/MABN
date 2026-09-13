@@ -1,0 +1,84 @@
+{
+  "version": "r20-structure-v1",
+  "methods": [
+    "base",
+    "slots_base",
+    "token_lr_strong",
+    "token_lr",
+    "token_tree",
+    "window_tree",
+    "gated_unconditional",
+    "gated_conditional"
+  ],
+  "primary_method": "gated_conditional",
+  "target": [
+    "answer_f1_about_0.75",
+    "four_bpe_window_f1_about_0.75"
+  ],
+  "scope": "Exploratory R16 actual train301 questions/278 groups/602 fixed answers; original heldout excluded",
+  "seed": 20260919,
+  "loss_mass": 3854,
+  "lr_cs": {
+    "token_lr_strong": 0.001,
+    "token_lr": 0.01,
+    "conditional": 0.001
+  },
+  "tree": {
+    "learning_rate": 0.05,
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "max_depth": 3,
+    "min_samples_leaf": 20,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "random_state": 20260919
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260919
+  },
+  "contrasts": {
+    "slots_base_vs_base": [
+      "slots_base",
+      "base"
+    ],
+    "token_lr_strong_vs_base": [
+      "token_lr_strong",
+      "base"
+    ],
+    "token_lr_vs_base": [
+      "token_lr",
+      "base"
+    ],
+    "token_tree_vs_base": [
+      "token_tree",
+      "base"
+    ],
+    "window_tree_vs_base": [
+      "window_tree",
+      "base"
+    ],
+    "gated_unconditional_vs_base": [
+      "gated_unconditional",
+      "base"
+    ],
+    "gated_conditional_vs_base": [
+      "gated_conditional",
+      "base"
+    ],
+    "gated_conditional_vs_slots": [
+      "gated_conditional",
+      "slots_base"
+    ]
+  },
+  "full_response_used_by_gate": true,
+  "feature_widths": {
+    "token_full": 819,
+    "token_reduced": 147,
+    "window_tree": 441,
+    "answer_tree": 441
+  },
+  "selection": "All fixed candidates reported; calibration only selects separate window and answer thresholds",
+  "no_original_validation_or_test": true,
+  "original_labels_changed": false
+}

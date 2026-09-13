@@ -1,0 +1,16 @@
+{
+  "version": "ghost-frozen-answer-to-common-k4-evaluation-adapter-v1",
+  "role": "evaluation_adapter_for_frozen_ghost_baseline; no model change",
+  "frozen_method": "The existing four whole-answer feature means and the existing 750-tree GHOST-structure RF probability are byte-bound and remain unchanged.",
+  "mapping": "For each common answer, copy its one frozen RF risk probability unchanged to every eligible four-original-BPE stride-one window belonging to that answer.",
+  "why": "The project requires both answer detection and local-window localization. Uniform broadcast exposes, rather than repairs, the native answer-only granularity.",
+  "mapping_parameters": 0,
+  "mapping_training": false,
+  "labels_in_mapping": false,
+  "thresholds": "Same common development reporting as the current formal table: separate calibration-F1Opt thresholds for window and answer; AUROC/AP are threshold-free.",
+  "scope": "Original native 634 fit plus 159 calibration answers; 210364 common windows.",
+  "limits": "Broadcast is a model-external evaluation convention, not a claim that GHOST natively localizes tokens. The calibration set is repeatedly used development data.",
+  "new_model_fits": 0,
+  "baseline_parameters_changed": false,
+  "official_test_opened": false
+}

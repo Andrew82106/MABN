@@ -1,0 +1,17 @@
+{
+  "version": "round19-fixed-length-three-signals-v1",
+  "complete": true,
+  "rows": 602,
+  "interventions": 1204,
+  "plans_sha256": "f53b857706da0eb9df95df9da9046feaced9f58a732349c44439b2d291d4fbb7",
+  "donor_pool_sha256": "6ffc074acc732b77ebaddccfdddd0f7332f8d5d1672963d8e8e7388089506ed5",
+  "source_inputs_sha256": "220124091292022aaa84f8fd50f9ffa43fb207186c03b2117564d615e6b6f609",
+  "extract19_sha256": "c74ea6e104f2176699a253d1d072905d8bf636c5cc2579fdb271b4dce774a47d",
+  "tokenizer_config_sha256": "0553ada6e92b1a29b4431c72782c6e5e6ab675ef0b20ceb2833cd1074c7fb932",
+  "mask": "Only nonempty original prompt tokens with a>=body_start and b<=body_end; crossing-boundary tokens unchanged",
+  "stream": "Order unique reviewed donors by SHA256(question_text_SHA256 + NUL + zero-based passage index + NUL + donor_id); concatenate title+newline+body+two newlines, tokenize once without specials, take first mask-count IDs; no recycling",
+  "constant": "Question, title and all outside-mask IDs; original prompt token count; exact answer IDs, positions and offsets",
+  "two_conditions": "Same question text and passage slot use same ordered stream; consume different prefix lengths if needed",
+  "natural_text_claim": false,
+  "labels_or_detector_scores_read": false
+}

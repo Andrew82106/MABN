@@ -1,0 +1,37 @@
+{
+  "version": "qa-tail-claim-pooling-v1",
+  "methods": [
+    "frozen0",
+    "tail2"
+  ],
+  "alpha": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "scope": "CPU postprocessing of completed runs; original native QA fit634 subset and calibration159 only. Official test sealed.",
+  "upstream_training": "Each original model was trained on3680 answers. Postprocessing fit results here cover only its original native634 training subset, never the complete fit set.",
+  "epoch_rule": "Require both complete.json records with epochs0..3; use each original selected epoch1..3 before considering alpha. No cross-epoch/alpha joint search.",
+  "geometry": "Reuse run_claim_pooling.geometry unchanged. Automatic claim boundaries from frozen plans; lexical rawBPE assigned to greatest alphanumeric overlap, earlier-claim ties. Original 4rawBPE stride1 windows and human gold unchanged.",
+  "formula": "Reuse smooth: p_new=p+alpha*(claim_max-p) on lexical tokens; nonlexical tokens untouched.",
+  "invariants": [
+    "alpha0 exactly reproduces original calibration42241 window and159 answer scores, thresholds, metrics.",
+    "Every alpha preserves each answer maximum and original answer threshold exactly."
+  ],
+  "selection": "For each fixed-epoch model, choose window threshold only on calibration, ties F1/precision/higher threshold; select alpha using original q.selection_key then smaller alpha. Five candidates for both weak frozen0 and tail2.",
+  "reporting": "All10 candidates retained; primary report calibration only, original native_fit634_subset metrics separately labelled. Already-used calibration selection is optimistic, not independent test improvement.",
+  "upstream_complete_binding": "Complete/selected epoch and prediction hashes recorded at run start, only after both complete records exist.",
+  "offline": true,
+  "GPU_used": false,
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_tail_claim_pooling.py": "b179b7e83a1947f83a2b7c1e415ee4f6070ad6d97b0fabdfc8e55f28d44cb40a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_claim_pooling.py": "82b328de5829c58c98b30f8a592834ecbf1c2ff961fdc2e7c8f5db49ce45cc99",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\minicheck_tail_all_docs_v3\\protocol.json": "85d8768035985e2df59383ad1384989d07712a8fa2855e4d63613afa8fb691a3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\minicheck_tail_all_docs_v3\\protocol_freeze.json": "2fa1c2e5253f5af4889b721e7e7c184e5c6b683a636a87edd8e5b41656133b95"
+  }
+}

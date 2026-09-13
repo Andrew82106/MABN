@@ -1,0 +1,10 @@
+{
+  "script_sha256": "ec39dd0d9ddbe17aac735250dd2134c6efcf9cea8b9abee8a63a43b825c9849f",
+  "table_sha256": "21a6117093d7b863397cfea8340ea6dcd588893c5cf207151d7811bdf5a9cd4b",
+  "freeze_sha256": "80e135f07c13d950bc79aa6d47ff23e32361c6c16e61647df5256cf44e9956aa",
+  "source_metrics_sha256": {
+    "main": "f9b7bfe6cb8e7e1ba5620a5f2a2330f8685f620ff8b373e31b29380539d81566",
+    "external": "37a004181da7c37bac657b1bc76eec2057be986244145a0365b166908b2af7d7"
+  },
+  "research_interpretation": "Not auto-generated here; compare strong cheap baselines and label/wording confounds separately"
+}

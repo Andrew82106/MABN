@@ -1,0 +1,29 @@
+{
+  "status": "exact_four_bpe_claim_pooling_complete",
+  "design_shape": [
+    653979,
+    70
+  ],
+  "design_sha256": "592a937395e136afa494963d0cc6abe6feee7da0d9a05d8a93d90827e807b983",
+  "base_design_sha256": "a8304f71f3d85f0d657819a79c3d7491ec7a93c1228c1a336e52bf9df1f3de16",
+  "window_token_slots": 4,
+  "lexical_owner_count_histogram": {
+    "1": 22982,
+    "2": 62427,
+    "3": 213426,
+    "4": 355144
+  },
+  "unique_claim_count_per_window_histogram": {
+    "1": 606002,
+    "2": 47975,
+    "3": 2
+  },
+  "claims_with_window_coverage": 34919,
+  "claims_without_window_coverage": 0,
+  "minimum_claim_window_token_occurrences": 1,
+  "maximum_claim_window_token_occurrences": 132,
+  "native_rows_equal_v3_backbone_union_bit_exact": true,
+  "native_rows_compared": 168123,
+  "mapping_uses_labels": false,
+  "claim_score_max_projection_used": false
+}

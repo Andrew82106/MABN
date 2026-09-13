@@ -1,0 +1,24 @@
+{
+  "fit": {
+    "answers": 634,
+    "windows": 168123,
+    "answer_label_window_max_mismatch": 0,
+    "mismatch_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "calibration": {
+    "answers": 159,
+    "windows": 42241,
+    "answer_label_window_max_mismatch": 0,
+    "mismatch_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "group_overlap": {
+    "count": 0,
+    "ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "calibration_gate": {
+    "started_exists": true,
+    "complete_exists": true,
+    "successful_single_run_observed": true,
+    "note": "Current successful run is intact; scorer should fail closed on an interrupted future run."
+  }
+}

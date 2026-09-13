@@ -1,0 +1,36 @@
+{
+  "status": "all_local_silver_candidates_exported_pending_independent_quality_check",
+  "pairs": 10040,
+  "input_rows": 20080,
+  "original_answers": 5275,
+  "material_groups": 5238,
+  "types": {
+    "entity": 5335,
+    "relation": 4705
+  },
+  "structurally_eligible": 10036,
+  "structurally_ineligible": 4,
+  "artifacts_sha256": {
+    "candidate_pairs.jsonl": "d1bbd7bd013540ec71c805229f25cf117e4c5b99cba6fb345a7a0a7242af0c66",
+    "model_inputs.jsonl": "47472b525e2912654b47059a0aebdbd2e72988ec71fb40fe763d686dfecae83b",
+    "provenance.jsonl": "dd066fd4fcc30743bb4d916b8ed25bb7deb59893032c2afe09dd1f793758c45a",
+    "original_answer_index.jsonl": "eac14d351a7ed41cc6f4d82e5a487e4ca68e7461478ccbbe8af099b656fdf69c",
+    "material_group_index.jsonl": "9217045851700aa3fdc2b5db3a51b6f301e6e66a5d4c813711ec9b89a1f7d928",
+    "QUALITY_REPORT.json": "741713588fbb238ce37c5832156677a23b3649799e6320933265e746a9cc7e57",
+    "protocol.json": "868f392ba6f3446bffb4e0eb42b70d88b7f475aac308acf1a2eed13cd96dd799",
+    "design_complete.json": "3d70362fdd7cf1b4187532c23025ce484ecd3c103c18cb893bf9fe89082bea26",
+    "export_started.json": "368b1cb88026613ca211a4a79a7e525fbfc4bd9a9783cb139bb59c39eb60f27c"
+  },
+  "protocol_sha256": "868f392ba6f3446bffb4e0eb42b70d88b7f475aac308acf1a2eed13cd96dd799",
+  "source_isolation_inherited": true,
+  "source_isolation_rescanned": false,
+  "upstream_manifest_sha256": "ae2df270257af5a17154dc62d01e27f42e92985e05afefc5ff50063e6e4ed2c9",
+  "upstream_complete_sha256": "cc0c77a54610cc0482180606df92ec72de1158cbece3ff4526bc21a751f280e6",
+  "whole_answer_gold_created": false,
+  "outside_targets_unknown": true,
+  "GPU_used": false,
+  "tokenized": false,
+  "trained": false,
+  "QA_gold_cal_test_read": false,
+  "old_files_changed": false
+}

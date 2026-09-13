@@ -1,0 +1,1451 @@
+{
+  "passed": true,
+  "blockers": [],
+  "scope": "R16 actual-train frozen R23b artifacts only; no original validation/test or R17 metadata",
+  "no_fitting": true,
+  "no_GPU": true,
+  "no_production_imports": true,
+  "sklearn_objects_loaded_as_inert_state": true,
+  "coefficient_candidates_replayed": 45,
+  "calibration_thresholds_verified": 90,
+  "threshold_dictionaries_bit_exact": 90,
+  "calibration_selection_keys_exact": 45,
+  "C_selections_exact": 15,
+  "selected_saved_score_arrays_compared": 15,
+  "max_selected_score_abs_error": 4.440892098500626e-16,
+  "max_calibration_threshold_abs_error": 0.0,
+  "calibration_metric_blocks": 30,
+  "max_calibration_metric_abs_error": 4.440892098500626e-16,
+  "answermax_all_candidate_windows_before_main_answer_filter": true,
+  "safe_refusal_nonmain_windows_retained_for_answermax": true,
+  "total_candidate_windows": 12222,
+  "total_main_windows": 9526,
+  "total_answers": 602,
+  "total_main_answers": 598,
+  "total_main_risk_windows": 1063,
+  "total_main_risk_answers": 151,
+  "total_safe_refusal_answers": 117,
+  "folds": [
+    {
+      "fold": 0,
+      "cal_groups": 56,
+      "cal_all_windows": 2908,
+      "cal_main_windows": 2364,
+      "cal_window_positive": 278,
+      "cal_all_answers": 134,
+      "cal_main_answers": 132,
+      "cal_answer_positive": 34,
+      "cal_safe_refusal_answers": 23,
+      "cal_nonmain_windows_used_in_answermax": 544,
+      "selected_C": {
+        "local_probe": 0.01,
+        "local_mean_fusion": 0.01,
+        "local_slots_fusion": 0.01
+      }
+    },
+    {
+      "fold": 1,
+      "cal_groups": 56,
+      "cal_all_windows": 2281,
+      "cal_main_windows": 1656,
+      "cal_window_positive": 182,
+      "cal_all_answers": 114,
+      "cal_main_answers": 113,
+      "cal_answer_positive": 27,
+      "cal_safe_refusal_answers": 27,
+      "cal_nonmain_windows_used_in_answermax": 625,
+      "selected_C": {
+        "local_probe": 0.1,
+        "local_mean_fusion": 0.01,
+        "local_slots_fusion": 0.001
+      }
+    },
+    {
+      "fold": 2,
+      "cal_groups": 55,
+      "cal_all_windows": 2125,
+      "cal_main_windows": 1546,
+      "cal_window_positive": 179,
+      "cal_all_answers": 110,
+      "cal_main_answers": 110,
+      "cal_answer_positive": 27,
+      "cal_safe_refusal_answers": 26,
+      "cal_nonmain_windows_used_in_answermax": 579,
+      "selected_C": {
+        "local_probe": 0.1,
+        "local_mean_fusion": 0.01,
+        "local_slots_fusion": 0.01
+      }
+    },
+    {
+      "fold": 3,
+      "cal_groups": 55,
+      "cal_all_windows": 2750,
+      "cal_main_windows": 2242,
+      "cal_window_positive": 200,
+      "cal_all_answers": 132,
+      "cal_main_answers": 131,
+      "cal_answer_positive": 31,
+      "cal_safe_refusal_answers": 21,
+      "cal_nonmain_windows_used_in_answermax": 508,
+      "selected_C": {
+        "local_probe": 0.1,
+        "local_mean_fusion": 0.1,
+        "local_slots_fusion": 0.01
+      }
+    },
+    {
+      "fold": 4,
+      "cal_groups": 56,
+      "cal_all_windows": 2158,
+      "cal_main_windows": 1718,
+      "cal_window_positive": 224,
+      "cal_all_answers": 112,
+      "cal_main_answers": 112,
+      "cal_answer_positive": 32,
+      "cal_safe_refusal_answers": 20,
+      "cal_nonmain_windows_used_in_answermax": 440,
+      "selected_C": {
+        "local_probe": 0.1,
+        "local_mean_fusion": 0.1,
+        "local_slots_fusion": 0.1
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "fold": 0,
+      "family": "local_probe",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5569963915336876,
+          "validation_f1": 0.5297619047619048,
+          "validation_precision": 0.4517766497461929,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.7065788024536472,
+          "validation_f1": 0.6349206349206349,
+          "validation_precision": 0.6896551724137931,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.5297619047619048,
+        0.5297619047619048,
+        0.4517766497461929,
+        -0.001
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_probe",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5665197301135415,
+          "validation_f1": 0.5487804878048781,
+          "validation_precision": 0.47619047619047616,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8561335645689636,
+          "validation_f1": 0.6666666666666666,
+          "validation_precision": 0.8260869565217391,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.5487804878048781,
+        0.5487804878048781,
+        0.47619047619047616,
+        -0.01
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_probe",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7132164088594046,
+          "validation_f1": 0.5486725663716814,
+          "validation_precision": 0.5400696864111498,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.902155868700586,
+          "validation_f1": 0.6875,
+          "validation_precision": 0.7333333333333333,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.5486725663716814,
+        0.5486725663716814,
+        0.5400696864111498,
+        -0.1
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_mean_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7675617743181907,
+          "validation_f1": 0.6699834162520729,
+          "validation_precision": 0.6215384615384615,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.838223112926163,
+          "validation_f1": 0.8333333333333334,
+          "validation_precision": 0.7894736842105263,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6699834162520729,
+        0.6699834162520729,
+        0.6215384615384615,
+        -0.001
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_mean_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6192803017279624,
+          "validation_f1": 0.7020933977455717,
+          "validation_precision": 0.6355685131195336,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.760944375861472,
+          "validation_f1": 0.825,
+          "validation_precision": 0.717391304347826,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.7020933977455717,
+        0.7020933977455717,
+        0.6355685131195336,
+        -0.01
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_mean_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5346810801862709,
+          "validation_f1": 0.6754530477759473,
+          "validation_precision": 0.6231003039513677,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8812129605489223,
+          "validation_f1": 0.8108108108108109,
+          "validation_precision": 0.75,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6754530477759473,
+        0.6754530477759473,
+        0.6231003039513677,
+        -0.1
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_slots_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8057350319836228,
+          "validation_f1": 0.6772486772486772,
+          "validation_precision": 0.6643598615916955,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8731432289265535,
+          "validation_f1": 0.8611111111111112,
+          "validation_precision": 0.8157894736842105,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6772486772486772,
+        0.6772486772486772,
+        0.6643598615916955,
+        -0.001
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_slots_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6617899378589835,
+          "validation_f1": 0.7003484320557491,
+          "validation_precision": 0.6790540540540541,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.8906649036048486,
+          "validation_f1": 0.8571428571428571,
+          "validation_precision": 0.8333333333333334,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.7003484320557491,
+        0.7003484320557491,
+        0.6790540540540541,
+        -0.01
+      ]
+    },
+    {
+      "fold": 0,
+      "family": "local_slots_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5195276558671694,
+          "validation_f1": 0.6821963394342762,
+          "validation_precision": 0.6346749226006192,
+          "tokens": 2364,
+          "scorable_tokens": 2364,
+          "risk_tokens": 278
+        },
+        "answer": {
+          "threshold": 0.9679831513912242,
+          "validation_f1": 0.835820895522388,
+          "validation_precision": 0.8484848484848485,
+          "tokens": 132,
+          "scorable_tokens": 132,
+          "risk_tokens": 34
+        }
+      },
+      "selection_key": [
+        0.6821963394342762,
+        0.6821963394342762,
+        0.6346749226006192,
+        -0.1
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_probe",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5832753203912686,
+          "validation_f1": 0.5583756345177665,
+          "validation_precision": 0.5188679245283019,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.5997463876668522,
+          "validation_f1": 0.5813953488372093,
+          "validation_precision": 0.423728813559322,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.5583756345177665,
+        0.5583756345177665,
+        0.5188679245283019,
+        -0.001
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_probe",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.590441356235249,
+          "validation_f1": 0.5647668393782384,
+          "validation_precision": 0.5343137254901961,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.6794921652936327,
+          "validation_f1": 0.6,
+          "validation_precision": 0.4528301886792453,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.5647668393782384,
+        0.5647668393782384,
+        0.5343137254901961,
+        -0.01
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_probe",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5247895216231927,
+          "validation_f1": 0.5783132530120482,
+          "validation_precision": 0.5150214592274678,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.690609988184122,
+          "validation_f1": 0.6024096385542169,
+          "validation_precision": 0.44642857142857145,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.5783132530120482,
+        0.5783132530120482,
+        0.5150214592274678,
+        -0.1
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_mean_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8081449934444208,
+          "validation_f1": 0.6486486486486487,
+          "validation_precision": 0.7152317880794702,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8787229200371153,
+          "validation_f1": 0.7924528301886793,
+          "validation_precision": 0.8076923076923077,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6486486486486487,
+        0.6486486486486487,
+        0.7152317880794702,
+        -0.001
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_mean_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.665842222078071,
+          "validation_f1": 0.6775956284153005,
+          "validation_precision": 0.6739130434782609,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8966011634268658,
+          "validation_f1": 0.8461538461538461,
+          "validation_precision": 0.88,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6775956284153005,
+        0.6775956284153005,
+        0.6739130434782609,
+        -0.01
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_mean_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.4798059241618199,
+          "validation_f1": 0.6513994910941476,
+          "validation_precision": 0.6066350710900474,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9380784635837796,
+          "validation_f1": 0.7692307692307693,
+          "validation_precision": 0.8,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6513994910941476,
+        0.6513994910941476,
+        0.6066350710900474,
+        -0.1
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_slots_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.785792041016122,
+          "validation_f1": 0.6684931506849315,
+          "validation_precision": 0.6666666666666666,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.8635179039704521,
+          "validation_f1": 0.7931034482758621,
+          "validation_precision": 0.7419354838709677,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6684931506849315,
+        0.6684931506849315,
+        0.6666666666666666,
+        -0.001
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_slots_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5737788437752075,
+          "validation_f1": 0.6633416458852868,
+          "validation_precision": 0.6073059360730594,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9082461003173039,
+          "validation_f1": 0.7924528301886793,
+          "validation_precision": 0.8076923076923077,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6633416458852868,
+        0.6633416458852868,
+        0.6073059360730594,
+        -0.01
+      ]
+    },
+    {
+      "fold": 1,
+      "family": "local_slots_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6754156656009299,
+          "validation_f1": 0.6342857142857142,
+          "validation_precision": 0.6607142857142857,
+          "tokens": 1656,
+          "scorable_tokens": 1656,
+          "risk_tokens": 182
+        },
+        "answer": {
+          "threshold": 0.9491283993833862,
+          "validation_f1": 0.7719298245614035,
+          "validation_precision": 0.7333333333333333,
+          "tokens": 113,
+          "scorable_tokens": 113,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6342857142857142,
+        0.6342857142857142,
+        0.6607142857142857,
+        -0.1
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_probe",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6358771597764263,
+          "validation_f1": 0.6108108108108108,
+          "validation_precision": 0.5916230366492147,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.6519212953289575,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.71875,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6108108108108108,
+        0.6108108108108108,
+        0.5916230366492147,
+        -0.001
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_probe",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6787549404584028,
+          "validation_f1": 0.6104218362282878,
+          "validation_precision": 0.5491071428571429,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.755852373377915,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.71875,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6104218362282878,
+        0.6104218362282878,
+        0.5491071428571429,
+        -0.01
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_probe",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6845631347581786,
+          "validation_f1": 0.6216867469879518,
+          "validation_precision": 0.5466101694915254,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.7859907312940895,
+          "validation_f1": 0.7540983606557377,
+          "validation_precision": 0.6764705882352942,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6216867469879518,
+        0.6216867469879518,
+        0.5466101694915254,
+        -0.1
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_mean_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7176021762412056,
+          "validation_f1": 0.6964705882352941,
+          "validation_precision": 0.6016260162601627,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8727349195545538,
+          "validation_f1": 0.7777777777777778,
+          "validation_precision": 0.7777777777777778,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6964705882352941,
+        0.6964705882352941,
+        0.6016260162601627,
+        -0.001
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_mean_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6881668215217275,
+          "validation_f1": 0.7154046997389034,
+          "validation_precision": 0.6715686274509803,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.8963533295356076,
+          "validation_f1": 0.8627450980392157,
+          "validation_precision": 0.9166666666666666,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.7154046997389034,
+        0.7154046997389034,
+        0.6715686274509803,
+        -0.01
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_mean_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6324131539125071,
+          "validation_f1": 0.6997389033942559,
+          "validation_precision": 0.6568627450980392,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9325455897463043,
+          "validation_f1": 0.8846153846153846,
+          "validation_precision": 0.92,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6997389033942559,
+        0.6997389033942559,
+        0.6568627450980392,
+        -0.1
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_slots_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7596609885464896,
+          "validation_f1": 0.6972010178117048,
+          "validation_precision": 0.6401869158878505,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9055264535867465,
+          "validation_f1": 0.7924528301886793,
+          "validation_precision": 0.8076923076923077,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6972010178117048,
+        0.6972010178117048,
+        0.6401869158878505,
+        -0.001
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_slots_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6411805505270917,
+          "validation_f1": 0.698019801980198,
+          "validation_precision": 0.6266666666666667,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9345364699963447,
+          "validation_f1": 0.84,
+          "validation_precision": 0.9130434782608695,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.698019801980198,
+        0.698019801980198,
+        0.6266666666666667,
+        -0.01
+      ]
+    },
+    {
+      "fold": 2,
+      "family": "local_slots_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6234386009678593,
+          "validation_f1": 0.6840731070496083,
+          "validation_precision": 0.6421568627450981,
+          "tokens": 1546,
+          "scorable_tokens": 1546,
+          "risk_tokens": 179
+        },
+        "answer": {
+          "threshold": 0.9663477912059153,
+          "validation_f1": 0.8518518518518519,
+          "validation_precision": 0.8518518518518519,
+          "tokens": 110,
+          "scorable_tokens": 110,
+          "risk_tokens": 27
+        }
+      },
+      "selection_key": [
+        0.6840731070496083,
+        0.6840731070496083,
+        0.6421568627450981,
+        -0.1
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_probe",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.689080645510466,
+          "validation_f1": 0.511520737327189,
+          "validation_precision": 0.47435897435897434,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.7028817870515701,
+          "validation_f1": 0.7076923076923077,
+          "validation_precision": 0.6764705882352942,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.511520737327189,
+        0.511520737327189,
+        0.47435897435897434,
+        -0.001
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_probe",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7650586006743809,
+          "validation_f1": 0.5384615384615384,
+          "validation_precision": 0.4701492537313433,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8751223667307338,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.8214285714285714,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.5384615384615384,
+        0.5384615384615384,
+        0.4701492537313433,
+        -0.01
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_probe",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8379503490149496,
+          "validation_f1": 0.5535714285714286,
+          "validation_precision": 0.5,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9397222996931508,
+          "validation_f1": 0.8070175438596491,
+          "validation_precision": 0.8846153846153846,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.5535714285714286,
+        0.5535714285714286,
+        0.5,
+        -0.1
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_mean_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8324810954408766,
+          "validation_f1": 0.580335731414868,
+          "validation_precision": 0.5576036866359447,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9135588050440526,
+          "validation_f1": 0.7636363636363637,
+          "validation_precision": 0.875,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.580335731414868,
+        0.580335731414868,
+        0.5576036866359447,
+        -0.001
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_mean_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8646602510067096,
+          "validation_f1": 0.5994694960212201,
+          "validation_precision": 0.6384180790960452,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9539349052948219,
+          "validation_f1": 0.72,
+          "validation_precision": 0.9473684210526315,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.5994694960212201,
+        0.5994694960212201,
+        0.6384180790960452,
+        -0.01
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_mean_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.809464878793877,
+          "validation_f1": 0.5995203836930456,
+          "validation_precision": 0.576036866359447,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9958740022733282,
+          "validation_f1": 0.7346938775510204,
+          "validation_precision": 1.0,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.5995203836930456,
+        0.5995203836930456,
+        0.576036866359447,
+        -0.1
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_slots_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.8399855175626864,
+          "validation_f1": 0.6069651741293532,
+          "validation_precision": 0.6039603960396039,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9217618905536865,
+          "validation_f1": 0.7586206896551724,
+          "validation_precision": 0.8148148148148148,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6069651741293532,
+        0.6069651741293532,
+        0.6039603960396039,
+        -0.001
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_slots_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.867551512881352,
+          "validation_f1": 0.6273458445040214,
+          "validation_precision": 0.6763005780346821,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.8709773391642259,
+          "validation_f1": 0.7012987012987013,
+          "validation_precision": 0.5869565217391305,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6273458445040214,
+        0.6273458445040214,
+        0.6763005780346821,
+        -0.01
+      ]
+    },
+    {
+      "fold": 3,
+      "family": "local_slots_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6894411758352111,
+          "validation_f1": 0.6136865342163356,
+          "validation_precision": 0.549407114624506,
+          "tokens": 2242,
+          "scorable_tokens": 2242,
+          "risk_tokens": 200
+        },
+        "answer": {
+          "threshold": 0.9671316346811007,
+          "validation_f1": 0.704225352112676,
+          "validation_precision": 0.625,
+          "tokens": 131,
+          "scorable_tokens": 131,
+          "risk_tokens": 31
+        }
+      },
+      "selection_key": [
+        0.6136865342163356,
+        0.6136865342163356,
+        0.549407114624506,
+        -0.1
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_probe",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.5881447002176546,
+          "validation_f1": 0.5920826161790017,
+          "validation_precision": 0.48179271708683474,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.716813267253248,
+          "validation_f1": 0.676056338028169,
+          "validation_precision": 0.6153846153846154,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.5920826161790017,
+        0.5920826161790017,
+        0.48179271708683474,
+        -0.001
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_probe",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6323679684899006,
+          "validation_f1": 0.6148282097649186,
+          "validation_precision": 0.5167173252279635,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.8437270204621898,
+          "validation_f1": 0.75,
+          "validation_precision": 0.75,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.6148282097649186,
+        0.6148282097649186,
+        0.5167173252279635,
+        -0.01
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_probe",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6681919752141224,
+          "validation_f1": 0.6285714285714286,
+          "validation_precision": 0.5481727574750831,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.8935666599253931,
+          "validation_f1": 0.782608695652174,
+          "validation_precision": 0.7297297297297297,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.6285714285714286,
+        0.6285714285714286,
+        0.5481727574750831,
+        -0.1
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_mean_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7407306691723119,
+          "validation_f1": 0.6993865030674846,
+          "validation_precision": 0.6452830188679245,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9210406003939974,
+          "validation_f1": 0.7796610169491526,
+          "validation_precision": 0.8518518518518519,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.6993865030674846,
+        0.6993865030674846,
+        0.6452830188679245,
+        -0.001
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_mean_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.763149095337908,
+          "validation_f1": 0.7764705882352941,
+          "validation_precision": 0.8208955223880597,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9244055863921437,
+          "validation_f1": 0.8125,
+          "validation_precision": 0.8125,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7764705882352941,
+        0.7764705882352941,
+        0.8208955223880597,
+        -0.01
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_mean_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.7831859824170877,
+          "validation_f1": 0.784688995215311,
+          "validation_precision": 0.845360824742268,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9682397113688713,
+          "validation_f1": 0.8,
+          "validation_precision": 0.7878787878787878,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.784688995215311,
+        0.784688995215311,
+        0.845360824742268,
+        -0.1
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_slots_fusion",
+      "C": 0.001,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6853471326183803,
+          "validation_f1": 0.7196969696969697,
+          "validation_precision": 0.625,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9060372061751939,
+          "validation_f1": 0.7352941176470589,
+          "validation_precision": 0.6944444444444444,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7196969696969697,
+        0.7196969696969697,
+        0.625,
+        -0.001
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_slots_fusion",
+      "C": 0.01,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6379688242226103,
+          "validation_f1": 0.7625,
+          "validation_precision": 0.71484375,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9573157047859048,
+          "validation_f1": 0.7868852459016393,
+          "validation_precision": 0.8275862068965517,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7625,
+        0.7625,
+        0.71484375,
+        -0.01
+      ]
+    },
+    {
+      "fold": 4,
+      "family": "local_slots_fusion",
+      "C": 0.1,
+      "thresholds": {
+        "window": {
+          "threshold": 0.6589825744857483,
+          "validation_f1": 0.7674943566591422,
+          "validation_precision": 0.776255707762557,
+          "tokens": 1718,
+          "scorable_tokens": 1718,
+          "risk_tokens": 224
+        },
+        "answer": {
+          "threshold": 0.9741686446490512,
+          "validation_f1": 0.782608695652174,
+          "validation_precision": 0.7297297297297297,
+          "tokens": 112,
+          "scorable_tokens": 112,
+          "risk_tokens": 32
+        }
+      },
+      "selection_key": [
+        0.7674943566591422,
+        0.7674943566591422,
+        0.776255707762557,
+        -0.1
+      ]
+    }
+  ],
+  "bindings": {
+    "results\\complete.json": "b2cbe7886fa37dd12d85c758f9d6431e5f62fadcefb95e2fab8a401c020df6ab",
+    "results\\fit_freeze.json": "c97e3f0b7e705ed79f4c23f88349f2424bacccdbc81ff973618f0b8954143aaf",
+    "protocol.json": "adf81273ea39a7b855f22cf889598c6321a07808872e6a65cb598a0ea897fe89",
+    "results\\summary.json": "a7d2ad34c45b6b738c0a254148176d41876164235dde84bc9c0ebde16740ac6d",
+    "src\\run23.py": "3010a2d4512bd092b55db56e383ba6738259836fda4dcab4666fc84680f99213",
+    "results\\answer_scores_oof.jsonl": "8417f8a10231c4190ee830ab78ce892c5175f070f60cadd3c706811aa28558aa",
+    "results\\designs.npz": "09069cbc7f03a62ceb0f1de7062d08ff4b70ce6df97a702ed82abf4acad4da73",
+    "results\\candidate_windows.jsonl": "e6523ca14cc83ac90404613724b5cbe6a9d53617de50287014497b6c8459c052",
+    "results\\fold_0_frozen.pkl": "80e541bdd35da96a98259ea030b61f4251ad414e4c131ee2540601472ca6985a",
+    "results\\fold_0_scores.npz": "e6009b3d838f8581273560eba1fab4600a5d826b8a54b198bb871e098d1cfd71",
+    "results\\fold_1_frozen.pkl": "26d339b1f6ab3f5d7375d8b16473779f305eed31c2aa67c51a773ac344062f72",
+    "results\\fold_1_scores.npz": "cd0aefe8fbf26b509f1a74bd247d58a43014052108fb38c71e251b8714bede76",
+    "results\\fold_2_frozen.pkl": "01cab0cdbb9e8178b08dd9c7431a6a0707b5aee3212d81fe5654e8ea9a693000",
+    "results\\fold_2_scores.npz": "fa2197ede112e529bad895ef470c72bc22dc89f8132d98cf0eda3b823a89a466",
+    "results\\fold_3_frozen.pkl": "72b1defdb9f4bb5936a8737b688d6343e57359d3992d8e4086e9840e3ea7682c",
+    "results\\fold_3_scores.npz": "5967d2aa7cb646e180f25aa812742e27e6daec42091ef736f6f944db789ed2a0",
+    "results\\fold_4_frozen.pkl": "d47f8ec489f90227e73832106c4e6e4669e245a651582077026f8a5ca410bd75",
+    "results\\fold_4_scores.npz": "cba53781cdce4f5adfaa36b5563211af90c146a504a87b4b1bd8529aff7b6fcb",
+    "results\\calibration_audit23b_helper.py": "1ae564719952d6108a9bec6c498c5107e13426d634ed8b7b13fe3572aca33bf6"
+  },
+  "helper_sha256": "1ae564719952d6108a9bec6c498c5107e13426d634ed8b7b13fe3572aca33bf6",
+  "limitations": [
+    "Uses frozen projected_hidden; PCA reconstruction, fit weights and scaler derivation belong to parent audit.",
+    "OOF answer rows supplied identities and gold only; no OOF scores were used for calibration decisions.",
+    "Replayed all 45 coefficient objects; only 15 selected candidates have saved full score arrays for direct comparison.",
+    "Current frozen hashes checked; historical external chronology and human-label correctness are not established.",
+    "No audit of legacy baselines or persistence smoother here."
+  ]
+}

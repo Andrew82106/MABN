@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "all30073_original_hashes_and_reference_groups_checked": true,
+  "all29315_accepted_span_coordinates_rechecked_against_original_answer": true,
+  "all758_failures_full_original_records_retained_exact": true,
+  "type_counts_and_failure_counts_reconstructed": true,
+  "negative_or_clean_edit_promotion": false,
+  "summary_sha256": "5f064f8538bdeb2cb85764dfb835de10a406cd271905ff2d63e3525112df3dd4",
+  "complete_sha256": "f48744a0f38b70cdd6ab0724cdc36c49b1653956fda072e31032c263d1408829",
+  "audit_code_sha256": "4872a0946eda8cd266fa42764ff2ccd0ab20096fa9045f435c423151b54ed575",
+  "trained": false,
+  "GPU_used": false,
+  "evaluation_data_opened": false
+}

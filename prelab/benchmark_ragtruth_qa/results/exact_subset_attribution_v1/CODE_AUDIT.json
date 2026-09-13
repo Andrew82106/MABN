@@ -1,0 +1,44 @@
+{
+  "status": "passed_CPU_only_code_and_artifact_audit",
+  "source_sha256": "ea6bc933991b7eef71f2d6994eac30789268c8ab44e1a18cda523529009dd394",
+  "preparation_complete_sha256": "f68257930b58c4ab44ed1b990e01e012beb19279ddd69f3082bf5c5a97efcb17",
+  "CPU_check_sha256": "0c4f579b3c5b30cbdb46d9777df69ba00a60436550912851e6a16ffc2ef7b092",
+  "assertions": {
+    "ours_not_baseline": true,
+    "exact_eight_subsets": true,
+    "preparation_has_no_gold_loader_call": true,
+    "check_has_no_gold_loader_call": true,
+    "preparation_has_no_model_loader_call": true,
+    "GPU_commands_are_separate": true,
+    "GPU_cross_run_lock_and_foreign_process_gate_present": true,
+    "same_answer_axis_checked_all_views": true,
+    "exact_shapley_efficiency_checked": true,
+    "citation_aligned_shapley_present": true,
+    "fit_group_OOF_fixed_LR": true,
+    "fit_only_thresholds": true,
+    "calibration_report_only": true,
+    "unmodified_four_BPE_window_loader": true,
+    "window_and_answer_max": true,
+    "official_test_path_absent_from_IO_constants": true
+  },
+  "resource_estimate": {
+    "answers": 3839,
+    "GPU_forward_calls": 30712,
+    "all_view_input_tokens": 13700732,
+    "max_sequence_tokens": 1232,
+    "raw_logprob_bytes": 22672192,
+    "derived_feature_bytes": 82186696,
+    "peak_GPU_memory": "One NF4 Llama-2-7B view at a time; not eight views resident together. Require >=6 GiB free before load.",
+    "runtime": "Must be measured by gpu-smoke; 30,712 sequential forwards make full extraction a multi-hour single-RTX-3070 job."
+  },
+  "blocking_issues_before_GPU": [],
+  "known_limits": [
+    "No GPU smoke or extraction has run; empirical runtime and memory peak are still unknown.",
+    "The 159-answer calibration split has been reused elsewhere and is development reporting, not an independent final test.",
+    "Exact subset attribution needs all eight views and is substantially slower than one-pass probes."
+  ],
+  "labels_accessed": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

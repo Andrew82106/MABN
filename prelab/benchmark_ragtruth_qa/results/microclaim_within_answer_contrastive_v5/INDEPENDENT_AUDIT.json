@@ -1,0 +1,23 @@
+{
+  "status": "independent_CPU_audit_passed",
+  "pairs": 6637,
+  "pairable_positive_claims": 3375,
+  "exact_top2_replay": true,
+  "same_answer_source_group_fold": true,
+  "opposite_fit_labels": true,
+  "maximum_endpoint_index": 34918,
+  "rank_weight_sum_each_split": true,
+  "maximum_group_mass_range": 2.4010660126805305e-10,
+  "calibration_rows_parsed": 0,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "formal_baselines_modified": false,
+  "audited_files_sha256": {
+    "pairs.jsonl": "cb04894da48182c460f6e5c24e77a8cadb795a4c11595267da4c7a280eae39a5",
+    "pair_arrays.npz": "28c9d1c4b0e49960773dcb35709075112ce3bd54622a85391d53fd6eb44ae669",
+    "statistics.json": "4553f1ecef06bde9445a7ee662d4e9dd90fe4bcb67a20c25e45b6599f09d63cd",
+    "training_plan.json": "89992f41257a907f4afe3dd3d014f8069087fc5caf409ab1f07a82cea00374f7",
+    "CPU_CHECK.json": "7cc6ff2614b35caeecd143de364aadf4942ad452e0e0d17406c0fb512e9327ed",
+    "CPU_TINY_TRAIN.json": "f0bddea2ff359be9aa5680ba3a683c2c9c9a07cbb2c4f4f48717a43489ca37d5"
+  }
+}

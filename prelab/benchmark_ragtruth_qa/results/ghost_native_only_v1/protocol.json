@@ -1,0 +1,42 @@
+{
+  "version": "ghost-native-only-data-ablation-v1",
+  "new_fits": 1,
+  "parameters": {
+    "max_iter": 100,
+    "max_depth": 2,
+    "max_leaf_nodes": 4,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "min_samples_leaf": 20,
+    "early_stopping": false,
+    "random_state": 20261008,
+    "monotonic_cst": null
+  },
+  "features": [
+    "mean_actual_token_nll",
+    "adjacent_layer_cosine_change",
+    "layer_to_final_cosine",
+    "top10_normalized_entropy",
+    "top10_unweighted_embedding_divergence"
+  ],
+  "training": {
+    "answers": 634,
+    "windows": 168123,
+    "groups": 615,
+    "weight_rule": "Retain original native loss ratios, rescale their total to original expanded total168123. No class-factor refit.",
+    "weight_scale": 1.8962812942008815,
+    "loss_mass": 168123.0,
+    "positive_loss_mass": 66516.18742516206
+  },
+  "control": "Completed expanded nll_ghost shallow tree, reused without refitting.",
+  "evaluation": "Same original cal159/42241windows, all labels/refusals/4BPE geometry retained; same independent window and all-window answermax threshold selection rule.",
+  "selection": "Single fixed data ablation, no parameter or cross-method search.",
+  "limits": [
+    "Designed after generator distribution diagnostics; reused calibration is development evidence.",
+    "Removing added data changes training population, score distribution, feature binning and the relative min_samples_leaf constraint; not unique identification of the causal effect of replay.",
+    "Weight normalization matches total loss scale but not the original expanded label prior or all per-group shares.",
+    "This is not a native-only-from-scratch weighting pipeline: inherited relative class/group weights were formed by the earlier expanded fit-only procedure."
+  ],
+  "no_test": true,
+  "GPU_used": false
+}

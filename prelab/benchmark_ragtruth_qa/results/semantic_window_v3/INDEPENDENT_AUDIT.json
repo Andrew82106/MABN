@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "fit": {
+    "feature_rebuild": {
+      "rows": 168123,
+      "width": 106,
+      "unique_window_ids": 168123,
+      "saved_matrix_equals_source_rebuild": true,
+      "all_window_identity_columns_exact": true,
+      "claim_identity": {
+        "cohort": "fit_native",
+        "answers": 634,
+        "claims": 9055,
+        "width": 44,
+        "features_sha256": "47d9460f461cda2cc6261c5f479c949240ca1be4c232dc3d2bbd0ca7e598ef41",
+        "feature_names_sha256": "1e6de42b9696088ad519b8a6b6eda8f4ce9bd08f8ced18be37c5d09985a9bd2a",
+        "candidate_instances": 61779,
+        "existing_cache_hit_instances": 61779,
+        "missing_cache_instances": 0,
+        "labels_used": false,
+        "claim_rows_identity_exact": true,
+        "response_index_exact": true,
+        "claim_id_exact": true,
+        "microclaim_index_exact": true,
+        "hypothesis_sha256_exact": true
+      },
+      "frozen_v2_backbone_identity": {
+        "partition": "fit",
+        "rows": 168123,
+        "unique_window_ids": 168123,
+        "v2_feature_sha256": "389be2fb421f9fed57f6b9ab3e46869bf97db475664df6497edf4cb6db9e0704",
+        "identity_exact": true
+      }
+    },
+    "candidates_recomputed": 6,
+    "candidate_names_match_preregistration": true,
+    "selected_index": 0,
+    "selected_candidate": "backbone_union__C0.001",
+    "selection_recomputed_from_fit_OOF_only": true,
+    "all_fit_thresholds_and_counts_exact": true,
+    "fold_held_windows": [
+      33647,
+      33614,
+      33621,
+      33623,
+      33618
+    ],
+    "each_fit_window_held_exactly_once": true,
+    "all_fold_group_intersections_empty": true,
+    "upstream_source_group_OOF_reconstructed": {
+      "upstream_folds": 3,
+      "source_groups": 615,
+      "fit_windows_reconstructed": 168123,
+      "fit_window_coverage_exactly_once": true,
+      "fit_hold_groups_disjoint": true,
+      "lookback_column_exact": true,
+      "large_column_exact": true,
+      "calibration_used_by_upstream_folds": false
+    }
+  },
+  "calibration": {
+    "feature_rebuild": {
+      "rows": 42241,
+      "width": 106,
+      "unique_window_ids": 42241,
+      "saved_matrix_equals_source_rebuild": true,
+      "all_window_identity_columns_exact": true,
+      "claim_identity": {
+        "cohort": "calibration",
+        "answers": 159,
+        "claims": 2267,
+        "width": 44,
+        "features_sha256": "783fde62d5b58dc4f2e586c7985603e5241a330760f428c9f9585aedc04f1101",
+        "feature_names_sha256": "1e6de42b9696088ad519b8a6b6eda8f4ce9bd08f8ced18be37c5d09985a9bd2a",
+        "candidate_instances": 15556,
+        "existing_cache_hit_instances": 15556,
+        "missing_cache_instances": 0,
+        "labels_used": false,
+        "claim_rows_identity_exact": true,
+        "response_index_exact": true,
+        "claim_id_exact": true,
+        "microclaim_index_exact": true,
+        "hypothesis_sha256_exact": true
+      },
+      "frozen_v2_backbone_identity": {
+        "partition": "calibration",
+        "rows": 42241,
+        "unique_window_ids": 42241,
+        "v2_feature_sha256": "ea6beddb456f0118e3fb9b17809a654d4c51d2780b9f3ffc8423647148ca5cdc",
+        "identity_exact": true
+      }
+    },
+    "model_scores_bit_exact": true,
+    "answer_scores_exact_max_over_native_windows": true,
+    "strict_fit_threshold_counts_exact": true,
+    "F1Opt_diagnostic_thresholds_and_counts_exact": true,
+    "strict_window_f1": 0.6449714693295292,
+    "strict_answer_f1": 0.8066298342541437,
+    "diagnostic_window_f1": 0.6623490845126729,
+    "diagnostic_answer_f1": 0.8803827751196173
+  },
+  "evidence_union_manifests": {
+    "fit": {
+      "cohort": "fit_native",
+      "manifest_declared_files_checked": 3,
+      "runner_and_protocol_hashes_exact": true,
+      "candidate_instances": 61779,
+      "cache_hit_fraction": 1.0
+    },
+    "calibration": {
+      "cohort": "calibration",
+      "manifest_declared_files_checked": 3,
+      "runner_and_protocol_hashes_exact": true,
+      "candidate_instances": 15556,
+      "cache_hit_fraction": 1.0
+    }
+  },
+  "freeze_boundary": {
+    "fit_complete_hash_bound_into_summary_and_complete": true,
+    "calibration_artifacts_opened_before_fit_freeze": false,
+    "calibration_used_for_selection": false,
+    "single_use_evaluate_guard_present": true,
+    "recorded_calibration_evaluations": 1
+  },
+  "artifact_hashes_exact": true,
+  "source_input_hashes_exact": true,
+  "formal_baseline_hashes_unchanged": true,
+  "formal_baseline_file_count": 7,
+  "incumbent_replaced": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

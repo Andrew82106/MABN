@@ -1,0 +1,112 @@
+{
+  "reason": "Round4 first-test-selected primary failed: F1 0.645. Two prespecified alternatives exceeded0.70. They are now selected using that viewed test as development and must be confirmed on new sources.",
+  "primary": "sentences_facts: learned probe with internal states, six checks maximum",
+  "controls": [
+    "sentences3: direct B self-check score, three checks maximum",
+    "base_scores: original attention probe"
+  ],
+  "n": 50,
+  "errors": 20,
+  "clean": 30,
+  "seed": 20260914,
+  "quotas": {
+    "gpt-3.5-turbo-0613": [
+      3,
+      2
+    ],
+    "gpt-4-0613": [
+      6,
+      4
+    ],
+    "llama-2-13b-chat": [
+      12,
+      8
+    ],
+    "llama-2-70b-chat": [
+      3,
+      2
+    ],
+    "llama-2-7b-chat": [
+      6,
+      4
+    ]
+  },
+  "all_prior684_sources_excluded": true,
+  "sampling_amendment_before_any_confirmation_scores": "Only16 eligible positive Llama source groups remained, insufficient for50rows20positive. All generators together had22eligible positive sources, also insufficient for a proposed100rows40positive. Freeze50new mixed-generator sources20positive30clean, maintaining40% error within each represented generator. Both infeasible preparation attempts ended before any rows or protocol were frozen, any model was applied, or any confirmation scores were inspected. This confirms mixed-generator news, not the initial Llama-only distribution.",
+  "frozen_methods": {
+    "sentences_facts": {
+      "family": "sentences_facts",
+      "model_id": "abc_base_hidden16_balanced_0.01",
+      "scope": "sentences_facts",
+      "aggregate": "noisy_or",
+      "threshold": 0.9296136734726115,
+      "val_metrics": {
+        "f1": 0.6796116504854369,
+        "precision": 0.603448275862069,
+        "recall": 0.7777777777777778,
+        "false_alarm": 0.30666666666666664,
+        "tp": 35,
+        "fp": 23,
+        "fn": 10,
+        "tn": 52
+      },
+      "mean_calls": 5.966666666666667,
+      "candidate_index": 578
+    },
+    "sentences3": {
+      "family": "sentences3",
+      "model_id": "raw_B",
+      "scope": "sentences3",
+      "aggregate": "max",
+      "threshold": 1.8490305592422374e-05,
+      "val_metrics": {
+        "f1": 0.6792452830188679,
+        "precision": 0.5901639344262295,
+        "recall": 0.8,
+        "false_alarm": 0.3333333333333333,
+        "tp": 36,
+        "fp": 25,
+        "fn": 9,
+        "tn": 50
+      },
+      "mean_calls": 2.9833333333333334,
+      "candidate_index": 9
+    },
+    "base_scores": {
+      "family": "base_scores",
+      "model_id": null,
+      "scope": "base_scores",
+      "aggregate": "mean",
+      "threshold": 0.25081760792000507,
+      "val_metrics": {
+        "f1": 0.6099290780141844,
+        "precision": 0.4479166666666667,
+        "recall": 0.9555555555555556,
+        "false_alarm": 0.7066666666666667,
+        "tp": 43,
+        "fp": 53,
+        "fn": 2,
+        "tn": 22
+      },
+      "mean_calls": 0.0,
+      "candidate_index": 2
+    }
+  },
+  "models_retrained": false,
+  "thresholds_recalibrated": false,
+  "new_confirmation_scores_seen": false,
+  "earlier_first_test_F1": {
+    "selected": 0.6451612903225806,
+    "sentences_facts": 0.7027027027027027,
+    "sentences3": 0.7088607594936709
+  },
+  "rows_sha256": "373758153a78e27a5ad994733ab844aa724b196e99637bb08a646984a13885a0",
+  "annotations_sha256": "b37606af183f66af47ab70d7f22c395d38d237b107b068a3dd872425664ee6ac",
+  "frozen_dependencies": {
+    "results/selection.json": "5b9d7322f64c902bc61197b09fb6ad9073c9272f68e89a7baf33da95151096a8",
+    "results/checkpoints/base.pkl": "932e53fac41a386eaa907fab15ebf44995b9423175f21198ff29b825c1e910e7",
+    "results/checkpoints/unit_models.pkl": "acac9c7238c6903cae7f11b28e5ffc585bc370aa87fb5174b443ff587553847e",
+    "data/unit_inputs.pkl": "3022e326b38871191a29dd092020c546743bc1f7070b847af6ff218ad182dd9b"
+  },
+  "success_rule": "Primary answer-level error-class F1 >0.70. No reselection or threshold changes after this confirmation. Report all attempts and controls, token localization separately."
+}

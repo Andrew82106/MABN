@@ -1,0 +1,90 @@
+{
+  "version": "ragognizer-route-a-gpu-run-audit-v2",
+  "status": "smoke_complete",
+  "run_identity": {
+    "route": "model_card_default_transformer_heads_with_accelerate_cpu_offload",
+    "device_placement_change_only": true,
+    "checkpoint_revision": "2b58ab9aa73f6d499ec72a38ced0976caf78b26f",
+    "ragognizer_commit": "1d3e8fdd6de638dc2d06265829a4d9ced387e0ba",
+    "transformer_heads_commit": "6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+    "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+    "runner_script_sha256": "e4bfb9709de4f217c9e50322ad1bd60da69c36ddb4a08f1217f95e292300aee9",
+    "model_manifest_sha256": "6b3b500ea5db7a4b0d29b7668b29e81bb449207e134e795b806a17d44a4367bf",
+    "source_audit_sha256": "64e08d84900fd671c2aba05bc8a081e0684a4339d545b0bfb98db3c55c1e656f",
+    "runtime_alias_audit_sha256": "c4d1f46c2c3a3435a18e1a36d9d3207e7b8dd95765f70e8fcb80488269747a8c",
+    "torch_dtype_argument": "torch.bfloat16",
+    "quantization": null,
+    "postprocessor": false,
+    "batch_size": 1,
+    "author_probability": "sigmoid(integrated hallu_head_neg_16 logit)",
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "versions": {
+      "torch": "2.5.1+cu121",
+      "transformers": "4.57.1",
+      "tokenizers": "0.22.2",
+      "peft": "0.18.1",
+      "accelerate": "1.13.0",
+      "safetensors": "0.7.0"
+    }
+  },
+  "route": "model_card_default_transformer_heads_with_accelerate_cpu_offload",
+  "device_placement_change_only": true,
+  "checkpoint_revision": "2b58ab9aa73f6d499ec72a38ced0976caf78b26f",
+  "ragognizer_commit": "1d3e8fdd6de638dc2d06265829a4d9ced387e0ba",
+  "transformer_heads_commit": "6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "runner_script_sha256": "e4bfb9709de4f217c9e50322ad1bd60da69c36ddb4a08f1217f95e292300aee9",
+  "model_manifest_sha256": "6b3b500ea5db7a4b0d29b7668b29e81bb449207e134e795b806a17d44a4367bf",
+  "source_audit_sha256": "64e08d84900fd671c2aba05bc8a081e0684a4339d545b0bfb98db3c55c1e656f",
+  "runtime_alias_audit_sha256": "c4d1f46c2c3a3435a18e1a36d9d3207e7b8dd95765f70e8fcb80488269747a8c",
+  "torch_dtype_argument": "torch.bfloat16",
+  "quantization": null,
+  "postprocessor": false,
+  "batch_size": 1,
+  "author_probability": "sigmoid(integrated hallu_head_neg_16 logit)",
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "peft": "0.18.1",
+    "accelerate": "1.13.0",
+    "safetensors": "0.7.0"
+  },
+  "run_identity_sha256": "fc2dc443fd67fae498f72fc41af4588b184a5cbd2d874ccca2740c3f2deb7078",
+  "plan_version": "ragognizer-full-inference-plan-v1",
+  "rows": 1,
+  "required_full_rows": 3839,
+  "partition_rows": {
+    "fit": 1
+  },
+  "completed_before_resume": 0,
+  "rows_computed_this_invocation": 1,
+  "resume_used": false,
+  "output_sha256": "6e138fb87c6e5ee930fbd46765ec82972fd75723d0ccc329926956ac5febc751",
+  "raw_final_chain_sha256": "97f4cbfd3b6c305c5ad17f8867797cb6b7f2b6c09a7e00393fc24f75f6d22704",
+  "loaded_parameter_dtype_tensor_counts": {
+    "torch.bfloat16": 746
+  },
+  "torch_no_grad": true,
+  "tf32_matmul_runtime_default": false,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3070",
+    "capability": [
+      8,
+      6
+    ],
+    "peak_allocated_bytes": 818886656,
+    "peak_reserved_bytes": 851443712
+  },
+  "timing_seconds": {
+    "model_load_and_offload": 20.32659299997613,
+    "inference_this_invocation": 2.545318100019358,
+    "per_answer_this_invocation": 2.545318100019358,
+    "total_invocation": 37.004501099931076
+  },
+  "author_threshold_applied": false,
+  "shared_threshold_applied": false,
+  "labels_read": false,
+  "test_opened": false
+}

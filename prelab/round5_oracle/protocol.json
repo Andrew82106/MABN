@@ -1,0 +1,29 @@
+{
+  "purpose": "Diagnostic only: remove automatic location selection and ask whether frozen readouts distinguish annotated conflict spans from length-matched clean spans. This is not automatic localization or a new independent test.",
+  "model": "Same local frozen Qwen2.5-7B NF4; no external LLM, no free generation",
+  "unit_probe": "abc_base_hidden16_balanced_0.01, existing round4 weights and PCA, no retraining",
+  "data": "Previously viewed round4 validation120 and confirmation50; these are reused solely for diagnosis. Each matched pair uses one earliest annotated error and one clean answer from the same original generator; each clean source used once, matched by text length and within-sentence position only, without risk scores.",
+  "matched_cases": {
+    "val": 90,
+    "diagnostic": 40
+  },
+  "queries": 1191,
+  "unit_analysis": "For sentence and exact-span units, compare original attention top10mean, direct B probability, and frozen internal-state probe. AUROC and paired ranking are threshold independent. Unit F1 thresholds fitted only on matched validation units and frozen before diagnostic scoring. On balanced units all-positive F1=2/3; unit F1 is not token or answer F1.",
+  "pipeline_analysis": "Keep old answer classifier, threshold and number of checks fixed. In each erroneous answer, supply the context of its earliest annotated error by replacing the lowest-ranked selected sentence only if missing; then additionally replace that sentence factual target with the full annotated error span. Clean answers remain exactly identical. This uses label-derived location assistance, not a deployable detector.",
+  "metrics_policy": "Report all controls, precision/recall/confusions, bootstrap intervals, paired ranking and length-only score AUCs. No score-based example selection, no test tuning, no claim to exceed automatic-detection target.",
+  "frozen_dependencies": {
+    "results/checkpoints/base.pkl": "932e53fac41a386eaa907fab15ebf44995b9423175f21198ff29b825c1e910e7",
+    "results/checkpoints/unit_models.pkl": "acac9c7238c6903cae7f11b28e5ffc585bc370aa87fb5174b443ff587553847e",
+    "data/unit_inputs.pkl": "3022e326b38871191a29dd092020c546743bc1f7070b847af6ff218ad182dd9b",
+    "confirmation/protocol.json": "20ad903aef1eca41610ebdc9f4fb5afc714fc8b68f2dd05c855f02f50ddce080",
+    "confirmation/results/predictions.jsonl": "8e6139878b10327a73cd103d85849f3b7f1d53fdb105ac0b54ff1661d750e8f1"
+  },
+  "data_sha256": {
+    "annotations.jsonl": "5170dea21459a9a860dbd37c950ca3c7a91f67c601c32125ede85160943a1dea",
+    "cases.jsonl": "c96f7257f25cb2d21657a3b08ba7ab70051580d522a400552704a2dafbbc9410",
+    "policies.jsonl": "8f9be9775d1fd9bc29759682d1d33203cc2864c5b5df36f01045ca86ccc4481a",
+    "queries.jsonl": "ceacab29d83d398443f3c6e61ed79eab292d735b79083948336726e3ebfc10d3",
+    "rows.jsonl": "0e5d2514e4ea4abbd1d724ca4bf1b24f0239c5e957c2f5a40dccc54615a6c3f7"
+  },
+  "generated_tokens": 0
+}

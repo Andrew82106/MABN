@@ -1,0 +1,4818 @@
+{
+  "status": "ready_for_parent_review_not_frozen",
+  "primary_count": 100,
+  "reserve_count": 10,
+  "inputs_validated": 220,
+  "refs_validated": 110,
+  "all_values_birth_year": true,
+  "removed_subject_distribution": {
+    "1": 57,
+    "0": 53
+  },
+  "same_subject_replacement_count": 42,
+  "max_absolute_replacement_token_difference": 20,
+  "combined_structural_build": {
+    "passed": true,
+    "A_groups": 110,
+    "dev_groups": 20,
+    "B_groups": 110,
+    "all_groups": 240,
+    "input_rows": 480
+  },
+  "neutral_prompt_template": "Please answer the following questions using these search results. Write one short sentence for each numbered item.\n\nQuestions:\n{questions}\n\nSearch results:\n{search_results}",
+  "system": "You are a helpful assistant.",
+  "all_passages_have_exact_original_sentence_indices": true,
+  "source_only_no_llm_calls": true,
+  "generation_outputs_consulted": false,
+  "files_sha256": {
+    "partition_b_specs.json": "0d7b34d79bf8004b9cdd3d4bd8e11ca8d9c3229697404d371874124e7965e54f",
+    "partition_b_review.json": "de4c0e63100fa9eb49458843a53fa21497e5b3b1c9561a80a540450c234b6df2",
+    "partition_b_review_extra_specs.json": "88c347857ff05f3c2d394c6442989d268d7ba8fd5581704adbc16bbc0ee34a16"
+  },
+  "raw_files_sha256": {
+    "data/raw/hotpotqa/train_05000.json": "0d252224ee5ac62253ae0b5c02ae241491b27176837a9f02c0281223478c582b",
+    "data/raw/hotpotqa/train_05100.json": "4a22d16054e3905fbc640942cdc961eb29d66e5f28e5bcc5f5fbd3b31ee2f2f5",
+    "data/raw/hotpotqa/train_05200.json": "196574c6117e38520dbb380d65c3a72e7f886ae33af0689d22b00df933ffbd1e",
+    "data/raw/hotpotqa/train_05300.json": "c82686a194a1fa6a618717e2afdc1c68eef2b1d21c30ea6d9404bcc3f0eb6102",
+    "data/raw/hotpotqa/train_05400.json": "8570da55ea27386c77b31b7abe57585e2dedf65369261381da2f562089da69c8",
+    "data/raw/hotpotqa/train_05500.json": "714afc170dcbedcb00699a1c8687d1d7e095dcc3d325429aa283e48f19dcb462",
+    "data/raw/hotpotqa/train_05600.json": "1c30cfbb2a09b47e4688bbc8520a1702cbdd2dca37d9765a7b214139f224d42d",
+    "data/raw/hotpotqa/train_05700.json": "b85405c45cb0be853c2b3bbcb687a450604974370abc5d9cb68afe933515d4aa",
+    "data/raw/hotpotqa/train_05800.json": "8ac34769bc75925f18e7421c071aac50178b0f8548b12a3aff573f1b46637da4",
+    "data/raw/hotpotqa/train_05900.json": "c005d4a1a66968d2e459af7d1620e50ae7468f18eb4cb58be5caa30a0e14fa4f",
+    "data/raw/hotpotqa/train_06000.json": "81fa86eb84b53cdf65a10d8e6037aa7ed278a5b74bfe1bb3987be4a7cf7ed06b",
+    "data/raw/hotpotqa/train_06100.json": "c2e3f9baf8a47232d89d266cc85a65ae96a870e7e2a604016f71530bc7639133",
+    "data/raw/hotpotqa/train_06200.json": "7030e276e15b74b69befb90e509271a9cd482d0d32bb976d2a2477c8e6efaef5",
+    "data/raw/hotpotqa/train_06300.json": "682c3df1b74c1f6679a229d2917a4cd05655e697a03c2c798d86b32a89f188a0",
+    "data/raw/hotpotqa/train_06400.json": "9509678cdf9fcb172a4977b1b0190db4d584bf5e55b6c37230394595549a0888",
+    "data/raw/hotpotqa/train_06500.json": "18175904a380715e98f47a28e42f1780369a4334ad4aec8615b2cff8237a95a9",
+    "data/raw/hotpotqa/train_06600.json": "47ab85dae613afe847e93fc59fa668a40d739f9d0f8cbd75bc6afb56728a39da",
+    "data/raw/hotpotqa/train_06700.json": "6d475ae8ed66b1d6297e019cb1e9e8a797d85d5e54ea164db253462be063fa41",
+    "data/raw/hotpotqa/train_06800.json": "58596e6289d9db1c47950bc781956b32e1d7df101e3ae97ead3352f8ca1ee675",
+    "data/raw/hotpotqa/train_06900.json": "3dccc37890581c4fff1659f558a7338bd12c68d46bbfe3805e6406cb2a2bc69f",
+    "data/raw/hotpotqa/train_07000.json": "246d5cd79b457bcbb10742c6577030fd50ceed2637641af047bca125a8fb73a7",
+    "data/raw/hotpotqa/train_07100.json": "45a0e6c0a65a75ff0fad70ae1ec8a5efc9ec5f7d148c64c22d9527a2f41cd475",
+    "data/raw/hotpotqa/train_07300.json": "240637a3e2cb61506b9c21440b24d9f42dfb2a1beacb112bde7e08bff8c74ec5"
+  },
+  "builder_sha256": "9d9976e2ca62597b7291dc45b2eca91ba737b2e1d76babe5b7c9121fe68dd667",
+  "inventory": [
+    {
+      "question_id": "hotpot_5ac2803f5542996773102544",
+      "source_index": 5016,
+      "split": "unassigned",
+      "source_titles": [
+        "hawk nelson is my friend",
+        "leslie west",
+        "nine lashes",
+        "trevor mcnevan"
+      ],
+      "subjects": [
+        "Trevor McNevan",
+        "Leslie West"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 30,
+      "replacement_tokens": 15,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7cfc2055429909bec768dc",
+      "source_index": 5020,
+      "split": "unassigned",
+      "source_titles": [
+        "daniel johns",
+        "del amitri",
+        "iain harvie",
+        "justin currie",
+        "list of afrikaans singers"
+      ],
+      "subjects": [
+        "Daniel Johns",
+        "Justin Currie"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 61,
+      "replacement_tokens": 41,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac2686c55429963665199ab",
+      "source_index": 5030,
+      "split": "unassigned",
+      "source_titles": [
+        "airplay (band)",
+        "bill champlin",
+        "chasin' the wind",
+        "tamara champlin",
+        "yeo hoon-min"
+      ],
+      "subjects": [
+        "Bill Champlin",
+        "Yeo Hoon-min"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 43,
+      "replacement_tokens": 30,
+      "absolute_token_difference": 13,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7278335542994cef4bc2bc",
+      "source_index": 5035,
+      "split": "unassigned",
+      "source_titles": [
+        "berta foersterová",
+        "giuseppe verdi",
+        "pezzo capriccioso",
+        "pyotr ilyich tchaikovsky",
+        "symphony no. 2 (tchaikovsky)"
+      ],
+      "subjects": [
+        "Pyotr Ilyich Tchaikovsky",
+        "Giuseppe Verdi"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 40,
+      "replacement_tokens": 45,
+      "absolute_token_difference": 5,
+      "passage_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab7432a554299110f219ae6",
+      "source_index": 5037,
+      "split": "unassigned",
+      "source_titles": [
+        "blaise cendrars",
+        "jean hugo",
+        "julian barnes",
+        "remy de gourmont",
+        "wet confetti"
+      ],
+      "subjects": [
+        "Blaise Cendrars",
+        "Julian Barnes"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 57,
+      "replacement_tokens": 37,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a9093325542995651fb5195",
+      "source_index": 5044,
+      "split": "unassigned",
+      "source_titles": [
+        "andrei okounkov",
+        "nairi sedrakyan",
+        "the fiery angel (novel)",
+        "valery goppa",
+        "valery oisteanu"
+      ],
+      "subjects": [
+        "Andrei Okounkov",
+        "Valery Goppa"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 42,
+      "replacement_tokens": 42,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5abbf88255429931dba145f2",
+      "source_index": 5056,
+      "split": "unassigned",
+      "source_titles": [
+        "anthony himbs",
+        "david hewlett",
+        "ice men (film)",
+        "stargate atlantis (season 3)",
+        "traders (season 5)"
+      ],
+      "subjects": [
+        "Anthony Himbs",
+        "David Hewlett"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 23,
+      "replacement_tokens": 20,
+      "absolute_token_difference": 3,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac447e6554299194317396a",
+      "source_index": 5062,
+      "split": "unassigned",
+      "source_titles": [
+        "james joyce",
+        "james merrill",
+        "stephen james joyce",
+        "the poetry collection"
+      ],
+      "subjects": [
+        "James Merrill",
+        "James Joyce"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 37,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7f4d8a5542992097ad2f07",
+      "source_index": 5116,
+      "split": "unassigned",
+      "source_titles": [
+        "2016 bnp paribas masters – doubles",
+        "2017 rogers cup – men's doubles",
+        "fabio fognini",
+        "ivan dodig",
+        "williams sisters"
+      ],
+      "subjects": [
+        "Ivan Dodig",
+        "Fabio Fognini"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 21,
+      "replacement_tokens": 27,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7d2c895542995ed0d16622",
+      "source_index": 5142,
+      "split": "unassigned",
+      "source_titles": [
+        "charley's aunt (1963 film)",
+        "chris barfoot",
+        "géza von cziffra",
+        "the flower of hawaii (1953 film)",
+        "third from the right"
+      ],
+      "subjects": [
+        "Chris Barfoot",
+        "Géza von Cziffra"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 33,
+      "replacement_tokens": 18,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae22e99554299234fd0441a",
+      "source_index": 5153,
+      "split": "unassigned",
+      "source_titles": [
+        "garry marshall",
+        "richard rush (director)",
+        "the other sister",
+        "the savage seven"
+      ],
+      "subjects": [
+        "Garry Marshall",
+        "Richard Rush (director)"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 33,
+      "replacement_tokens": 15,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7a30565542996a35c17128",
+      "source_index": 5184,
+      "split": "unassigned",
+      "source_titles": [
+        "dave grohl",
+        "david vanian",
+        "mantra (dave grohl song)",
+        "these days (foo fighters song)"
+      ],
+      "subjects": [
+        "Dave Vanian",
+        "Dave Grohl"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 35,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 16,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae2c9235542991a06ce98d5",
+      "source_index": 5193,
+      "split": "unassigned",
+      "source_titles": [
+        "anya seton",
+        "captain corelli's mandolin (film)",
+        "louis de bernières",
+        "port eliot festival",
+        "señor vivo and the coca lord"
+      ],
+      "subjects": [
+        "Louis de Bernières",
+        "Anya Seton"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 57,
+      "replacement_tokens": 38,
+      "absolute_token_difference": 19,
+      "passage_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae2ad255542996483e64a3b",
+      "source_index": 5220,
+      "split": "unassigned",
+      "source_titles": [
+        "big city nights (song)",
+        "cobra starship",
+        "gabe saporta",
+        "klaus meine"
+      ],
+      "subjects": [
+        "Gabe Saporta",
+        "Klaus Meine"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 32,
+      "replacement_tokens": 27,
+      "absolute_token_difference": 5,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab50dc15542991779162d6c",
+      "source_index": 5271,
+      "split": "unassigned",
+      "source_titles": [
+        "i've got two legs",
+        "john cleese",
+        "terry jones",
+        "the ministry of silly walks",
+        "thomas schlamme"
+      ],
+      "subjects": [
+        "Terry Jones",
+        "Thomas Schlamme"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 43,
+      "replacement_tokens": 29,
+      "absolute_token_difference": 14,
+      "passage_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5abbd46c554299642a094b51",
+      "source_index": 5276,
+      "split": "unassigned",
+      "source_titles": [
+        "andrzej munk",
+        "derek estlin purvis",
+        "eroica (1958 film)",
+        "omar sangare"
+      ],
+      "subjects": [
+        "Derek Estlin Purvis",
+        "Andrzej Munk"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 36,
+      "replacement_tokens": 28,
+      "absolute_token_difference": 8,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5abf84d85542994516f454bf",
+      "source_index": 5281,
+      "split": "unassigned",
+      "source_titles": [
+        "darkroom manipulation",
+        "frank pierson",
+        "in country",
+        "peter tscherkassky"
+      ],
+      "subjects": [
+        "Frank Pierson",
+        "Peter Tscherkassky"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 32,
+      "replacement_tokens": 26,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab94115554299131ca422e6",
+      "source_index": 5283,
+      "split": "unassigned",
+      "source_titles": [
+        "alex delaware",
+        "blood test (novel)",
+        "jonathan kellerman",
+        "paul celan",
+        "survival of the fittest (novel)"
+      ],
+      "subjects": [
+        "Paul Celan",
+        "Jonathan Kellerman"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 39,
+      "replacement_tokens": 34,
+      "absolute_token_difference": 5,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae1f6765542997f29b3c1c0",
+      "source_index": 5332,
+      "split": "unassigned",
+      "source_titles": [
+        "chantal claret",
+        "hayley williams",
+        "hayley williams (ice hockey)",
+        "list of songs recorded by paramore"
+      ],
+      "subjects": [
+        "Chantal Claret",
+        "Hayley Williams"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 27,
+      "replacement_tokens": 20,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a75da4855429976ec32bc38",
+      "source_index": 5340,
+      "split": "unassigned",
+      "source_titles": [
+        "cinema paradiso",
+        "klaus-dietrich flade",
+        "louis philippe ii, duke of orléans",
+        "philippe perrin",
+        "stephen perrin"
+      ],
+      "subjects": [
+        "Klaus-Dietrich Flade",
+        "Philippe Perrin"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 66,
+      "replacement_tokens": 66,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a78ec4e55429974737f7902",
+      "source_index": 5355,
+      "split": "unassigned",
+      "source_titles": [
+        "2014 stan wawrinka tennis season",
+        "2015 stan wawrinka tennis season",
+        "sandy mayer",
+        "stan wawrinka"
+      ],
+      "subjects": [
+        "Stan Wawrinka",
+        "Sandy Mayer"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 28,
+      "replacement_tokens": 42,
+      "absolute_token_difference": 14,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae1455755429901ffe4ae36",
+      "source_index": 5363,
+      "split": "unassigned",
+      "source_titles": [
+        "drew daywalt",
+        "how much wood would a woodchuck chuck (film)",
+        "la soufrière (film)",
+        "werner herzog",
+        "werner herzog eats his shoe"
+      ],
+      "subjects": [
+        "Drew Daywalt",
+        "Werner Herzog"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 34,
+      "replacement_tokens": 49,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae077035542993d6555eb69",
+      "source_index": 5372,
+      "split": "unassigned",
+      "source_titles": [
+        "advice to the lovelorn",
+        "alfred l. werker",
+        "creation (unfinished film)",
+        "mark cotta vaz",
+        "merian c. cooper"
+      ],
+      "subjects": [
+        "Alfred L. Werker",
+        "Merian C. Cooper"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 51,
+      "replacement_tokens": 53,
+      "absolute_token_difference": 2,
+      "passage_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a838e9c5542992ef85e22fd",
+      "source_index": 5379,
+      "split": "unassigned",
+      "source_titles": [
+        "1993 volvo international – doubles",
+        "1995 open 13 – doubles",
+        "2000 heineken open – doubles",
+        "daniel vacek",
+        "kathy jordan"
+      ],
+      "subjects": [
+        "Kathy Jordan",
+        "Daniel Vacek"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 39,
+      "replacement_tokens": 46,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a74599a55429974ef308be2",
+      "source_index": 5383,
+      "split": "unassigned",
+      "source_titles": [
+        "1982 stockholm open – doubles",
+        "1984 us open – women's singles",
+        "1990 tokyo indoor – doubles",
+        "kevin curren",
+        "martina navratilova"
+      ],
+      "subjects": [
+        "Kevin Curren",
+        "Martina Navratilova"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 28,
+      "replacement_tokens": 11,
+      "absolute_token_difference": 17,
+      "passage_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8cdb6c554299585d9e3746",
+      "source_index": 5408,
+      "split": "unassigned",
+      "source_titles": [
+        "dustin kensrue",
+        "jimmy urine",
+        "teppei teranishi",
+        "the water &amp; the blood"
+      ],
+      "subjects": [
+        "Dustin Kensrue",
+        "Jimmy Urine"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 33,
+      "replacement_tokens": 22,
+      "absolute_token_difference": 11,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7cc862554299683c1c637a",
+      "source_index": 5459,
+      "split": "unassigned",
+      "source_titles": [
+        "augustine of canterbury",
+        "chelsea horror hotel",
+        "sonic reducer",
+        "stiv bators",
+        "suggs (singer)"
+      ],
+      "subjects": [
+        "Stiv Bators",
+        "Suggs (singer)"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 40,
+      "replacement_tokens": 22,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae1805955429901ffe4aec7",
+      "source_index": 5500,
+      "split": "unassigned",
+      "source_titles": [
+        "h. l. davis",
+        "little big man (novel)",
+        "mackenzie valley pipeline inquiry",
+        "thomas berger (novelist)"
+      ],
+      "subjects": [
+        "Thomas Berger (novelist)",
+        "H. L. Davis"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 45,
+      "replacement_tokens": 30,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a772bbc5542994aec3b7205",
+      "source_index": 5560,
+      "split": "unassigned",
+      "source_titles": [
+        "copycat (film)",
+        "jon amiel",
+        "michael ritchie (film director)",
+        "tandoori nights",
+        "the singing detective"
+      ],
+      "subjects": [
+        "Michael Ritchie (film director)",
+        "Jon Amiel"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 54,
+      "replacement_tokens": 36,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac32f46554299741d48a233",
+      "source_index": 5565,
+      "split": "unassigned",
+      "source_titles": [
+        "daniel oster",
+        "john lanchester",
+        "lycée français paul valéry de cali",
+        "paul valéry"
+      ],
+      "subjects": [
+        "John Lanchester",
+        "Paul Valéry"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 47,
+      "replacement_tokens": 33,
+      "absolute_token_difference": 14,
+      "passage_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab298f6554299194fa9342a",
+      "source_index": 5567,
+      "split": "unassigned",
+      "source_titles": [
+        "expedition: bismarck",
+        "james cameron",
+        "james cameron (union colonel)",
+        "lightstorm entertainment",
+        "victoria larimore"
+      ],
+      "subjects": [
+        "Victoria Larimore",
+        "James Cameron"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 33,
+      "replacement_tokens": 33,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7262335542990c210a4115",
+      "source_index": 5619,
+      "split": "unassigned",
+      "source_titles": [
+        "ampyx power",
+        "despoina",
+        "franco malerba",
+        "wubbo ockels"
+      ],
+      "subjects": [
+        "Franco Malerba",
+        "Wubbo Ockels"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 41,
+      "replacement_tokens": 30,
+      "absolute_token_difference": 11,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5adfeed755429925eb1afb43",
+      "source_index": 5631,
+      "split": "unassigned",
+      "source_titles": [
+        "1992 u.s. pro indoor – doubles",
+        "1997 kremlin cup – men's doubles",
+        "1999 gerry weber open – doubles",
+        "jennifer capriati",
+        "rick leach"
+      ],
+      "subjects": [
+        "Jennifer Capriati",
+        "Rick Leach"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 26,
+      "replacement_tokens": 12,
+      "absolute_token_difference": 14,
+      "passage_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab7eba155429928e1fe3935",
+      "source_index": 5712,
+      "split": "unassigned",
+      "source_titles": [
+        "dorothy parker",
+        "hu zhiyu",
+        "mary doria russell",
+        "south african literary awards (sala)",
+        "turkish literature"
+      ],
+      "subjects": [
+        "Mary Doria Russell",
+        "Dorothy Parker"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 22,
+      "replacement_tokens": 37,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a82f8e955429966c78a6abf",
+      "source_index": 5738,
+      "split": "unassigned",
+      "source_titles": [
+        "doc neeson",
+        "mark wystrach",
+        "the angels (australian band)",
+        "the angels discography"
+      ],
+      "subjects": [
+        "Mark Wystrach",
+        "Doc Neeson"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 37,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 13,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a772d2b55429972597f1465",
+      "source_index": 5743,
+      "split": "unassigned",
+      "source_titles": [
+        "di'anno (album)",
+        "icarus witch",
+        "joe gooch",
+        "list of songs recorded by iron maiden",
+        "paul di'anno"
+      ],
+      "subjects": [
+        "Paul Di'Anno",
+        "Joe Gooch"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 58,
+      "replacement_tokens": 47,
+      "absolute_token_difference": 11,
+      "passage_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a738bef5542992d56e7e364",
+      "source_index": 5753,
+      "split": "unassigned",
+      "source_titles": [
+        "benjamin britten",
+        "chiara e serafina",
+        "gaetano donizetti",
+        "gaetano rossi",
+        "il furioso all'isola di san domingo"
+      ],
+      "subjects": [
+        "Benjamin Britten",
+        "Gaetano Donizetti"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 37,
+      "replacement_tokens": 29,
+      "absolute_token_difference": 8,
+      "passage_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac09f445542992a796ded3b",
+      "source_index": 5769,
+      "split": "unassigned",
+      "source_titles": [
+        "d. h. lawrence",
+        "haunted mesa",
+        "louis l'amour",
+        "national association for chiropractic medicine"
+      ],
+      "subjects": [
+        "Louis L'Amour",
+        "D. H. Lawrence"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 38,
+      "replacement_tokens": 53,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8a30a555429930ff3c0ceb",
+      "source_index": 5808,
+      "split": "unassigned",
+      "source_titles": [
+        "fred guiol",
+        "ivan moffat",
+        "mummy's boys",
+        "stuart paton"
+      ],
+      "subjects": [
+        "Stuart Paton",
+        "Fred Guiol"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 35,
+      "replacement_tokens": 38,
+      "absolute_token_difference": 3,
+      "passage_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8d0cae55429941ae14df76",
+      "source_index": 5812,
+      "split": "unassigned",
+      "source_titles": [
+        "chris martin",
+        "coldplay",
+        "homecoming (kanye west song)",
+        "jimmy gestapo"
+      ],
+      "subjects": [
+        "Chris Martin",
+        "Jimmy Gestapo"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 31,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 12,
+      "passage_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab733ef5542993667793f88",
+      "source_index": 5815,
+      "split": "unassigned",
+      "source_titles": [
+        "constantine maroulis",
+        "feargal sharkey",
+        "out of my system",
+        "someone to somebody"
+      ],
+      "subjects": [
+        "Feargal Sharkey",
+        "Constantine Maroulis"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 36,
+      "replacement_tokens": 46,
+      "absolute_token_difference": 10,
+      "passage_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7dbb8d5542990b8f503a4e",
+      "source_index": 5830,
+      "split": "unassigned",
+      "source_titles": [
+        "2011 aegon international – women's singles",
+        "geoff masters",
+        "list of australia fed cup team representatives",
+        "marion bartoli"
+      ],
+      "subjects": [
+        "Marion Bartoli",
+        "Geoff Masters"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 25,
+      "replacement_tokens": 15,
+      "absolute_token_difference": 10,
+      "passage_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8c31f8554299240d9c20d5",
+      "source_index": 5857,
+      "split": "unassigned",
+      "source_titles": [
+        "arthur c. clarke",
+        "arthur c. clarke's mysterious universe",
+        "hate (short story)",
+        "john richardson (art historian)"
+      ],
+      "subjects": [
+        "Arthur C. Clarke",
+        "John Richardson (art historian)"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 31,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 12,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae538ac5542990ba0bbb237",
+      "source_index": 5928,
+      "split": "unassigned",
+      "source_titles": [
+        "carrie clark ward",
+        "michael curtiz",
+        "peter segal",
+        "the unsuspected",
+        "victor sjöström"
+      ],
+      "subjects": [
+        "Michael Curtiz",
+        "Peter Segal"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 24,
+      "replacement_tokens": 23,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7b99f85542995eb53be966",
+      "source_index": 5948,
+      "split": "unassigned",
+      "source_titles": [
+        "c. s. forester",
+        "homage to catalonia",
+        "lionel trilling",
+        "louis arnaud reid",
+        "the life and work of sigmund freud"
+      ],
+      "subjects": [
+        "C. S. Forester",
+        "Lionel Trilling"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 45,
+      "replacement_tokens": 26,
+      "absolute_token_difference": 19,
+      "passage_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab60f40554299110f2199d3",
+      "source_index": 5969,
+      "split": "unassigned",
+      "source_titles": [
+        "opal dream",
+        "peter cattaneo",
+        "seth grahame-smith",
+        "the rocker (film)"
+      ],
+      "subjects": [
+        "Peter Cattaneo",
+        "Seth Grahame-Smith"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 38,
+      "replacement_tokens": 46,
+      "absolute_token_difference": 8,
+      "passage_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a809e585542992bc0c4a784",
+      "source_index": 5980,
+      "split": "unassigned",
+      "source_titles": [
+        "akutagawa prize",
+        "andré gide",
+        "autumn mountain",
+        "ryūnosuke akutagawa",
+        "tsuneari fukuda"
+      ],
+      "subjects": [
+        "André Gide",
+        "Ryūnosuke Akutagawa"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 60,
+      "replacement_tokens": 57,
+      "absolute_token_difference": 3,
+      "passage_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae5098955429908b63264ee",
+      "source_index": 5984,
+      "split": "unassigned",
+      "source_titles": [
+        "gil scott-heron",
+        "susan vreeland",
+        "the first minute of a new day",
+        "the revolution will not be televised (album)"
+      ],
+      "subjects": [
+        "Susan Vreeland",
+        "Gil Scott-Heron"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 69,
+      "replacement_tokens": 49,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7a44c65542994f819ef1a4",
+      "source_index": 5993,
+      "split": "unassigned",
+      "source_titles": [
+        "anette olzon",
+        "changes (alyson avenue album)",
+        "dark passion play",
+        "emily whitehurst",
+        "list of dark passion play editions"
+      ],
+      "subjects": [
+        "Emily Whitehurst",
+        "Anette Olzon"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 38,
+      "replacement_tokens": 18,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab87dc355429934fafe6dfb",
+      "source_index": 6023,
+      "split": "unassigned",
+      "source_titles": [
+        "big man on campus",
+        "hans richter (artist)",
+        "jeremy kagan",
+        "scott joplin (film)",
+        "the big fix"
+      ],
+      "subjects": [
+        "Jeremy Kagan",
+        "Hans Richter (artist)"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 43,
+      "replacement_tokens": 31,
+      "absolute_token_difference": 12,
+      "passage_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a73147d5542994cef4bc447",
+      "source_index": 6032,
+      "split": "unassigned",
+      "source_titles": [
+        "claude nicollier",
+        "double star (satellite)",
+        "frank de winne",
+        "patrick baudry",
+        "samantha cristoforetti"
+      ],
+      "subjects": [
+        "Patrick Baudry",
+        "Frank De Winne"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 37,
+      "replacement_tokens": 22,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8adb6655429950cd6afbb9",
+      "source_index": 6048,
+      "split": "unassigned",
+      "source_titles": [
+        "michaël llodra",
+        "roger federer junior years",
+        "sania mirza",
+        "tennis at the 2010 asian games – mixed doubles"
+      ],
+      "subjects": [
+        "Sania Mirza",
+        "Michaël Llodra"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 39,
+      "replacement_tokens": 32,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a88469b5542996e4f308922",
+      "source_index": 6091,
+      "split": "unassigned",
+      "source_titles": [
+        "berthold viertel",
+        "little friend (film)",
+        "nora (1923 film)",
+        "sidney morgan"
+      ],
+      "subjects": [
+        "Sidney Morgan",
+        "Berthold Viertel"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 35,
+      "replacement_tokens": 20,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac3bc92554299391541391e",
+      "source_index": 6125,
+      "split": "unassigned",
+      "source_titles": [
+        "fruit chan",
+        "keenen ivory wayans",
+        "scary movie (film series)",
+        "super bad james dynomite"
+      ],
+      "subjects": [
+        "Keenen Ivory Wayans",
+        "Fruit Chan"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 48,
+      "replacement_tokens": 36,
+      "absolute_token_difference": 12,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae1e27c5542997f29b3c163",
+      "source_index": 6127,
+      "split": "unassigned",
+      "source_titles": [
+        "frederick wiseman",
+        "sam b. girgus",
+        "titicut follies",
+        "woody allen",
+        "woody allen (album)"
+      ],
+      "subjects": [
+        "Woody Allen",
+        "Frederick Wiseman"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 46,
+      "replacement_tokens": 31,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a760ad9554299109176e62c",
+      "source_index": 6129,
+      "split": "unassigned",
+      "source_titles": [
+        "dmitri anosov",
+        "ivan dmitri",
+        "ivan fesenko",
+        "ivan the terrible (treblinka guard)",
+        "list of lab rats characters"
+      ],
+      "subjects": [
+        "Ivan Fesenko",
+        "Dmitri Anosov"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 40,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 16,
+      "passage_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a73b6735542992d56e7e38f",
+      "source_index": 6154,
+      "split": "unassigned",
+      "source_titles": [
+        "andrey kolmogorov",
+        "kontsevich invariant",
+        "kontsevich quantization formula",
+        "kriging",
+        "maxim kontsevich"
+      ],
+      "subjects": [
+        "Maxim Kontsevich",
+        "Andrey Kolmogorov"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 49,
+      "replacement_tokens": 30,
+      "absolute_token_difference": 19,
+      "passage_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a90c9375542995651fb51f1",
+      "source_index": 6165,
+      "split": "unassigned",
+      "source_titles": [
+        "george lucas",
+        "george lucas in love",
+        "lewis allen (director)",
+        "lewis allen (rugby union)",
+        "skywalker ranch"
+      ],
+      "subjects": [
+        "George Lucas",
+        "Lewis Allen (director)"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 26,
+      "replacement_tokens": 25,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab29266554299545a2cf98e",
+      "source_index": 6176,
+      "split": "unassigned",
+      "source_titles": [
+        "jodie foster",
+        "mikhail romm",
+        "sahara (1943 american film)",
+        "the queen of spades (prokofiev)",
+        "triumph over violence"
+      ],
+      "subjects": [
+        "Mikhail Romm",
+        "Jodie Foster"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 37,
+      "replacement_tokens": 23,
+      "absolute_token_difference": 14,
+      "passage_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5abe594555429933744ab834",
+      "source_index": 6184,
+      "split": "unassigned",
+      "source_titles": [
+        "burton c. bell",
+        "come taste the band",
+        "david coverdale",
+        "list of whitesnake band members"
+      ],
+      "subjects": [
+        "David Coverdale",
+        "Burton C. Bell"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 24,
+      "replacement_tokens": 17,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7e84ea5542997cc2c4755d",
+      "source_index": 6201,
+      "split": "unassigned",
+      "source_titles": [
+        "big bad love",
+        "david vincent",
+        "fred smith (bassist)",
+        "pioneers for a cure",
+        "tom verlaine"
+      ],
+      "subjects": [
+        "Tom Verlaine",
+        "David Vincent"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 58,
+      "replacement_tokens": 40,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae4cc5855429960a22e01eb",
+      "source_index": 6228,
+      "split": "unassigned",
+      "source_titles": [
+        "age of consent (film)",
+        "halfway to nowhere",
+        "i. f. stone",
+        "norman lindsay",
+        "norman lindsay gallery and museum"
+      ],
+      "subjects": [
+        "I. F. Stone",
+        "Norman Lindsay"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 52,
+      "replacement_tokens": 43,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5addd6e25542990dbb2f7eac",
+      "source_index": 6301,
+      "split": "unassigned",
+      "source_titles": [
+        "bernard cornwell",
+        "jean cocteau",
+        "jean cocteau house",
+        "sharpe's christmas (story collection)",
+        "sharpe's ransom"
+      ],
+      "subjects": [
+        "Jean Cocteau",
+        "Bernard Cornwell"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 45,
+      "replacement_tokens": 27,
+      "absolute_token_difference": 18,
+      "passage_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a792bee554299148911fa1a",
+      "source_index": 6302,
+      "split": "unassigned",
+      "source_titles": [
+        "barbara albert",
+        "reconstitution (1970 film)",
+        "theo angelopoulos",
+        "trilogy: the weeping meadow",
+        "ulysses' gaze"
+      ],
+      "subjects": [
+        "Theo Angelopoulos",
+        "Barbara Albert"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 26,
+      "replacement_tokens": 36,
+      "absolute_token_difference": 10,
+      "passage_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77931f5542992a6e59df03",
+      "source_index": 6314,
+      "split": "unassigned",
+      "source_titles": [
+        "drive by (band)",
+        "frank iero",
+        "matthew tuck",
+        "my chemical romance"
+      ],
+      "subjects": [
+        "Matthew Tuck",
+        "Frank Iero"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 23,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 4,
+      "passage_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae1c9505542997f29b3c102",
+      "source_index": 6344,
+      "split": "unassigned",
+      "source_titles": [
+        "anders nyström",
+        "katatonia",
+        "polyrically uncorrect",
+        "ronnie dunn",
+        "the fall of hearts"
+      ],
+      "subjects": [
+        "Ronnie Dunn",
+        "Anders Nyström"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 35,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 11,
+      "passage_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab72af15542993667793f5f",
+      "source_index": 6348,
+      "split": "unassigned",
+      "source_titles": [
+        "a bay of blood",
+        "ben holmes",
+        "black sunday (1960 film)",
+        "blood and black lace",
+        "mario bava"
+      ],
+      "subjects": [
+        "Mario Bava",
+        "Ben Holmes"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 49,
+      "replacement_tokens": 43,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a79c9ef5542994bb94570a7",
+      "source_index": 6363,
+      "split": "unassigned",
+      "source_titles": [
+        "enter (within temptation album)",
+        "ezra koenig",
+        "robert westerholt",
+        "sharon den adel",
+        "within temptation"
+      ],
+      "subjects": [
+        "Ezra Koenig",
+        "Sharon den Adel"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 55,
+      "replacement_tokens": 55,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7cbfca554299683c1c6363",
+      "source_index": 6371,
+      "split": "unassigned",
+      "source_titles": [
+        "david gilmour",
+        "david gilmour (album)",
+        "one man band (roger daltrey song)",
+        "roger daltrey"
+      ],
+      "subjects": [
+        "Roger Daltrey",
+        "David Gilmour"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 40,
+      "replacement_tokens": 49,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77036755429972597f1412",
+      "source_index": 6404,
+      "split": "unassigned",
+      "source_titles": [
+        "bless the child",
+        "chuck russell",
+        "james cunningham (director)",
+        "the blob (1988 film)",
+        "the scorpion king"
+      ],
+      "subjects": [
+        "James Cunningham (director)",
+        "Chuck Russell"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 39,
+      "replacement_tokens": 41,
+      "absolute_token_difference": 2,
+      "passage_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac3b3a6554299741d48a2e2",
+      "source_index": 6410,
+      "split": "unassigned",
+      "source_titles": [
+        "beaches (film)",
+        "iris rainer dart",
+        "ranitomeya amazonica",
+        "susan straight",
+        "the people in the picture"
+      ],
+      "subjects": [
+        "Susan Straight",
+        "Iris Rainer Dart"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 20,
+      "replacement_tokens": 22,
+      "absolute_token_difference": 2,
+      "passage_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae216af5542994d89d5b33d",
+      "source_index": 6436,
+      "split": "unassigned",
+      "source_titles": [
+        "francis veber",
+        "john garabedian",
+        "pierre-gilles veber",
+        "the valet"
+      ],
+      "subjects": [
+        "John Garabedian",
+        "Francis Veber"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 31,
+      "replacement_tokens": 11,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae0c6b65542993d6555ec5f",
+      "source_index": 6445,
+      "split": "unassigned",
+      "source_titles": [
+        "james frawley",
+        "jerry belson",
+        "smile (musical)",
+        "surrender (1987 film)",
+        "the christian licorice store"
+      ],
+      "subjects": [
+        "James Frawley",
+        "Jerry Belson"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 28,
+      "replacement_tokens": 20,
+      "absolute_token_difference": 8,
+      "passage_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8352a85542990548d0b1d0",
+      "source_index": 6474,
+      "split": "unassigned",
+      "source_titles": [
+        "2015 china open – women's doubles",
+        "2015 french open – women's doubles",
+        "2015 ptt thailand open – doubles",
+        "daniel nestor",
+        "peng shuai"
+      ],
+      "subjects": [
+        "Peng Shuai",
+        "Daniel Nestor"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 24,
+      "replacement_tokens": 33,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5abaa06d55429939ce03dd3c",
+      "source_index": 6504,
+      "split": "unassigned",
+      "source_titles": [
+        "a tale of two cities (lost)",
+        "bangladesh film directors association",
+        "jack bender",
+        "one of us (lost)",
+        "roger christian (filmmaker)"
+      ],
+      "subjects": [
+        "Jack Bender",
+        "Roger Christian (filmmaker)"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 53,
+      "replacement_tokens": 53,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7b4aab55429931da12ca5e",
+      "source_index": 6525,
+      "split": "unassigned",
+      "source_titles": [
+        "(you make me feel like) a natural woman",
+        "andy yorke",
+        "aretha franklin",
+        "the electrifying aretha franklin",
+        "yeah!!!"
+      ],
+      "subjects": [
+        "Aretha Franklin",
+        "Andy Yorke"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 34,
+      "replacement_tokens": 25,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae2a0f9554299495565daec",
+      "source_index": 6557,
+      "split": "unassigned",
+      "source_titles": [
+        "control (mutemath song)",
+        "joe elliott",
+        "odd soul",
+        "paul meany"
+      ],
+      "subjects": [
+        "Joe Elliott",
+        "Paul Meany"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 40,
+      "replacement_tokens": 34,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5abe690055429965af743ef5",
+      "source_index": 6580,
+      "split": "unassigned",
+      "source_titles": [
+        "adolfo bioy casares",
+        "in memoriam (film)",
+        "jean rhys",
+        "the hero of women"
+      ],
+      "subjects": [
+        "Jean Rhys",
+        "Adolfo Bioy Casares"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 42,
+      "replacement_tokens": 35,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a76a3da554299373536012a",
+      "source_index": 6591,
+      "split": "unassigned",
+      "source_titles": [
+        "bertalan farkas",
+        "gene mako",
+        "umberto guidoni",
+        "unite the left"
+      ],
+      "subjects": [
+        "Bertalan Farkas",
+        "Umberto Guidoni"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 34,
+      "replacement_tokens": 40,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a883eb55542994846c1ce5d",
+      "source_index": 6608,
+      "split": "unassigned",
+      "source_titles": [
+        "genndy tartakovsky",
+        "hotel transylvania 2",
+        "list of dexter's laboratory episodes",
+        "star wars: clone wars (2003 tv series)",
+        "sydney freeland"
+      ],
+      "subjects": [
+        "Sydney Freeland",
+        "Genndy Tartakovsky"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 63,
+      "replacement_tokens": 50,
+      "absolute_token_difference": 13,
+      "passage_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5aba67ad554299232ef4a2c5",
+      "source_index": 6622,
+      "split": "unassigned",
+      "source_titles": [
+        "grażyna miller",
+        "latin american wars of independence",
+        "probability of occupation",
+        "richard fariña",
+        "the swallow song"
+      ],
+      "subjects": [
+        "Grażyna Miller",
+        "Richard Fariña"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 36,
+      "replacement_tokens": 23,
+      "absolute_token_difference": 13,
+      "passage_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac224cf5542992f1f2b3818",
+      "source_index": 6707,
+      "split": "unassigned",
+      "source_titles": [
+        "elizabeth bowen",
+        "john maynard keynes",
+        "robert skidelsky, baron skidelsky",
+        "the economic consequences of the peace",
+        "the life of john maynard keynes"
+      ],
+      "subjects": [
+        "Elizabeth Bowen",
+        "John Maynard Keynes"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 70,
+      "replacement_tokens": 68,
+      "absolute_token_difference": 2,
+      "passage_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab577ec5542997d4ad1f143",
+      "source_index": 6711,
+      "split": "unassigned",
+      "source_titles": [
+        "faris badwan",
+        "gift (1993 film)",
+        "perry farrell",
+        "satellite party"
+      ],
+      "subjects": [
+        "Perry Farrell",
+        "Faris Badwan"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 44,
+      "replacement_tokens": 48,
+      "absolute_token_difference": 4,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77a81a55429949eeb29f1d",
+      "source_index": 6748,
+      "split": "unassigned",
+      "source_titles": [
+        "frank beyer",
+        "how to make an american quilt",
+        "jocelyn moorhouse",
+        "the dressmaker (2015 film)"
+      ],
+      "subjects": [
+        "Frank Beyer",
+        "Jocelyn Moorhouse"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 25,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77e92755429949eeb29fa2",
+      "source_index": 6751,
+      "split": "unassigned",
+      "source_titles": [
+        "erich von stroheim",
+        "the house (1999 film)",
+        "the wedding march (1928 film)",
+        "under secret orders",
+        "wang xiaoshuai"
+      ],
+      "subjects": [
+        "Erich von Stroheim",
+        "Wang Xiaoshuai"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 71,
+      "replacement_tokens": 64,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab2b2ed5542992953946822",
+      "source_index": 6770,
+      "split": "unassigned",
+      "source_titles": [
+        "2013 rose of tralee",
+        "biff byford",
+        "celebrate – the night of the warlock",
+        "rock 'n' roll gypsies",
+        "shane filan"
+      ],
+      "subjects": [
+        "Biff Byford",
+        "Shane Filan"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 38,
+      "replacement_tokens": 29,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5abecea05542994516f4543c",
+      "source_index": 6808,
+      "split": "unassigned",
+      "source_titles": [
+        "bae woo-hee",
+        "dal shabet discography",
+        "park subin",
+        "serri (singer)",
+        "toby rand"
+      ],
+      "subjects": [
+        "Park Subin",
+        "Toby Rand"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 44,
+      "replacement_tokens": 37,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab472de5542991751b4d778",
+      "source_index": 6857,
+      "split": "unassigned",
+      "source_titles": [
+        "chrissie hynde",
+        "jung yong-hwa",
+        "last of the independents",
+        "martin chambers",
+        "mileage (song)"
+      ],
+      "subjects": [
+        "Jung Yong-hwa",
+        "Chrissie Hynde"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 42,
+      "replacement_tokens": 41,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8f8f9655429918e830d263",
+      "source_index": 6879,
+      "split": "unassigned",
+      "source_titles": [
+        "bernard vorhaus",
+        "brad anderson (director)",
+        "money for speed",
+        "the broken melody (1934 film)"
+      ],
+      "subjects": [
+        "Brad Anderson (director)",
+        "Bernard Vorhaus"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 20,
+      "replacement_tokens": 19,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a87d7f45542997e5c09a576",
+      "source_index": 6907,
+      "split": "unassigned",
+      "source_titles": [
+        "debbie harry",
+        "kim tae-yeon",
+        "kim tae-yeon discography",
+        "union city blue"
+      ],
+      "subjects": [
+        "Debbie Harry",
+        "Kim Tae-yeon"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 31,
+      "replacement_tokens": 38,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab8a96f55429919ba4e234d",
+      "source_index": 6946,
+      "split": "unassigned",
+      "source_titles": [
+        "fat mike",
+        "jeffrey walker",
+        "liberal animation",
+        "pink and black records"
+      ],
+      "subjects": [
+        "Jeffrey Walker (musician)",
+        "Fat Mike"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 31,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 7,
+      "passage_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae4a4485542996836b02cef",
+      "source_index": 7027,
+      "split": "unassigned",
+      "source_titles": [
+        "dirty white boy (song)",
+        "lou gramm",
+        "roy khan",
+        "shadow king (band)",
+        "that was yesterday (foreigner song)"
+      ],
+      "subjects": [
+        "Roy Khan",
+        "Lou Gramm"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 47,
+      "replacement_tokens": 34,
+      "absolute_token_difference": 13,
+      "passage_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a71720b5542994082a3e836",
+      "source_index": 7030,
+      "split": "unassigned",
+      "source_titles": [
+        "bertrand russell",
+        "failure to refer",
+        "günter grass",
+        "power: a new social analysis"
+      ],
+      "subjects": [
+        "Bertrand Russell",
+        "Günter Grass"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 58,
+      "replacement_tokens": 41,
+      "absolute_token_difference": 17,
+      "passage_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5abbd56e5542993f40c73bd2",
+      "source_index": 7049,
+      "split": "unassigned",
+      "source_titles": [
+        "chris donaldson",
+        "ihor podolchak",
+        "las meninas (film)",
+        "masoch fund",
+        "roger donaldson"
+      ],
+      "subjects": [
+        "Ihor Podolchak",
+        "Roger Donaldson"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 39,
+      "replacement_tokens": 23,
+      "absolute_token_difference": 16,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77bb655542992a6e59dfa4",
+      "source_index": 7084,
+      "split": "unassigned",
+      "source_titles": [
+        "daniil kharms",
+        "futility (poem)",
+        "insensibility",
+        "wilfred owen"
+      ],
+      "subjects": [
+        "Wilfred Owen",
+        "Daniil Kharms"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 45,
+      "replacement_tokens": 54,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a84b4785542991dd0999d9d",
+      "source_index": 7105,
+      "split": "unassigned",
+      "source_titles": [
+        "acoustified!",
+        "deron miller",
+        "liam gallagher",
+        "wall of glass"
+      ],
+      "subjects": [
+        "Liam Gallagher",
+        "Deron Miller"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 24,
+      "replacement_tokens": 39,
+      "absolute_token_difference": 15,
+      "passage_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae583ac55429960a22e02fd",
+      "source_index": 7110,
+      "split": "unassigned",
+      "source_titles": [
+        "anatoly maltsev",
+        "demazure conjecture",
+        "gary seitz",
+        "group scheme",
+        "semyon aranovich gershgorin"
+      ],
+      "subjects": [
+        "Anatoly Maltsev",
+        "Semyon Aronovich Gershgorin"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 52,
+      "replacement_tokens": 47,
+      "absolute_token_difference": 5,
+      "passage_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a81a1965542990a1d231e2b",
+      "source_index": 7128,
+      "split": "unassigned",
+      "source_titles": [
+        "claudie haigneré",
+        "gerhard schwehm",
+        "gerhard thiele",
+        "richard h. small",
+        "v. g. braun-dusemond"
+      ],
+      "subjects": [
+        "Claudie Haigneré",
+        "Gerhard Thiele"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 30,
+      "replacement_tokens": 13,
+      "absolute_token_difference": 17,
+      "passage_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab914fd55429919ba4e2396",
+      "source_index": 7152,
+      "split": "unassigned",
+      "source_titles": [
+        "jack russell (musician)",
+        "lou reed",
+        "lou reed (album)",
+        "parson russell terrier"
+      ],
+      "subjects": [
+        "Lou Reed",
+        "Jack Russell (musician)"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 34,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 10,
+      "passage_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab84e3f55429934fafe6d51",
+      "source_index": 7156,
+      "split": "unassigned",
+      "source_titles": [
+        "all that jazz (song)",
+        "american choreography awards",
+        "bob fosse",
+        "gwen verdon",
+        "joseph ruben"
+      ],
+      "subjects": [
+        "Bob Fosse",
+        "Joseph Ruben"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 28,
+      "replacement_tokens": 30,
+      "absolute_token_difference": 2,
+      "passage_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "question_id": "hotpot_5a7c13a15542997c3ec972dd",
+      "source_index": 7176,
+      "split": "unassigned",
+      "source_titles": [
+        "arthur b. woods",
+        "arthur weglein",
+        "lorelei linklater",
+        "richard linklater"
+      ],
+      "subjects": [
+        "Richard Linklater",
+        "Arthur B. Woods"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": true,
+      "removed_tokens": 29,
+      "replacement_tokens": 29,
+      "absolute_token_difference": 0,
+      "passage_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a870d63554299211dda2bbb",
+      "source_index": 7187,
+      "split": "unassigned",
+      "source_titles": [
+        "jan švankmajer",
+        "lambert hillyer",
+        "square deal sanderson",
+        "the whistle (1921 film)",
+        "travelin' on (film)"
+      ],
+      "subjects": [
+        "Jan Švankmajer",
+        "Lambert Hillyer"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 38,
+      "replacement_tokens": 32,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8431965542996488c2e509",
+      "source_index": 7192,
+      "split": "unassigned",
+      "source_titles": [
+        "escape from angola",
+        "fbi code 98",
+        "leslie h. martinson",
+        "mrs. pollifax-spy",
+        "murray grigor"
+      ],
+      "subjects": [
+        "Murray Grigor",
+        "Leslie H. Martinson"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 37,
+      "replacement_tokens": 29,
+      "absolute_token_difference": 8,
+      "passage_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8f183a55429924144829b0",
+      "source_index": 7193,
+      "split": "unassigned",
+      "source_titles": [
+        "arthur rosson",
+        "des journées entières dans les arbres",
+        "india song",
+        "marguerite duras",
+        "moderato cantabile"
+      ],
+      "subjects": [
+        "Marguerite Duras",
+        "Arthur Rosson"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 29,
+      "replacement_tokens": 35,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5a77cabe5542995d831812da",
+      "source_index": 7312,
+      "split": "unassigned",
+      "source_titles": [
+        "apocalyptic love world tour",
+        "back from cali",
+        "janet gardner",
+        "let rock rule tour",
+        "myles kennedy"
+      ],
+      "subjects": [
+        "Janet Gardner",
+        "Myles Kennedy"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 71,
+      "replacement_tokens": 54,
+      "absolute_token_difference": 17,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ab5e386554299494045f0a2",
+      "source_index": 7318,
+      "split": "unassigned",
+      "source_titles": [
+        "burns &amp; poe",
+        "heidi newfield",
+        "she misses him",
+        "tim rushlow",
+        "tim rushlow (album)"
+      ],
+      "subjects": [
+        "Heidi Newfield",
+        "Tim Rushlow"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 23,
+      "replacement_tokens": 24,
+      "absolute_token_difference": 1,
+      "passage_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "question_id": "hotpot_5ae075565542993d6555eb5a",
+      "source_index": 7326,
+      "split": "unassigned",
+      "source_titles": [
+        "dog on wheels",
+        "lee sung-min (singer)",
+        "miss korea (tv series)",
+        "stuart murdoch (musician)",
+        "wind wind wind"
+      ],
+      "subjects": [
+        "Stuart Murdoch (musician)",
+        "Lee Sung-min (singer)"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 40,
+      "replacement_tokens": 20,
+      "absolute_token_difference": 20,
+      "passage_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a8fbe655542997ba9cb3311",
+      "source_index": 7335,
+      "split": "unassigned",
+      "source_titles": [
+        "michael snow",
+        "nostalgia (frampton film)",
+        "snow v eaton centre ltd",
+        "wavelength (1967 film)",
+        "wayne wang"
+      ],
+      "subjects": [
+        "Michael Snow",
+        "Wayne Wang"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 25,
+      "replacement_tokens": 21,
+      "absolute_token_difference": 4,
+      "passage_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "question_id": "hotpot_5ac527315542994611c8b3d7",
+      "source_index": 7353,
+      "split": "unassigned",
+      "source_titles": [
+        "dennis dugan",
+        "saving silverman",
+        "steve ihnat",
+        "the howling (film)",
+        "you don't mess with the zohan"
+      ],
+      "subjects": [
+        "Dennis Dugan",
+        "Steve Ihnat"
+      ],
+      "removed_subject_index": 0,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 27,
+      "replacement_tokens": 21,
+      "absolute_token_difference": 6,
+      "passage_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "question_id": "hotpot_5a87673a5542996432c5726d",
+      "source_index": 7362,
+      "split": "unassigned",
+      "source_titles": [
+        "broken arrow (1950 film)",
+        "carolyn farina",
+        "damsels in distress",
+        "delmer daves",
+        "whit stillman"
+      ],
+      "subjects": [
+        "Delmer Daves",
+        "Whit Stillman"
+      ],
+      "removed_subject_index": 1,
+      "replacement_keeps_subject_source": false,
+      "removed_tokens": 71,
+      "replacement_tokens": 62,
+      "absolute_token_difference": 9,
+      "passage_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    }
+  ],
+  "source_checks": [
+    {
+      "source_index": 5016,
+      "original_id": "5ac2803f5542996773102544",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Trevor McNevan",
+        "Leslie West"
+      ],
+      "displayed_source_titles": [
+        "Hawk Nelson Is My Friend",
+        "Leslie West",
+        "Nine Lashes",
+        "Trevor McNevan"
+      ],
+      "removed_subject": "Leslie West"
+    },
+    {
+      "source_index": 5020,
+      "original_id": "5a7cfc2055429909bec768dc",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Daniel Johns",
+        "Justin Currie"
+      ],
+      "displayed_source_titles": [
+        "Daniel Johns",
+        "Del Amitri",
+        "Iain Harvie",
+        "Justin Currie",
+        "List of Afrikaans singers"
+      ],
+      "removed_subject": "Justin Currie"
+    },
+    {
+      "source_index": 5030,
+      "original_id": "5ac2686c55429963665199ab",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Bill Champlin",
+        "Yeo Hoon-min"
+      ],
+      "displayed_source_titles": [
+        "Airplay (band)",
+        "Bill Champlin",
+        "Chasin' the Wind",
+        "Tamara Champlin",
+        "Yeo Hoon-min"
+      ],
+      "removed_subject": "Bill Champlin"
+    },
+    {
+      "source_index": 5035,
+      "original_id": "5a7278335542994cef4bc2bc",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Pyotr Ilyich Tchaikovsky",
+        "Giuseppe Verdi"
+      ],
+      "displayed_source_titles": [
+        "Berta Foersterová",
+        "Giuseppe Verdi",
+        "Pezzo capriccioso",
+        "Pyotr Ilyich Tchaikovsky",
+        "Symphony No. 2 (Tchaikovsky)"
+      ],
+      "removed_subject": "Giuseppe Verdi"
+    },
+    {
+      "source_index": 5037,
+      "original_id": "5ab7432a554299110f219ae6",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Blaise Cendrars",
+        "Julian Barnes"
+      ],
+      "displayed_source_titles": [
+        "Blaise Cendrars",
+        "Jean Hugo",
+        "Julian Barnes",
+        "Remy de Gourmont",
+        "Wet Confetti"
+      ],
+      "removed_subject": "Blaise Cendrars"
+    },
+    {
+      "source_index": 5044,
+      "original_id": "5a9093325542995651fb5195",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Andrei Okounkov",
+        "Valery Goppa"
+      ],
+      "displayed_source_titles": [
+        "Andrei Okounkov",
+        "Nairi Sedrakyan",
+        "The Fiery Angel (novel)",
+        "Valery Goppa",
+        "Valery Oisteanu"
+      ],
+      "removed_subject": "Valery Goppa"
+    },
+    {
+      "source_index": 5056,
+      "original_id": "5abbf88255429931dba145f2",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Anthony Himbs",
+        "David Hewlett"
+      ],
+      "displayed_source_titles": [
+        "Anthony Himbs",
+        "David Hewlett",
+        "Ice Men (film)",
+        "Stargate Atlantis (season 3)",
+        "Traders (season 5)"
+      ],
+      "removed_subject": "Anthony Himbs"
+    },
+    {
+      "source_index": 5062,
+      "original_id": "5ac447e6554299194317396a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "James Merrill",
+        "James Joyce"
+      ],
+      "displayed_source_titles": [
+        "James Joyce",
+        "James Merrill",
+        "Stephen James Joyce",
+        "The Poetry Collection"
+      ],
+      "removed_subject": "James Joyce"
+    },
+    {
+      "source_index": 5116,
+      "original_id": "5a7f4d8a5542992097ad2f07",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Ivan Dodig",
+        "Fabio Fognini"
+      ],
+      "displayed_source_titles": [
+        "2016 BNP Paribas Masters – Doubles",
+        "2017 Rogers Cup – Men's Doubles",
+        "Fabio Fognini",
+        "Ivan Dodig",
+        "Williams sisters"
+      ],
+      "removed_subject": "Ivan Dodig"
+    },
+    {
+      "source_index": 5142,
+      "original_id": "5a7d2c895542995ed0d16622",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Chris Barfoot",
+        "Géza von Cziffra"
+      ],
+      "displayed_source_titles": [
+        "Charley's Aunt (1963 film)",
+        "Chris Barfoot",
+        "Géza von Cziffra",
+        "The Flower of Hawaii (1953 film)",
+        "Third from the Right"
+      ],
+      "removed_subject": "Chris Barfoot"
+    },
+    {
+      "source_index": 5153,
+      "original_id": "5ae22e99554299234fd0441a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Garry Marshall",
+        "Richard Rush (director)"
+      ],
+      "displayed_source_titles": [
+        "Garry Marshall",
+        "Richard Rush (director)",
+        "The Other Sister",
+        "The Savage Seven"
+      ],
+      "removed_subject": "Richard Rush (director)"
+    },
+    {
+      "source_index": 5184,
+      "original_id": "5a7a30565542996a35c17128",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "David Vanian",
+        "Dave Grohl"
+      ],
+      "displayed_source_titles": [
+        "Dave Grohl",
+        "David Vanian",
+        "Mantra (Dave Grohl song)",
+        "These Days (Foo Fighters song)"
+      ],
+      "removed_subject": "Dave Vanian"
+    },
+    {
+      "source_index": 5193,
+      "original_id": "5ae2c9235542991a06ce98d5",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Louis de Bernières",
+        "Anya Seton"
+      ],
+      "displayed_source_titles": [
+        "Anya Seton",
+        "Captain Corelli's Mandolin (film)",
+        "Louis de Bernières",
+        "Port Eliot Festival",
+        "Señor Vivo and the Coca Lord"
+      ],
+      "removed_subject": "Anya Seton"
+    },
+    {
+      "source_index": 5220,
+      "original_id": "5ae2ad255542996483e64a3b",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Gabe Saporta",
+        "Klaus Meine"
+      ],
+      "displayed_source_titles": [
+        "Big City Nights (song)",
+        "Cobra Starship",
+        "Gabe Saporta",
+        "Klaus Meine"
+      ],
+      "removed_subject": "Gabe Saporta"
+    },
+    {
+      "source_index": 5271,
+      "original_id": "5ab50dc15542991779162d6c",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Terry Jones",
+        "Thomas Schlamme"
+      ],
+      "displayed_source_titles": [
+        "I've Got Two Legs",
+        "John Cleese",
+        "Terry Jones",
+        "The Ministry of Silly Walks",
+        "Thomas Schlamme"
+      ],
+      "removed_subject": "Thomas Schlamme"
+    },
+    {
+      "source_index": 5276,
+      "original_id": "5abbd46c554299642a094b51",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Derek Estlin Purvis",
+        "Andrzej Munk"
+      ],
+      "displayed_source_titles": [
+        "Andrzej Munk",
+        "Derek Estlin Purvis",
+        "Eroica (1958 film)",
+        "Omar Sangare"
+      ],
+      "removed_subject": "Derek Estlin Purvis"
+    },
+    {
+      "source_index": 5281,
+      "original_id": "5abf84d85542994516f454bf",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Frank Pierson",
+        "Peter Tscherkassky"
+      ],
+      "displayed_source_titles": [
+        "Darkroom manipulation",
+        "Frank Pierson",
+        "In Country",
+        "Peter Tscherkassky"
+      ],
+      "removed_subject": "Peter Tscherkassky"
+    },
+    {
+      "source_index": 5283,
+      "original_id": "5ab94115554299131ca422e6",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Paul Celan",
+        "Jonathan Kellerman"
+      ],
+      "displayed_source_titles": [
+        "Alex Delaware",
+        "Blood Test (novel)",
+        "Jonathan Kellerman",
+        "Paul Celan",
+        "Survival of the Fittest (novel)"
+      ],
+      "removed_subject": "Paul Celan"
+    },
+    {
+      "source_index": 5332,
+      "original_id": "5ae1f6765542997f29b3c1c0",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Chantal Claret",
+        "Hayley Williams"
+      ],
+      "displayed_source_titles": [
+        "Chantal Claret",
+        "Hayley Williams",
+        "Hayley Williams (ice hockey)",
+        "List of songs recorded by Paramore"
+      ],
+      "removed_subject": "Hayley Williams"
+    },
+    {
+      "source_index": 5340,
+      "original_id": "5a75da4855429976ec32bc38",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Klaus-Dietrich Flade",
+        "Philippe Perrin"
+      ],
+      "displayed_source_titles": [
+        "Cinema Paradiso",
+        "Klaus-Dietrich Flade",
+        "Louis Philippe II, Duke of Orléans",
+        "Philippe Perrin",
+        "Stephen Perrin"
+      ],
+      "removed_subject": "Klaus-Dietrich Flade"
+    },
+    {
+      "source_index": 5355,
+      "original_id": "5a78ec4e55429974737f7902",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Stan Wawrinka",
+        "Sandy Mayer"
+      ],
+      "displayed_source_titles": [
+        "2014 Stan Wawrinka tennis season",
+        "2015 Stan Wawrinka tennis season",
+        "Sandy Mayer",
+        "Stan Wawrinka"
+      ],
+      "removed_subject": "Stan Wawrinka"
+    },
+    {
+      "source_index": 5363,
+      "original_id": "5ae1455755429901ffe4ae36",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Drew Daywalt",
+        "Werner Herzog"
+      ],
+      "displayed_source_titles": [
+        "Drew Daywalt",
+        "How Much Wood Would a Woodchuck Chuck (film)",
+        "La Soufrière (film)",
+        "Werner Herzog",
+        "Werner Herzog Eats His Shoe"
+      ],
+      "removed_subject": "Werner Herzog"
+    },
+    {
+      "source_index": 5372,
+      "original_id": "5ae077035542993d6555eb69",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Alfred L. Werker",
+        "Merian C. Cooper"
+      ],
+      "displayed_source_titles": [
+        "Advice to the Lovelorn",
+        "Alfred L. Werker",
+        "Creation (unfinished film)",
+        "Mark Cotta Vaz",
+        "Merian C. Cooper"
+      ],
+      "removed_subject": "Alfred L. Werker"
+    },
+    {
+      "source_index": 5379,
+      "original_id": "5a838e9c5542992ef85e22fd",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Kathy Jordan",
+        "Daniel Vacek"
+      ],
+      "displayed_source_titles": [
+        "1993 Volvo International – Doubles",
+        "1995 Open 13 – Doubles",
+        "2000 Heineken Open – Doubles",
+        "Daniel Vacek",
+        "Kathy Jordan"
+      ],
+      "removed_subject": "Daniel Vacek"
+    },
+    {
+      "source_index": 5383,
+      "original_id": "5a74599a55429974ef308be2",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Kevin Curren",
+        "Martina Navratilova"
+      ],
+      "displayed_source_titles": [
+        "1982 Stockholm Open – Doubles",
+        "1984 US Open – Women's Singles",
+        "1990 Tokyo Indoor – Doubles",
+        "Kevin Curren",
+        "Martina Navratilova"
+      ],
+      "removed_subject": "Kevin Curren"
+    },
+    {
+      "source_index": 5408,
+      "original_id": "5a8cdb6c554299585d9e3746",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Dustin Kensrue",
+        "Jimmy Urine"
+      ],
+      "displayed_source_titles": [
+        "Dustin Kensrue",
+        "Jimmy Urine",
+        "Teppei Teranishi",
+        "The Water &amp; the Blood"
+      ],
+      "removed_subject": "Jimmy Urine"
+    },
+    {
+      "source_index": 5459,
+      "original_id": "5a7cc862554299683c1c637a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Stiv Bators",
+        "Suggs (singer)"
+      ],
+      "displayed_source_titles": [
+        "Augustine of Canterbury",
+        "Chelsea Horror Hotel",
+        "Sonic Reducer",
+        "Stiv Bators",
+        "Suggs (singer)"
+      ],
+      "removed_subject": "Suggs (singer)"
+    },
+    {
+      "source_index": 5500,
+      "original_id": "5ae1805955429901ffe4aec7",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Thomas Berger (novelist)",
+        "H. L. Davis"
+      ],
+      "displayed_source_titles": [
+        "H. L. Davis",
+        "Little Big Man (novel)",
+        "Mackenzie Valley Pipeline Inquiry",
+        "Thomas Berger (novelist)"
+      ],
+      "removed_subject": "H. L. Davis"
+    },
+    {
+      "source_index": 5560,
+      "original_id": "5a772bbc5542994aec3b7205",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Michael Ritchie (film director)",
+        "Jon Amiel"
+      ],
+      "displayed_source_titles": [
+        "Copycat (film)",
+        "Jon Amiel",
+        "Michael Ritchie (film director)",
+        "Tandoori Nights",
+        "The Singing Detective"
+      ],
+      "removed_subject": "Michael Ritchie (film director)"
+    },
+    {
+      "source_index": 5565,
+      "original_id": "5ac32f46554299741d48a233",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "John Lanchester",
+        "Paul Valéry"
+      ],
+      "displayed_source_titles": [
+        "Daniel Oster",
+        "John Lanchester",
+        "Lycée Français Paul Valéry de Cali",
+        "Paul Valéry"
+      ],
+      "removed_subject": "Paul Valéry"
+    },
+    {
+      "source_index": 5567,
+      "original_id": "5ab298f6554299194fa9342a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Victoria Larimore",
+        "James Cameron"
+      ],
+      "displayed_source_titles": [
+        "Expedition: Bismarck",
+        "James Cameron",
+        "James Cameron (Union colonel)",
+        "Lightstorm Entertainment",
+        "Victoria Larimore"
+      ],
+      "removed_subject": "Victoria Larimore"
+    },
+    {
+      "source_index": 5619,
+      "original_id": "5a7262335542990c210a4115",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Franco Malerba",
+        "Wubbo Ockels"
+      ],
+      "displayed_source_titles": [
+        "Ampyx Power",
+        "Despoina",
+        "Franco Malerba",
+        "Wubbo Ockels"
+      ],
+      "removed_subject": "Wubbo Ockels"
+    },
+    {
+      "source_index": 5631,
+      "original_id": "5adfeed755429925eb1afb43",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jennifer Capriati",
+        "Rick Leach"
+      ],
+      "displayed_source_titles": [
+        "1992 U.S. Pro Indoor – Doubles",
+        "1997 Kremlin Cup – Men's Doubles",
+        "1999 Gerry Weber Open – Doubles",
+        "Jennifer Capriati",
+        "Rick Leach"
+      ],
+      "removed_subject": "Jennifer Capriati"
+    },
+    {
+      "source_index": 5712,
+      "original_id": "5ab7eba155429928e1fe3935",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Mary Doria Russell",
+        "Dorothy Parker"
+      ],
+      "displayed_source_titles": [
+        "Dorothy Parker",
+        "Hu Zhiyu",
+        "Mary Doria Russell",
+        "South African Literary Awards (SALA)",
+        "Turkish literature"
+      ],
+      "removed_subject": "Mary Doria Russell"
+    },
+    {
+      "source_index": 5738,
+      "original_id": "5a82f8e955429966c78a6abf",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Mark Wystrach",
+        "Doc Neeson"
+      ],
+      "displayed_source_titles": [
+        "Doc Neeson",
+        "Mark Wystrach",
+        "The Angels (Australian band)",
+        "The Angels discography"
+      ],
+      "removed_subject": "Doc Neeson"
+    },
+    {
+      "source_index": 5743,
+      "original_id": "5a772d2b55429972597f1465",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Paul Di'Anno",
+        "Joe Gooch"
+      ],
+      "displayed_source_titles": [
+        "Di'Anno (album)",
+        "Icarus Witch",
+        "Joe Gooch",
+        "List of songs recorded by Iron Maiden",
+        "Paul Di'Anno"
+      ],
+      "removed_subject": "Paul Di'Anno"
+    },
+    {
+      "source_index": 5753,
+      "original_id": "5a738bef5542992d56e7e364",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Benjamin Britten",
+        "Gaetano Donizetti"
+      ],
+      "displayed_source_titles": [
+        "Benjamin Britten",
+        "Chiara e Serafina",
+        "Gaetano Donizetti",
+        "Gaetano Rossi",
+        "Il furioso all'isola di San Domingo"
+      ],
+      "removed_subject": "Gaetano Donizetti"
+    },
+    {
+      "source_index": 5769,
+      "original_id": "5ac09f445542992a796ded3b",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Louis L'Amour",
+        "D. H. Lawrence"
+      ],
+      "displayed_source_titles": [
+        "D. H. Lawrence",
+        "Haunted Mesa",
+        "Louis L'Amour",
+        "National Association for Chiropractic Medicine"
+      ],
+      "removed_subject": "Louis L'Amour"
+    },
+    {
+      "source_index": 5808,
+      "original_id": "5a8a30a555429930ff3c0ceb",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Stuart Paton",
+        "Fred Guiol"
+      ],
+      "displayed_source_titles": [
+        "Fred Guiol",
+        "Ivan Moffat",
+        "Mummy's Boys",
+        "Stuart Paton"
+      ],
+      "removed_subject": "Fred Guiol"
+    },
+    {
+      "source_index": 5812,
+      "original_id": "5a8d0cae55429941ae14df76",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Chris Martin",
+        "Jimmy Gestapo"
+      ],
+      "displayed_source_titles": [
+        "Chris Martin",
+        "Coldplay",
+        "Homecoming (Kanye West song)",
+        "Jimmy Gestapo"
+      ],
+      "removed_subject": "Chris Martin"
+    },
+    {
+      "source_index": 5815,
+      "original_id": "5ab733ef5542993667793f88",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Feargal Sharkey",
+        "Constantine Maroulis"
+      ],
+      "displayed_source_titles": [
+        "Constantine Maroulis",
+        "Feargal Sharkey",
+        "Out of My System",
+        "Someone to Somebody"
+      ],
+      "removed_subject": "Constantine Maroulis"
+    },
+    {
+      "source_index": 5830,
+      "original_id": "5a7dbb8d5542990b8f503a4e",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Marion Bartoli",
+        "Geoff Masters"
+      ],
+      "displayed_source_titles": [
+        "2011 Aegon International – Women's Singles",
+        "Geoff Masters",
+        "List of Australia Fed Cup team representatives",
+        "Marion Bartoli"
+      ],
+      "removed_subject": "Marion Bartoli"
+    },
+    {
+      "source_index": 5857,
+      "original_id": "5a8c31f8554299240d9c20d5",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Arthur C. Clarke",
+        "John Richardson (art historian)"
+      ],
+      "displayed_source_titles": [
+        "Arthur C. Clarke",
+        "Arthur C. Clarke's Mysterious Universe",
+        "Hate (short story)",
+        "John Richardson (art historian)"
+      ],
+      "removed_subject": "John Richardson (art historian)"
+    },
+    {
+      "source_index": 5928,
+      "original_id": "5ae538ac5542990ba0bbb237",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Michael Curtiz",
+        "Peter Segal"
+      ],
+      "displayed_source_titles": [
+        "Carrie Clark Ward",
+        "Michael Curtiz",
+        "Peter Segal",
+        "The Unsuspected",
+        "Victor Sjöström"
+      ],
+      "removed_subject": "Peter Segal"
+    },
+    {
+      "source_index": 5948,
+      "original_id": "5a7b99f85542995eb53be966",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "C. S. Forester",
+        "Lionel Trilling"
+      ],
+      "displayed_source_titles": [
+        "C. S. Forester",
+        "Homage to Catalonia",
+        "Lionel Trilling",
+        "Louis Arnaud Reid",
+        "The Life and Work of Sigmund Freud"
+      ],
+      "removed_subject": "Lionel Trilling"
+    },
+    {
+      "source_index": 5969,
+      "original_id": "5ab60f40554299110f2199d3",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Peter Cattaneo",
+        "Seth Grahame-Smith"
+      ],
+      "displayed_source_titles": [
+        "Opal Dream",
+        "Peter Cattaneo",
+        "Seth Grahame-Smith",
+        "The Rocker (film)"
+      ],
+      "removed_subject": "Seth Grahame-Smith"
+    },
+    {
+      "source_index": 5980,
+      "original_id": "5a809e585542992bc0c4a784",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "André Gide",
+        "Ryūnosuke Akutagawa"
+      ],
+      "displayed_source_titles": [
+        "Akutagawa Prize",
+        "André Gide",
+        "Autumn Mountain",
+        "Ryūnosuke Akutagawa",
+        "Tsuneari Fukuda"
+      ],
+      "removed_subject": "Ryūnosuke Akutagawa"
+    },
+    {
+      "source_index": 5984,
+      "original_id": "5ae5098955429908b63264ee",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Susan Vreeland",
+        "Gil Scott-Heron"
+      ],
+      "displayed_source_titles": [
+        "Gil Scott-Heron",
+        "Susan Vreeland",
+        "The First Minute of a New Day",
+        "The Revolution Will Not Be Televised (album)"
+      ],
+      "removed_subject": "Gil Scott-Heron"
+    },
+    {
+      "source_index": 5993,
+      "original_id": "5a7a44c65542994f819ef1a4",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Emily Whitehurst",
+        "Anette Olzon"
+      ],
+      "displayed_source_titles": [
+        "Anette Olzon",
+        "Changes (Alyson Avenue album)",
+        "Dark Passion Play",
+        "Emily Whitehurst",
+        "List of Dark Passion Play editions"
+      ],
+      "removed_subject": "Emily Whitehurst"
+    },
+    {
+      "source_index": 6023,
+      "original_id": "5ab87dc355429934fafe6dfb",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jeremy Kagan",
+        "Hans Richter (artist)"
+      ],
+      "displayed_source_titles": [
+        "Big Man on Campus",
+        "Hans Richter (artist)",
+        "Jeremy Kagan",
+        "Scott Joplin (film)",
+        "The Big Fix"
+      ],
+      "removed_subject": "Hans Richter (artist)"
+    },
+    {
+      "source_index": 6032,
+      "original_id": "5a73147d5542994cef4bc447",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Patrick Baudry",
+        "Frank De Winne"
+      ],
+      "displayed_source_titles": [
+        "Claude Nicollier",
+        "Double Star (satellite)",
+        "Frank De Winne",
+        "Patrick Baudry",
+        "Samantha Cristoforetti"
+      ],
+      "removed_subject": "Patrick Baudry"
+    },
+    {
+      "source_index": 6048,
+      "original_id": "5a8adb6655429950cd6afbb9",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Sania Mirza",
+        "Michaël Llodra"
+      ],
+      "displayed_source_titles": [
+        "Michaël Llodra",
+        "Roger Federer junior years",
+        "Sania Mirza",
+        "Tennis at the 2010 Asian Games – Mixed doubles"
+      ],
+      "removed_subject": "Sania Mirza"
+    },
+    {
+      "source_index": 6091,
+      "original_id": "5a88469b5542996e4f308922",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Sidney Morgan",
+        "Berthold Viertel"
+      ],
+      "displayed_source_titles": [
+        "Berthold Viertel",
+        "Little Friend (film)",
+        "Nora (1923 film)",
+        "Sidney Morgan"
+      ],
+      "removed_subject": "Sidney Morgan"
+    },
+    {
+      "source_index": 6125,
+      "original_id": "5ac3bc92554299391541391e",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Keenen Ivory Wayans",
+        "Fruit Chan"
+      ],
+      "displayed_source_titles": [
+        "Fruit Chan",
+        "Keenen Ivory Wayans",
+        "Scary Movie (film series)",
+        "Super Bad James Dynomite"
+      ],
+      "removed_subject": "Fruit Chan"
+    },
+    {
+      "source_index": 6127,
+      "original_id": "5ae1e27c5542997f29b3c163",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Woody Allen",
+        "Frederick Wiseman"
+      ],
+      "displayed_source_titles": [
+        "Frederick Wiseman",
+        "Sam B. Girgus",
+        "Titicut Follies",
+        "Woody Allen",
+        "Woody Allen (album)"
+      ],
+      "removed_subject": "Woody Allen"
+    },
+    {
+      "source_index": 6129,
+      "original_id": "5a760ad9554299109176e62c",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Ivan Fesenko",
+        "Dmitri Anosov"
+      ],
+      "displayed_source_titles": [
+        "Dmitri Anosov",
+        "Ivan Dmitri",
+        "Ivan Fesenko",
+        "Ivan the Terrible (Treblinka guard)",
+        "List of Lab Rats characters"
+      ],
+      "removed_subject": "Ivan Fesenko"
+    },
+    {
+      "source_index": 6154,
+      "original_id": "5a73b6735542992d56e7e38f",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Maxim Kontsevich",
+        "Andrey Kolmogorov"
+      ],
+      "displayed_source_titles": [
+        "Andrey Kolmogorov",
+        "Kontsevich invariant",
+        "Kontsevich quantization formula",
+        "Kriging",
+        "Maxim Kontsevich"
+      ],
+      "removed_subject": "Maxim Kontsevich"
+    },
+    {
+      "source_index": 6165,
+      "original_id": "5a90c9375542995651fb51f1",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "George Lucas",
+        "Lewis Allen (director)"
+      ],
+      "displayed_source_titles": [
+        "George Lucas",
+        "George Lucas in Love",
+        "Lewis Allen (director)",
+        "Lewis Allen (rugby union)",
+        "Skywalker Ranch"
+      ],
+      "removed_subject": "Lewis Allen (director)"
+    },
+    {
+      "source_index": 6176,
+      "original_id": "5ab29266554299545a2cf98e",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Mikhail Romm",
+        "Jodie Foster"
+      ],
+      "displayed_source_titles": [
+        "Jodie Foster",
+        "Mikhail Romm",
+        "Sahara (1943 American film)",
+        "The Queen of Spades (Prokofiev)",
+        "Triumph Over Violence"
+      ],
+      "removed_subject": "Jodie Foster"
+    },
+    {
+      "source_index": 6184,
+      "original_id": "5abe594555429933744ab834",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "David Coverdale",
+        "Burton C. Bell"
+      ],
+      "displayed_source_titles": [
+        "Burton C. Bell",
+        "Come Taste the Band",
+        "David Coverdale",
+        "List of Whitesnake band members"
+      ],
+      "removed_subject": "Burton C. Bell"
+    },
+    {
+      "source_index": 6201,
+      "original_id": "5a7e84ea5542997cc2c4755d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Tom Verlaine",
+        "David Vincent"
+      ],
+      "displayed_source_titles": [
+        "Big Bad Love",
+        "David Vincent",
+        "Fred Smith (bassist)",
+        "Pioneers for a Cure",
+        "Tom Verlaine"
+      ],
+      "removed_subject": "David Vincent"
+    },
+    {
+      "source_index": 6228,
+      "original_id": "5ae4cc5855429960a22e01eb",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "I. F. Stone",
+        "Norman Lindsay"
+      ],
+      "displayed_source_titles": [
+        "Age of Consent (film)",
+        "Halfway to Nowhere",
+        "I. F. Stone",
+        "Norman Lindsay",
+        "Norman Lindsay Gallery and Museum"
+      ],
+      "removed_subject": "Norman Lindsay"
+    },
+    {
+      "source_index": 6301,
+      "original_id": "5addd6e25542990dbb2f7eac",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jean Cocteau",
+        "Bernard Cornwell"
+      ],
+      "displayed_source_titles": [
+        "Bernard Cornwell",
+        "Jean Cocteau",
+        "Jean Cocteau House",
+        "Sharpe's Christmas (story collection)",
+        "Sharpe's Ransom"
+      ],
+      "removed_subject": "Jean Cocteau"
+    },
+    {
+      "source_index": 6302,
+      "original_id": "5a792bee554299148911fa1a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Theo Angelopoulos",
+        "Barbara Albert"
+      ],
+      "displayed_source_titles": [
+        "Barbara Albert",
+        "Reconstitution (1970 film)",
+        "Theo Angelopoulos",
+        "Trilogy: The Weeping Meadow",
+        "Ulysses' Gaze"
+      ],
+      "removed_subject": "Barbara Albert"
+    },
+    {
+      "source_index": 6314,
+      "original_id": "5a77931f5542992a6e59df03",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Matthew Tuck",
+        "Frank Iero"
+      ],
+      "displayed_source_titles": [
+        "Drive By (band)",
+        "Frank Iero",
+        "Matthew Tuck",
+        "My Chemical Romance"
+      ],
+      "removed_subject": "Matthew Tuck"
+    },
+    {
+      "source_index": 6344,
+      "original_id": "5ae1c9505542997f29b3c102",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Ronnie Dunn",
+        "Anders Nyström"
+      ],
+      "displayed_source_titles": [
+        "Anders Nyström",
+        "Katatonia",
+        "Polyrically Uncorrect",
+        "Ronnie Dunn",
+        "The Fall of Hearts"
+      ],
+      "removed_subject": "Anders Nyström"
+    },
+    {
+      "source_index": 6348,
+      "original_id": "5ab72af15542993667793f5f",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Mario Bava",
+        "Ben Holmes"
+      ],
+      "displayed_source_titles": [
+        "A Bay of Blood",
+        "Ben Holmes",
+        "Black Sunday (1960 film)",
+        "Blood and Black Lace",
+        "Mario Bava"
+      ],
+      "removed_subject": "Mario Bava"
+    },
+    {
+      "source_index": 6363,
+      "original_id": "5a79c9ef5542994bb94570a7",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Ezra Koenig",
+        "Sharon den Adel"
+      ],
+      "displayed_source_titles": [
+        "Enter (Within Temptation album)",
+        "Ezra Koenig",
+        "Robert Westerholt",
+        "Sharon den Adel",
+        "Within Temptation"
+      ],
+      "removed_subject": "Sharon den Adel"
+    },
+    {
+      "source_index": 6371,
+      "original_id": "5a7cbfca554299683c1c6363",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Roger Daltrey",
+        "David Gilmour"
+      ],
+      "displayed_source_titles": [
+        "David Gilmour",
+        "David Gilmour (album)",
+        "One Man Band (Roger Daltrey song)",
+        "Roger Daltrey"
+      ],
+      "removed_subject": "Roger Daltrey"
+    },
+    {
+      "source_index": 6404,
+      "original_id": "5a77036755429972597f1412",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "James Cunningham (director)",
+        "Chuck Russell"
+      ],
+      "displayed_source_titles": [
+        "Bless the Child",
+        "Chuck Russell",
+        "James Cunningham (director)",
+        "The Blob (1988 film)",
+        "The Scorpion King"
+      ],
+      "removed_subject": "Chuck Russell"
+    },
+    {
+      "source_index": 6410,
+      "original_id": "5ac3b3a6554299741d48a2e2",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Susan Straight",
+        "Iris Rainer Dart"
+      ],
+      "displayed_source_titles": [
+        "Beaches (film)",
+        "Iris Rainer Dart",
+        "Ranitomeya amazonica",
+        "Susan Straight",
+        "The People in the Picture"
+      ],
+      "removed_subject": "Susan Straight"
+    },
+    {
+      "source_index": 6436,
+      "original_id": "5ae216af5542994d89d5b33d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "John Garabedian",
+        "Francis Veber"
+      ],
+      "displayed_source_titles": [
+        "Francis Veber",
+        "John Garabedian",
+        "Pierre-Gilles Veber",
+        "The Valet"
+      ],
+      "removed_subject": "Francis Veber"
+    },
+    {
+      "source_index": 6445,
+      "original_id": "5ae0c6b65542993d6555ec5f",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "James Frawley",
+        "Jerry Belson"
+      ],
+      "displayed_source_titles": [
+        "James Frawley",
+        "Jerry Belson",
+        "Smile (musical)",
+        "Surrender (1987 film)",
+        "The Christian Licorice Store"
+      ],
+      "removed_subject": "James Frawley"
+    },
+    {
+      "source_index": 6474,
+      "original_id": "5a8352a85542990548d0b1d0",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Peng Shuai",
+        "Daniel Nestor"
+      ],
+      "displayed_source_titles": [
+        "2015 China Open – Women's Doubles",
+        "2015 French Open – Women's Doubles",
+        "2015 PTT Thailand Open – Doubles",
+        "Daniel Nestor",
+        "Peng Shuai"
+      ],
+      "removed_subject": "Peng Shuai"
+    },
+    {
+      "source_index": 6504,
+      "original_id": "5abaa06d55429939ce03dd3c",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jack Bender",
+        "Roger Christian (filmmaker)"
+      ],
+      "displayed_source_titles": [
+        "A Tale of Two Cities (Lost)",
+        "Bangladesh Film Directors Association",
+        "Jack Bender",
+        "One of Us (Lost)",
+        "Roger Christian (filmmaker)"
+      ],
+      "removed_subject": "Jack Bender"
+    },
+    {
+      "source_index": 6525,
+      "original_id": "5a7b4aab55429931da12ca5e",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Aretha Franklin",
+        "Andy Yorke"
+      ],
+      "displayed_source_titles": [
+        "(You Make Me Feel Like) A Natural Woman",
+        "Andy Yorke",
+        "Aretha Franklin",
+        "The Electrifying Aretha Franklin",
+        "Yeah!!!"
+      ],
+      "removed_subject": "Andy Yorke"
+    },
+    {
+      "source_index": 6557,
+      "original_id": "5ae2a0f9554299495565daec",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Joe Elliott",
+        "Paul Meany"
+      ],
+      "displayed_source_titles": [
+        "Control (Mutemath song)",
+        "Joe Elliott",
+        "Odd Soul",
+        "Paul Meany"
+      ],
+      "removed_subject": "Joe Elliott"
+    },
+    {
+      "source_index": 6580,
+      "original_id": "5abe690055429965af743ef5",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jean Rhys",
+        "Adolfo Bioy Casares"
+      ],
+      "displayed_source_titles": [
+        "Adolfo Bioy Casares",
+        "In Memoriam (film)",
+        "Jean Rhys",
+        "The Hero of Women"
+      ],
+      "removed_subject": "Adolfo Bioy Casares"
+    },
+    {
+      "source_index": 6591,
+      "original_id": "5a76a3da554299373536012a",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Bertalan Farkas",
+        "Umberto Guidoni"
+      ],
+      "displayed_source_titles": [
+        "Bertalan Farkas",
+        "Gene Mako",
+        "Umberto Guidoni",
+        "Unite the Left"
+      ],
+      "removed_subject": "Bertalan Farkas"
+    },
+    {
+      "source_index": 6608,
+      "original_id": "5a883eb55542994846c1ce5d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Sydney Freeland",
+        "Genndy Tartakovsky"
+      ],
+      "displayed_source_titles": [
+        "Genndy Tartakovsky",
+        "Hotel Transylvania 2",
+        "List of Dexter's Laboratory episodes",
+        "Star Wars: Clone Wars (2003 TV series)",
+        "Sydney Freeland"
+      ],
+      "removed_subject": "Genndy Tartakovsky"
+    },
+    {
+      "source_index": 6622,
+      "original_id": "5aba67ad554299232ef4a2c5",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Grażyna Miller",
+        "Richard Fariña"
+      ],
+      "displayed_source_titles": [
+        "Grażyna Miller",
+        "Latin American wars of independence",
+        "Probability of occupation",
+        "Richard Fariña",
+        "The Swallow Song"
+      ],
+      "removed_subject": "Grażyna Miller"
+    },
+    {
+      "source_index": 6707,
+      "original_id": "5ac224cf5542992f1f2b3818",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Elizabeth Bowen",
+        "John Maynard Keynes"
+      ],
+      "displayed_source_titles": [
+        "Elizabeth Bowen",
+        "John Maynard Keynes",
+        "Robert Skidelsky, Baron Skidelsky",
+        "The Economic Consequences of the Peace",
+        "The Life of John Maynard Keynes"
+      ],
+      "removed_subject": "John Maynard Keynes"
+    },
+    {
+      "source_index": 6711,
+      "original_id": "5ab577ec5542997d4ad1f143",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Perry Farrell",
+        "Faris Badwan"
+      ],
+      "displayed_source_titles": [
+        "Faris Badwan",
+        "Gift (1993 film)",
+        "Perry Farrell",
+        "Satellite Party"
+      ],
+      "removed_subject": "Perry Farrell"
+    },
+    {
+      "source_index": 6748,
+      "original_id": "5a77a81a55429949eeb29f1d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Frank Beyer",
+        "Jocelyn Moorhouse"
+      ],
+      "displayed_source_titles": [
+        "Frank Beyer",
+        "How to Make an American Quilt",
+        "Jocelyn Moorhouse",
+        "The Dressmaker (2015 film)"
+      ],
+      "removed_subject": "Jocelyn Moorhouse"
+    },
+    {
+      "source_index": 6751,
+      "original_id": "5a77e92755429949eeb29fa2",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Erich von Stroheim",
+        "Wang Xiaoshuai"
+      ],
+      "displayed_source_titles": [
+        "Erich von Stroheim",
+        "The House (1999 film)",
+        "The Wedding March (1928 film)",
+        "Under Secret Orders",
+        "Wang Xiaoshuai"
+      ],
+      "removed_subject": "Erich von Stroheim"
+    },
+    {
+      "source_index": 6770,
+      "original_id": "5ab2b2ed5542992953946822",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Biff Byford",
+        "Shane Filan"
+      ],
+      "displayed_source_titles": [
+        "2013 Rose of Tralee",
+        "Biff Byford",
+        "Celebrate – The Night of the Warlock",
+        "Rock 'n' Roll Gypsies",
+        "Shane Filan"
+      ],
+      "removed_subject": "Biff Byford"
+    },
+    {
+      "source_index": 6808,
+      "original_id": "5abecea05542994516f4543c",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Park Subin",
+        "Toby Rand"
+      ],
+      "displayed_source_titles": [
+        "Bae Woo-hee",
+        "Dal Shabet discography",
+        "Park Subin",
+        "Serri (singer)",
+        "Toby Rand"
+      ],
+      "removed_subject": "Toby Rand"
+    },
+    {
+      "source_index": 6857,
+      "original_id": "5ab472de5542991751b4d778",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jung Yong-hwa",
+        "Chrissie Hynde"
+      ],
+      "displayed_source_titles": [
+        "Chrissie Hynde",
+        "Jung Yong-hwa",
+        "Last of the Independents",
+        "Martin Chambers",
+        "Mileage (song)"
+      ],
+      "removed_subject": "Chrissie Hynde"
+    },
+    {
+      "source_index": 6879,
+      "original_id": "5a8f8f9655429918e830d263",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Brad Anderson (director)",
+        "Bernard Vorhaus"
+      ],
+      "displayed_source_titles": [
+        "Bernard Vorhaus",
+        "Brad Anderson (director)",
+        "Money for Speed",
+        "The Broken Melody (1934 film)"
+      ],
+      "removed_subject": "Brad Anderson (director)"
+    },
+    {
+      "source_index": 6907,
+      "original_id": "5a87d7f45542997e5c09a576",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Debbie Harry",
+        "Kim Tae-yeon"
+      ],
+      "displayed_source_titles": [
+        "Debbie Harry",
+        "Kim Tae-yeon",
+        "Kim Tae-yeon discography",
+        "Union City Blue"
+      ],
+      "removed_subject": "Kim Tae-yeon"
+    },
+    {
+      "source_index": 6946,
+      "original_id": "5ab8a96f55429919ba4e234d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Jeffrey Walker",
+        "Fat Mike"
+      ],
+      "displayed_source_titles": [
+        "Fat Mike",
+        "Jeffrey Walker",
+        "Liberal Animation",
+        "Pink and Black Records"
+      ],
+      "removed_subject": "Jeffrey Walker (musician)"
+    },
+    {
+      "source_index": 7027,
+      "original_id": "5ae4a4485542996836b02cef",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Roy Khan",
+        "Lou Gramm"
+      ],
+      "displayed_source_titles": [
+        "Dirty White Boy (song)",
+        "Lou Gramm",
+        "Roy Khan",
+        "Shadow King (band)",
+        "That Was Yesterday (Foreigner song)"
+      ],
+      "removed_subject": "Lou Gramm"
+    },
+    {
+      "source_index": 7030,
+      "original_id": "5a71720b5542994082a3e836",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Bertrand Russell",
+        "Günter Grass"
+      ],
+      "displayed_source_titles": [
+        "Bertrand Russell",
+        "Failure to refer",
+        "Günter Grass",
+        "Power: A New Social Analysis"
+      ],
+      "removed_subject": "Bertrand Russell"
+    },
+    {
+      "source_index": 7049,
+      "original_id": "5abbd56e5542993f40c73bd2",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Ihor Podolchak",
+        "Roger Donaldson"
+      ],
+      "displayed_source_titles": [
+        "Chris Donaldson",
+        "Ihor Podolchak",
+        "Las Meninas (film)",
+        "Masoch Fund",
+        "Roger Donaldson"
+      ],
+      "removed_subject": "Ihor Podolchak"
+    },
+    {
+      "source_index": 7084,
+      "original_id": "5a77bb655542992a6e59dfa4",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Wilfred Owen",
+        "Daniil Kharms"
+      ],
+      "displayed_source_titles": [
+        "Daniil Kharms",
+        "Futility (poem)",
+        "Insensibility",
+        "Wilfred Owen"
+      ],
+      "removed_subject": "Wilfred Owen"
+    },
+    {
+      "source_index": 7105,
+      "original_id": "5a84b4785542991dd0999d9d",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Liam Gallagher",
+        "Deron Miller"
+      ],
+      "displayed_source_titles": [
+        "Acoustified!",
+        "Deron Miller",
+        "Liam Gallagher",
+        "Wall of Glass"
+      ],
+      "removed_subject": "Deron Miller"
+    },
+    {
+      "source_index": 7110,
+      "original_id": "5ae583ac55429960a22e02fd",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Anatoly Maltsev",
+        "Semyon Aranovich Gershgorin"
+      ],
+      "displayed_source_titles": [
+        "Anatoly Maltsev",
+        "Demazure conjecture",
+        "Gary Seitz",
+        "Group scheme",
+        "Semyon Aranovich Gershgorin"
+      ],
+      "removed_subject": "Semyon Aronovich Gershgorin"
+    },
+    {
+      "source_index": 7128,
+      "original_id": "5a81a1965542990a1d231e2b",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Claudie Haigneré",
+        "Gerhard Thiele"
+      ],
+      "displayed_source_titles": [
+        "Claudie Haigneré",
+        "Gerhard Schwehm",
+        "Gerhard Thiele",
+        "Richard H. Small",
+        "V. G. Braun-Dusemond"
+      ],
+      "removed_subject": "Gerhard Thiele"
+    },
+    {
+      "source_index": 7152,
+      "original_id": "5ab914fd55429919ba4e2396",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Lou Reed",
+        "Jack Russell (musician)"
+      ],
+      "displayed_source_titles": [
+        "Jack Russell (musician)",
+        "Lou Reed",
+        "Lou Reed (album)",
+        "Parson Russell Terrier"
+      ],
+      "removed_subject": "Lou Reed"
+    },
+    {
+      "source_index": 7156,
+      "original_id": "5ab84e3f55429934fafe6d51",
+      "candidate_role": "primary",
+      "key_source_titles": [
+        "Bob Fosse",
+        "Joseph Ruben"
+      ],
+      "displayed_source_titles": [
+        "All That Jazz (song)",
+        "American Choreography Awards",
+        "Bob Fosse",
+        "Gwen Verdon",
+        "Joseph Ruben"
+      ],
+      "removed_subject": "Joseph Ruben"
+    },
+    {
+      "source_index": 7176,
+      "original_id": "5a7c13a15542997c3ec972dd",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Richard Linklater",
+        "Arthur B. Woods"
+      ],
+      "displayed_source_titles": [
+        "Arthur B. Woods",
+        "Arthur Weglein",
+        "Lorelei Linklater",
+        "Richard Linklater"
+      ],
+      "removed_subject": "Richard Linklater"
+    },
+    {
+      "source_index": 7187,
+      "original_id": "5a870d63554299211dda2bbb",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Jan Švankmajer",
+        "Lambert Hillyer"
+      ],
+      "displayed_source_titles": [
+        "Jan Švankmajer",
+        "Lambert Hillyer",
+        "Square Deal Sanderson",
+        "The Whistle (1921 film)",
+        "Travelin' On (film)"
+      ],
+      "removed_subject": "Lambert Hillyer"
+    },
+    {
+      "source_index": 7192,
+      "original_id": "5a8431965542996488c2e509",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Murray Grigor",
+        "Leslie H. Martinson"
+      ],
+      "displayed_source_titles": [
+        "Escape from Angola",
+        "FBI Code 98",
+        "Leslie H. Martinson",
+        "Mrs. Pollifax-Spy",
+        "Murray Grigor"
+      ],
+      "removed_subject": "Murray Grigor"
+    },
+    {
+      "source_index": 7193,
+      "original_id": "5a8f183a55429924144829b0",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Marguerite Duras",
+        "Arthur Rosson"
+      ],
+      "displayed_source_titles": [
+        "Arthur Rosson",
+        "Des journées entières dans les arbres",
+        "India Song",
+        "Marguerite Duras",
+        "Moderato Cantabile"
+      ],
+      "removed_subject": "Arthur Rosson"
+    },
+    {
+      "source_index": 7312,
+      "original_id": "5a77cabe5542995d831812da",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Janet Gardner",
+        "Myles Kennedy"
+      ],
+      "displayed_source_titles": [
+        "Apocalyptic Love World Tour",
+        "Back from Cali",
+        "Janet Gardner",
+        "Let Rock Rule Tour",
+        "Myles Kennedy"
+      ],
+      "removed_subject": "Myles Kennedy"
+    },
+    {
+      "source_index": 7318,
+      "original_id": "5ab5e386554299494045f0a2",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Heidi Newfield",
+        "Tim Rushlow"
+      ],
+      "displayed_source_titles": [
+        "Burns &amp; Poe",
+        "Heidi Newfield",
+        "She Misses Him",
+        "Tim Rushlow",
+        "Tim Rushlow (album)"
+      ],
+      "removed_subject": "Heidi Newfield"
+    },
+    {
+      "source_index": 7326,
+      "original_id": "5ae075565542993d6555eb5a",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Stuart Murdoch (musician)",
+        "Lee Sung-min (singer)"
+      ],
+      "displayed_source_titles": [
+        "Dog on Wheels",
+        "Lee Sung-min (singer)",
+        "Miss Korea (TV series)",
+        "Stuart Murdoch (musician)",
+        "Wind Wind Wind"
+      ],
+      "removed_subject": "Stuart Murdoch (musician)"
+    },
+    {
+      "source_index": 7335,
+      "original_id": "5a8fbe655542997ba9cb3311",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Michael Snow",
+        "Wayne Wang"
+      ],
+      "displayed_source_titles": [
+        "Michael Snow",
+        "Nostalgia (Frampton film)",
+        "Snow v Eaton Centre Ltd",
+        "Wavelength (1967 film)",
+        "Wayne Wang"
+      ],
+      "removed_subject": "Wayne Wang"
+    },
+    {
+      "source_index": 7353,
+      "original_id": "5ac527315542994611c8b3d7",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Dennis Dugan",
+        "Steve Ihnat"
+      ],
+      "displayed_source_titles": [
+        "Dennis Dugan",
+        "Saving Silverman",
+        "Steve Ihnat",
+        "The Howling (film)",
+        "You Don't Mess with the Zohan"
+      ],
+      "removed_subject": "Dennis Dugan"
+    },
+    {
+      "source_index": 7362,
+      "original_id": "5a87673a5542996432c5726d",
+      "candidate_role": "reserve",
+      "key_source_titles": [
+        "Delmer Daves",
+        "Whit Stillman"
+      ],
+      "displayed_source_titles": [
+        "Broken Arrow (1950 film)",
+        "Carolyn Farina",
+        "Damsels in Distress",
+        "Delmer Daves",
+        "Whit Stillman"
+      ],
+      "removed_subject": "Whit Stillman"
+    }
+  ]
+}

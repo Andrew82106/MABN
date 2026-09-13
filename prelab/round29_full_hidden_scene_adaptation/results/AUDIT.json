@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "folds": [
+    {
+      "fold": 0,
+      "assigned_fit_groups": 166,
+      "active_loss_groups": 166,
+      "fit_windows": 5444,
+      "semantic_probability_replay_max_abs": 0.0,
+      "representation_width": 769,
+      "PCA_control_width": 33,
+      "LR_iterations": 7,
+      "selected_alpha": {
+        "lookback_plus_semantic": 0.2,
+        "r26_plus_semantic": 0.0
+      }
+    },
+    {
+      "fold": 1,
+      "assigned_fit_groups": 166,
+      "active_loss_groups": 166,
+      "fit_windows": 5506,
+      "semantic_probability_replay_max_abs": 0.0,
+      "representation_width": 769,
+      "PCA_control_width": 33,
+      "LR_iterations": 6,
+      "selected_alpha": {
+        "lookback_plus_semantic": 0.6,
+        "r26_plus_semantic": 0.4
+      }
+    },
+    {
+      "fold": 2,
+      "assigned_fit_groups": 167,
+      "active_loss_groups": 167,
+      "fit_windows": 6324,
+      "semantic_probability_replay_max_abs": 0.0,
+      "representation_width": 769,
+      "PCA_control_width": 33,
+      "LR_iterations": 6,
+      "selected_alpha": {
+        "lookback_plus_semantic": 0.2,
+        "r26_plus_semantic": 1.0
+      }
+    },
+    {
+      "fold": 3,
+      "assigned_fit_groups": 168,
+      "active_loss_groups": 168,
+      "fit_windows": 5738,
+      "semantic_probability_replay_max_abs": 0.0,
+      "representation_width": 769,
+      "PCA_control_width": 33,
+      "LR_iterations": 7,
+      "selected_alpha": {
+        "lookback_plus_semantic": 0.2,
+        "r26_plus_semantic": 0.6
+      }
+    },
+    {
+      "fold": 4,
+      "assigned_fit_groups": 167,
+      "active_loss_groups": 167,
+      "fit_windows": 5566,
+      "semantic_probability_replay_max_abs": 0.0,
+      "representation_width": 769,
+      "PCA_control_width": 33,
+      "LR_iterations": 6,
+      "selected_alpha": {
+        "lookback_plus_semantic": 0.0,
+        "r26_plus_semantic": 0.0
+      }
+    }
+  ],
+  "no_refit_no_GPU_no_new_threshold_or_model_selection": true,
+  "independent_ROC_threshold_reconstruction": true,
+  "all60_alpha_candidates_and_single_alpha_selections_checked": true,
+  "fit_only_scaler_labels_weights_and_model_replay_checked": true,
+  "each_outer_window_and_answer_scored_once": true,
+  "original_validation_test_read_this_run": false,
+  "human_gold": false,
+  "complete_sha256": "4b78022f7a5a769b89892e0819eaf8b9c3dd6800ac68bff199e6612d83dfa7af",
+  "audit_code_sha256": "db99cf068d134fa0c8f2e486a28db39be91bd6e5f30d1abd7ed963901d96aa32"
+}

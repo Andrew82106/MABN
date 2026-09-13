@@ -1,0 +1,15 @@
+{
+  "status": "exact_claim_join_passed",
+  "claims": 34919,
+  "native_claims": 9055,
+  "expanded_claims": 25864,
+  "response_index_exact": true,
+  "claim_id_exact": true,
+  "microclaim_index_exact": true,
+  "native_hypothesis_identity_source": "frozen native-v3 exact identity audit bound to the same aggregate hash",
+  "native_hypothesis_sha256_exact": true,
+  "expanded_hypotheses_reconstructed": 25864,
+  "expanded_hypothesis_sha256_exact": true,
+  "combined_claim_axis_exact": true,
+  "feature_names_exact": true
+}

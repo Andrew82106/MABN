@@ -1,0 +1,70 @@
+{
+  "status": "draft_pending_independent_parent_review_not_frozen",
+  "dataset": "F4biian/RAGognize",
+  "source_split": "test",
+  "revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "raw_test_rows": 2781,
+  "raw_unique_questions": 1416,
+  "selected_independent_questions": 50,
+  "paired_inputs": 100,
+  "conditions": {
+    "complete": 50,
+    "partial": 50
+  },
+  "all_original_document_text_and_order_preserved": true,
+  "mutually_disjoint_visible_source_titles": 120,
+  "question_rewrites": [
+    330,
+    490,
+    1551
+  ],
+  "categories": {
+    "BUSINESS": 11,
+    "POLITICS": 26,
+    "TECHNOLOGY": 6,
+    "OTHER": 4,
+    "SCIENCE": 1,
+    "EDUCATION": 2
+  },
+  "information_types": {
+    "IDENTITY": 11,
+    "NUMERICAL": 11,
+    "OTHER": 17,
+    "TEMPORAL": 10,
+    "SPATIAL": 1
+  },
+  "prompt_token_min": 93,
+  "prompt_token_max": 619,
+  "original_document_count_per_input": {
+    "2": 40,
+    "1": 60
+  },
+  "license": "CC-BY-SA-4.0",
+  "attribution": "F4biian/RAGognize; Wikipedia contributors and Wikimedia Foundation.",
+  "raw_source_hashes": {
+    "candidate_index.json": "7a4415d470246ff1d8658e1e1835b7fb7cfea8210d75c31b0d98b67f9756f34a",
+    "dataset_api.json": "0b4ec4ae1292494a053c8ba06a1da1c5aa26dcafc74cb2b288ce178a904352c8",
+    "README.md": "d007ca16c19a9c8fa5ed8e2154cb002de5e160e58ac9e1ae09f0e40629f582f4",
+    "test.parquet": "8fbfe21df70a07926e0983fd03b77ae53ce0543471b92386a5d7156b71bf3a8c",
+    "test_sources.jsonl": "11ee5681c42046b15e4a59eca0e2ee467b89865f838d1acb66482c28a56ceb0f"
+  },
+  "output_hashes": {
+    "external_inputs.jsonl": "ac0cc1f6c021c4ea27bb6b2467ed88776f248f85285083c54771a5a8eb2d7c76",
+    "external_references.jsonl": "8b7033fc2a3cf9c300bb2669d36e6034bcdea8ad740bd69c9c812292020458e9",
+    "isolation_reservations.json": "4b6c1fe2b6a4c64c7810a49a1d669601bb58ed9f9acca0b5d162048db4aaa261",
+    "prompt_token_counts.json": "17c030623a9de7c6cbcd9e09796c59dba78e83fcefd25d959c7211b48602e1ac",
+    "README.md": "8861edaa35eaef49327a61132436c399448cd3df6b209e826d25d8efee5d0b59",
+    "rejected_candidates.jsonl": "03b8d629174ed3364ec2a473f768980da57c22cc12776559aad002b584996609",
+    "selected_official_source_rows.jsonl": "d4ed12900550f6bc1cc77e9999b27d29824c7aa7ea632f56bb86aac0491cd271",
+    "selection_review.json": "b8156f177c130fd5208ba252e4950dc2fbb56415f7488bfab1e51e2b79c6872b"
+  },
+  "experimental_model_calls": 0,
+  "gpu_use": false,
+  "limits": [
+    "Assistant source review, not independent human gold.",
+    "Wikipedia source facts are evaluated at stored snapshots, not externally verified present-day truth.",
+    "Some historical facts and undated institutional descriptions occur in recent articles; do not describe every target as post-2024 knowledge.",
+    "Official missing contexts often replace the entire target entity with unrelated material; this is a short-context external transfer check, not the main multi-entity local-omission experiment.",
+    "Input coverage is not an output hallucination label; all newly generated claims need blind annotation."
+  ]
+}

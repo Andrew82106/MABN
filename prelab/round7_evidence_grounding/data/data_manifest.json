@@ -1,0 +1,120 @@
+{
+  "status": "ready_for_root_data_freeze",
+  "development_groups": 20,
+  "official_main_groups": 200,
+  "external_groups": 50,
+  "splits": {
+    "development": 20,
+    "train": 120,
+    "test": 40,
+    "validation": 40
+  },
+  "generation_outputs_consulted": false,
+  "review_kind": "Assistant source-only semantic review; not independent human annotation",
+  "snippet_policy": "Only complete original sentences; exact sentence indices preserved. Same extraction policy for complete and partial. Full upstream rows preserved for curation; only displayed snippets are model-visible.",
+  "files_sha256": {
+    "data/inputs.jsonl": "ea7aa03f0296b0c48ec8ae219ecf17552b81ea1847d5eacbfe9f441d9c7b23b9",
+    "data/references.jsonl": "e54bbcc54959ddcea85ba9d73a12fa138b95f81b64edb0c3ef6fbbef44920d98",
+    "data/dev_inputs.jsonl": "32180b1f240b6011742f6e60336f32feba0ee28cc3c84ee45a6f5312a9a42dfb",
+    "data/dev_references.jsonl": "f4b911e470cfc2acd5da87c3d7b1e61f77465e674b0bcda922895640a4e53add",
+    "data/curation/reviewed_specs.json": "65cb0da17697820103cddc447f97ecc50fcf6e167ea86393fc6f3755ff611d4c",
+    "data/curation/selected_groups.json": "8a9179861f9b40848bb25c2b2a591c08a81dbf8c167d98bce72eb090cf86b827",
+    "data/curation/group_inventory.json": "d9dc46071d3769ccd0965ab09477948818a758f8f471329b1c5e1c964150b3d4",
+    "data/curation/final_isolation_audit.json": "a248fdb3d8bab00d748cf56185ade98d0b1e61c913617d4569563f7bb3e6120f",
+    "data/curation/final_review_coverage.json": "1e79caf548c117ea3bdabba41982474a3aec14f6447fe042b7e2886ac6048186",
+    "data/curation/independent_review_a_first50.json": "3275e25b0a3be7251f6b2a2806e0fdca0448b05e99188563c3778347530e9291",
+    "data/curation/independent_review_a_last50.json": "2d5c882eef19866e8703961c4548305eb462b493082b7dab257fa7d3bfa2aed2",
+    "data/curation/independent_review_b_final100.json": "20639d7928b7fc23c246d5d47a6f66ec8fef3722f1f11230cb7a3880496e1877",
+    "data/curation/development_independent_review.json": "b4ff0879a88fcd89d806266ba5894d0c15554474419b05135732fa267e830a68",
+    "data/raw/hotpotqa/source_manifest.json": "b3d18f586702bb249558ffebfa9bdec5f983eef3b08c67311d252c933dd84b01",
+    "data/external_ragognize/external_inputs.jsonl": "ac0cc1f6c021c4ea27bb6b2467ed88776f248f85285083c54771a5a8eb2d7c76",
+    "data/external_ragognize/external_references.jsonl": "8b7033fc2a3cf9c300bb2669d36e6034bcdea8ad740bd69c9c812292020458e9",
+    "data/external_ragognize/freeze.json": "dd7534b70d828b7d4e93173861352438ca4bbae029fdefb270f9cbc2accc7293",
+    "data/external_ragognize/independent_source_review.json": "8b8de8a9b79cd7a1e85a040455c9acc29f02a44625c67be22f5b45dac8d92884",
+    "data/curation/CONSTRUCTION.md": "b2e3bed3e5dfe244aa7a13b77ae49f3ba97790a4d60275ceded22f2cb44e2dc6",
+    "src/prepare_data7.py": "c3c02700e6b94b2fdc4f65330b539d73a236747aafa2e64795d82a93aa5d8233"
+  },
+  "source_review_completed_utc": "2026-09-10T14:39:38.509066+00:00",
+  "formal_input_rows": 500,
+  "formal_reference_groups": 250,
+  "main_groups": 200,
+  "main_split_counts": {
+    "train": 120,
+    "test": 40,
+    "validation": 40
+  },
+  "main_attribute_counts": {
+    "country of origin": 4,
+    "birth year": 147,
+    "release year": 1,
+    "headquarters state": 1,
+    "nationality": 1,
+    "origin city": 3,
+    "country": 2,
+    "death year": 1,
+    "family": 12,
+    "island": 1,
+    "location city": 6,
+    "province": 4,
+    "location state": 4,
+    "publication year": 1,
+    "publication frequency": 3,
+    "publication country": 1,
+    "introduction year": 1,
+    "publication city": 1,
+    "species count": 1,
+    "founding year": 4,
+    "origin locality": 1
+  },
+  "main_topic_counts": {
+    "public figures/culture": 54,
+    "business/financial institutions": 1,
+    "education/universities": 4,
+    "biology/plants": 8,
+    "geography/national parks": 1,
+    "infrastructure/buildings": 2,
+    "geography/cities": 4,
+    "infrastructure/airports": 2,
+    "media/magazines": 5,
+    "technology/computers": 1,
+    "music groups": 8,
+    "botany": 5,
+    "education/geography": 2,
+    "publications": 1,
+    "transportation/geography": 2,
+    "public figures/biography": 100
+  },
+  "removed_subject_counts": {
+    "0": 97,
+    "1": 103
+  },
+  "same_subject_source_replacement_groups": 70,
+  "max_absolute_replacement_token_difference": 20,
+  "split_configuration": {
+    "seed_main_split": 20260910,
+    "seed_validation_test_split": 20260911,
+    "stratification": "temporal (attribute includes year/date) versus non_temporal, crossed with removed_subject_index",
+    "strata": {
+      "non_temporal_removed_0": 21,
+      "temporal_removed_1": 79,
+      "temporal_removed_0": 76,
+      "non_temporal_removed_1": 24
+    },
+    "split_counts": {
+      "train": 120,
+      "test": 40,
+      "validation": 40
+    }
+  },
+  "source_only_selection": true,
+  "independent_source_review_groups": 200,
+  "unresolved_source_blocks": [],
+  "upstream_source_rows_downloaded": 10000,
+  "upstream_comparison_rows_available": 1880,
+  "source_license": "HotpotQA CC BY-SA4.0; RAGognize CC BY-SA4.0; retain original Wikipedia attribution",
+  "limitations": [
+    "Main includes 147 birth-year comparisons; remaining attributes include geography,institutions,taxonomy andpublication frequency. Encyclopedia control task, not operational intelligence cases.",
+    "Assistant source review and output annotation are not human gold or exhaustive external world-truth verification.",
+    "Ambiguous bimonthly wording in2223/3601 is preserved with item-level annotation caveats."
+  ]
+}

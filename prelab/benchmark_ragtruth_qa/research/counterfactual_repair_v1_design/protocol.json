@@ -1,0 +1,87 @@
+{
+  "version": "counterfactual-evidence-repair-probe-v1.1",
+  "status": "frozen_before_fit_cpu_coverage_audit_v1.1",
+  "scope": {
+    "partition": "fit_only",
+    "answers": 3680,
+    "groups": 615,
+    "microclaims_raw": 34941,
+    "microclaims_common_interface": 34919,
+    "windows_k4_stride1": 653979,
+    "gold_spans": {
+      "Evident Baseless Info": 983,
+      "Evident Conflict": 271,
+      "Subtle Baseless Info": 609,
+      "Subtle Conflict": 30
+    },
+    "calibration_paths_in_runner": false,
+    "official_or_replacement_test_paths_in_runner": false,
+    "formal_baselines_modified": false
+  },
+  "retrieval": {
+    "source": "frozen evidence_union_nli_v2",
+    "attention_top_k": 3,
+    "bm25_top_k_per_passage": 2,
+    "candidate_sentence_instances": 237739
+  },
+  "candidate_generator": {
+    "max_candidates_per_claim": 12,
+    "max_candidates_per_original_interval": 3,
+    "max_original_lexical_tokens": 5,
+    "max_replacement_lexical_tokens": 6,
+    "minimum_unchanged_content_tokens": 2,
+    "minimum_original_lexical_retention": 0.45,
+    "types": [
+      "citation",
+      "number",
+      "temporal",
+      "negation_direction",
+      "entity",
+      "aligned_relation"
+    ],
+    "selection_uses_labels": false,
+    "whole_sentence_copy_allowed": false
+  },
+  "cpu_gate": {
+    "ec_span_coverage_min": 0.6,
+    "all_conflict_span_coverage_min": 0.6,
+    "conflict_window_touch_min": 0.5,
+    "clean_answer_window_touch_max": 0.25,
+    "conflict_to_clean_touch_enrichment_min": 2.0,
+    "qc_per_type_max": 10,
+    "qc_salt": "cerp-qc-v1.1",
+    "qc_clear_min": 0.8,
+    "qc_reject_max": 0.1,
+    "failure_action": "stop_v1_before_NLI_or_training"
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "frozen": true,
+    "repair_margin": "[logit(E_repair)-logit(E_original)]+[logit(C_original)-logit(C_repair)]"
+  },
+  "models": {
+    "candidate_head": "StandardScaler+L2 LogisticRegression C=0.1",
+    "conflict_window_head": "StandardScaler+L2 LogisticRegression C=0.01",
+    "final_fusion_head": "StandardScaler+L2 LogisticRegression C=0.01",
+    "hyperparameter_search": false,
+    "base": "audited fit-OOF selected token_source_attribution_v4; stop if unavailable"
+  },
+  "crossfit": {
+    "outer": "5-fold source-connected GroupKFold",
+    "inner": "4-fold source-connected cross-fit for conflict scores used by fusion",
+    "silver_purge": "exclude every pair whose split_component_groups intersects held groups",
+    "in_sample_base_scores_forbidden": true
+  },
+  "fit_advance_gate": {
+    "target_domain_window_f1_delta_min": 0.02,
+    "folds_non_decreasing_min": 4,
+    "ec_window_recall_delta_min": 0.15,
+    "ec_span_hit_delta_min": 0.1,
+    "new_prediction_precision_min": 0.5,
+    "answer_f1_delta_min": -0.005,
+    "group_bootstrap_repetitions": 5000,
+    "window_f1_delta_ci95_lower_gt": 0.0
+  },
+  "seed": 20260913
+}

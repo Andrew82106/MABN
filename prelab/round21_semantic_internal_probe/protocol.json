@@ -1,0 +1,92 @@
+{
+  "version": "r21-vector-v1",
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "lookback_tuned",
+    "redeep_tuned",
+    "harp256",
+    "hidden256",
+    "delta256",
+    "base_harp",
+    "base_delta",
+    "base_harp_delta"
+  ],
+  "primary_method": "base_harp_delta",
+  "scope": "R16 actual train301 questions/278 groups/602 fixed Qwen answers; exploratory same-group fivefold development",
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260919,
+  "loss_mass": 3854,
+  "baseline_grids": {
+    "lookback_C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "redeep_heads": [
+      1,
+      4,
+      16
+    ],
+    "redeep_layers": [
+      4,
+      14,
+      28
+    ],
+    "redeep_beta": [
+      0.2,
+      0.6,
+      1.0
+    ]
+  },
+  "pca": {
+    "components": 256,
+    "n_iter": 3,
+    "seed": 20260919,
+    "seed_rule": "20260919 + zero_based_outer_fold",
+    "whiten": false,
+    "weights": "fit-only label-independent group balanced"
+  },
+  "selection": "max min(cal_window_F1,cal_answer_F1); then window F1, window precision, lower complexity/C",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260919
+  },
+  "contrasts": {
+    "primary_vs_slots": [
+      "base_harp_delta",
+      "slots_base"
+    ],
+    "primary_vs_lookback": [
+      "base_harp_delta",
+      "lookback_tuned"
+    ],
+    "primary_vs_redeep": [
+      "base_harp_delta",
+      "redeep_tuned"
+    ],
+    "primary_vs_r19": [
+      "base_harp_delta",
+      "r19_all"
+    ],
+    "harp_vs_hidden": [
+      "harp256",
+      "hidden256"
+    ],
+    "primary_vs_base": [
+      "base_harp_delta",
+      "base"
+    ]
+  },
+  "heldout_original_used": false,
+  "gold_changed": false,
+  "granularity": "same original four raw BPE windows and answer=max windows",
+  "cortex_exact_reproduction": false,
+  "harp_original_weak_supervision_reproduced": false,
+  "lumina_full_reproduced": false
+}

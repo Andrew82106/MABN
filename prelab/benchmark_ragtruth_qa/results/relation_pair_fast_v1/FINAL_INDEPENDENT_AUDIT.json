@@ -1,0 +1,243 @@
+{
+  "status": "passed_complete_development_only",
+  "selected_epoch_recomputed": 2,
+  "epochs": [
+    {
+      "epoch": 1,
+      "selection_key": [
+        0.6292447426560838,
+        0.6292447426560838,
+        0.6164822831489498,
+        -1
+      ],
+      "window_f1": 0.6292447426560838,
+      "answer_f1": 0.8558139534883721,
+      "scores_sha256": "fc7dfe2ef0e8b7bda1f41251c4c0df8c774d554b401b5808430c7d5b6be41be6"
+    },
+    {
+      "epoch": 2,
+      "selection_key": [
+        0.6472771209113661,
+        0.6472771209113661,
+        0.6692843119757272,
+        -2
+      ],
+      "window_f1": 0.6472771209113661,
+      "answer_f1": 0.8530805687203792,
+      "scores_sha256": "1601e6f12aeca3aa1441237d4efa60c43bb27992c9c1f8d42ad725e3cd5310a9"
+    },
+    {
+      "epoch": 3,
+      "selection_key": [
+        0.6456866570531852,
+        0.6456866570531852,
+        0.6556416881998277,
+        -3
+      ],
+      "window_f1": 0.6456866570531852,
+      "answer_f1": 0.8493150684931506,
+      "scores_sha256": "b29cebfc78d728735e8ee9ae62bf1f020be58a326d8042ea464e04f3d2570bd5"
+    }
+  ],
+  "selected_metrics": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3750,
+      "fp": 1853,
+      "fn": 2234,
+      "tn": 34404,
+      "precision": 0.6692843119757272,
+      "recall": 0.6266711229946524,
+      "f1": 0.6472771209113661,
+      "auroc": 0.8953791137731988,
+      "average_precision": 0.6720815267688889
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 90,
+      "fp": 21,
+      "fn": 10,
+      "tn": 38,
+      "precision": 0.8108108108108109,
+      "recall": 0.9,
+      "f1": 0.8530805687203792,
+      "auroc": 0.8601694915254238,
+      "average_precision": 0.9165688484479642
+    }
+  },
+  "incumbent_metrics": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3839,
+      "fp": 1300,
+      "fn": 2145,
+      "tn": 34957,
+      "precision": 0.7470324965946682,
+      "recall": 0.6415441176470589,
+      "f1": 0.6902813989031736,
+      "auroc": 0.9133666623513158,
+      "average_precision": 0.7214057282802487
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 90,
+      "fp": 12,
+      "fn": 10,
+      "tn": 47,
+      "precision": 0.8823529411764706,
+      "recall": 0.9,
+      "f1": 0.8910891089108911,
+      "auroc": 0.9061016949152542,
+      "average_precision": 0.9468402501582236
+    }
+  },
+  "relation_minus_incumbent": {
+    "windows": {
+      "tp": -89,
+      "fp": 553,
+      "fn": 89,
+      "tn": -553,
+      "precision": -0.07774818461894095,
+      "recall": -0.014872994652406435,
+      "f1": -0.043004277991807505,
+      "auroc": -0.01798754857811702,
+      "average_precision": -0.049324201511359855
+    },
+    "answers": {
+      "tp": 0,
+      "fp": 9,
+      "fn": 0,
+      "tn": -9,
+      "precision": -0.0715421303656597,
+      "recall": 0.0,
+      "f1": -0.03800854019051192,
+      "auroc": -0.045932203389830395,
+      "average_precision": -0.030271401710259438
+    }
+  },
+  "type_recall_fixed_selected_threshold": {
+    "Evident Baseless Info": {
+      "risk_windows": 4086,
+      "detected": 3019,
+      "missed": 1067,
+      "recall": 0.7388644150758689
+    },
+    "Subtle Baseless Info": {
+      "risk_windows": 814,
+      "detected": 605,
+      "missed": 209,
+      "recall": 0.7432432432432432
+    },
+    "Evident Conflict": {
+      "risk_windows": 997,
+      "detected": 96,
+      "missed": 901,
+      "recall": 0.09628886659979939
+    },
+    "Subtle Conflict": {
+      "risk_windows": 109,
+      "detected": 42,
+      "missed": 67,
+      "recall": 0.3853211009174312
+    }
+  },
+  "type_comparison": {
+    "Evident Baseless Info": {
+      "incumbent_detected": 3034,
+      "relation_detected": 3019,
+      "detected_difference": -15,
+      "incumbent_recall": 0.7425354870288791,
+      "relation_recall": 0.7388644150758689,
+      "recall_difference": -0.0036710719530101965,
+      "decision_overlap": {
+        "both_detect": 2774,
+        "incumbent_only": 260,
+        "relation_only": 245,
+        "neither": 807
+      }
+    },
+    "Subtle Baseless Info": {
+      "incumbent_detected": 548,
+      "relation_detected": 605,
+      "detected_difference": 57,
+      "incumbent_recall": 0.6732186732186732,
+      "relation_recall": 0.7432432432432432,
+      "recall_difference": 0.07002457002456997,
+      "decision_overlap": {
+        "both_detect": 479,
+        "incumbent_only": 69,
+        "relation_only": 126,
+        "neither": 140
+      }
+    },
+    "Evident Conflict": {
+      "incumbent_detected": 195,
+      "relation_detected": 96,
+      "detected_difference": -99,
+      "incumbent_recall": 0.19558676028084251,
+      "relation_recall": 0.09628886659979939,
+      "recall_difference": -0.09929789368104312,
+      "decision_overlap": {
+        "both_detect": 82,
+        "incumbent_only": 113,
+        "relation_only": 14,
+        "neither": 788
+      }
+    },
+    "Subtle Conflict": {
+      "incumbent_detected": 82,
+      "relation_detected": 42,
+      "detected_difference": -40,
+      "incumbent_recall": 0.7522935779816514,
+      "relation_recall": 0.3853211009174312,
+      "recall_difference": -0.3669724770642202,
+      "decision_overlap": {
+        "both_detect": 42,
+        "incumbent_only": 40,
+        "relation_only": 0,
+        "neither": 27
+      }
+    }
+  },
+  "decision_overlap": {
+    "positive_windows": {
+      "both_detect": 3367,
+      "incumbent_only": 472,
+      "relation_only": 383,
+      "neither": 1762
+    },
+    "negative_windows": {
+      "both_alert": 956,
+      "incumbent_only": 344,
+      "relation_only": 897,
+      "neither": 34060
+    }
+  },
+  "false_positive_location": {
+    "relation_clean_answer_windows": 242,
+    "relation_risky_answer_windows": 1611,
+    "incumbent_clean_answer_windows": 120,
+    "incumbent_risky_answer_windows": 1180
+  },
+  "runtime": {
+    "seconds": 2010.851108099916,
+    "auxiliary_seconds": 835.9576083999127,
+    "peak_cuda_allocated_bytes": 3302341632
+  },
+  "hashes": {
+    "preparation": "daecfd54f94c7628d1dc7227b949f5c24eaede129f4d2a10c0260bc1db3acf9a",
+    "complete": "98ea4d1a2e1b8cfe89dfc3f2bc84e1c9f65d3871c9cc7fbed933f4759de22c05",
+    "auxiliary_checkpoint": "8de1cf1d584bf18758f546b435b0c2992c9f269e587d282f8a5d063df3bfc050",
+    "selected_scores": "1601e6f12aeca3aa1441237d4efa60c43bb27992c9c1f8d42ad725e3cd5310a9",
+    "incumbent_scores": "64b3972dd999c9655a302ad04a8709a1866b169a141e6167042e159bf601645f"
+  },
+  "limits": "Post-selection descriptive development audit. Type masks overlap. Each model keeps its own already-selected thresholds; no new fit, fusion or threshold is introduced.",
+  "training_or_inference_in_this_audit": false,
+  "GPU_used_in_this_audit": false,
+  "official_test_opened": false,
+  "baseline_modified": false
+}

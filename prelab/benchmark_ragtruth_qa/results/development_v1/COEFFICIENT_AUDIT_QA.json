@@ -1,0 +1,236 @@
+{
+  "status": "passed",
+  "reviewer": "/root/data_build/extract_review",
+  "utc": "2026-09-11T15:58:37.451927+00:00",
+  "no_new_fit": true,
+  "no_gpu": true,
+  "official_test_or_withheld_read": false,
+  "method": "Frozen sklearn pickle objects replaced with inert state holders; independent NumPy weight/moment/projection/coef-sigmoid formulas. No project runner imports, fit, transform, predict or SVD calls.",
+  "scaler_numeric_convention": "Installed sklearn1.6.1 partial_fit uses float32 input weights and recasts previous scalar effective count to float32 each16384-row block; audit reproduces this via independent Chan weighted-variance merging.",
+  "limits": [
+    "Coefficient replay and frozen provenance do not independently rerun optimization or certify how arbitrary unrecorded executions were performed.",
+    "PCA fitted components are frozen inputs, not refit. Parent audits original Lookback formula/geometry separately.",
+    "Calibration is development selection performance, not a fresh final-test estimate."
+  ],
+  "weights": {
+    "fit_windows": 168123,
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "fit_label_counts": [
+      146646,
+      21477
+    ],
+    "base_max_abs": 8.881784197001252e-16,
+    "class_factors_max_abs": 7.771561172376096e-13,
+    "loss_max_abs": 1.9984014443252818e-12,
+    "base_group_mass_max_abs": 1.7053025658242404e-13,
+    "base_answer_mass_max_abs": 1.7053025658242404e-13,
+    "loss_group_mass_max_abs": 2.2737367544323206e-13,
+    "loss_total_mass": 168123.0,
+    "expected_loss_mass": 168123,
+    "formula": "b_i=(N/G)/(answers_in_group*eligible_windows_in_answer); f_y=sum(b)/(2*sum_class_y(b)); u=b*f_y; loss_i=(N/G)*u_i/sum_group(u)."
+  },
+  "families": {
+    "lookback_mean": {
+      "width": 1024,
+      "fit_rows": 168123,
+      "calibration_rows": 42241,
+      "scaler_mean_max_abs": 2.220446049250313e-16,
+      "scaler_variance_max_abs": 2.0816681711721685e-17,
+      "scaler_variance_max_relative": 6.827583377199136e-16,
+      "scaler_scale_max_abs": 5.551115123125783e-17,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "float32_input_weight_mass_before_count_rounding": 168123.000352934,
+      "fit_standardized_exact": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            7
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            8
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    },
+    "lookback_nll": {
+      "width": 1025,
+      "fit_rows": 168123,
+      "calibration_rows": 42241,
+      "scaler_mean_max_abs": 2.220446049250313e-16,
+      "scaler_variance_max_abs": 2.0816681711721685e-17,
+      "scaler_variance_max_relative": 6.827583377199136e-16,
+      "scaler_scale_max_abs": 5.551115123125783e-17,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "float32_input_weight_mass_before_count_rounding": 168123.000352934,
+      "fit_standardized_exact": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            7
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            8
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    },
+    "layerband_slots": {
+      "width": 520,
+      "fit_rows": 168123,
+      "calibration_rows": 42241,
+      "scaler_mean_max_abs": 5.551115123125783e-17,
+      "scaler_variance_max_abs": 5.204170427930421e-18,
+      "scaler_variance_max_relative": 1.0024786962919291e-13,
+      "scaler_scale_max_abs": 2.7755575615628914e-17,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "float32_input_weight_mass_before_count_rounding": 168123.000352934,
+      "fit_standardized_exact": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    },
+    "hidden64_lookback_nll": {
+      "width": 1089,
+      "fit_rows": 168123,
+      "calibration_rows": 42241,
+      "scaler_mean_max_abs": 6.661338147750939e-16,
+      "scaler_variance_max_abs": 2.0816681711721685e-17,
+      "scaler_variance_max_relative": 6.827583377199136e-16,
+      "scaler_scale_max_abs": 5.551115123125783e-17,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "float32_input_weight_mass_before_count_rounding": 168123.000352934,
+      "fit_standardized_exact": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            7
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            8
+          ],
+          "window_score_count": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    }
+  },
+  "pca": {
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "sample_count": 20288,
+    "sample_identity_exact": true,
+    "sample_weight_max_abs": 0.0,
+    "weighted_mean_max_abs": 6.661338147750939e-15,
+    "components_orthogonality_max_abs": 1.721713049906981e-15,
+    "stored_singular_value_trace_ratio_max_abs": 3.3306690738754696e-16,
+    "all_forward_answers": 793,
+    "all_forward_raw_tokens": 213159,
+    "all_forward_windows": 210364,
+    "projected_window_matrix_exact": true,
+    "projected_window_max_abs": 0.0,
+    "refit_or_svd_called": false,
+    "scope": "Verified deterministic fit-only sample/weights/mean and stored-components forward for every token/window; components were not re-estimated."
+  },
+  "frozen_artifacts_verified": true,
+  "total_lr_candidates": 12,
+  "total_lr_window_scores_replayed": 2524368,
+  "total_lr_answer_scores_replayed": 9516,
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\audit_coefficients_qa.py": "a7a25ec0c346ad32621769762ff97b7f81c7caa6d959658a88508fb4ab5c1dae",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\development_protocol.json": "d572f97ff57b179cab8f5fa89fcfaa8fd33b8fbee4b2a082c346f2a7dc6ef34e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\complete.json": "c4c0efc2a806775c50e406575677f88962db3ed10a2c98604ec04d029be44c9a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\source_snapshot.json": "f2e38f605eb8fe5eb0a502787db0d046715bfce9e191d8112d6740529d4c497b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\matrix_manifest.json": "8217df5eaecea858849cb6495fc724d3dc3ca4b3959f2f27cc137fb835b0b0b7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\training_weights.npz": "dd34550c42a6cee00ea6bc611ba33a2a18fd27a479fdb1d082f1715d4c72710f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\fit_keys.json": "2b8bb3ec5b702f330e94e6dfce9baa1d8109cf3beb528b94cdb68178af1bb814",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\hidden_pca.pkl": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\score_index.json": "fb56e0e282ee2fbf19e5d94c7507e236c799f96dba6dac0fd4b3e23b3c6dbe81"
+  }
+}

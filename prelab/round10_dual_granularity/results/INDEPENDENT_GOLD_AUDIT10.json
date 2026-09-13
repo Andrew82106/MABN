@@ -1,0 +1,168 @@
+{
+  "schema": "round10-independent-gold-count-audit-v1",
+  "status": "passed",
+  "labels_reconstructed_from_raw": true,
+  "group_overlap": false,
+  "splits": {
+    "train": {
+      "coverage": {
+        "groups": 120,
+        "planned_answers": 240,
+        "item_evaluable": 232,
+        "risk_answers": 67,
+        "asserted_evaluable": 195,
+        "reviewed_safe_refusals": 37,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 203,
+          "abstained": 37
+        },
+        "localization_statuses": {
+          "resolved": 195,
+          "excluded": 37,
+          "unresolved": 8
+        },
+        "total_bpe_tokens": 5974,
+        "eligible_tokens": 3854,
+        "risk_tokens": 339,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 3515,
+      "risk_only_tokens": 1378,
+      "safe_refusal_ids": [
+        "ragognize_train_0287__partial__1",
+        "ragognize_train_0302__partial__1",
+        "ragognize_train_0313__partial__1",
+        "ragognize_train_0580__partial__1",
+        "ragognize_train_0692__partial__1",
+        "ragognize_train_0903__partial__1",
+        "ragognize_train_0939__partial__1",
+        "ragognize_train_1041__partial__1",
+        "ragognize_train_1122__partial__1",
+        "ragognize_train_1347__partial__1",
+        "ragognize_train_2036__partial__1",
+        "ragognize_train_2180__partial__1",
+        "ragognize_test_0044__partial__1",
+        "ragognize_test_0485__partial__1",
+        "ragognize_test_0970__partial__1",
+        "ragognize_test_1264__partial__1",
+        "ragognize_test_1284__partial__1",
+        "ragognize_test_1554__partial__1",
+        "ragognize_test_2039__partial__1",
+        "ragognize_train_0382__partial__1",
+        "ragognize_train_0406__partial__1",
+        "ragognize_train_0473__partial__1",
+        "ragognize_train_0683__partial__1",
+        "ragognize_train_1379__partial__1",
+        "ragognize_train_1520__partial__1",
+        "ragognize_train_1766__partial__1",
+        "ragognize_train_1782__partial__1",
+        "ragognize_train_2141__partial__1",
+        "ragognize_test_1018__partial__1",
+        "ragognize_test_1548__partial__1",
+        "ragognize_test_2206__partial__1",
+        "ragognize_train_0855__partial__1",
+        "ragognize_train_0466__partial__1",
+        "ragognize_train_0514__partial__1",
+        "ragognize_train_0653__partial__1",
+        "ragognize_train_0974__partial__1",
+        "ragognize_train_1879__partial__1"
+      ]
+    },
+    "validation": {
+      "coverage": {
+        "groups": 40,
+        "planned_answers": 80,
+        "item_evaluable": 76,
+        "risk_answers": 20,
+        "asserted_evaluable": 60,
+        "reviewed_safe_refusals": 16,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 64,
+          "abstained": 16
+        },
+        "localization_statuses": {
+          "resolved": 60,
+          "excluded": 16,
+          "unresolved": 4
+        },
+        "total_bpe_tokens": 2018,
+        "eligible_tokens": 1220,
+        "risk_tokens": 87,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 1133,
+      "risk_only_tokens": 436,
+      "safe_refusal_ids": [
+        "ragognize_train_0379__partial__1",
+        "ragognize_train_1128__partial__1",
+        "ragognize_train_1307__partial__1",
+        "ragognize_test_0701__partial__1",
+        "ragognize_train_0414__partial__1",
+        "ragognize_train_1532__partial__1",
+        "ragognize_train_2125__partial__1",
+        "ragognize_train_2179__partial__1",
+        "ragognize_train_0088__partial__1",
+        "ragognize_train_0095__partial__1",
+        "ragognize_train_1996__partial__1",
+        "ragognize_train_2214__partial__1",
+        "ragognize_test_0690__partial__1",
+        "ragognize_test_1668__partial__1",
+        "ragognize_train_0230__partial__1",
+        "ragognize_train_1160__partial__1"
+      ]
+    },
+    "test": {
+      "coverage": {
+        "groups": 60,
+        "planned_answers": 120,
+        "item_evaluable": 115,
+        "risk_answers": 34,
+        "asserted_evaluable": 100,
+        "reviewed_safe_refusals": 15,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 105,
+          "abstained": 15
+        },
+        "localization_statuses": {
+          "resolved": 100,
+          "excluded": 15,
+          "unresolved": 5
+        },
+        "total_bpe_tokens": 2568,
+        "eligible_tokens": 1683,
+        "risk_tokens": 164,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 1519,
+      "risk_only_tokens": 642,
+      "safe_refusal_ids": [
+        "ragognize_train_0085__partial__1",
+        "ragognize_train_0307__partial__1",
+        "ragognize_train_1060__partial__1",
+        "ragognize_train_0107__partial__1",
+        "ragognize_train_0355__partial__1",
+        "ragognize_train_0609__partial__1",
+        "ragognize_train_0693__partial__1",
+        "ragognize_train_1546__partial__1",
+        "ragognize_train_1329__partial__1",
+        "ragognize_test_0064__partial__1",
+        "ragognize_test_1848__partial__1",
+        "ragognize_train_2000__partial__1",
+        "ragognize_test_0850__partial__1",
+        "ragognize_train_0035__partial__1",
+        "ragognize_train_0182__partial__1"
+      ]
+    }
+  },
+  "source_hashes": {
+    "data/annotations_train.jsonl": "aa75ecc84b455143b92275018ec632a1d61fbc7472eb8084758bdf46ed77aabb",
+    "data/safe_refusals_train.json": "78c2ab5848b1c0fbbf49fdc7473747b297d23214ec8f996bdf11614437080780",
+    "data/annotations_validation.jsonl": "ab17622dd1f357460f1e9c0fffd505dc910ea659a627246039df81edcac623b5",
+    "data/safe_refusals_validation.json": "ee68dac8ef16acd807d8d296df6bffa2222fa0945b63ecb97af19bcab0f0a3c3",
+    "data/annotations_test.jsonl": "a14815db4dc597baaceec90fc4d50cfd477dcabb4726684a31bf4051434a796b",
+    "data/safe_refusals_test.json": "dc259da2c70a46fad61971aa176c4769c86f3789530e23c317b6fac484eebea9"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "stage": "independent_audit",
+  "actual_exit_code": 1,
+  "error": "KeyError: protocol source key used POSIX separator while exporter recorded Windows relative paths",
+  "classification": "auditor path-key normalization bug; candidate data unchanged",
+  "GPU_used": false
+}

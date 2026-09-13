@@ -1,0 +1,29 @@
+{
+  "version": "lookback-frozen-score-to-project-k4-v1",
+  "role": "evaluation_adapter_for_frozen_lookback_baseline; no model change",
+  "frozen_baseline": {
+    "source": "lookback_official_span_v1",
+    "model": "Existing lookback_lr.pkl is never loaded, refit, or rewritten.",
+    "scores": "Read the immutable scores.npz window_scores and span_geometry.npz only.",
+    "native_interface": "Original complete 8-raw-BPE stride-one span results remain unchanged and are copied into the new report only for traceability."
+  },
+  "scope": "Exactly all 159 calibration answers and their 42241 existing eligible project 4-BPE windows. No project fit data and no sealed test150 data are opened by the adapter.",
+  "mapping_fixed_before_labels": {
+    "token": "For each original raw answer token, arithmetic mean of every frozen 8-BPE span score whose [token_start,token_end) covers that token.",
+    "window4": "Arithmetic mean of the four raw-token scores at the existing window token_indices. Punctuation slots remain; only the project's already-frozen no-lexical window exclusion applies. Token offsets are independently merged before checking the stored character_intervals field.",
+    "answer": "Maximum over every eligible project 4-BPE window in that answer.",
+    "labels": "No answer/window label, risk mask, lexical mask, span coordinate, or metric enters mapping. Labels are opened only after adapted scores are frozen.",
+    "coverage": "Every calibration answer has at least one native 8-BPE span; every raw token therefore has one to eight covering predictions and a unique arithmetic mean."
+  },
+  "evaluation": {
+    "window": "Calibration AUROC, average precision, and calibration F1Opt with its own calibration-selected threshold.",
+    "answer": "Calibration AUROC, average precision, and calibration F1Opt with a separate calibration-selected threshold.",
+    "warning": "F1Opt is optimized and evaluated on the same repeatedly-used development calibration set. It is the common project comparison rule, not held-out performance."
+  },
+  "prohibitions": [
+    "No baseline retraining, parameter edit, score transformation learned from labels, smoothing, fusion, or threshold reuse from another method.",
+    "No change to lookback_official_span_v1 or any baseline artifact.",
+    "No official test150 read or claim."
+  ],
+  "integrity": "Protocol and source hashes precede mapping; existing complete output is hash-verified and never overwritten; a separate implementation must recompute mapping within fixed float64 absolute tolerance 5e-16 and reproduce thresholds/metrics exactly."
+}

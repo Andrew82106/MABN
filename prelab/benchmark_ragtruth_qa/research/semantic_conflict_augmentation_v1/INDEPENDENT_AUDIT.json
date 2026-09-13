@@ -1,0 +1,32 @@
+{
+  "status": "pass_fit_only_structural_replay",
+  "full_pairs": 5067,
+  "strict_pairs": 4109,
+  "strict_by_type": {
+    "attribution": 1514,
+    "negation": 1944,
+    "temporal": 348,
+    "number": 291,
+    "entity": 12
+  },
+  "post_freeze_qc_rows": 92,
+  "qualitative_decisions": {
+    "clear_silver": 84,
+    "ambiguous": 5,
+    "reject": 3
+  },
+  "duplicate_support_hashes_across_components": 0,
+  "calibration_read": false,
+  "test_read": false,
+  "gpu_used": false,
+  "trained": false,
+  "sha256": {
+    "pairs_fit_silver.jsonl": "e1400194653a8269cff85817cc8b234a545c8042471665a6406a8866360b8ebf",
+    "pairs_fit_silver_strict.jsonl": "99e317925e3399bc77684aa9706a5538fbdbec4f766502ac6909647eb58985ea",
+    "RULE_QC_AUDIT_MAX100.jsonl": "1e8169f8b5f98eabc3668e88e8123c619a2d8cc35883d508b0d9ed165102ad9f",
+    "QUALITATIVE_QC_AUDIT.jsonl": "fa5d80fca72f1d659f990b27c8f8fe4c850c240d8a9e14273b9bbc4d4966695a",
+    "STATS.json": "d8b787fdf053065f62de467507a56055d1d1d4364c6af1906875813b0bb3bdbd",
+    "FIT_CONFLICT_AUDIT.json": "edd2296fdf3686dccb9f763da0a897cd9dfd17c58adee8e79943e1a0018f7f94",
+    "PROTOCOL.json": "0eeab8ec2bf571735f712b56a4124488defab43292122e812ae3715938087c11"
+  }
+}

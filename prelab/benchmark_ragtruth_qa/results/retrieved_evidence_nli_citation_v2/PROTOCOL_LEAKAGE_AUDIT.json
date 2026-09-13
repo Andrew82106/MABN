@@ -1,0 +1,56 @@
+{
+  "status": "passed_CPU_protocol_and_leakage_audit",
+  "findings": {
+    "v1_retrieval_and_probabilities_read_only": true,
+    "citation_feature_functions_annotation_key_access": false,
+    "features_built_before_q_metadata_gold_open": true,
+    "single_C": 0.1,
+    "source_group_OOF_only": true,
+    "fold_scalers_and_models_fit_subset_only": true,
+    "full_model_fit_partition_only": true,
+    "fit_only_window_and_answer_thresholds": true,
+    "calibration_prediction_and_reporting_only": true,
+    "fixed_fusion_weights": [
+      0.5,
+      0.5
+    ],
+    "fusion_grid_or_gate": false,
+    "fusion_upstream_old_calibration_history_disclosed": true,
+    "real_fits": 0,
+    "NLI_cache_required_for_CPU_check": false,
+    "GPU_used": false,
+    "official_test_opened": false
+  },
+  "citation_function_key_access": {
+    "group_values": [
+      "bm25",
+      "claim_id",
+      "passage_id",
+      "retrieval",
+      "selected",
+      "selected_union_query_coverage"
+    ],
+    "citation_features": [
+      "citation_parse",
+      "claim_id",
+      "claims",
+      "ids",
+      "references",
+      "unknown"
+    ],
+    "fixed_logit_fusion": []
+  },
+  "sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_retrieved_evidence_nli_citation_v2.py": "eedc46c815e89422eb3c6229e5c7703f6621a6e8cb21a40cb6d17bf359bbc6ed",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\protocol.json": "65f0f92d5c9bd8ed8f32da577f1a804541623f072ffcec2ba8359b6bfa6bbbaf",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\PREFLIGHT.json": "3fe4dcec0d274a875604edbfcea37d2aaec9d8938333adf22aa08a0cc783f07a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\preparation_complete.json": "c2cc8560ef63d740cf48568553db71fc6ac356c9f2ce7f141af78e2a7cc6dc78",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\citation_statistics.json": "82ea290970629136b8fb821940de372baa95fbc6d48ec806f79aaaec5233fcae",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\feature_names.json": "617269551d40b6773e4f12d164258cfa084025ad8f1bd2fef390a9356f17c539",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\upstream_binding.json": "9bd488c0bc5b5e1c8d3bf27a5ca23b27776bb254547a41c26546a6572c37bdb0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_citation_v2\\CPU_CHECK.json": "e3d792960e46bf78e0740f22971c54378023bacab73557f20ea41e5a31dce369",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\inputs.jsonl": "aaad043a5ecae7ff881758cc7b0717b2771168c8473a3f84096045f7fe151408",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\large_fixed_convex_v1\\semantic_claim__old_tree__large_weight0.4_scores.npz": "64b3972dd999c9655a302ad04a8709a1866b169a141e6167042e159bf601645f"
+  },
+  "runner_ast_sha256": "4659a378c1294e523bc8a049aa2229e5810899281087329d5f1f36b88ee13814"
+}

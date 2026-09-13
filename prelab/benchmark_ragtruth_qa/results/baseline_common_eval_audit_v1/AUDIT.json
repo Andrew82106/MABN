@@ -1,0 +1,128 @@
+{
+  "schema_version": "baseline-common-evaluation-audit-v1",
+  "date": "2026-09-12",
+  "status": "common_calibration_evaluation_passed_with_strict_reproduction_caveats",
+  "scope": "Read-only audit. No GPU, official test, model retraining, score rewrite, or baseline mutation.",
+  "common_evaluation": {
+    "answers": 159,
+    "groups": 154,
+    "windows_k4_stride1": 42241,
+    "positive_answers": 100,
+    "positive_windows": 5984,
+    "same_gold": true,
+    "separate_window_answer_thresholds": true,
+    "threshold_tie_order": [
+      "F1",
+      "precision",
+      "higher_threshold"
+    ],
+    "metrics": [
+      "F1",
+      "AUROC",
+      "AP"
+    ],
+    "official_test_opened": false
+  },
+  "mappings": {
+    "lookback": {
+      "deterministic": true,
+      "parameters": 0,
+      "labels_in_mapping": false,
+      "operation": "frozen 8-BPE spans -> covering-span token mean -> 4-BPE mean -> answer max",
+      "model_or_native_score_changed": false
+    },
+    "lumina": {
+      "deterministic": true,
+      "parameters": 0,
+      "labels_in_mapping": false,
+      "operation": "frozen token formula -> 4-BPE mean -> answer max",
+      "model_or_native_score_changed": false
+    },
+    "ghost": {
+      "deterministic": true,
+      "parameters": 0,
+      "labels_in_mapping": false,
+      "operation": "frozen answer RF probability broadcast unchanged to all answer windows",
+      "model_or_native_score_changed": false,
+      "native_localization": false
+    }
+  },
+  "calibration_metrics": {
+    "lookback": {
+      "window_f1": 0.6008821240162587,
+      "answer_f1": 0.8454545454545455
+    },
+    "lumina": {
+      "window_f1": 0.3312991877446235,
+      "answer_f1": 0.7850467289719626
+    },
+    "ghost": {
+      "window_f1": 0.3203608127586367,
+      "answer_f1": 0.7722007722007722
+    }
+  },
+  "frozen_implementation_hashes": {
+    "lookback_runner": "a4d1a7feb10974a5707749b9da6a3781882e6653b18580f92c43f01227d7d99b",
+    "lookback_extractor": "b49629aa5370444f74afe9e313b01330bf31e6210156e8c0069088aabb84426f",
+    "lookback_author_step03": "8039386cc1d43eec1752d88184e62ab1969532b2b05c8ea2e5eb1a3084915c93",
+    "lookback_adapter": "b726eaf9b015ff672d0588606877c9fc28090b770ae3b0a3094a0bb106603e8c",
+    "lookback_verifier": "991a6f76d8f480b86ba0c96e79776c4b86f93bf0f8fb835959e7ed517882cbf7",
+    "ghost_runner": "e2cb7bfc6466392b83c1e285230c56a1944f473a2e90c7c5711e6b5e5019572a",
+    "ghost_geometry": "2d3976a0c22c122e4ea95c2b68b9122d984b1dca8b4bbd516ce476553d98b17e",
+    "ghost_extractor": "55898518b3d0f7fc9f9bf068e09c7631532bc0785d03d200339cd1b1e3bd6a57",
+    "ghost_adapter": "a1eb4fd383027b0ecf34ef69a0eddddcbf9cb14d3d8bcab9f624c1c28c74bfdf",
+    "ghost_verifier": "9f63751499c602824f1830cd6ad011be7e3e2c2be8a0454c8301d781dd78f190",
+    "lumina_extractor": "b7038aefefe82de948955d25d4bd616805aa104e451413887f28ee324a03d76d",
+    "lumina_adapter": "e5fcdb74d3c07290330235aa8928ac7984dcaf9b8c3b4d7bc6ce881e0a36f2b9",
+    "lumina_native_aggregation": "891ec560d6be46e569f4e4a58679f0011959b3e58ad2c6c304dae9f4e8ad8cf5",
+    "lumina_formula": "15910f994e66ebc88bd5f826c9081b292fd13c4259ce35bd7214d17987983626",
+    "lumina_memory_port": "ea1d1e45e22a510450a4428335a5b3f3366d09459f41db40aaf83ea98278aab8",
+    "lumina_author_source": "1b5ecd8c08982b40dae59f299e580219074ee83673768feb53cf15612b7d8a5f"
+  },
+  "frozen_implementation_hash_count": 16,
+  "all_frozen_implementation_hashes_match": true,
+  "completed_artifact_sets_hash_verified": [
+    "lookback_official_span_v1",
+    "lookback_k4_evaluation_adapter_v1",
+    "ghost_official_answer_rf_v1",
+    "ghost_k4_evaluation_adapter_v1",
+    "lumina_qa_scoring_v1",
+    "lumina_official_answer_v1"
+  ],
+  "findings": [
+    {
+      "severity": "material_if_exact_author_training_required",
+      "method": "GHOST",
+      "item": "Uses the paper final RF parameters but does not rerun the paper 50-configuration five-fold random search; seed42 is local. It is a paper-final-structure/parameter transfer, not full training-pipeline reproduction."
+    },
+    {
+      "severity": "material_reproduction_limit",
+      "method": "all",
+      "item": "Local NF4 teacher-forced replay/input conventions prevent end-to-end bitwise official reproduction; Lookback/GHOST also use locally fixed state-reading conventions."
+    },
+    {
+      "severity": "reporting_only",
+      "method": "GHOST",
+      "item": "The common adapter saved fit diagnostics for native634 rather than expanded3680; formal cal159 scores are aligned and unaffected, but its fit diagnostics are not common-fit comparable."
+    },
+    {
+      "severity": "development_limit",
+      "method": "all",
+      "item": "cal159 is repeatedly used and supplies F1-optimal thresholds; values are development results only."
+    }
+  ],
+  "no_unauthorized_learned_mapping_found": true,
+  "no_label_conditioned_position_mapping_found": true,
+  "no_deliberate_baseline_weakening_found": true,
+  "source_document_hashes": {
+    "BASELINE_PROTOCOL.md": "777e2f196ea52a14bca452cdc58162d012b51e3d5a3a793f88ffc7838bca0377",
+    "FORMAL_BASELINE_FREEZE.md": "4b7413449fc81f765ff046285ccd27b0e3437ef955cb73cf95e646f38cd38bb6",
+    "FORMAL_BASELINE_RESULTS.md": "89485ad062ebf3807e94211b157aa133416a12e1349f201d46d37588569dfe2c",
+    "BASELINE_COMPARISON.md": "b241362cbd9f7303016f8d5cf78482039abb84e8fd71f1a718fa38aaa9dcfa32"
+  },
+  "independent_evidence": {
+    "lookback": "results/lookback_k4_evaluation_adapter_v1/INDEPENDENT_RECOMPUTE.json",
+    "ghost": "results/ghost_k4_evaluation_adapter_v1/INDEPENDENT_VERIFY.json",
+    "lumina": "results/lumina_qa_unified_independent_audit_v1/INDEPENDENT_AUDIT.json"
+  }
+}

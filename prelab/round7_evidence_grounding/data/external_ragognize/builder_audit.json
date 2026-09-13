@@ -1,0 +1,15 @@
+{
+  "status": "passed_data_builder_structural_audit_pending_parent_semantic_review",
+  "checks": [
+    "100 inputs uniquely identified; 50 complete/partial official test pairs",
+    "All source title/text/order equal official Parquet directly",
+    "Every reference evidence sentence and character span matches visible complete source",
+    "All group_id equal question_id; 50 independent all-display-source title groups",
+    "All neutral prompt headers and helpful-assistant system prompts exact",
+    "50 actual source-only semantic reviews present; no model outputs or scores used",
+    "Local tokenizer measured 93-619 input tokens; all fit 3072"
+  ],
+  "input_sha256": "ac0cc1f6c021c4ea27bb6b2467ed88776f248f85285083c54771a5a8eb2d7c76",
+  "reference_sha256": "8b7033fc2a3cf9c300bb2669d36e6034bcdea8ad740bd69c9c812292020458e9",
+  "builder_sha256": "54e65a63287345fcb687ea9855db63eb780a9f2bec45ef1a5b75419e163818a6"
+}

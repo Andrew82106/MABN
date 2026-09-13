@@ -1,0 +1,53 @@
+{
+  "status": "paired_inputs_for_review_not_frozen",
+  "seed": 20260911,
+  "groups": 200,
+  "rows": 400,
+  "expected_items": 1,
+  "counts": {
+    "test:time": 8,
+    "train:time": 24,
+    "validation:time": 8,
+    "train:quantity": 24,
+    "test:quantity": 8,
+    "validation:quantity": 8,
+    "train:location": 24,
+    "test:location": 8,
+    "validation:location": 8,
+    "validation:relation": 8,
+    "train:relation": 24,
+    "test:relation": 8,
+    "train:action": 24,
+    "validation:action": 8,
+    "test:action": 8
+  },
+  "independent_group_claim": "provisional; literal names/source ownership checked, alias and shared-event review remains",
+  "donor_selection": "programmatic ranking only; every displayed donor and pair requires manual review",
+  "donor_exclusion_counts": {
+    "target_or_draft": 262,
+    "mentions_selected_target": 20,
+    "old_2025_asian_winter_games_event": 46,
+    "duplicates_selected_fact_sentence": 5
+  },
+  "conflicts": 0,
+  "length_gap_max": 0.2972972972972973,
+  "length_gap_over_20pct": 6,
+  "curation_hashes": {
+    "time_quantity_candidates.json": "2e9bf2a31069a834f905b597a03851e40345ae2bf41b2e0d932c7816ed4cd888",
+    "geography_candidates.json": "95a317c7234289c886c6429cc400223e6ae1d275f57cac190ee70972af07339e",
+    "quantity_tail_candidates.json": "4519438d6717810c77d69128575d9a26aa4e0a127757c889686f67cbcb95da49",
+    "root_relation_action.json": "e58d58f320879b0a18b4e62799a00b769987fe4ea041c48fa4f71a730025fedf",
+    "relation_additional.json": "63621d47e81f0168081fd6c41ad39452b6064934bcf60a3ae7f1111ee6c11c9f"
+  },
+  "source_pool_sha256": "cdf0386fcb43cd1c832a8579034781735c8376adf87fe1d3b85a75a2cad3fc08",
+  "files": {
+    "data\\paired_inputs.jsonl": "1c8da44b9cd9d42c95482b714908c3e4871c46422dd80a89fbb5b803410d327c",
+    "data\\paired_references.jsonl": "172fe5ad846623a7ac91c7e4a718abc850ffa602b41931de3d8088625c8d44fa",
+    "data\\donor_review_packets.jsonl": "6962523fd9bc31d848d6861126ec3051248453eb7a7d1c91fdca9991a4a52544",
+    "data\\curation\\selected_target_candidates.json": "34da88d9206f3d883366859741080d785b355f9abe2ead8c8d34338a85b25a8f",
+    "data\\curation\\donor_assignments_proposed.json": "b26da9866eb323db66015a90de05806f3b0d4655004a5f8abba3f0bfa19c6227",
+    "data\\curation\\pair_conflicts.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "data\\curation\\pair_lengths.json": "4b6e4ad888ef1bb896fdaebda7dfbaf9e4528844471d8a4eb01fc4798813dee4"
+  },
+  "restrictions": "No model generations or detection scores read. No GPU, training, final input promotion or freeze performed."
+}

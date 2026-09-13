@@ -1,0 +1,29 @@
+{
+  "ReDeEP_commit": "4d081915b8fb4430fda65c411da61540cc73cc57",
+  "retrieved": "2026-09-10",
+  "files": [
+    {
+      "source_url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/token_level_detect.py",
+      "file": "redeep_official_token_level_detect.py.txt",
+      "bytes": 13752,
+      "sha256": "3d52c13017bf566713b73bd1a821b25853d1a3bffceb2bf26fab684298ccf0be"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/transformers/src/transformers/models/llama/modeling_llama.py",
+      "file": "redeep_official_modeling_llama.py.txt",
+      "bytes": 94029,
+      "sha256": "d215c2143c902767335ace6556bd601c761b7f9995e18a5922a087be42fbc4f5"
+    }
+  ],
+  "Lookback_existing_local_sources": [
+    {
+      "path": "prelab\\references\\Lookback-Lens\\step01_extract_attns.py",
+      "sha256": "31fd70e20960d53a94d6c447d90e69cf5d9bf96fe2220287295dc3afed13c074"
+    },
+    {
+      "path": "prelab\\references\\Lookback-Lens\\step03_lookback_lens.py",
+      "sha256": "18d03600bcdaa357aa354aa544395fc1feffb390586a7cfdcd9c0b754d0fee87"
+    }
+  ],
+  "status": "reference_sources_only_not_executed"
+}

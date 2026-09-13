@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "requirements": {
+    "architecture_and_parameter_trials": {
+      "passed": true,
+      "evidence": [
+        "configs/structure_grid.json",
+        "results/STRUCTURE_SEARCH.md",
+        "results/final_audit.json"
+      ],
+      "coverage": "18 configurations, 30 trained checkpoints, two linear baselines, fresh-test results and paired uncertainty"
+    },
+    "same_model_supplementary_information": {
+      "passed": true,
+      "evidence": [
+        "src/supplement.py",
+        "results/fusion_selection.json",
+        "results/policy_costs.json"
+      ],
+      "coverage": "687 unique queries per direct/verification/neutral arm; 10 fusion controls; active/random policies; prompt-only and matched104-feature controls"
+    },
+    "frozen_human_labels_and_heldout_test": {
+      "passed": true,
+      "evidence": [
+        "data/manifest.json",
+        "results/final_audit.json"
+      ],
+      "coverage": "240 train,65 validation,80 new-source cross-generator test; original human conflict spans; source OOF selection"
+    },
+    "actual_results_and_limits": {
+      "passed": true,
+      "evidence": [
+        "results/REPORT.md",
+        "results/metrics.json",
+        "results/confidence_intervals.json",
+        "results/exploratory_direct_checks.json"
+      ],
+      "coverage": "negative structure/long-generation results preserved; short-check response-level signal distinguished from unproven token-localization gain; post-test analysis labelled exploratory"
+    },
+    "readable_reproducible_delivery": {
+      "passed": true,
+      "evidence": [
+        "README.md",
+        "RELATED_WORK.md",
+        "results/REPORT.md",
+        "results/STRUCTURE_SEARCH.md",
+        "results/comparison.png",
+        "results/all_test_examples.html"
+      ],
+      "coverage": "rerun commands, primary research references, all80 cases, all51 method/seed results, model and transfer limitations"
+    }
+  },
+  "source_hashes_match_independent_audit": true,
+  "transform_training_sample_counts_verified": true,
+  "fusion_validation_auc_max_difference": 1.1102230246251565e-16,
+  "all_local_report_links_exist": 14,
+  "all_test_articles": 80,
+  "post_test_analysis_left_original_predictions_and_selection_unchanged": true,
+  "artifact_sha256": {
+    "all_test_examples.html": "c396e53a3fdfafe0339250567bd1251a0670ac6b1ac8ebbf27fddf3a2819de56",
+    "comparison.png": "2302cf436e5cfe61b2bd53b459f0bdf97263a7c01774cae67b11232eb6e736cc",
+    "confidence_intervals.json": "75195719888bbe62c2215c1a8b085bf82a61299244cd9c9cfb38f269fa4f7150",
+    "evaluation_manifest.json": "52ae11a274ad9d793db38467cd4f609e069a55d840569d00a7a4dbdcc0bfedef",
+    "exploratory_direct_checks.json": "4a58d2db92dd3905c218cf9a810bd2b316533f193dba2db7b283e7d26d40df03",
+    "final_audit.json": "ffa2e0fa38a655d712997258c948dba68285e326f9b4cab5c2eb4ae3234111d8",
+    "fusion_selection.json": "20236a305969fd34cd8ae735ffe7a7262a9ac8a6b5302424f673595a261dcfbf",
+    "fusion_transform.json": "488b6d27c7647b56c4d915c1660a095aa8b973a486e882d6512f02ee35b6952f",
+    "input_transform.json": "e23997ca452edb5e68ce76d27840a8e57b521c56b7aebf089a9f84ebc5962eb1",
+    "metrics.json": "3ca400e7b212bf06aefba1b091911c34073249ddd012ddb1c1f6e646d091347a",
+    "policy_costs.json": "e13f6978557868848f46eb17f57137db764f814945811c22a4d4b1917d2d8cd7",
+    "REPORT.md": "d76dc3c4c1bb66241d95e30639a19893c1fd9854ccc5219bfed8649c4cffad4c",
+    "selection_train_val_audit.json": "bec50fa65d36711b29d2f6b7a62bd545443d319f662b74efecc92dfbe2a13b7c",
+    "STRUCTURE_SEARCH.md": "6dfe2abdfa198e5c916e50d602d222b9bb225fcc6db8417902b35684c35d7c6e",
+    "structure_selection.json": "6dca66f4489307e36b530a8f0be3d9fb0f79836406886573572aa321f7a2d82d",
+    "supplement_state_audit.json": "c49d583a10a522c6fbd102e039d2ac17845d75594f20d8843bdefed13e2528f7",
+    "test_predictions.jsonl": "651e9dc9b1ed084b779f62ccc186daf57a90000ab938eb8d4b12d20986368560",
+    "validation_predictions.jsonl": "a81cb1d4843bc0d4e189e760214abf6c7a81577ab3167f718daa4d9f88db62be"
+  }
+}

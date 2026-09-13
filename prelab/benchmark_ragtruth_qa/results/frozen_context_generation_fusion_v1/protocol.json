@@ -1,0 +1,30 @@
+{
+  "version": "frozen-semantic-generation-head-v1",
+  "scope": "3680fit+159calibration, original full inputs/labels/4rawBPE windows. Official test remains sealed.",
+  "architecture": "Fixed upstream selected semantic z plus generation_residual_fusion_v2 gated residual: mapped semantic768, LB1024, NLL and LB mean/2*population std. Train52944 head parameters only; no backbone loaded or updated by this entry.",
+  "modes": {
+    "fusion": "Original aligned LB/NLL.",
+    "semantic_only": "Identical head but LB/NLL and absolute LB summaries zero."
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "precision": "FP32 CPU",
+    "threads": 4
+  },
+  "training": {
+    "epochs_per_mode": 6,
+    "effective_answers": 8,
+    "microbatch_answers": 1,
+    "head_seed": 20261006,
+    "target_mass": 560300,
+    "weights_orders": "Read exact committed full_context_generation_fusion_v2 weights and all6 orders without changes.",
+    "loss": "sum(tokenBCE*original_loss_weights)*3680/(actual_batch_answers*560300), accumulate before clipping/update; original zero lexical-mask weights retained."
+  },
+  "selection": "Save epochs0..6. Separate cal-only window/answer thresholds with original F1/precision/higher-threshold ties. Select only epochs1..6 by min(windowF1,answerF1), windowF1, windowPrecision, earlier epoch. No upstream reselection.",
+  "numerics": "Always actual CPU sigmoid(z+residual), including epoch0. Zero residual must preserve logit exactly; report CPU-versus-GPU probability differences and original-threshold counts, without replacing probabilities or modifying gradients.",
+  "limits": "Two-stage extra semantic detector plus original-generator white-box signals; not a pure generation probe. Upstream selected using the same calibration, not cross-fitted. Frozen training-state cache contains in-sample upstream fit states. No claim of independent calibration or same compute as QA-only training.",
+  "artifacts": "All7 head+optimizer/RNG checkpoints, token probabilities, two-granularity scores, thresholds, metrics, epochs/updates/times for each mode. No implicit overwrite/resume."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "linked_missing_pairs_not_inferred",
+  "partition": "fit",
+  "answers": 634,
+  "claims": 9055,
+  "selected_links": 27165,
+  "cached_links": 18450,
+  "missing_links": 8715,
+  "unique_missing_requests": 8369,
+  "links_sha256": "f951a89048e733dc63445b0db6af3f0672991a69617f6213d7fad41689ffe843",
+  "requests_sha256": "26506fedaacf527db42a43b7854da95afee5e07b2b35b843fb487a7b20d5ff42",
+  "existing_npz_sha256": "85f98e4beecd3cd890a64089ae21033d2e83b8400d1f7b76fb6ebcadf59e40ec",
+  "attribution_manifest_sha256": "37f50d7ad939272149688b24ac91ef68a8996aa398716de113cb1c5004ac0d8b",
+  "labels_opened": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

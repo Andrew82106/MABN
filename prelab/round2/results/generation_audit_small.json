@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "sample_seed": 8197,
+  "samples": [
+    {
+      "task": "trivia",
+      "id": "trivia_bb_14",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 13,
+      "n_replay_tokens": 13
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_50",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 17,
+      "n_replay_tokens": 17
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_qb_10282",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 27,
+      "n_replay_tokens": 27
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_15140",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 10,
+      "n_replay_tokens": 10
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_qw_5100",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 3,
+      "n_replay_tokens": 3
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_bb_952",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 25,
+      "n_replay_tokens": 25
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_sfq_21710",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 7,
+      "n_replay_tokens": 7
+    },
+    {
+      "task": "trivia",
+      "id": "trivia_odql_7032",
+      "regenerated_text_exact": true,
+      "regenerated_ids_equal_replay": true,
+      "n_regenerated_tokens": 26,
+      "n_replay_tokens": 26
+    }
+  ],
+  "scope": "Sampled seeded regeneration, not saved live state traces for every prior response. RAG runs after the trace addition also record actual generation token IDs."
+}

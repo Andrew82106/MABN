@@ -1,0 +1,19 @@
+{
+  "objective": "Upgrade targeted factual-span verification and coverage, aiming for answer-level error-class F1 > 0.70 on a genuinely new test set.",
+  "primary_metric": "binary F1, factual-error answer is positive; not AUROC, token F1, or macro F1",
+  "model": "Same frozen local Qwen2.5-7B-Instruct Unsloth NF4; no external LLM judge",
+  "development": "All 584 previously viewed source groups are development data, repartitioned into464training and120validation with stratification by original generator and label. Earlier tests are explicitly no longer independent.",
+  "fresh_test": "100 new source groups excluded from all584 prior groups;40evident-conflict and60fully-clean human-labelled summaries. Generator quotas:7B14error21clean,13B14error21clean,70B12error18clean. Fixed seed20260911 and no model-score filtering.",
+  "primary_selection": "Fit all probes only on training data. Choose method, hyperparameters, aggregation and threshold by validation error-class F1, tie-break precision then fewer supplementary calls then fixed candidate order. Freeze selection before scoring the new test.",
+  "base_probe": "Fixed attention logistic C0.1; training query selection uses strict source-group3fold OOF fits including scaler; validation/test use full-training fit.",
+  "upgrades": ["Check up to3risk-ranked sentences instead of1", "One deterministic entity/date/number/role/high-risk phrase per selected sentence, score mapped to that exact original span", "Whole-summary short-check coverage control"],
+  "controls": ["Base token probe with F1-calibrated threshold", "One sentence short-check", "Up to3sentence short-checks", "Up to3targeted-span short-checks", "Whole-summary short-check", "Whole plus sentences", "Whole plus targeted spans"],
+  "unit_probe_grid": {"C":[0.001,0.01,0.1,1.0],"class_weight":[null,"balanced"],"features":["abc","abc_base","abc_base_hidden16"]},
+  "aggregation": ["max","top2mean","noisy_or"],
+  "coverage_amendment_before_fitting": "Training/validation label-coverage audit found sentence checks cover148/175 and41/45 error answers versus factual targets83/175 and29/45. Before unit fitting or any new-test metrics, add sentence+fact and whole+sentence+fact aggregation controls using already scheduled queries; no extra model calls. Total582validation candidates. Keep all original controls.",
+  "untrained_readout_control_before_fitting": "Before unit fitting/test evaluation, add raw B probability and B/(A+B) score controls across the8scopes and3aggregations. These48additional validation candidates require no extra LLM calls, distinguish self-check readouts from learned probes, and bring total to630. Raw controls are explicitly labelled if selected.",
+  "labels": "All training labels derived from original released human conflict spans; no synthetic gold and no generated verdict treated as truth.",
+  "additional_generation": "No free-form generation needed: A/B/C readouts and four prompt-end hidden layers. Original batch timings recorded. Exact repeated sentence queries may reuse round3 direct forward caches with provenance.",
+  "report": ["F1, precision, recall, confusion matrix, false-alarm rate", "All-positive baseline", "Token localization separately", "Coverage and query costs", "Bootstrap confidence interval for selected frozen model", "All candidates and complete examples"],
+  "limitations": "Offline existing-summary replay; English evidence-relative conflicts; case-control sample; not live-search self-generation or proof of real-world factuality. No test-threshold tuning to force target."
+}

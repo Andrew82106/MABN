@@ -1,0 +1,197 @@
+{
+  "schema_version": "forced-evidence-quote-probe-v1-independent-protocol-review-v1",
+  "review_status": "BLOCK",
+  "review_scope": "PROTOCOL.md and PLAN.json only; CPU/read-only protocol audit before runner/GPU/scoring",
+  "reviewed_artifacts": {
+    "PROTOCOL.md": "1198d893515172def308927023d3c264cdfef960d9bdd050220cfd823749374f",
+    "PLAN.json": "28a94870a4d62c3f4ba2df1e909b7d319a34e6dc4a7f1ee3fd91bf095a185f0c",
+    "fit.jsonl": "798653054e03343966d426a43764a7320a2b5b16108d27110e6335edb435bef5",
+    "label_blind_microclaims": "c1731ab6ca68569f7811db46f594431751995d65d2468cdec51f8d63f37d585a",
+    "claim_prompt_function": "9dac8461d30c24602e4f3d05b9613cc498e40a401948ca1c50735f5f792c9574",
+    "sentence_bm25_code": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+    "hidden_pca": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+    "llama_config": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2",
+    "llama_tokenizer_json": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7"
+  },
+  "independent_recomputation": {
+    "fit_rows": 3680,
+    "fit_groups": 615,
+    "native_llama2_answers": 634,
+    "native_group_coverage": 615,
+    "native_answers_per_group_histogram": {
+      "1": 599,
+      "2": 14,
+      "3": 1,
+      "4": 1
+    },
+    "selected_groups": 256,
+    "selected_answers": 256,
+    "selected_answers_all_native_llama2": true,
+    "selected_response_ids_sha256": "bf1fd595bc5bc1b6700d54404023f42cc230b4406e0f12c6539d1931dc4691e3",
+    "selected_group_ids_sha256": "e24c27298c7604208bba9d6cbbb25d3e7aba4ff802d73446244c2c911ffb1f27",
+    "fold_answer_counts": {
+      "0": 40,
+      "1": 56,
+      "2": 62,
+      "3": 45,
+      "4": 53
+    },
+    "selected_label_blind_rows_before_filter": 3777,
+    "selected_claims": 3776,
+    "excluded_non_alphanumeric_claims": [
+      "\":"
+    ],
+    "claim_prompt_rows_sha256": "a59b8b526cc93d17ab07c0f7ae2e9cf8151c46c16728ed27cb91d517e45f4247",
+    "prompt_template_sha256": "2561177f99ba3017aef2d1687dad36ae3ad4bd8393ed6abe8ec8f63ce75b4b01",
+    "relation_suffix_sha256": "2f1823284e29f5e9864c3214a79c733f000564a09eea12d96e430ab3c2754e65",
+    "relation_suffix_tokens": 30,
+    "choice_token_ids": {
+      "A": 319,
+      "B": 350,
+      "C": 315
+    },
+    "prompt_tokens": {
+      "sum": 1827311,
+      "mean": 483.92770127118644,
+      "median": 467.5,
+      "p95": 687,
+      "p99": 736,
+      "max": 799
+    },
+    "mechanical_quote_tokens_including_close": {
+      "sum": 124455,
+      "mean": 32.95948093220339,
+      "median": 26,
+      "p95": 82,
+      "p99": 128.75,
+      "max": 148,
+      "over_160": 0
+    },
+    "prompt_control_marker_occurrences_in_selected_claims_or_passages": 0,
+    "hidden_pca_shapes": {
+      "mean": [
+        4096
+      ],
+      "components": [
+        64,
+        4096
+      ]
+    },
+    "feature_dimensions": {
+      "P1": 21,
+      "P2": 549,
+      "P3": 549,
+      "P2_P3_decomposition": "21+11+5+256+256"
+    }
+  },
+  "passed_or_resolved": [
+    {
+      "id": "R1_NATIVE_COHORT",
+      "finding": "PASS: all 615 groups contain native llama-2-7b-chat; frozen 256-answer cohort is entirely native. The superseded heterogeneous 2,423-claim cohort is explicitly invalidated."
+    },
+    {
+      "id": "R2_SAMPLE_LOCKS",
+      "finding": "PASS: response/group digests, fold counts, 3,777 selected label-blind rows and 3,776 eligible claims independently reproduce."
+    },
+    {
+      "id": "R3_CLAIM_FREEZE",
+      "finding": "PASS: prompt claim is the hashed deterministic claim_prompt_text from locked hypothesis_for; its 3,776-row digest reproduces."
+    },
+    {
+      "id": "R4_PROMPT_CONTENT",
+      "finding": "PASS: prompt/suffix hashes and A/B/C token IDs reproduce. It contains no insufficient-evidence/refusal escape or gold wording."
+    },
+    {
+      "id": "R5_FEATURE_SCHEMA",
+      "finding": "PASS: 21 surface columns, 11 token summaries, 5 relation values, 256 hidden and 256 attention values have fixed order; P2/P3 are exactly 549 dimensions."
+    },
+    {
+      "id": "R6_GPU_TAINT_DESIGN",
+      "finding": "PASS IN DESIGN: GPU input is a sanitized allowlist manifest built from label-blind claims; 4-BPE ownership and gold move to the post-feature evaluator."
+    },
+    {
+      "id": "R7_MAPPING",
+      "finding": "PASS IN DESIGN: common raw 4-BPE, stride-1, claim-to-window max and answer=max geometry is fixed; raw span coordinates own BPEs."
+    },
+    {
+      "id": "R8_RESOURCE_COUNTS",
+      "finding": "PASS: prompt total/max 1,827,311/799 and mechanical quote total/max 124,455/148 independently reproduce. The 64-128 minute estimate remains a planning range."
+    }
+  ],
+  "blocking_items": [
+    {
+      "id": "B1_NESTED_CV_LEAKAGE_AND_METRIC_RULES",
+      "severity": "blocking_scoring",
+      "finding": "Inner-OOF is incomplete. Each inner model must fit scaler, answer/claim weights and class balance from its three inner-training folds only; current outer-training wording permits leakage. Threshold candidates, >= versus >, metric weights, AP implementation/ties and single-class behavior are unfrozen.",
+      "required_resolution": "Freeze these rules before evaluator code or label access."
+    },
+    {
+      "id": "B2_ADVANCE_GATE_AMBIGUITY",
+      "severity": "blocking_scoring",
+      "finding": "PROTOCOL says answer AP relative to P2 is “不低于0.01”, while PLAN permits a drop up to 0.01. Exact-rate denominator is unspecified.",
+      "required_resolution": "State P3-P2 >= -0.01 (or intended alternative) and exact_count/3776 with invalids counted non-exact."
+    },
+    {
+      "id": "B3_LLAMA2_HOOK_AND_REPLAY_CONTRACT",
+      "severity": "blocking_gpu",
+      "finding": "Existing audited Lookback hooks are no-cache full-sequence replay hooks and reject past_key_value; P3 declares KV-cache generation. Protocol does not choose cache-aware hooks versus post-generation replay and gives no numeric replay tolerance/oracle.",
+      "required_resolution": "Freeze one path, post-read alignment, oracle and numeric tolerances before smoke."
+    },
+    {
+      "id": "B4_TOKENIZATION_AND_STOP_BYTES",
+      "severity": "blocking_gpu",
+      "finding": "Literal prompt begins <s>, but add_special_tokens=False is not frozen. SentencePiece incremental decode cannot safely be concatenated token by token; exact byte stop/content intervals need an algorithm. Invalid no-close relation context is undefined.",
+      "required_resolution": "Freeze tokenizer flags, full-prefix byte reconstruction/stop method and invalid relation context."
+    },
+    {
+      "id": "B5_P0_INPUT_AND_TRAINING_LINEAGE",
+      "severity": "blocking_scoring",
+      "finding": "P0 lacks exact raw matrix/index hashes and proof that global standardization is absent. Fold weights/scaler/solver behavior are not explicit here.",
+      "required_resolution": "Lock raw P0 artifacts and apply fold-local preprocessing/training; never reuse in-sample scores."
+    },
+    {
+      "id": "B6_SANITIZED_MANIFEST_NOT_YET_MATERIALIZED",
+      "severity": "blocking_gpu",
+      "finding": "The taint boundary is correct on paper, but the sanitized manifest/lineage and runner do not yet exist. fit.jsonl contains labels and cannot be a GPU input.",
+      "required_resolution": "CPU-build, hash and independently audit the allowlist manifest; GPU runner accepts only it and fails closed."
+    }
+  ],
+  "non_blocking_limitations": [
+    {
+      "id": "N1_FORCED_SUPPORT",
+      "finding": "No “insufficient evidence” hint exists, but the prompt presupposes support. Source-exactness proves provenance, not entailment."
+    },
+    {
+      "id": "N2_TEACHER_FORCE_COMPARABILITY",
+      "finding": "P2/P3 share model, prompt and 549-D schema, but teacher forcing versus greedy generation changes quote text and trajectory; interpret only as an end-to-end condition contrast."
+    },
+    {
+      "id": "N3_WHITEBOX_ATTRIBUTION_CONTROL",
+      "finding": "P1→P2 measures whitebox gain for mechanical quotes. No generated-quote surface-only control means P3 gain cannot alone prove its whitebox block caused the gain."
+    },
+    {
+      "id": "N4_PCA_DOMAIN_SHIFT",
+      "finding": "PCA is label-free and shaped 64x4096 but was fitted on original-answer states; quote-state projection is out of distribution."
+    },
+    {
+      "id": "N5_RESOURCE_UNCERTAINTY",
+      "finding": "Serial decoding and Python hooks may exceed the 1.5-3x factor; smoke must report throughput/peak memory without tuning science parameters."
+    }
+  ],
+  "execution_decision": {
+    "cpu_manifest_implementation_may_proceed": true,
+    "gpu_smoke_allowed_now": false,
+    "full_gpu_allowed_now": false,
+    "scoring_allowed_now": false,
+    "reason": "Resolve B1-B6 and audit manifest/runner first."
+  },
+  "audit_integrity": {
+    "gpu_used": false,
+    "model_loaded": false,
+    "training_run": false,
+    "official_test_read": false,
+    "baseline_results_or_predictions_read": false,
+    "baseline_modified": false,
+    "calibration_boundary_incident": "A preliminary shell boundary check outside final recomputation read raw line 34,920 and inspected only its partition field (calibration). No label/content value was examined, retained or used. Final recomputation used fit.jsonl and the label-blind fit microclaim file."
+  }
+}

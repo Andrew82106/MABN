@@ -1,0 +1,45 @@
+{
+  "scope": "Already-exposed calibration only; fixed previously-selected models and thresholds",
+  "seed": 20261009,
+  "replicates": 5000,
+  "groups": 154,
+  "answers": 159,
+  "windows": 42241,
+  "group_key": "Original group_id, sorted lexicographically; all answers/windows in a sampled group move together",
+  "sampling": "numpy default_rng(20261009), PCG64; integers(0,154,size=(5000,154)); same draws for all methods and units",
+  "statistic": "Pooled micro F1 = 2TP/(2TP+FP+FN); counts summed within groups then resampled",
+  "interval": "Paired F1 difference, 2.5th/97.5th percentile with NumPy linear interpolation",
+  "zero_denominator_f1": 0,
+  "methods": [
+    "harp_tail_fixed",
+    "harp_claim",
+    "tail2",
+    "semantic_tail_fixed",
+    "harp_tree"
+  ],
+  "contrasts": [
+    [
+      "harp_tail_fixed_minus_harp_claim",
+      "harp_tail_fixed",
+      "harp_claim"
+    ],
+    [
+      "harp_tail_fixed_minus_tail2",
+      "harp_tail_fixed",
+      "tail2"
+    ],
+    [
+      "harp_tail_fixed_minus_semantic_tail_fixed",
+      "harp_tail_fixed",
+      "semantic_tail_fixed"
+    ],
+    [
+      "harp_tree_minus_harp_tail_fixed",
+      "harp_tree",
+      "harp_tail_fixed"
+    ]
+  ],
+  "thresholds_or_models_reselected": false,
+  "test_opened": false,
+  "limitation": "Conditional uncertainty on repeatedly-used development calibration; does not account for threshold, model, epoch, alpha or other selection bias. Not an independent test interval."
+}

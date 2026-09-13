@@ -1,0 +1,144 @@
+{
+  "status": "passed_with_provenance_limitations",
+  "numerical_blockers": [],
+  "new_training_or_GPU": false,
+  "original_heldout_or_QA_test_read_by_auditor": false,
+  "cohort": {
+    "answers": 602,
+    "questions": 301,
+    "event_groups": 278,
+    "candidate_windows": 12222,
+    "main_windows": 9526,
+    "risk_windows": 1063,
+    "main_answers": 598,
+    "risk_answers": 151,
+    "safe_refusal_answers": 117
+  },
+  "all_folds_old_group_membership_exact_disjoint": true,
+  "calibration_candidates_exact": 90,
+  "calibration_threshold_dictionaries_exact": 180,
+  "selected_alphas_exact": 15,
+  "selected_frozen_scores_exact": true,
+  "independent_odds_product_formula_max_abs": 6.106226635438361e-16,
+  "identity_candidates_and_old_thresholds_exact": 15,
+  "old14_full_fold_scores_exact": 855540,
+  "old14_entire_method_summary_dicts_exact": true,
+  "all17_OOF_scores_predictions_main_metrics_exact": true,
+  "safe_refusal_all_candidate_max_checks": 1989,
+  "choices": [
+    {
+      "fold": 0,
+      "method": "slots_base_smooth_global",
+      "alpha": 0.25
+    },
+    {
+      "fold": 0,
+      "method": "local_mean_fusion_global",
+      "alpha": 0.0
+    },
+    {
+      "fold": 0,
+      "method": "local_slots_fusion_smooth_global",
+      "alpha": 0.125
+    },
+    {
+      "fold": 1,
+      "method": "slots_base_smooth_global",
+      "alpha": 0.5
+    },
+    {
+      "fold": 1,
+      "method": "local_mean_fusion_global",
+      "alpha": 0.125
+    },
+    {
+      "fold": 1,
+      "method": "local_slots_fusion_smooth_global",
+      "alpha": 0.25
+    },
+    {
+      "fold": 2,
+      "method": "slots_base_smooth_global",
+      "alpha": 0.25
+    },
+    {
+      "fold": 2,
+      "method": "local_mean_fusion_global",
+      "alpha": 0.0
+    },
+    {
+      "fold": 2,
+      "method": "local_slots_fusion_smooth_global",
+      "alpha": 1.0
+    },
+    {
+      "fold": 3,
+      "method": "slots_base_smooth_global",
+      "alpha": 1.0
+    },
+    {
+      "fold": 3,
+      "method": "local_mean_fusion_global",
+      "alpha": 0.25
+    },
+    {
+      "fold": 3,
+      "method": "local_slots_fusion_smooth_global",
+      "alpha": 0.25
+    },
+    {
+      "fold": 4,
+      "method": "slots_base_smooth_global",
+      "alpha": 0.5
+    },
+    {
+      "fold": 4,
+      "method": "local_mean_fusion_global",
+      "alpha": 0.0
+    },
+    {
+      "fold": 4,
+      "method": "local_slots_fusion_smooth_global",
+      "alpha": 2.0
+    }
+  ],
+  "new_metrics": {
+    "slots_base_smooth_global": {
+      "window_f1": 0.6988610478359909,
+      "answer_f1": 0.7625418060200669
+    },
+    "local_mean_fusion_global": {
+      "window_f1": 0.680207841284837,
+      "answer_f1": 0.7588652482269503
+    },
+    "local_slots_fusion_smooth_global": {
+      "window_f1": 0.7090144792153199,
+      "answer_f1": 0.8
+    }
+  },
+  "freeze_provenance": {
+    "all5fold10files_bound_by_freeze": true,
+    "test_started_binds_exact_freeze_sha": true,
+    "entrypoint_requires_all_fold_freeze_before_scoring": true,
+    "UTC_timestamps_recorded": false,
+    "file_mtime_order_observed": true
+  },
+  "limits": [
+    "R26 prepare calls inherited train_metadata, which parses the mixed-split input JSONL before filtering train. Only actual-train generations, labels and feature rows enter scoring; cannot claim original heldout input text was never parsed.",
+    "No UTC execution timestamps in R26 freeze/test records; hash chain, entrypoint control flow and observed filesystem times support ordering, not independent historical proof.",
+    "Repeatedly inspected assistant-labeled R16 development folds; no fresh final test or human-QA evidence.",
+    "Only main confusion metrics recomputed independently; new bootstrap and auxiliary ranking/highlight measures were not independently rerun."
+  ],
+  "seconds": 1.7178182000061497,
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\audit26.py": "b5c084a15380f5180d61c5f2bd8ee0ed04f6ae6839716cfe2dc823ff1fb4a2b9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\src\\run26.py": "69ace0fafa9fcd699d38a234c8429d0ad6dd32e838eb0b0558b14eb59e904be9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\protocol.json": "0876d30a4ebc8eda43bdb592b6196d025d25d43b1833e634a9643edf84fc07d2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\started.json": "b61e4557548f32200681e2f0803f7bf5a8a8ab18e72fdeda1e5386c2d43e2bdd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\calibration_freeze.json": "4fa5dd622586ee8130a055fc81d23b468d8eb779d425d37d967a5955bd5fe8f0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\test_started.json": "3abf54851bca83576b374e64d402e4f5fe557a3e654089c13df98bcdbe54f6f1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\complete.json": "48fff74f89b20e5537601dd6346fab3400b52a996d1d1002e0b1e66cbfaba982",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round26_global_local_fusion\\results\\summary.json": "5e4935ed81360266b16e4ca0046ffe441a31e6952962fe6030c1f17125663fbd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\complete.json": "b2cbe7886fa37dd12d85c758f9d6431e5f62fadcefb95e2fab8a401c020df6ab"
+  }
+}

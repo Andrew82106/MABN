@@ -1,0 +1,109 @@
+{
+  "version": "redeep-formal-input-audit-v1",
+  "core_version": "redeep-formal-core-v1",
+  "labels_used_to_build_feature_inputs": false,
+  "allowed_partitions": [
+    "fit",
+    "calibration"
+  ],
+  "test_artifacts_accessed_by_preparation_stage": false,
+  "historical_official_test_status": "retired_after_prior_documented_access_incident",
+  "partitions": {
+    "fit": {
+      "answers": 3680,
+      "groups": 615,
+      "eligible_windows": 653979,
+      "excluded_windows": 692,
+      "all_candidate_windows": 654671,
+      "source_answer_token_exact_join": true,
+      "official_splits": {
+        "train": 3680
+      },
+      "input_sha256": {
+        "source": "798653054e03343966d426a43764a7320a2b5b16108d27110e6335edb435bef5",
+        "answers": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+        "tokens": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+        "windows": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+        "excluded_windows": "88de2b92aadcaf499c4e83d4e10cee4563cdb7bafadefc12eac60069053b2b3f"
+      }
+    },
+    "calibration": {
+      "answers": 159,
+      "groups": 154,
+      "eligible_windows": 42241,
+      "excluded_windows": 80,
+      "all_candidate_windows": 42321,
+      "source_answer_token_exact_join": true,
+      "official_splits": {
+        "train": 159
+      },
+      "input_sha256": {
+        "source": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+        "answers": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+        "tokens": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+        "windows": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510",
+        "excluded_windows": "f1a902f0fb2f4d233fcdf6c5f07f83dcc980a226e8ed2ca30d484858891417ba"
+      }
+    }
+  },
+  "fit_cal_group_overlap": 0,
+  "label_free_evaluation_geometry": {
+    "path": "research\\redeep_formal_baseline_v1\\evaluation_geometry.jsonl",
+    "sha256": "b87c570dd0536d61bd0d720fc7b46906a046f1f523dd83365fc71d4862a06b07",
+    "rows": 696220,
+    "allowed_fields": [
+      "version",
+      "partition",
+      "response_id",
+      "answer_id",
+      "group_id",
+      "window_id",
+      "character_intervals",
+      "labels_present"
+    ],
+    "gold_or_risk_fields_present": false
+  },
+  "feature_inputs": {
+    "path": "research\\redeep_formal_baseline_v1\\feature_inputs.jsonl",
+    "sha256": "cd44ebf504d86088ba7b039a1d7263994780ded9ea7a22ba95636e25c4862cb8",
+    "rows": 3839,
+    "full_tokens": {
+      "sum": 2487708,
+      "min": 284,
+      "p50": 635,
+      "p95": 931,
+      "max": 1252
+    },
+    "prefix_tokens": {
+      "min": 239,
+      "max": 817
+    },
+    "native_response_tokens": {
+      "sum": 710970,
+      "min": 2,
+      "max": 533
+    },
+    "paper_reference_tokens": {
+      "min": 139,
+      "max": 721
+    },
+    "prefix_is_exact_full_token_prefix": false,
+    "prefix_identity_failure_count": 1,
+    "prefix_identity_failure_response_ids": [
+      "17592"
+    ],
+    "native_unscored_prefix_character_rows": {
+      "17592": 1
+    },
+    "prompt_response_boundary_crossing_tokens": 0,
+    "double_bos_all_rows": true
+  },
+  "tokenizer": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Llama-2-7b-chat-hf",
+    "class": "LlamaTokenizerFast",
+    "is_fast": true,
+    "bos_token_id": 1,
+    "tokenizer_json_sha256": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+    "tokenizer_model_sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "citation-heading-source-semantic-v1",
+  "answers": 793,
+  "original_claims": 8852,
+  "inherited_claims": 387,
+  "scored_answers": 37,
+  "source_claim_pairs": 1161,
+  "selection": "Exact frozen citation_heading_scope_v1/inherited_claims.json; do not rerun/extend parser or source attribution. These body claims had old parser status none and were NOT in earlier6252 source-specific pairs.",
+  "claim": "Unmodified original claim text, including bullet/numbering; do not prepend inherited heading or rewrite references.",
+  "source": "Original three separate source header/body strings, same split_full_sources as previous6252 experiment; retain all text/whitespace, no chunking/reordering/truncation.",
+  "input": "source_text + tokenizer.eos_token + original_claim, standard special tokens, <=512. Pair source order1/2/3; per answer original claim order.",
+  "arithmetic": "Reuse pinned local MiniCheck RoBERTa-large, FP32 CUDA eager/eval, TF32 off, no autocast, batch4 with original dynamic padding; official softmax(logits)[1]. Save both logits and every source support, do not replace source axis by old mixed chunks.",
+  "columns": [
+    "inherited_any_source_support_mean",
+    "inherited_source_support_gap_mean"
+  ],
+  "claim_values": "For inherited source j: [max(s1,s2,s3),max(s1,s2,s3)-s_j]. For all noninherited claims [0,0]. Source ID only selects a support value, is not a numeric feature.",
+  "window_values": "Original frozen lexical token->claim map, mean over original lexical tokens per original4rawBPE window. All210364 windows retained; punctuation geometry unchanged.",
+  "oracle": "Before new GPU pairs, repeat original16023 anchor in its original mixed-doc batch geometry. Same predeclared maxabs logits2e-4/support2e-5; do not relax. CPU preparation only checks synthetic math, input IDs/lengths/hashes and frozen coordinate identities.",
+  "execution": "CPU prepare/check only until root separately authorizes infer/all. No GPU polling/automatic start, no training.",
+  "limits": [
+    "This adds semantic checking for previously unscored inherited body claims; prior6252 cache did not contain them.",
+    "Cannot resolve step numbering, time/order, detached trailing references or arbitrary narrative scope.",
+    "Extra semantic model plus original generation signals, not a pure native white-box probe.",
+    "Repeated original fit/cal development; no official test; no labels used for pair selection or feature construction."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "current-frozen-candidate-on-native-lookback8-v2",
+  "candidate": "semantic_claim__old_tree__large_weight0.4",
+  "posthoc_adaptation": "Rule fixed after the frozen v1 coverage gate failed:80 original nonlexical4-windows were undefined, affecting384 native8 spans. This introduces post-hoc adaptation risk; not a new independent test.",
+  "mapping": "For each complete8rawBPE span, take max of all originally defined complete4BPE subwindows wholly inside it. Use five normally or the original three/four when nonlexical4 subwindows are undefined. Never impute scores or drop8 spans.",
+  "geometry": "All41685 calibration8 spans across159 answers, stride1; original response/token/character axis and gold risk OR unchanged. Every8 span must have at least one defined subwindow.",
+  "primary": "AUROC and average precision on all41685 native8 spans. F1 only at the frozen original4-window threshold0.657469850500832; it is an adapted8-span F1, not native4-window F1.",
+  "sensitivity": "Also report the41301 spans with all five subwindows using the same scores and threshold, only as a predeclared diagnostic; do not select between full and subset results.",
+  "limits": "The detector and its mixture were already selected on this calibration cohort. Shared8-span scale does not equalize training/inputs/compute. This adaptation belongs to our detector; Lookback scores and protocol remain unchanged.",
+  "new_fits": 0,
+  "threshold_selection": false,
+  "GPU_used": false,
+  "baseline_files_written": false,
+  "official_test_opened": false
+}

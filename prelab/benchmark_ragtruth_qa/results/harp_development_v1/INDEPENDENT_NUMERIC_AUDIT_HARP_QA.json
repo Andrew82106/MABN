@@ -1,0 +1,221 @@
+{
+  "status": "passed",
+  "utc": "2026-09-11T16:11:09.997703+00:00",
+  "reviewer": "/root/data_build/extract_review",
+  "no_new_fit": true,
+  "no_gpu": true,
+  "official_test_or_withheld_read": false,
+  "method": "Inert sklearn pickle state; independent weight and weighted-moment formulas, float32 standardization and coefficient/sigmoid replay. Fixed HARP eigenpair/forward audit without eigendecomposition.",
+  "limits": [
+    "Stored-coefficient replay does not rerun optimization or independently certify unrecorded external execution history.",
+    "Direction basis is fixed-head-derived, not fitted from training examples. Fit-only checks apply to weights/scalers/LR; HARP is projection-only adaptation.",
+    "Results remain calibration-selected development outcomes, not fresh official-test performance."
+  ],
+  "weights": {
+    "fit_windows": 168123,
+    "fit_answers": 634,
+    "fit_groups": 615,
+    "fit_label_counts": [
+      146646,
+      21477
+    ],
+    "base_max_abs": 8.881784197001252e-16,
+    "class_factors_max_abs": 7.771561172376096e-13,
+    "loss_max_abs": 1.9984014443252818e-12,
+    "base_group_mass_max_abs": 1.7053025658242404e-13,
+    "base_answer_mass_max_abs": 1.7053025658242404e-13,
+    "loss_group_mass_max_abs": 2.2737367544323206e-13,
+    "loss_total_mass": 168123.0,
+    "expected_loss_mass": 168123,
+    "formula": "b_i=(N/G)/(answers_in_group*eligible_windows_in_answer); f_y=sum(b)/(2*sum_class_y(b)); u=b*f_y; loss_i=(N/G)*u_i/sum_group(u)."
+  },
+  "fit_keys_exact_prior_reuse": true,
+  "families": {
+    "harp256": {
+      "width": 256,
+      "scaler_mean_max_abs": 2.220446049250313e-16,
+      "scaler_var_max_abs": 1.7763568394002505e-15,
+      "scaler_var_max_relative": 3.359320436138847e-16,
+      "scaler_scale_max_abs": 4.440892098500626e-16,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "fit_standardized_rows_exact": true,
+      "same_scaler_all_C": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            6
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            6
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    },
+    "harp64_lookback_nll": {
+      "width": 1089,
+      "scaler_mean_max_abs": 2.220446049250313e-16,
+      "scaler_var_max_abs": 1.7763568394002505e-15,
+      "scaler_var_max_relative": 6.827583377199136e-16,
+      "scaler_scale_max_abs": 4.440892098500626e-16,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "fit_standardized_rows_exact": true,
+      "same_scaler_all_C": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            7
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            8
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    },
+    "harp256_lookback_nll": {
+      "width": 1281,
+      "scaler_mean_max_abs": 2.220446049250313e-16,
+      "scaler_var_max_abs": 1.7763568394002505e-15,
+      "scaler_var_max_relative": 6.827583377199136e-16,
+      "scaler_scale_max_abs": 4.440892098500626e-16,
+      "scaler_sample_weight_count": 168123.0143469572,
+      "scaler_count_max_abs": 0.0,
+      "fit_standardized_rows_exact": true,
+      "same_scaler_all_C": true,
+      "candidates": [
+        {
+          "C": 0.001,
+          "iterations": [
+            6
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.01,
+          "iterations": [
+            7
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        },
+        {
+          "C": 0.1,
+          "iterations": [
+            8
+          ],
+          "window_scores_replayed": 210364,
+          "window_max_abs": 2.220446049250313e-16,
+          "answer_scores_replayed": 793,
+          "answer_max_abs": 2.220446049250313e-16
+        }
+      ]
+    }
+  },
+  "directions": {
+    "direction_data_scope": "No fit/calibration data or labels: fixed runtime-BF16 output head W only.",
+    "definition": "Ascending smallest right singular directions of W; stored C shape256x4096, h@C.T without centering/L2 normalization. First64 rows are bottom64.",
+    "ascending_eigenvalues": true,
+    "canonical_signs_positive": true,
+    "orthogonality_max_abs": 8.881784197001252e-16,
+    "fixed_eigenpair_residual_relative_to_gram_frobenius": 9.515769310273378e-17,
+    "head_energy_trace_max_abs": 0.0,
+    "bottom256_eigenvalue_range": [
+      0.564600917306554,
+      3.3648004369548996
+    ],
+    "bottom64_eigenvalue_range": [
+      0.564600917306554,
+      2.2733188437576866
+    ],
+    "selected_energy_fraction": 0.018105758683187697,
+    "head_shard_sha256": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d",
+    "basis_sha256": "cc69e4d72b52e0a5e91e036feee847867ce492c80eb894ae9e373207e116c5f6",
+    "new_direction_or_svd_fit": false,
+    "selection_evidence": "Extractor source calls eigh with subset_by_index=[0,255] and keeps ascending vectors; audit checks frozen eigenpairs and order without recomputing eigendecomposition."
+  },
+  "feature_replay": {
+    "answers": 793,
+    "raw_tokens": 213159,
+    "eligible_windows": 210364,
+    "all_token_features_exact": true,
+    "all_token_projection_max_abs": 0.0,
+    "all_window_means_exact": true,
+    "all_window_mean_max_abs": 0.0,
+    "source_partition_ids_offsets_positions_and_basis_bound": true
+  },
+  "totals": {
+    "LR_candidates": 9,
+    "window_scores_replayed": 1893276,
+    "answer_scores_replayed": 7137,
+    "new_models_fitted": 0
+  },
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\harp_development_v1\\audit_numeric_harp_qa.py": "bdb3c72d666cb949a5935f261a1441b4d97001dfa20e200b96546a9ac263137f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\audit_coefficients_qa.py": "a7a25ec0c346ad32621769762ff97b7f81c7caa6d959658a88508fb4ab5c1dae",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_harp_development.py": "6fb13a604d078b2308ea7e9100e3b44d37faf74be80185593cce3f612da62e7d",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\harp_development_protocol.json": "ed3e81546f7b7fc01469c3877165148ef1cb8ffbaf87535c247ee34806f686fc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\extract_harp.py": "9619cbae61cd6ecd24bca9b80fefb584d3fb772ecd61758547214904437484f3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_signature.json": "86749e3d48fedb1aa5ec47ec388bcc8543d9a882b329037e3cbcb47bb69414cb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_manifest.json": "fbc7e5e7f74fd8ae7be318d512b5dce298f9b500a3ab83668a1004f38ae371d8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_basis.npz": "cc69e4d72b52e0a5e91e036feee847867ce492c80eb894ae9e373207e116c5f6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\harp_development_v1\\complete.json": "cbbdeff57e35d69359bdd421e44a560a6c2d3ff1ab86e4ed07dc58c531109a60",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\complete.json": "c4c0efc2a806775c50e406575677f88962db3ed10a2c98604ec04d029be44c9a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\training_weights.npz": "dd34550c42a6cee00ea6bc611ba33a2a18fd27a479fdb1d082f1715d4c72710f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\fit_keys.json": "2b8bb3ec5b702f330e94e6dfce9baa1d8109cf3beb528b94cdb68178af1bb814"
+  },
+  "independent_calibration_audit": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\harp_development_v1\\CALIBRATION_AUDIT_HARP_QA.json",
+    "sha256": "a53b861410e132d9effacefec13bf7a34fd84afa69fca61adb1a6518084d8b41",
+    "status": "passed"
+  }
+}

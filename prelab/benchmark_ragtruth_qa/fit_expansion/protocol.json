@@ -1,0 +1,47 @@
+{
+  "version": "ragtruth-qa-same-source-fit-expansion-v1",
+  "scope": "Current 634 eligible fit sources, 615 fixed groups; no new calibration/test rows or split changes",
+  "eligible": "All quality=good released answers from the other five generators; all official labels and flags retained",
+  "deduplication": "Same source_id and exact response text; full label JSON must agree; prefer original fit ID, else smallest numeric response ID; record all generators/IDs as provenance. Conflicts quarantined, never adjudicated automatically",
+  "original_fit": "Retain all 634 original rows and gold exactly; append only unique additional answers",
+  "generator_identity": "Metadata only; never an input to tokenization decisions or a probe feature",
+  "llama_layout": {
+    "tokenizer": "Existing local Llama-2-7b-chat-hf fast tokenizer, assets hashed",
+    "input": "<s>[INST] {released_prompt} [/INST] {original_response}",
+    "encoding": "Whole exact prompt+answer string, add_special_tokens=false, no added EOS, no truncation or padding",
+    "coordinates": "Original raw BPE offsets intersected with response; retain boundary-crossing tokens, punctuation and duplicate byte-fallback offsets",
+    "inference": "No Llama forward. These are a common tokenizer's coordinates, not other generators' historical native token trajectories"
+  },
+  "gold": {
+    "answer_risk": "Any original human risk span",
+    "token_risk": "Any original alphanumeric character overlaps any human risk span; functional words remain eligible",
+    "windows": "4 consecutive raw BPE, stride 1; short answer gets one short window; no trailing short windows; punctuation counts width",
+    "window_risk": "OR of risk on included lexical tokens; punctuation-only window excluded with null label",
+    "refusal": "All human quality-good answers retained; absence of labels gives negative lexical windows; do not classify refusals by strings",
+    "alignment_failure": "Stop on missing original nonwhitespace coverage or official text-offset mismatch; never silently trim or repair labels"
+  },
+  "minicheck": {
+    "checkpoint": "lytang/MiniCheck-RoBERTa-Large",
+    "revision": "74c8919647e61ed0f71bc177d94f10930f090068",
+    "reuse": "Read-only original 634 fit cache entries, verified per-file hashes; calibration cache untouched",
+    "new_inference": "Only deduplicated appended fit answers, when root explicitly releases GPU",
+    "device": "cuda:0",
+    "dtype": "float32",
+    "batch_size": 4,
+    "cpu_threads": 4,
+    "TF32": false,
+    "autocast": false,
+    "input": "Only original retrieved_passages as document; doc chunk + eos_token + claim; no question/label/model identity as evidence",
+    "claims": "Reuse frozen NLTK English Punkt per-line splitting, list marker attachment, at most 96 RoBERTa BPE per character-preserving piece; retain every piece",
+    "documents": "Reuse frozen contiguous sentence packing up to 400 actual RoBERTa BPE; deterministic complete-coverage splitting for long sentences",
+    "support": "softmax(class1) per claim/document; max support across documents, first on ties; risk=1-support",
+    "hidden": "Save claim-side last-layer 1024-dimensional states from the maximum-support document, with absolute original-response character offsets",
+    "encoder22_cache": "Also save selected-document full valid input after encoder.layer[21] (22nd layer), float32, including document/special/claim tokens. Flatten per answer; hidden22[sum_len,1024], input_ids, attention_mask, sequence_offsets[nclaim+1], claim_index/document_index[nclaim], answer_token_start/end[sum_len] with non-answer=-1, per-sequence original batch padding lengths. Same support-based selection, no gold. Old 634 cache is not backfilled in this stage",
+    "encoder22_numeric_check": "Read-only additional layer hook must preserve logits, support and last-layer claim states exactly relative to original hook-only implementation",
+    "coverage": "All nonwhitespace original response/document characters covered, pair length <=512, truncation=false",
+    "numeric_oracle": "Before new inference, replay first two original fit IDs in original fit order, no labels used; same forward hook must leave logits exactly equal; compare old CUDA logits<=2e-4, support<=2e-5; full coordinate and selected-document identities must agree",
+    "interpretation": "Extra frozen semantic checker, bidirectional whole claim visible; not original generator's causal state"
+  },
+  "training": "Not authorized in this stage; no fitting, threshold selection, predictor scores or calibration metrics",
+  "test_opened": false
+}

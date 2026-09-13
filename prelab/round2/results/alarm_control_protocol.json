@@ -1,0 +1,18 @@
+{
+  "alpha": [
+    0,
+    0.5
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 300,
+  "features": "7B attention ratios",
+  "local_loss": "balanced positive/negative token BCE",
+  "extra_loss": "BCE of maximum risk in wholly clean training answers",
+  "selection": "validation answer recall at <=5% clean-answer false alarm, tie global token AUROC",
+  "status": "exploratory extension after original test results; fresh source-disjoint confirmation reserved",
+  "novelty_claim": false
+}

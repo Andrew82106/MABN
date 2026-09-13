@@ -1,0 +1,65 @@
+{
+  "version": "r23-local-verification-probes-v1",
+  "scope": "Exploratory R16 actual-train fixed 5 event folds, no original heldout",
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta",
+    "lookback_tuned",
+    "redeep_tuned",
+    "verifier_learned_broadcast",
+    "verifier_learned_slots",
+    "slots_base_smooth",
+    "local_direct",
+    "local_probe",
+    "local_mean_fusion",
+    "local_slots_fusion",
+    "local_slots_fusion_smooth"
+  ],
+  "primary_method": "local_slots_fusion",
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260923,
+  "loss_mass": 3854,
+  "pca": {
+    "components": 64,
+    "n_iter": 3,
+    "whiten": false,
+    "seed": "20260923+fold",
+    "fit_only": "all eligible fit windows, event/condition/answer/window base weighting"
+  },
+  "features": {
+    "local_direct": "A/B restricted softmax B (untrained verdict baseline)",
+    "local_probe": "fit-only PCA64 focused final hidden + (B-A) logit + full-vocabulary A+B mass",
+    "local_mean_fusion": "66 focused features + original mean LB784/NLL1",
+    "local_slots_fusion": "66 focused features + original ordered slots3144"
+  },
+  "lr": "Same R20 class/event weights and fit-only weighted scaler, liblinear L2 max_iter2000",
+  "C_selection": "calibration maximize min(window F1,answer F1), then window F1, precision, lower C",
+  "threshold": "separate calibration F1/precision/higher threshold; all-window-max answer score; gold unchanged",
+  "additional_smoother": "After raw local_slots_fusion C frozen, apply same R24 stay/temperature/cal selection budget; exact identity candidate included",
+  "stay": [
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "temperature": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "new_lr_fits": 45,
+  "new_pca_fits": 5,
+  "extra_offline_focused_check": true,
+  "original_answer_modified": false,
+  "original_generation_confidence": false,
+  "four_raw_bpe_window_definition_unchanged": true,
+  "all_fold_choices_frozen_before_outer": true,
+  "original_validation_or_test_used": false,
+  "human_gold": false
+}

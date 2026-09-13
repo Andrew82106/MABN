@@ -1,0 +1,487 @@
+{
+  "status": "passed",
+  "reviewer": "/root/data_build/extract_review",
+  "started_at_utc": "2026-09-11T15:20:30.319039+00:00",
+  "scope": "Frozen R22 actual-train602 numerical coefficient audit only",
+  "source_sha256": {
+    "protocol22.json": "25fe8bee0f934e11b296bae140e4e13a963987fd5ef10f43ea65c73f3c6862c4",
+    "src\\run22.py": "b6320ea36ea511924136a75d0e62fbab2efacb91a54237adda5d1cb66ee7eeab",
+    "results\\answer_index22.jsonl": "944ca65dcb20a976210b1387d706812f4bbbb1cbce2108936b7da85d4ad85429",
+    "results\\verifier_designs22.npz": "91a046a6f82b92e4c45addc0f685844f29fa72596bd63a257c0fd6290721d589",
+    "results\\fold_0_frozen22.pkl": "8f8ff9c2e5f53f104a5488eb0ea4f88b59594f6f139e39c06c257cc04ac55638",
+    "results\\fold_0_scores22.npz": "f6cf714df707e56495f44bb8ff4fe143352c219ce38d179c275f1b723a1ea80e",
+    "results\\fold_1_frozen22.pkl": "f8962b1bfc50571575c61970f0aef1557669d56b9775acb84588fcc1626c4a80",
+    "results\\fold_1_scores22.npz": "44f30a2409307ef03a316e85fb5cd1309f60f642702016b0a44b12e12c8614e6",
+    "results\\fold_2_frozen22.pkl": "1ebc3a3bcc2bf43dde5dcac0a257d364bc15cb1d60acf2469ebe619116771c1c",
+    "results\\fold_2_scores22.npz": "880dd5d94eadfa733f4f949f67ef0804f02593ce2ac1cb3ae2ec0ba981b581d4",
+    "results\\fold_3_frozen22.pkl": "d4ae3792708cde4e6d14f0ab0b5698661dcc92b8f46d7bf7453cb3400b7a1d91",
+    "results\\fold_3_scores22.npz": "acfac43de8cf28faeb6ec8a5d9dc8d553e7b327e2fd88a1232eb1b6094cd4ffd",
+    "results\\fold_4_frozen22.pkl": "4b8fc693976d716860a806f60eb55eedd6ba48a4254965d9705f11f3bf95dac1",
+    "results\\fold_4_scores22.npz": "99a24a42af373067ed9a1661eb750b1e0a037990fd84b0a0ff48c28bdc76436e"
+  },
+  "no_fit_or_retuning": true,
+  "no_model_gpu_loaded": true,
+  "no_original_r16_validation_test_opened": true,
+  "base_weight_formula": "b_i=(N/G)/(K_g*n_gc)",
+  "class_factor_formula": "f_y=sum(b)/(2*sum(b[fit_y==y]))",
+  "loss_weight_formula": "u_i=b_i*f_y; w_i=(3854/G)*u_i/sum(u_j for j in group_i)",
+  "answer_count": 602,
+  "original_r16_split_train_count": 602,
+  "question_count": 301,
+  "group_count": 278,
+  "eligible_answer_count": 598,
+  "excluded_fit_answer_count": 4,
+  "pca_checked": 5,
+  "lr_checked": 15,
+  "replayed_probability_count": 9030,
+  "every_eligible_answer_fit_appearances": 3,
+  "every_ineligible_answer_fit_appearances": 0,
+  "max_probability_abs_error": 2.220446049250313e-16,
+  "max_pca_fit_mean_abs_error": 8.526512829121202e-14,
+  "max_scaler_mean_abs_error": 1.6908098535372408e-15,
+  "max_scaler_var_relative_error": 1.796359100261269e-15,
+  "folds": [
+    {
+      "fold": 0,
+      "fit_answers": 354,
+      "fit_groups": 166,
+      "fit_class_counts": {
+        "0": 269,
+        "1": 85
+      },
+      "calibration_groups": 56,
+      "outer_groups": 56,
+      "fit_indices_keys_and_groups_exact": true,
+      "base_group_equal_mass_error": 0.0,
+      "base_condition_equal_mass_error": 0.0,
+      "base_within_group_condition_answer_weight_spread": 0.0,
+      "pca_base_weights_max_abs_error": 0.0,
+      "pca_weights_max_abs_error": 0.0,
+      "pca_fit_only_mean_max_abs_error": 8.526512829121202e-14,
+      "pca_orthogonality_max_abs_error": 2.4424906541753444e-15,
+      "pca_explained_variance_ratio_abs_error": 2.220446049250313e-16,
+      "projected_all_602_rows_bitwise_exact": true,
+      "all_602_design_rows_bitwise_exact": true,
+      "lr_candidates": [
+        {
+          "C": 0.001,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 4.440892098500626e-16,
+          "loss_weights_max_abs_error": 3.552713678800501e-15,
+          "loss_mass": 3853.9999999999995,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.0000151991844,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 9.634477360830002e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.4152152156763193e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            4
+          ]
+        },
+        {
+          "C": 0.01,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 4.440892098500626e-16,
+          "loss_weights_max_abs_error": 3.552713678800501e-15,
+          "loss_mass": 3853.9999999999995,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.0000151991844,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 9.634477360830002e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.4152152156763193e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            6
+          ]
+        },
+        {
+          "C": 0.1,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 5.551115123125783e-17,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 4.440892098500626e-16,
+          "loss_weights_max_abs_error": 3.552713678800501e-15,
+          "loss_mass": 3853.9999999999995,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.0000151991844,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 9.634477360830002e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.4152152156763193e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "fit_answers": 353,
+      "fit_groups": 166,
+      "fit_class_counts": {
+        "0": 263,
+        "1": 90
+      },
+      "calibration_groups": 56,
+      "outer_groups": 56,
+      "fit_indices_keys_and_groups_exact": true,
+      "base_group_equal_mass_error": 0.0,
+      "base_condition_equal_mass_error": 0.0,
+      "base_within_group_condition_answer_weight_spread": 0.0,
+      "pca_base_weights_max_abs_error": 4.440892098500626e-16,
+      "pca_weights_max_abs_error": 0.0,
+      "pca_fit_only_mean_max_abs_error": 7.815970093361102e-14,
+      "pca_orthogonality_max_abs_error": 3.3306690738754696e-15,
+      "pca_explained_variance_ratio_abs_error": 3.3306690738754696e-16,
+      "projected_all_602_rows_bitwise_exact": true,
+      "all_602_design_rows_bitwise_exact": true,
+      "lr_candidates": [
+        {
+          "C": 0.001,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 4.440892098500626e-16,
+          "class_factors_max_abs_error": 1.1102230246251565e-15,
+          "loss_weights_max_abs_error": 2.6645352591003757e-15,
+          "loss_mass": 3853.999999999999,
+          "loss_mass_abs_error": 9.094947017729282e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 353.00001096725464,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 1.6908098535372408e-15,
+          "scaler_var_max_abs_error": 3.637978807091713e-12,
+          "scaler_var_max_relative_error": 1.796359100261269e-15,
+          "scaler_scale_max_abs_error": 3.552713678800501e-14,
+          "n_iter": [
+            4
+          ]
+        },
+        {
+          "C": 0.01,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 4.440892098500626e-16,
+          "class_factors_max_abs_error": 1.1102230246251565e-15,
+          "loss_weights_max_abs_error": 2.6645352591003757e-15,
+          "loss_mass": 3853.999999999999,
+          "loss_mass_abs_error": 9.094947017729282e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 353.00001096725464,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 1.6908098535372408e-15,
+          "scaler_var_max_abs_error": 3.637978807091713e-12,
+          "scaler_var_max_relative_error": 1.796359100261269e-15,
+          "scaler_scale_max_abs_error": 3.552713678800501e-14,
+          "n_iter": [
+            5
+          ]
+        },
+        {
+          "C": 0.1,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 4.440892098500626e-16,
+          "class_factors_max_abs_error": 1.1102230246251565e-15,
+          "loss_weights_max_abs_error": 2.6645352591003757e-15,
+          "loss_mass": 3853.999999999999,
+          "loss_mass_abs_error": 9.094947017729282e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 353.00001096725464,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 1.6908098535372408e-15,
+          "scaler_var_max_abs_error": 3.637978807091713e-12,
+          "scaler_var_max_relative_error": 1.796359100261269e-15,
+          "scaler_scale_max_abs_error": 3.552713678800501e-14,
+          "n_iter": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "fit_answers": 375,
+      "fit_groups": 167,
+      "fit_class_counts": {
+        "0": 278,
+        "1": 97
+      },
+      "calibration_groups": 55,
+      "outer_groups": 56,
+      "fit_indices_keys_and_groups_exact": true,
+      "base_group_equal_mass_error": 0.0,
+      "base_condition_equal_mass_error": 2.220446049250313e-16,
+      "base_within_group_condition_answer_weight_spread": 0.0,
+      "pca_base_weights_max_abs_error": 5.551115123125783e-17,
+      "pca_weights_max_abs_error": 2.168404344971009e-19,
+      "pca_fit_only_mean_max_abs_error": 6.394884621840902e-14,
+      "pca_orthogonality_max_abs_error": 1.7763568394002505e-15,
+      "pca_explained_variance_ratio_abs_error": 5.551115123125783e-16,
+      "projected_all_602_rows_bitwise_exact": true,
+      "all_602_design_rows_bitwise_exact": true,
+      "lr_candidates": [
+        {
+          "C": 0.001,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 1.5543122344752192e-15,
+          "loss_weights_max_abs_error": 5.329070518200751e-15,
+          "loss_mass": 3854.0000000000005,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 374.99998795986176,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.410605241169262e-16,
+          "scaler_var_max_abs_error": 3.979039320256561e-13,
+          "scaler_var_max_relative_error": 1.3510239775117993e-15,
+          "scaler_scale_max_abs_error": 1.0658141036401503e-14,
+          "n_iter": [
+            4
+          ]
+        },
+        {
+          "C": 0.01,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 1.5543122344752192e-15,
+          "loss_weights_max_abs_error": 5.329070518200751e-15,
+          "loss_mass": 3854.0000000000005,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 374.99998795986176,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.410605241169262e-16,
+          "scaler_var_max_abs_error": 3.979039320256561e-13,
+          "scaler_var_max_relative_error": 1.3510239775117993e-15,
+          "scaler_scale_max_abs_error": 1.0658141036401503e-14,
+          "n_iter": [
+            6
+          ]
+        },
+        {
+          "C": 0.1,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 1.5543122344752192e-15,
+          "loss_weights_max_abs_error": 5.329070518200751e-15,
+          "loss_mass": 3854.0000000000005,
+          "loss_mass_abs_error": 4.547473508864641e-13,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 374.99998795986176,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.410605241169262e-16,
+          "scaler_var_max_abs_error": 3.979039320256561e-13,
+          "scaler_var_max_relative_error": 1.3510239775117993e-15,
+          "scaler_scale_max_abs_error": 1.0658141036401503e-14,
+          "n_iter": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "fit_answers": 357,
+      "fit_groups": 168,
+      "fit_class_counts": {
+        "0": 264,
+        "1": 93
+      },
+      "calibration_groups": 55,
+      "outer_groups": 55,
+      "fit_indices_keys_and_groups_exact": true,
+      "base_group_equal_mass_error": 0.0,
+      "base_condition_equal_mass_error": 0.0,
+      "base_within_group_condition_answer_weight_spread": 0.0,
+      "pca_base_weights_max_abs_error": 5.551115123125783e-17,
+      "pca_weights_max_abs_error": 5.421010862427522e-20,
+      "pca_fit_only_mean_max_abs_error": 8.526512829121202e-14,
+      "pca_orthogonality_max_abs_error": 3.552713678800501e-15,
+      "pca_explained_variance_ratio_abs_error": 3.3306690738754696e-16,
+      "projected_all_602_rows_bitwise_exact": true,
+      "all_602_design_rows_bitwise_exact": true,
+      "lr_candidates": [
+        {
+          "C": 0.001,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 8.881784197001252e-16,
+          "loss_weights_max_abs_error": 7.105427357601002e-15,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 357.0,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.1845052670206146e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.3375529361383364e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            4
+          ]
+        },
+        {
+          "C": 0.01,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 8.881784197001252e-16,
+          "loss_weights_max_abs_error": 7.105427357601002e-15,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 357.0,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.1845052670206146e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.3375529361383364e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            6
+          ]
+        },
+        {
+          "C": 0.1,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 1.1102230246251565e-16,
+          "base_weights_max_abs_error": 5.551115123125783e-17,
+          "class_factors_max_abs_error": 8.881784197001252e-16,
+          "loss_weights_max_abs_error": 7.105427357601002e-15,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 3.552713678800501e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 357.0,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 3.1845052670206146e-16,
+          "scaler_var_max_abs_error": 2.2737367544323206e-12,
+          "scaler_var_max_relative_error": 1.3375529361383364e-15,
+          "scaler_scale_max_abs_error": 2.1316282072803006e-14,
+          "n_iter": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "fit_answers": 355,
+      "fit_groups": 167,
+      "fit_class_counts": {
+        "0": 267,
+        "1": 88
+      },
+      "calibration_groups": 56,
+      "outer_groups": 55,
+      "fit_indices_keys_and_groups_exact": true,
+      "base_group_equal_mass_error": 4.440892098500626e-16,
+      "base_condition_equal_mass_error": 0.0,
+      "base_within_group_condition_answer_weight_spread": 0.0,
+      "pca_base_weights_max_abs_error": 0.0,
+      "pca_weights_max_abs_error": 0.0,
+      "pca_fit_only_mean_max_abs_error": 3.552713678800501e-14,
+      "pca_orthogonality_max_abs_error": 2.6645352591003757e-15,
+      "pca_explained_variance_ratio_abs_error": 4.440892098500626e-16,
+      "projected_all_602_rows_bitwise_exact": true,
+      "all_602_design_rows_bitwise_exact": true,
+      "lr_candidates": [
+        {
+          "C": 0.001,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 8.215650382226158e-15,
+          "loss_weights_max_abs_error": 2.4868995751603507e-14,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 7.105427357601002e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.9999823272228,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 4.4033636420280343e-16,
+          "scaler_var_max_abs_error": 1.3642420526593924e-12,
+          "scaler_var_max_relative_error": 1.3835929609959459e-15,
+          "scaler_scale_max_abs_error": 1.4210854715202004e-14,
+          "n_iter": [
+            4
+          ]
+        },
+        {
+          "C": 0.01,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 8.215650382226158e-15,
+          "loss_weights_max_abs_error": 2.4868995751603507e-14,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 7.105427357601002e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.9999823272228,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 4.4033636420280343e-16,
+          "scaler_var_max_abs_error": 1.3642420526593924e-12,
+          "scaler_var_max_relative_error": 1.3835929609959459e-15,
+          "scaler_scale_max_abs_error": 1.4210854715202004e-14,
+          "n_iter": [
+            5
+          ]
+        },
+        {
+          "C": 0.1,
+          "all_602_probabilities_replayed": true,
+          "max_probability_abs_error": 2.220446049250313e-16,
+          "base_weights_max_abs_error": 0.0,
+          "class_factors_max_abs_error": 8.215650382226158e-15,
+          "loss_weights_max_abs_error": 2.4868995751603507e-14,
+          "loss_mass": 3854.0,
+          "loss_mass_abs_error": 0.0,
+          "group_loss_equal_mass_max_abs_error": 7.105427357601002e-15,
+          "scaler_effective_weight_dtype": "float32 before float64 accumulation",
+          "scaler_fit_weight_mass": 354.9999823272228,
+          "scaler_n_samples_seen_abs_error": 0.0,
+          "scaler_mean_max_abs_error": 4.4033636420280343e-16,
+          "scaler_var_max_abs_error": 1.3642420526593924e-12,
+          "scaler_var_max_relative_error": 1.3835929609959459e-15,
+          "scaler_scale_max_abs_error": 1.4210854715202004e-14,
+          "n_iter": [
+            7
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No PCA/SVD or LR refit was performed; fitted PCA basis provenance is checked through frozen metadata, fit-only mean, code, orthogonality and exact forward projection.",
+    "Fold boundaries are cross-checked across five frozen artifacts; no external R18/R19 assignment or original R16 validation/test source was opened."
+  ],
+  "independent_weight_subreview": "/root/evaluation/event_links independently confirmed the same fit metadata and weight formulas without importing runner code.",
+  "completed_at_utc": "2026-09-11T15:20:31.445326+00:00",
+  "audit_script_sha256": "7859c2f043aae35297958a18c022b2496c4d0b7885b25101325bb978320f11b1"
+}

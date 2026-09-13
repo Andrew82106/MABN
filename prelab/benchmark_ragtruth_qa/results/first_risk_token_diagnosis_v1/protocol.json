@@ -1,0 +1,11 @@
+{
+  "scope": "Original634fit only; no calibration body, official test, new extraction or model fitting.",
+  "reference": "https://arxiv.org/html/2507.20836v4",
+  "publication_status": "Author preprint consulted; main-conference acceptance not established here.",
+  "question": "Is existing reconstructed pre-token NLL higher on the first lexical token of a human risk span than later lexical tokens?",
+  "token_groups": "Per unchanged human span, lexical indices overlapping risk characters. First is its minimum index. For global pooled groups B=unique first indices, I=other risk lexical indices excluding B, O=all non-risk lexical indices.",
+  "signal": "Existing frozen fixed-Llama NF4 NLL only. No entropy cache exists; do not call NLL entropy.",
+  "statistics": "Unsigned original direction higherNLL=higherRisk. Global B-vs-O and I-vs-O AUROC; descriptive sensitivity excluding absolute raw-token0 from both sides. Per original type and all types, paired first minus mean remaining NLL for spans with>=2 lexical tokens; retain single-token counts.",
+  "no_selection": "No C, threshold, epoch, feature selection or new training. Gold-conditioned subgroup AUC is not deployable full-window F1.",
+  "limits": "BPE/lexical first positions and QA-only scope differ from the paper. Span boundaries and vocabulary may explain effects; no causal claim. Original four-BPE evaluation and all labels remain unchanged."
+}

@@ -1,0 +1,1961 @@
+{
+  "status": "complete_cpu_only_atomic_relation_coverage_audit",
+  "schema_version": "ragtruth-qa-atomic-relation-v1",
+  "preparation": {
+    "answers": 793,
+    "incumbent_parent_claims": 8852,
+    "atomic_microclaims": 11329,
+    "added_microclaims": 2477
+  },
+  "atomic_geometry": {
+    "fit": {
+      "answers": 634,
+      "incumbent_parent_claims": 7097,
+      "atomic_microclaims": 9061,
+      "added_microclaims": 1964,
+      "split_parent_claims": 1619,
+      "split_parent_fraction": 0.2281245596731013,
+      "split_reason_counts": {
+        "contrast_clause": 253,
+        "coordinated_clause": 1493,
+        "relative_clause": 157,
+        "result_participle": 59,
+        "semicolon": 2
+      },
+      "mean_words": 12.198101754773203,
+      "p95_words": 25.0,
+      "max_words": 63,
+      "residual_self_rule_split_candidates": 0
+    },
+    "calibration": {
+      "answers": 159,
+      "incumbent_parent_claims": 1755,
+      "atomic_microclaims": 2268,
+      "added_microclaims": 513,
+      "split_parent_claims": 425,
+      "split_parent_fraction": 0.24216524216524216,
+      "split_reason_counts": {
+        "contrast_clause": 85,
+        "coordinated_clause": 370,
+        "relative_clause": 45,
+        "result_participle": 13
+      },
+      "mean_words": 12.159611992945326,
+      "p95_words": 25.0,
+      "max_words": 45,
+      "residual_self_rule_split_candidates": 0
+    }
+  },
+  "candidate_feature_prevalence_microclaims": {
+    "fit": {
+      "microclaims": 9061,
+      "has_negation": {
+        "count": 901,
+        "fraction": 0.09943714821763602
+      },
+      "has_comparator": {
+        "count": 764,
+        "fraction": 0.08431740426001545
+      },
+      "has_number_or_unit": {
+        "count": 1202,
+        "fraction": 0.13265643968656882
+      },
+      "has_temporal_order": {
+        "count": 858,
+        "fraction": 0.09469153515064563
+      },
+      "has_condition": {
+        "count": 541,
+        "fraction": 0.059706434168414084
+      },
+      "has_explicit_passage_id": {
+        "count": 1647,
+        "fraction": 0.1817680167751904
+      },
+      "has_parent_passage_context": {
+        "count": 2059,
+        "fraction": 0.22723761174263327
+      },
+      "has_local_subject": {
+        "count": 5876,
+        "fraction": 0.648493543758967
+      },
+      "has_effective_subject": {
+        "count": 6631,
+        "fraction": 0.731817680167752
+      },
+      "has_entity_candidate": {
+        "count": 4879,
+        "fraction": 0.5384615384615384
+      },
+      "has_any_core_relation": {
+        "count": 3442,
+        "fraction": 0.37986977154839424
+      },
+      "has_any_relation_or_source": {
+        "count": 4940,
+        "fraction": 0.5451936872309899
+      },
+      "explicit_passage_id_counts": {
+        "1": 567,
+        "2": 605,
+        "3": 548
+      },
+      "parent_passage_id_counts": {
+        "1": 713,
+        "2": 761,
+        "3": 720
+      },
+      "relation_signature_top20": [
+        {
+          "signature": "none",
+          "count": 4121,
+          "fraction": 0.45480631276901007
+        },
+        {
+          "signature": "explicit_passage_id+parent_passage_context",
+          "count": 1234,
+          "fraction": 0.1361880587131663
+        },
+        {
+          "signature": "negation",
+          "count": 645,
+          "fraction": 0.07118419600485598
+        },
+        {
+          "signature": "number_or_unit",
+          "count": 558,
+          "fraction": 0.061582606776294006
+        },
+        {
+          "signature": "temporal_order",
+          "count": 409,
+          "fraction": 0.04513850568369937
+        },
+        {
+          "signature": "comparator",
+          "count": 391,
+          "fraction": 0.043151969981238276
+        },
+        {
+          "signature": "condition",
+          "count": 282,
+          "fraction": 0.03112239267189052
+        },
+        {
+          "signature": "parent_passage_context",
+          "count": 264,
+          "fraction": 0.029135856969429424
+        },
+        {
+          "signature": "number_or_unit+temporal_order",
+          "count": 165,
+          "fraction": 0.01820991060589339
+        },
+        {
+          "signature": "number_or_unit+explicit_passage_id+parent_passage_context",
+          "count": 139,
+          "fraction": 0.015340470146782916
+        },
+        {
+          "signature": "comparator+number_or_unit",
+          "count": 106,
+          "fraction": 0.011698488025604237
+        },
+        {
+          "signature": "temporal_order+explicit_passage_id+parent_passage_context",
+          "count": 58,
+          "fraction": 0.00640105948570798
+        },
+        {
+          "signature": "comparator+explicit_passage_id+parent_passage_context",
+          "count": 51,
+          "fraction": 0.005628517823639775
+        },
+        {
+          "signature": "negation+condition",
+          "count": 49,
+          "fraction": 0.005407791634477431
+        },
+        {
+          "signature": "negation+comparator",
+          "count": 43,
+          "fraction": 0.0047456130669903986
+        },
+        {
+          "signature": "comparator+temporal_order",
+          "count": 40,
+          "fraction": 0.004414523783246882
+        },
+        {
+          "signature": "negation+parent_passage_context",
+          "count": 36,
+          "fraction": 0.003973071404922194
+        },
+        {
+          "signature": "number_or_unit+condition",
+          "count": 36,
+          "fraction": 0.003973071404922194
+        },
+        {
+          "signature": "negation+explicit_passage_id+parent_passage_context",
+          "count": 32,
+          "fraction": 0.0035316190265975056
+        },
+        {
+          "signature": "condition+explicit_passage_id+parent_passage_context",
+          "count": 32,
+          "fraction": 0.0035316190265975056
+        }
+      ]
+    },
+    "calibration": {
+      "microclaims": 2268,
+      "has_negation": {
+        "count": 244,
+        "fraction": 0.10758377425044091
+      },
+      "has_comparator": {
+        "count": 195,
+        "fraction": 0.08597883597883597
+      },
+      "has_number_or_unit": {
+        "count": 303,
+        "fraction": 0.1335978835978836
+      },
+      "has_temporal_order": {
+        "count": 199,
+        "fraction": 0.08774250440917107
+      },
+      "has_condition": {
+        "count": 117,
+        "fraction": 0.051587301587301584
+      },
+      "has_explicit_passage_id": {
+        "count": 444,
+        "fraction": 0.19576719576719576
+      },
+      "has_parent_passage_context": {
+        "count": 552,
+        "fraction": 0.24338624338624337
+      },
+      "has_local_subject": {
+        "count": 1515,
+        "fraction": 0.667989417989418
+      },
+      "has_effective_subject": {
+        "count": 1710,
+        "fraction": 0.753968253968254
+      },
+      "has_entity_candidate": {
+        "count": 1218,
+        "fraction": 0.5370370370370371
+      },
+      "has_any_core_relation": {
+        "count": 865,
+        "fraction": 0.38139329805996475
+      },
+      "has_any_relation_or_source": {
+        "count": 1257,
+        "fraction": 0.5542328042328042
+      },
+      "explicit_passage_id_counts": {
+        "1": 149,
+        "2": 169,
+        "3": 146
+      },
+      "parent_passage_id_counts": {
+        "1": 190,
+        "2": 204,
+        "3": 184
+      },
+      "relation_signature_top20": [
+        {
+          "signature": "none",
+          "count": 1011,
+          "fraction": 0.44576719576719576
+        },
+        {
+          "signature": "explicit_passage_id+parent_passage_context",
+          "count": 320,
+          "fraction": 0.14109347442680775
+        },
+        {
+          "signature": "negation",
+          "count": 168,
+          "fraction": 0.07407407407407407
+        },
+        {
+          "signature": "number_or_unit",
+          "count": 139,
+          "fraction": 0.06128747795414462
+        },
+        {
+          "signature": "comparator",
+          "count": 104,
+          "fraction": 0.04585537918871252
+        },
+        {
+          "signature": "temporal_order",
+          "count": 90,
+          "fraction": 0.03968253968253968
+        },
+        {
+          "signature": "parent_passage_context",
+          "count": 72,
+          "fraction": 0.031746031746031744
+        },
+        {
+          "signature": "condition",
+          "count": 66,
+          "fraction": 0.0291005291005291
+        },
+        {
+          "signature": "number_or_unit+temporal_order",
+          "count": 46,
+          "fraction": 0.020282186948853614
+        },
+        {
+          "signature": "number_or_unit+explicit_passage_id+parent_passage_context",
+          "count": 44,
+          "fraction": 0.019400352733686066
+        },
+        {
+          "signature": "comparator+number_or_unit",
+          "count": 24,
+          "fraction": 0.010582010582010581
+        },
+        {
+          "signature": "temporal_order+explicit_passage_id+parent_passage_context",
+          "count": 18,
+          "fraction": 0.007936507936507936
+        },
+        {
+          "signature": "negation+explicit_passage_id+parent_passage_context",
+          "count": 16,
+          "fraction": 0.007054673721340388
+        },
+        {
+          "signature": "comparator+explicit_passage_id+parent_passage_context",
+          "count": 14,
+          "fraction": 0.006172839506172839
+        },
+        {
+          "signature": "negation+condition",
+          "count": 12,
+          "fraction": 0.005291005291005291
+        },
+        {
+          "signature": "negation+comparator",
+          "count": 10,
+          "fraction": 0.004409171075837742
+        },
+        {
+          "signature": "comparator+parent_passage_context",
+          "count": 8,
+          "fraction": 0.003527336860670194
+        },
+        {
+          "signature": "negation+parent_passage_context",
+          "count": 8,
+          "fraction": 0.003527336860670194
+        },
+        {
+          "signature": "negation+temporal_order",
+          "count": 8,
+          "fraction": 0.003527336860670194
+        },
+        {
+          "signature": "number_or_unit+condition",
+          "count": 8,
+          "fraction": 0.003527336860670194
+        }
+      ]
+    }
+  },
+  "candidate_feature_prevalence_windows": {
+    "fit": {
+      "windows": 168123,
+      "assigned_to_at_least_one_microclaim": 168123,
+      "assignment_rate": 1.0,
+      "cross_microclaim_windows": 10634,
+      "cross_microclaim_fraction": 0.063251310052759,
+      "feature_prevalence": {
+        "has_negation": {
+          "count": 17131,
+          "fraction": 0.10189563593321556
+        },
+        "has_comparator": {
+          "count": 19121,
+          "fraction": 0.11373220796678622
+        },
+        "has_number_or_unit": {
+          "count": 34151,
+          "fraction": 0.20313104096405607
+        },
+        "has_temporal_order": {
+          "count": 22468,
+          "fraction": 0.13364025148254552
+        },
+        "has_condition": {
+          "count": 13674,
+          "fraction": 0.08133330954122875
+        },
+        "has_explicit_passage_id": {
+          "count": 33540,
+          "fraction": 0.19949679698791956
+        },
+        "has_parent_passage_context": {
+          "count": 39645,
+          "fraction": 0.23580949661854714
+        },
+        "has_local_subject": {
+          "count": 124524,
+          "fraction": 0.7406720079941471
+        },
+        "has_effective_subject": {
+          "count": 132815,
+          "fraction": 0.7899870927832598
+        },
+        "has_entity_candidate": {
+          "count": 106827,
+          "fraction": 0.6354097892614335
+        },
+        "has_any_core_relation": {
+          "count": 80389,
+          "fraction": 0.478155873973222
+        },
+        "has_any_relation_or_source": {
+          "count": 103508,
+          "fraction": 0.6156682904778049
+        }
+      },
+      "evident_conflict_windows": 3120,
+      "evident_conflict_assigned": 3120,
+      "evident_conflict_assignment_rate": 1.0,
+      "evident_conflict_cross_microclaim_windows": 220,
+      "evident_conflict_cross_microclaim_fraction": 0.07051282051282051,
+      "evident_conflict_feature_coverage": {
+        "has_negation": {
+          "count": 353,
+          "fraction": 0.11314102564102564
+        },
+        "has_comparator": {
+          "count": 329,
+          "fraction": 0.10544871794871795
+        },
+        "has_number_or_unit": {
+          "count": 938,
+          "fraction": 0.3006410256410256
+        },
+        "has_temporal_order": {
+          "count": 391,
+          "fraction": 0.12532051282051282
+        },
+        "has_condition": {
+          "count": 319,
+          "fraction": 0.10224358974358974
+        },
+        "has_explicit_passage_id": {
+          "count": 852,
+          "fraction": 0.27307692307692305
+        },
+        "has_parent_passage_context": {
+          "count": 931,
+          "fraction": 0.2983974358974359
+        },
+        "has_local_subject": {
+          "count": 1873,
+          "fraction": 0.6003205128205128
+        },
+        "has_effective_subject": {
+          "count": 2062,
+          "fraction": 0.6608974358974359
+        },
+        "has_entity_candidate": {
+          "count": 1970,
+          "fraction": 0.6314102564102564
+        },
+        "has_any_core_relation": {
+          "count": 1829,
+          "fraction": 0.5862179487179487
+        },
+        "has_any_relation_or_source": {
+          "count": 2362,
+          "fraction": 0.757051282051282
+        }
+      }
+    },
+    "calibration": {
+      "windows": 42241,
+      "assigned_to_at_least_one_microclaim": 42241,
+      "assignment_rate": 1.0,
+      "cross_microclaim_windows": 2715,
+      "cross_microclaim_fraction": 0.06427404654245875,
+      "feature_prevalence": {
+        "has_negation": {
+          "count": 4692,
+          "fraction": 0.11107691579271324
+        },
+        "has_comparator": {
+          "count": 4801,
+          "fraction": 0.11365734712719869
+        },
+        "has_number_or_unit": {
+          "count": 8664,
+          "fraction": 0.20510878056864185
+        },
+        "has_temporal_order": {
+          "count": 5030,
+          "fraction": 0.11907862029781492
+        },
+        "has_condition": {
+          "count": 2947,
+          "fraction": 0.06976634075897824
+        },
+        "has_explicit_passage_id": {
+          "count": 9046,
+          "fraction": 0.2141521270803248
+        },
+        "has_parent_passage_context": {
+          "count": 10548,
+          "fraction": 0.24970999739589497
+        },
+        "has_local_subject": {
+          "count": 32363,
+          "fraction": 0.7661513695225018
+        },
+        "has_effective_subject": {
+          "count": 34269,
+          "fraction": 0.8112734073530457
+        },
+        "has_entity_candidate": {
+          "count": 27703,
+          "fraction": 0.6558320115527568
+        },
+        "has_any_core_relation": {
+          "count": 20188,
+          "fraction": 0.4779242915650671
+        },
+        "has_any_relation_or_source": {
+          "count": 26272,
+          "fraction": 0.6219549726568974
+        }
+      },
+      "evident_conflict_windows": 997,
+      "evident_conflict_assigned": 997,
+      "evident_conflict_assignment_rate": 1.0,
+      "evident_conflict_cross_microclaim_windows": 77,
+      "evident_conflict_cross_microclaim_fraction": 0.07723169508525576,
+      "evident_conflict_feature_coverage": {
+        "has_negation": {
+          "count": 127,
+          "fraction": 0.12738214643931794
+        },
+        "has_comparator": {
+          "count": 311,
+          "fraction": 0.3119358074222668
+        },
+        "has_number_or_unit": {
+          "count": 449,
+          "fraction": 0.45035105315947843
+        },
+        "has_temporal_order": {
+          "count": 164,
+          "fraction": 0.16449348044132397
+        },
+        "has_condition": {
+          "count": 35,
+          "fraction": 0.03510531594784353
+        },
+        "has_explicit_passage_id": {
+          "count": 283,
+          "fraction": 0.283851554663992
+        },
+        "has_parent_passage_context": {
+          "count": 337,
+          "fraction": 0.33801404212637914
+        },
+        "has_local_subject": {
+          "count": 712,
+          "fraction": 0.7141424272818455
+        },
+        "has_effective_subject": {
+          "count": 738,
+          "fraction": 0.7402206619859579
+        },
+        "has_entity_candidate": {
+          "count": 779,
+          "fraction": 0.7813440320962889
+        },
+        "has_any_core_relation": {
+          "count": 701,
+          "fraction": 0.7031093279839519
+        },
+        "has_any_relation_or_source": {
+          "count": 833,
+          "fraction": 0.835506519558676
+        }
+      }
+    }
+  },
+  "gold_span_coverage_by_type": {
+    "fit": {
+      "Evident Baseless Info": {
+        "spans": 343,
+        "mapped_spans": 343,
+        "single_microclaim_full_gold_coverage": 167,
+        "single_microclaim_full_gold_coverage_rate": 0.4868804664723032,
+        "mean_best_microclaim_gold_coverage": 0.7525396749505571,
+        "mean_best_microclaim_purity": 0.8577636236845895,
+        "mean_microclaims_touched": 2.3965014577259476,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 34,
+            "fraction": 0.09912536443148688
+          },
+          "has_comparator": {
+            "count": 65,
+            "fraction": 0.18950437317784258
+          },
+          "has_number_or_unit": {
+            "count": 84,
+            "fraction": 0.24489795918367346
+          },
+          "has_temporal_order": {
+            "count": 69,
+            "fraction": 0.20116618075801748
+          },
+          "has_condition": {
+            "count": 45,
+            "fraction": 0.13119533527696792
+          },
+          "has_explicit_passage_id": {
+            "count": 87,
+            "fraction": 0.2536443148688047
+          },
+          "has_parent_passage_context": {
+            "count": 90,
+            "fraction": 0.26239067055393583
+          },
+          "has_local_subject": {
+            "count": 298,
+            "fraction": 0.8688046647230321
+          },
+          "has_effective_subject": {
+            "count": 306,
+            "fraction": 0.892128279883382
+          },
+          "has_entity_candidate": {
+            "count": 278,
+            "fraction": 0.8104956268221575
+          },
+          "has_any_core_relation": {
+            "count": 203,
+            "fraction": 0.5918367346938775
+          },
+          "has_any_relation_or_source": {
+            "count": 245,
+            "fraction": 0.7142857142857143
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 29,
+            "fraction": 0.08454810495626822
+          },
+          "has_comparator": {
+            "count": 55,
+            "fraction": 0.16034985422740525
+          },
+          "has_number_or_unit": {
+            "count": 97,
+            "fraction": 0.282798833819242
+          },
+          "has_temporal_order": {
+            "count": 57,
+            "fraction": 0.1661807580174927
+          },
+          "has_condition": {
+            "count": 41,
+            "fraction": 0.119533527696793
+          },
+          "has_explicit_passage_id": {
+            "count": 75,
+            "fraction": 0.21865889212827988
+          },
+          "has_local_subject": {
+            "count": 229,
+            "fraction": 0.6676384839650146
+          },
+          "has_entity_candidate": {
+            "count": 242,
+            "fraction": 0.7055393586005831
+          },
+          "has_any_core_relation": {
+            "count": 194,
+            "fraction": 0.565597667638484
+          },
+          "has_any_relation_or_source": {
+            "count": 225,
+            "fraction": 0.6559766763848397
+          }
+        }
+      },
+      "Evident Conflict": {
+        "spans": 109,
+        "mapped_spans": 109,
+        "single_microclaim_full_gold_coverage": 77,
+        "single_microclaim_full_gold_coverage_rate": 0.7064220183486238,
+        "mean_best_microclaim_gold_coverage": 0.8591426609697801,
+        "mean_best_microclaim_purity": 0.7581008470875565,
+        "mean_microclaims_touched": 1.7064220183486238,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 18,
+            "fraction": 0.1651376146788991
+          },
+          "has_comparator": {
+            "count": 16,
+            "fraction": 0.14678899082568808
+          },
+          "has_number_or_unit": {
+            "count": 31,
+            "fraction": 0.28440366972477066
+          },
+          "has_temporal_order": {
+            "count": 12,
+            "fraction": 0.11009174311926606
+          },
+          "has_condition": {
+            "count": 14,
+            "fraction": 0.12844036697247707
+          },
+          "has_explicit_passage_id": {
+            "count": 50,
+            "fraction": 0.45871559633027525
+          },
+          "has_parent_passage_context": {
+            "count": 52,
+            "fraction": 0.47706422018348627
+          },
+          "has_local_subject": {
+            "count": 78,
+            "fraction": 0.7155963302752294
+          },
+          "has_effective_subject": {
+            "count": 81,
+            "fraction": 0.7431192660550459
+          },
+          "has_entity_candidate": {
+            "count": 67,
+            "fraction": 0.6146788990825688
+          },
+          "has_any_core_relation": {
+            "count": 63,
+            "fraction": 0.5779816513761468
+          },
+          "has_any_relation_or_source": {
+            "count": 89,
+            "fraction": 0.8165137614678899
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 18,
+            "fraction": 0.1651376146788991
+          },
+          "has_comparator": {
+            "count": 11,
+            "fraction": 0.10091743119266056
+          },
+          "has_number_or_unit": {
+            "count": 31,
+            "fraction": 0.28440366972477066
+          },
+          "has_temporal_order": {
+            "count": 9,
+            "fraction": 0.08256880733944955
+          },
+          "has_condition": {
+            "count": 11,
+            "fraction": 0.10091743119266056
+          },
+          "has_explicit_passage_id": {
+            "count": 43,
+            "fraction": 0.3944954128440367
+          },
+          "has_local_subject": {
+            "count": 63,
+            "fraction": 0.5779816513761468
+          },
+          "has_entity_candidate": {
+            "count": 52,
+            "fraction": 0.47706422018348627
+          },
+          "has_any_core_relation": {
+            "count": 60,
+            "fraction": 0.5504587155963303
+          },
+          "has_any_relation_or_source": {
+            "count": 87,
+            "fraction": 0.7981651376146789
+          }
+        }
+      },
+      "Subtle Baseless Info": {
+        "spans": 187,
+        "mapped_spans": 187,
+        "single_microclaim_full_gold_coverage": 115,
+        "single_microclaim_full_gold_coverage_rate": 0.6149732620320856,
+        "mean_best_microclaim_gold_coverage": 0.8658149904389741,
+        "mean_best_microclaim_purity": 0.7051677102910264,
+        "mean_microclaims_touched": 1.5775401069518717,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 13,
+            "fraction": 0.06951871657754011
+          },
+          "has_comparator": {
+            "count": 32,
+            "fraction": 0.1711229946524064
+          },
+          "has_number_or_unit": {
+            "count": 45,
+            "fraction": 0.24064171122994651
+          },
+          "has_temporal_order": {
+            "count": 20,
+            "fraction": 0.10695187165775401
+          },
+          "has_condition": {
+            "count": 20,
+            "fraction": 0.10695187165775401
+          },
+          "has_explicit_passage_id": {
+            "count": 35,
+            "fraction": 0.18716577540106952
+          },
+          "has_parent_passage_context": {
+            "count": 38,
+            "fraction": 0.20320855614973263
+          },
+          "has_local_subject": {
+            "count": 161,
+            "fraction": 0.8609625668449198
+          },
+          "has_effective_subject": {
+            "count": 166,
+            "fraction": 0.8877005347593583
+          },
+          "has_entity_candidate": {
+            "count": 140,
+            "fraction": 0.7486631016042781
+          },
+          "has_any_core_relation": {
+            "count": 98,
+            "fraction": 0.5240641711229946
+          },
+          "has_any_relation_or_source": {
+            "count": 121,
+            "fraction": 0.6470588235294118
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 9,
+            "fraction": 0.0481283422459893
+          },
+          "has_comparator": {
+            "count": 21,
+            "fraction": 0.11229946524064172
+          },
+          "has_number_or_unit": {
+            "count": 31,
+            "fraction": 0.1657754010695187
+          },
+          "has_temporal_order": {
+            "count": 16,
+            "fraction": 0.0855614973262032
+          },
+          "has_condition": {
+            "count": 16,
+            "fraction": 0.0855614973262032
+          },
+          "has_explicit_passage_id": {
+            "count": 23,
+            "fraction": 0.12299465240641712
+          },
+          "has_local_subject": {
+            "count": 101,
+            "fraction": 0.5401069518716578
+          },
+          "has_entity_candidate": {
+            "count": 103,
+            "fraction": 0.5508021390374331
+          },
+          "has_any_core_relation": {
+            "count": 70,
+            "fraction": 0.37433155080213903
+          },
+          "has_any_relation_or_source": {
+            "count": 85,
+            "fraction": 0.45454545454545453
+          }
+        }
+      },
+      "Subtle Conflict": {
+        "spans": 7,
+        "mapped_spans": 7,
+        "single_microclaim_full_gold_coverage": 5,
+        "single_microclaim_full_gold_coverage_rate": 0.7142857142857143,
+        "mean_best_microclaim_gold_coverage": 0.8779220779220779,
+        "mean_best_microclaim_purity": 0.9291572184429328,
+        "mean_microclaims_touched": 1.4285714285714286,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_comparator": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_number_or_unit": {
+            "count": 2,
+            "fraction": 0.2857142857142857
+          },
+          "has_temporal_order": {
+            "count": 3,
+            "fraction": 0.42857142857142855
+          },
+          "has_condition": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_explicit_passage_id": {
+            "count": 1,
+            "fraction": 0.14285714285714285
+          },
+          "has_parent_passage_context": {
+            "count": 2,
+            "fraction": 0.2857142857142857
+          },
+          "has_local_subject": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          },
+          "has_effective_subject": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          },
+          "has_entity_candidate": {
+            "count": 6,
+            "fraction": 0.8571428571428571
+          },
+          "has_any_core_relation": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          },
+          "has_any_relation_or_source": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_comparator": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_number_or_unit": {
+            "count": 2,
+            "fraction": 0.2857142857142857
+          },
+          "has_temporal_order": {
+            "count": 3,
+            "fraction": 0.42857142857142855
+          },
+          "has_condition": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_explicit_passage_id": {
+            "count": 1,
+            "fraction": 0.14285714285714285
+          },
+          "has_local_subject": {
+            "count": 3,
+            "fraction": 0.42857142857142855
+          },
+          "has_entity_candidate": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          },
+          "has_any_core_relation": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          },
+          "has_any_relation_or_source": {
+            "count": 5,
+            "fraction": 0.7142857142857143
+          }
+        }
+      }
+    },
+    "calibration": {
+      "Evident Baseless Info": {
+        "spans": 109,
+        "mapped_spans": 109,
+        "single_microclaim_full_gold_coverage": 58,
+        "single_microclaim_full_gold_coverage_rate": 0.5321100917431193,
+        "mean_best_microclaim_gold_coverage": 0.8009967709789617,
+        "mean_best_microclaim_purity": 0.8089252192711807,
+        "mean_microclaims_touched": 2.1743119266055047,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 17,
+            "fraction": 0.1559633027522936
+          },
+          "has_comparator": {
+            "count": 20,
+            "fraction": 0.1834862385321101
+          },
+          "has_number_or_unit": {
+            "count": 25,
+            "fraction": 0.22935779816513763
+          },
+          "has_temporal_order": {
+            "count": 17,
+            "fraction": 0.1559633027522936
+          },
+          "has_condition": {
+            "count": 14,
+            "fraction": 0.12844036697247707
+          },
+          "has_explicit_passage_id": {
+            "count": 25,
+            "fraction": 0.22935779816513763
+          },
+          "has_parent_passage_context": {
+            "count": 29,
+            "fraction": 0.26605504587155965
+          },
+          "has_local_subject": {
+            "count": 90,
+            "fraction": 0.8256880733944955
+          },
+          "has_effective_subject": {
+            "count": 93,
+            "fraction": 0.8532110091743119
+          },
+          "has_entity_candidate": {
+            "count": 86,
+            "fraction": 0.7889908256880734
+          },
+          "has_any_core_relation": {
+            "count": 61,
+            "fraction": 0.5596330275229358
+          },
+          "has_any_relation_or_source": {
+            "count": 74,
+            "fraction": 0.6788990825688074
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 13,
+            "fraction": 0.11926605504587157
+          },
+          "has_comparator": {
+            "count": 16,
+            "fraction": 0.14678899082568808
+          },
+          "has_number_or_unit": {
+            "count": 29,
+            "fraction": 0.26605504587155965
+          },
+          "has_temporal_order": {
+            "count": 14,
+            "fraction": 0.12844036697247707
+          },
+          "has_condition": {
+            "count": 11,
+            "fraction": 0.10091743119266056
+          },
+          "has_explicit_passage_id": {
+            "count": 21,
+            "fraction": 0.1926605504587156
+          },
+          "has_local_subject": {
+            "count": 68,
+            "fraction": 0.6238532110091743
+          },
+          "has_entity_candidate": {
+            "count": 75,
+            "fraction": 0.6880733944954128
+          },
+          "has_any_core_relation": {
+            "count": 59,
+            "fraction": 0.5412844036697247
+          },
+          "has_any_relation_or_source": {
+            "count": 69,
+            "fraction": 0.6330275229357798
+          }
+        }
+      },
+      "Evident Conflict": {
+        "spans": 43,
+        "mapped_spans": 43,
+        "single_microclaim_full_gold_coverage": 33,
+        "single_microclaim_full_gold_coverage_rate": 0.7674418604651163,
+        "mean_best_microclaim_gold_coverage": 0.897419529659386,
+        "mean_best_microclaim_purity": 0.734700284425353,
+        "mean_microclaims_touched": 1.4186046511627908,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 5,
+            "fraction": 0.11627906976744186
+          },
+          "has_comparator": {
+            "count": 13,
+            "fraction": 0.3023255813953488
+          },
+          "has_number_or_unit": {
+            "count": 20,
+            "fraction": 0.46511627906976744
+          },
+          "has_temporal_order": {
+            "count": 7,
+            "fraction": 0.16279069767441862
+          },
+          "has_condition": {
+            "count": 1,
+            "fraction": 0.023255813953488372
+          },
+          "has_explicit_passage_id": {
+            "count": 20,
+            "fraction": 0.46511627906976744
+          },
+          "has_parent_passage_context": {
+            "count": 21,
+            "fraction": 0.4883720930232558
+          },
+          "has_local_subject": {
+            "count": 32,
+            "fraction": 0.7441860465116279
+          },
+          "has_effective_subject": {
+            "count": 32,
+            "fraction": 0.7441860465116279
+          },
+          "has_entity_candidate": {
+            "count": 33,
+            "fraction": 0.7674418604651163
+          },
+          "has_any_core_relation": {
+            "count": 30,
+            "fraction": 0.6976744186046512
+          },
+          "has_any_relation_or_source": {
+            "count": 38,
+            "fraction": 0.8837209302325582
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 5,
+            "fraction": 0.11627906976744186
+          },
+          "has_comparator": {
+            "count": 9,
+            "fraction": 0.20930232558139536
+          },
+          "has_number_or_unit": {
+            "count": 18,
+            "fraction": 0.4186046511627907
+          },
+          "has_temporal_order": {
+            "count": 4,
+            "fraction": 0.09302325581395349
+          },
+          "has_condition": {
+            "count": 1,
+            "fraction": 0.023255813953488372
+          },
+          "has_explicit_passage_id": {
+            "count": 19,
+            "fraction": 0.4418604651162791
+          },
+          "has_local_subject": {
+            "count": 25,
+            "fraction": 0.5813953488372093
+          },
+          "has_entity_candidate": {
+            "count": 22,
+            "fraction": 0.5116279069767442
+          },
+          "has_any_core_relation": {
+            "count": 26,
+            "fraction": 0.6046511627906976
+          },
+          "has_any_relation_or_source": {
+            "count": 37,
+            "fraction": 0.8604651162790697
+          }
+        }
+      },
+      "Subtle Baseless Info": {
+        "spans": 43,
+        "mapped_spans": 43,
+        "single_microclaim_full_gold_coverage": 30,
+        "single_microclaim_full_gold_coverage_rate": 0.6976744186046512,
+        "mean_best_microclaim_gold_coverage": 0.8960905010866245,
+        "mean_best_microclaim_purity": 0.5958941533719437,
+        "mean_microclaims_touched": 1.4883720930232558,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 1,
+            "fraction": 0.023255813953488372
+          },
+          "has_comparator": {
+            "count": 7,
+            "fraction": 0.16279069767441862
+          },
+          "has_number_or_unit": {
+            "count": 13,
+            "fraction": 0.3023255813953488
+          },
+          "has_temporal_order": {
+            "count": 6,
+            "fraction": 0.13953488372093023
+          },
+          "has_condition": {
+            "count": 5,
+            "fraction": 0.11627906976744186
+          },
+          "has_explicit_passage_id": {
+            "count": 11,
+            "fraction": 0.2558139534883721
+          },
+          "has_parent_passage_context": {
+            "count": 12,
+            "fraction": 0.27906976744186046
+          },
+          "has_local_subject": {
+            "count": 32,
+            "fraction": 0.7441860465116279
+          },
+          "has_effective_subject": {
+            "count": 34,
+            "fraction": 0.7906976744186046
+          },
+          "has_entity_candidate": {
+            "count": 35,
+            "fraction": 0.813953488372093
+          },
+          "has_any_core_relation": {
+            "count": 25,
+            "fraction": 0.5813953488372093
+          },
+          "has_any_relation_or_source": {
+            "count": 33,
+            "fraction": 0.7674418604651163
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_comparator": {
+            "count": 3,
+            "fraction": 0.06976744186046512
+          },
+          "has_number_or_unit": {
+            "count": 9,
+            "fraction": 0.20930232558139536
+          },
+          "has_temporal_order": {
+            "count": 1,
+            "fraction": 0.023255813953488372
+          },
+          "has_condition": {
+            "count": 4,
+            "fraction": 0.09302325581395349
+          },
+          "has_explicit_passage_id": {
+            "count": 7,
+            "fraction": 0.16279069767441862
+          },
+          "has_local_subject": {
+            "count": 15,
+            "fraction": 0.3488372093023256
+          },
+          "has_entity_candidate": {
+            "count": 24,
+            "fraction": 0.5581395348837209
+          },
+          "has_any_core_relation": {
+            "count": 15,
+            "fraction": 0.3488372093023256
+          },
+          "has_any_relation_or_source": {
+            "count": 21,
+            "fraction": 0.4883720930232558
+          }
+        }
+      },
+      "Subtle Conflict": {
+        "spans": 5,
+        "mapped_spans": 5,
+        "single_microclaim_full_gold_coverage": 2,
+        "single_microclaim_full_gold_coverage_rate": 0.4,
+        "mean_best_microclaim_gold_coverage": 0.6932515337423313,
+        "mean_best_microclaim_purity": 0.7021847070506455,
+        "mean_microclaims_touched": 1.8,
+        "context_feature_coverage": {
+          "has_negation": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_comparator": {
+            "count": 1,
+            "fraction": 0.2
+          },
+          "has_number_or_unit": {
+            "count": 1,
+            "fraction": 0.2
+          },
+          "has_temporal_order": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_condition": {
+            "count": 1,
+            "fraction": 0.2
+          },
+          "has_explicit_passage_id": {
+            "count": 2,
+            "fraction": 0.4
+          },
+          "has_parent_passage_context": {
+            "count": 2,
+            "fraction": 0.4
+          },
+          "has_local_subject": {
+            "count": 5,
+            "fraction": 1.0
+          },
+          "has_effective_subject": {
+            "count": 5,
+            "fraction": 1.0
+          },
+          "has_entity_candidate": {
+            "count": 3,
+            "fraction": 0.6
+          },
+          "has_any_core_relation": {
+            "count": 2,
+            "fraction": 0.4
+          },
+          "has_any_relation_or_source": {
+            "count": 3,
+            "fraction": 0.6
+          }
+        },
+        "direct_span_feature_coverage": {
+          "has_negation": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_comparator": {
+            "count": 1,
+            "fraction": 0.2
+          },
+          "has_number_or_unit": {
+            "count": 1,
+            "fraction": 0.2
+          },
+          "has_temporal_order": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_condition": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_explicit_passage_id": {
+            "count": 0,
+            "fraction": 0.0
+          },
+          "has_local_subject": {
+            "count": 3,
+            "fraction": 0.6
+          },
+          "has_entity_candidate": {
+            "count": 2,
+            "fraction": 0.4
+          },
+          "has_any_core_relation": {
+            "count": 2,
+            "fraction": 0.4
+          },
+          "has_any_relation_or_source": {
+            "count": 2,
+            "fraction": 0.4
+          }
+        }
+      }
+    }
+  },
+  "gold_evident_conflict_span_coverage": {
+    "fit": {
+      "spans": 109,
+      "mapped_spans": 109,
+      "single_microclaim_full_gold_coverage": 77,
+      "single_microclaim_full_gold_coverage_rate": 0.7064220183486238,
+      "mean_best_microclaim_gold_coverage": 0.8591426609697801,
+      "mean_best_microclaim_purity": 0.7581008470875565,
+      "mean_microclaims_touched": 1.7064220183486238,
+      "context_feature_coverage": {
+        "has_negation": {
+          "count": 18,
+          "fraction": 0.1651376146788991
+        },
+        "has_comparator": {
+          "count": 16,
+          "fraction": 0.14678899082568808
+        },
+        "has_number_or_unit": {
+          "count": 31,
+          "fraction": 0.28440366972477066
+        },
+        "has_temporal_order": {
+          "count": 12,
+          "fraction": 0.11009174311926606
+        },
+        "has_condition": {
+          "count": 14,
+          "fraction": 0.12844036697247707
+        },
+        "has_explicit_passage_id": {
+          "count": 50,
+          "fraction": 0.45871559633027525
+        },
+        "has_parent_passage_context": {
+          "count": 52,
+          "fraction": 0.47706422018348627
+        },
+        "has_local_subject": {
+          "count": 78,
+          "fraction": 0.7155963302752294
+        },
+        "has_effective_subject": {
+          "count": 81,
+          "fraction": 0.7431192660550459
+        },
+        "has_entity_candidate": {
+          "count": 67,
+          "fraction": 0.6146788990825688
+        },
+        "has_any_core_relation": {
+          "count": 63,
+          "fraction": 0.5779816513761468
+        },
+        "has_any_relation_or_source": {
+          "count": 89,
+          "fraction": 0.8165137614678899
+        }
+      },
+      "direct_span_feature_coverage": {
+        "has_negation": {
+          "count": 18,
+          "fraction": 0.1651376146788991
+        },
+        "has_comparator": {
+          "count": 11,
+          "fraction": 0.10091743119266056
+        },
+        "has_number_or_unit": {
+          "count": 31,
+          "fraction": 0.28440366972477066
+        },
+        "has_temporal_order": {
+          "count": 9,
+          "fraction": 0.08256880733944955
+        },
+        "has_condition": {
+          "count": 11,
+          "fraction": 0.10091743119266056
+        },
+        "has_explicit_passage_id": {
+          "count": 43,
+          "fraction": 0.3944954128440367
+        },
+        "has_local_subject": {
+          "count": 63,
+          "fraction": 0.5779816513761468
+        },
+        "has_entity_candidate": {
+          "count": 52,
+          "fraction": 0.47706422018348627
+        },
+        "has_any_core_relation": {
+          "count": 60,
+          "fraction": 0.5504587155963303
+        },
+        "has_any_relation_or_source": {
+          "count": 87,
+          "fraction": 0.7981651376146789
+        }
+      }
+    },
+    "calibration": {
+      "spans": 43,
+      "mapped_spans": 43,
+      "single_microclaim_full_gold_coverage": 33,
+      "single_microclaim_full_gold_coverage_rate": 0.7674418604651163,
+      "mean_best_microclaim_gold_coverage": 0.897419529659386,
+      "mean_best_microclaim_purity": 0.734700284425353,
+      "mean_microclaims_touched": 1.4186046511627908,
+      "context_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.11627906976744186
+        },
+        "has_comparator": {
+          "count": 13,
+          "fraction": 0.3023255813953488
+        },
+        "has_number_or_unit": {
+          "count": 20,
+          "fraction": 0.46511627906976744
+        },
+        "has_temporal_order": {
+          "count": 7,
+          "fraction": 0.16279069767441862
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.023255813953488372
+        },
+        "has_explicit_passage_id": {
+          "count": 20,
+          "fraction": 0.46511627906976744
+        },
+        "has_parent_passage_context": {
+          "count": 21,
+          "fraction": 0.4883720930232558
+        },
+        "has_local_subject": {
+          "count": 32,
+          "fraction": 0.7441860465116279
+        },
+        "has_effective_subject": {
+          "count": 32,
+          "fraction": 0.7441860465116279
+        },
+        "has_entity_candidate": {
+          "count": 33,
+          "fraction": 0.7674418604651163
+        },
+        "has_any_core_relation": {
+          "count": 30,
+          "fraction": 0.6976744186046512
+        },
+        "has_any_relation_or_source": {
+          "count": 38,
+          "fraction": 0.8837209302325582
+        }
+      },
+      "direct_span_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.11627906976744186
+        },
+        "has_comparator": {
+          "count": 9,
+          "fraction": 0.20930232558139536
+        },
+        "has_number_or_unit": {
+          "count": 18,
+          "fraction": 0.4186046511627907
+        },
+        "has_temporal_order": {
+          "count": 4,
+          "fraction": 0.09302325581395349
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.023255813953488372
+        },
+        "has_explicit_passage_id": {
+          "count": 19,
+          "fraction": 0.4418604651162791
+        },
+        "has_local_subject": {
+          "count": 25,
+          "fraction": 0.5813953488372093
+        },
+        "has_entity_candidate": {
+          "count": 22,
+          "fraction": 0.5116279069767442
+        },
+        "has_any_core_relation": {
+          "count": 26,
+          "fraction": 0.6046511627906976
+        },
+        "has_any_relation_or_source": {
+          "count": 37,
+          "fraction": 0.8604651162790697
+        }
+      }
+    },
+    "combined": {
+      "spans": 152,
+      "mapped_spans": 152,
+      "single_microclaim_full_gold_coverage": 110,
+      "single_microclaim_full_gold_coverage_rate": 0.7236842105263158,
+      "mean_best_microclaim_gold_coverage": 0.869970985664866,
+      "mean_best_microclaim_purity": 0.7514809510712753,
+      "mean_microclaims_touched": 1.625,
+      "context_feature_coverage": {
+        "has_negation": {
+          "count": 23,
+          "fraction": 0.1513157894736842
+        },
+        "has_comparator": {
+          "count": 29,
+          "fraction": 0.19078947368421054
+        },
+        "has_number_or_unit": {
+          "count": 51,
+          "fraction": 0.3355263157894737
+        },
+        "has_temporal_order": {
+          "count": 19,
+          "fraction": 0.125
+        },
+        "has_condition": {
+          "count": 15,
+          "fraction": 0.09868421052631579
+        },
+        "has_explicit_passage_id": {
+          "count": 70,
+          "fraction": 0.4605263157894737
+        },
+        "has_parent_passage_context": {
+          "count": 73,
+          "fraction": 0.48026315789473684
+        },
+        "has_local_subject": {
+          "count": 110,
+          "fraction": 0.7236842105263158
+        },
+        "has_effective_subject": {
+          "count": 113,
+          "fraction": 0.743421052631579
+        },
+        "has_entity_candidate": {
+          "count": 100,
+          "fraction": 0.6578947368421053
+        },
+        "has_any_core_relation": {
+          "count": 93,
+          "fraction": 0.6118421052631579
+        },
+        "has_any_relation_or_source": {
+          "count": 127,
+          "fraction": 0.8355263157894737
+        }
+      },
+      "direct_span_feature_coverage": {
+        "has_negation": {
+          "count": 23,
+          "fraction": 0.1513157894736842
+        },
+        "has_comparator": {
+          "count": 20,
+          "fraction": 0.13157894736842105
+        },
+        "has_number_or_unit": {
+          "count": 49,
+          "fraction": 0.3223684210526316
+        },
+        "has_temporal_order": {
+          "count": 13,
+          "fraction": 0.08552631578947369
+        },
+        "has_condition": {
+          "count": 12,
+          "fraction": 0.07894736842105263
+        },
+        "has_explicit_passage_id": {
+          "count": 62,
+          "fraction": 0.40789473684210525
+        },
+        "has_local_subject": {
+          "count": 88,
+          "fraction": 0.5789473684210527
+        },
+        "has_entity_candidate": {
+          "count": 74,
+          "fraction": 0.4868421052631579
+        },
+        "has_any_core_relation": {
+          "count": 86,
+          "fraction": 0.5657894736842105
+        },
+        "has_any_relation_or_source": {
+          "count": 124,
+          "fraction": 0.8157894736842105
+        }
+      }
+    }
+  },
+  "current_incumbent_calibration_evident_conflict": {
+    "candidate": "semantic_claim__old_tree__large_weight0.4",
+    "risk_windows_detected_total": [
+      195,
+      997
+    ],
+    "span_any_hit": 13,
+    "span_fully_missed": 30,
+    "all_43_relation_schema_coverage": {
+      "spans": 43,
+      "mapped_spans": 43,
+      "single_microclaim_full_gold_coverage": 33,
+      "single_microclaim_full_gold_coverage_rate": 0.7674418604651163,
+      "mean_best_microclaim_gold_coverage": 0.897419529659386,
+      "mean_best_microclaim_purity": 0.734700284425353,
+      "mean_microclaims_touched": 1.4186046511627908,
+      "context_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.11627906976744186
+        },
+        "has_comparator": {
+          "count": 13,
+          "fraction": 0.3023255813953488
+        },
+        "has_number_or_unit": {
+          "count": 20,
+          "fraction": 0.46511627906976744
+        },
+        "has_temporal_order": {
+          "count": 7,
+          "fraction": 0.16279069767441862
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.023255813953488372
+        },
+        "has_explicit_passage_id": {
+          "count": 20,
+          "fraction": 0.46511627906976744
+        },
+        "has_parent_passage_context": {
+          "count": 21,
+          "fraction": 0.4883720930232558
+        },
+        "has_local_subject": {
+          "count": 32,
+          "fraction": 0.7441860465116279
+        },
+        "has_effective_subject": {
+          "count": 32,
+          "fraction": 0.7441860465116279
+        },
+        "has_entity_candidate": {
+          "count": 33,
+          "fraction": 0.7674418604651163
+        },
+        "has_any_core_relation": {
+          "count": 30,
+          "fraction": 0.6976744186046512
+        },
+        "has_any_relation_or_source": {
+          "count": 38,
+          "fraction": 0.8837209302325582
+        }
+      },
+      "direct_span_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.11627906976744186
+        },
+        "has_comparator": {
+          "count": 9,
+          "fraction": 0.20930232558139536
+        },
+        "has_number_or_unit": {
+          "count": 18,
+          "fraction": 0.4186046511627907
+        },
+        "has_temporal_order": {
+          "count": 4,
+          "fraction": 0.09302325581395349
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.023255813953488372
+        },
+        "has_explicit_passage_id": {
+          "count": 19,
+          "fraction": 0.4418604651162791
+        },
+        "has_local_subject": {
+          "count": 25,
+          "fraction": 0.5813953488372093
+        },
+        "has_entity_candidate": {
+          "count": 22,
+          "fraction": 0.5116279069767442
+        },
+        "has_any_core_relation": {
+          "count": 26,
+          "fraction": 0.6046511627906976
+        },
+        "has_any_relation_or_source": {
+          "count": 37,
+          "fraction": 0.8604651162790697
+        }
+      }
+    },
+    "fully_missed_30_relation_schema_coverage": {
+      "spans": 30,
+      "mapped_spans": 30,
+      "single_microclaim_full_gold_coverage": 22,
+      "single_microclaim_full_gold_coverage_rate": 0.7333333333333333,
+      "mean_best_microclaim_gold_coverage": 0.895187556573456,
+      "mean_best_microclaim_purity": 0.6534532514363316,
+      "mean_microclaims_touched": 1.3666666666666667,
+      "context_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.16666666666666666
+        },
+        "has_comparator": {
+          "count": 8,
+          "fraction": 0.26666666666666666
+        },
+        "has_number_or_unit": {
+          "count": 13,
+          "fraction": 0.43333333333333335
+        },
+        "has_temporal_order": {
+          "count": 4,
+          "fraction": 0.13333333333333333
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        "has_explicit_passage_id": {
+          "count": 17,
+          "fraction": 0.5666666666666667
+        },
+        "has_parent_passage_context": {
+          "count": 17,
+          "fraction": 0.5666666666666667
+        },
+        "has_local_subject": {
+          "count": 23,
+          "fraction": 0.7666666666666667
+        },
+        "has_effective_subject": {
+          "count": 23,
+          "fraction": 0.7666666666666667
+        },
+        "has_entity_candidate": {
+          "count": 24,
+          "fraction": 0.8
+        },
+        "has_any_core_relation": {
+          "count": 20,
+          "fraction": 0.6666666666666666
+        },
+        "has_any_relation_or_source": {
+          "count": 27,
+          "fraction": 0.9
+        }
+      },
+      "direct_span_feature_coverage": {
+        "has_negation": {
+          "count": 5,
+          "fraction": 0.16666666666666666
+        },
+        "has_comparator": {
+          "count": 5,
+          "fraction": 0.16666666666666666
+        },
+        "has_number_or_unit": {
+          "count": 10,
+          "fraction": 0.3333333333333333
+        },
+        "has_temporal_order": {
+          "count": 2,
+          "fraction": 0.06666666666666667
+        },
+        "has_condition": {
+          "count": 1,
+          "fraction": 0.03333333333333333
+        },
+        "has_explicit_passage_id": {
+          "count": 16,
+          "fraction": 0.5333333333333333
+        },
+        "has_local_subject": {
+          "count": 16,
+          "fraction": 0.5333333333333333
+        },
+        "has_entity_candidate": {
+          "count": 14,
+          "fraction": 0.4666666666666667
+        },
+        "has_any_core_relation": {
+          "count": 16,
+          "fraction": 0.5333333333333333
+        },
+        "has_any_relation_or_source": {
+          "count": 26,
+          "fraction": 0.8666666666666667
+        }
+      }
+    },
+    "interpretation": "Feature activation inside an incumbent miss is diagnostic candidate coverage, not a rescued prediction."
+  },
+  "design_integrity": {
+    "prepare_was_label_blind": true,
+    "gold_used_only_in_audit": true,
+    "new_fits": 0,
+    "new_thresholds": 0,
+    "baseline_files_modified": false,
+    "GPU_used": false,
+    "official_test_opened": false
+  },
+  "limits": [
+    "Rules approximate syntax and coreference; candidate subjects/entities are not a dependency parse or NER.",
+    "Feature presence is coverage, not proof that a feature predicts conflict.",
+    "Parent passage context is exported separately from an explicit citation to avoid hiding inheritance.",
+    "Calibration findings are post-selection diagnostics and not independent-test evidence."
+  ],
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\atomic_relation_audit_r32_v1\\audit_atomic_relations.py": "6d31680783fdd6264730bb89d083a2c096066b811d1c7fdf37c5c3ba856fbb8e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\atomic_relation_audit_r32_v1\\preparation.json": "61d6736c209fd4b79044f32287cbaa69fb93de496329a7b43babc0e674f4afbe",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\current_candidate_error_audit_r32_v1\\AUDIT.json": "00f2548dd07c952518bd47a5a07c94ab0f0d70901951e4becbda68eb0881a9b1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\research\\current_candidate_error_audit_r32_v1\\span_records.jsonl": "9fe88c59074259afd366362645c30a65d9b2bf154fbf59480550b855e033cc89",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\answers_calibration.jsonl": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\tokens_calibration.jsonl": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\windows_k4_calibration.jsonl": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510"
+  }
+}

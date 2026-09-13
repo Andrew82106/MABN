@@ -1,0 +1,21 @@
+# Author inference package pin
+transformers==4.57.1
+python-dotenv==1.1.1
+protobuf==6.33.0
+sentencepiece==0.2.1
+
+# Frozen local runtime choices for dependencies the author did not fully pin.
+# transformer-heads itself is imported from the audited source commit recorded
+# in METHOD_FREEZE.json rather than installed from the unpinned Git URL.
+peft==0.18.1
+accelerate==1.13.0
+safetensors==0.7.0
+tokenizers==0.22.2
+
+# Shared evaluation environment used by evaluate_shared.py.
+numpy==2.4.6
+scikit-learn==1.8.0
+
+# torch is platform/CUDA specific.  The prepared host currently has
+# torch==2.5.1+cu121; run_cal_inference.py records its exact value.  No
+# bitsandbytes path is used because quantization is forbidden.

@@ -1,0 +1,35 @@
+{
+  "version": "qa-fixed-full-input-capacity-v3",
+  "scope": "fit634/calibration159 only; official test never opened",
+  "methods_widths": {
+    "full_lb_pca64_tcn_w16": 16,
+    "full_lb_pca64_tcn_w32": 32
+  },
+  "input": "Exact frozen standardized sequence_full_v2 A: LB1024+NLL1+PCA64,1089 dimensions",
+  "reused_input_sha256": "eea09d8eeba36bb9306982c40bfcada1ba901317de0c5b9c2eafd4826fcd9553",
+  "scaler_or_PCA_refit": false,
+  "network": "1089->width GELU; two single residual Conv1d kernel3 dilation1/2, GELU dropout.2; width->1",
+  "receptive_field_raw_tokens": 7,
+  "offline_future_tokens": true,
+  "seed": 20260926,
+  "epochs_each": 30,
+  "batch_answers": 8,
+  "cpu_threads": 4,
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "all_parameters": true
+  },
+  "weights_and_shuffle": "Reuse sequence_v1 exact fit_token_weights and epoch_answer_order, target loss139518",
+  "loss_aggregation_selection": "Unchanged full_v2/sequence_v1 rules: lexical loss, lexical-only max inside same4raw windows, all-window answer max; cal maxmin F1 then windowF1/precision/earlier epoch",
+  "early_stop": false,
+  "additional_seeds": false,
+  "reference": "Frozen full_v2 A width64 selected checkpoint, not retrained; old MLP/193dimTCN retained",
+  "diagnostics": "Report fit/cal gap, selected and final fit BCE/calF1, same global-threshold type recalls, with no type-specific tuning",
+  "limitations": [
+    "Only two prespecified widths and one seed; cal checkpoint selection remains optimistic.",
+    "Capacity changes parameter count and initialization/optimization; it does not identify a unique cause of errors.",
+    "All three widths use the same compressed PCA64; failure does not establish missing information in the full hidden state."
+  ]
+}

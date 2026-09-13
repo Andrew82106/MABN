@@ -1,0 +1,220 @@
+{
+  "checks": {
+    "60_unique_input_rows": true,
+    "30_unique_reference_questions": true,
+    "references_cover_questions": true,
+    "pairs_complete_partial": true,
+    "pair_split_same": true,
+    "question_split_18_6_6": true,
+    "four_passages_three_questions": true,
+    "same_task_and_subjects_in_pair": true,
+    "neutral_system": true,
+    "neutral_template": true,
+    "task_instruction_present": true,
+    "all_passages_in_prompt": true,
+    "all_questions_in_prompt": true,
+    "prompt_exactly_neutral_template": true,
+    "development_pair_unchanged_train_only": true,
+    "no_shared_displayed_sources_between_questions": true,
+    "no_shared_subjects_between_questions": true,
+    "one_passage_replaced_same_position": true,
+    "test_excludes_preview_ids": true,
+    "test_excludes_preview_sources": true,
+    "model_files_available": true
+  },
+  "split_counts": {
+    "test": 6,
+    "train": 18,
+    "validation": 6
+  },
+  "changes": [
+    {
+      "question_id": "5a8db19d5542994ba4e3dd00",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5abc0a5d5542993f40c73c64",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5ab51dae5542991779162d82",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5a7be2595542997c3ec972ac",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5a7a455c5542994f819ef1a7",
+      "changed_positions": [
+        2
+      ]
+    },
+    {
+      "question_id": "5add11935542994734353827",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5a7332935542991f9a20c67d",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5ac2d1d755429921a00ab053",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5ab9812d554299753720f821",
+      "changed_positions": [
+        2
+      ]
+    },
+    {
+      "question_id": "5a7cbf8c554299452d57b9f4",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5a834ed95542990548d0b1ca",
+      "changed_positions": [
+        2
+      ]
+    },
+    {
+      "question_id": "5a7b7ff75542995eb53be93d",
+      "changed_positions": [
+        2
+      ]
+    },
+    {
+      "question_id": "5adc65e85542996e68525350",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5ac289ff5542996366519a02",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5ae4d3c95542990ba0bbb165",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5ab8f7535542991b5579f0a7",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5a7d2afd5542995f4f402221",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5a7555215542996c70cfaee1",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5a76387d554299109176e6ba",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5abbd3ac55429931dba1458b",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5ae25ed15542992decbdccd2",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5ac1a04e5542991316484b63",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5ab8f57b5542991b5579f097",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5a77309d55429972597f1487",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5a8f9b8c5542997ba9cb32e6",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5a738225554299623ed4abc3",
+      "changed_positions": [
+        3
+      ]
+    },
+    {
+      "question_id": "5ab25004554299722f9b4cd7",
+      "changed_positions": [
+        2
+      ]
+    },
+    {
+      "question_id": "5a7574e25542996c70cfaf01",
+      "changed_positions": [
+        1
+      ]
+    },
+    {
+      "question_id": "5ae1316555429901ffe4adda",
+      "changed_positions": [
+        0
+      ]
+    },
+    {
+      "question_id": "5ae54eea5542993aec5ec19d",
+      "changed_positions": [
+        1
+      ]
+    }
+  ],
+  "shared_sources": {},
+  "input_sha256": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+  "reference_sha256": "ac3d7a78eb97dea43d5dd933c99fc86d9379ce9c0c1d1da8542e4cd00ca12c95",
+  "stage": "data",
+  "utc": "2026-09-10T11:14:18.648164+00:00",
+  "scope": "Independent structural checks. Semantic evidence/labels require recorded source review.",
+  "passed": true,
+  "python": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\.venv\\Scripts\\python.exe"
+}

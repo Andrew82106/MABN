@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "R31_new_artifacts_read": false,
+  "old_R29_fold0_manual_replay_maxdiff": 0.0,
+  "old_R29_fold0_thresholds_exact": true,
+  "old_R29_weight_scaler_check": {
+    "fit_windows": 5444,
+    "width": 769,
+    "base_mass": 5444.0,
+    "loss_mass": 3853.9999999999995,
+    "weighted_scaler_and_group_class_weights_verified": true
+  },
+  "groups_and_original_denominators_verified": true,
+  "source_difference_disclosure_verified": true,
+  "new_model_fits": 0,
+  "GPU_used": false,
+  "source_sha256": "8f8680694b7e44f5ed009eb0c102d0f9bd0d0fe22ca7a8e4f1ac74ed7694171e",
+  "R31_design_freeze_sha256": "24f20fdecb0d60e25c62ca783cdd5ba0a5e1baa3f5c83f56abc0d7510921267a",
+  "R29_complete_sha256": "4b78022f7a5a769b89892e0819eaf8b9c3dd6800ac68bff199e6612d83dfa7af"
+}

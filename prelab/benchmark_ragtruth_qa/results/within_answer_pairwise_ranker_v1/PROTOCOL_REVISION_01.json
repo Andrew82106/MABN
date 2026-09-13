@@ -1,0 +1,10 @@
+{
+  "reason": "Two prepare-only geometry assertions corrected before any real project fit",
+  "changes": [
+    "expanded raw-NLL cache mapped to native634 plus calibration",
+    "all-positive answers retained in evaluation and omitted only from within-answer pair construction",
+    "explicitly state this v1 is not a source-conditioned conflict detector"
+  ],
+  "real_project_fits": 0,
+  "official_test_opened": false
+}

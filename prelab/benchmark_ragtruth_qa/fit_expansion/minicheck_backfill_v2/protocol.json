@@ -1,0 +1,32 @@
+{
+  "version": "qa-original793-encoder22-all-doc-geometry-recovery-v2",
+  "scope": "Original634fit+159cal; preserve old failed425 and rebuild all793 in separate v2 directory",
+  "change": "Exact original full all-document claim-major/document-major batch4 forward; save only old selected-document rows",
+  "reason": "Original selected-only backfill failed hidden absolute tolerance on13953; no tolerance relaxation",
+  "checkpoint": "lytang/MiniCheck-RoBERTa-Large",
+  "revision": "74c8919647e61ed0f71bc177d94f10930f090068",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "batch_size": 4,
+  "TF32": false,
+  "autocast": false,
+  "geometry": "flat=claim_index*D+document_index; batch_index=flat//4; row=flat%4; batch_size=min(4,C*D-batch_index*4); padding=max original lengths in that exact batch",
+  "numeric_limits": {
+    "logits_max_abs": 0.0002,
+    "support_max_abs": 2e-05,
+    "final_claim_hidden_max_abs": 0.0002
+  },
+  "diagnosis_before_rebuild": [
+    "13953",
+    "16023",
+    "16029"
+  ],
+  "diagnostic_comparison": "Record original all-doc and former selected-only variants against immutable old states. Only full all-doc must pass before rebuilding; selected-only failure is diagnostic, never used as a feature.",
+  "observers": "First three anchors compare added layer22 hook to original last-only hook: logits/support/last state exact",
+  "reuse_old425": false,
+  "selection": "Unchanged frozen old selected_document_per_claim; do not select from recomputed scores",
+  "output": "Same flattened full-input encoder22 schema, plus original batch index/row/size/padding per sequence",
+  "original_files_changed": false,
+  "model_trained": false,
+  "test_opened": false
+}

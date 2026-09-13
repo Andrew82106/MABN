@@ -1,0 +1,14 @@
+{
+  "status": "independent_GPU_smoke_audit_passed",
+  "smoke_pairs": 10,
+  "all_smoke_pairs_exclude_held_fold_0": true,
+  "exact_warm_start_checkpoint": true,
+  "combined_loss_lambda": 0.25,
+  "BF16_forward": true,
+  "formal_training_started": false,
+  "peak_cuda_reserved_bytes": 3212836864,
+  "calibration_labels_used": false,
+  "official_test_opened": false,
+  "formal_baselines_modified": false,
+  "GPU_smoke_sha256": "1ebaa5b7c60c858f639398a0728605e17d9ffc9937b4c977923eb37d40d4f01e"
+}

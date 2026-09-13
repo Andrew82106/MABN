@@ -1,0 +1,58 @@
+{
+  "version": "native-qa-frozen-local-nli-v1",
+  "status": "frozen_before_full_extraction",
+  "role": "ours_method_candidate; never a baseline",
+  "scope": {
+    "answers": "Exactly the original 634 fit and 159 calibration llama-2-7b-chat answers.",
+    "windows": "The existing eligible four-original-BPE, stride-one windows: 168123 fit and 42241 calibration.",
+    "test": "Official validation/test paths are never opened."
+  },
+  "segmentation": {
+    "inputs": "Only original answer characters and frozen original-BPE offsets; no label, gold span, evidence annotation, score, or model output is consulted.",
+    "rule": "Split at every newline and at .!?/CJK equivalents followed by whitespace/end, including adjacent closing quote/bracket characters. A line-initial numeric/alphabetic list marker such as 1. or a), a fixed common abbreviation, an initial, or a dotted acronym is kept with the following text. Trim boundary whitespace and discard fragments without an alphanumeric character.",
+    "trace": "Every original lexical BPE is assigned exactly once to the segment containing the greatest number of its alphanumeric characters; ties use the earlier segment. The inverse segment-to-BPE lists are saved."
+  },
+  "premises": {
+    "views": [
+      "full",
+      "passage_1",
+      "passage_2",
+      "passage_3"
+    ],
+    "full": "The byte-for-byte released retrieved_passages string.",
+    "individual": "Exact body slice after each passage N: header, with only outer whitespace removed; all three are required and retained.",
+    "hypothesis": "One deterministic answer fragment; question and prior answer text are not appended."
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "device": "CPU only, FP32, eval/inference_mode",
+    "batch_pairs": 8,
+    "truncation": false,
+    "maximum_pair_tokens": 2048,
+    "saved": "For every fragment and all four premise views, save entailment, neutral and contradiction probabilities.",
+    "independent_replay": "A separate process must reproduce the fixed three-answer probabilities with maximum absolute FP32 difference <=2e-6; the in-process repeat remains bit exact."
+  },
+  "window_projection": {
+    "nli_features": "For each of the 12 view/class probabilities, average segment values weighted by the count of lexical BPEs from that segment in the frozen four-BPE window.",
+    "raw_primary": "Maximum contradiction probability over all segments touched by the window and all four premise views; fixed before evaluation.",
+    "answer": "Maximum over every eligible frozen window in the answer."
+  },
+  "readouts": {
+    "raw": "No fitted model. Choose separate window/answer F1 thresholds on fit only, then freeze and report fit plus calibration AUROC/AP/F1.",
+    "nli_lr": "Only 12 frozen NLI probabilities; StandardScaler plus one L2 logistic regression with fixed C=0.1.",
+    "fusion_lr": "The same fixed readout over the unchanged current window score plus the 12 NLI probabilities; report separately as ours.",
+    "crossfit": "Five-fold GroupKFold by source-connected group produces every fit prediction for the two learned readouts. Thresholds use these fit OOF scores. Full-fit readouts predict calibration.",
+    "weights": "Within each training fold, source group, answer and window receive equal nested mass; fit-fold labels supply class balancing. Calibration never affects weights.",
+    "selection": "No C, feature, view, aggregation, fold count, epoch or formula search. Calibration is used once for reporting and never for selection or thresholding."
+  },
+  "current_score_limit": "The current score is a previously fixed development candidate that was selected on this calibration split. Fusion therefore remains a development diagnostic and inherits that upstream selection history; no clean final-test claim is allowed.",
+  "execution_gate": "Run CPU preparation, synthetic check, and three-real-answer wiring check first; obtain code/protocol review before full 793-answer extraction."
+}

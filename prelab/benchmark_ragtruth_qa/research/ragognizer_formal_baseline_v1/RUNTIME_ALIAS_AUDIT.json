@@ -1,0 +1,133 @@
+{
+  "version": "ragognizer-offline-runtime-alias-v1",
+  "status": "ready",
+  "purpose": "offline path resolution only; no model architecture, tensor, head, LoRA, loss, or score change",
+  "base_revision": "meta-llama/Llama-2-7b-chat-hf@f5db02db724555f92da89c216ac04704f23d4590",
+  "base_runtime_path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime",
+  "checkpoint_revision": "F4biian/RAGognizer-Llama-2-7b-chat-hf@2b58ab9aa73f6d499ec72a38ced0976caf78b26f",
+  "checkpoint_runtime_path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime",
+  "adapter_config": {
+    "original_sha256": "4564e39c2aa87355b6a941038478580caec0a489facb7a8a4095f9a17dcf94d4",
+    "runtime_sha256": "817174fb5a4cbd0b6f46628f34f30f59cd6057de5ad47f275fc98b08498f804b",
+    "only_changed_key": "base_model_name_or_path",
+    "original_value": "meta-llama/Llama-2-7b-chat-hf",
+    "runtime_value": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime"
+  },
+  "files": [
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\model-00001-of-00002.safetensors",
+      "source": "prelab\\models\\Llama-2-7b-chat-hf\\model-00001-of-00002.safetensors",
+      "mode": "hardlink",
+      "bytes": 9976576152,
+      "sha256": "66dec18c9f1705b9387d62f8485f4e7d871ca388718786737ed3c72dbfaac9fb"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\model-00002-of-00002.safetensors",
+      "source": "prelab\\models\\Llama-2-7b-chat-hf\\model-00002-of-00002.safetensors",
+      "mode": "hardlink",
+      "bytes": 3500296424,
+      "sha256": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\config.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\config.json",
+      "mode": "exact_copy",
+      "bytes": 614,
+      "sha256": "c904bd84ff892a2a0a454a35a4031914ccb65a82974ac8ab0fe34d3744656fc2"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\generation_config.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\generation_config.json",
+      "mode": "exact_copy",
+      "bytes": 188,
+      "sha256": "4eb769d945b7c9a9d9b5ee0cff40ac23a62e218ac683f87ac68d8ad9cd18dd7f"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\model.safetensors.index.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\model.safetensors.index.json",
+      "mode": "exact_copy",
+      "bytes": 26788,
+      "sha256": "11b694a9d4bffdac71733db7f782be0df1f87a65fb9ef05bcf6d317029c22364"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\special_tokens_map.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\special_tokens_map.json",
+      "mode": "exact_copy",
+      "bytes": 414,
+      "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\tokenizer_config.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\tokenizer_config.json",
+      "mode": "exact_copy",
+      "bytes": 1618,
+      "sha256": "04aaa6eedd97412f3e63dd2493d2388b82347dd512b89192d3e9b4973a176417"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\tokenizer.json",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\tokenizer.json",
+      "mode": "exact_copy",
+      "bytes": 1842767,
+      "sha256": "bcd04f0eadf90287bd26e1a183ac487d8a141b09b06aecb7725bbdd343640f2e"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-base-f5db-runtime\\tokenizer.model",
+      "source": "prelab\\benchmark_ragtruth_qa\\research\\ragognizer_formal_baseline_v1\\official_base_tokenizer_meta_f5db\\tokenizer.model",
+      "mode": "exact_copy",
+      "bytes": 499723,
+      "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\ft_llm\\adapter_model.safetensors",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\ft_llm\\adapter_model.safetensors",
+      "mode": "hardlink",
+      "bytes": 319876032,
+      "sha256": "63dbd3cdb009f2e71cda0d95c92998818b4d4d943cdb64c6ff8f85ca6c3e1abc"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\ft_llm\\hallu_head_neg_16.safetensors",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\ft_llm\\hallu_head_neg_16.safetensors",
+      "mode": "hardlink",
+      "bytes": 20984224,
+      "sha256": "27917e89aee9510979d7dc77fcb668efcb83accefd6067d91ea081d1a4be4ab8"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\ft_llm\\head_configs.json",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\ft_llm\\head_configs.json",
+      "mode": "exact_copy",
+      "bytes": 815,
+      "sha256": "0fb22c85c82f3691779888e641cf7e4269885ef0ae129a6dc883dcf7b3a14cf6"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\ft_llm\\README.md",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\ft_llm\\README.md",
+      "mode": "exact_copy",
+      "bytes": 5103,
+      "sha256": "928e1eadaf37b2847bb0f12e4f7c2b351ddfa71e66d7e0b7a56a9a3d1fe19fa3"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\mlp_config.json",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\mlp_config.json",
+      "mode": "exact_copy",
+      "bytes": 46,
+      "sha256": "725874e285af52e2199daf2aeff76866c6c1a20ca8aabdf1b22358c4659e1ff0"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\mlp_other_data.json",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\mlp_other_data.json",
+      "mode": "exact_copy",
+      "bytes": 133,
+      "sha256": "ffa816bd439bd1dc96462458910d99aae1f0426ac384cf9b13b7d464dde2d5ec"
+    },
+    {
+      "path": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf-offline-runtime\\mlp_state.pt",
+      "source": "prelab\\models\\RAGognizer-Llama-2-7b-chat-hf\\mlp_state.pt",
+      "mode": "hardlink",
+      "bytes": 4264156,
+      "sha256": "a3e027c67e56943f707b9efc9ee41288a21341efdbd33d22ed9e0f5be1b71d4a"
+    }
+  ],
+  "all_learned_files_byte_identical": true,
+  "labels_read": false,
+  "gpu_workload_started": false
+}

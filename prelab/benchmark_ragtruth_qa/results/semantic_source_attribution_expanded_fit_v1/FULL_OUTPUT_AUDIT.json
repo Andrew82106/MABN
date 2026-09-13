@@ -1,0 +1,30 @@
+{
+  "status": "full_cpu_output_audit_passed",
+  "answers": 3046,
+  "scored_microclaims": 25864,
+  "claim_sentence_edges": 390683,
+  "punctuation_only_exclusions": 16,
+  "new_eligible_windows": 485856,
+  "combined_fit_eligible_windows": 653979,
+  "native_formula_sha256": "3e555bdda24dcdca861bc2a5913cf9d4150357c73858100ff5c3d60cdbf0a4ce",
+  "runner_sha256": "924bbea7b59cc17bc7899e2a41c66f92b9d2f99130e08441473f31bb75112462",
+  "files_sha256": {
+    "layouts.jsonl": "e2fcb05279dda21b0332c616af9496c8f36b56ef6d5b17723738d172a9f66a0d",
+    "semantic_units.jsonl": "eb3bbb3657a99c70ddde47427a3fcd45966e7f3ff7ef3e83f446d5afeb010820",
+    "nonlexical_microclaim_exclusions.jsonl": "a4e9b352534cd4682c5a9fd233fea690d45b815c53975014f08248a1eb24bd82",
+    "global_csr_index.npz": "6b7b706ecaa47073e7c2fd20fd17f620cb03e3ce7cfb45c73d44acd34c5b03ac",
+    "PREPARATION.json": "d005a326e59388b8e65b147ba68f9ac09b5d023de5b15da74f9a0dd4e68ce62f",
+    "CPU_SELFCHECK.json": "6434f37735d50179547a9ca0a211faa4646a9c60676bdf52a51d8a114eec4a52",
+    "protocol.json": "55307e4e184fd3c6ff51a7b2b3f440a5c4d7db670ca7121a636b44a14a948912",
+    "signature.json": "0e96a2e9eb2792f7b161c62842a4a436980cb39f456812b7ba0e81d7657b7c97"
+  },
+  "deterministic_prepare_rerun_passed": true,
+  "pycompile_passed": true,
+  "pending_files": 0,
+  "gpu_started": false,
+  "pretrained_model_loaded": false,
+  "labels_used": false,
+  "calibration_opened": false,
+  "official_test_opened": false,
+  "native_cache_modified": false
+}

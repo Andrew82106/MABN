@@ -1,0 +1,16 @@
+{
+  "scope": "All and only7482 frozen candidate rows. Read official30073 training.json and code; no cal/test/model scores, no training/GPU.",
+  "questions": [
+    "Does an explicit diversified/original answer field survive release?",
+    "Are marked corruption coordinates deterministic?",
+    "Do edits supply replacements or only deletion/bare tags?",
+    "Is whole repaired text literally contained in a reference?"
+  ],
+  "semantics": "Edited projection is not automatically an original uncorrupted answer or a factuality certificate. String inclusion is reported as a narrow textual check, absence is not proof of contradiction. No output is a new label/training pair.",
+  "uniqueness": "Coordinates follow markup traversal, never a first str.find. Count node nesting/number of edit tags separately; no claim of uniquely minimal Levenshtein edit or original-history identity.",
+  "sources_sha256": {
+    "raw_training": "5f6422b13b48b3f6fdff7bab4698b3702c90154c10cad519047f58600e6536a7",
+    "fixed_candidate_file": "66f02fd14fbd0fe98ad93133c81d7eb7a84ce1f0b86f33ee3be911daa016b7c1",
+    "existing_parser": "7b78493f4db7ab59855388e053a4ef7d9924687d7abda94f1a706bfa95929643"
+  }
+}

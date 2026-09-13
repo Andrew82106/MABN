@@ -1,0 +1,181 @@
+{
+  "version": "semantic-window-v2-native634",
+  "scope": {
+    "fit": "Native QA fit only: 634 answers in 615 source-connected groups.",
+    "calibration": "159 answers; opened once only after the complete fit freeze.",
+    "expanded_fit": "Not consumed in this native-634 pilot; feature builder is a separate reusable module.",
+    "official_test": "No path or loader for official test exists in this runner.",
+    "formal_baselines": "Read-only hash references; no baseline file is written."
+  },
+  "repair": {
+    "training_unit": "Eligible native 4-original-BPE stride-one window and its unchanged any-error label.",
+    "claim_mapping": "Claim features are averaged by exact lexical-token ownership inside each window.",
+    "disabled": [
+      "conflict-only head",
+      "max(any, conflict)",
+      "semantic add-gate",
+      "claim-score max propagation"
+    ],
+    "answer_score": "Maximum of all eligible window probabilities in the answer."
+  },
+  "features": {
+    "union_width": 71,
+    "blocks": {
+      "whitebox": [
+        "claim_token_weighted_mean__whitebox_max__oof_lookback",
+        "claim_token_weighted_mean__whitebox_max__oof_large",
+        "claim_token_weighted_mean__whitebox_max__generation_nll",
+        "claim_token_weighted_mean__whitebox_mean__oof_lookback",
+        "claim_token_weighted_mean__whitebox_mean__oof_large",
+        "claim_token_weighted_mean__whitebox_mean__generation_nll",
+        "claim_token_weighted_mean__whitebox_min__oof_lookback",
+        "claim_token_weighted_mean__whitebox_min__oof_large",
+        "claim_token_weighted_mean__whitebox_min__generation_nll",
+        "claim_token_weighted_mean__whitebox_std__oof_lookback",
+        "claim_token_weighted_mean__whitebox_std__oof_large",
+        "claim_token_weighted_mean__whitebox_std__generation_nll"
+      ],
+      "attribution": [
+        "claim_token_weighted_mean__attribution_band_0__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_0__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_1__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_1__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_2__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_2__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_3__raw_logmass_mean",
+        "claim_token_weighted_mean__attribution_band_3__raw_logmass_head_std",
+        "claim_token_weighted_mean__attribution_band_0__source_share",
+        "claim_token_weighted_mean__attribution_band_1__source_share",
+        "claim_token_weighted_mean__attribution_band_2__source_share",
+        "claim_token_weighted_mean__attribution_band_3__source_share",
+        "claim_token_weighted_mean__attribution_band_0__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_1__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_2__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_3__strict_previous_answer_share",
+        "claim_token_weighted_mean__attribution_band_0__other_context_share",
+        "claim_token_weighted_mean__attribution_band_1__other_context_share",
+        "claim_token_weighted_mean__attribution_band_2__other_context_share",
+        "claim_token_weighted_mean__attribution_band_3__other_context_share",
+        "claim_token_weighted_mean__attribution_band_0__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_1__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_2__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_3__top1_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_0__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_1__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_2__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_3__top3_sentence_concentration",
+        "claim_token_weighted_mean__attribution_band_0__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_1__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_2__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_3__sentence_relevance_entropy",
+        "claim_token_weighted_mean__attribution_band_0__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_1__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_2__passage_hhi",
+        "claim_token_weighted_mean__attribution_band_3__passage_hhi"
+      ],
+      "nli": [
+        "claim_token_weighted_mean__attribution_top1_nli_entailment",
+        "claim_token_weighted_mean__attribution_top1_nli_neutral",
+        "claim_token_weighted_mean__attribution_top1_nli_contradiction",
+        "claim_token_weighted_mean__attribution_top3_weighted_nli_entailment",
+        "claim_token_weighted_mean__attribution_top3_weighted_nli_neutral",
+        "claim_token_weighted_mean__attribution_top3_weighted_nli_contradiction"
+      ],
+      "geometry": [
+        "geometry__lexical_token_fraction_of_k4",
+        "geometry__ownerless_lexical_fraction",
+        "geometry__log1p_distinct_claims",
+        "geometry__claim_boundary_crossing",
+        "geometry__dominant_claim_owner_mass_fraction",
+        "geometry__mean_claim_fraction_covered",
+        "geometry__dominant_claim_fraction_covered",
+        "geometry__mean_relative_position_in_claim",
+        "geometry__mean_center_distance_in_claim",
+        "geometry__fraction_at_claim_start",
+        "geometry__fraction_at_claim_end",
+        "geometry__fraction_within_two_lexical_tokens_of_start",
+        "geometry__fraction_within_two_lexical_tokens_of_end",
+        "geometry__log1p_dominant_claim_length"
+      ],
+      "local": [
+        "local_clean__lookback_probability",
+        "local_clean__large_probability",
+        "local_clean__generation_nll"
+      ]
+    },
+    "attribution": "Four fixed contiguous eight-layer bands. Raw logmass keeps mean and across-head/layer std; compact routing keeps band means and passage HHI. No learned layer/head selection.",
+    "whitebox": "Frozen 12-D claim summaries. Their fit Lookback/large inputs are upstream group-OOF; calibration inputs are upstream full-fit predictions.",
+    "local_clean": "Optional direct window Lookback/large plus generation NLL. Fit Lookback/large are upstream group-OOF; calibration is full-fit.",
+    "labels_used_to_build_features": false
+  },
+  "candidates": {
+    "variants_in_order": [
+      "whitebox_geometry",
+      "whitebox_attribution_geometry",
+      "whitebox_attribution_nli_geometry",
+      "whitebox_attribution_geometry_local"
+    ],
+    "variant_blocks": {
+      "whitebox_geometry": [
+        "whitebox",
+        "geometry"
+      ],
+      "whitebox_attribution_geometry": [
+        "whitebox",
+        "attribution",
+        "geometry"
+      ],
+      "whitebox_attribution_nli_geometry": [
+        "whitebox",
+        "attribution",
+        "nli",
+        "geometry"
+      ],
+      "whitebox_attribution_geometry_local": [
+        "whitebox",
+        "attribution",
+        "geometry",
+        "local"
+      ]
+    },
+    "widths": {
+      "whitebox_geometry": 26,
+      "whitebox_attribution_geometry": 62,
+      "whitebox_attribution_nli_geometry": 68,
+      "whitebox_attribution_geometry_local": 65
+    },
+    "C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "model": "StandardScaler fitted with hierarchy base weights, then L2 logistic regression/liblinear.",
+    "target": "any-error window only"
+  },
+  "fit": {
+    "crossfit": "Five-fold sklearn GroupKFold on source-connected group_id.",
+    "weights": "Within each fold: group equal, answer equal within group, window equal within answer; one binary-class balance step; no group reset after class balance.",
+    "thresholds": "Window and answer thresholds separately use fit OOF F1, then precision, then higher cutoff.",
+    "selection": "Maximize min(window F1, answer F1), window F1, answer F1, window AP, answer AP, fewer dimensions, smaller C, earlier preregistered variant.",
+    "full_fit": "Only the selected variant/C is refit on all fit windows after selection."
+  },
+  "evaluation": {
+    "strict": "Apply the two frozen fit-OOF thresholds to calibration.",
+    "diagnostic": "Report separate calibration F1-opt thresholds without changing the frozen method.",
+    "references": {
+      "Lookback_common_cal_F1Opt": {
+        "windows": 0.6008821240162587,
+        "answers": 0.8454545454545455
+      },
+      "historical_incumbent_cal_selected": {
+        "windows": 0.6902813989031736,
+        "answers": 0.8910891089108911
+      }
+    }
+  },
+  "seed": 20260913,
+  "cpu_threads": 4,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,36 @@
+{
+  "version": "r31-large-cache-v1",
+  "answers": 602,
+  "raw_Qwen_BPE": 14968,
+  "selection": "Require completed upstream epochs0..6; use its single selected nonzero epoch unchanged. No R16 selection. No unfinished upstream scores read by prepare.",
+  "input": "Unchanged original R16-train control_scene_transfer input IDs, full visible evidence/question/answer, original Qwen BPE offsets and character map. ModernBERT base and large tokenizer files must be byte identical.",
+  "features": "One offline full-answer BF16/eval forward, FP32 parameters; map actual z1-z0 and final hidden1024 independently in FP32. Not native generator states.",
+  "cache": {
+    "hidden.npy": [
+      14968,
+      1024
+    ],
+    "logit.npy": [
+      14968
+    ],
+    "gpu_probability.npy": [
+      14968
+    ],
+    "bounds.npy": [
+      602,
+      2
+    ]
+  },
+  "numerics": {
+    "absolute_tolerance": 2e-06,
+    "relative_tolerance": 0,
+    "anchors": "First and last fixed scene rows: compare hook logits to original no-hook logits path; repeat hidden/logit. Additionally replay first original QA fit row against its selected saved raw-BPE probability.",
+    "prior_large_R16_cache_available": false,
+    "no_claim_of_equality_to_auxiliary_R28_cache": true
+  },
+  "GPU": "Explicit infer only after root authorization and prior GPU process actual exit. Complete manifest alone is not GPU authorization.",
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "official_QA_test_opened": false,
+  "new_training": false
+}

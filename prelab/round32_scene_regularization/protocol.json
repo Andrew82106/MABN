@@ -1,0 +1,44 @@
+{
+  "version": "r32-scene-regularization-v1",
+  "seed": 20261008,
+  "representations": {
+    "base769": 769,
+    "large1025": 1025
+  },
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "alpha": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "new_LR_fits": 20,
+  "reused_LR_models": 10,
+  "PCA_fits": 0,
+  "fit": "Same eligible fit windows, fit-only base-weighted StandardScaler, original group/class weights and mass3854, liblinear max_iter2000; ConvergenceWarning stops run. No refit on fit+cal.",
+  "folds": "Exact R29/R31 five event-group fit/calibration/evaluation sets; only original R16 train metadata.",
+  "choice": "Semantic: C by min(windowF1,answerF1), windowF1, windowPrecision, smallerC. Each prior: joint C/alpha by same first3 criteria then smallerAlpha then smallerC. One candidate shared by two thresholds.",
+  "fusion": "Exact R28 sigmoid(logit(prior)+alpha*logit(semantic)); clip1e-12; alpha0 exact identity; corresponding R26 fold probabilities.",
+  "candidate_counts": {
+    "semantic_per_family_fold": 3,
+    "per_prior_family_fold": 18,
+    "total_calibration_entries": 390,
+    "new_fusion_scores": 240,
+    "reused_fusion_scores": 120
+  },
+  "control": "C=.01 models never refitted; full12222 probability vectors, both thresholds, all6alpha vectors and selected controls must exactly replay.",
+  "metrics": "9526 eligible windows and598 eligible answers; answermax ALL12222 candidate windows;117 safe refusals remain answer0;4 unresolved excluded. Refusal windows not zero-filled.",
+  "freeze": "All10 family-fold candidate/choice sets complete before outer metrics. All30 models retained (10 reused), all390 calibration entries retained. No outer selection.",
+  "scope": "Repeated R16 train602/301questions/278groups; human_gold=false. Not independent human-gold verification or proof the target is solved.",
+  "limits": "Prior folds/representations were exposed. Base auxiliary->QA2 vs large QA-only changes backbone, upstream supervision and width. C search adds calibration selection; no generalization guarantee.",
+  "GPU_used": false,
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "public_QA_test_opened": false
+}

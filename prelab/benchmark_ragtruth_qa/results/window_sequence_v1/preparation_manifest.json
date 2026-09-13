@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "files_sha256": {
+    "standardized_window_features.npy": "a55d2860edd70161f41d6e5ec4098e1b3dd2361f10f6561670c7609d69beb331",
+    "training_weights.npz": "dd34550c42a6cee00ea6bc611ba33a2a18fd27a479fdb1d082f1715d4c72710f",
+    "epoch_chain_order.npy": "dcdeb022bd649f041a3bde17afe08254a41353cabcc8ed63e44bd239768bf160",
+    "scaler.pkl": "bf7e62e01f4ee39dec3d50206176f5755ee4a54b18ed86316a87a953a9d80fd2",
+    "chain_index.json": "4ff7cb3517c35fc0def17710f75d6cbc11cf750787553833906462bf5297f437"
+  },
+  "shape": [
+    210364,
+    1089
+  ],
+  "fit_standardized_design_exact": true,
+  "original_LR_weights_exact": true,
+  "every_fit_window_once_per_epoch": true,
+  "fit_batches_per_epoch": 119,
+  "minibatch_constant": 0.0007078151115552304,
+  "scaler_source_sha256": "c680fba3105aab6fd73c6b6033e38d0cc15d53b3a4978cb2f13b17fbc6c914b8",
+  "PCA_source_sha256": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+  "test_read": false,
+  "gpu_used": false
+}

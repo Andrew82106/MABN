@@ -1,0 +1,85 @@
+{
+  "version": "atomic-evidence-router-v1",
+  "role": "ours development candidate; formal baseline implementations and scores are read-only and untouched",
+  "scope": {
+    "answers": "Original RAGTruth QA development fit634 + calibration159 only.",
+    "claims": "The 9,055 fit and 2,267 calibration lexical microclaims frozen by atomic_microclaim_nli_v1.",
+    "windows": "Unchanged eligible four raw-BPE, stride-one windows; punctuation remains in width.",
+    "official_test": "No official-test path or loader exists in this runner."
+  },
+  "upstream_gate": {
+    "required": "atomic_microclaim_nli_v1 complete.json plus evidence_features.npy, feature_names.json, microclaim_labels.npy and summary.json",
+    "missing_behavior": "Write readiness.json with status WAIT_UPSTREAM, print WAIT, fit nothing, and emit no metric.",
+    "relation_width": 315,
+    "supervised_upstream_prediction_used": false
+  },
+  "views": {
+    "relation": "The upstream frozen raw 315-dimensional evidence/relation feature row for the same microclaim.",
+    "harp": "First 205 coordinates of the existing ascending bottom-256 output-head basis; per claim concatenate mean and signed maximum-absolute-value pooling (410 dims).",
+    "trace": {
+      "nll": "mean, max, min, std, and fraction above the current outer-training-fold 90th percentile",
+      "ghost": "mean, max, std for each of four frozen token columns",
+      "lumina": "mean, max, std for each of seven frozen token columns, including diagnostic probability columns as raw candidate inputs",
+      "geometry": "raw BPE count and midpoint divided by max(answer_BPE_count-1,1)",
+      "width": 40
+    },
+    "labels_used_in_pooling": false
+  },
+  "model": {
+    "view_projections": {
+      "relation": [
+        315,
+        24
+      ],
+      "harp": [
+        410,
+        24
+      ],
+      "trace": [
+        40,
+        16
+      ]
+    },
+    "fusion": "GELU view projections -> concat64 -> Linear64x32 -> GELU -> Linear32x16 -> GELU",
+    "routes": [
+      4,
+      1
+    ],
+    "routing": "softmax(cosine(r, prototype)/0.1); risk=logsumexp(log(route_probability)+route_linear_logit)",
+    "loss": "weighted BCE + 0.25*mean softplus(1-risk_positive+risk_negative)",
+    "pairs": "One deterministic opposite-label mate per training claim where possible; same answer first, then same source-connected group; deduplicate; never cross groups.",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0015,
+      "weight_decay": 0.01
+    },
+    "epochs_fixed_before_results": 120,
+    "gradient_norm_clip": 5.0,
+    "seed": 20261102
+  },
+  "crossfit": {
+    "folds": 5,
+    "group": "source-connected group_id",
+    "standardization": "Per view, outer-training-fold median and IQR; zero IQR becomes 1; transformed values clipped to [-12,12].",
+    "nll_threshold": "Recomputed from only the outer training claims for each fold; full-fit value used only for a gated calibration pass.",
+    "weights": "Equal group mass -> answer mass -> microclaim mass -> binary-class balance -> equal group loss mass.",
+    "thresholds": "Window and answer thresholds chosen once from fit OOF separately for K=4 and K=1."
+  },
+  "stage_gate": {
+    "relation_control": "Best evidence__ candidate's fit-OOF window and answer F1 from the frozen upstream summary; calibration fields are never used by the gate.",
+    "rule": "Open calibration only if K=4 fit-OOF window F1 and answer F1 are each strictly greater than both K=1 and the relation-only control.",
+    "failure": "Save fit-OOF artifacts and a gate-failed report; do not access calibration labels or score calibration.",
+    "calibration_selection": false
+  },
+  "projection": "A lexical BPE inherits all overlapping microclaim risks; every four-BPE window and whole answer take the maximum overlapping risk.",
+  "stages": [
+    "initialize",
+    "self-test",
+    "prepare",
+    "check",
+    "status",
+    "train",
+    "verify"
+  ],
+  "GPU": "Forbidden; every entry asserts CUDA was not initialized."
+}

@@ -1,0 +1,19 @@
+{
+  "source_snapshot_sha256": "f2e38f605eb8fe5eb0a502787db0d046715bfce9e191d8112d6740529d4c497b",
+  "rows": 210364,
+  "fit_rows": 168123,
+  "calibration_rows": 42241,
+  "files_sha256": {
+    "base": "9e8cc4dce2e2e7d6d2c21c71e1b774e59e3a8046a3801c00bdd6a4c8960ba131",
+    "slots": "746a9cb36b9e0abfb7d960cdd3267656d17c4f348a128d73106fa09bd897f45b",
+    "hidden": "32adad18c85724753fe61c36cf6e9160794a5756d450b8067b4928500b8cea20"
+  },
+  "pca_sha256": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+  "pca_sample_count": 20288,
+  "training_windows_subsampled": false,
+  "widths": {
+    "base": 1025,
+    "slots": 520,
+    "hidden": 64
+  }
+}

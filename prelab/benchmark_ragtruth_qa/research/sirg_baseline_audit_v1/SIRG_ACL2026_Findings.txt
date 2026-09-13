@@ -1,0 +1,1223 @@
+             Detecting Hallucinations in Retrieval-Augmented Generation via
+                        Semantic-level Internal Reasoning Graph
+
+               Jianpeng Hu 1 , Yanzeng Li 2 , Jialun Zhong 1 , Wenfa Qi 1 , Lei Zou 1 *
+          1
+            Wangxuan Institute of Computer Technology, Peking University, Beijing, China
+2
+  Institute of Artificial Intelligence and Future Networks, Beijing Normal University, Zhuhai, China
+        jianpeng.hu@outlook.com, liyanzeng@bnu.edu.cn, zhongjl@stu.pku.edu.cn
+                                    {qiwenfa, zoulei}@pku.edu.cn
+
+
+                            Abstract                                                                                        s𝑐,5
+                                                                                                                     It’s the butter
+                                                                                                                                                  s𝑐,11
+                                                                                                                                             Make sure to
+                                                                                                                                           preheat the oven
+                                                                                                  s𝑐,2                 that makes            to the correct                   s𝑐,12
+                                                                         s𝑐,1                "Bear in mind          these cranberry           temperature          The 15 minute guideline
+                                                                                               that your                                                            starts from the point at
+          The Retrieval-augmented generation (RAG)                   how to heat                                        scones so           (220°C / 200°C
+                                                                    frozen baked           response should            tender, light         fan oven / gas        which you put your scones
+                                                                       scones              be strictly based         and delicious.         mark 6) before           in a preheated oven.
+          system based on Large language model (LLM)                                       on the following
+                                                                                            three passages:
+                                                                                                                                              putting your
+                                                                                                                                               scones in.
+          has made significant progress. It can effectively                  0.44
+
+                                                                                            0.11
+                                                                                                                           0.12
+                                                                                                                                                                             0.18
+
+          reduce factuality hallucinations, but faithful-
+                                                                                                                                          0.25
+                                                                              s𝑎,1                                                                                     s𝑎,3
+                                                                                                                         s𝑎,2
+          ness hallucinations still exist. Previous meth-                Based on the
+                                                                      provided passages,         0.14          To heat frozen baked
+                                                                                                                scones, preheat your
+                                                                                                                                        0.26
+                                                                                                                                                         Place the frozen scones on a
+                                                                                                                                                       baking tray lined with parchment
+                                                                      here's how to heat                                                              paper and bake for 15-20 minutes
+          ods for detecting faithfulness hallucinations                  frozen baked
+                                                                            scones:
+                                                                                                               oven to 220°C (200°C
+                                                                                                               fan oven / gas mark 6)
+                                                                                                                                                      or until they are crispy and golden
+                                                                                                                                                                     brown
+          either neglect to capture the models’ internal                                           0.1
+
+
+          reasoning processes or handle those features
+                                                                   Figure 1: Example of a semantic-level internal reason-
+          coarsely, making it difficult for discriminators
+                                                                   ing graph. Yellow nodes represent contextual semantic
+          to learn. This paper proposes a semantic-level
+                                                                   fragments, blue nodes represent semantic fragments of
+          internal reasoning graph-based method for de-
+                                                                   the model’s response, and the weight on the edge in-
+          tecting faithfulness hallucination. Specifically,
+                                                                   dicates the contribution degree of the source semantic
+          we first extend the layer-wise relevance prop-
+                                                                   fragment to the target (with an upper boundary of 1).
+          agation algorithm from the token level to the
+                                                                   The dashed box indicates a hallucinated semantic frag-
+          semantic level, constructing an internal reason-
+                                                                   ment.
+          ing graph based on attribution vectors. This
+          provides a more faithful semantic-level rep-
+          resentation of dependency. Furthermore, we
+          design a general framework based on a small              to the inherent knowledge bias of the internal pa-
+          pre-trained language model to utilize the depen-         rameters of LLMs, the generated content of RAG
+          dencies in LLM’s reasoning for training and              may be inconsistent with the context provided by
+          hallucination detection, which can dynamically           users (Lyu et al., 2024), leading to faithfulness
+          adjust the pass rate of correct samples through
+                                                                   hallucinations. He et al. (2022) has found that
+          a threshold. Experimental results demonstrate
+          that our method achieves better overall per-             faithfulness hallucinations arise primarily from the
+          formance compared to state-of-the-art base-              inconsistency between LLMs’ word-level output
+          lines on RAGTruth and Dolly-15k. Implemen-               and true thought process, meaning that LLMs only
+          tation available here: https://github.com/hk-            utilize surface knowledge, such as entity popular-
+          hp/SIRG/tree/main.                                       ity (Lehmann et al., 2025), during reasoning.
+                                                                      To detect faithfulness hallucinations, both Man-
+  1       Introduction                                             akul et al. (2023) and Zhao and Zhang (2025) pro-
+                                                                   pose post-processing methods with LLMs. How-
+  LLMs easily generate grammatically coherent but
+                                                                   ever, multiple invocations of the LLM system can
+  factually incorrect outputs, a phenomenon com-
+                                                                   lead to significant resource consumption and am-
+  monly referred to as “hallucination” (Mishra et al.;
+                                                                   plification of model bias. Other scholars (Chen
+  Zhang et al., 2024; Li et al., 2023). Post-learning
+                                                                   et al., 2025; Wu et al., 2024; Burns et al., 2022)
+  for downstream tasks or introducing the RAG sys-
+                                                                   assess hallucinations based on the internal embed-
+  tem (Lewis et al., 2020) can mitigate the factuality
+                                                                   ding of the model, which often relies on heuristic
+  hallucinations to some extent, which refer to the
+                                                                   discrimination trained on these abstract features,
+  tendency of LLMs to produce outputs that are in-
+                                                                   resulting in poor interpretability. Hu et al. (2024);
+  consistent with real-world facts. However, due
+                                                                   Chuang et al. (2024) detect hallucinations from the
+      *    Corresponding author                                    perspective of output attribution, but their direct ac-
+                                                              27826
+                      Findings of the Association for Computational Linguistics: ACL 2026, pages 27826–27841
+                                   July 2-7, 2026 ©2026 Association for Computational Linguistics
+cumulation of all token-level attribution vectors for    each response node and attribution dependency in
+LLMs’ responses will introduce substantial noise         the internal reasoning graph, concatenate them into
+(as shown in Appendix A).                                a prompt, and input it to downstream pretrained
+   To better explain the origin of faithfulness hallu-   language models (PLM) for fine-tuning in binary
+cinations, motivated by Phukan et al. (2024), we di-     classification tasks. In the hallucination detection
+vide the tokens generated during the autoregressive      phase, we determine hallucination based on the bi-
+reasoning of LLMs into linking and substantive to-       nary classification label distribution of all semantic
+kens. Unlike the original concept, we define linking     fragments in the LLM-generated text. The entire
+tokens as non-substantive text in LLM-generated          process relies solely on the model with a small
+responses that serve to connect contextual infor-        number of parameters.
+mation, whereas substantive tokens refer to text            In summary, our contributions mainly include:
+that utilizes the contextual information provided
+by users and reflects the semantic content of the            • We extend token-level LRP to the semantic
+responses. We consider that hallucinations origi-              level and propose a method for construct-
+nate from LLM mistakenly generating substan-                   ing semantic-level internal reasoning graph
+tive tokens as linking, which manifests on the                 of LLMs.
+surface as generation based on entity popularity.
+Visual analysis from the perspective of attribution          • We analyze faithfulness hallucinations from
+score distribution can reveal which substantive to-            the distribution differences between linking
+kens LLMs treat as linking tokens, and these dif-              and substantive fragments and utilize internal
+ferences are difficult to detect from a human per-             reasoning graphs to detect them.
+spective because of semantic drift. Specifically,
+                                                             • The experimental results on two general
+linking tokens rely more on words generated ear-
+                                                               datasets demonstrate that the performance of
+lier within the same sentence, whereas substantive
+                                                               our framework surpasses previous baselines.
+tokens also depend on words in the long-distance
+context (detailed in Appendix B).                        2    Related Work
+   Since faithfulness hallucinations typically occur
+at the semantic level, we extend the aforementioned      Hallucination Detection LLMs often produce
+concepts to this level and detect faithfulness hallu-    content that is grammatically correct but semanti-
+cinations by our proposed semantic-level internal        cally conflicts with real-world or contextual knowl-
+inference graphs, which can faithfully construct         edge, known as hallucinations (Huang et al., 2025).
+the dependency of the linking and substantive frag-      Hallucinations widely exist in downstream rea-
+ments. Specifically, we first employ Layer-wise          soning (Vu et al., 2024; Li et al., 2024). Ex-
+relevance propagation (LRP) to calculate the score       isting hallucination detection methods mainly in-
+vector attributed to each token during the autore-       clude: (1) LLMs-based post-verification methods,
+gressive process. This attribution method, which         which detect hallucinations by using multi-agent
+utilizes internal model parameters and predefined        systems (Nguyen et al., 2025), multiple rounds
+rules, faithfully reflects the true computational pro-   of self-criticism (Mündler et al., 2024), or consis-
+cess within the model. According to the token-level      tency of multiple generations (Kuhn et al.); (2)
+attribution vectors, we model the attribution rela-      representation-based methods, which identify ab-
+tionship between contextual semantic fragments           normal states through model hidden states (Bhatia
+and those of LLM’s response, forming the internal        et al., 2025), outputs of attention modules (Simhi
+reasoning graph, as illustrated in Fig. 1. We can        et al., 2024), semantic alignment rates (Huang et al.,
+observe that the semantic fragments with halluci-        2023), etc.; (3) task-specific methods, including
+nations assign higher attribution scores to previ-       fine-tuning (Bergeron et al., 2025) or designing
+ously generated semantic fragments in the model’s        task-specific features (Guerreiro et al., 2023). Most
+autoregressive reasoning, while showing weaker           of the aforementioned methods rely on explicit rea-
+dependency on the context provided by the user.          soning or uninterpretable feature spaces, which
+LLM mistakenly treats substantive fragments as           may fail to detect semantic biases within the model.
+linking during the reasoning process, leading to the     Our framework focuses more on faithfully model-
+hallucination phenomenon.                                ing the true reasoning dependencies within LLMs
+   Based on the above observation, we linearize          and training a lightweight detector based on them.
+                                                    27827
+Faithful Attribution Our method, grounded in                   determine whether Ai contains hallucinations:
+additive interpretability theory (Agarwal et al.,
+2021), decomposes model predictions into a sum                 P (Li |Qi , Cj ) = Pθ (Ai |Qi , Cj )Pγ (Li |Qi , Cj , Ai )
+of contributions from each input, analyzing the sig-                                                                 (2)
+nificance of source tokens to target tokens based              where label Li indicates whether the sample ex-
+on contribution scores. Perturbation-based method              hibits hallucinations. The framework of our
+is the most classic attribution algorithm, including           method is shown in Fig. 2.
+SHAP (Lundberg and Lee, 2017), LIME (Ribeiro
+                                                               3.2   Contribution Score Calculation
+et al., 2016), AtMan (Deiseroth et al., 2023), etc.
+These methods exhibit significant computational                The LRP algorithm is used to calculate the contri-
+complexity in the application of LLMs. For the                 bution score. The basic assumption of LRP is that
+transformer architecture, some scholars utilize at-            a function fj with N input features x = {xi }N i−1
+tention mechanisms (Abnar and Zuidema, 2020;                   can be decomposed into independent contributions
+Chefer et al., 2021) to capture causal relationships.          of a single input variable Ri←j , representing the
+However, these methods lack category specificity               amount of output j that can be attributed to input
+and cannot faithfully interpret the final predictions.         i. When these contributions are added up, they are
+Based on an improved backpropagation method,                   proportional to the original function value.
+the propagation rules are customized between lay-
+                                                                                               N
+                                                                                               X
+ers to trace back from the model output to the in-
+                                                                             fj (x) ∝ Rj =          Ri←j             (3)
+put. Classic methods include Input × Gradient (Si-
+                                                                                                i
+monyan et al., 2013), LRP (Bach et al., 2015; Voita
+et al., 2021), SmoothGrad (Smilkov et al., 2017),              The decomposition property of LRP leads to an
+etc. AttenLRP (Achtibat et al., 2024) employed in              important conservation property (Achtibat et al.,
+this paper is an improved backpropagation method               2024), which ensures that the sum of all contribu-
+that can effectively handle nonlinear relationships.           tion scores in each layer remains constant. This
+                                                               feature allows for meaningful and faithful attribu-
+3   Methodology                                                tion, as the scale of each contribution score can be
+                                                               associated with the output of the original function.
+3.1 Task Formulation                                              In the generation stage, when generating each
+                                                               token ak , the generator simultaneously outputs a
+                    |D|
+Let D = (Qi , Ai )i=1 denote a RAG dataset consist-            correlation vector ⃗rk based on internal gradients
+ing of |D| samples, where each sample pair com-                and predefined LRP rules (see Appendix C for de-
+prises a user query Qi and its corresponding answer            tails), which is used to quantify the correlation
+Ai . Each answer is based on contexts retrieved                between ak and each contextual token Cj . By ag-
+                                      |C|
+from a knowledge base C = {Cj }j=1 , where Cj                  gregating all correlation scores ⃗rk of a token during
+represents a text block. Given a question Qi , a re-           the generation process, we can obtain a correlation
+trieval model parameterized by ϕ first retrieves the           matrix Ri .
+most relevant text blocks from C to form a prompt,
+which is then input into a generative model pa-                3.3   Internal Reasoning Graph Construction
+rameterized by θ to generate the answer Ai . The               Due to potential semantic biases in the model dur-
+complete process of RAG is defined as follows:                 ing training, which is caused by the solidification of
+                                                               pre-trained corpora and the prejudice of the model,
+P (Ai |Qi ) = Pϕ (Cj |Qi )Pθ (Ai |Qi , Cj )                    the semantic meaning of certain words understood
+                    n
+                    Y                                          by LLMs may differ from their meaning in the
+Pθ (Ai |Qi , Cj ) =    Pθ (ak |a1 , · · · , ak−1 ; Cj ; Qi )   real world. This results in a gap between the rea-
+                     k=1                                       soning process understood by humans based on
+                                                       (1)     chain-of-thought and the reasoning process actu-
+                                                               ally intended by LLMs. That is, there are some
+where n is the total number of tokens in the target            thinking outputs that cater to human preferences,
+answer Ai . Cj represents the context retrieved by             while the model’s true reasoning process does not
+the retriever in the RAG system based on Qi . We               rely on these thinking outputs or follow thinking
+introduce a discriminator parameterized by γ to                shortcuts. The correlation matrix Ri calculated in
+                                                         27828
+    Input                   Contribution Score Calculation                                                      Internal Reasoning Graph Construction                                              Hallucination Discrimination
+                   Fragments                                                        Entities                                                                                                             s𝑐,1     s𝑐,2           s𝑐,3    s𝑎,1
+                           𝑠1                   Entity                 𝑠1          e1 e5 e6 …
+                                              Extraction                                                                                                                                                 s𝑐,1     s𝑐,2           s𝑎,1    s𝑎,2
+                           𝑠2                   Tools                  𝑠2          e1 e2 e4 …
+
+
+
+
+                                                                                                                                                                                                                         …
+                                                                       …
+                        …
+
+
+
+
+                                                                                     …
+    Context
+                          𝑠𝑚                                           𝑠𝑚          e3 e5 e7 …                                                                                                            s𝑐,4     s𝑐,5           s𝑎,3    s𝑎,4
+     Text 1
+
+     Text 2                                                                Contribution Score                                                                                                                            PLM
+                                     LLM
+     …
+
+
+
+
+                                                                                                                                                                                                         𝑙𝑎,1       𝑙𝑎,2          …     𝑙𝑎,4
+
+
+    Question       𝑡1           𝑡2       𝑡3        …𝑡           𝑛                                                                                                                                                           𝑙𝑎
+
+
+      Layer-wise Relevance Propagation                                                         Briefly answer
+                                                                                                                      There is 39 percentage        There is 28 percentage       In case the passages
+               1           (1,2)
+                          R 1←4
+                                                   4                                                                   chance of rain and 10         chance of rain and 5
+                                                                                                                                                                                  do not contain the
+                                                                                               the following                                         mph winds from the                                     Then make a video,
+                                                                                                                        mph winds from the
+     The                                                    (2,3)
+                                                                                                  question:
+                                                                                                                         North-Northwest.             North-Northeast.          necessary information        and upload it to
+                                                           R 4←7                                                                                                               to answer the question,
+               2                                                       7                                                                       how to upload a                     please reply with:
+                                                                                                                                                                                                                YouTube.
+                                                                                                                                                                                                                                   Internal
+                          (1,2)
+                        R 2←5                  5        (2,3)
+                                                       R 5←7                                                                                    video to steam
+     winds
+                                                                             (3)
+                                                                            R 7 = 𝑓(𝑥)                                                                                                                                             Reasoning
+                                      (1,2)
+
+               3
+                                     R 3←5
+                                               6               (2,3)
+                                                           R 6←7
+                                                                                                   The winds are
+                                                                                                   blowing at 10
+                                                                                                                                    Based on the given
+                                                                                                                                     passages, here are
+                                                                                                                                                                        Create a YouTube                   Upload your             Graph
+                                                                                                                                                                       account if you don't                 video to
+      are                                                                                          mph from the                     the steps to upload
+
+     …                   (1,2)
+                        R 3←6                                                                      north-northwest.                  a video to Steam:
+                                                                                                                                                                        already have one.                   YouTube
+
+
+
+
+Figure 2: The framework of our method. LRP is first applied to derive a relevance distribution Ri based on the
+parameters of the LLM. Based on Ri of entities and semantic fragments of input and output content, a semantic-level
+internal reasoning graph of LLMs is constructed. Subsequently, a PLM is used to determine whether each fragment
+exhibits semantic conflicts or omissions. Finally, the degree of hallucination occurring in the reasoning graph units
+is used to determine whether the model’s overall response exhibits hallucinations.
+
+
+the previous step using the LRP is a token-level                                                                                significant amount of noise. To distinguish between
+attribution matrix that is faithful to the internal                                                                             semantic fragments that contain rich semantic infor-
+reasoning process of the model. Therefore, the in-                                                                              mation and meaningless content, we use a general
+ternal reasoning graph constructed based on Ri can                                                                              named entity extraction tool (Spacy and Stanze)
+faithfully reflect which contextual semantic frag-                                                                              to extract entities from the document to the great-
+ments a certain semantic fragment originates from                                                                               est extent possible. The extracted content includes
+during the internal inference of the model.                                                                                     nouns, verbs, noun phrases, negation words, and
+   We first recursively use “\n” and sentence tool                                                                              named entities, which can maximize the reflection
+of Spacy to segment the input context into indi-                                                                                of the semantic meaning expressed in the text while
+vidual semantic fragments, thereby obtaining a                                                                                  filtering out linking content. The set of extracted
+set Sc = {sc,1 , sc,2 , · · · }, where each sc,i repre-                                                                         results, after removing duplicates, is considered the
+sents the ith semantic fragment in that context.                                                                                core content E = {e1 , e2 , · · · } that expresses se-
+For the model’s output, we similarly use “\n” to                                                                                mantic information in the text. Finally, by mapping
+segment, obtaining a set of semantic fragments                                                                                  the set E to each element in the semantic fragment
+Sa = {sa,1 , sa,2 , · · · } contained in one response                                                                           set S, we can obtain the subset of actual meaning
+from the model. The union of these semantic frag-                                                                               Esi = {e} contained in each semantic fragment.
+ments, denoted as S = Sc ∪ Sa , serves as the node                                                                                 In each target semantic fragment si , we only se-
+set of the model’s internal reasoning graph, that is,                                                                           lect tokens contained in Esi to calculate its attribu-
+the set of atomic steps for model inference.                                                                                    tion vector relative to the preceding text. Then, we
+   As mentioned above, the text within a seman-                                                                                 average all the selected correlation vectors element
+tic fragment includes both linking content used to                                                                              by element to obtain the token-level attribution vec-
+connect contexts and make them grammatically                                                                                    tor of the semantic segment relative to the preced-
+correct, and substantive content that specifically                                                                              ing text. For the attributed semantic fragment sj in
+reflects the actual meaning and thought expressed                                                                               the preceding text, we select the maximum value
+in the text. When calculating attribution at the frag-                                                                          of tokens contained in Esj in the attribution vector
+ment level based on LRP, the attribution scores                                                                                 of si as the score of si ’s attribution to sj . When
+calculated for these linking fragments introduce a                                                                              attributing, si often only attaches to a small number
+                                                                                                                 27829
+of tokens with actual meaning in the preceding text.       Adaptive Method The distribution of attribution
+Using an average function can dilute the high cor-         scores calculated often exhibits a long-tail char-
+relation information in sj due to fragment length.         acteristic. To select edges adaptively, we arrange
+Therefore, we use a maximum function to aggre-             the attribution scores in descending order and cal-
+gate the correlation vectors:                              culate the discrete gradient of the sequence. The
+                                 X                        maximum discrete gradient point is used to distin-
+                        1                                 guish between important and unimportant source
+              
+               max   (                   ⃗re,w )
+              
+               w∈sc,j |Esa,i |
+                                                           semantic fragments. Assuming that v1 ≥ v2 ≥
+              
+                               e∈E s
+              
+              
+                                      a,i
+                                                           · · · ≥ vnc +na is the non-increasing ordering of
+              
+                       sa,i ∈ Sa , sc,j ∈ Sc
+              
+                                                          elements in Wsa,i , where each v1 is mapped one-to-
+ Wsa,i ,s∗,j = max ( 1            X               (4)
+                                         ⃗re,w )          one with s∗,i using the function f (·), then the set
+              
+              w∈sa,j |Esa,i |
+              
+                               e∈Esa,i                    of incoming edges for node sa,j can be represented
+              
+              
+              
+                                                          as follows:
+              
+                       sa,i , sa,j ∈ Sa , i > j
+              
+              
+                    0 sa,i , sa,j ∈ Sa , i ≤ j             m = arg       max       (Wsa,j ,f (vi ) − Wsa,j ,f (vi+1 ) )
+                                                                     1≤i≤nc +na −1
+
+where ⃗re,w represents the element associated with         Ea,j = {(s∗,i , sa,j )|s∗,i ∈ f (vk ), 1 ≤ k ≤ m}
+token w in the vector corresponding to entity e in                                                                (6)
+the matrix Ri . s∗,j serves as a generalized expres-
+sion for sa,j or sc,j . If the entity consists of multi-      The union of the incident edge sets of all nodes
+ple tokens, the average of the vectors correspond-         forms the edge set E = {Ea,j |1 ≤ j ≤ na }.
+ing to these multiple entities is taken. Through this      3.4   Hallucination Discrimination
+step, we can obtain the semantic-level correlation
+matrix W ∈ Rna ×(nc +na ) , where each element             As depicted in Fig. 1, in the attribution nodes of
+Wi,j represents the influence degree of the jth se-        hallucinated semantic fragments, a higher propor-
+mantic fragment on the ith. As shown in Fig. 2,            tion of attribution is allocated to the previous se-
+since subsequent semantic segments do not have             mantic fragment answered by the model; whereas
+an attributive influence on preceding semantic seg-        the attribution nodes of non-hallucinated semantic
+ments, this matrix is a lower triangular matrix from       fragments tend to be more related to the contex-
+column na to column nc + na .                              tual corpus provided by the user, indicating that
+   The internal reasoning graph G = {V, E} is              they are more faithful to the context provided by
+a directed graph that faithfully reflects the depen-       humans. Therefore, an important reason for the
+dency relationships between semantic fragments             occurrence of hallucination is that the model treats
+during the internal inference process of the model.        the next generated semantic fragment as linking
+The nodes of the graph, V = Sc ∪ Sa , represent            content, rather than as substantive content.
+the semantic fragments obtained from the previous             To enable the model to discover the attribution
+context. The edges are associated through the at-          distribution differences and semantic differences
+tribution scores between semantic fragments. The           in these contextual dependencies, we linearize the
+weight of each edge is the normalized attribution          inference graph into multiple semantic combina-
+score. Based on the semantic-level correlation ma-         tions. Specifically, for each semantic fragment sa,j
+trix, we propose two methods for constructing intra-       answered by the model, we concatenate all its in-
+inference graphs:                                          coming edges to form a prompt, and feed it into
+                                                           a pre-trained language model (PLM) to obtain the
+Top k method This strategy first ranks the at-             label la,j :
+tribution scores calculated for the target semantic
+fragments from highest to lowest, then selects the               la,j = P LM ({s∗,i |s∗,i ∈ Ea,j } ⊕ sa,j )       (7)
+top k fragments as the source, and inserts edges
+from the source to the target semantic fragments in           In this paper, we utilize the ALIGNSCORE (Zha
+the graph. The set of incoming edges for node sa,j         et al., 2023), which is based on the RoBERTa archi-
+can be represented as:                                     tecture (Liu et al., 2019), as the PLM for training,
+                                                           and employ its binary classification inference head
+ Ea,j = {(s∗,i , sa,j )|T opk(Wsa,j ,s∗,i ), s∗,i ∈ V }    for hallucination discrimination. ALIGNSCORE
+                                                     (5)   has undergone pretraining on a vast amount of data,
+                                                      27830
+focusing on the degree of information alignment         Prompt (Niu et al., 2024) Through prompt engi-
+between two arbitrary segments. Therefore, by           neering, we manually design LLM (Llama-7b and
+simply fine-tuning it with the downstream cross-        GPT-3.5-turbo) prompts to identify hallucinations.
+entropy loss function, it can exhibit strong halluci-
+                                                        SelfCheckGPT (Manakul et al., 2023) Self-
+nation detection capabilities. Ultimately, we em-
+                                                        CheckGPT is employed to assess the consistency
+ploy a flexible threshold α to determine whether
+                                                        between sampled responses, calculating the proba-
+the entire model response exhibits hallucinations.
+                                                        bility of hallucination.
+If the proportion of semantic fragments containing
+hallucinations in the model response exceeds α,         Fine-tune (Niu et al., 2024) We fine-tune Llama-
+then the model response is considered to exhibit        7b and Qwen-7b on the corresponding dataset to
+hallucinations. Formally, it can be expressed as        detect hallucinations.
+follows:
+                   Pna                                  EigenScore (Chen et al., 2024) This method uti-
+                     j=1 I[la,j = 0]                    lizes the eigenvalues of the response covariance
+           la = I[                   ≤ α]         (8)
+                          na                            matrix to measure semantic consistency in the em-
+                                                        bedding space.
+where I denotes an indicator function. This pa-
+per aligns with previous research, where la = 1         SEP (Kossen et al., 2024) A linear probe trained
+signifies a correct model response, indicating the      on the hidden states of LLMs is utilized to detect
+absence of hallucination, and la = 0 denotes an         hallucinations.
+incorrect model response, indicating the presence       LRP4RAG (Hu et al., 2024) This is a method
+of hallucination. When α = 0, it means that any         based on LRP, which directly feeds the contribution
+semantic fragment in the model response that is         scores to SVM classifiers or LLMs for hallucina-
+suspected of being hallucinatory will result in the     tion detection.
+entire response being classified as hallucination. In
+practice, the value of α can be adjusted based on       4.3   Main Results
+the required level of model reliability for specific    We employ 3 evaluation metrics to compare SIRG
+scenarios.                                              with 9 state-of-the-art baselines on RAGTruth and
+                                                        Dolly-15k, with some results directly sourced from
+4   Experiments                                         Hu et al. (2024).
+4.1 Datasets                                               Table 1 shows the comparison results on
+                                                        RAGTruth. SIRG has strong performance across
+We conducted experiments using RAGTruth (Niu            all metrics, even outperforming high-resource-
+et al., 2024) and Dolly-15k (Conover et al., 2023).     consumption methods such as LLMs fine-tuning.
+RAGTruth is a manually annotated RAG sample             On RAGTruthLlama-7B and RAGTruthLlama-13B ,
+set generated by various LLMs. The Llama-7B             SIRG ranks first with the highest F1, achieving im-
+part we used contains 510 hallucination samples         provements of 3.07% and 5.78% over the currently
+and 479 normal samples, while the Llama-13B part        most advanced methods respectively. Prompt-
+contains 399 hallucination samples and 590 nor-         based and self-validation-based methods (Self-
+mal samples. Dolly-15k is a large model question-       CheckGPT) rely on pre-trained LLMs by design-
+answering dataset covering multiple scenarios. We       ing prompts to enable single or multiple rounds of
+only used the closed question-answering scenar-         self-correction, which makes them highly unsta-
+ios oriented towards the RAG framework and fil-         ble. Switching LLMs or prompts can significantly
+tered out samples with empty contexts. Consistent       impact downstream tasks. For example, using dif-
+with Hu et al. (2024), GPT-4 is used to compare         ferent prompts with the same gpt-3.5-turbo resulted
+model outputs with standard answers to annotate         in a 44.89% difference in recall. Although gpt-3.5-
+the dataset.                                            turbo achieves 92.54% recall in the SelfCheckGPT
+                                                        framework, its precision drops to 53.27%, indi-
+4.2 Baselines
+                                                        cating that LLMs blindly classify most samples
+Detailed implementation of our method (SIRG) is         as correct. This demonstrates that relying solely
+provided in the Appendix D. We compare SIRG             on pre-training knowledge is insufficient for accu-
+with the following baselines:                           rate hallucination detection. The Fintune approach
+                                                   27831
+ Model                       Precision   Recall   F1               Model          Precision   Recall    F1
+                     RAGTruthLlama-7B
+                                                                                  DollyQwen2.5-3B
+ Promptllama-7b              52.64%      76.08%   62.23%
+ Promptgpt-3.5-turbo         56.91%      47.65%   51.87%           Prompt         58.41%      24.98%    34.99%
+ SelfCheckGPTllama-7b        53.32%      83.53%   65.09%           SelfCheckGPT   67.32%      32.47%    43.88%
+ SelfCheckGPTgpt-3.5-turbo   53.27%      92.54%   67.62%           EigenScore     68.88%      64.58%    66.66%
+ Fintunellama-7b             62.50%      65.75%   63.58%           SEP            77.94%      79.19%    78.56%
+ Fintuneqwen2-7b             61.76%      64.34%   61.90%           LRP4RAGLLM     80.55%      82.91%    81.71%
+ EigenScore                  −           74.69%   66.82%
+ SEP                         −           74.77%   66.27%           SIRG (Ours)    72.10%      95.49%    82.17%
+ LRP4RAGLLM                  71.18%      75.78%   73.54%
+                                                                                  DollyQwen2.5-7B
+ SIRG (Ours)                 73.64%      79.83%   76.61%
+                     RAGTruthLlama-13B                             Prompt         61.46%      47.23%    53.36%
+                                                                   SelfCheckGPT   67.32%      32.47%    43.88%
+ Promptllama-7b              41.02%      56.64%   47.58%
+ Promptgpt-3.5-turbo         47.58%      44.36%   45.91%
+                                                                   EigenScore     58.57%      70.03%    63.79%
+ SelfCheckGPTllama-7b        43.66%      75.94%   55.44%           SEP            76.36%      77.59%    76.97%
+ SelfCheckGPTgpt-3.5-turbo   43.01%      89.47%   58.10%           LRP4RAGLLM     79.60%      82.20%    80.80%
+ Fintunellama-7b             62.50%      27.92%   37.62%
+ Fintuneqwen2-7b             63.55%      25.93%   35.89%
+                                                                   SIRG (Ours)    84.21%      96.00%    89.71%
+ EigenScore                  −           67.15%   66.37%
+ SEP                         −           65.80%   71.59%      Table 2: Overall precision, recall, and F1-score on
+ LRP4RAGLLM                  77.14%      74.58%   75.86%      Dolly-15k with Qwen2.5-3B and Qwen2.5-7B.
+ SIRG (Ours)                 78.48%      85.51%   81.84%
+
+Table 1: Overall precision, recall, and F1-score on           the Dolly-15k dataset. For the threshold-based
+RAGTruth with Llama-7B and Llama-13B.                         benchmark model, we provide its optimal thresh-
+                                                              old parameters. Since the content generated
+                                                              by the LLM each time is random, fine-tuning
+trains LLMs using specific RAGTruth data samples,             to fit fixed responses is pointless in this sce-
+yet its average performance remains only 62.74%               nario. On DollyQwen2.5-3B and DollyQwen2.5-7B ,
+and 36.75%. We attribute this to the insufficient             SIRG achieved F1 scores of 82.17% and 89.17%
+training data scale, which may inadvertently dis-             respectively, surpassing the state-of-the-art method
+rupt the general knowledge acquired through fine-             LRP4RAG. Due to the more unstable response of
+tuning. Consequently, the fine-tuning outcomes are            Qwen2.5-3B compared to Qwen2.5-7B, SIRG per-
+inferior to those of direct Prompt-based methods.             forms better on Qwen2.5-7B than on Qwen2.5-3B.
+Both EigenScore and SEP are methods based on
+vector space discriminators that lack direct contex-          4.4     Faithfulness of LRP-based Internal
+tual semantic information, making it difficult to                     Reasoning Graph
+adequately identify hallucination. LRP4RAG em-                To verify the faithfulness of the internal inference
+ploys token-level aggregation of attribution vectors          graph constructed by SIRG, the same perturbation
+generated by the LRP algorithm to derive contex-              tests as (Bakish et al., 2025) are employed (detailed
+tual relevance for model responses, representing a            in Appendix E).
+coarse-grained approach. This method introduces                  We implement token-level blocking of semantic
+excessive noise of linking text, resulting in sub-            fragments in ten sequential steps based on their
+optimal performance during classifier training or             relevance, with results presented in Fig. 3. When
+discriminative tasks using LLMs. Our approach                 adding the semantic fragment deemed most rele-
+also employs the LRP algorithm, but it enhances               vant by LRP, the most significant changes are ob-
+the processing of substantive information in re-              served in the decrease of (y0 −yp )2 and the increase
+sponse texts by filtering out semantic noise and              of loghtsk , indicating that this semantic fragment
+formally modeling it as a reasoning graph. This               plays a pivotal role in LLM’s computational pro-
+facilitates easier training of the downstream dis-            cess. After pruning semantic fragments based on
+criminator while helping humans understand the                relevance scores, those with lower relevance to the
+decision-making process of LLMs. See Fig.9 in                 target exhibit negligible impact on both (y0 − yp )2
+Appendix B for details of the example.                        and loghtsk , whereas highly relevant fragments
+   Table 2 presents the comparative results of                demonstrate substantial effects post-pruning. This
+                                                           27832
+                                                           Figure 4: Overall precision, recall, and F1 score of
+                                                           Llama-13B on RAGTruth are evaluated by setting dif-
+                                                           ferent α values.
+
+                                                            Top           1        5        10       15       20      Ada
+                                                            Precision   79.35%   82.46%   85.71%   83.12%   82.27%   78.98%
+                                                            Recall      84.82%   87.58%   91.03%   91.72%   89.65%   85.51%
+                                                            F1          82.00%   84.94%   85.71%   87.21%   85.80%   82.11%
+
+
+Figure 3: Perturbation tests on RAGTruth with Llama-       Table 3: Overall precision, recall, and F1 score of
+7B. (y0 − yp )2 indicates the change of final embeddings   Llama-13B on RAGTruth are evaluated by setting dif-
+before and after perturbation, while logitsk represents    ferent T opk. Ada denotes the gradient-based adaptive
+the average probability of the target semantic fragment.   construction strategy referred in Equation 6.
+The dashed line shows the curve state after random
+addition or pruning. Perturbation tests are conducted on
+100 samples and mean of the above indicators are took.     scenarios, we can dynamically adjust α based on
+                                                           the desired pass rate for correct samples.
+                                                              For the construction of the internal reasoning
+shows that our algorithm can effectively identify          graph, we regulate the number of source seman-
+the source semantic fragment, which has a signifi-         tic fragments by setting different T opk values.
+cant impact on the target semantic fragment. If the        The performance of discriminators trained using
+importance of contributions is randomly assigned,          graphs generated by various construction strate-
+the result curve should change gradually with ad-          gies is demonstrated in Table 3. As the number
+dition or pruning. Compared with the standard              of source semantic fragments increases, the dis-
+curve of random addition or pruning, our method            criminator can obtain more semantic information.
+demonstrates a significant AU C advantage. For             Consequently, the discriminators’ F1 score progres-
+quantitative comparison of this curve, please refer        sively improves during the initial training phase,
+to the work of Bakish et al. (2025).                       reaching its peak at k = 15. An increase in k will
+                                                           introduce edge contribution noise into the target se-
+4.5 The Impact of Hyperparameters                          mantic fragment, meaning many low-contribution
+For the classifier of SIRG, we focus on exploring          semantic fragments are mistakenly fed to the dis-
+the impact of α in Equation 8. When α = 0, as              criminator for training. The discriminator may mis-
+long as there is one hallucinated semantic frag-           interpret the conflict between insignificant semantic
+ment, this response will be judged as a hallucinated       fragments and target semantic fragments as halluci-
+sample, representing the strictest hallucination de-       nation, resulting in inferior performance at k = 20
+tection strategy. As shown in Fig. 4, at this point,       compared to k = 15. For the adaptive discrete gra-
+SIRG has a relatively low recall for correct samples       dient strategy, it tends to only select 1 or 2 source
+but a high precision in identifying hallucinations.        semantic fragments. Without sufficient informa-
+As the value of α increases, the detection strategy        tion, the discriminator’s performance is limited.
+becomes increasingly lenient, so the pass rate for
+                                                           4.6    Computation Latency
+correct samples rises. When α = 0.4, the recall
+for correct samples reaches 100%, but the preci-           As shown in Table 4, we test the average computa-
+sion decreases to 72.86%. Although adjusting α             tion latency of Prompt, SelfCheckGPT, LRP4RAG,
+greatly impacts recall and precision, it has a rel-        and SIRG(ours) on 100 samples using the A100
+atively weak effect on the F1 score. In different          graphics card. The first row represents the model
+                                                      27833
+                                                              Results     Only noun   Only verb   Only adj/adv   All text      0.33       0.66   Original
+ FrameWork     Prompt   SelfCheckGPT   LRP4RAG   SIRG
+                                                              Precision    74.48%      75.55%       73.07%       73.15%       72.22%   78.43%    73.60%
+ WithoutVLLM   13.89s      71.19s       56.40s   39.76s       Recall       61.34%      57.14%       63.86%       77.31%       65.54%   67.22%    79.83%
+ WithVLLM      5.73s       31.93s         −        −          F1           67.28%      65.07%       68.16%       75.10%       68.72%   72.39%    76.61%
+
+
+
+Table 4: Computational time required for different           Table 5: Ablation study on entity types and quantities
+methods.                                                     required for constructing internal reasoning graphs.
+
+                                                              Results     Average segmentation    Fixed segmentation        Qwen segmentation    Original
+
+(Llama2-7B) directly loaded and calculated using              Precision
+                                                              Recall
+                                                                                83.82%
+                                                                                50.00%
+                                                                                                       85.24%
+                                                                                                       46.01%
+                                                                                                                                 75.00%
+                                                                                                                                 81.42%
+                                                                                                                                                 73.60%
+                                                                                                                                                 79.83%
+Transformers, while the second row represents the             F1                62.63%                 59.77%                    78.08%          76.61%
+
+model tested based on the VLLM accelerated in-
+                                                             Table 6: Ablation study on the construction method of
+ference framework. The sampling frequency of                 semantic fragments.
+SelfCheckGPT is set to 5. The average length of
+Prompt is 636.84.
+   Compared to methods based on LRP, LRP4RAG                 cessive noise from modifiers and function words,
+requires calling an LLM for context pruning and              leading to performance degradation. Furthermore,
+hallucination discrimination, whereas SIRG only              even when one-third of the entities are missing, our
+uses a discriminative model for calculation, result-         framework remains robust, achieving an F1 score
+ing in a smaller computation latency. Since Self-            of 68.72% under the 0.33 pruning ratio. When
+CheckGPT requires repeated sampling, the total               two-thirds of the entities are missing, performance
+computation time is also relatively high. Prompt,            declines more substantially.
+as a naive method, has the lowest computation la-
+                                                             Different Segmentation Strategies As reported
+tency. However, according to the experimental
+                                                             in Table 6, The strategies include: (1) Average seg-
+results, Prompt has limited performance on the fi-
+                                                             mentation, where each semantic segment is capped
+nal task. These methods can be effective in various
+                                                             at a maximum of 20 tokens and longer content is
+scenarios, depending on the trade-off between com-
+                                                             truncated; (2) Fixed segmentation, which divides
+putation time and accuracy.
+                                                             each sample into a fixed number of 10 equal-length
+   The average processing time of each SIRG stage
+                                                             segments; and (3) Qwen segmentation, where the
+is reported in Appendix F. LRP Computation is the
+                                                             segmentation task is assigned to Qwen3-14B for
+speed bottleneck of the overall framework. Prompt
+                                                             automatic generation.
+and SelfCheckGPT have the advantage of directly
+                                                                Our segmentation method achieves performance
+incorporating inference acceleration frameworks
+                                                             comparable to that of the Qwen3-14B-based seg-
+such as VLLM for speedup.
+                                                             mentation approach, with an F1 score of 76.61%
+4.7 Ablation Study                                           versus 78.08%, demonstrating the effectiveness
+                                                             of segmenting using newline characters combined
+Different Entity Extraction Configurations As
+                                                             with SpaCy sentence tokenization. This yields a
+reported in Table 5, we compare five settings:
+                                                             segmentation strategy that aligns well with human
+retaining only nouns and noun phrases (“Only
+                                                             perception.
+noun”), only verbs and verb phrases (“Only verb”),
+only adjectives and adverbs (“Only adj/adv”), all to-        5     Conclusion
+kens in the semantic fragment (“All text”), and the
+original entity extraction method proposed in this           This paper first extends the token-level LRP al-
+paper (“Original”). Additionally, to simulate the            gorithm to the semantic level within the autore-
+phenomenon of missing entities during extraction,            gressive inference paradigm. Then we construct
+we prune the extracted entity set at different reten-        internal reasoning graphs using semantic fragments
+tion ratios: 33% (“0.33”) and 66% (“0.66”), with             from RAG contexts and LLMs’ responses, which
+“Original” corresponding to retaining all extracted          faithfully model the dependencies of the internal
+content.                                                     reasoning process. Based on that, we propose
+   The original configuration achieves strong re-            a framework, SIRG, for identifying faithfulness
+sults. This is intuitive: sentence meaning is of-            hallucinations in RAG. SIRG achieves the perfor-
+ten jointly determined by nouns and verbs, while             mance of LLM-based detection frameworks us-
+adjectives and adverbs serve mainly as modifiers.            ing only a lightweight parameterized discriminator,
+Retaining all content as substantive introduces ex-          demonstrating the effectiveness of our approach.
+                                                          27834
+Limitations                                             References
+For the internal reasoning graph construction of        Samira Abnar and Willem Zuidema. 2020. Quantifying
+                                                          attention flow in transformers. In Proceedings of the
+SIRG, since LRP requires computing internal
+                                                          58th Annual Meeting of the Association for Compu-
+model gradients for each token generation, this           tational Linguistics. Association for Computational
+results in a high time complexity for the attribution     Linguistics.
+score calculation phase. Future work will opti-
+                                                        Reduan Achtibat, Sayed Mohammad Vakilzadeh Hatefi,
+mize LRP’s computational objects from semantic            Maximilian Dreyer, Aakriti Jain, Thomas Wiegand,
+fragment perspectives to reduce graph construction        Sebastian Roland Lapuschkin, and Wojciech Samek.
+time. We will also evaluate the semantic-level faith-     2024. Attnlrp: Attention-aware layer-wise relevance
+fulness of various attribution methods in capturing       propagation for transformers. In International Con-
+                                                          ference on Machine Learning 2024.
+internal inference processes.
+   For the hallucination detection module of SIRG,      Rishabh Agarwal, Levi Melnick, Nicholas Frosst,
+although the linearization method has achieved            Xuezhou Zhang, Ben Lengerich, Rich Caruana, and
+great results, it is a naive way of using topolog-        Geoffrey E Hinton. 2021. Neural additive models:
+                                                          Interpretable machine learning with neural nets. Ad-
+ical relation, which ignores the multi-hop depen-         vances in neural information processing systems,
+dency information and the subtle error propagation        34:4699–4711.
+information in the internal reasoning graph. Fu-
+                                                        Ameen Ali, Thomas Schnake, Oliver Eberle, Grégoire
+ture efforts will explore multi-angle applications of
+                                                         Montavon, Klaus-Robert Müller, and Lior Wolf.
+this graph, including adaptive node relationship ag-     2022. Xai for transformers: Better explanations
+gregation via graph neural networks. Additionally,       through conservative propagation. In International
+developing low-resource hallucination discrimina-        conference on machine learning, pages 435–451.
+tors remains a key research focus.                       PMLR.
+
+                                                        Sebastian Bach, Alexander Binder, Grégoire Montavon,
+Acknowledgments                                           Frederick Klauschen, Klaus-Robert Müller, and Wo-
+                                                          jciech Samek. 2015. On pixel-wise explanations
+We would like to appreciate anonymous reviewers           for non-linear classifier decisions by layer-wise rele-
+for their valuable comments that help us to im-           vance propagation. PloS one, 10(7):e0130140.
+prove this manuscript. This work was supported
+                                                        Yarden Bakish, Itamar Zimerman, Hila Chefer, and Lior
+by New Generation Artificial Intelligence-National
+                                                          Wolf. 2025. Revisiting lrp: Positional attribution as
+Science and Technology Major Project under grant          the missing ingredient for transformer explainability.
+2025ZD0123304 and NSFC under grant 62532001.              arXiv preprint arXiv:2506.02138.
+
+Ethics Statement                                        Loris Bergeron, Ioana Buhnila, Jérôme François, and
+                                                          Radu State. 2025. Halluguard: Evidence-grounded
+Based on the research presented in this paper, we         small reasoning models to mitigate hallucinations
+acknowledge the ethical implications of developing        in retrieval-augmented generation. arXiv preprint
+                                                          arXiv:2510.00880.
+hallucination detection methods for LLMs. While
+our work aims to enhance the reliability and trust-     Gagan Bhatia, Somayajulu G Sripada, Kevin Allan,
+worthiness of AI-generated content, we recognize          and Jacobo Azcona. 2025. Distributional seman-
+                                                          tics tracing: A framework for explaining halluci-
+that such techniques could potentially be misused
+                                                          nations in large language models. arXiv preprint
+to conceal model limitations or manipulate outputs        arXiv:2510.06107.
+in ways that undermine transparency. We affirm our
+commitment to responsible AI research by ensuring       Collin Burns, Haotian Ye, Dan Klein, and Jacob Stein-
+                                                          hardt. 2022. Discovering latent knowledge in lan-
+our method, SIRG, is designed to improve factual          guage models without supervision. arXiv preprint
+faithfulness rather than to deceive. All experiments      arXiv:2212.03827.
+were conducted using publicly available datasets
+with proper citations, and we have openly disclosed     Hila Chefer, Shir Gur, and Lior Wolf. 2021. Trans-
+                                                          former interpretability beyond attention visualization.
+the limitations of our approach to avoid overstating      In Proceedings of the IEEE/CVF conference on com-
+its capabilities. We encourage the community to           puter vision and pattern recognition, pages 782–791.
+utilize this work for promoting accountability and
+                                                        Chao Chen, Kai Liu, Ze Chen, Yi Gu, Yue Wu,
+interpretability in LLMs, and we emphasize the            Mingyuan Tao, Zhihang Fu, and Jieping Ye. 2024.
+importance of continued ethical scrutiny as halluci-      Inside: Llms’ internal states retain the power of hallu-
+nation detection technologies evolve.                     cination detection. arXiv preprint arXiv:2402.03744.
+                                                   27835
+Kang Chen, Yaoning Wang, Kai Xiong, Zhuoka Feng,          Hans Hergen Lehmann, Jae Hee Lee, Steven Schock-
+  Wenhe Sun, Haotian Chen, and Yixin Cao. 2025. Do          aert, and Stefan Wermter. 2025. Knowing the facts
+  llms signal when they’re right? evidence from neuron      but choosing the shortcut: Understanding how large
+  agreement. arXiv preprint arXiv:2510.26277.               language models compare entities. arXiv preprint
+                                                            arXiv:2510.16815.
+Yung-Sung Chuang, Linlu Qiu, Cheng-Yu Hsieh, Ran-
+  jay Krishna, Yoon Kim, and James Glass. 2024.           Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio
+  Lookback lens: Detecting and mitigating contextual        Petroni, Vladimir Karpukhin, Naman Goyal, Hein-
+  hallucinations in large language models using only        rich Küttler, Mike Lewis, Wen-tau Yih, Tim Rock-
+  attention maps. In Proceedings of the 2024 Con-           täschel, and 1 others. 2020. Retrieval-augmented gen-
+  ference on Empirical Methods in Natural Language          eration for knowledge-intensive nlp tasks. Advances
+  Processing, pages 1419–1436.                              in neural information processing systems, 33:9459–
+                                                            9474.
+Mike Conover, Matt Hayes, Ankit Mathur, Jianwei Xie,
+  Jun Wan, Sam Shah, Ali Ghodsi, Patrick Wendell,         Junyi Li, Jie Chen, Ruiyang Ren, Xiaoxue Cheng,
+  Matei Zaharia, and Reynold Xin. 2023. Free dolly:         Wayne Xin Zhao, Jian-Yun Nie, and Ji-Rong Wen.
+  Introducing the world’s first truly open instruction-     2024. The dawn after the dark: An empirical study
+  tuned llm.                                                on factuality hallucination in large language models.
+                                                            In Proceedings of the 62nd Annual Meeting of the
+Björn Deiseroth, Mayukh Deb, Samuel Weinbach,               Association for Computational Linguistics (Volume
+  Manuel Brack, Patrick Schramowski, and Kristian           1: Long Papers), pages 10879–10899.
+  Kersting. 2023. Atman: Understanding transformer
+  predictions through memory efficient attention ma-      Kenneth Li, Oam Patel, Fernanda Viégas, Hanspeter
+  nipulation. Advances in Neural Information Process-       Pfister, and Martin Wattenberg. 2023. Inference-
+  ing Systems, 36:63437–63460.                              time intervention: Eliciting truthful answers from
+                                                            a language model. Advances in Neural Information
+Nuno M Guerreiro, Duarte M Alves, Jonas Waldendorf,         Processing Systems, 36:41451–41530.
+  Barry Haddow, Alexandra Birch, Pierre Colombo,
+  and André FT Martins. 2023. Hallucinations in large     Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Man-
+  multilingual translation models. Transactions of the      dar Joshi, Danqi Chen, Omer Levy, Mike Lewis,
+  Association for Computational Linguistics, 11:1500–       Luke Zettlemoyer, and Veselin Stoyanov. 2019.
+  1517.                                                     Roberta: A robustly optimized bert pretraining ap-
+                                                            proach. arXiv preprint arXiv:1907.11692.
+Hangfeng He, Hongming Zhang, and Dan Roth. 2022.
+                                                          Scott M Lundberg and Su-In Lee. 2017. A unified ap-
+  Rethinking with retrieval: Faithful large language
+                                                            proach to interpreting model predictions. Advances
+  model inference. arXiv preprint arXiv:2301.00303.
+                                                            in neural information processing systems, 30.
+Haichuan Hu, Congqing He, Xiaochen Xie, and               Qing Lyu, Marianna Apidianaki, and Chris Callison-
+  Quanjun Zhang. 2024. Lrp4rag: Detecting hal-              Burch. 2024. Towards faithful model explanation in
+  lucinations in retrieval-augmented generation via         nlp: A survey. Computational Linguistics, 50(2):657–
+  layer-wise relevance propagation. arXiv preprint          723.
+  arXiv:2408.15533.
+                                                          Potsawee Manakul, Adian Liusie, and Mark Gales. 2023.
+Kung-Hsiang Huang, Hou Pong Chan, and Heng Ji.              Selfcheckgpt: Zero-resource black-box hallucination
+  2023. Zero-shot faithful factual error correction. In     detection for generative large language models. In
+  The 61st Annual Meeting Of The Association For            Proceedings of the 2023 conference on empirical
+  Computational Linguistics.                                methods in natural language processing, pages 9004–
+                                                            9017.
+Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong,
+  Zhangyin Feng, Haotian Wang, Qianglong Chen,            Abhika Mishra, Akari Asai, Vidhisha Balachandran,
+  Weihua Peng, Xiaocheng Feng, Bing Qin, and 1 oth-         Yizhong Wang, Graham Neubig, Yulia Tsvetkov, and
+  ers. 2025. A survey on hallucination in large lan-        Hannaneh Hajishirzi. Fine-grained hallucination de-
+  guage models: Principles, taxonomy, challenges, and       tection and editing for language models. In First
+  open questions. ACM Transactions on Information           Conference on Language Modeling.
+  Systems, 43(2):1–55.
+                                                          Niels Mündler, Jingxuan He, Slobodan Jenko, and Mar-
+Jannik Kossen, Jiatong Han, Muhammed Razzak, Lisa           tin Vechev. 2024. Self-contradictory hallucinations
+   Schut, Shreshth Malik, and Yarin Gal. 2024. Seman-       of large language models: Evaluation, detection and
+   tic entropy probes: Robust and cheap hallucination       mitigation. In The Twelfth International Conference
+   detection in llms. arXiv preprint arXiv:2406.15927.      on Learning Representations (ICLR 2024). OpenRe-
+                                                            view.
+Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar. Se-
+  mantic uncertainty: Linguistic invariances for uncer-   Vy Nguyen, Ziqi Xu, Jeffrey Chan, Estrid He, Feng Xia,
+  tainty estimation in natural language generation. In      and Xiuzhen Zhang. 2025. Hallucinate less by think-
+  The Eleventh International Conference on Learning         ing more: Aspect-based causal abstention for large
+  Representations.                                          language models. arXiv preprint arXiv:2511.17170.
+                                                     27836
+Cheng Niu, Yuanhao Wu, Juno Zhu, Siliang Xu, Kashun           through perturbation-based synthetic data generation
+  Shum, Randy Zhong, Juntong Song, and Tong Zhang.            in system responses. In Findings of the Association
+  2024. Ragtruth: A hallucination corpus for develop-         for Computational Linguistics: ACL 2024, pages
+  ing trustworthy retrieval-augmented language models.        13321–13332.
+  In Proceedings of the 62nd Annual Meeting of the
+  Association for Computational Linguistics (Volume       Yaxin Zhao and Yu Zhang. 2025. Halluclean: A unified
+  1: Long Papers), pages 10862–10878.                       framework to combat hallucinations in llms. arXiv
+                                                            preprint arXiv:2511.08916.
+Anirudh Phukan, Shwetha Somasundaram, Apoorv Sax-
+  ena, Koustava Goswami, and Balaji Vasan Srinivasan.     A     Coarse-grained Processing
+  2024. Peering into the mind of language models:
+  An approach for attribution in contextual question      Hu et al. (2024) employs the maximum and av-
+  answering. In ACL (Findings).                           erage value of the LRP attribution vector for all
+Marco Tulio Ribeiro, Sameer Singh, and Carlos             tokens to get the attribution distributions of the
+ Guestrin. 2016. " why should i trust you?" explaining    whole response. As shown in Fig. 5, using the
+ the predictions of any classifier. In Proceedings of     maximum value method accumulates the context
+ the 22nd ACM SIGKDD international conference on          that contributes the most to each response token,
+ knowledge discovery and data mining, pages 1135–
+ 1144.                                                    resulting in a noisy contribution distribution. Us-
+                                                          ing the average value method dilutes the context
+Adi Simhi, Jonathan Herzig, Idan Szpektor, and Yonatan    with a high contribution to the substantive word
+  Belinkov. 2024. Constructing benchmarks and inter-
+                                                          with a large number of linking words, leading to a
+  ventions for combating hallucinations in llms. arXiv
+  preprint arXiv:2404.09971.                              significantly lower contribution distribution.
+
+Karen Simonyan, Andrea Vedaldi, and Andrew Zis-           B     Linking Tokens and Substantive
+  serman. 2013. Deep inside convolutional networks:             Tokens
+  Visualising image classification models and saliency
+  maps. arXiv preprint arXiv:1312.6034.                   In the sentence “The 15 minute guideline starts
+Daniel Smilkov, Nikhil Thorat, Been Kim, Fernanda         from the point at which you put your scones in a
+  Viégas, and Martin Wattenberg. 2017. Smoothgrad:        preheated oven”, “15 minute”, “preheated oven”,
+  removing noise by adding noise. arXiv preprint          etc., contain rich semantic information and are
+  arXiv:1706.03825.                                       considered as substantive tokens, while “The”,
+Elena Voita, Rico Sennrich, and Ivan Titov. 2021. Ana-    “which”, etc., serve to enhance sentence fluency
+  lyzing the source and target contributions to predic-   in the document and are therefore considered link-
+  tions in neural machine translation. In Proceedings     ing tokens.
+  of the 59th Annual Meeting of the Association for
+                                                             The above description of the linking and substan-
+  Computational Linguistics and the 11th International
+  Joint Conference on Natural Language Processing         tive token is identified from a human perspective.
+  (Volume 1: Long Papers), pages 1126–1140.               From an LLM’s standpoint, due to semantic drift
+                                                          and dataset bias during training, the linking and
+Tu Vu, Mohit Iyyer, Xuezhi Wang, Noah Constant, Jerry
+  Wei, Jason Wei, Chris Tar, Yun-Hsuan Sung, Denny        substantive tokens inferred by the LLM may differ
+  Zhou, Quoc Le, and 1 others. 2024. Freshllms: Re-       from human perceptions. When LLMs generate
+  freshing large language models with search engine       tokens by treating human-considered substantive
+  augmentation. In Findings of the Association for        content as linking, it results in the faithfulness hal-
+  Computational Linguistics: ACL 2024, pages 13697–
+  13720.                                                  lucination. The cognitive gap between humans and
+                                                          LLMs makes this phenomenon hard to detect di-
+Di Wu, Jia-Chen Gu, Fan Yin, Nanyun Peng, and Kai-        rectly.
+  Wei Chang. 2024. Synchronous faithfulness monitor-
+                                                             We employ the LRP to perform token-level attri-
+  ing for trustworthy retrieval-augmented generation.
+  arXiv preprint arXiv:2406.13692.                        bution of the next token generated by the LLM, and
+                                                          visualize the results using a heat map. As shown
+Yuheng Zha, Yichi Yang, Ruichen Li, and Zhiting Hu.       in Fig.6, linking tokens rely more on words gen-
+  2023. Alignscore: Evaluating factual consistency
+  with a unified alignment function. In Proceedings       erated earlier within the same sentence, whereas
+  of the 61st Annual Meeting of the Association for       substantive tokens also depend on words in the
+  Computational Linguistics (Volume 1: Long Papers),      long-distance context. When the model generates
+  pages 11328–11348.                                      hallucination tokens, the heat map in Fig.7 reveals
+Dongxu Zhang, Varun Gangal, Barrett Lattimer, and         that their attribution distribution exhibits character-
+  Yi Yang. 2024. Enhancing hallucination detection        istics of linking tokens. From a human perspective,
+                                                     27837
+ <s> Briefly answer the following question:<0x0A>how to improve hair               <s> Briefly answer the following question:<0x0A>how to improve hair
+ growth<0x0A>Bear in mind that your response should be strictly based on the       growth<0x0A>Bear in mind that your response should be strictly based on the
+ following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,        following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,
+ constantly massage the scalp daily to promote circulation in the scalp. 2 A       constantly massage the scalp daily to promote circulation in the scalp. 2 A
+ good flow of blood will help the delivery of oxygen to the hair and scalp,        good flow of blood will help the delivery of oxygen to the hair and scalp,
+ keeping the cells healthy and less prone to breakage and damage.3 Tip #           keeping the cells healthy and less prone to breakage and damage.3 Tip #
+ 5 Never over-style the hair. Tip #6 A good way to promote hair growth             5 Never over-style the hair. Tip #6 A good way to promote hair growth
+ is to have regular trimming of the hair every 8 weeks. 2 This rids the            is to have regular trimming of the hair every 8 weeks. 2 This rids the
+ hair of unhealthy split ends, and promotes the lengthening of hair. 3 Tip         hair of unhealthy split ends, and promotes the lengthening of hair. 3 Tip
+ #7 Eat a healthy diet at all times. 4 Vitamins for hair growth should be          #7 Eat a healthy diet at all times. 4 Vitamins for hair growth should be
+ instilled in the daily diet.<0x0A><0x0A>passage 2:1 Fats will help you process    instilled in the daily diet.<0x0A><0x0A>passage 2:1 Fats will help you process
+ the vitamins and minerals in your diet that are necessary for healthy hair        the vitamins and minerals in your diet that are necessary for healthy hair
+ production, including Vitamins A, D, E, and K. 2 Eat the right kinds of fats.     production, including Vitamins A, D, E, and K. 2 Eat the right kinds of fats.
+ 3 Saturated fats, trans fatty acids, and hydrogenated fats are examples of        3 Saturated fats, trans fatty acids, and hydrogenated fats are examples of
+ fats that you should avoid.t does, however, stop loss of length from the tips,    fats that you should avoid.t does, however, stop loss of length from the tips,
+ as it prevents breakages from split ends. 1 How often you should cut your         as it prevents breakages from split ends. 1 How often you should cut your
+ hair depends on how healthy it is and how fast you want it to grow; it is         hair depends on how healthy it is and how fast you want it to grow; it is
+ totally up to your own judgement. 2 Normal hair grows anywhere from 1⁄2           totally up to your own judgement. 2 Normal hair grows anywhere from 1⁄2
+ inch (1.3 cm) - 5⁄8 inch (1.6 cm) per month.<0x0A><0x0A>passage 3:Cut             inch (1.3 cm) - 5⁄8 inch (1.6 cm) per month.<0x0A><0x0A>passage 3:Cut
+ your hair. Gets rid of split ends and makes hair appear healthier, though         your hair. Gets rid of split ends and makes hair appear healthier, though
+ this does not make it grow faster. Cut it on a night when the moon is in          this does not make it grow faster. Cut it on a night when the moon is in
+ phase new moon your hair grows faster or when 1st quarter moon phase.ow           phase new moon your hair grows faster or when 1st quarter moon phase.ow
+ to Improve Hair Growth. Let’s face it. We want long hair and we want it now!      to Improve Hair Growth. Let’s face it. We want long hair and we want it now!
+ Although there is no miracle for rapid hair growth there are always different     Although there is no miracle for rapid hair growth there are always different
+ options to try.<0x0A><0x0A>In case the passages do not contain the necessary      options to try.<0x0A><0x0A>In case the passages do not contain the necessary
+ information to answer the question, please reply with: ”Unable to answer based    information to answer the question, please reply with: ”Unable to answer based
+ on given passages.”<0x0A>output:<s> Based on the provided passages, here          on given passages.”<0x0A>output:<s> Based on the provided passages, here
+ are some ways to improve hair growth:<0x0A><0x0A>1. Massage the scalp             are some ways to improve hair growth:<0x0A><0x0A>1. Massage the scalp
+ daily to promote circulation and deliver oxygen to the hair and scalp. (Passage   daily to promote circulation and deliver oxygen to the hair and scalp. (Passage
+ 1)<0x0A>2. Avoid over-styling the hair, as it can cause damage and lead           1)<0x0A>2. Avoid over-styling the hair, as it can cause damage and lead
+ to breakage. Regular trimming every 8 weeks can help keep the hair healthy        to breakage. Regular trimming every 8 weeks can help keep the hair healthy
+ and promote lengthening. (Passage 2)<0x0A>3. Include healthy fats in your         and promote lengthening. (Passage 2)<0x0A>3. Include healthy fats in your
+ diet, such as those found in nuts, seeds, and avocados, as they help the body     diet, such as those found in nuts, seeds, and avocados, as they help the body
+ process vitamins and minerals essential for hair growth. (Passage 2)<0x0A>4.      process vitamins and minerals essential for hair growth. (Passage 2)<0x0A>4.
+ Cutting the hair regularly can help get rid of split ends and make the hair       Cutting the hair regularly can help get rid of split ends and make the hair
+ appear healthier, although it may not make the hair grow faster. (Passage         appear healthier, although it may not make the hair grow faster. (Passage
+ 3)<0x0A><0x0A>Unable to answer based on given passages. The passages              3)<0x0A><0x0A>Unable to answer based on given passages. The passages
+ do not provide specific information on how to speed up hair growth.               do not provide specific information on how to speed up hair growth.
+
+
+Figure 5: The attribution of LLM responses is obtained by processing attribution features at a coarse granularity.
+The left figure shows the maximum value of the attribution vector for all tokens in the response, while the right
+figure shows the average value. The deeper the red color, the greater the token’s contribution to the target response.
+
+
+however, these tokens should be substantive tokens                                 inates from Passage 1, Passage 3, and the LLM’s
+in the RAG system that strictly depend on contex-                                  previous generation, indicating a high probability
+tual content. In other words, LLMs process sub-                                    of the faithfulness hallucination.
+stantive tokens as linking, resulting in faithfulness
+hallucination.                                                                     C      LRP Rules
+   Faithfulness hallucination is a semantic phe-                                   To obtain token-level correlations within LLM, we
+nomenon where LLM responses contain content                                        backpropagate output correlations through each
+that is semantically inconsistent or contextually                                  transformer layer.
+absent. When isolated from context, it is chal-
+                                                                                      For the densely connected modules within the
+lenging to determine whether LLMs exhibit faith-
+                                                                                   transformer architecture, we utilize the local Ja-
+fulness hallucination at the token level alone. As                                                          ∂z
+                                                                                   cobian matrix Jji = ∂xji , which represents the
+shown in Fig.8, the sample’s golden label is “Have
+                                                                                   gradient of the layer’s output zj with respect to its
+Hallucination” and the reason is “LOW INTRO-
+                                                                                   input xi , as the weight for assigning correlations.
+DUCTION OF NEW INFORMATION. Original:
+                                                                                   Specifically, for the multi-layer perceptrons within
+This might be correct, however, the exact way to
+                                                                                   the model, they typically consist of a linear layer
+make sesame milk is not directly stated in the pas-
+                                                                                   followed by an additional nonlinear function:
+sages. Generative: ...by grinding the seeds into a
+fine powder and mixing them with water or other                                                                   X
+liquids. (Passage 2)”. However, direct analysis of                                                       zj =           Wji xi + bj
+the superimposed token-level attribution distribu-                                                                  i                                         (9)
+tion makes it difficult to identify the hallucination                                                    aj = σ(zj )
+fragment. By constructing the target fragment as a
+semantic-level reasoning graph using our method                                    where Wji represents the model’s parameter and σ
+(as shown in Fig.9), we can easily identify that the                               denotes the nonlinear function. By linearizing the
+information in the target fragment primarily orig-                                 linear layer in Equation 9 at any point x ∈ RN , the
+                                                                             27838
+<s> Briefly answer the following question:<0x0A>how to improve hair                <s> Briefly answer the following question:<0x0A>how to improve hair                <s> Briefly answer the following question:<0x0A>how to improve hair
+growth<0x0A>Bear in mind that your response should be strictly based on the        growth<0x0A>Bear in mind that your response should be strictly based on the        growth<0x0A>Bear in mind that your response should be strictly based on the
+following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,         following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,         following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,
+constantly massage the scalp daily to promote circulation in the scalp. 2 A good   constantly massage the scalp daily to promote circulation in the scalp. 2 A good   constantly massage the scalp daily to promote circulation in the scalp. 2 A good
+flow of blood will help the delivery of oxygen to the hair and scalp, keeping      flow of blood will help the delivery of oxygen to the hair and scalp, keeping      flow of blood will help the delivery of oxygen to the hair and scalp, keeping
+the cells healthy and less prone to breakage and damage.3 Tip # 5 Never            the cells healthy and less prone to breakage and damage.3 Tip # 5 Never            the cells healthy and less prone to breakage and damage.3 Tip # 5 Never
+over-style the hair. Tip #6 A good way to promote hair growth is to have           over-style the hair. Tip #6 A good way to promote hair growth is to have           over-style the hair. Tip #6 A good way to promote hair growth is to have
+regular trimming of the hair every 8 weeks. 2 This rids the hair of unhealthy      regular trimming of the hair every 8 weeks. 2 This rids the hair of unhealthy      regular trimming of the hair every 8 weeks. 2 This rids the hair of unhealthy
+split ends, and promotes the lengthening of hair. 3 Tip #7 Eat a healthy           split ends, and promotes the lengthening of hair. 3 Tip #7 Eat a healthy           split ends, and promotes the lengthening of hair. 3 Tip #7 Eat a healthy
+diet at all times. 4 Vitamins for hair growth should be instilled in the daily     diet at all times. 4 Vitamins for hair growth should be instilled in the daily     diet at all times. 4 Vitamins for hair growth should be instilled in the daily
+diet.<0x0A><0x0A>passage 2:1 Fats will help you process the vitamins and           diet.<0x0A><0x0A>passage 2:1 Fats will help you process the vitamins and           diet.<0x0A><0x0A>passage 2:1 Fats will help you process the vitamins and
+minerals in your diet that are necessary for healthy hair production, including    minerals in your diet that are necessary for healthy hair production, including    minerals in your diet that are necessary for healthy hair production, including
+Vitamins A, D, E, and K. 2 Eat the right kinds of fats. 3 Saturated fats, trans    Vitamins A, D, E, and K. 2 Eat the right kinds of fats. 3 Saturated fats, trans    Vitamins A, D, E, and K. 2 Eat the right kinds of fats. 3 Saturated fats, trans
+fatty acids, and hydrogenated fats are examples of fats that you should avoid.t    fatty acids, and hydrogenated fats are examples of fats that you should avoid.t    fatty acids, and hydrogenated fats are examples of fats that you should avoid.t
+does, however, stop loss of length from the tips, as it prevents breakages from    does, however, stop loss of length from the tips, as it prevents breakages from    does, however, stop loss of length from the tips, as it prevents breakages from
+split ends. 1 How often you should cut your hair depends on how healthy it         split ends. 1 How often you should cut your hair depends on how healthy it         split ends. 1 How often you should cut your hair depends on how healthy it
+is and how fast you want it to grow; it is totally up to your own judgement.       is and how fast you want it to grow; it is totally up to your own judgement.       is and how fast you want it to grow; it is totally up to your own judgement.
+2 Normal hair grows anywhere from 1⁄2 inch (1.3 cm) - 5⁄8 inch (1.6 cm)            2 Normal hair grows anywhere from 1⁄2 inch (1.3 cm) - 5⁄8 inch (1.6 cm)            2 Normal hair grows anywhere from 1⁄2 inch (1.3 cm) - 5⁄8 inch (1.6 cm)
+per month.<0x0A><0x0A>passage 3:Cut your hair. Gets rid of split ends and          per month.<0x0A><0x0A>passage 3:Cut your hair. Gets rid of split ends and          per month.<0x0A><0x0A>passage 3:Cut your hair. Gets rid of split ends and
+makes hair appear healthier, though this does not make it grow faster. Cut it      makes hair appear healthier, though this does not make it grow faster. Cut it      makes hair appear healthier, though this does not make it grow faster. Cut it
+on a night when the moon is in phase new moon your hair grows faster or when       on a night when the moon is in phase new moon your hair grows faster or when       on a night when the moon is in phase new moon your hair grows faster or when
+1st quarter moon phase.ow to Improve Hair Growth. Let’s face it. We want long      1st quarter moon phase.ow to Improve Hair Growth. Let’s face it. We want long      1st quarter moon phase.ow to Improve Hair Growth. Let’s face it. We want long
+hair and we want it now! Although there is no miracle for rapid hair growth        hair and we want it now! Although there is no miracle for rapid hair growth        hair and we want it now! Although there is no miracle for rapid hair growth
+there are always different options to try.<0x0A><0x0A>In case the passages         there are always different options to try.<0x0A><0x0A>In case the passages         there are always different options to try.<0x0A><0x0A>In case the passages
+do not contain the necessary information to answer the question, please reply      do not contain the necessary information to answer the question, please reply      do not contain the necessary information to answer the question, please reply
+with: ”Unable to answer based on given passages.”<0x0A>output:<s> Based            with: ”Unable to answer based on given passages.”<0x0A>output:<s> Based            with: ”Unable to answer based on given passages.”<0x0A>output:<s> Based
+on the provided passages, here are some                                            on the provided passages, here are some ways to                                    on
+
+<s> Briefly answer the following question:<0x0A>how to improve hair                <s> Briefly answer the following question:<0x0A>how to improve hair                <s> Briefly answer the following question:<0x0A>how to improve hair
+growth<0x0A>Bear in mind that your response should be strictly based on the        growth<0x0A>Bear in mind that your response should be strictly based on the        growth<0x0A>Bear in mind that your response should be strictly based on the
+following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,         following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,         following three passages:<0x0A>passage 1:1 Tip #4 To increase hair growth,
+constantly massage the scalp daily to promote circulation in the scalp. 2 A        constantly massage the scalp daily to promote circulation in the scalp. 2 A        constantly massage the scalp daily to promote circulation in the scalp. 2 A
+good flow of blood will help the delivery of oxygen to the hair and scalp,         good flow of blood will help the delivery of oxygen to the hair and scalp,         good flow of blood will help the delivery of oxygen to the hair and scalp,
+keeping the cells healthy and less prone to breakage and damage.3 Tip #            keeping the cells healthy and less prone to breakage and damage.3 Tip #            keeping the cells healthy and less prone to breakage and damage.3 Tip #
+5 Never over-style the hair. Tip #6 A good way to promote hair growth              5 Never over-style the hair. Tip #6 A good way to promote hair growth              5 Never over-style the hair. Tip #6 A good way to promote hair growth
+is to have regular trimming of the hair every 8 weeks. 2 This rids the             is to have regular trimming of the hair every 8 weeks. 2 This rids the             is to have regular trimming of the hair every 8 weeks. 2 This rids the
+hair of unhealthy split ends, and promotes the lengthening of hair. 3 Tip          hair of unhealthy split ends, and promotes the lengthening of hair. 3 Tip          hair of unhealthy split ends, and promotes the lengthening of hair. 3 Tip
+#7 Eat a healthy diet at all times. 4 Vitamins for hair growth should be           #7 Eat a healthy diet at all times. 4 Vitamins for hair growth should be           #7 Eat a healthy diet at all times. 4 Vitamins for hair growth should be
+instilled in the daily diet.<0x0A><0x0A>passage 2:1 Fats will help you process     instilled in the daily diet.<0x0A><0x0A>passage 2:1 Fats will help you process     instilled in the daily diet.<0x0A><0x0A>passage 2:1 Fats will help you process
+the vitamins and minerals in your diet that are necessary for healthy hair         the vitamins and minerals in your diet that are necessary for healthy hair         the vitamins and minerals in your diet that are necessary for healthy hair
+production, including Vitamins A, D, E, and K. 2 Eat the right kinds of fats.      production, including Vitamins A, D, E, and K. 2 Eat the right kinds of fats.      production, including Vitamins A, D, E, and K. 2 Eat the right kinds of fats.
+3 Saturated fats, trans fatty acids, and hydrogenated fats are examples of         3 Saturated fats, trans fatty acids, and hydrogenated fats are examples of         3 Saturated fats, trans fatty acids, and hydrogenated fats are examples of
+fats that you should avoid.t does, however, stop loss of length from the tips,     fats that you should avoid.t does, however, stop loss of length from the tips,     fats that you should avoid.t does, however, stop loss of length from the tips,
+as it prevents breakages from split ends. 1 How often you should cut your          as it prevents breakages from split ends. 1 How often you should cut your          as it prevents breakages from split ends. 1 How often you should cut your
+hair depends on how healthy it is and how fast you want it to grow; it is          hair depends on how healthy it is and how fast you want it to grow; it is          hair depends on how healthy it is and how fast you want it to grow; it is
+totally up to your own judgement. 2 Normal hair grows anywhere from 1⁄2            totally up to your own judgement. 2 Normal hair grows anywhere from 1⁄2            totally up to your own judgement. 2 Normal hair grows anywhere from 1⁄2
+inch (1.3 cm) - 5⁄8 inch (1.6 cm) per month.<0x0A><0x0A>passage 3:Cut              inch (1.3 cm) - 5⁄8 inch (1.6 cm) per month.<0x0A><0x0A>passage 3:Cut              inch (1.3 cm) - 5⁄8 inch (1.6 cm) per month.<0x0A><0x0A>passage 3:Cut
+your hair. Gets rid of split ends and makes hair appear healthier, though          your hair. Gets rid of split ends and makes hair appear healthier, though          your hair. Gets rid of split ends and makes hair appear healthier, though
+this does not make it grow faster. Cut it on a night when the moon is in           this does not make it grow faster. Cut it on a night when the moon is in           this does not make it grow faster. Cut it on a night when the moon is in
+phase new moon your hair grows faster or when 1st quarter moon phase.ow            phase new moon your hair grows faster or when 1st quarter moon phase.ow            phase new moon your hair grows faster or when 1st quarter moon phase.ow
+to Improve Hair Growth. Let’s face it. We want long hair and we want it now!       to Improve Hair Growth. Let’s face it. We want long hair and we want it now!       to Improve Hair Growth. Let’s face it. We want long hair and we want it now!
+Although there is no miracle for rapid hair growth there are always different      Although there is no miracle for rapid hair growth there are always different      Although there is no miracle for rapid hair growth there are always different
+options to try.<0x0A><0x0A>In case the passages do not contain the necessary       options to try.<0x0A><0x0A>In case the passages do not contain the necessary       options to try.<0x0A><0x0A>In case the passages do not contain the necessary
+information to answer the question, please reply with: ”Unable to answer based     information to answer the question, please reply with: ”Unable to answer based     information to answer the question, please reply with: ”Unable to answer based
+on given passages.”<0x0A>output:<s> Based on the provided passages, here           on given passages.”<0x0A>output:<s> Based on the provided passages, here           on given passages.”<0x0A>output:<s> Based on the provided passages, here
+are some ways to improve hair growth:<0x0A><0x0A>1. Massage the scalp              are some ways to improve hair growth:<0x0A><0x0A>1. Massage the scalp              are some ways to improve hair growth:<0x0A><0x0A>1. Massage the scalp
+daily to promote circulation and deliver oxygen to the hair                        daily to promote circulation and deliver oxygen to the hair and scal               daily to promote circulation and deliver oxygen
+
+
+
+
+Figure 6: Contribution scores of the next generated token. The upper three boxes show the distribution of attribution
+scores for the next generated linking token, while the lower three boxes display the substantive token. The deeper
+the red color, the greater the token’s contribution to the last token.
+
+
+basic LRP rule can be derived:                                                                                                 Taylor expansion of the softmax function at refer-
+                                                                                                                               ence point x yields the following correlation prop-
+                                           X                              Rjl                                                  agation rules:
+                       Ril−1 =                       Wji xi                                                 (10)
+                                                                      zj (x) + ε                                                                               X
+                                              j                                                                                           Ril−1 = xi (Ril − si    Rjl )       (13)
+                                                                                                                                                                                                           j
+Since element-wise nonlinearity has only a single
+input variable and output variable, the decompo-                                                                               Among them, si represents the i-th output of the
+sition of attribution results is the operation itself.                                                                         softmax function. For the double matrix multi-
+Therefore, the total input correlation Ril can only                                                                            plication part in self-attention computation, since
+be allocated to a single input variable.                                                                                       f (0, 0) = 0 holds, it is necessary to decompose
+                                                                                                                               the matrix multiplication into a form without bias
+                                             Ril−1 = Ril                                                    (11)               terms. For this purpose, we decompose matrix mul-
+                                                                                                                               tiplication into affine operations containing sum-
+We apply the Equation 11 to all element-wise oper-                                                                             mation and bilinear parts containing element-wise
+ations of single-input and single-output variables.                                                                            multiplication.
+   For the multi-head attention module in the trans-                                                                                                    X
+former architecture, let Q, K, and V represent the                                                                                              Ojp =       Aji Vip           (14)
+                                                                                                                                                                                        i
+query, key, and value matrices, respectively. The
+scaled dot product attention calculates the attention                                                                          For the bilinear multiplication summation part men-
+weight A and output value O as follows:                                                                                        tioned above, we decompose it into element-level
+                                                                                                                               multiplication operations with N input variables:
+                                          Q · KT                                                                                                                                            N
+                           A = sof tmax( √       )                                                                                                                                          Y
+                                              dk                                                                                                                      fj (x) =                       xji                                     (15)
+                           O =A·V                                                                           (12)                                                                               i
+
+                                             exj                                                                               The following uniform correlation propagation
+                           sof tmaxj (x) = P x                                                                                 rules can be obtained at the reference point x using
+                                              ke
+                                                 k
+
+
+                                                                                                                   27839
+ <s> Briefly answer the following question:<0x0A>how do i get copies of my               <s> Briefly answer the following question:<0x0A>how to use sesame
+ income tax returns<0x0A>Bear in mind that your response should be strictly              seeds<0x0A>Bear in mind that your response should be strictly based on the
+ based on the following three passages:<0x0A>passage 1:Step 4: Enter form                following three passages:<0x0A>passage 1:1 Add raw sesame seeds to any side
+ used. Enter the form you used to file your federal income tax return on line 6.         dish to add crunch and flavor. 2 For instance, you can add to vegetable or bean
+ If you are requesting a personal income tax return, it’s likely you filed on Form       dishes. 3 Sesame oil is a great option to try to incorporate in your cooking.4
+ 1040, 1040A or 1040EZ. You must also enter the tax years you are requesting              Like almond milk and hemp milk, you can make your own sesame milk. You
+ copies for on line 7.<0x0A><0x0A>passage 2:1 This transcript includes your              can also make a light salad dressing out of tahini. 2 Sesame seeds can also
+ marital status, the type of return you filed, your adjusted gross income and            be roasted, crushed and then sprinkled over salads. 3 This will give you more
+ taxable income. You can get transcripts on the web, by phone or by mail.                variety and flavor than your typical salad. 4 Add raw sesame seeds to any
+ To request transcripts online, go to IRS.gov and use the Order a Transcript             side dish to add crunch and flavor.<0x0A><0x0A>passage 2:1. Toast over the
+ tool.<0x0A><0x0A>passage 3:You may also request a copy of your California               stovetop. If you don’t see any dust or small pebbles in your sesame seeds, you can
+ tax return by submitting a Request for Copy of Income Tax or Fiduciary                  put them directly in a skillet or frying pan. Heat over medium-low heat, stirring
+ Return Form FTB 3516 or by submitting your request on plain paper and                   occasionally, for two to three minutes or until the seeds turn brown, glisten,
+ provide the following: 1 Your Name (and Spouse if joint return) Social security         and occasionally pop or jump.1 Do not add oil to the skillet.. Toast over the
+ numbers.<0x0A><0x0A>In case the passages do not contain the necessary                   stovetop. If you don’t see any dust or small pebbles in your sesame seeds, you can
+ information to answer the question, please reply with: ”Unable to answer based          put them directly in a skillet or frying pan. Heat over medium-low heat, stirring
+ on given passages.”<0x0A>output:<s> Based on the provided passages, here is             occasionally, for two to three minutes or until the seeds turn brown, glisten, and
+ how you can obtain copies of your income tax returns:<0x0A><0x0A>Passage                occasionally pop or jump.<0x0A><0x0A>passage 3:Sesame seeds are tiny, flat
+ 1 states that to obtain copies of your income tax returns, you will need to             oval seeds with a nutty taste and a delicate, almost invisible crunch. They come
+ complete Form 4506                                                                      in a host of different colors, depending upon the variety, including white, yellow,
+                                                                                         black and red. Sesame seeds are highly valued for their high content of sesame
+ <s> Briefly answer the following question:<0x0A>how to heat frozen baked                oil, an oil that is very resistant to rancidity.he hulls of sesame seeds contain
+ scones<0x0A>Bear in mind that your response should be strictly based on the             oxalates. In fact, most of the calcium found in the seed hull comes in the form
+ following three passages:<0x0A>passage 1:There should be little bits of cold            of calcium oxalate. The sesame seed paste (tahini) found in grocery stores is most
+ butter scattered around the flour. The moment the cold butter pieces bake, they         often made with seed kernels—the part of the sesame seed that remains after
+ create little pockets of steam and cause the dough to rise – this is similar to what    the hull has been removed.<0x0A><0x0A>In case the passages do not contain
+ happens when you bake pie crust. It’s the butter that makes these cranberry             the necessary information to answer the question, please reply with: ”Unable
+ scones so tender, light and delicious.<0x0A><0x0A>passage 2:Scones should               to answer based on given passages.”<0x0A>output:<s> Based on the provided
+ be light and flaky, not heavy and flat. We stick to all-purpose flour in our            passages, here are some ways to use sesame seeds:<0x0A><0x0A>1. Add raw
+ kitchen – it’s pretty much our go-to flour. For this recipe, we prefer to use soft,     sesame seeds to any side dish to add crunch and flavor. (Passage 1)<0x0A>2.
+ low protein all-purpose flour. Protein levels vary by flour brand. Protein content      Toast sesame seeds over the stovetop by heating them over medium-low heat,
+ can affect the tenderness of baked goods.<0x0A><0x0A>passage 3:Make sure                stirring occasionally, for two to three minutes or until they turn brown, glisten,
+ to preheat the oven to the correct temperature (220°C / 200°C fan oven / gas            and occasionally pop or jump. (Passage 2)<0x0A>3. Use sesame seeds as
+ mark 6) before putting your scones in. The 15 minute guideline starts from the          a topping for salads, adding a nutty flavor and crunchy texture. (Passage
+ point at which you put your scones in a preheated oven. It may also take a bit          1)<0x0A>4. Make sesame milk by grinding the seeds into a fine powder and
+ longer to bake them through in a standard (non-fan) or gas oven. You will also          mixing them with water or other liquids. (Passage 2)<0x0A>5. Roast sesame
+ need to extend the time if you’re baking more than 12 tea-time or 24 canapé             seeds and use them as a topping for salads or other dishes. (Passage 1)<0x0A>6.
+ scones in the oven at the same time.<0x0A><0x0A>In case the passages do                 Use sesame oil in cooking for added flavor and health benefits. (Passage
+ not contain the necessary information to answer the question, please reply with:        1)<0x0A>7. Make a light salad dressing using tahini, a sesame seed paste.
+ ”Unable to answer based on given passages.”<0x0A>output:<s> Based on the                (Passage 2)<0x0A>8. Add sesame seeds to baked goods, such as breads and
+ provided passages, here’s how to heat frozen baked scones:<0x0A><0x0A>To                muffins, for added flavor and nutrition. (Passage 1)<0x0A>9. Use sesame seeds
+ heat frozen baked scones, preheat your oven to 220°C (200°C fan oven / gas              as a garnish for soups and other dishes. (Passage 1)<0x0A>10. Experiment with
+ mark 6). Place the frozen scones on a baking tray lined with parchment paper            different types of sesame seeds, such as white, yellow, black, and red, to find the
+ and bake for 15-2                                                                       one that best suits your taste preferences. (Passage 3)<0x0A><0x0A>Unable
+                                                                                         to answer based on given passages. The passages do not provide information on
+                                                                                         how to use sesame seeds in specific dishes or recipes.
+Figure 7: The contribution score of the next generated
+token (labeled as hallucination). The deeper the red                                    Figure 8: The superimposed token-level attribution dis-
+color, the greater the token’s contribution to the last                                 tribution of the response (start with “<s> Based on”).
+token.                                                                                  The deeper the red color, the greater the token’s contri-
+                                                                                        bution to the last token. Based solely on the overlap-
+the Shapley method (with a baseline of zero) or the                                     ping attribution distribution, it is difficult to determine
+                                                                                        whether the response contains hallucination fragments.
+Taylor decomposition method:
+                               l−1           1 l
+                              Rji  =          R                                (16)     By using Taylor expansion to decompose Layer-
+                                             N j
+                                                                                        Norm or RMSNorm with reference point 0, we can
+Therefore, based on the correlation propagation                                         obtain the same identity association propagation
+calculation formulas of each sub-part in the self-                                      rule as Equation 11.
+attention module mentioned above, we can obtain                                            By using the correlation backpropagation based
+the following correlation propagation rules in the                                      on the above rules, we can obtain the contribu-
+self-attention layer:                                                                   tion score of the model input to the probability
+                               X               l
+                                             Rjp                                        value output. Intuitively, the higher the contribu-
+                 l−1
+                Rji  =             Aji Vip                                     (17)     tion score, the greater the impact of the input label
+                                           2Ojp + ε
+                                 p                                                      on a specific output label. By combining these con-
+There is no bias term for absorption correlation                                        tribution vectors into a matrix Ri , we can obtain a
+in this rule, and the amount of ε absorption can                                        correlation matrix that is faithful to the internal in-
+be ignored. By adopting this rule, we strictly ad-                                      ference process of the model. The proof is detailed
+here to the conservation property in the process of                                     in (Achtibat et al., 2024).
+correlation propagation.
+                                                                                        D      Implementation Details
+   Regarding the correlation propagation rule of
+LayerNorm layer, when using common ε = 10−6                                             We employ LXT 2.0 to compute LRP attribution
+and V er[x] = 1, it actually absorbs 99% of the cor-                                    scores for both Llama and Qwen. For substantive
+relation. Therefore, linearizing at x is meaningless.                                   word extraction, we utilize Spacy and Stanza to
+                                                                                    27840
+                                                                    Passage 1: 3 Sesame oil is                                                                          Processing Time per Stage
+                             Previous Generate: Use
+                                                                     a great option to try to                                                                       25.49s
+                                sesame seeds as a
+                                                                       incorporate in your                                                     25
+                                topping for salads,
+                                                                     cooking.4 Like almond
+                              adding a nutty flavor
+                                                                     milk and hemp milk, you
+                               and crunchy texture.
+                                                                       can make your own
+                                                                           sesame milk.                                                        20
+                                                   0.11
+
+
+
+
+                                                                                                                              Time (seconds)
+                                                                            0.22
+    Passage 3: The sesame seed
+                                                                                                                                               15
+                                                   Make sesame milk by
+  paste (tahini) found in grocery
+  stores is most often made with     0.09       grinding the seeds into a          0.06
+                                                                                           Passage 3: Sesame seeds
+                                                                                          are tiny, flat oval seeds with
+                                                                                                                                                      12.12s
+                                                 fine powder and mixing
+  seed kernels\u2014the part of                                                           a nutty taste and a delicate,
+                                                them with water or other                                                                       10
+   the sesame seed that remains                                                             almost invisible crunch.
+                                                    liquids. (Passage 2)
+ after the hull has been removed.
+
+                                                            0.07                                                                               5
+
+                                            Previous Generate: Based on the
+                                                                                                                                                                                  0.59s                   1.51s
+                                            provided passages, here are some
+                                                                                                                                               0
+                                                                                                                                                                                               0.05s
+                                                ways to use sesame seeds
+                                                                                                                                                    Generation      LRP        Entity      Graph     Hallucination
+                                                                                                                                                                 Computation Extraction Construction Discrimination
+
+Figure 9: The internal reasoning graph constructed                                                                             Figure 10: Computational time required for different
+based on the target fragment in the response shown in                                                                          stages of SIRG.
+Fig. 8. The target fragment clearly originates from pas-
+sage 1, passage 3 and previous generation, contradicting
+the annotation that it comes from passage 2. Thus, the                                                                         F                    Computational Time of Different Stage
+fragment within the dashed box is most likely a case of
+faithfulness hallucination.                                                                                                   As reported in Fig.10, the generation stage takes
+                                                                                                                              12.12 seconds, while LRP computation requires
+                                                                                                                              25.49 seconds, making it the speed bottleneck of
+identify nouns, named entities, noun phrases, and                                                                             the overall framework. Entity extraction and graph
+negations in the text. During training, the Align-                                                                            construction are relatively lightweight, taking only
+Score pre-trained Roberta model with 124M pa-                                                                                 0.59 seconds and 0.05 seconds respectively. Hallu-
+rameters is used. The batch size is set to 16, and                                                                            cination discrimination consumes 1.51 seconds.
+we perform 100 iterations on the training set using                                                                              The results indicate that LRP is the primary ef-
+the Adam optimizer at a learning rate of 1e − 5.                                                                              ficiency bottleneck. In contrast, the Prompt and
+The model with the best F1 score is selected for the                                                                          SelfCheckGPT stages can directly benefit from in-
+final result.                                                                                                                 ference acceleration frameworks such as VLLM
+                                                                                                                              for speedup. In future work, we will continue ex-
+                                                                                                                              ploring how to accelerate LRP through inference
+E        Perturbation Tests                                                                                                   optimization techniques.
+
+The perturbation tests employed by Bakish et al.
+(2025) are divided into two types of disturbance:
+generation and pruning. The generation pro-
+cess progressively incorporates semantic fragments
+starting from null, ordered by relevance from high-
+est to lowest. An approach that faithfully replicates
+the real decision-making process of LLMs will
+identify the most impactful semantic fragments.
+When these fragments are added, the embedding
+distance of this model is significantly reduced com-
+pared to the previous one, and the logit (calculated
+against the predicted target semantic fragment)
+shows a marked increase. The pruning method
+starts by masking the semantic fragments with the
+lowest relevance and gradually progresses towards
+the semantic fragments with higher importance.
+Removing low-impact semantic fragments should
+preserve model prediction stability. Following Ali
+et al. (2022), the final metrics were quantified using
+Area-Under-Curve (AUC), capturing model accu-
+racy relative to the percentage of masked semantic
+fragments, from 0% to 100%.
+                                                                                                                           27841
+

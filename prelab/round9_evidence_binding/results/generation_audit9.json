@@ -1,0 +1,31 @@
+{
+  "status": "generation_complete_unscored",
+  "rows": 400,
+  "groups": 200,
+  "parse_failed": [],
+  "outside_answer_extra_text": [],
+  "output_tokens": {
+    "min": 10,
+    "max": 59,
+    "sum": 10078,
+    "mean": 25.195
+  },
+  "generation_seconds_sum": 463.3041831004084,
+  "generation_seconds_mean": 1.158260457751021,
+  "bracketed_marker_exceptions": [
+    {
+      "row_id": "ragognize_train_2030__partial",
+      "text": "[1] Mentor Marsh was listed as a National Natural Landmark in 1965.",
+      "split": "validation",
+      "note": "Bracketed reference marker remains inside the frozen parser item and contributes its digit as a lexical token under the frozen metric. No original text or alignment is changed."
+    },
+    {
+      "row_id": "ragognize_train_0498__partial",
+      "text": "[1] Peter Dering received death threats after Peak Design provided private customer information to police following the killing of Brian Thompson.",
+      "split": "train",
+      "note": "Bracketed reference marker remains inside the frozen parser item and contributes its digit as a lexical token under the frozen metric. No original text or alignment is changed."
+    }
+  ],
+  "interpretation": "Prompt has one short-answer question and two source excerpts; no instruction to say insufficient information; generation was greedy once per row. No resampling or output-based selection. These counts do not grade factuality.",
+  "frozen_data_sha256": "4a46dc042e531076e6803d820f1576832c28a58a6641009b52c9f08436707def"
+}

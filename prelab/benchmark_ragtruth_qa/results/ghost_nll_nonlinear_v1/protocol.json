@@ -1,0 +1,100 @@
+{
+  "version": "ghost-nll-three-fixed-shallow-trees-v1",
+  "methods": {
+    "nll_only": [
+      0
+    ],
+    "ghost_only": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "nll_ghost": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "feature_names": [
+    "mean_actual_token_nll",
+    "adjacent_layer_cosine_change",
+    "layer_to_final_cosine",
+    "top10_normalized_entropy",
+    "top10_unweighted_embedding_divergence"
+  ],
+  "new_fits": 3,
+  "model": "HistGradientBoostingClassifier",
+  "parameters": {
+    "max_iter": 100,
+    "max_depth": 2,
+    "max_leaf_nodes": 4,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "min_samples_leaf": 20,
+    "early_stopping": false,
+    "random_state": 20261008,
+    "monotonic_cst": null
+  },
+  "effective_parameters": {
+    "categorical_features": "from_dtype",
+    "class_weight": null,
+    "early_stopping": false,
+    "interaction_cst": null,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.05,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": 2,
+    "max_features": 1.0,
+    "max_iter": 100,
+    "max_leaf_nodes": 4,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "random_state": 20261008,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "CPU_threads": 4,
+  "cohort": {
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "fit_windows": 653979,
+    "calibration_windows": 42241,
+    "all_windows": 696220
+  },
+  "NLL": "Unchanged raw base.npy[:,1024]: mean -log p(actual current token | preceding state), across every raw BPE slot including punctuation. Higher means less likely text, not known factual error. No sign inversion or monotonic constraint.",
+  "GHOST": "The four completed raw-window means, with punctuation and short-window actual slots retained. No fitted score is an input.",
+  "preprocessing": "No scaler, projection or learned compression. The tree binning is fitted on fit rows only.",
+  "weights": "Byte-identical expanded3680 training_weights.npz loss; group/native-aux/answer/window base weighting, fit class factors then group renormalization; loss mass168123. No new class_weight.",
+  "fit": "All653979 fit windows; calibration is never passed to fit, validation, early stopping or feature construction. Exactly100 boosting iterations per method.",
+  "thresholds": "Original q.choose_threshold on cal only, independently window and answer: F1, precision, then higher threshold; >= predicts risk.",
+  "answer_score": "Maximum over every original eligible window; original labels, refusal policy and4rawBPE geometry unchanged.",
+  "selection": "One fixed model per method. Report all three; no model/parameter search or cross-method selected winner.",
+  "limits": [
+    "Exploratory development designed after observed linear GHOST results; not independent test evidence.",
+    "A local shallow boosted-tree comparison, not the paper GHOST random-forest answer-level reproduction.",
+    "Extra3046 published answers use common Llama replay, not their generators historical native states.",
+    "Fit/cal F1 or ranking differences alone do not establish absence of overfitting."
+  ],
+  "resource_estimate": {
+    "three_fit_minutes_planning": [
+      1,
+      6
+    ],
+    "not_measured": true,
+    "basis": "Prior fixed depth2/100-stage2-feature CPU combiner max6.283s on168123 rows; conservatively scale rows, up to5 features and3fits, plus metadata/metrics overhead.",
+    "raw_design_MiB": 13.279342651367188,
+    "disk_reserve_MiB": 100
+  },
+  "official_test_opened": false,
+  "GPU_used": false
+}

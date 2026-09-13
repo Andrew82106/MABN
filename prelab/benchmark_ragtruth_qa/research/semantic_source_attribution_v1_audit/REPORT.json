@@ -1,0 +1,137 @@
+{
+  "audit_status": "pass_with_engineering_caveat",
+  "fatal_numerical_or_coordinate_findings": 0,
+  "generated_at": "2026-09-13T02:13:27.9714134+08:00",
+  "scope": "read-only independent audit; no runner or feature artifact modified; no GPU extraction launched by auditor",
+  "bindings": {
+    "runner_sha256": "a87b4c8bcc232cead05cdaa23deb67642c8551f11870b5fd1a640513e78b977b",
+    "signature_file_sha256": "1c74873c6c6bd9882879309aa889a09d9990d9a91b5e888eaf56ac385d15aafa",
+    "signature_digest": "cb13454bac5f2ccaaa873f74c935a88a7b954370497441a0bc10cb4a1a370804",
+    "cpu_selfcheck_sha256": "f0c1262e3929e1e648c5172ef58b735ceabfe57084e26401d33db117b772b081",
+    "layouts_sha256": "5e934e6b13483236deadb5f160c277d58e069c885856175484598b34efc27c51",
+    "global_csr_index_sha256": "207e892248143c029070668755994f7acf3611f0ea5a97399c3149abe01b9467"
+  },
+  "formula_audit": {
+    "qkv_layout_correct": true,
+    "rotary_matches_transformers_4_51_3": true,
+    "repeat_kv_correct": true,
+    "causal_key_le_query": true,
+    "query_timing": "post_token",
+    "previous_answer_strict_lt_query": true,
+    "query_self_excluded_from_previous": true,
+    "primitive": "float32_softmax_attention_times_per_head_value_l2_norm",
+    "fragment_aggregation": "token_max_per_head",
+    "claim_aggregation": "mean_unique_lexical_query_tokens",
+    "compact_aggregation": "mean_heads_per_layer",
+    "cpu_oracle_max_abs_error_float32": 1.862645149230957e-09,
+    "cpu_oracle_max_abs_error_csr_float16": 7.595866918563843e-06,
+    "real_layout_membership_max_abs_row_sum_error": 3.5762786865234375e-07
+  },
+  "coordinate_audit": {
+    "answers": 793,
+    "claims": 11322,
+    "source_sentences": 11341,
+    "claim_lexical_set_mismatches": 0,
+    "claim_alphanumeric_coverage_failures": 0,
+    "claim_boundary_crossing_tokens": 4329,
+    "claim_boundary_alphanumeric_contamination": 0,
+    "source_sentence_boundary_crossing_tokens": 6931,
+    "source_boundary_whitespace_only": 6920,
+    "source_boundary_punctuation_only": 11,
+    "source_boundary_alphanumeric_contamination": 0,
+    "sentence_pair_token_overlaps": 0,
+    "passage_pair_token_overlaps": 0,
+    "sentences_outside_declared_passage_body": 0
+  },
+  "csr_audit": {
+    "claims": 11322,
+    "claim_indptr_length": 11323,
+    "edges": 166644,
+    "logical_mass_shape": [166644, 1024],
+    "all_index_and_identity_fields_exact": true,
+    "microclaim_index_scope": "local_to_response; response index plus microclaim index is the locator"
+  },
+  "label_isolation": {
+    "labels_read": false,
+    "official_test_opened": false,
+    "training_or_scoring_entrypoint": false,
+    "label_like_input_keys": ["labels_used", "official_test_opened"],
+    "label_like_keys_are_false_provenance_flags_only": true
+  },
+  "committed_shard_check": {
+    "response_id": "16023",
+    "npz_sha256": "21a2ccb7dda7e8cf3d89d03dcac673f485565244f226cd6103987f8b2d736189",
+    "npz_metadata_commit_hash_chain_valid": true,
+    "layout_identity_fields_exact": true,
+    "top_k_exact": true,
+    "csr_float16_sentence_compact_max_abs_drift": 5.015730857849121e-05,
+    "byte_identical_to_pre_membership_fix_for_this_unaffected_response": true
+  },
+  "citation_proxy_snapshot": {
+    "committed_answers": 120,
+    "warning": "citation and parent passage are weak self-generated provenance proxies, not factual gold labels",
+    "explicit": {
+      "claims": 344,
+      "top1_hit": 0.6424418604651163,
+      "random_top1_expectation": 0.3647484668567685,
+      "top3_hit": 0.9563953488372093,
+      "random_top3_expectation": 0.7601168649042417
+    },
+    "parent_only": {
+      "claims": 119,
+      "top1_hit": 0.6722689075630253,
+      "random_top1_expectation": 0.3538368494250846,
+      "top3_hit": 0.9327731092436975,
+      "random_top3_expectation": 0.7608050920036767
+    },
+    "explicit_or_parent": {
+      "claims": 463,
+      "top1_hit": 0.6501079913606912,
+      "random_top1_expectation": 0.3619439690719513,
+      "top3_hit": 0.9503239740820735,
+      "random_top3_expectation": 0.7602937526468609
+    }
+  },
+  "resource_audit": {
+    "max_sequence_tokens": 1232,
+    "model_max_position_tokens": 4096,
+    "max_query_tokens": 458,
+    "max_claims_per_answer": 42,
+    "max_sentences_per_answer": 48,
+    "max_edges_per_answer": 720,
+    "expected_csr_float16_bytes": 341286912,
+    "rough_uncompressed_total_output_bytes": 371312640,
+    "observed_gpu_memory_used_mib": 5196,
+    "gpu_total_mib": 8192,
+    "observed_gpu_memory_free_mib": 2823,
+    "oom_risk_observed": false
+  },
+  "findings": [
+    {
+      "id": "LOCK-001",
+      "severity": "high",
+      "current_run_affected": false,
+      "finding": "read_committed and quarantine_uncommitted run before the exclusive GPU lock, so a second extractor can move the first extractor's pre-commit files before failing to acquire the lock",
+      "recommendation": "Acquire the lock before scanning or quarantining, then rescan committed and missing records inside the lock. Add an explicit stale-lock recovery policy based on PID and ownership."
+    },
+    {
+      "id": "VALIDATE-001",
+      "severity": "medium",
+      "current_run_affected": false,
+      "finding": "validate_arrays does not compare microclaim indices, sentence passage/id/hash, or top-k arrays against the frozen layout",
+      "recommendation": "Add exact layout comparisons for every identity array and recompute top-k during validation."
+    },
+    {
+      "id": "ENV-001",
+      "severity": "medium",
+      "current_run_affected": false,
+      "finding": "The frozen software signature is not recomputed and compared at extract time, so a package change after CPU check would not invalidate the check",
+      "recommendation": "Assert current software signature equals the frozen signature before extraction."
+    }
+  ],
+  "method_limits": [
+    "attention times value norm is a heuristic attribution, not full LRP or a deletion-based causal effect",
+    "post-token features localize after emission and are not pre-emission predictions",
+    "token-max fragment aggregation can favor longer fragments"
+  ]
+}

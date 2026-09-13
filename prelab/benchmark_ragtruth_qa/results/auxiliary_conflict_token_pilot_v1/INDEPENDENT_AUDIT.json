@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "scope": "Independent CPU-only audit; exact auxiliary and QA fit prefixes only; no model/GPU/calibration/test.",
+  "script_sha256": "a109097226acd3119943505618d82ec659caafc5a4ba4eef811819ea21aa3e7a",
+  "core_manifest_sha256": "5532553daa2b05f24e7aed62228b2bcfbab49493ea08d9b82d5546b56e78e83f",
+  "source_and_group_isolation": {
+    "auxiliary_rows_read": 9678,
+    "qa_fit_examples_read": 34919,
+    "qa_fit_answers_read": 3680,
+    "calibration_rows_read": 0,
+    "test_rows_read": 0,
+    "released_conflict_spans_exactly_traced": 4381,
+    "traced_spans_with_selected_clean_conflict": 4058,
+    "qa_all_fit_groups_single_fold": 615,
+    "qa_train_held_group_intersection": 0
+  },
+  "selected_examples": {
+    "aux_conflict": 4064,
+    "aux_safe": 4064,
+    "qa_held_baseless": 636,
+    "qa_held_conflict": 64,
+    "qa_held_mixed": 3,
+    "qa_held_safe": 6280,
+    "qa_train_conflict": 341,
+    "qa_train_safe": 339
+  },
+  "exact_token_target_reconstruction": {
+    "examples_reconstructed": 15791,
+    "flat_tokens_reconstructed": 3479473,
+    "supervised_character_mass_reconstructed": 906875,
+    "positive_tokens": 30896,
+    "soft_boundary_tokens": 4,
+    "ignored_tokens_touching_baseless_spans": 7507,
+    "conflict_microclaims_retaining_exact_local_safe_tokens": 3513,
+    "stage_supervised_character_mass": {
+      "aux": 477881,
+      "qa_train": 42111,
+      "qa_held": 386883
+    },
+    "stage_positive_character_mass": {
+      "aux": 113778.0,
+      "qa_train": 15174.0,
+      "qa_held": 2966.0
+    },
+    "sentence_or_claim_label_broadcast_detected": false
+  },
+  "held_4bpe_reconstruction": {
+    "answers": 747,
+    "windows": 132213,
+    "positive_windows": 11734,
+    "evident_conflict_windows": 928,
+    "subtle_conflict_windows": 65,
+    "window_to_hypothesis_token_edges": 405692,
+    "v4_window_average_precision_rebuilt": 0.6390503697171015,
+    "protocol": "same held fold-0, answer text, lexical eligibility, stride-1 4-BPE windows"
+  },
+  "runner_and_scope": {
+    "calibration_rows_read": 0,
+    "test_rows_read": 0,
+    "GPU_used": false,
+    "model_checkpoint_loaded_during_cpu_stage": false,
+    "published_baselines_modified": false,
+    "upstream_quarantined_sources": 62,
+    "auxiliary_material_link_to_QA_fit": 0,
+    "candidate_and_control_pre_stage_optimizer_updates": 395,
+    "control_pre_stage_extra_padded_token_fraction": 0.1352956229426201,
+    "runner_sha256": "4e89de369c54131516d8689f30e6b6337b1333e3a152ad3bd0d2830de9e4bade"
+  }
+}

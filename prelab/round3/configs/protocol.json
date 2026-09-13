@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-10",
+  "model": "Qwen2.5-7B-Instruct, fixed existing Unsloth NF4 weights",
+  "train_n": 240,
+  "val_n": 65,
+  "fresh_test_generator": "llama-2-7b-chat",
+  "fresh_test_target_per_class": 40,
+  "fresh_test_selection_seed": 20260910,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "architecture_selection": "validation global token AUROC; seed42 fixed grid, family winners then three seeds; no fresh-test selection",
+  "architecture_candidates": [
+    "linear",
+    "MLP width64/256 depth1/2",
+    "causal convolution",
+    "causal GRU",
+    "balanced/natural token loss",
+    "within-response positive/negative mean-logit margin loss"
+  ],
+  "feature_families": [
+    "attention",
+    "attention plus train-only compressed after-states and evidence-removal features"
+  ],
+  "information_selection": "fixed attention logistic regression, original train C=0.1, 3-fold source-group out-of-fold scores for training, full-train scores for validation/test",
+  "information_units": "sentences split from output without gold labels; top-risk and random units; one request per summary per policy per arm",
+  "information_arms": [
+    "verification prompt before output",
+    "evidence quotation then verdict, max64 tokens",
+    "neutral expansion, max64 tokens"
+  ],
+  "test_metrics": [
+    "global token AUROC",
+    "macro within-answer token AUROC",
+    "clean-summary false alarm and error-summary recall at fixed validation threshold",
+    "span coverage of selected sentence",
+    "generated tokens and elapsed time",
+    "paired source bootstrap"
+  ],
+  "restrictions": [
+    "Only released human Evident Conflict or fully clean news",
+    "No original/new test labels in fitting or policy",
+    "No paid APIs or external LLM judge",
+    "No new gold from supplementary text",
+    "Post-generation detection, not guaranteed online prevention",
+    "New generator is a transfer condition, not same-distribution replication"
+  ],
+  "runtime_amendments": [
+    "Supplement batches reduced from 4 to 2 after observing approximately 7.95GB GPU residency and a sharp slowdown on longer sources. Completed records retained; same prompts, greedy decoding and 64-token ceiling. Per-record batch size and amortized time retained.",
+    "After direct and verification finished and 120 expansion records were saved, remaining expansion resumes at batch size 1. Inspection of installed bitsandbytes autograd/_functions.py confirmed single-vector 4-bit generation uses GEMV, whereas batched decode uses MatMul4Bit. This runtime change leaves prompts, weights, greedy decoding and max_new_tokens=64 fixed. Completed records retained. Timings mix batches/kernels and must not be used to rank algorithm speed; training-query state replay audit checks cached state agreement. CUDA unused cache is released between batches."
+  ],
+  "supplement_feature_plan": "Prompt, generated-decision mean and last states; train-query-only PCA32 per state type; four-layer cosine and relative norm change between prompt and last state; text verdict features separately controlled. Fixed before any supplementary fitting or fresh test metrics.",
+  "capacity_control_amendment": "Added while expansion was still running, before any fusion fitting or fresh test evaluation: verify_prompt_wide uses train-only PCA104 on prompt-end states. This matches the 104 internal features in verify_hidden (3xPCA32 + 8 state-change features), with zero additional generated tokens. Compare generated hidden states against both PCA32 and PCA104 prompt-only controls; verify_joint additionally contains 9 text features.",
+  "secondary_alert": "Top-10-percent token-risk mean threshold calibrated on clean validation summaries, secondary to max-token alerts; fixed before fresh-test evaluation."
+}

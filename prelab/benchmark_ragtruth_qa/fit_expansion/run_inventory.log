@@ -1,0 +1,233 @@
+{
+  "existing": {
+    "answers": 634,
+    "sources": 634,
+    "groups": 615,
+    "risk_answers": 328,
+    "no_annotated_risk_answers": 306,
+    "official_spans": 646,
+    "official_span_types": {
+      "Evident Baseless Info": 343,
+      "Evident Conflict": 109,
+      "Subtle Baseless Info": 187,
+      "Subtle Conflict": 7
+    },
+    "answers_by_span_type_nonexclusive": {
+      "Evident Baseless Info": 200,
+      "Evident Conflict": 87,
+      "Subtle Baseless Info": 112,
+      "Subtle Conflict": 5
+    },
+    "flag_true_spans": {
+      "implicit_true": 177,
+      "due_to_null": 0
+    },
+    "answer_characters": 649070,
+    "whitespace_separated_words_descriptive_only": 110970,
+    "span_integrity_issue_answers": 0,
+    "empty_answers": 0
+  },
+  "additional_good": {
+    "answers": 3078,
+    "sources": 634,
+    "groups": 615,
+    "risk_answers": 799,
+    "no_annotated_risk_answers": 2279,
+    "official_spans": 1247,
+    "official_span_types": {
+      "Evident Baseless Info": 640,
+      "Evident Conflict": 162,
+      "Subtle Baseless Info": 422,
+      "Subtle Conflict": 23
+    },
+    "answers_by_span_type_nonexclusive": {
+      "Evident Baseless Info": 445,
+      "Evident Conflict": 137,
+      "Subtle Baseless Info": 301,
+      "Subtle Conflict": 22
+    },
+    "flag_true_spans": {
+      "implicit_true": 409,
+      "due_to_null": 0
+    },
+    "answer_characters": 1939255,
+    "whitespace_separated_words_descriptive_only": 336232,
+    "span_integrity_issue_answers": 0,
+    "empty_answers": 0
+  },
+  "combined_good_if_all_added": {
+    "answers": 3712,
+    "sources": 634,
+    "groups": 615,
+    "risk_answers": 1127,
+    "no_annotated_risk_answers": 2585,
+    "official_spans": 1893,
+    "official_span_types": {
+      "Evident Baseless Info": 983,
+      "Evident Conflict": 271,
+      "Subtle Baseless Info": 609,
+      "Subtle Conflict": 30
+    },
+    "answers_by_span_type_nonexclusive": {
+      "Evident Baseless Info": 645,
+      "Evident Conflict": 224,
+      "Subtle Baseless Info": 413,
+      "Subtle Conflict": 27
+    },
+    "flag_true_spans": {
+      "implicit_true": 586,
+      "due_to_null": 0
+    },
+    "answer_characters": 2588325,
+    "whitespace_separated_words_descriptive_only": 447202,
+    "span_integrity_issue_answers": 0,
+    "empty_answers": 0
+  },
+  "additional_good_by_model": {
+    "gpt-3.5-turbo-0613": {
+      "answers": 597,
+      "sources": 597,
+      "groups": 579,
+      "risk_answers": 53,
+      "no_annotated_risk_answers": 544,
+      "official_spans": 60,
+      "official_span_types": {
+        "Evident Baseless Info": 23,
+        "Evident Conflict": 12,
+        "Subtle Baseless Info": 20,
+        "Subtle Conflict": 5
+      },
+      "answers_by_span_type_nonexclusive": {
+        "Evident Baseless Info": 22,
+        "Evident Conflict": 11,
+        "Subtle Baseless Info": 16,
+        "Subtle Conflict": 5
+      },
+      "flag_true_spans": {
+        "implicit_true": 21,
+        "due_to_null": 0
+      },
+      "answer_characters": 260018,
+      "whitespace_separated_words_descriptive_only": 45081,
+      "span_integrity_issue_answers": 0,
+      "empty_answers": 0
+    },
+    "gpt-4-0613": {
+      "answers": 614,
+      "sources": 614,
+      "groups": 595,
+      "risk_answers": 29,
+      "no_annotated_risk_answers": 585,
+      "official_spans": 32,
+      "official_span_types": {
+        "Evident Baseless Info": 7,
+        "Evident Conflict": 7,
+        "Subtle Baseless Info": 12,
+        "Subtle Conflict": 6
+      },
+      "answers_by_span_type_nonexclusive": {
+        "Evident Baseless Info": 7,
+        "Evident Conflict": 7,
+        "Subtle Baseless Info": 10,
+        "Subtle Conflict": 6
+      },
+      "flag_true_spans": {
+        "implicit_true": 11,
+        "due_to_null": 0
+      },
+      "answer_characters": 343139,
+      "whitespace_separated_words_descriptive_only": 60156,
+      "span_integrity_issue_answers": 0,
+      "empty_answers": 0
+    },
+    "llama-2-13b-chat": {
+      "answers": 632,
+      "sources": 632,
+      "groups": 613,
+      "risk_answers": 264,
+      "no_annotated_risk_answers": 368,
+      "official_spans": 431,
+      "official_span_types": {
+        "Evident Baseless Info": 207,
+        "Evident Conflict": 62,
+        "Subtle Baseless Info": 157,
+        "Subtle Conflict": 5
+      },
+      "answers_by_span_type_nonexclusive": {
+        "Evident Baseless Info": 141,
+        "Evident Conflict": 49,
+        "Subtle Baseless Info": 105,
+        "Subtle Conflict": 4
+      },
+      "flag_true_spans": {
+        "implicit_true": 155,
+        "due_to_null": 0
+      },
+      "answer_characters": 509516,
+      "whitespace_separated_words_descriptive_only": 88337,
+      "span_integrity_issue_answers": 0,
+      "empty_answers": 0
+    },
+    "llama-2-70b-chat": {
+      "answers": 629,
+      "sources": 629,
+      "groups": 610,
+      "risk_answers": 207,
+      "no_annotated_risk_answers": 422,
+      "official_spans": 347,
+      "official_span_types": {
+        "Evident Baseless Info": 210,
+        "Evident Conflict": 24,
+        "Subtle Baseless Info": 112,
+        "Subtle Conflict": 1
+      },
+      "answers_by_span_type_nonexclusive": {
+        "Evident Baseless Info": 138,
+        "Evident Conflict": 19,
+        "Subtle Baseless Info": 77,
+        "Subtle Conflict": 1
+      },
+      "flag_true_spans": {
+        "implicit_true": 107,
+        "due_to_null": 0
+      },
+      "answer_characters": 474375,
+      "whitespace_separated_words_descriptive_only": 81697,
+      "span_integrity_issue_answers": 0,
+      "empty_answers": 0
+    },
+    "mistral-7B-instruct": {
+      "answers": 606,
+      "sources": 606,
+      "groups": 587,
+      "risk_answers": 246,
+      "no_annotated_risk_answers": 360,
+      "official_spans": 377,
+      "official_span_types": {
+        "Evident Baseless Info": 193,
+        "Evident Conflict": 57,
+        "Subtle Baseless Info": 121,
+        "Subtle Conflict": 6
+      },
+      "answers_by_span_type_nonexclusive": {
+        "Evident Baseless Info": 137,
+        "Evident Conflict": 51,
+        "Subtle Baseless Info": 93,
+        "Subtle Conflict": 6
+      },
+      "flag_true_spans": {
+        "implicit_true": 115,
+        "due_to_null": 0
+      },
+      "answer_characters": 352207,
+      "whitespace_separated_words_descriptive_only": 60961,
+      "span_integrity_issue_answers": 0,
+      "empty_answers": 0
+    }
+  },
+  "quality_excluded_counts": {
+    "incorrect_refusal": 88,
+    "truncated": 4
+  },
+  "same_source_exact_answer_duplicate_excess": 32
+}

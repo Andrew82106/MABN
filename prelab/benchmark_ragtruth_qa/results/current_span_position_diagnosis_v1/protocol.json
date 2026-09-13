@@ -1,0 +1,28 @@
+{
+  "version": "current-fixed-candidate-span-position-v1",
+  "candidate": "semantic_claim__old_tree__large_weight0.4",
+  "data": "Original calibration159 answers,154 source groups,42241 windows; saved human labels and4rawBPE windows unchanged.",
+  "first": "For each original human span with lexical risk tokens, choose its earliest eligible window intersecting any of those risk_token_indices. Deduplicate these windows. It may start up to3 raw tokens before the span first risk token.",
+  "later": "All remaining gold-positive windows. If a window is first for one span and later for another, first takes priority. Count such overlaps explicitly.",
+  "normal": "Every gold-zero window. First/later/normal are mutually exclusive and exhaustive over original42241 windows.",
+  "ranking": "For first and later separately, their positive windows versus the SAME all-normal window set; AUROC/AP with the resulting subset prevalence disclosed. Normal-only AUROC/AP are undefined; report FPR/specificity.",
+  "runs": "Maximal risk runs along lexical-token order: skip nonlexical tokens including punctuation, but any gold-normal lexical token ends a run. Adjacent human spans may merge; these are not asserted to be single factual propositions.",
+  "run_hit": "A run is hit if any threshold-positive original4BPE window touches its risk tokens. Keep every run, including misses.",
+  "first_hit_offset": "Earliest alerted touching window token_start minus run first risk raw-token index (signed; negatives are window geometry, not advance warning). Also report first covered risk-token offset, which is nonnegative.",
+  "whole_run": "Report both fraction/all of touching risk windows alerted and fraction/all of risk lexical tokens covered by their union. These are distinct from exact semantic span detection.",
+  "seeded_misses": "Diagnostic-only count of missed positive windows touching a gold run that has at least one existing alert. This uses true run boundaries and is NOT a deployed extension rule.",
+  "equivalent_search": {
+    "examined": [
+      "src/diagnose_selected_convex.py",
+      "src/diagnose_completed_tail.py",
+      "results/claim_pooling_v1/span_extent_diagnostic.json",
+      "results/first_risk_token_matched_v1/protocol.json"
+    ],
+    "finding": "Existing results cover type recall, span union coverage or fit-only NLL; not this selected-candidate cal position/run breakdown."
+  },
+  "new_fits": 0,
+  "new_thresholds": 0,
+  "GPU_used": false,
+  "test_opened": false,
+  "limitations": "Post-selection diagnostics on repeatedly used calibration. Gold positions/runs must never become deployment inputs; geometry and subset prevalence affect comparisons. No structure or extension parameter selected."
+}

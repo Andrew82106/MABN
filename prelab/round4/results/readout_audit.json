@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "training_targets": 6,
+  "matched_original_batches": true,
+  "checks": [
+    {
+      "query_id": "646a1deee4ef31ed490c",
+      "kind": "whole",
+      "matched_batch_size": 2,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "c341ead6482253827a33",
+      "kind": "whole",
+      "matched_batch_size": 2,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "9343228f8c85e3fa5c7a",
+      "kind": "sentence",
+      "matched_batch_size": 2,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "c2dfd04523d88fc52c56",
+      "kind": "sentence",
+      "matched_batch_size": 2,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "7a3ac5109cdc5712635e",
+      "kind": "fact",
+      "matched_batch_size": 2,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "55ee605f193e993490e3",
+      "kind": "fact",
+      "matched_batch_size": 1,
+      "relative_state_difference": 0.0,
+      "max_ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    }
+  ]
+}

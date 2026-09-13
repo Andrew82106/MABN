@@ -1,0 +1,143 @@
+{
+  "version": "mva-author-raw-code-nf4-offline-v1",
+  "official_commit": "f8b871a06b6c18dabe5881bd02a68854b2940b81",
+  "official_url": "https://raw.githubusercontent.com/Ogamon958/mva_hal_det/f8b871a06b6c18dabe5881bd02a68854b2940b81/features/gen_features.py",
+  "official_sha256": "d04da5ec2e457ed6105bc57a7a73b348274db9834179234cb941722f151eb696",
+  "model": {
+    "repo": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "assets": {
+      "LICENSE.txt": {
+        "bytes": 7020,
+        "sha256": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b"
+      },
+      "USE_POLICY.md": {
+        "bytes": 4766,
+        "sha256": "7c23fb36d80141c4ab8cdbb61ee4790102ebd2bf7aeff414453177d4f2110e5d"
+      },
+      "config.json": {
+        "bytes": 583,
+        "sha256": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2"
+      },
+      "tokenizer_config.json": {
+        "bytes": 746,
+        "sha256": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72"
+      },
+      "special_tokens_map.json": {
+        "bytes": 435,
+        "sha256": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777"
+      },
+      "tokenizer.model": {
+        "bytes": 499723,
+        "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      },
+      "tokenizer.json": {
+        "bytes": 1842764,
+        "sha256": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 26788,
+        "sha256": "11b694a9d4bffdac71733db7f782be0df1f87a65fb9ef05bcf6d317029c22364"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 9976576152,
+        "sha256": "66dec18c9f1705b9387d62f8485f4e7d871ca388718786737ed3c72dbfaac9fb"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 3500296424,
+        "sha256": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d"
+      }
+    }
+  },
+  "load_config": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_quant_storage": "uint8",
+    "llm_int8_skip_modules": [
+      "lm_head"
+    ],
+    "torch_dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "device_map": {
+      "": "cuda:0"
+    },
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "padding": "one unpadded sequence and explicit all-ones mask; generation_config is not used",
+    "tf32_allowed": false
+  },
+  "model_asset_check": "prepare checks current sizes and frozen SHA identities; gpu-smoke rehashes actual assets before loading",
+  "seed": 20260911,
+  "threads": 4,
+  "software": {
+    "torch": "2.5.1+cu121",
+    "transformers": "4.51.3",
+    "bitsandbytes": "0.49.2",
+    "accelerate": "1.13.0",
+    "numpy": "2.4.6",
+    "safetensors": "0.7.0",
+    "tokenizers": "0.21.4"
+  },
+  "python": "3.11.15",
+  "torch_cuda_runtime": "12.1",
+  "code_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\mva_attention_features_v1.py": "6b40a1aa6afc31fe13e0da617d1f6b78b45864e49dad94493123e67575692dc6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_feature_qa.py": "9d9bd6ba68e297f2986420ea5265546d6c48bd4fec8090f20eac08d70d3d9957",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\references\\mva_f8b871a\\gen_features.py": "d04da5ec2e457ed6105bc57a7a73b348274db9834179234cb941722f151eb696",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\.venv\\Lib\\site-packages\\transformers\\models\\llama\\modeling_llama.py": "9f7e93602e876a8f3f171e4911df5a5898ac407b8eb8982099e52b53daf0469e",
+    "D:\\anaconda\\envs\\CA\\Lib\\site-packages\\bitsandbytes\\nn\\modules.py": "b931c55f417ab13be27746e3ea732fc7275a64b020be905101cc02d68da36a9a",
+    "D:\\anaconda\\envs\\CA\\Lib\\site-packages\\bitsandbytes\\functional.py": "99c72a8a6a93ec575d69465c4d862aba89ecad580a35aa87a320690b2b802ffd"
+  },
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\manifest.json": "723a6be3e3f70ecc1b51bb4140cf31866214f41c6d495636848935c51ac76e1f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\export_freeze.json": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\ghost_geometry_features_v1\\signature.json": "4e8b09634a5887976745ae6ced03d438a590afaf254212201cf8888160902858",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\model_download_manifest.json": "a78209b43b6725f5d5e8fe446f801e7f04498ee53f360345cb67999e1aa511c1"
+  },
+  "groups": {
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_groups": 615,
+    "calibration_groups": 154
+  },
+  "feature_names": [
+    "key_avg",
+    "key_entropy",
+    "query_entropy"
+  ],
+  "feature_order": "feature-major, layer-major, head-major; raw answer token is row",
+  "storage_dtype": "float16",
+  "attention_probability_dtype": "float16 after FP32 softmax of model-dtype QK product",
+  "head_chunk": 2,
+  "query_chunk": 32,
+  "width": 3072,
+  "epsilon": 1e-09,
+  "reduction": "One complete causal head; author FP32 row/column reductions, normalization-to-FP16 then entropy renormalization, result FP16",
+  "key_avg": "mean over all T rows of (absolute 1-based query index * A), denominator T, not T-j+1",
+  "timing": "post-token Q row for outgoing; own and future Q rows for incoming; full sequence before answer slicing",
+  "no_norm_variant": true,
+  "no_random_context": true,
+  "labels_read": false,
+  "offline_future_answer_used": true,
+  "exact_original_generation_trace": false,
+  "official_test_opened": false,
+  "stages": [
+    "prepare",
+    "cpu-selfcheck",
+    "gpu-smoke"
+  ],
+  "automatic_stage_chaining": false,
+  "real_extraction_cli_available": false,
+  "training_available": false,
+  "baseline_status": "Author-code-exact statistics on declared reconstructed FP16 attention are only MVA inputs, not a complete MVA baseline. No classifier or postprocessing is implemented here.",
+  "future_baseline_boundary": "A formal MVA baseline must use the pinned author classifier/structure/postprocessing in a separate directory. A 256-wide lightweight Transformer, partial-label CRF, new thresholds or other method changes are ours adaptation, never the formal baseline.",
+  "cpu_oracle": "unmodified get_features AST; dummy boundary used only by unused fourth Lookback output",
+  "cpu_statistic_equality": "exact FP16 arrays for pinned author and block/core paths",
+  "gpu_smoke": "first, last, longest frozen input, no labels; same-path repeat exact; finite all features and actual peak memory; no dataset extraction",
+  "checkpoint_write": "NPZ.pending fsync/replace, metadata with full NPZ hash, then per-record commit JSON; commit last; no overwrite of mismatched existing records"
+}

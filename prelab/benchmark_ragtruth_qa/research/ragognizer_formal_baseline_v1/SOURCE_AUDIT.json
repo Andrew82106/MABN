@@ -1,0 +1,82 @@
+{
+  "version": "ragognizer-source-and-paper-audit-v1",
+  "date": "2026-09-13",
+  "paper": {
+    "artifact": "sources/RAGognizer_arXiv_2604.15945v1.pdf",
+    "sha256": "1e3deb4889a3ffc91cd2d3708617d9a112543dabfd030a12b5ac99bb31a647c3",
+    "pages": 14,
+    "relevant_pages_inspected": [1, 4, 5, 6, 7, 8, 12, 13],
+    "findings": {
+      "dataset": "18,492 annotated RAGognize responses; 40% train / 60% test",
+      "architecture": "frozen pretrained backbone, LoRA in transformer modules, integrated middle-layer MLP detection head",
+      "training": "LoRA r=32 alpha=16 dropout=0; maximum 5 epochs; cosine schedule; warmup 0.1; peak LR 4e-5; three-layer head hidden size 1024; response-token-only losses; lambda=1",
+      "native_score": "sigmoid of detection-head logit",
+      "native_response_aggregation": "max pooling over token predictions",
+      "reported_RAGTruth_QA": "Qwen3-4B proxy RAGognizer: token AUROC 90.25 and response AUROC 87.43; appendix-only reference, not a result for this Llama checkpoint or shared protocol",
+      "publication": "arXiv:2604.15945v1, submitted 17 April 2026"
+    }
+  },
+  "ragognizer_source": {
+    "commit": "1d3e8fdd6de638dc2d06265829a4d9ced387e0ba",
+    "commit_date": "2026-06-03",
+    "checkpoint_revision_date": "2026-04-20",
+    "provenance_note": "the requested official source commit postdates the checkpoint revision, so it is the frozen public inference implementation rather than proof of the exact training-time code",
+    "primary_file": "third_party/RAGognizer/ragognizer/ragognizer/detectors/RAGognizer.py",
+    "findings": [
+      {"lines": "63-77", "fact": "constructor defaults to CUDA, transformer_heads=true, postprocessor=false, bfloat16=true"},
+      {"lines": "104-181", "fact": "BF16 dtype choice, model download, integrated head loader, new_embeddings_added metadata, native threshold load"},
+      {"lines": "183-205", "fact": "separate MLP loads a causal LM, merges LoRA, then applies a distinct MLP at layer_perc"},
+      {"lines": "222-239", "fact": "apply_chat_template without generation prompt"},
+      {"lines": "307-352", "fact": "native token packing and assistant response selection"},
+      {"lines": "370-446", "fact": "template decode/re-tokenize round trip, sigmoid, head selection, postprocessor hook, and packed output"},
+      {"lines": "490-526", "fact": "explicit chat is accepted unchanged; documents/user fallback constructs a different context wrapper; response aggregation delegates to max token"}
+    ]
+  },
+  "official_RAGTruth_adapter": {
+    "file": "third_party/RAGognizer/ragognizer/ragognizer/benchmarks/RAGTruth.py",
+    "lines": "142-183",
+    "finding": "builds chat from source_info_entry['prompt'] and response_entry['response']; this supports the frozen released_prompt/original_response two-message input"
+  },
+  "transformer_heads_source": {
+    "resolved_commit": "6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+    "author_commit_pin_present": false,
+    "findings": [
+      {"file": "transformer_heads/util/load_model.py", "lines": "139-212", "fact": "base model, LoRA, and saved heads are loaded; new_emb_size support exists at this resolved commit"},
+      {"file": "transformer_heads/model/model.py", "lines": "176-180", "fact": "each head consumes its configured hidden state and returns float32 logits"},
+      {"file": "transformer_heads/util/prepare_model.py", "lines": "9-24", "fact": "non-kbit dtype loop calls parameter.to(dtype) without assigning the returned tensor"}
+    ]
+  },
+  "released_training_code": {
+    "file": "third_party/RAGognizer/fine-tuning/ft.py",
+    "default_non_ragtruth_path": "dataset['train'] -> formatted_dataset -> seeded 90/10 train/validation; dataset['test'] -> test only",
+    "ragtruth_training_switch_exists": true,
+    "checkpoint_specific_launch_manifest_present": false
+  },
+  "bugs_and_reproducibility_gaps": [
+    {
+      "severity": "blocking_for_direct_local_constructor",
+      "finding": "repo_dir is defined only for the online download branch; checkpoint_dir main path catches the resulting failure and silently drops metadata, while checkpoint_dir separate-MLP path references repo_dir and fails"
+    },
+    {
+      "severity": "must_record_at_smoke",
+      "finding": "author inference package leaves transformer-heads commit, PyTorch, PEFT, and Accelerate incompletely pinned"
+    },
+    {
+      "severity": "must_record_at_smoke",
+      "finding": "actual loaded dtype distribution must be recorded because the non-kbit set_compute_dtype loop is ineffective by itself"
+    },
+    {
+      "severity": "performance_only",
+      "finding": "released _predict lacks a no-gradient context and performs prefix decoding for every token"
+    },
+    {
+      "severity": "identity_note",
+      "finding": "adapter_config lists lm_head among target_modules, but the released adapter safetensor has 448 tensors exactly covering seven transformer projections across 32 layers and contains no lm_head tensor; the formal loader preserves this released state without inventing weights"
+    }
+  ],
+  "safety": {
+    "ragognize_test_downloaded": false,
+    "ragognize_test_opened": false,
+    "gpu_workload_started": false
+  }
+}

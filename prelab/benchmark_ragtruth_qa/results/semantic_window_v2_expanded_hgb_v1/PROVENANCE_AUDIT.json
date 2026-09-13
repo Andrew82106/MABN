@@ -1,0 +1,13 @@
+{
+  "status": "passed_independent_revalidation_of_expanded_OOF_inputs",
+  "source_audit_status": "passed_all_supervised_whitebox_inputs_are_source_group_OOF",
+  "upstream_supervised_columns_source_group_OOF": true,
+  "in_sample_supervised_columns": 0,
+  "feature_matrix_byte_identical_to_audited_expanded_LR": true,
+  "feature_matrix_sha256": "a8304f71f3d85f0d657819a79c3d7491ec7a93c1228c1a336e52bf9df1f3de16",
+  "native_168123_feature_rows_previously_replayed_exact": true,
+  "downstream_five_fold_group_disjoint": true,
+  "downstream_five_fold_window_coverage_exactly_once": true,
+  "calibration_opened": false,
+  "official_test_opened": false
+}

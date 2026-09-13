@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "selected_epoch": 2,
+  "selected_calibration": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3974,
+      "fp": 2293,
+      "fn": 2010,
+      "tn": 33964,
+      "precision": 0.6341152066379447,
+      "recall": 0.6641042780748663,
+      "f1": 0.6487633662558159,
+      "auroc": 0.892028022912485,
+      "average_precision": 0.6559099362057712
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 77,
+      "fp": 8,
+      "fn": 23,
+      "tn": 51,
+      "precision": 0.9058823529411765,
+      "recall": 0.77,
+      "f1": 0.8324324324324325,
+      "auroc": 0.8423728813559321,
+      "average_precision": 0.9043569162773911
+    }
+  },
+  "selected_fit_at_cal_thresholds": {
+    "windows": {
+      "n": 653979,
+      "positive": 58433,
+      "tp": 47077,
+      "fp": 23315,
+      "fn": 11356,
+      "tn": 572231,
+      "precision": 0.6687833844755086,
+      "recall": 0.8056577618811288,
+      "f1": 0.7308674558509606,
+      "auroc": 0.9623626022526458,
+      "average_precision": 0.7783468158794248
+    },
+    "answers": {
+      "n": 3680,
+      "positive": 1127,
+      "tp": 891,
+      "fp": 169,
+      "fn": 236,
+      "tn": 2384,
+      "precision": 0.840566037735849,
+      "recall": 0.7905944986690329,
+      "f1": 0.8148148148148148,
+      "auroc": 0.9378887200923388,
+      "average_precision": 0.8826356236363899
+    }
+  },
+  "window_f1_by_QA_epoch": [
+    0.6486064485908346,
+    0.6487633662558159,
+    0.6325362602900824
+  ],
+  "answer_f1_by_QA_epoch": [
+    0.8341708542713567,
+    0.8324324324324325,
+    0.8446601941747572
+  ],
+  "fit_weighted_bce_by_QA_epoch": [
+    0.31001419481707587,
+    0.22482883382489002,
+    0.13713248555084392
+  ],
+  "optimizer_updates": 2590,
+  "auxiliary_no_calibration_evaluation": true,
+  "raw_probability_aggregation_thresholds_metrics_selection_hashes_verified": true,
+  "original_QA_first_three_orders_exact": true,
+  "actual_input_token_budget_matches_fixed_plan": true,
+  "seconds": 2234.2718728000764,
+  "peak_cuda_allocated_bytes": 3121381888,
+  "neural_model_loaded": false,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "complete_sha256": "af30e84825ee245c43e9c28de5bb1f70e4b1ea3c2d6eaba7414dd65d930a88fe",
+  "auditor_sha256": "a5670d4630b8301d72d7662481f99335dd22131f0862932b347e4f3349d91fed",
+  "independent_metric_helper_sha256": "fdc744ab01dd93ef7fb922909da98b2c9c67f18f220468272f07fa7db2e38515"
+}

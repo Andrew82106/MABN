@@ -1,0 +1,35 @@
+{
+  "version": "six-frozen-controls-plus-large-convex-v1",
+  "bases": "The three already-selected original two-scores+eight-citation-feature LRs and three original two-score monotone trees. These are the old models without large input, not the new large-trained combiners.",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "large_weights": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "candidate_count": 36,
+  "large": "Exactly one globally selected epoch from the complete six-epoch generic ModernBERT-large run. Use its already audited original-native window probability; no per-base epoch selection.",
+  "formula": "Each original eligible window: score=(1-alpha)*frozen_base_window_probability+alpha*frozen_large_window_probability. Probability-space convex combination, not logits or token-level fusion.",
+  "answer": "Maximum of the combined score over every original eligible window. Do not combine already-aggregated answer scores.",
+  "scope": "Original634 native fit answers/168123 windows and159 calibration answers/42241 windows. Original human labels and4rawBPE stride1 lexical geometry unchanged; no filtering or new annotations.",
+  "selection": "For each of the same36 candidates, original calibration-only two F1-optimal thresholds with precision then higher-cutoff ties. Select one alpha per base by max min(two F1), windowF1, window precision, then smaller alpha. The same candidate supplies both metrics.",
+  "endpoints": "alpha0 must reproduce each original control score, answermax, thresholds and metrics exactly; alpha1 must reproduce the one standalone large score and its calibration metrics/thresholds.",
+  "training": "None. Freeze original controls, their C choices, large epoch and all model parameters. No scaler or model refits, no early stopping or new optimizer steps.",
+  "artifacts": "Retain all36 scores, thresholds, fit/calibration counts, six selected candidates, original controls and standalone large comparisons.",
+  "limits": [
+    "Repeated development calibration; no independent-test claim.",
+    "All upstream models and prior selections remain as completed; their supervision and compute differ.",
+    "A calibration-selected alpha0 fallback cannot guarantee no degradation on future data.",
+    "Extra whole-input semantic checker and offline answer processing; not a pure generator-state probe."
+  ],
+  "GPU_used": false,
+  "official_test_opened": false,
+  "new_fits": 0
+}

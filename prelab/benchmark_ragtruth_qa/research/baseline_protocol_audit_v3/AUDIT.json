@@ -1,0 +1,96 @@
+{
+  "version": "formal-baseline-protocol-audit-v3",
+  "date": "2026-09-13",
+  "overall": "FAIL_HOLD_NA",
+  "scope": {
+    "gpu_run": false,
+    "new_test_or_validation_opened": false,
+    "baseline_code_modified": false,
+    "audit_type": "static_protocol_source_and_hash_review"
+  },
+  "verdicts": {
+    "redeep_core_method_and_shared_evaluation": "PASS",
+    "redeep_runtime_identity_binding": "FAIL",
+    "redeep_current_numeric_main_table_eligibility": "FAIL_NA_INCOMPLETE",
+    "ragognizer_core_model_and_shared_evaluation": "PASS",
+    "ragognizer_full_3839_coverage": "FAIL_CALIBRATION_ONLY",
+    "ragognizer_current_numeric_main_table_eligibility": "FAIL_NA_INCOMPLETE",
+    "global_formal_freeze_registry": "FAIL_STALE_AND_MISSING_ENTRY"
+  },
+  "blocking_findings": [
+    {
+      "id": "RAGOGNIZER_COVERAGE",
+      "evidence": [
+        "BASELINE_PROTOCOL.md:5",
+        "ragognizer_formal_baseline_v1/METHOD_FREEZE.json:101-105",
+        "ragognizer_formal_baseline_v1/prepare_cal_plan.py:202-226",
+        "ragognizer_formal_baseline_v1/run_cal_inference.py:121,135-136",
+        "ragognizer_formal_baseline_v1/adapter.py:142,184-185"
+      ],
+      "main_table_effect": "must remain N/A until fit+cal all 3839 are frozen"
+    },
+    {
+      "id": "GLOBAL_REGISTRY_DRIFT",
+      "evidence": [
+        "BASELINE_PROTOCOL.md:17",
+        "FORMAL_BASELINE_FREEZE.md:21"
+      ],
+      "details": {
+        "current_redeep_method_freeze_sha256": "0a03b59c24060dcaa6062d6299d191c5044b26fbce40259472cf91aacb0cf03b",
+        "stale_redeep_hash_in_global_freeze": "a3985d78e3a9a880a9f728ef4c6f843aa211226f6e5f42bf9ce3970bd7a422ab",
+        "ragognizer_entry_present": false
+      },
+      "main_table_effect": "formal source identity is not globally registered"
+    },
+    {
+      "id": "REDEEP_PROVENANCE_BINDING",
+      "evidence": [
+        "run_redeep_formal_baseline_v1.py:325-351",
+        "run_redeep_formal_baseline_v1.py:296-322",
+        "score_redeep_formal_baseline_v1.py:88-113",
+        "score_redeep_formal_baseline_v1.py:223-231"
+      ],
+      "main_table_effect": "frozen scores cannot yet prove frozen checkpoint/source provenance"
+    },
+    {
+      "id": "RAGOGNIZER_SCORE_CHAIN",
+      "evidence": [
+        "ragognizer_formal_baseline_v1/evaluate_shared.py:105-149"
+      ],
+      "main_table_effect": "bind final raw/run/adapter/freeze hashes before registration"
+    },
+    {
+      "id": "REDEEP_RAW_AUDIT_NOT_ENFORCED",
+      "evidence": [
+        "src/audit_redeep_raw_features_v1.py:61-99",
+        "redeep_formal_baseline_v1/RUNBOOK.md:11-16",
+        "score_redeep_formal_baseline_v1.py:336-399"
+      ],
+      "main_table_effect": "make the raw manifest a mandatory score-freeze prerequisite"
+    },
+    {
+      "id": "REDEEP_HOLDOUT_ENTRY_ABSENT",
+      "evidence": [
+        "redeep_formal_baseline_v1/METHOD_FREEZE.json:35",
+        "run_redeep_formal_baseline_v1.py:61-72",
+        "score_redeep_formal_baseline_v1.py:457-466"
+      ],
+      "main_table_effect": "does not change current calibration N/A; blocks future one-shot holdout result"
+    }
+  ],
+  "observed_current_hashes": {
+    "redeep_method_freeze": "0a03b59c24060dcaa6062d6299d191c5044b26fbce40259472cf91aacb0cf03b",
+    "redeep_runner": "63e350bfaa77a614cfdec88218c31d5a8cd692c363c00976551adc91983191a2",
+    "redeep_scorer": "c5ffa368b6e91780f863bfb2ff523941bb0273651ef2f9475b2df66f4585417f",
+    "redeep_core": "8fded50579a701c27d43be2edd83fe0303cc7f4df9cae7561028181e26d5efdb",
+    "ragognizer_method_freeze": "175b8edbe22f0779eb6f73d4f1d57e91e333d7ff3190822f2a95265b0a2dfdfc",
+    "ragognizer_runner": "9a1dc4a1ce6f01f36c68407afcdc45dcb138c6f61e994d9ee4d2b8b0ecfa1c0f",
+    "ragognizer_adapter": "5c2bd65173c8f503141c6b1f5395c13463ba44ecf31afb89fef4632121781c97",
+    "ragognizer_evaluator": "e3631951fd88914d92e390de0bd8703e172c044cfa527e33d2298bf4c415e9dd"
+  },
+  "main_table_decision": {
+    "redeep": "N/A_ONLY",
+    "ragognizer": "N/A_ONLY",
+    "can_certify_candidate_not_below_strongest_completed_formal_baseline": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "status": "frozen_assistant_labels_after_two_reviews",
+  "utc": "2026-09-10T15:00:37.201458+00:00",
+  "items": 240,
+  "groups": 40,
+  "independent_agreements": 237,
+  "semantic_disputes": [
+    {
+      "item_id": "hotpot_5ae2a0f9554299495565daec__partial__1",
+      "first": {
+        "stance": "asserted",
+        "evidence_relation": "contradicted",
+        "reference_correctness": "incorrect"
+      },
+      "second": {
+        "stance": "abstained",
+        "evidence_relation": "not_applicable",
+        "reference_correctness": "not_applicable"
+      },
+      "first_rationale": "回答否定Joe Elliott在检索资料中被提及，但可见资料有Joe Elliott标题及其其他乐队主唱经历；不是仅说缺生年，明确否定检索覆盖与当前证据矛盾。",
+      "second_rationale": "Elliotttitle remains but no birthyear; notmentioned is overbroad refusal wording, no actualdateassertion.",
+      "final": "Retain first asserted/contradicted label.",
+      "reason": "PLAN includes any additional false factual assertion. The answer explicitly denies the source mentioning a subject whose source title and biography are visible. This differs from merely saying the requested birth year is missing. The same rule is applied across train/validation/test before fitting or scoring."
+    },
+    {
+      "item_id": "hotpot_5ab8a96f55429919ba4e234d__partial__1",
+      "first": {
+        "stance": "asserted",
+        "evidence_relation": "contradicted",
+        "reference_correctness": "incorrect"
+      },
+      "second": {
+        "stance": "abstained",
+        "evidence_relation": "not_applicable",
+        "reference_correctness": "not_applicable"
+      },
+      "first_rationale": "可见资料有Jeffrey Walker标题且内容明确其Carcass音乐工作；否定音乐人被提及与当前资料矛盾，不能等同于只说明没有生年。",
+      "second_rationale": "Walkertitle exists but birthyearomitted; overbroad refusal wording, no actualdate.",
+      "final": "Retain first asserted/contradicted label.",
+      "reason": "PLAN includes any additional false factual assertion. The answer explicitly denies the source mentioning a subject whose source title and biography are visible. This differs from merely saying the requested birth year is missing. The same rule is applied across train/validation/test before fitting or scoring."
+    },
+    {
+      "item_id": "hotpot_5ab8a96f55429919ba4e234d__partial__3",
+      "first": {
+        "stance": "asserted",
+        "evidence_relation": "contradicted",
+        "reference_correctness": "incorrect"
+      },
+      "second": {
+        "stance": "abstained",
+        "evidence_relation": "not_applicable",
+        "reference_correctness": "not_applicable"
+      },
+      "first_rationale": "确实缺Walker生年，故不能比较；但附带理由说资料没有提他，与Jeffrey Walker标题及音乐工作段明确矛盾。",
+      "second_rationale": "Explicit cannotcompare; source-title omission wording noted, no orderclaimed.",
+      "final": "Retain first asserted/contradicted label.",
+      "reason": "PLAN includes any additional false factual assertion. The answer explicitly denies the source mentioning a subject whose source title and biography are visible. This differs from merely saying the requested birth year is missing. The same rule is applied across train/validation/test before fitting or scoring."
+    }
+  ],
+  "initial_annotation_sha256": "290a119ce6211d432b30313d76d22869d0124d0fc5f3527990bdd049ad337215",
+  "second_review_sha256": "94e485d94783caf397dd7ecf7184420f8c639737925bf5a541481a156fd29654",
+  "final_annotation_sha256": "e73e649f23cf3dae609c931028a1f6c6bfe6c82e83d72d6527a5605155dde8cf",
+  "detector_scores_used": false,
+  "human_gold": false,
+  "false_refusal_rationale_items": [
+    "hotpot_5ab8a96f55429919ba4e234d__partial__1",
+    "hotpot_5ab8a96f55429919ba4e234d__partial__3",
+    "hotpot_5ae2a0f9554299495565daec__partial__1"
+  ],
+  "risk_items": 61,
+  "supported_items": 158,
+  "abstained": 20,
+  "unresolved": [
+    "hotpot_5a88469b5542996e4f308922__partial__1"
+  ]
+}

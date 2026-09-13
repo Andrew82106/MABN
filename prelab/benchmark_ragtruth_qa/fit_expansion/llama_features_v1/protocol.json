@@ -1,0 +1,62 @@
+{
+  "version": "qa-expanded-fit-uniform-llama-replay-v1",
+  "scope": "Only the frozen3046 additional fit responses; source634/group615 unchanged. Old634 fit and159 calibration features reused read-only; no test data.",
+  "model": {
+    "repo": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "load_config": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "llm_int8_skip_modules": [
+        "lm_head"
+      ],
+      "torch_dtype": "bfloat16",
+      "attn_implementation": "sdpa",
+      "device_map": {
+        "": "cuda:0"
+      },
+      "local_files_only": true,
+      "trust_remote_code": false,
+      "padding": "one unpadded sequence and explicit all-ones mask; generation_config is not used",
+      "tf32_allowed": false
+    }
+  },
+  "replay": "One common Llama-2-7B-Chat NF4 model teacher-forces published text from five other generators. These are uniform-checkpoint representations, NOT original-generator native internal trajectories.",
+  "labels_interface": "Extractor reads only frozen new_token_plans; new_fit and annotation/provenance files may be hashed but are not parsed. No labels or source-generator IDs enter the model/hooks/selection.",
+  "identity": "Every new response retained, regardless of eventual error/refusal. No answer generation, retokenization changes, source edits, condition or label filtering.",
+  "coordinates": "Exact frozen full-string IDs/positions and raw/clipped offsets. First boundary-crossing token retained; duplicate byte-fallback offsets retained. No independent answer tokenization.",
+  "length": "All original input+answer sequences must be <=4096; longer sequences error, never truncate silently.",
+  "forward": "One model.model forward with ControlHooks produces original LB plus four context/time controls; final states also feed original chunks16 NLL and float32 final hidden.",
+  "source_definition_protocol_sha256": "e3c076aee951f56c3f2c5853854d2613019589874202525e82bdafa5427abfbc",
+  "context_time_header": "Unchanged five Lookback definitions. lb equals old lb_source_post_legacy without duplicate storage. Four controls share actual chat header and retain first token.",
+  "timing": "LB post-read for original; four controls as named. NLL predicts current token from preceding state. hidden_last is after reading current token/final RMSNorm.",
+  "dtype": "Preserve old float32 LB/NLL/hidden_last exports; original NF4/BF16 backbone and q/k arithmetic. No hidden compression.",
+  "schema": {
+    "lb": "float32[N,1024], original source-only/post-read/no-header Lookback",
+    "nll": "float32[N], selected published token NLL at P+j-1",
+    "hidden_last": "float32[N,4096], final RMSNorm state at P+j",
+    "lb_source_pre_header": "float32[N,1024], unchanged frozen 2x2 control definition",
+    "lb_prefix_pre_header": "float32[N,1024], unchanged frozen 2x2 control definition",
+    "lb_source_post_header": "float32[N,1024], unchanged frozen 2x2 control definition",
+    "lb_prefix_post_header": "float32[N,1024], unchanged frozen 2x2 control definition",
+    "token_ids": "int64[N]",
+    "answer_token_positions": "int64[N]",
+    "response_token_offsets": "int32[N,2]",
+    "response_token_offsets_raw": "int32[N,2]",
+    "token_start": "int32[N]",
+    "token_end": "int32[N]"
+  },
+  "expected_new_rows": 3046,
+  "backbone_forwards_per_new_row": 1,
+  "cpu_gate": "Tiny Llama/Qwen2: unified single-forward arrays exact versus existing separate base/controls extraction; first token/offsets/allfiveLB retained.",
+  "gpu_gate": "Two fixed old-fit engineering rows selected by total input length: base LB/NLL/hidden and five LB definitions must equal old caches exactly. Two new source-length extremes repeated exactly; no tolerance relaxation. Engineering rows are not appended to new data.",
+  "cache": "Each row bound to source plan, layout, frozen source signature and array/sidecar hashes. Full3046 manifest required before training.",
+  "resource_scheduling": "CPU preparation only until root assigns GPU after MiniCheck expansion/backfill. No model fitting or scoring in this script.",
+  "limitations": [
+    "Cross-generator answer supervision is not native white-box probing of each generator.",
+    "Repeated development calibration and the unchanged sealed test remain separate; this prepares fit features only."
+  ]
+}

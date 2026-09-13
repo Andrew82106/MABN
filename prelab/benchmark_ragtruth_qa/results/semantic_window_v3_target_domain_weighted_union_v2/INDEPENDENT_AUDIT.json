@@ -1,0 +1,59 @@
+{
+  "status": "passed_independent_mapping_weight_and_model_replay_without_reopening_calibration_labels",
+  "preregistered_source_hashes_exact": true,
+  "target_generator_provenance_replayed": true,
+  "expanded_extraction_39_of_39_hashes_replayed": true,
+  "stale_missing_requests_field_interpretation_confirmed": true,
+  "claim_identity_join_replayed": true,
+  "fit_mapping": {
+    "all_fit_rows_rebuilt_exact": true,
+    "rows": 653979,
+    "claims": 34919,
+    "expanded_hypotheses_rebuilt_exact": 25864,
+    "claims_with_coverage": 34919,
+    "claims_without_coverage": 0,
+    "lexical_owner_count_histogram": {
+      "1": 22982,
+      "2": 62427,
+      "3": 213426,
+      "4": 355144
+    },
+    "unique_claim_count_per_window_histogram": {
+      "1": 606002,
+      "2": 47975,
+      "3": 2
+    },
+    "native_rows_equal_v3_bit_exact": true,
+    "claim_score_max_projection_used": false
+  },
+  "source_connected_five_fold_all_domain_coverage_exactly_once": true,
+  "source_connected_group_overlap_each_fold": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "all_20_serialized_crossfit_model_predictions_replayed": true,
+  "largest_serialized_prediction_replay_error": 0.0,
+  "all_candidate_native_and_all_domain_metrics_exact": true,
+  "selection_recomputed_from_native_OOF_only": true,
+  "selected_alpha": 0.5,
+  "alpha_zero_auxiliary_weights_exactly_zero": true,
+  "alpha_zero_native_control_bit_exact": true,
+  "alpha_zero_fresh_refit_max_abs_error": 2.605111681930339e-10,
+  "full_fit_weight_mass_replayed": true,
+  "generator_identity_feature_count": 0,
+  "generator_identity_absent_from_fit_and_predict_interfaces": true,
+  "serialized_model_numeric_feature_width": 70,
+  "calibration_scores_replayed_from_label_free_features": true,
+  "calibration_window_score_replay_max_abs_error": 5.551115123125783e-17,
+  "calibration_answer_score_replay_max_abs_error": 0.0,
+  "calibration_score_replay_within_one_float64_ulp": true,
+  "calibration_answer_or_span_labels_opened_by_audit": false,
+  "calibration_metric_passes_by_audit": 0,
+  "calibration_evaluations_recorded": 1,
+  "formal_baseline_files_unchanged": true,
+  "official_test_opened": false,
+  "GPU_used": false
+}

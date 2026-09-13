@@ -1,0 +1,41 @@
+{
+  "version": "fixed-lumina-public-QA-scoring-v1",
+  "primary": "lumina",
+  "methods": [
+    "lumina",
+    "ipr",
+    "negative_mmd"
+  ],
+  "classifier_fits": 0,
+  "coefficient_search": false,
+  "token_scores": {
+    "lumina": "Use saved float32 column2: .5*IPR-.5*MMD_squared, unchanged.",
+    "ipr": "Saved column0; higher means more risk.",
+    "negative_mmd": "Minus saved column1; higher means more risk."
+  },
+  "unused_columns": [
+    "original_answer_probability",
+    "original_max_probability",
+    "random_answer_probability",
+    "random_max_probability"
+  ],
+  "window": "Original eligible4rawBPE token_indices, stride1. Float64 mean over actual raw tokens, including punctuation. Short answer uses its original short window. No lexical-only pooling, sigmoid, clipping or normalization.",
+  "answermax": "Maximum of ALL unchanged eligible window scores for that answer. Original official answer labels; do not derive answer labels from window OR or drop refusals.",
+  "threshold": "q.choose_threshold on original159 calibration only, separately for windows and answermax; >=, ties F1/precision/higher threshold. Apply both fixed thresholds to fit and calibration.",
+  "cohort": {
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_windows": 653979,
+    "calibration_windows": 42241,
+    "total_windows": 696220,
+    "raw_answer_tokens": 708506
+  },
+  "paper_answer_mean": "Separately average every raw answer token (including punctuation outside eligible windows), choose one cal answer threshold and report answer metrics only for each fixed score. Never pair this F1 with the answermax window result.",
+  "reporting": "All three readouts reported. No best-score selection; primary is always the fixed official formula. Report its window and answermax F1 together from that same formula; components remain ablations.",
+  "gates": "Before opening any new per-answer NPZ, require extractor complete3839/708506, all records validated, exact manifests/signature/plan binding. Any missing/invalid score blocks delivery; never reduce denominator.",
+  "scope": "Repeated public QA fit/cal development, not official-test performance. Input/model/precision/granularity adaptation to pinned LUMINA code is disclosed in upstream protocol.",
+  "GPU_used": false,
+  "official_test_opened": false,
+  "automatic_execution": false,
+  "fusion_grid": false
+}

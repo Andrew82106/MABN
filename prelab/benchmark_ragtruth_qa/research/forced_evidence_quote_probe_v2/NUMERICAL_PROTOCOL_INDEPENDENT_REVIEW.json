@@ -1,0 +1,72 @@
+{
+  "schema_version": "forced-evidence-quote-probe-v2-numerical-protocol-independent-review-v1",
+  "status": "PASS",
+  "reviewer_task": "/root/numeric_protocol_v2/bf16_tolerance_review",
+  "review_scope": "Read-only independent review of the frozen V2 numerical execution protocol.",
+  "reviewed_protocol_path": "prelab/benchmark_ragtruth_qa/research/forced_evidence_quote_probe_v2/NUMERICAL_PROTOCOL.md",
+  "reviewed_protocol_sha256": "ad0a2198ba69e75c78852eab103e8a829b6f9fb21389f322d5879f016e989df1",
+  "checks": [
+    {
+      "id": "FIXED_NUMERICAL_TOLERANCES",
+      "status": "PASS",
+      "evidence": "Pure absolute cache/replay tolerances are frozen at logprob=0.0625, entropy=0.0625 and signed_margin=0.5 with rtol=0 and inclusive boundaries. They are derived only from the first label-free V1 diagnosis by one common binary guard-band rule."
+    },
+    {
+      "id": "SMOKE_ONLY_NEAR_TIE_RULE",
+      "status": "PASS",
+      "evidence": "On the fixed eight-claim smoke only, an argmax mismatch is allowed only when cached_margin<=0.5 and replay signed margin for the cached token>=-0.5; any high-confidence path conflict fails."
+    },
+    {
+      "id": "SMOKE_FULL_BOUNDARY",
+      "status": "PASS",
+      "evidence": "Cross-path continuous tolerances and high-confidence argmax-conflict checks are hard gates only on smoke. Full extraction must record all drift and mismatch summaries but cannot filter, zero, retry or retune rows because of them."
+    },
+    {
+      "id": "AUTHORITATIVE_SIGNAL_SOURCES",
+      "status": "PASS",
+      "evidence": "KV-cached greedy decode is authoritative for generated IDs and generation-time logprob, entropy and margin. Full no-cache replay is authoritative only for hidden64 and attention. Replay token statistics are QA-only and cannot enter features."
+    },
+    {
+      "id": "SAME_PATH_REPEAT_GATES",
+      "status": "PASS",
+      "evidence": "Shortest and longest claims repeat cached generation with exact token IDs and cached statistics at rtol=0, atol=1e-6; replay hidden64 and attention repeat at rtol=0, atol=1e-6."
+    },
+    {
+      "id": "FULL_EXTRACTION_STRUCTURAL_GATES",
+      "status": "PASS",
+      "evidence": "Full extraction remains fail-closed for nonfinite authoritative values and shape, ID, position, offset, hash, runtime-stack or atomic-record inconsistency. Replay teacher-forcing target IDs must exactly equal the cached sequence."
+    },
+    {
+      "id": "LEAKAGE_AND_VERSION_GATES",
+      "status": "PASS",
+      "evidence": "V2 is version-isolated from V1, and no fit gold may be opened before feature freeze and independent review; calibration and official test remain sealed."
+    }
+  ],
+  "implementation_notes": [
+    "Repeat review should cover p3_ratio_token_mean, p3_ratio_token_min, p3_ratio_token_max, p3_passage_mass_mean, p3_claim_mass_mean and p3_attention_summary256.",
+    "The ban on zero filling because of parse-invalid does not remove the V1-frozen T=0 zero rule for token, hidden and attention blocks."
+  ],
+  "decision": {
+    "blockers": [],
+    "numerical_protocol_frozen": true,
+    "v2_runner_implementation_may_proceed": true,
+    "gpu_smoke_allowed_by_this_review": false,
+    "full_extraction_allowed_by_this_review": false,
+    "reason": "A new V2 runner, CPU selfcheck, independent static runner review, GPU smoke and independent smoke review remain required."
+  },
+  "integrity": {
+    "protocol_modified": false,
+    "runner_modified": false,
+    "baseline_modified": false,
+    "fit_gold_read": false,
+    "calibration_read": false,
+    "official_test_read": false,
+    "labels_or_scores_read": false,
+    "GPU_used": false,
+    "CUDA_initialized": false,
+    "pretrained_model_loaded": false,
+    "feature_extraction_run": false,
+    "training_run": false,
+    "scoring_run": false
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "status": "complete_fit_only_artifact_manifest",
+  "counts": {
+    "full_pairs": 5067,
+    "strict_pairs": 4109,
+    "post_freeze_qc": 92
+  },
+  "scope": {
+    "calibration_read": false,
+    "test_read": false,
+    "gpu_used": false,
+    "trained": false
+  },
+  "files": {
+    "build_fit_only.py": {
+      "bytes": 32497,
+      "sha256": "0e5f70e846fb55d272dbdb5b4d905ea58380f3e6ede4ff7f6afe622f6dbbbb4f"
+    },
+    "audit_fit_conflicts.py": {
+      "bytes": 5638,
+      "sha256": "14b6a0b5fc27147b5096d8ae37636d3dfee3667f57d47a14a4d706a81c3b4f90"
+    },
+    "make_qualitative_qc.py": {
+      "bytes": 3867,
+      "sha256": "c3105b9dd700e15707807f4d590d09fcad08da6febd01b74132797b21a479c13"
+    },
+    "audit_outputs.py": {
+      "bytes": 3835,
+      "sha256": "2fb43e35389385ca20a24781bf4d285bf57a98ac615149450af41ac1bdc689f0"
+    },
+    "PROTOCOL.json": {
+      "bytes": 1685,
+      "sha256": "0eeab8ec2bf571735f712b56a4124488defab43292122e812ae3715938087c11"
+    },
+    "PROTOCOL.md": {
+      "bytes": 4762,
+      "sha256": "1edec267a8ba45070bde1e63b096b9aa7eded7c4581dd18c7592db8aa95d5542"
+    },
+    "SCHEMA.md": {
+      "bytes": 901,
+      "sha256": "8f8fd81ada46e94042fa8839d19c2a094463a5936203f7105695619758acc8dd"
+    },
+    "REPORT.md": {
+      "bytes": 3772,
+      "sha256": "28b742c972216ffc89e99f127bd21fd29c674b4a5b4d41a0d59d4fcf6c5a6c5d"
+    },
+    "STATS.json": {
+      "bytes": 2438,
+      "sha256": "d8b787fdf053065f62de467507a56055d1d1d4364c6af1906875813b0bb3bdbd"
+    },
+    "FIT_CONFLICT_AUDIT.json": {
+      "bytes": 1631,
+      "sha256": "edd2296fdf3686dccb9f763da0a897cd9dfd17c58adee8e79943e1a0018f7f94"
+    },
+    "pairs_fit_silver.jsonl": {
+      "bytes": 8488066,
+      "sha256": "e1400194653a8269cff85817cc8b234a545c8042471665a6406a8866360b8ebf"
+    },
+    "pairs_fit_silver_strict.jsonl": {
+      "bytes": 6907157,
+      "sha256": "99e317925e3399bc77684aa9706a5538fbdbec4f766502ac6909647eb58985ea"
+    },
+    "RULE_QC_DEVELOPMENT_SAMPLE.jsonl": {
+      "bytes": 150916,
+      "sha256": "d1e93fd9e0ec07b9b41bcc49f8818d0c15c8ebaa4f7449a6bc0223b9bf0e97b8"
+    },
+    "RULE_QC_AUDIT_MAX100.jsonl": {
+      "bytes": 154825,
+      "sha256": "1e8169f8b5f98eabc3668e88e8123c619a2d8cc35883d508b0d9ed165102ad9f"
+    },
+    "QUALITATIVE_QC_AUDIT.jsonl": {
+      "bytes": 50071,
+      "sha256": "fa5d80fca72f1d659f990b27c8f8fe4c850c240d8a9e14273b9bbc4d4966695a"
+    },
+    "QUALITATIVE_QC.json": {
+      "bytes": 941,
+      "sha256": "927ee0b93e47f737df049c34ada576be162be39815ad5a1d5c25f7f9db7981ba"
+    },
+    "INDEPENDENT_AUDIT.json": {
+      "bytes": 1224,
+      "sha256": "111fc5e74e8deb388504602eba5d01738dd46d469703b830719faa5e85ac21d6"
+    }
+  }
+}

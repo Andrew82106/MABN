@@ -1,0 +1,904 @@
+{
+  "passed": true,
+  "folds": [
+    {
+      "fold": 0,
+      "assigned_fit_groups": 166,
+      "fit_safe_refusals_answer_supervised": 74,
+      "steps_each_mode": 210,
+      "all11_epoch_RNG_states_equal_between_modes": true,
+      "selected_epochs": {
+        "window_only": 10,
+        "window_plus_answer": 1
+      },
+      "selected_alpha": {
+        "lookback_plus_window_only": 0.0,
+        "r26_plus_window_only": 0.0,
+        "lookback_plus_window_plus_answer": 0.8,
+        "r26_plus_window_plus_answer": 0.0
+      },
+      "learning_curves": {
+        "window_only": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.6799538135528564,
+            "fit_answer_BCE": 0.7087402939796448,
+            "calibration_window_F1": 0.2286302780638517,
+            "calibration_answer_F1": 0.40963855421686746
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.404731810092926,
+            "fit_answer_BCE": 0.6622233986854553,
+            "calibration_window_F1": 0.47895229186155286,
+            "calibration_answer_F1": 0.6933333333333334
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.32369840145111084,
+            "fit_answer_BCE": 0.5745691657066345,
+            "calibration_window_F1": 0.48774795799299886,
+            "calibration_answer_F1": 0.7142857142857143
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.26431408524513245,
+            "fit_answer_BCE": 0.5207892060279846,
+            "calibration_window_F1": 0.49851632047477745,
+            "calibration_answer_F1": 0.6896551724137931
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.22057029604911804,
+            "fit_answer_BCE": 0.46610796451568604,
+            "calibration_window_F1": 0.4979919678714859,
+            "calibration_answer_F1": 0.7088607594936709
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.18453702330589294,
+            "fit_answer_BCE": 0.40833231806755066,
+            "calibration_window_F1": 0.4989293361884368,
+            "calibration_answer_F1": 0.7012987012987013
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.15677009522914886,
+            "fit_answer_BCE": 0.3500194251537323,
+            "calibration_window_F1": 0.508411214953271,
+            "calibration_answer_F1": 0.6896551724137931
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.13314181566238403,
+            "fit_answer_BCE": 0.34564366936683655,
+            "calibration_window_F1": 0.5052878965922444,
+            "calibration_answer_F1": 0.7111111111111111
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.11265508085489273,
+            "fit_answer_BCE": 0.2754687964916229,
+            "calibration_window_F1": 0.5071225071225072,
+            "calibration_answer_F1": 0.7142857142857143
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.0980544164776802,
+            "fit_answer_BCE": 0.26245933771133423,
+            "calibration_window_F1": 0.52,
+            "calibration_answer_F1": 0.7222222222222222
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.08648141473531723,
+            "fit_answer_BCE": 0.2634868025779724,
+            "calibration_window_F1": 0.5207100591715976,
+            "calibration_answer_F1": 0.7142857142857143
+          }
+        ],
+        "window_plus_answer": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.6799538135528564,
+            "fit_answer_BCE": 0.7087402939796448,
+            "calibration_window_F1": 0.2286302780638517,
+            "calibration_answer_F1": 0.40963855421686746
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.42654600739479065,
+            "fit_answer_BCE": 0.5168242454528809,
+            "calibration_window_F1": 0.47687564234326824,
+            "calibration_answer_F1": 0.7123287671232876
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.33643484115600586,
+            "fit_answer_BCE": 0.37884196639060974,
+            "calibration_window_F1": 0.4552661381653454,
+            "calibration_answer_F1": 0.7096774193548387
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2780568599700928,
+            "fit_answer_BCE": 0.2711436450481415,
+            "calibration_window_F1": 0.454337899543379,
+            "calibration_answer_F1": 0.7294117647058823
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.23285900056362152,
+            "fit_answer_BCE": 0.20247782766819,
+            "calibration_window_F1": 0.4634377967711301,
+            "calibration_answer_F1": 0.725
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.20213979482650757,
+            "fit_answer_BCE": 0.14803765714168549,
+            "calibration_window_F1": 0.45627376425855515,
+            "calibration_answer_F1": 0.7246376811594203
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.1769704520702362,
+            "fit_answer_BCE": 0.11312554776668549,
+            "calibration_window_F1": 0.4695898161244696,
+            "calibration_answer_F1": 0.7397260273972602
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.15543033182621002,
+            "fit_answer_BCE": 0.08872857689857483,
+            "calibration_window_F1": 0.4666666666666667,
+            "calibration_answer_F1": 0.7352941176470589
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.1361900418996811,
+            "fit_answer_BCE": 0.07058914005756378,
+            "calibration_window_F1": 0.4634760705289673,
+            "calibration_answer_F1": 0.746268656716418
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.1232072114944458,
+            "fit_answer_BCE": 0.05513210594654083,
+            "calibration_window_F1": 0.4691358024691358,
+            "calibration_answer_F1": 0.7352941176470589
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.11090957373380661,
+            "fit_answer_BCE": 0.045884378254413605,
+            "calibration_window_F1": 0.4669926650366748,
+            "calibration_answer_F1": 0.7384615384615385
+          }
+        ]
+      }
+    },
+    {
+      "fold": 1,
+      "assigned_fit_groups": 166,
+      "fit_safe_refusals_answer_supervised": 67,
+      "steps_each_mode": 210,
+      "all11_epoch_RNG_states_equal_between_modes": true,
+      "selected_epochs": {
+        "window_only": 10,
+        "window_plus_answer": 10
+      },
+      "selected_alpha": {
+        "lookback_plus_window_only": 0.2,
+        "r26_plus_window_only": 0.2,
+        "lookback_plus_window_plus_answer": 0.2,
+        "r26_plus_window_plus_answer": 0.4
+      },
+      "learning_curves": {
+        "window_only": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7010797262191772,
+            "fit_answer_BCE": 0.710699737071991,
+            "calibration_window_F1": 0.1985579589572934,
+            "calibration_answer_F1": 0.38848920863309355
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.41756346821784973,
+            "fit_answer_BCE": 0.6658972501754761,
+            "calibration_window_F1": 0.3770197486535009,
+            "calibration_answer_F1": 0.6451612903225806
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.3299264907836914,
+            "fit_answer_BCE": 0.5540162324905396,
+            "calibration_window_F1": 0.4067796610169492,
+            "calibration_answer_F1": 0.6428571428571429
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2707279622554779,
+            "fit_answer_BCE": 0.5052170157432556,
+            "calibration_window_F1": 0.42857142857142855,
+            "calibration_answer_F1": 0.631578947368421
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.227950781583786,
+            "fit_answer_BCE": 0.48149174451828003,
+            "calibration_window_F1": 0.4251968503937008,
+            "calibration_answer_F1": 0.6
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.19515541195869446,
+            "fit_answer_BCE": 0.46079039573669434,
+            "calibration_window_F1": 0.42987249544626593,
+            "calibration_answer_F1": 0.6415094339622641
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.16649864614009857,
+            "fit_answer_BCE": 0.38452619314193726,
+            "calibration_window_F1": 0.46900269541778977,
+            "calibration_answer_F1": 0.6666666666666666
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.1425064355134964,
+            "fit_answer_BCE": 0.3932092785835266,
+            "calibration_window_F1": 0.46236559139784944,
+            "calibration_answer_F1": 0.6545454545454545
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.1255132406949997,
+            "fit_answer_BCE": 0.38692036271095276,
+            "calibration_window_F1": 0.4732394366197183,
+            "calibration_answer_F1": 0.6461538461538462
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.11063624173402786,
+            "fit_answer_BCE": 0.3157614469528198,
+            "calibration_window_F1": 0.49767441860465117,
+            "calibration_answer_F1": 0.6666666666666666
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.09807117283344269,
+            "fit_answer_BCE": 0.3239915370941162,
+            "calibration_window_F1": 0.5363128491620112,
+            "calibration_answer_F1": 0.6896551724137931
+          }
+        ],
+        "window_plus_answer": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7010797262191772,
+            "fit_answer_BCE": 0.710699737071991,
+            "calibration_window_F1": 0.1985579589572934,
+            "calibration_answer_F1": 0.38848920863309355
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.44775521755218506,
+            "fit_answer_BCE": 0.5088982582092285,
+            "calibration_window_F1": 0.39768339768339767,
+            "calibration_answer_F1": 0.7547169811320755
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.3584170639514923,
+            "fit_answer_BCE": 0.38217228651046753,
+            "calibration_window_F1": 0.4258289703315881,
+            "calibration_answer_F1": 0.8
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2963044345378876,
+            "fit_answer_BCE": 0.2795349657535553,
+            "calibration_window_F1": 0.4629981024667932,
+            "calibration_answer_F1": 0.8333333333333334
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.25654464960098267,
+            "fit_answer_BCE": 0.2136193960905075,
+            "calibration_window_F1": 0.46904315196998125,
+            "calibration_answer_F1": 0.7931034482758621
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.21320213377475739,
+            "fit_answer_BCE": 0.16339297592639923,
+            "calibration_window_F1": 0.48148148148148145,
+            "calibration_answer_F1": 0.8
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.18293318152427673,
+            "fit_answer_BCE": 0.11961151659488678,
+            "calibration_window_F1": 0.4858156028368794,
+            "calibration_answer_F1": 0.8214285714285714
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.16059568524360657,
+            "fit_answer_BCE": 0.09220948070287704,
+            "calibration_window_F1": 0.49500998003992014,
+            "calibration_answer_F1": 0.8070175438596491
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.14572781324386597,
+            "fit_answer_BCE": 0.0715494453907013,
+            "calibration_window_F1": 0.49530956848030017,
+            "calibration_answer_F1": 0.8070175438596491
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.13487820327281952,
+            "fit_answer_BCE": 0.058369893580675125,
+            "calibration_window_F1": 0.5105386416861827,
+            "calibration_answer_F1": 0.8070175438596491
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.12101338803768158,
+            "fit_answer_BCE": 0.04905664548277855,
+            "calibration_window_F1": 0.5308641975308642,
+            "calibration_answer_F1": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "assigned_fit_groups": 167,
+      "fit_safe_refusals_answer_supervised": 64,
+      "steps_each_mode": 210,
+      "all11_epoch_RNG_states_equal_between_modes": true,
+      "selected_epochs": {
+        "window_only": 3,
+        "window_plus_answer": 8
+      },
+      "selected_alpha": {
+        "lookback_plus_window_only": 0.2,
+        "r26_plus_window_only": 0.0,
+        "lookback_plus_window_plus_answer": 0.2,
+        "r26_plus_window_plus_answer": 1.0
+      },
+      "learning_curves": {
+        "window_only": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.6962809562683105,
+            "fit_answer_BCE": 0.710072934627533,
+            "calibration_window_F1": 0.20813953488372092,
+            "calibration_answer_F1": 0.39416058394160586
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.42772191762924194,
+            "fit_answer_BCE": 0.66661536693573,
+            "calibration_window_F1": 0.5329153605015674,
+            "calibration_answer_F1": 0.6086956521739131
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.34099552035331726,
+            "fit_answer_BCE": 0.522436797618866,
+            "calibration_window_F1": 0.5303370786516854,
+            "calibration_answer_F1": 0.65625
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2848743796348572,
+            "fit_answer_BCE": 0.4894307851791382,
+            "calibration_window_F1": 0.5693430656934306,
+            "calibration_answer_F1": 0.6388888888888888
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.24446505308151245,
+            "fit_answer_BCE": 0.47009414434432983,
+            "calibration_window_F1": 0.5575221238938053,
+            "calibration_answer_F1": 0.6470588235294118
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.2098957896232605,
+            "fit_answer_BCE": 0.4128338396549225,
+            "calibration_window_F1": 0.5322997416020672,
+            "calibration_answer_F1": 0.6333333333333333
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.18238677084445953,
+            "fit_answer_BCE": 0.40100204944610596,
+            "calibration_window_F1": 0.5410628019323671,
+            "calibration_answer_F1": 0.6052631578947368
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.1606186479330063,
+            "fit_answer_BCE": 0.37965723872184753,
+            "calibration_window_F1": 0.5446009389671361,
+            "calibration_answer_F1": 0.6176470588235294
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.1439114809036255,
+            "fit_answer_BCE": 0.38780727982521057,
+            "calibration_window_F1": 0.5402843601895735,
+            "calibration_answer_F1": 0.5901639344262295
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.12882405519485474,
+            "fit_answer_BCE": 0.32912498712539673,
+            "calibration_window_F1": 0.5407554671968191,
+            "calibration_answer_F1": 0.6349206349206349
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.11603645235300064,
+            "fit_answer_BCE": 0.3442800045013428,
+            "calibration_window_F1": 0.540045766590389,
+            "calibration_answer_F1": 0.5853658536585366
+          }
+        ],
+        "window_plus_answer": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.6962809562683105,
+            "fit_answer_BCE": 0.710072934627533,
+            "calibration_window_F1": 0.20813953488372092,
+            "calibration_answer_F1": 0.39416058394160586
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.4563681483268738,
+            "fit_answer_BCE": 0.5114589929580688,
+            "calibration_window_F1": 0.4824561403508772,
+            "calibration_answer_F1": 0.6792452830188679
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.3697250783443451,
+            "fit_answer_BCE": 0.40200790762901306,
+            "calibration_window_F1": 0.4874715261958998,
+            "calibration_answer_F1": 0.6923076923076923
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.31822383403778076,
+            "fit_answer_BCE": 0.3221741020679474,
+            "calibration_window_F1": 0.5010799136069114,
+            "calibration_answer_F1": 0.7058823529411765
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.2791019678115845,
+            "fit_answer_BCE": 0.24908767640590668,
+            "calibration_window_F1": 0.5010989010989011,
+            "calibration_answer_F1": 0.7213114754098361
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.24389584362506866,
+            "fit_answer_BCE": 0.1960914582014084,
+            "calibration_window_F1": 0.5190839694656488,
+            "calibration_answer_F1": 0.7777777777777778
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.2149314284324646,
+            "fit_answer_BCE": 0.16248556971549988,
+            "calibration_window_F1": 0.5221238938053098,
+            "calibration_answer_F1": 0.7407407407407407
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.19719147682189941,
+            "fit_answer_BCE": 0.12848502397537231,
+            "calibration_window_F1": 0.5230769230769231,
+            "calibration_answer_F1": 0.7272727272727273
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.17397132515907288,
+            "fit_answer_BCE": 0.10883989185094833,
+            "calibration_window_F1": 0.5630630630630631,
+            "calibration_answer_F1": 0.7636363636363637
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.16347511112689972,
+            "fit_answer_BCE": 0.08373625576496124,
+            "calibration_window_F1": 0.5445783132530121,
+            "calibration_answer_F1": 0.7272727272727273
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.14602196216583252,
+            "fit_answer_BCE": 0.06833323836326599,
+            "calibration_window_F1": 0.558252427184466,
+            "calibration_answer_F1": 0.7272727272727273
+          }
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "assigned_fit_groups": 168,
+      "fit_safe_refusals_answer_supervised": 70,
+      "steps_each_mode": 210,
+      "all11_epoch_RNG_states_equal_between_modes": true,
+      "selected_epochs": {
+        "window_only": 9,
+        "window_plus_answer": 9
+      },
+      "selected_alpha": {
+        "lookback_plus_window_only": 0.2,
+        "r26_plus_window_only": 0.0,
+        "lookback_plus_window_plus_answer": 0.2,
+        "r26_plus_window_plus_answer": 0.0
+      },
+      "learning_curves": {
+        "window_only": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7048730254173279,
+            "fit_answer_BCE": 0.7253783941268921,
+            "calibration_window_F1": 0.16474464579901152,
+            "calibration_answer_F1": 0.38271604938271603
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.37612804770469666,
+            "fit_answer_BCE": 0.6064658164978027,
+            "calibration_window_F1": 0.42,
+            "calibration_answer_F1": 0.6153846153846154
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.2991578280925751,
+            "fit_answer_BCE": 0.5026729702949524,
+            "calibration_window_F1": 0.4387990762124711,
+            "calibration_answer_F1": 0.6764705882352942
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2568264901638031,
+            "fit_answer_BCE": 0.4913994073867798,
+            "calibration_window_F1": 0.46445497630331756,
+            "calibration_answer_F1": 0.6575342465753424
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.2208499163389206,
+            "fit_answer_BCE": 0.4326067864894867,
+            "calibration_window_F1": 0.45474613686534215,
+            "calibration_answer_F1": 0.6764705882352942
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.19163769483566284,
+            "fit_answer_BCE": 0.4088842272758484,
+            "calibration_window_F1": 0.4489795918367347,
+            "calibration_answer_F1": 0.6575342465753424
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.1662948578596115,
+            "fit_answer_BCE": 0.40048402547836304,
+            "calibration_window_F1": 0.4519230769230769,
+            "calibration_answer_F1": 0.6557377049180327
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.14434874057769775,
+            "fit_answer_BCE": 0.35870325565338135,
+            "calibration_window_F1": 0.45714285714285713,
+            "calibration_answer_F1": 0.6181818181818182
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.12639379501342773,
+            "fit_answer_BCE": 0.3747316598892212,
+            "calibration_window_F1": 0.4539877300613497,
+            "calibration_answer_F1": 0.6301369863013698
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.1123136654496193,
+            "fit_answer_BCE": 0.33394160866737366,
+            "calibration_window_F1": 0.4765957446808511,
+            "calibration_answer_F1": 0.6301369863013698
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.10144763439893723,
+            "fit_answer_BCE": 0.3738834261894226,
+            "calibration_window_F1": 0.4649122807017544,
+            "calibration_answer_F1": 0.6461538461538462
+          }
+        ],
+        "window_plus_answer": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7048730254173279,
+            "fit_answer_BCE": 0.7253783941268921,
+            "calibration_window_F1": 0.16474464579901152,
+            "calibration_answer_F1": 0.38271604938271603
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.4017150402069092,
+            "fit_answer_BCE": 0.4661954641342163,
+            "calibration_window_F1": 0.40893470790378006,
+            "calibration_answer_F1": 0.6785714285714286
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.3241077661514282,
+            "fit_answer_BCE": 0.35474494099617004,
+            "calibration_window_F1": 0.4294234592445328,
+            "calibration_answer_F1": 0.711864406779661
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.27852725982666016,
+            "fit_answer_BCE": 0.27449721097946167,
+            "calibration_window_F1": 0.436,
+            "calibration_answer_F1": 0.7301587301587301
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.24671654403209686,
+            "fit_answer_BCE": 0.21405565738677979,
+            "calibration_window_F1": 0.43333333333333335,
+            "calibration_answer_F1": 0.7407407407407407
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.21323484182357788,
+            "fit_answer_BCE": 0.16411979496479034,
+            "calibration_window_F1": 0.4365904365904366,
+            "calibration_answer_F1": 0.7368421052631579
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.18767204880714417,
+            "fit_answer_BCE": 0.12597870826721191,
+            "calibration_window_F1": 0.41923076923076924,
+            "calibration_answer_F1": 0.7272727272727273
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.1712840050458908,
+            "fit_answer_BCE": 0.09869234263896942,
+            "calibration_window_F1": 0.42578125,
+            "calibration_answer_F1": 0.7142857142857143
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.1490572690963745,
+            "fit_answer_BCE": 0.08080080896615982,
+            "calibration_window_F1": 0.44227005870841485,
+            "calibration_answer_F1": 0.7301587301587301
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.13832774758338928,
+            "fit_answer_BCE": 0.06429450958967209,
+            "calibration_window_F1": 0.44765342960288806,
+            "calibration_answer_F1": 0.75
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.12113247811794281,
+            "fit_answer_BCE": 0.04953562468290329,
+            "calibration_window_F1": 0.44244604316546765,
+            "calibration_answer_F1": 0.75
+          }
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "assigned_fit_groups": 167,
+      "fit_safe_refusals_answer_supervised": 76,
+      "steps_each_mode": 210,
+      "all11_epoch_RNG_states_equal_between_modes": true,
+      "selected_epochs": {
+        "window_only": 9,
+        "window_plus_answer": 10
+      },
+      "selected_alpha": {
+        "lookback_plus_window_only": 0.0,
+        "r26_plus_window_only": 0.0,
+        "lookback_plus_window_plus_answer": 0.0,
+        "r26_plus_window_plus_answer": 0.0
+      },
+      "learning_curves": {
+        "window_only": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7139630913734436,
+            "fit_answer_BCE": 0.7536954879760742,
+            "calibration_window_F1": 0.2366288492706645,
+            "calibration_answer_F1": 0.4460431654676259
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.436939001083374,
+            "fit_answer_BCE": 0.715940535068512,
+            "calibration_window_F1": 0.4665825977301387,
+            "calibration_answer_F1": 0.6666666666666666
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.33662769198417664,
+            "fit_answer_BCE": 0.596190869808197,
+            "calibration_window_F1": 0.4755905511811024,
+            "calibration_answer_F1": 0.6744186046511628
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2756105065345764,
+            "fit_answer_BCE": 0.5413182973861694,
+            "calibration_window_F1": 0.49850746268656715,
+            "calibration_answer_F1": 0.6987951807228916
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.22932906448841095,
+            "fit_answer_BCE": 0.5109891295433044,
+            "calibration_window_F1": 0.5,
+            "calibration_answer_F1": 0.6923076923076923
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.19853194057941437,
+            "fit_answer_BCE": 0.4565059244632721,
+            "calibration_window_F1": 0.5076335877862596,
+            "calibration_answer_F1": 0.6823529411764706
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.17142438888549805,
+            "fit_answer_BCE": 0.4732239246368408,
+            "calibration_window_F1": 0.5051546391752577,
+            "calibration_answer_F1": 0.6933333333333334
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.15296657383441925,
+            "fit_answer_BCE": 0.48608916997909546,
+            "calibration_window_F1": 0.511340206185567,
+            "calibration_answer_F1": 0.6904761904761905
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.13564041256904602,
+            "fit_answer_BCE": 0.42134082317352295,
+            "calibration_window_F1": 0.5301204819277109,
+            "calibration_answer_F1": 0.7017543859649122
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.12413518130779266,
+            "fit_answer_BCE": 0.3920247256755829,
+            "calibration_window_F1": 0.5502183406113537,
+            "calibration_answer_F1": 0.6944444444444444
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.11050315201282501,
+            "fit_answer_BCE": 0.4071028232574463,
+            "calibration_window_F1": 0.5419103313840156,
+            "calibration_answer_F1": 0.7058823529411765
+          }
+        ],
+        "window_plus_answer": [
+          {
+            "epoch": 0,
+            "fit_window_BCE": 0.7139630913734436,
+            "fit_answer_BCE": 0.7536954879760742,
+            "calibration_window_F1": 0.2366288492706645,
+            "calibration_answer_F1": 0.4460431654676259
+          },
+          {
+            "epoch": 1,
+            "fit_window_BCE": 0.4793317914009094,
+            "fit_answer_BCE": 0.556732177734375,
+            "calibration_window_F1": 0.47117794486215536,
+            "calibration_answer_F1": 0.7532467532467533
+          },
+          {
+            "epoch": 2,
+            "fit_window_BCE": 0.3599526584148407,
+            "fit_answer_BCE": 0.4293791651725769,
+            "calibration_window_F1": 0.46770025839793283,
+            "calibration_answer_F1": 0.7457627118644068
+          },
+          {
+            "epoch": 3,
+            "fit_window_BCE": 0.2953706681728363,
+            "fit_answer_BCE": 0.31514671444892883,
+            "calibration_window_F1": 0.4628330995792426,
+            "calibration_answer_F1": 0.7733333333333333
+          },
+          {
+            "epoch": 4,
+            "fit_window_BCE": 0.2483597844839096,
+            "fit_answer_BCE": 0.2326706498861313,
+            "calibration_window_F1": 0.4584717607973422,
+            "calibration_answer_F1": 0.7671232876712328
+          },
+          {
+            "epoch": 5,
+            "fit_window_BCE": 0.21983838081359863,
+            "fit_answer_BCE": 0.17704182863235474,
+            "calibration_window_F1": 0.4870689655172414,
+            "calibration_answer_F1": 0.782608695652174
+          },
+          {
+            "epoch": 6,
+            "fit_window_BCE": 0.19118481874465942,
+            "fit_answer_BCE": 0.14481259882450104,
+            "calibration_window_F1": 0.49137931034482757,
+            "calibration_answer_F1": 0.7692307692307693
+          },
+          {
+            "epoch": 7,
+            "fit_window_BCE": 0.16588515043258667,
+            "fit_answer_BCE": 0.11003243178129196,
+            "calibration_window_F1": 0.5011494252873563,
+            "calibration_answer_F1": 0.782608695652174
+          },
+          {
+            "epoch": 8,
+            "fit_window_BCE": 0.1578771024942398,
+            "fit_answer_BCE": 0.09196609258651733,
+            "calibration_window_F1": 0.491566265060241,
+            "calibration_answer_F1": 0.782608695652174
+          },
+          {
+            "epoch": 9,
+            "fit_window_BCE": 0.13919392228126526,
+            "fit_answer_BCE": 0.07230161130428314,
+            "calibration_window_F1": 0.5010526315789474,
+            "calibration_answer_F1": 0.7887323943661971
+          },
+          {
+            "epoch": 10,
+            "fit_window_BCE": 0.125299334526062,
+            "fit_answer_BCE": 0.059764377772808075,
+            "calibration_window_F1": 0.5136363636363637,
+            "calibration_answer_F1": 0.7887323943661971
+          }
+        ]
+      }
+    }
+  ],
+  "checkpoint_epochs_replayed": 110,
+  "alpha_candidates_checked": 120,
+  "probability_replay_max_abs_difference": 0.0,
+  "independent_window_and_answer_weight_reconstruction": true,
+  "fit_only_scaler_identity_checked": true,
+  "all_epoch_thresholds_and_selected_epoch_ROC_reconstructed": true,
+  "same_initial_state_step_count_and_dropout_RNG_at_every_epoch": true,
+  "both_metrics_share_same_epoch_and_alpha_candidate": true,
+  "every_outer_answer_and_window_once": true,
+  "no_refit_no_new_selection_no_GPU": true,
+  "human_gold": false,
+  "original_validation_test_read_this_run": false,
+  "complete_sha256": "bdf78227f95b7aebd71263651f61d7b4ab8c93bb4df77e389e7242dd3c94b83d",
+  "audit_code_sha256": "728995e6c82d2a8b608f2019c3406dad470a1b81513c5d8ee35af6c10acc1a94"
+}

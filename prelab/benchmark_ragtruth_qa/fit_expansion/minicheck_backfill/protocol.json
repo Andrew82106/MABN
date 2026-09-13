@@ -1,0 +1,26 @@
+{
+  "version": "qa-original-encoder22-selected-document-backfill-v1",
+  "scope": "Original fit634 and calibration159 only, explicit development-feature backfill; official test untouched",
+  "checkpoint": "lytang/MiniCheck-RoBERTa-Large",
+  "revision": "74c8919647e61ed0f71bc177d94f10930f090068",
+  "selection": "Use exact selected_document_per_claim from old final-state cache; do not recompute document selection",
+  "forward": "One input per original claim, selected document + eos + exact original claim; all valid input tokens",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "batch_size": 4,
+  "TF32": false,
+  "autocast": false,
+  "state": "encoder.layer[21] output[0], full valid input, flattened by answer; after layer22 before last two layers",
+  "padding": "Dynamic padding over only selected inputs, so batch geometry may differ from old all-document inference; store new and original padding lengths",
+  "agreement": {
+    "all793_old_claim_coordinates_and_token_ids_exact": true,
+    "old_selected_logit_max_abs_tolerance": 0.0002,
+    "old_selected_support_max_abs_tolerance": 2e-05,
+    "old_claim_final_hidden_max_abs_tolerance": 0.0002,
+    "first_two_forward_observer_vs_unobserved_logits_and_last_state": "exact"
+  },
+  "baseline": "Old support/risk/final-state arrays remain unchanged; new logits only serve numeric comparison",
+  "no_training_or_thresholds": true,
+  "generator_identity_not_input": true,
+  "official_test_opened": false
+}

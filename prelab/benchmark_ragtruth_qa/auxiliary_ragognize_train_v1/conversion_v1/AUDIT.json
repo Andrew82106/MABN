@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "cohorts": {
+    "all_train": {
+      "answers": 1842,
+      "groups": 917,
+      "tokens": 203286,
+      "lexical_tokens": 174928,
+      "risk_tokens": 45664,
+      "windows": 197760,
+      "lexical_windows": 197452,
+      "risk_windows": 53841,
+      "exact_source_input_and_label_replay": true,
+      "unique_detector_inputs": true,
+      "token_indices_contiguous": true,
+      "windows_exact_k4_stride1": true,
+      "group_membership_exact_partition": true
+    },
+    "no_unanswerability_hint": {
+      "answers": 971,
+      "groups": 491,
+      "tokens": 102778,
+      "lexical_tokens": 88133,
+      "risk_tokens": 23571,
+      "windows": 99865,
+      "lexical_windows": 99649,
+      "risk_windows": 27816,
+      "exact_source_input_and_label_replay": true,
+      "unique_detector_inputs": true,
+      "token_indices_contiguous": true,
+      "windows_exact_k4_stride1": true,
+      "group_membership_exact_partition": true
+    }
+  },
+  "cohort_memberships_match_frozen_indices": true,
+  "released_inputs_and_labels_unchanged": true,
+  "question_source_groups_isolated": true,
+  "test_or_validation_content_read": false,
+  "model_forward": false,
+  "training": false,
+  "GPU_used": false
+}

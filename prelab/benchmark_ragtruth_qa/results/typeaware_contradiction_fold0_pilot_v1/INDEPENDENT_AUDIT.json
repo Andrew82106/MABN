@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "deterministic_replay_sha256": "8ef9ccd2bc0ba26252e2885b729d0fcb2483fac969dd3be2406b84830095ce85",
+  "protocol_sha256": "821f079b6253780bb7e462cb978dface8309f5ea242b52e3299b7d067669bbeb",
+  "report_sha256": "00bde184a00413f4de8c19ac68ef8e27352949ffe759279b63d48c388106cd37",
+  "script_sha256": "9e69dfb49a35085fc9a1c3d5b76e4483383bbb39b600abe4c8e53719dc517ec1",
+  "fit_prefix_only_static_check": true,
+  "population_exact": true,
+  "confusion_arithmetic_exact": true,
+  "continuation_rule_replayed": true,
+  "calibration_rows_read": 0,
+  "test_rows_read": 0,
+  "new_model_trained": false,
+  "published_baseline_modified": false
+}

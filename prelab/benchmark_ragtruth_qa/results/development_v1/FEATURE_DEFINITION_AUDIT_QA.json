@@ -1,0 +1,111 @@
+{
+  "status": "passed_with_explicit_adaptations",
+  "scope": "Fit634/calibration159 only; no official-test content, model execution, fitting, or frozen-file modifications",
+  "lookback": {
+    "arithmetic": "mean(context attention) / [mean(context attention) + mean(answer attention)]",
+    "mean_vs_sum": "Mean/mean agrees with official equation and pinned step01_extract_attns.py. Sum/sum would be a different length-dependent feature.",
+    "official_reference": "https://aclanthology.org/2024.emnlp-main.84/",
+    "official_code": "https://github.com/voidism/Lookback-Lens/blob/e0a1fa3a898fbf6512af7be5567dea8ffe7a6620/step01_extract_attns.py",
+    "official_commit": "e0a1fa3a898fbf6512af7be5567dea8ffe7a6620",
+    "qa_query": "Post-read actual response-token position i. Causal mask allows keys <= i, including diagonal/self-attention.",
+    "official_query": "Generation step predicts y_t from the last prefix/prior-answer position; y_t not appended until after attentions are stored.",
+    "qa_context_pool": "Only tokens overlapping exact released retrieved_passages block. Question, instructions, BOS/chat wrapper excluded from both ratio pools.",
+    "official_nq_context_pool": "Whole input prefix through document/question/task instruction, excluding fixed #Answer#: suffix; that suffix is in the new-token pool along with prior generated tokens.",
+    "qa_answer_pool": "All actual response tokens from the first through current token, including diagonal; denominator uses this causal count, not full eventual answer length.",
+    "context_boundary_token_overlap_count": 0,
+    "boundary_policy": "Token overlap, not strict character containment; boundary tokens may include neighboring separator characters.",
+    "unselected_input_tokens": "Still visible to model and included in full causal attention softmax; excluded from ratio pools. Shared softmax normalization cancels algebraically in ratio; input content still affects q/k.",
+    "precision": "NF4 BF16 q/k matmul and float32 softmax/reduction. Official generation used unquantized FP16 settings; historic trace is not available.",
+    "native_bf16_cast_max_differences_in_existing_two_row_oracle": [
+      0.0010226964950561523,
+      0.0010109543800354004
+    ],
+    "claim_limit": "A source-only post-read Lookback adaptation, not exact reproduction of original experimental features. No evidence yet that these differences explain development performance."
+  },
+  "timing": {
+    "lb": "post-read i",
+    "hidden_last": "post-read i, final model RMSNorm output",
+    "nll": "pre-read i-1 predicts actual token i",
+    "future": "Causal masking excludes future content. Full teacher-forced reconstruction is not asserted numerically identical to every variable-length online prefix run."
+  },
+  "proof_revalidation": {
+    "records": 793,
+    "raw_response_tokens": 213159,
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "groups_disjoint": true,
+    "all_feature_npz_and_sidecar_hashes_checked": true,
+    "all_feature_plan_source_gold_token_coordinates_checked": true,
+    "all_original_human_spans_unchanged": true,
+    "all_gold_output_hashes_checked": true,
+    "all_first_boundary_crossing_tokens_retained": 793,
+    "existing_independent_gold_oracle_rebound": true,
+    "existing_gpu_two_row_oracle_rebound": true,
+    "gpu_oracle_scope": "Existing two development answers; LB sampled query rows, NLL first16; float32-softmax LB/NLL/hidden differences zero, whole-repeat differences zero. All793 were hash/coordinate audited, not independently recomputed with another model implementation."
+  },
+  "gold_counts": {
+    "fit": {
+      "answers": 634,
+      "positive_answers": 328,
+      "negative_answers": 306,
+      "raw_tokens": 170361,
+      "lexical_tokens": 139518,
+      "risk_tokens": 17159,
+      "official_spans": 646,
+      "candidate_windows": 168459,
+      "eligible_windows": 168123,
+      "positive_windows": 21477,
+      "negative_windows": 146646,
+      "excluded_no_lexical_windows": 336,
+      "groups": 615
+    },
+    "calibration": {
+      "answers": 159,
+      "positive_answers": 100,
+      "negative_answers": 59,
+      "raw_tokens": 42798,
+      "lexical_tokens": 35000,
+      "risk_tokens": 4692,
+      "official_spans": 200,
+      "candidate_windows": 42321,
+      "eligible_windows": 42241,
+      "positive_windows": 5984,
+      "negative_windows": 36257,
+      "excluded_no_lexical_windows": 80,
+      "groups": 154
+    }
+  },
+  "gold_edge_cases": {
+    "zero_length_spans": 0,
+    "spans_without_isalnum": 0,
+    "uncovered_span_nonwhitespace_characters": 0,
+    "uncovered_span_isalnum_characters": 0,
+    "risk_answers_without_risk_tokens": 0,
+    "answers_without_eligible_windows": 0
+  },
+  "metric_adaptations": [
+    "Four raw BPE tokens stride1 versus original Lookback experimental eight-token windows.",
+    "Risk=1 and all four official span types retained; original Lookback code factual=1 is an orientation convention, not a mismatch when labels/scores are consistently trained.",
+    "All quality-good unlabeled refusals are evaluated as negative, unlike R16 refusal localization exclusion.",
+    "Calibration F1 is selection-optimistic; paper AUROC is not an F1 benchmark; original test remains sealed."
+  ],
+  "files_sha256": {
+    "src/feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "src/run_feature_qa.py": "9d9bd6ba68e297f2986420ea5265546d6c48bd4fec8090f20eac08d70d3d9957",
+    "src/run_feature_qa_all.py": "bbef406757683907ee9645104a0962b3c5e7495c6cd46533e915b2ed6743cf74",
+    "data/feature_signature.json": "131815b0e3b53a978c9a462ff289e6b95ab8e56dc7921d925538518691ee9f09",
+    "data/feature_manifest.json": "1731cc532289ad927cb8b9bd5eea3fc9a9916105f3695bb71e0b593c34ef883d",
+    "data/feature_audit.json": "df2b60b90e3972ca7d64251f0472f3288ab28037961befba34c345107c10c98b",
+    "data/replay_selfcheck/manifest.json": "42aaa29086634980245d9b34d709a8592dedda2b0292d22a3e39837111288b7b",
+    "data/gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "data/gold_independent_review.json": "af005004426fed48d884d863e5badd74ca2ea7286c323259a20476e0c2284e02",
+    "data/feature_preparation/plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd"
+  },
+  "official_files_sha256": {
+    "step01_extract_attns.py": "31fd70e20960d53a94d6c447d90e69cf5d9bf96fe2220287295dc3afed13c074",
+    "generation.py": "b94cc169bc5fda6b27b17a896199bb874615e1cde9d6b3cee7310d638f41bef0",
+    "transformers-4.32.0/src/transformers/generation/utils.py": "faa8f7c3d515c49e8f1e358f251a67e93891d2adb184e2b08fde1b1681b6870e"
+  },
+  "audit_code_sha256": "3151bc3ac7ed57d6d440a1ac5564833d7b8690aa12a3972ed4b448442f4e98fe",
+  "seconds": 20.25330710003618
+}

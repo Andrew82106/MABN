@@ -1,0 +1,240 @@
+{
+  "rows": [
+    {
+      "trial": "large",
+      "family": "lookback__old_lr",
+      "candidate": "lookback__old_lr__large_weight0.4",
+      "window_f1": 0.6792931428088272,
+      "answer_f1": 0.8730964467005076,
+      "scores_sha256": "9cd1e267c89cf8fe0d6ee442ae7721fc184a3411e5ba873d82d1022e218f7212"
+    },
+    {
+      "trial": "large",
+      "family": "lookback__old_tree",
+      "candidate": "lookback__old_tree__large_weight0.6",
+      "window_f1": 0.677619086931396,
+      "answer_f1": 0.8792270531400966,
+      "scores_sha256": "ebaac85417392c7593ca3668bfd86e3475781da8929fd445d968ee2025b8c0d5"
+    },
+    {
+      "trial": "large",
+      "family": "harp_claim__old_lr",
+      "candidate": "harp_claim__old_lr__large_weight0.4",
+      "window_f1": 0.689809245574841,
+      "answer_f1": 0.883495145631068,
+      "scores_sha256": "02a92f510ea0ba2d2881477b3276f6a7c549e28cab8866f59dd416a3d1d83f60"
+    },
+    {
+      "trial": "large",
+      "family": "harp_claim__old_tree",
+      "candidate": "harp_claim__old_tree__large_weight0.4",
+      "window_f1": 0.6851198871650211,
+      "answer_f1": 0.8909952606635071,
+      "scores_sha256": "147f88a116c060c3e28ed9e43c7bb1676eb256eeba75fb82b5f9540709225eb3"
+    },
+    {
+      "trial": "large",
+      "family": "semantic_claim__old_lr",
+      "candidate": "semantic_claim__old_lr__large_weight0.4",
+      "window_f1": 0.6901585703498616,
+      "answer_f1": 0.8787878787878788,
+      "scores_sha256": "809e83a7b73a98b2e6f39f2a9c693c7002375163557733a2aec45d502aac8413",
+      "below_baselines": [
+        "lookback__old_tree__large_weight0.6",
+        "harp_claim__old_lr__large_weight0.4",
+        "harp_claim__old_tree__large_weight0.4"
+      ],
+      "noninferior_point_estimates_in_both_metrics": false
+    },
+    {
+      "trial": "large",
+      "family": "semantic_claim__old_tree",
+      "candidate": "semantic_claim__old_tree__large_weight0.4",
+      "window_f1": 0.6902813989031736,
+      "answer_f1": 0.8910891089108911,
+      "scores_sha256": "64b3972dd999c9655a302ad04a8709a1866b169a141e6167042e159bf601645f",
+      "below_baselines": [],
+      "noninferior_point_estimates_in_both_metrics": true
+    },
+    {
+      "trial": "nli",
+      "family": "lookback__old_lr",
+      "candidate": "lookback__old_lr__nli_weight0.2",
+      "window_f1": 0.6652285075103868,
+      "answer_f1": 0.8725490196078431,
+      "scores_sha256": "e3fa32276eaaad3635abc086af1250dc4a5df1959a9daf78db127603fd66483a"
+    },
+    {
+      "trial": "nli",
+      "family": "lookback__old_tree",
+      "candidate": "lookback__old_tree__nli_weight0.2",
+      "window_f1": 0.6703808415100615,
+      "answer_f1": 0.8744186046511628,
+      "scores_sha256": "a6e2c18d29b4c4549e0c916eb5e50d5475096399bda9cb478b982cb35e09e3bb"
+    },
+    {
+      "trial": "nli",
+      "family": "harp_claim__old_lr",
+      "candidate": "harp_claim__old_lr__nli_weight0.2",
+      "window_f1": 0.6850630850630851,
+      "answer_f1": 0.8730964467005076,
+      "scores_sha256": "f9da0e6c08fdef1f10d892192336a208c624e937891846d2a37fd6da9b6151c4"
+    },
+    {
+      "trial": "nli",
+      "family": "harp_claim__old_tree",
+      "candidate": "harp_claim__old_tree__nli_weight0.2",
+      "window_f1": 0.6835992981869831,
+      "answer_f1": 0.8762886597938144,
+      "scores_sha256": "6201492441c894362745d7246f57a481c0a4fba90f6365ed2d1cb355c317c3de"
+    },
+    {
+      "trial": "nli",
+      "family": "semantic_claim__old_lr",
+      "candidate": "semantic_claim__old_lr__nli_weight0.2",
+      "window_f1": 0.6803123715577476,
+      "answer_f1": 0.8640776699029126,
+      "scores_sha256": "37829e7e10cf53df2e2295d5117f35a622a6cc1e5300aed4a07de27d9462f689",
+      "below_baselines": [
+        "lookback__old_lr__large_weight0.4",
+        "lookback__old_tree__large_weight0.6",
+        "harp_claim__old_lr__large_weight0.4",
+        "harp_claim__old_tree__large_weight0.4",
+        "lookback__old_lr__nli_weight0.2",
+        "lookback__old_tree__nli_weight0.2",
+        "harp_claim__old_lr__nli_weight0.2",
+        "harp_claim__old_tree__nli_weight0.2",
+        "lookback__old_lr__fava_weight0.4",
+        "lookback__old_tree__fava_weight0.4",
+        "harp_claim__old_lr__fava_weight0.2",
+        "harp_claim__old_tree__fava_weight0.2"
+      ],
+      "noninferior_point_estimates_in_both_metrics": false
+    },
+    {
+      "trial": "nli",
+      "family": "semantic_claim__old_tree",
+      "candidate": "semantic_claim__old_tree__nli_weight0.2",
+      "window_f1": 0.6827158478864045,
+      "answer_f1": 0.8704663212435233,
+      "scores_sha256": "d1a25385d6122fcc338d28a7cd56fd2500db1e681799814da22df138804a49fe",
+      "below_baselines": [
+        "lookback__old_lr__large_weight0.4",
+        "lookback__old_tree__large_weight0.6",
+        "harp_claim__old_lr__large_weight0.4",
+        "harp_claim__old_tree__large_weight0.4",
+        "lookback__old_lr__nli_weight0.2",
+        "lookback__old_tree__nli_weight0.2",
+        "harp_claim__old_lr__nli_weight0.2",
+        "harp_claim__old_tree__nli_weight0.2",
+        "lookback__old_lr__fava_weight0.4",
+        "lookback__old_tree__fava_weight0.4",
+        "harp_claim__old_lr__fava_weight0.2",
+        "harp_claim__old_tree__fava_weight0.2"
+      ],
+      "noninferior_point_estimates_in_both_metrics": false
+    },
+    {
+      "trial": "fava",
+      "family": "lookback__old_lr",
+      "candidate": "lookback__old_lr__fava_weight0.4",
+      "window_f1": 0.6728045325779037,
+      "answer_f1": 0.8717948717948718,
+      "scores_sha256": "ddee1c46173a4b6dbc102050cbfee794f3b4ea88acedc1d9c5bef5e932246e3b"
+    },
+    {
+      "trial": "fava",
+      "family": "lookback__old_tree",
+      "candidate": "lookback__old_tree__fava_weight0.4",
+      "window_f1": 0.6717224687373942,
+      "answer_f1": 0.8717948717948718,
+      "scores_sha256": "2acb6c9ec461300cea98d0ac2ff8d5851d4314a8ed0e6c5cfce990f5b5ea6234"
+    },
+    {
+      "trial": "fava",
+      "family": "harp_claim__old_lr",
+      "candidate": "harp_claim__old_lr__fava_weight0.2",
+      "window_f1": 0.6876955161626694,
+      "answer_f1": 0.8704663212435233,
+      "scores_sha256": "77a3a95f9994b725d1cdbfa15ce160e46b67469f6fcdfdbd841e4897f88c0c22"
+    },
+    {
+      "trial": "fava",
+      "family": "harp_claim__old_tree",
+      "candidate": "harp_claim__old_tree__fava_weight0.2",
+      "window_f1": 0.6873636516193993,
+      "answer_f1": 0.865979381443299,
+      "scores_sha256": "2f309b5d680e7ad9bef76e202171ba51b4328d306e23a8d0a656a954ab98fb56"
+    },
+    {
+      "trial": "fava",
+      "family": "semantic_claim__old_lr",
+      "candidate": "semantic_claim__old_lr__fava_weight0.4",
+      "window_f1": 0.683675228408895,
+      "answer_f1": 0.8585858585858586,
+      "scores_sha256": "a350cb7e1fb649c4997c74a7be51edc1a5fe0a58c85b07d558003a976944d1bd",
+      "below_baselines": [
+        "lookback__old_lr__large_weight0.4",
+        "lookback__old_tree__large_weight0.6",
+        "harp_claim__old_lr__large_weight0.4",
+        "harp_claim__old_tree__large_weight0.4",
+        "lookback__old_lr__nli_weight0.2",
+        "lookback__old_tree__nli_weight0.2",
+        "harp_claim__old_lr__nli_weight0.2",
+        "harp_claim__old_tree__nli_weight0.2",
+        "lookback__old_lr__fava_weight0.4",
+        "lookback__old_tree__fava_weight0.4",
+        "harp_claim__old_lr__fava_weight0.2",
+        "harp_claim__old_tree__fava_weight0.2"
+      ],
+      "noninferior_point_estimates_in_both_metrics": false
+    },
+    {
+      "trial": "fava",
+      "family": "semantic_claim__old_tree",
+      "candidate": "semantic_claim__old_tree__fava_weight0.6",
+      "window_f1": 0.6809762852691709,
+      "answer_f1": 0.8599033816425121,
+      "scores_sha256": "0549eb8a426796f057efc6bb56c8fb443cb333737086add623c7523ea2c5f688",
+      "below_baselines": [
+        "lookback__old_lr__large_weight0.4",
+        "lookback__old_tree__large_weight0.6",
+        "harp_claim__old_lr__large_weight0.4",
+        "harp_claim__old_tree__large_weight0.4",
+        "lookback__old_lr__nli_weight0.2",
+        "lookback__old_tree__nli_weight0.2",
+        "harp_claim__old_lr__nli_weight0.2",
+        "harp_claim__old_tree__nli_weight0.2",
+        "lookback__old_lr__fava_weight0.4",
+        "lookback__old_tree__fava_weight0.4",
+        "harp_claim__old_lr__fava_weight0.2",
+        "harp_claim__old_tree__fava_weight0.2"
+      ],
+      "noninferior_point_estimates_in_both_metrics": false
+    }
+  ],
+  "proposed_not_below_each_matched_baseline": {
+    "trial": "large",
+    "family": "semantic_claim__old_tree",
+    "candidate": "semantic_claim__old_tree__large_weight0.4",
+    "window_f1": 0.6902813989031736,
+    "answer_f1": 0.8910891089108911,
+    "scores_sha256": "64b3972dd999c9655a302ad04a8709a1866b169a141e6167042e159bf601645f",
+    "below_baselines": [],
+    "noninferior_point_estimates_in_both_metrics": true
+  },
+  "scope": "18 already-selected families from three completed36-candidate trials; no new alpha, threshold or fit. A point-estimate comparison on reused cal159, not statistical noninferiority or independent testing.",
+  "baseline_identity": "Lookback and HARP adaptations, each with equal access to tail2, citation features, the respective new semantic detector and six convex weights. Not full author-method replications.",
+  "selection_rule": "Among semantic_claim families, require both F1 point estimates at least every selected matched Lookback/HARP baseline, then maximize min(twoF1), windowF1, answerF1. If none passes, explicitly return null.",
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\large_fixed_convex_v1\\complete.json": "b6beabc210581c8168e89255b9e2b7790d94a32a1d23e90e466bb8faf38722bf",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\large_fixed_convex_v1\\summary.json": "cc32521f5beadc1b6161d26e9bc7f4c9003bd3f8f783c34aaaa2dc26945ede9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\nli_fixed_convex_v1\\complete.json": "c0b3d4bd08dc3438406005465379c7c9ea839985e2b0fdb93e7f6bc74752fb47",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\nli_fixed_convex_v1\\summary.json": "520659898f3eb2f0113fdc2fbc0196d8adc3b061430a8215d34a948e44f5dd42",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\fava_fixed_convex_v1\\complete.json": "22f6a4663fa531fc505793da3d206cb36b4cb9c5824b6ba1fba111fdbbadff15",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\fava_fixed_convex_v1\\summary.json": "80d28ded2e538ef48f91b408b25852758e2d86d6cdff3ad8449499f9ef128b05"
+  },
+  "new_fits": 0,
+  "official_test_opened": false,
+  "stability_proven": false
+}

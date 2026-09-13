@@ -1,0 +1,1074 @@
+{
+  "legacy_lb": {
+    "answers_with_both_window_labels": 26,
+    "mean_AUROC": 0.8935575252398164,
+    "mean_AP": 0.8519318500077788,
+    "peak_is_risk": 23,
+    "details": [
+      {
+        "item_id": "r16_ragognize_test_0308__partial__1",
+        "within_answer_auroc": 0.979591836734694,
+        "within_answer_AP": 0.982142857142857,
+        "peak_is_risk_window": true,
+        "peak_text": " the Penistone",
+        "peak_score": 0.9361771023471391,
+        "best_risk_score": 0.9361771023471391,
+        "best_normal_score": 0.6393599662037666
+      },
+      {
+        "item_id": "r16_ragognize_test_0320__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " produced by ABC TV",
+        "peak_score": 0.933059397005005,
+        "best_risk_score": 0.933059397005005,
+        "best_normal_score": 0.7790126259221575
+      },
+      {
+        "item_id": "r16_ragognize_test_0328__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " Osmanabad Junior College",
+        "peak_score": 0.9988869010513496,
+        "best_risk_score": 0.9988869010513496,
+        "best_normal_score": 0.51048431806944
+      },
+      {
+        "item_id": "r16_ragognize_test_0500__partial__1",
+        "within_answer_auroc": 0.6042780748663101,
+        "within_answer_AP": 0.5630098184643639,
+        "peak_is_risk_window": true,
+        "peak_text": "4, 2",
+        "peak_score": 0.6158108532360294,
+        "best_risk_score": 0.6158108532360294,
+        "best_normal_score": 0.6070328785011003
+      },
+      {
+        "item_id": "r16_ragognize_test_0644__partial__1",
+        "within_answer_auroc": 0.9912280701754387,
+        "within_answer_AP": 0.9761904761904762,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 points",
+        "peak_score": 0.9921656595475515,
+        "best_risk_score": 0.9921656595475515,
+        "best_normal_score": 0.9842937403496469
+      },
+      {
+        "item_id": "r16_ragognize_test_0840__partial__1",
+        "within_answer_auroc": 0.9739130434782609,
+        "within_answer_AP": 0.9028571428571428,
+        "peak_is_risk_window": true,
+        "peak_text": " period of two years",
+        "peak_score": 0.9626284491054032,
+        "best_risk_score": 0.9626284491054032,
+        "best_normal_score": 0.9210214828423622
+      },
+      {
+        "item_id": "r16_ragognize_test_1164__partial__1",
+        "within_answer_auroc": 0.8620689655172413,
+        "within_answer_AP": 0.36736111111111114,
+        "peak_is_risk_window": false,
+        "peak_text": "024 Canadian",
+        "peak_score": 0.7537850016320815,
+        "best_risk_score": 0.7018630035427728,
+        "best_normal_score": 0.7537850016320815
+      },
+      {
+        "item_id": "r16_ragognize_test_1487__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ze Klaue",
+        "peak_score": 0.913746808417713,
+        "best_risk_score": 0.913746808417713,
+        "best_normal_score": 0.1751905971750667
+      },
+      {
+        "item_id": "r16_ragognize_test_1621__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in Kano State",
+        "peak_score": 0.999659134566156,
+        "best_risk_score": 0.999659134566156,
+        "best_normal_score": 0.8086133960663372
+      },
+      {
+        "item_id": "r16_ragognize_test_1707__partial__1",
+        "within_answer_auroc": 0.8395061728395061,
+        "within_answer_AP": 0.8651385651385652,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 July",
+        "peak_score": 0.8602382082365241,
+        "best_risk_score": 0.8602382082365241,
+        "best_normal_score": 0.39782455289486596
+      },
+      {
+        "item_id": "r16_ragognize_test_1763__partial__1",
+        "within_answer_auroc": 0.7863247863247864,
+        "within_answer_AP": 0.810186267154455,
+        "peak_is_risk_window": true,
+        "peak_text": " \"The Godson",
+        "peak_score": 0.9979438099066769,
+        "best_risk_score": 0.9979438099066769,
+        "best_normal_score": 0.9603919056460042
+      },
+      {
+        "item_id": "r16_ragognize_test_1815__partial__1",
+        "within_answer_auroc": 0.9666666666666667,
+        "within_answer_AP": 0.9626543209876544,
+        "peak_is_risk_window": true,
+        "peak_text": "2024",
+        "peak_score": 0.9235762503604429,
+        "best_risk_score": 0.9235762503604429,
+        "best_normal_score": 0.7125588886683025
+      },
+      {
+        "item_id": "r16_ragognize_test_1833__partial__1",
+        "within_answer_auroc": 0.958974358974359,
+        "within_answer_AP": 0.9522349445426366,
+        "peak_is_risk_window": true,
+        "peak_text": " their carbon emissions and",
+        "peak_score": 0.9914371052638464,
+        "best_risk_score": 0.9914371052638464,
+        "best_normal_score": 0.9715941085763264
+      },
+      {
+        "item_id": "r16_ragognize_test_2003__partial__1",
+        "within_answer_auroc": 0.28571428571428575,
+        "within_answer_AP": 0.32916666666666666,
+        "peak_is_risk_window": false,
+        "peak_text": ": Origin Point.",
+        "peak_score": 0.36904502721318144,
+        "best_risk_score": 0.29227061172112007,
+        "best_normal_score": 0.36904502721318144
+      },
+      {
+        "item_id": "r16_ragognize_test_2064__partial__1",
+        "within_answer_auroc": 0.8846153846153846,
+        "within_answer_AP": 0.6220238095238095,
+        "peak_is_risk_window": false,
+        "peak_text": " PhD in political science",
+        "peak_score": 0.5939594714006963,
+        "best_risk_score": 0.5788404495762033,
+        "best_normal_score": 0.5939594714006963
+      },
+      {
+        "item_id": "r16_ragognize_test_2129__partial__1",
+        "within_answer_auroc": 0.6476190476190475,
+        "within_answer_AP": 0.5537320191234388,
+        "peak_is_risk_window": true,
+        "peak_text": " Poor in February ",
+        "peak_score": 0.9069229176661788,
+        "best_risk_score": 0.9069229176661788,
+        "best_normal_score": 0.7944305505675885
+      },
+      {
+        "item_id": "r16_ragognize_train_0329__partial__1",
+        "within_answer_auroc": 0.9393939393939394,
+        "within_answer_AP": 0.9369375573921028,
+        "peak_is_risk_window": true,
+        "peak_text": " are The Maw",
+        "peak_score": 0.9855771107491516,
+        "best_risk_score": 0.9855771107491516,
+        "best_normal_score": 0.8730375101769647
+      },
+      {
+        "item_id": "r16_ragognize_train_0447__partial__1",
+        "within_answer_auroc": 0.9722222222222222,
+        "within_answer_AP": 0.9484126984126984,
+        "peak_is_risk_window": true,
+        "peak_text": " had 12",
+        "peak_score": 0.9989561261727488,
+        "best_risk_score": 0.9989561261727488,
+        "best_normal_score": 0.9770180659929317
+      },
+      {
+        "item_id": "r16_ragognize_train_0761__partial__1",
+        "within_answer_auroc": 0.8796296296296297,
+        "within_answer_AP": 0.6973905723905723,
+        "peak_is_risk_window": true,
+        "peak_text": " by weighting streams to",
+        "peak_score": 0.918803097276533,
+        "best_risk_score": 0.918803097276533,
+        "best_normal_score": 0.9052768983593039
+      },
+      {
+        "item_id": "r16_ragognize_train_0991__partial__1",
+        "within_answer_auroc": 0.9455782312925171,
+        "within_answer_AP": 0.940688775510204,
+        "peak_is_risk_window": true,
+        "peak_text": " have a change in",
+        "peak_score": 0.9260544787778718,
+        "best_risk_score": 0.9260544787778718,
+        "best_normal_score": 0.7990090386132862
+      },
+      {
+        "item_id": "r16_ragognize_train_1004__partial__1",
+        "within_answer_auroc": 0.9346153846153846,
+        "within_answer_AP": 0.9168498168498169,
+        "peak_is_risk_window": true,
+        "peak_text": " New Zealand's opposition",
+        "peak_score": 0.9918313016699075,
+        "best_risk_score": 0.9918313016699075,
+        "best_normal_score": 0.9218898585730071
+      },
+      {
+        "item_id": "r16_ragognize_train_1095__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in the United States",
+        "peak_score": 0.9731080652473262,
+        "best_risk_score": 0.9731080652473262,
+        "best_normal_score": 0.5043237512817381
+      },
+      {
+        "item_id": "r16_ragognize_train_1312__partial__1",
+        "within_answer_auroc": 0.9611111111111111,
+        "within_answer_AP": 0.9484848484848484,
+        "peak_is_risk_window": true,
+        "peak_text": " player to score a",
+        "peak_score": 0.9964997297141521,
+        "best_risk_score": 0.9964997297141521,
+        "best_normal_score": 0.9644507560694846
+      },
+      {
+        "item_id": "r16_ragognize_train_1411__partial__1",
+        "within_answer_auroc": 0.9166666666666666,
+        "within_answer_AP": 0.9676670668267305,
+        "peak_is_risk_window": true,
+        "peak_text": " artistic excellence, community",
+        "peak_score": 0.97335310531863,
+        "best_risk_score": 0.97335310531863,
+        "best_normal_score": 0.9062740448532174
+      },
+      {
+        "item_id": "r16_ragognize_train_1429__partial__1",
+        "within_answer_auroc": 0.9583333333333334,
+        "within_answer_AP": 0.9444444444444443,
+        "peak_is_risk_window": true,
+        "peak_text": "5 Sanremo",
+        "peak_score": 0.9986302986398874,
+        "best_risk_score": 0.9986302986398874,
+        "best_normal_score": 0.9847222558669761
+      },
+      {
+        "item_id": "r16_ragognize_train_1579__partial__1",
+        "within_answer_auroc": 0.9444444444444444,
+        "within_answer_AP": 0.9626543209876546,
+        "peak_is_risk_window": true,
+        "peak_text": " 7 Taça",
+        "peak_score": 0.9822535299301773,
+        "best_risk_score": 0.9822535299301773,
+        "best_normal_score": 0.8701531371663028
+      }
+    ]
+  },
+  "expanded_lb": {
+    "answers_with_both_window_labels": 26,
+    "mean_AUROC": 0.9455012881177909,
+    "mean_AP": 0.925340897659313,
+    "peak_is_risk": 26,
+    "details": [
+      {
+        "item_id": "r16_ragognize_test_0308__partial__1",
+        "within_answer_auroc": 0.979591836734694,
+        "within_answer_AP": 0.982142857142857,
+        "peak_is_risk_window": true,
+        "peak_text": " the Penistone",
+        "peak_score": 0.9691483121263298,
+        "best_risk_score": 0.9691483121263298,
+        "best_normal_score": 0.7738405232968942
+      },
+      {
+        "item_id": "r16_ragognize_test_0320__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " produced by ABC TV",
+        "peak_score": 0.9561607685369243,
+        "best_risk_score": 0.9561607685369243,
+        "best_normal_score": 0.8414023496154901
+      },
+      {
+        "item_id": "r16_ragognize_test_0328__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " attended Osmanabad Junior",
+        "peak_score": 0.9996168765964981,
+        "best_risk_score": 0.9996168765964981,
+        "best_normal_score": 0.8785737084021784
+      },
+      {
+        "item_id": "r16_ragognize_test_0500__partial__1",
+        "within_answer_auroc": 0.8128342245989305,
+        "within_answer_AP": 0.7474097805437518,
+        "peak_is_risk_window": true,
+        "peak_text": ", 20",
+        "peak_score": 0.5833655439855403,
+        "best_risk_score": 0.5833655439855403,
+        "best_normal_score": 0.45927579397514984
+      },
+      {
+        "item_id": "r16_ragognize_test_0644__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 points",
+        "peak_score": 0.9839394196188571,
+        "best_risk_score": 0.9839394196188571,
+        "best_normal_score": 0.9202190884174749
+      },
+      {
+        "item_id": "r16_ragognize_test_0840__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " two years on ",
+        "peak_score": 0.9410772528077128,
+        "best_risk_score": 0.9410772528077128,
+        "best_normal_score": 0.7952804754663955
+      },
+      {
+        "item_id": "r16_ragognize_test_1164__partial__1",
+        "within_answer_auroc": 0.9827586206896551,
+        "within_answer_AP": 0.9166666666666666,
+        "peak_is_risk_window": true,
+        "peak_text": "ire won the ",
+        "peak_score": 0.7812798987486906,
+        "best_risk_score": 0.7812798987486906,
+        "best_normal_score": 0.5039130563389715
+      },
+      {
+        "item_id": "r16_ragognize_test_1487__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ze Klaue",
+        "peak_score": 0.9908565921683605,
+        "best_risk_score": 0.9908565921683605,
+        "best_normal_score": 0.3481031116892092
+      },
+      {
+        "item_id": "r16_ragognize_test_1621__partial__1",
+        "within_answer_auroc": 0.9761904761904763,
+        "within_answer_AP": 0.976190476190476,
+        "peak_is_risk_window": true,
+        "peak_text": " in Kano State",
+        "peak_score": 0.9990645692587119,
+        "best_risk_score": 0.9990645692587119,
+        "best_normal_score": 0.8386534597109176
+      },
+      {
+        "item_id": "r16_ragognize_test_1707__partial__1",
+        "within_answer_auroc": 0.9506172839506173,
+        "within_answer_AP": 0.9575757575757577,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 July",
+        "peak_score": 0.8915243302905157,
+        "best_risk_score": 0.8915243302905157,
+        "best_normal_score": 0.47168951922619057
+      },
+      {
+        "item_id": "r16_ragognize_test_1763__partial__1",
+        "within_answer_auroc": 0.829059829059829,
+        "within_answer_AP": 0.8806102898362962,
+        "peak_is_risk_window": true,
+        "peak_text": " \"The Godson",
+        "peak_score": 0.9869690467023892,
+        "best_risk_score": 0.9869690467023892,
+        "best_normal_score": 0.8863973342026329
+      },
+      {
+        "item_id": "r16_ragognize_test_1815__partial__1",
+        "within_answer_auroc": 0.8,
+        "within_answer_AP": 0.838746438746439,
+        "peak_is_risk_window": true,
+        "peak_text": " the 20",
+        "peak_score": 0.8356086866907771,
+        "best_risk_score": 0.8356086866907771,
+        "best_normal_score": 0.618678327221903
+      },
+      {
+        "item_id": "r16_ragognize_test_1833__partial__1",
+        "within_answer_auroc": 0.9384615384615385,
+        "within_answer_AP": 0.9341686970646246,
+        "peak_is_risk_window": true,
+        "peak_text": " their carbon emissions and",
+        "peak_score": 0.9349258104867961,
+        "best_risk_score": 0.9349258104867961,
+        "best_normal_score": 0.8739164257542447
+      },
+      {
+        "item_id": "r16_ragognize_test_2003__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ilig produced and directed",
+        "peak_score": 0.7036105538680346,
+        "best_risk_score": 0.7036105538680346,
+        "best_normal_score": 0.4843708298139823
+      },
+      {
+        "item_id": "r16_ragognize_test_2064__partial__1",
+        "within_answer_auroc": 0.903846153846154,
+        "within_answer_AP": 0.8611111111111112,
+        "peak_is_risk_window": true,
+        "peak_text": "eis University awarded",
+        "peak_score": 0.533079825069166,
+        "best_risk_score": 0.533079825069166,
+        "best_normal_score": 0.41894511973135695
+      },
+      {
+        "item_id": "r16_ragognize_test_2129__partial__1",
+        "within_answer_auroc": 0.8952380952380953,
+        "within_answer_AP": 0.7881880024737167,
+        "peak_is_risk_window": true,
+        "peak_text": " February 20",
+        "peak_score": 0.6590783852663991,
+        "best_risk_score": 0.6590783852663991,
+        "best_normal_score": 0.5535041622594116
+      },
+      {
+        "item_id": "r16_ragognize_train_0329__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " and Young Jeong",
+        "peak_score": 0.9920223774106312,
+        "best_risk_score": 0.9920223774106312,
+        "best_normal_score": 0.7114965902923178
+      },
+      {
+        "item_id": "r16_ragognize_train_0447__partial__1",
+        "within_answer_auroc": 0.986111111111111,
+        "within_answer_AP": 0.976190476190476,
+        "peak_is_risk_window": true,
+        "peak_text": " 12 teams",
+        "peak_score": 0.9913783886490799,
+        "best_risk_score": 0.9913783886490799,
+        "best_normal_score": 0.793589868590961
+      },
+      {
+        "item_id": "r16_ragognize_train_0761__partial__1",
+        "within_answer_auroc": 0.7962962962962963,
+        "within_answer_AP": 0.5908119658119657,
+        "peak_is_risk_window": true,
+        "peak_text": " song by weighting streams",
+        "peak_score": 0.6850476266860587,
+        "best_risk_score": 0.6850476266860587,
+        "best_normal_score": 0.6574662103696589
+      },
+      {
+        "item_id": "r16_ragognize_train_0991__partial__1",
+        "within_answer_auroc": 0.9727891156462585,
+        "within_answer_AP": 0.9652396214896214,
+        "peak_is_risk_window": true,
+        "peak_text": " change in the number",
+        "peak_score": 0.7702806920517626,
+        "best_risk_score": 0.7702806920517626,
+        "best_normal_score": 0.502341014558177
+      },
+      {
+        "item_id": "r16_ragognize_train_1004__partial__1",
+        "within_answer_auroc": 0.9923076923076922,
+        "within_answer_AP": 0.9885883347421809,
+        "peak_is_risk_window": true,
+        "peak_text": " New Zealand's opposition",
+        "peak_score": 0.8995742506190422,
+        "best_risk_score": 0.8995742506190422,
+        "best_normal_score": 0.5170975796709953
+      },
+      {
+        "item_id": "r16_ragognize_train_1095__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in the United States",
+        "peak_score": 0.9566041468309925,
+        "best_risk_score": 0.9566041468309925,
+        "best_normal_score": 0.5095743266220379
+      },
+      {
+        "item_id": "r16_ragognize_train_1312__partial__1",
+        "within_answer_auroc": 0.9666666666666666,
+        "within_answer_AP": 0.941540404040404,
+        "peak_is_risk_window": true,
+        "peak_text": " of being the youngest",
+        "peak_score": 0.9847910389845924,
+        "best_risk_score": 0.9847910389845924,
+        "best_normal_score": 0.9676500107554061
+      },
+      {
+        "item_id": "r16_ragognize_train_1411__partial__1",
+        "within_answer_auroc": 0.9761904761904763,
+        "within_answer_AP": 0.9910714285714285,
+        "peak_is_risk_window": true,
+        "peak_text": " based on artistic excellence",
+        "peak_score": 0.9420906725342976,
+        "best_risk_score": 0.9420906725342976,
+        "best_normal_score": 0.7260373436554292
+      },
+      {
+        "item_id": "r16_ragognize_train_1429__partial__1",
+        "within_answer_auroc": 0.861111111111111,
+        "within_answer_AP": 0.746067821067821,
+        "peak_is_risk_window": true,
+        "peak_text": "5 Sanremo",
+        "peak_score": 0.9971365778046397,
+        "best_risk_score": 0.9971365778046397,
+        "best_normal_score": 0.99679956163335
+      },
+      {
+        "item_id": "r16_ragognize_train_1579__partial__1",
+        "within_answer_auroc": 0.962962962962963,
+        "within_answer_AP": 0.9765432098765434,
+        "peak_is_risk_window": true,
+        "peak_text": " 7 Taça",
+        "peak_score": 0.9905801038676076,
+        "best_risk_score": 0.9905801038676076,
+        "best_normal_score": 0.8646539713578403
+      }
+    ]
+  },
+  "legacy_lb_nll": {
+    "answers_with_both_window_labels": 26,
+    "mean_AUROC": 0.8887610720177135,
+    "mean_AP": 0.8519186178942906,
+    "peak_is_risk": 24,
+    "details": [
+      {
+        "item_id": "r16_ragognize_test_0308__partial__1",
+        "within_answer_auroc": 0.979591836734694,
+        "within_answer_AP": 0.982142857142857,
+        "peak_is_risk_window": true,
+        "peak_text": " the Penistone",
+        "peak_score": 0.9071986441792133,
+        "best_risk_score": 0.9071986441792133,
+        "best_normal_score": 0.5685089728329904
+      },
+      {
+        "item_id": "r16_ragognize_test_0320__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " produced by ABC TV",
+        "peak_score": 0.931285856964133,
+        "best_risk_score": 0.931285856964133,
+        "best_normal_score": 0.7430169412061127
+      },
+      {
+        "item_id": "r16_ragognize_test_0328__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " Osmanabad Junior College",
+        "peak_score": 0.9996272829099906,
+        "best_risk_score": 0.9996272829099906,
+        "best_normal_score": 0.467094790034592
+      },
+      {
+        "item_id": "r16_ragognize_test_0500__partial__1",
+        "within_answer_auroc": 0.6042780748663101,
+        "within_answer_AP": 0.5753301229585814,
+        "peak_is_risk_window": true,
+        "peak_text": "4, 2",
+        "peak_score": 0.5932693710916338,
+        "best_risk_score": 0.5932693710916338,
+        "best_normal_score": 0.5579727072314404
+      },
+      {
+        "item_id": "r16_ragognize_test_0644__partial__1",
+        "within_answer_auroc": 0.9912280701754387,
+        "within_answer_AP": 0.9761904761904762,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 points",
+        "peak_score": 0.999236320813364,
+        "best_risk_score": 0.999236320813364,
+        "best_normal_score": 0.9816355145268408
+      },
+      {
+        "item_id": "r16_ragognize_test_0840__partial__1",
+        "within_answer_auroc": 0.982608695652174,
+        "within_answer_AP": 0.9428571428571428,
+        "peak_is_risk_window": true,
+        "peak_text": " period of two years",
+        "peak_score": 0.982780761650642,
+        "best_risk_score": 0.982780761650642,
+        "best_normal_score": 0.9298193676958874
+      },
+      {
+        "item_id": "r16_ragognize_test_1164__partial__1",
+        "within_answer_auroc": 0.8448275862068966,
+        "within_answer_AP": 0.3381944444444444,
+        "peak_is_risk_window": false,
+        "peak_text": "024 Canadian",
+        "peak_score": 0.7187260446677252,
+        "best_risk_score": 0.6046208013817832,
+        "best_normal_score": 0.7187260446677252
+      },
+      {
+        "item_id": "r16_ragognize_test_1487__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ze Klaue",
+        "peak_score": 0.9237618255508321,
+        "best_risk_score": 0.9237618255508321,
+        "best_normal_score": 0.21995610077443237
+      },
+      {
+        "item_id": "r16_ragognize_test_1621__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in Kano State",
+        "peak_score": 0.9998907160167975,
+        "best_risk_score": 0.9998907160167975,
+        "best_normal_score": 0.7684932865504139
+      },
+      {
+        "item_id": "r16_ragognize_test_1707__partial__1",
+        "within_answer_auroc": 0.8518518518518519,
+        "within_answer_AP": 0.8743978243978245,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 July",
+        "peak_score": 0.845776316137048,
+        "best_risk_score": 0.845776316137048,
+        "best_normal_score": 0.35875865118903344
+      },
+      {
+        "item_id": "r16_ragognize_test_1763__partial__1",
+        "within_answer_auroc": 0.811965811965812,
+        "within_answer_AP": 0.8640518517475937,
+        "peak_is_risk_window": true,
+        "peak_text": " \"The Godson",
+        "peak_score": 0.9977934204261707,
+        "best_risk_score": 0.9977934204261707,
+        "best_normal_score": 0.9551589071603626
+      },
+      {
+        "item_id": "r16_ragognize_test_1815__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0000000000000002,
+        "peak_is_risk_window": true,
+        "peak_text": "2024",
+        "peak_score": 0.9272850812609782,
+        "best_risk_score": 0.9272850812609782,
+        "best_normal_score": 0.6813183238199811
+      },
+      {
+        "item_id": "r16_ragognize_test_1833__partial__1",
+        "within_answer_auroc": 0.958974358974359,
+        "within_answer_AP": 0.9522349445426366,
+        "peak_is_risk_window": true,
+        "peak_text": " carbon emissions and progress",
+        "peak_score": 0.9927975420693521,
+        "best_risk_score": 0.9927975420693521,
+        "best_normal_score": 0.977475680534316
+      },
+      {
+        "item_id": "r16_ragognize_test_2003__partial__1",
+        "within_answer_auroc": 0.28571428571428575,
+        "within_answer_AP": 0.32916666666666666,
+        "peak_is_risk_window": false,
+        "peak_text": ": Origin Point.",
+        "peak_score": 0.3487937075052653,
+        "best_risk_score": 0.26386954206178126,
+        "best_normal_score": 0.3487937075052653
+      },
+      {
+        "item_id": "r16_ragognize_test_2064__partial__1",
+        "within_answer_auroc": 0.8653846153846153,
+        "within_answer_AP": 0.6845238095238095,
+        "peak_is_risk_window": true,
+        "peak_text": "Brandeis University",
+        "peak_score": 0.6530940850252985,
+        "best_risk_score": 0.6530940850252985,
+        "best_normal_score": 0.602690284926633
+      },
+      {
+        "item_id": "r16_ragognize_test_2129__partial__1",
+        "within_answer_auroc": 0.6952380952380952,
+        "within_answer_AP": 0.5907829798586102,
+        "peak_is_risk_window": true,
+        "peak_text": " Poor in February ",
+        "peak_score": 0.8866044310314055,
+        "best_risk_score": 0.8866044310314055,
+        "best_normal_score": 0.8342613933922812
+      },
+      {
+        "item_id": "r16_ragognize_train_0329__partial__1",
+        "within_answer_auroc": 0.946969696969697,
+        "within_answer_AP": 0.9483011937557393,
+        "peak_is_risk_window": true,
+        "peak_text": " are The Maw",
+        "peak_score": 0.9897778584954917,
+        "best_risk_score": 0.9897778584954917,
+        "best_normal_score": 0.8814629149742262
+      },
+      {
+        "item_id": "r16_ragognize_train_0447__partial__1",
+        "within_answer_auroc": 0.9444444444444444,
+        "within_answer_AP": 0.8972222222222221,
+        "peak_is_risk_window": true,
+        "peak_text": " had 12",
+        "peak_score": 0.9998893136607399,
+        "best_risk_score": 0.9998893136607399,
+        "best_normal_score": 0.9945764033504161
+      },
+      {
+        "item_id": "r16_ragognize_train_0761__partial__1",
+        "within_answer_auroc": 0.8611111111111112,
+        "within_answer_AP": 0.7028138528138528,
+        "peak_is_risk_window": true,
+        "peak_text": " by weighting streams to",
+        "peak_score": 0.9330856869457295,
+        "best_risk_score": 0.9330856869457295,
+        "best_normal_score": 0.8823896167083985
+      },
+      {
+        "item_id": "r16_ragognize_train_0991__partial__1",
+        "within_answer_auroc": 0.8231292517006803,
+        "within_answer_AP": 0.8263274484821799,
+        "peak_is_risk_window": true,
+        "peak_text": " have a change in",
+        "peak_score": 0.9539319051710657,
+        "best_risk_score": 0.9539319051710657,
+        "best_normal_score": 0.8246111112037637
+      },
+      {
+        "item_id": "r16_ragognize_train_1004__partial__1",
+        "within_answer_auroc": 0.9576923076923077,
+        "within_answer_AP": 0.9438423567382843,
+        "peak_is_risk_window": true,
+        "peak_text": " New Zealand's opposition",
+        "peak_score": 0.9879020037155701,
+        "best_risk_score": 0.9879020037155701,
+        "best_normal_score": 0.909063481609426
+      },
+      {
+        "item_id": "r16_ragognize_train_1095__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in the United States",
+        "peak_score": 0.9582984653308677,
+        "best_risk_score": 0.9582984653308677,
+        "best_normal_score": 0.4551804233769261
+      },
+      {
+        "item_id": "r16_ragognize_train_1312__partial__1",
+        "within_answer_auroc": 0.9666666666666667,
+        "within_answer_AP": 0.9532467532467531,
+        "peak_is_risk_window": true,
+        "peak_text": " player to score a",
+        "peak_score": 0.9987099979956251,
+        "best_risk_score": 0.9987099979956251,
+        "best_normal_score": 0.9824801631574855
+      },
+      {
+        "item_id": "r16_ragognize_train_1411__partial__1",
+        "within_answer_auroc": 0.9166666666666667,
+        "within_answer_AP": 0.9653911564625849,
+        "peak_is_risk_window": true,
+        "peak_text": " artistic excellence, community",
+        "peak_score": 0.9672597304751331,
+        "best_risk_score": 0.9672597304751331,
+        "best_normal_score": 0.8767604375964526
+      },
+      {
+        "item_id": "r16_ragognize_train_1429__partial__1",
+        "within_answer_auroc": 0.9305555555555556,
+        "within_answer_AP": 0.8968253968253967,
+        "peak_is_risk_window": true,
+        "peak_text": "025 San",
+        "peak_score": 0.9983560739147934,
+        "best_risk_score": 0.9983560739147934,
+        "best_normal_score": 0.9836929074304792
+      },
+      {
+        "item_id": "r16_ragognize_train_1579__partial__1",
+        "within_answer_auroc": 0.888888888888889,
+        "within_answer_AP": 0.9060405643738978,
+        "peak_is_risk_window": true,
+        "peak_text": " 7 Taça",
+        "peak_score": 0.9911820918849531,
+        "best_risk_score": 0.9911820918849531,
+        "best_normal_score": 0.9501623555278508
+      }
+    ]
+  },
+  "expanded_lb_nll": {
+    "answers_with_both_window_labels": 26,
+    "mean_AUROC": 0.9432705196324437,
+    "mean_AP": 0.9192623098875624,
+    "peak_is_risk": 25,
+    "details": [
+      {
+        "item_id": "r16_ragognize_test_0308__partial__1",
+        "within_answer_auroc": 0.979591836734694,
+        "within_answer_AP": 0.982142857142857,
+        "peak_is_risk_window": true,
+        "peak_text": " the Penistone",
+        "peak_score": 0.961453875746329,
+        "best_risk_score": 0.961453875746329,
+        "best_normal_score": 0.752345553702114
+      },
+      {
+        "item_id": "r16_ragognize_test_0320__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " produced by ABC TV",
+        "peak_score": 0.9590992903293825,
+        "best_risk_score": 0.9590992903293825,
+        "best_normal_score": 0.8378152900902088
+      },
+      {
+        "item_id": "r16_ragognize_test_0328__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " Osmanabad Junior College",
+        "peak_score": 0.9997311094845474,
+        "best_risk_score": 0.9997311094845474,
+        "best_normal_score": 0.8730413661609594
+      },
+      {
+        "item_id": "r16_ragognize_test_0500__partial__1",
+        "within_answer_auroc": 0.8128342245989305,
+        "within_answer_AP": 0.7474097805437518,
+        "peak_is_risk_window": true,
+        "peak_text": ", 20",
+        "peak_score": 0.5653218071938366,
+        "best_risk_score": 0.5653218071938366,
+        "best_normal_score": 0.43236265377100425
+      },
+      {
+        "item_id": "r16_ragognize_test_0644__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 points",
+        "peak_score": 0.9962664966499192,
+        "best_risk_score": 0.9962664966499192,
+        "best_normal_score": 0.8991496315093411
+      },
+      {
+        "item_id": "r16_ragognize_test_0840__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " two years on ",
+        "peak_score": 0.9623762931936318,
+        "best_risk_score": 0.9623762931936318,
+        "best_normal_score": 0.7860188701194569
+      },
+      {
+        "item_id": "r16_ragognize_test_1164__partial__1",
+        "within_answer_auroc": 0.9827586206896551,
+        "within_answer_AP": 0.9166666666666666,
+        "peak_is_risk_window": true,
+        "peak_text": "ire won the ",
+        "peak_score": 0.7320531514757349,
+        "best_risk_score": 0.7320531514757349,
+        "best_normal_score": 0.46592485126065136
+      },
+      {
+        "item_id": "r16_ragognize_test_1487__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ze Klaue",
+        "peak_score": 0.9908388556221555,
+        "best_risk_score": 0.9908388556221555,
+        "best_normal_score": 0.37973061118532825
+      },
+      {
+        "item_id": "r16_ragognize_test_1621__partial__1",
+        "within_answer_auroc": 0.9761904761904763,
+        "within_answer_AP": 0.976190476190476,
+        "peak_is_risk_window": true,
+        "peak_text": " in Kano State",
+        "peak_score": 0.9994959309149563,
+        "best_risk_score": 0.9994959309149563,
+        "best_normal_score": 0.8160737382844443
+      },
+      {
+        "item_id": "r16_ragognize_test_1707__partial__1",
+        "within_answer_auroc": 0.962962962962963,
+        "within_answer_AP": 0.9674523007856342,
+        "peak_is_risk_window": true,
+        "peak_text": " 11 July",
+        "peak_score": 0.8880434653812564,
+        "best_risk_score": 0.8880434653812564,
+        "best_normal_score": 0.47148953763651225
+      },
+      {
+        "item_id": "r16_ragognize_test_1763__partial__1",
+        "within_answer_auroc": 0.7905982905982906,
+        "within_answer_AP": 0.8586484327028705,
+        "peak_is_risk_window": true,
+        "peak_text": " \"The Godson",
+        "peak_score": 0.9842314578385175,
+        "best_risk_score": 0.9842314578385175,
+        "best_normal_score": 0.8680516916052607
+      },
+      {
+        "item_id": "r16_ragognize_test_1815__partial__1",
+        "within_answer_auroc": 0.9333333333333333,
+        "within_answer_AP": 0.9328843995510663,
+        "peak_is_risk_window": true,
+        "peak_text": " the 20",
+        "peak_score": 0.8307016502077657,
+        "best_risk_score": 0.8307016502077657,
+        "best_normal_score": 0.5991899397940055
+      },
+      {
+        "item_id": "r16_ragognize_test_1833__partial__1",
+        "within_answer_auroc": 0.9333333333333333,
+        "within_answer_AP": 0.9323723509958326,
+        "peak_is_risk_window": true,
+        "peak_text": " emissions and progress towards",
+        "peak_score": 0.9376486212546431,
+        "best_risk_score": 0.9376486212546431,
+        "best_normal_score": 0.8868278861471584
+      },
+      {
+        "item_id": "r16_ragognize_test_2003__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": "ilig produced and directed",
+        "peak_score": 0.6971188821789113,
+        "best_risk_score": 0.6971188821789113,
+        "best_normal_score": 0.46527429970126055
+      },
+      {
+        "item_id": "r16_ragognize_test_2064__partial__1",
+        "within_answer_auroc": 0.903846153846154,
+        "within_answer_AP": 0.8611111111111112,
+        "peak_is_risk_window": true,
+        "peak_text": "Brandeis University",
+        "peak_score": 0.5277008065541013,
+        "best_risk_score": 0.5277008065541013,
+        "best_normal_score": 0.421402760155724
+      },
+      {
+        "item_id": "r16_ragognize_test_2129__partial__1",
+        "within_answer_auroc": 0.8952380952380953,
+        "within_answer_AP": 0.7881880024737167,
+        "peak_is_risk_window": true,
+        "peak_text": " February 20",
+        "peak_score": 0.6649944841611878,
+        "best_risk_score": 0.6649944841611878,
+        "best_normal_score": 0.6342402440840876
+      },
+      {
+        "item_id": "r16_ragognize_train_0329__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " Naing and Young",
+        "peak_score": 0.9920435838727282,
+        "best_risk_score": 0.9920435838727282,
+        "best_normal_score": 0.7145562285691334
+      },
+      {
+        "item_id": "r16_ragognize_train_0447__partial__1",
+        "within_answer_auroc": 0.9722222222222222,
+        "within_answer_AP": 0.9484126984126984,
+        "peak_is_risk_window": true,
+        "peak_text": " had 12",
+        "peak_score": 0.997164277422775,
+        "best_risk_score": 0.997164277422775,
+        "best_normal_score": 0.9063838560255485
+      },
+      {
+        "item_id": "r16_ragognize_train_0761__partial__1",
+        "within_answer_auroc": 0.8240740740740742,
+        "within_answer_AP": 0.6574074074074073,
+        "peak_is_risk_window": true,
+        "peak_text": " song by weighting streams",
+        "peak_score": 0.7200757427836765,
+        "best_risk_score": 0.7200757427836765,
+        "best_normal_score": 0.6091944469765422
+      },
+      {
+        "item_id": "r16_ragognize_train_0991__partial__1",
+        "within_answer_auroc": 0.870748299319728,
+        "within_answer_AP": 0.8368958947215248,
+        "peak_is_risk_window": true,
+        "peak_text": " have a change in",
+        "peak_score": 0.7277872026278883,
+        "best_risk_score": 0.7277872026278883,
+        "best_normal_score": 0.515569420280743
+      },
+      {
+        "item_id": "r16_ragognize_train_1004__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " New Zealand's opposition",
+        "peak_score": 0.8651086300308716,
+        "best_risk_score": 0.8651086300308716,
+        "best_normal_score": 0.48887123683455624
+      },
+      {
+        "item_id": "r16_ragognize_train_1095__partial__1",
+        "within_answer_auroc": 1.0,
+        "within_answer_AP": 1.0,
+        "peak_is_risk_window": true,
+        "peak_text": " in the United States",
+        "peak_score": 0.9475954946499506,
+        "best_risk_score": 0.9475954946499506,
+        "best_normal_score": 0.4973553682931478
+      },
+      {
+        "item_id": "r16_ragognize_train_1312__partial__1",
+        "within_answer_auroc": 0.961111111111111,
+        "within_answer_AP": 0.9272546897546897,
+        "peak_is_risk_window": true,
+        "peak_text": " being the youngest player",
+        "peak_score": 0.9892269561042399,
+        "best_risk_score": 0.9892269561042399,
+        "best_normal_score": 0.9776249772475373
+      },
+      {
+        "item_id": "r16_ragognize_train_1411__partial__1",
+        "within_answer_auroc": 0.9761904761904763,
+        "within_answer_AP": 0.9910714285714285,
+        "peak_is_risk_window": true,
+        "peak_text": " based on artistic excellence",
+        "peak_score": 0.9400523914438139,
+        "best_risk_score": 0.9400523914438139,
+        "best_normal_score": 0.6876647488129689
+      },
+      {
+        "item_id": "r16_ragognize_train_1429__partial__1",
+        "within_answer_auroc": 0.8055555555555555,
+        "within_answer_AP": 0.6140572390572391,
+        "peak_is_risk_window": false,
+        "peak_text": " the 20",
+        "peak_score": 0.9964484638675707,
+        "best_risk_score": 0.9948905429915685,
+        "best_normal_score": 0.9964484638675707
+      },
+      {
+        "item_id": "r16_ragognize_train_1579__partial__1",
+        "within_answer_auroc": 0.9444444444444444,
+        "within_answer_AP": 0.9626543209876546,
+        "peak_is_risk_window": true,
+        "peak_text": " 7 Taça",
+        "peak_score": 0.9921074536273764,
+        "best_risk_score": 0.9921074536273764,
+        "best_normal_score": 0.9061068908888048
+      }
+    ]
+  }
+}

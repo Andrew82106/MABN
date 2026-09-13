@@ -1,0 +1,69 @@
+{
+  "status": "staged_not_used_in_training",
+  "purpose": "Optional source-expanding human-supervised auxiliary tasks; final task stays unchanged QA.",
+  "counts": {
+    "Summary": {
+      "answers": 4383,
+      "sources": 731,
+      "groups": 677,
+      "risk_answers": 1370,
+      "span_types": {
+        "Evident Baseless Info": 868,
+        "Evident Conflict": 572,
+        "Subtle Baseless Info": 175,
+        "Subtle Conflict": 71
+      }
+    },
+    "Data2txt": {
+      "answers": 5295,
+      "sources": 883,
+      "groups": 881,
+      "risk_answers": 3672,
+      "span_types": {
+        "Evident Baseless Info": 3151,
+        "Evident Conflict": 3680,
+        "Subtle Baseless Info": 1339,
+        "Subtle Conflict": 58
+      }
+    }
+  },
+  "candidate_train_sources_before_quarantine": 1676,
+  "quarantined_train_sources": 62,
+  "unique_sources": 1614,
+  "unique_groups": 1558,
+  "answers": 9678,
+  "parsed_train_rows_by_task": {
+    "Summary": 4386,
+    "Data2txt": 5298
+  },
+  "quality_excluded_rows": 6,
+  "same_source_exact_answer_gold_duplicates_removed": 0,
+  "span_alignment_issues": 0,
+  "labels": "All original human types/flags/meta/offsets retained unchanged; no synthetic or new human labels.",
+  "split_guard": "Identity-only regex pass; official test and quarantined response JSON never parsed. All official test source materials and all QA non-fit source materials are blocked for auxiliary source-overlap grouping.",
+  "overlap_rule": "Source material consecutive20 normalized Unicode-word overlap, plus exact Data2txt business name/address/city/state. Existing QA non-fit identities include all linked/test/withheld sources.",
+  "limits": [
+    "Material overlap check is conservative and not an exhaustive entity/event paraphrase audit.",
+    "Summary and Data2txt are auxiliary detection tasks, not new QA questions or a new QA test.",
+    "Structured-source unknown fields are preserved; original human unsupported/conflict labels are not reinterpreted.",
+    "Repeated generators do not multiply independent source count.",
+    "No training budget, task weights, or improvement claim is established by this data staging step."
+  ],
+  "official_test_answers_or_gold_parsed": false,
+  "existing_fit_calibration_changed": false,
+  "sources_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\data\\raw\\source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\data\\raw\\response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\data\\raw\\LICENSE": "b7fd7d6bdfe0cbba63c63a310914beb4a4acb8bf08da73849219f45385f5b244",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\source_index.jsonl": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\prepare_auxiliary_human.py": "98c622e245973096abbc70b6596e97d04129d9c50e4aace526afc482af3a2645"
+  },
+  "artifacts_sha256": {
+    "candidate_fit.jsonl": "4ad2008960abfd1835c3bddd49a1f0d794c729d051e70070d0b793525078f4c0",
+    "quality_excluded_index.jsonl": "5edec702810e5dea67d6aea3d9eeb4cb7ea2b17f49b4da61543f161373d22206",
+    "duplicate_index.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "quarantined_source_index.jsonl": "a689aeb12773c4363c340cb7dee5f9db79a9a3b6d0febf757db690022f05da64",
+    "overlap_edge_index.jsonl": "aef56a2f4df6e8d8b79fbae248c3e92e22832b6b8df088718ac3a800f31093b3",
+    "SPAN_ALIGNMENT_ISSUES.json": "7ebfd918eb54519cc1ddf8a9532d557db230f57365919b3a4ff9f84df62a4c53"
+  }
+}

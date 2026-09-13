@@ -1,0 +1,16 @@
+{
+  "completed": true,
+  "n": 50,
+  "primary_method": "sentences_facts",
+  "primary_F1": 0.5882352941176471,
+  "primary_target_met": false,
+  "new_sources_exclude_all684": true,
+  "frozen_protocol_sha256": "20ad903aef1eca41610ebdc9f4fb5afc714fc8b68f2dd05c855f02f50ddce080",
+  "no_fitting_or_threshold_tuning": true,
+  "feature_assembly_verified_on_old_validation_queries": 21,
+  "hook_logits_unchanged": true,
+  "queries": 296,
+  "generated_tokens": 0,
+  "external_llm_calls": 0,
+  "seconds": 194.06308007240295
+}

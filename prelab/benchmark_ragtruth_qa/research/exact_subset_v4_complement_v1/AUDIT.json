@@ -1,0 +1,27 @@
+{
+  "status": "passed_independent_fit_only_mapping_audit",
+  "windows": 45658,
+  "independently_rebuilt_v4_claim_window_edges": 49049,
+  "method": "Rebuilt eligibility from answer lexical masks and claim coverage from lexical_bpe_indices; did not use mapped_eligible_window_starts.",
+  "max_abs_differences": {
+    "exact_max_abs": 0.0,
+    "v4_max_abs": 0.0,
+    "v4_rank_max_abs": 0.0,
+    "exact_rank_max_abs": 0.0,
+    "fusion_max_abs": 0.0
+  },
+  "labels_exact": true,
+  "predictions_exact": true,
+  "fold_cdf_q_exact": true,
+  "combined_v4_scores_npz_opened": false,
+  "calibration_rows_or_scores_read": false,
+  "official_test_read": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "auditor_sha256": "24525584007d2a7b1871763357597069a190d8def76d3d41728f5e7fb2924ebe",
+  "analyzer_outputs": {
+    "scores_sha256": "2b36dca812df9dedbd23a874e2a16f2c974b4d1b535b4e5710452e08ee01f2e4",
+    "results_sha256": "002c280e7a2dc6bbc4f3c19379cc008f17b06fdadbc04466659765b6cea6a8eb",
+    "report_sha256": "2e251f6274515bc5c9b4ec3dd3e3506457b82ab7f1899aa0def1af4408d26a3b"
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "status": "passed",
+  "audit_utc": "2026-09-11T17:25:22.198408+00:00",
+  "scope": "Frozen fit expansion outputs and original fit byte prefixes only. Original calibration bytes hashed only; no calibration parsing, official test, model execution, or retokenization.",
+  "export_freeze_sha256": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+  "source_and_output_hashes": {
+    "fit_expansion\\data\\export_freeze.json": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+    "fit_expansion\\data\\preparation_statistics.json": "78d431915620bb2bcb4db8d27c0021b6ee1a028a4894e18e1895ea8802f13fea",
+    "fit_expansion\\manifest.json": "f387ad182267c5c67f0acab816850bcdbef4775c8c16d1739e65c5c72979312a",
+    "fit_expansion\\additional_good_candidates.jsonl": "ffd2e110645526cc4332b2ea8e5d4696bdf387f76018fbd4be51f8a00a5a1d72",
+    "fit_expansion\\fit_source_whitelist.jsonl": "e22e6412ee3455bff7fdcd2b4fbaab2197bf924a657819e23285f9b3c18edfa2",
+    "fit_expansion\\prepare_expansion.py": "b1c2f68c2cfc308e27cc6cc9d88699be56910cc815ad1f7f32b5347e93c708ad",
+    "fit_expansion\\run_minicheck_expansion.py": "654dcf3b65ae505dc57aa01b4769b8a796cc6148891ddabf79c4e66cdac3ddf8",
+    "fit_expansion\\protocol.json": "b0554214de688d1dd5f924264b10bf54f506fae8325c28cdf32dc22e4c357a7d",
+    "src\\build_gold.py": "55e217a2eddf9b443d5dab2547292ac072d451f1dedac148764732be49bf51d7",
+    "src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "semantic_baseline\\run_semantic.py": "24fc06a5d9260eda2fae300acba9c7ac940d8b0b72c739f759bd3e310dc68ecb",
+    "semantic_baseline\\run_semantic_cuda.py": "e29f8df2126c387a33aa5fedff69229a956697dc0a26e974427d5bb8923fc26b",
+    "semantic_baseline\\download_manifest.json": "dc0ac31fd72953c058d008dfda08f20d22198d04530882161a7b4d799e040c4b",
+    "semantic_baseline\\cuda_variant\\claim_feature_manifest.json": "cd49c44cc41fdcf059773fbafaf3a9da102ccfce7efcbef9210b257353104a41",
+    "semantic_baseline\\cuda_variant\\inference_complete.json": "6baced1ff52d4766838ca1bb030c1ea5cd8026bfaea7d8fa318bd32ada0a22aa",
+    "semantic_baseline\\cuda_variant\\protocol.json": "2be77d75a4b1fd29c6902b7157d4ced0991b81d465b35b24e4d032f94199596e",
+    "semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "data\\development_manifest.json": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "data\\answers_fit.jsonl": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "data\\tokens_fit.jsonl": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "data\\windows_k4_fit.jsonl": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+    "data\\windows_excluded_fit.jsonl": "f00141eb5954de3c371b45cd67c56c775873742c65c96686f9995a7d99dd9c47",
+    "data\\calibration.jsonl": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "data\\answers_calibration.jsonl": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+    "data\\tokens_calibration.jsonl": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+    "data\\windows_k4_calibration.jsonl": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510",
+    "fit_expansion\\data\\answers_fit.jsonl": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+    "fit_expansion\\data\\answer_provenance.jsonl": "b2ae292e6c7c7d25012fa0d1c8a2693b8b7d7e23dfe885544680d58375d20dc4",
+    "fit_expansion\\data\\fit.jsonl": "798653054e03343966d426a43764a7320a2b5b16108d27110e6335edb435bef5",
+    "fit_expansion\\data\\label_conflicts.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fit_expansion\\data\\new_fit.jsonl": "5af892c1dcaa22d193693b354affb76540041eeb35778b6d91898b72a0d5bea9",
+    "fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+    "fit_expansion\\data\\tokens_fit.jsonl": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+    "fit_expansion\\data\\windows_excluded_fit.jsonl": "88de2b92aadcaf499c4e83d4e10cee4563cdb7bafadefc12eac60069053b2b3f",
+    "fit_expansion\\data\\windows_k4_fit.jsonl": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+    "fit_expansion\\data\\tokenizer_signature.json": "7ee5b3f5cefe71e36d8e220bbc3741a77396802ff5d0acc31635f0389bfea338",
+    "fit_expansion\\minicheck\\new_plans.jsonl": "cf60714d45850cb1111b75daf66f416ccb4cd92a79339c9dda3f32b12ea6a14f",
+    "fit_expansion\\minicheck\\reuse_manifest.json": "bb3b38e44bd8f0c61d2280fb43ef59f5e90edea079885de574aa085ff20f8d45",
+    "fit_expansion\\minicheck\\storage_estimate.json": "887216a41bb08b5cfc316aa34a43f5e547da228aec0fe62e01ccd74a5e09f76b"
+  },
+  "original_fit_byte_prefixes": {
+    "fit.jsonl": {
+      "bytes": 3299940,
+      "original_rows": 634,
+      "byte_prefix_exact": true
+    },
+    "answers_fit.jsonl": {
+      "bytes": 1243200,
+      "original_rows": 634,
+      "byte_prefix_exact": true
+    },
+    "tokens_fit.jsonl": {
+      "bytes": 8689010,
+      "original_rows": 634,
+      "byte_prefix_exact": true
+    },
+    "windows_k4_fit.jsonl": {
+      "bytes": 90974323,
+      "original_rows": 168123,
+      "byte_prefix_exact": true
+    },
+    "windows_excluded_fit.jsonl": {
+      "bytes": 183729,
+      "original_rows": 336,
+      "byte_prefix_exact": true
+    }
+  },
+  "counts": {
+    "old": {
+      "answers": 634,
+      "risk_answers": 328,
+      "raw_tokens": 170361,
+      "lexical_tokens": 139518,
+      "risk_tokens": 17159,
+      "official_spans": 646,
+      "eligible_windows": 168123,
+      "risk_windows": 21477,
+      "excluded_nonlexical_windows": 336
+    },
+    "new": {
+      "answers": 3046,
+      "risk_answers": 799,
+      "raw_tokens": 495347,
+      "lexical_tokens": 420782,
+      "risk_tokens": 30239,
+      "official_spans": 1247,
+      "eligible_windows": 485856,
+      "risk_windows": 36956,
+      "excluded_nonlexical_windows": 356
+    },
+    "all": {
+      "answers": 3680,
+      "risk_answers": 1127,
+      "raw_tokens": 665708,
+      "lexical_tokens": 560300,
+      "risk_tokens": 47398,
+      "official_spans": 1893,
+      "eligible_windows": 653979,
+      "risk_windows": 58433,
+      "excluded_nonlexical_windows": 692
+    }
+  },
+  "sources": 634,
+  "groups": 615,
+  "models_after_dedup": {
+    "llama-2-7b-chat": 634,
+    "gpt-3.5-turbo-0613": 578,
+    "mistral-7B-instruct": 594,
+    "llama-2-13b-chat": 631,
+    "llama-2-70b-chat": 629,
+    "gpt-4-0613": 614
+  },
+  "official_span_types": {
+    "Evident Baseless Info": 983,
+    "Evident Conflict": 271,
+    "Subtle Baseless Info": 609,
+    "Subtle Conflict": 30
+  },
+  "deduplication": {
+    "input_answers": 3712,
+    "canonical_answers": 3680,
+    "same_source_exact_answer_duplicate_groups": 26,
+    "merged_excess": 32,
+    "full_label_conflict_groups": 0,
+    "canonical_labels_match_all_provenance_member_hashes": true,
+    "full_label_source_review_reused_on_unchanged_candidates_sha256": "ffd2e110645526cc4332b2ea8e5d4696bdf387f76018fbd4be51f8a00a5a1d72",
+    "duplicate_groups": [
+      {
+        "canonical_response_id": "16074",
+        "source_id": "12170",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16086",
+        "source_id": "12172",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16093",
+        "source_id": "12173",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16182",
+        "source_id": "12189",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16236",
+        "source_id": "12198",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16320",
+        "source_id": "12212",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16332",
+        "source_id": "12214",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16350",
+        "source_id": "12217",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16404",
+        "source_id": "12226",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16476",
+        "source_id": "12238",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16482",
+        "source_id": "12239",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16536",
+        "source_id": "12248",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16542",
+        "source_id": "12249",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16584",
+        "source_id": "12256",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16626",
+        "source_id": "12263",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16656",
+        "source_id": "12268",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16674",
+        "source_id": "12271",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16692",
+        "source_id": "12274",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16698",
+        "source_id": "12275",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "16741",
+        "source_id": "12282",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "11982",
+        "source_id": "14313",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "12427",
+        "source_id": "14389",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "12546",
+        "source_id": "14409",
+        "answers": 3,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "12588",
+        "source_id": "14416",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "14438",
+        "source_id": "15327",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "canonical_response_id": "15132",
+        "source_id": "15443",
+        "answers": 2,
+        "labels_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    ]
+  },
+  "all_answer_token_identity_and_count_checks": 3680,
+  "all_window_identity_count_and_tokenmask_label_checks": 654671,
+  "samples": {
+    "16028": {
+      "roles": [
+        "unicode_new"
+      ],
+      "source_id": "12162",
+      "model": "mistral-7B-instruct",
+      "answer_sha256": "59b277b8786fa45044f1a65d9ba9cb35e5fb84ee7596dfd1c27ced97f255fe82",
+      "characters": 533,
+      "unicode_characters": 2,
+      "raw_tokens": 154,
+      "lexical_tokens": 130,
+      "risk_tokens": 49,
+      "official_spans": 2,
+      "answer_label": 1,
+      "candidate_windows": 151,
+      "eligible_windows": 151,
+      "risk_windows": 62,
+      "negative_first_raw_offset": true,
+      "duplicate_offset_occurrences": 0,
+      "split_claims": 6,
+      "longest_sentence_parts": 1,
+      "independent_character_masks_exact": true,
+      "all_nonwhitespace_covered": true,
+      "complete_template_integer_geometry_exact": true,
+      "all_sample_windows_geometry_and_gold_exact": true
+    },
+    "16873": {
+      "roles": [
+        "split_long_sentence_new"
+      ],
+      "source_id": "12304",
+      "model": "gpt-3.5-turbo-0613",
+      "answer_sha256": "f04cf4a18f82e6b93f0644dddffdafe5fd130b0255a3c1836b0ac40411218315",
+      "characters": 510,
+      "unicode_characters": 0,
+      "raw_tokens": 115,
+      "lexical_tokens": 106,
+      "risk_tokens": 0,
+      "official_spans": 0,
+      "answer_label": 0,
+      "candidate_windows": 112,
+      "eligible_windows": 112,
+      "risk_windows": 0,
+      "negative_first_raw_offset": true,
+      "duplicate_offset_occurrences": 0,
+      "split_claims": 2,
+      "longest_sentence_parts": 2,
+      "independent_character_masks_exact": true,
+      "all_nonwhitespace_covered": true,
+      "complete_template_integer_geometry_exact": true,
+      "all_sample_windows_geometry_and_gold_exact": true
+    },
+    "16019": {
+      "roles": [
+        "last_new"
+      ],
+      "source_id": "15591",
+      "model": "llama-2-70b-chat",
+      "answer_sha256": "aa7803f113e2e26d6c037651a7afea0b649672b2a081bd202e1cbdd9207598c2",
+      "characters": 765,
+      "unicode_characters": 0,
+      "raw_tokens": 215,
+      "lexical_tokens": 186,
+      "risk_tokens": 54,
+      "official_spans": 1,
+      "answer_label": 1,
+      "candidate_windows": 212,
+      "eligible_windows": 212,
+      "risk_windows": 58,
+      "negative_first_raw_offset": true,
+      "duplicate_offset_occurrences": 0,
+      "split_claims": 8,
+      "longest_sentence_parts": 1,
+      "independent_character_masks_exact": true,
+      "all_nonwhitespace_covered": true,
+      "complete_template_integer_geometry_exact": true,
+      "all_sample_windows_geometry_and_gold_exact": true
+    },
+    "16021": {
+      "roles": [
+        "first_new"
+      ],
+      "source_id": "12161",
+      "model": "gpt-3.5-turbo-0613",
+      "answer_sha256": "e1771a2e69f98fb10de00d11715122cf86b2810b14f0fb97ac938fced81353c1",
+      "characters": 183,
+      "unicode_characters": 0,
+      "raw_tokens": 43,
+      "lexical_tokens": 40,
+      "risk_tokens": 34,
+      "official_spans": 1,
+      "answer_label": 1,
+      "candidate_windows": 40,
+      "eligible_windows": 40,
+      "risk_windows": 36,
+      "negative_first_raw_offset": true,
+      "duplicate_offset_occurrences": 0,
+      "split_claims": 1,
+      "longest_sentence_parts": 1,
+      "independent_character_masks_exact": true,
+      "all_nonwhitespace_covered": true,
+      "complete_template_integer_geometry_exact": true,
+      "all_sample_windows_geometry_and_gold_exact": true
+    }
+  },
+  "limits": [
+    "Four samples independently recompute character-level lexical/span risk and full-template integer offsets; all other answers/tokens and windows are checked for identities, counts and stored-mask agreement.",
+    "No tokenizer rerun, semantic inference or encoder22 cache audit in this task."
+  ],
+  "seconds": 9.622162500047125,
+  "GPU_used": false,
+  "trained": false,
+  "calibration_parsed": false,
+  "official_test_opened": false
+}

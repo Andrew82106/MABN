@@ -1,0 +1,113 @@
+{
+  "status": "CPU_pair_mining_and_integrity_audit_passed",
+  "fit_examples_read": 34919,
+  "fit_answers_read": 3680,
+  "calibration_rows_read": 0,
+  "official_test_rows_read": 0,
+  "sources": 634,
+  "groups": 615,
+  "eligible_candidates_before_endpoint_caps": 61,
+  "selected_pairs": 56,
+  "selected_positive_endpoints": 41,
+  "selected_negative_endpoints": 52,
+  "selected_sources": 36,
+  "selected_groups": 36,
+  "positive_endpoint_coverage": 0.01180195739781232,
+  "conflict_positive_endpoint_coverage": 0.045023696682464455,
+  "maximum_pairs_per_positive_observed": 2,
+  "maximum_uses_per_negative_observed": 2,
+  "pairs_by_held_fold": {
+    "0": 6,
+    "1": 12,
+    "2": 15,
+    "3": 11,
+    "4": 12
+  },
+  "training_pairs_by_OOF_model": {
+    "0": 50,
+    "1": 44,
+    "2": 41,
+    "3": 45,
+    "4": 44
+  },
+  "full_fit_training_pairs": 56,
+  "primary_slot_counts": {
+    "negation": 3,
+    "object": 3,
+    "quantity": 48,
+    "source": 1,
+    "temporal": 1
+  },
+  "all_slot_counts": {
+    "negation": 3,
+    "object": 3,
+    "quantity": 48,
+    "source": 1,
+    "temporal": 27
+  },
+  "anchor_mode_counts": {
+    "explicit_subject_predicate": 40,
+    "ordered_lexical_skeleton": 16
+  },
+  "positive_gold_type_counts": {
+    "Evident Baseless Info": 21,
+    "Evident Conflict": 22,
+    "Subtle Baseless Info": 12,
+    "Subtle Conflict": 3
+  },
+  "partial_positive_pairs": 36,
+  "surface_similarity": {
+    "min": 0.5385009085402787,
+    "p10": 0.5520252525252525,
+    "median": 0.6428170787545788,
+    "p90": 0.8362333672648261,
+    "max": 0.9390540540540541,
+    "opposite_gold_candidates_screened_after_content_filters": 106750,
+    "candidates_passing_similarity_threshold": 1489,
+    "similarity_screen_pass_rate": 0.013948477751756441
+  },
+  "selected_evidence_jaccard": {
+    "min": 0.2,
+    "median": 0.7142857142857143,
+    "mean": 0.7301870748299321,
+    "packed_top2_premise_exact_pairs": 13
+  },
+  "excluded_candidate_reasons": {
+    "gold_scope_slot_mismatch": 19,
+    "negative_low_content": 12000,
+    "no_explicit_slot_contrast": 1377,
+    "normalized_exact_opposite_gold": 31,
+    "positive_low_content": 11241,
+    "same_response": 27152,
+    "subject_predicate_or_skeleton_mismatch": 32,
+    "surface_below_threshold": 105261
+  },
+  "saved_ambiguity_examples": 71,
+  "structural_ambiguity_flags_on_retained_pairs": {
+    "partial_positive_projection": 36,
+    "multiple_slot_changes": 26,
+    "ordered_skeleton_instead_of_explicit_subject_predicate": 16,
+    "different_claim_selected_top2_pack": 43,
+    "surface_similarity_below_0.60": 18,
+    "interpretation": "Flags disclose possible pair confounds; they do not alter or reinterpret gold truth labels."
+  },
+  "full_fit_pair_weight": {
+    "mean": 1.0,
+    "group_mass_min": 1.5555555555555554,
+    "group_mass_max": 1.5555555555555556,
+    "rule": "equal group mass, then equal pair mass; recompute normalization after excluding each OOF held fold"
+  },
+  "integrity": {
+    "same_exact_source": true,
+    "same_exact_question": true,
+    "same_exact_underlying_material": true,
+    "different_responses": true,
+    "opposite_frozen_gold_projection": true,
+    "same_group_and_held_fold": true,
+    "cross_fold_pairs": 0,
+    "normalized_exact_opposite_pairs": 0,
+    "pair_ids_unique": true,
+    "calibration_absent": true,
+    "official_test_absent": true
+  }
+}

@@ -24,3 +24,11 @@ data/pre_exp1/p1_benign/interim/*
 data/pre_exp1/p1_benign/processed/*
 data/pre_exp1/p1_benign/manifests/*
 data/pre_exp1/p1_benign/reports/*
+
+# New MAS paper: generated/sensitive artifacts stay local by default.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+results/*
+!results/.gitkeep

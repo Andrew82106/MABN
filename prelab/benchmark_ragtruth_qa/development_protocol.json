@@ -1,0 +1,67 @@
+{
+  "version": "ragtruth-qa-development-v1",
+  "scope": "Only official-train exported fit634/calibration159; test and withheld content never opened",
+  "methods": [
+    "lookback_mean",
+    "lookback_nll",
+    "layerband_slots",
+    "hidden64_lookback_nll"
+  ],
+  "widths": {
+    "lookback_mean": 1024,
+    "lookback_nll": 1025,
+    "layerband_slots": 520,
+    "hidden64_lookback_nll": 1089
+  },
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260924,
+  "model_replay": "Published llama-2-7b-chat answers, reconstructed fixed Llama2-7B NF4 forward pass; not original release token trajectory",
+  "window": "All frozen eligible 4 raw BPE windows stride1; punctuation counts width; no gold-dependent feature selection",
+  "fit_windows": 168123,
+  "calibration_windows": 42241,
+  "fit_answers": 634,
+  "calibration_answers": 159,
+  "safe_refusals": "No additional refusal classifier or exclusions; every quality-good answer and its eligible windows uses unchanged human labels",
+  "answer_label": "Official nonempty original span list; never reconstructed from token/window OR",
+  "answer_score": "Maximum over every eligible window for that answer; no gold-positive prefilter",
+  "layerband_slots": "For each of four ordered raw tokens: mean over each contiguous 8-layer band, retain all32 heads (128 features), append NLL; append four padding mask bits =>520",
+  "short_window": "Repeat last raw token to length4; mask true positions1 and padded positions0",
+  "pca": {
+    "components": 64,
+    "n_iter": 3,
+    "seed": 20260924,
+    "whiten": false,
+    "fit_sample": "Each fit answer: floor(linspace(0,N-1,min(N,32))) raw BPE indices, no label use",
+    "weight": "Each fit source-connected group equal, answer equal within group, selected token equal within answer; normalized sum1",
+    "application": "Project ALL raw tokens with stored mean/components in float64 then castfloat32; window mean over four actual tokens; no training-window subsample"
+  },
+  "base_weight": "Source-connected group -> answer -> eligible window equal mass, normalized mean1",
+  "loss_weight": "Fit-only class factors from base weights; re-equalize group loss; total mass168123 for every family/C",
+  "lr": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "cpu_threads": 4
+  },
+  "standardization": "StandardScaler fit-only weighted partial_fit in fixed16384-row blocks; float32 transform; same scaler reused across family Cs",
+  "threshold": "Each candidate separately maximizes cal window or cal answer riskF1; ties precision then higher threshold; all/none endpoints included",
+  "selection": "Max min(cal windowF1,cal answerF1), then windowF1, window precision, smaller C",
+  "reporting": "All12 candidates fit/cal metrics plus four calibration-selected heads; no final/test performance claim",
+  "no_calibration_refit": true,
+  "missing_predictions": "Delivery failure; never remove scorable rows to improve counts",
+  "resource_estimate": {
+    "cpu_minutes_before_execution": [
+      10,
+      30
+    ],
+    "peak_ram_gib_estimate": [
+      5,
+      9
+    ],
+    "disk_backed_feature_bytes_approx": 1350000000
+  }
+}

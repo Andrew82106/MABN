@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "code_sha256": "e9a345fbe909b14ca72637293544ea0fee15b4887e0658eca2c1c59d392729c2",
+  "complete_sha256": "75b808beeb05aad1bbeb2ad94e224ffd54702c155d90371e531c9c19365a91ca",
+  "all_source_and_output_hashes_verified": true,
+  "exact_frozen_width64_input_reused": true,
+  "scaler_PCA_weights_shuffle_not_refit_or_changed": true,
+  "methods": [
+    {
+      "method": "full_lb_pca64_tcn_w16",
+      "width": 16,
+      "parameters": 19025,
+      "selected_epoch": 6,
+      "all30_epoch_aggregation_threshold_metrics_BCE_exact": true,
+      "selected_full_token_checkpoint_predictions_exact": true
+    },
+    {
+      "method": "full_lb_pca64_tcn_w32",
+      "width": 32,
+      "parameters": 41121,
+      "selected_epoch": 3,
+      "all30_epoch_aggregation_threshold_metrics_BCE_exact": true,
+      "selected_full_token_checkpoint_predictions_exact": true
+    }
+  ],
+  "all_three_widths_conflict_counts_independently_exact": true,
+  "frozen_width64_not_retrained_or_changed": true,
+  "test_opened": false,
+  "gpu_used": false,
+  "seconds": 25.705154499970376,
+  "limitation": "Implementation self-audit; repeated calibration selection and single-seed limits remain."
+}

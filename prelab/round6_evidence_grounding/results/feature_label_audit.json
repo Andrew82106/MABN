@@ -1,0 +1,12 @@
+{
+  "all_180_item_labels_unique_and_cover_generated": true,
+  "actual_texts_match_generated": true,
+  "all_180_features_finite_and_aligned_ids": true,
+  "four_layer_shapes": [
+    180,
+    3584
+  ],
+  "no_labels_or_scores_used_for_feature_audit": true,
+  "zero_response_parse_failures": true,
+  "utc": "2026-09-10T11:27:44.846195+00:00"
+}

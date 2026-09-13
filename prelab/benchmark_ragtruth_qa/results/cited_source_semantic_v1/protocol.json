@@ -1,0 +1,29 @@
+{
+  "version": "qa-cited-source-semantic-v1",
+  "answers": 793,
+  "fit": 634,
+  "calibration": 159,
+  "claims": 8852,
+  "recognized_reference_claims": 2084,
+  "source_claim_pairs": 6252,
+  "source": "Split only original line-start passage1/2/3 headers. Keep exact header/body and whitespace; no reordering or chunking.",
+  "claim": "Reuse original automatic claims verbatim, including reference text. Run each recognized-reference claim against all3 sources, including claims whose recognized IDs are all invalid. No syntax or label filtering beyond the pre-existing parser.",
+  "model": "Pinned existing MiniCheck RoBERTa-large, FP32, eager, CUDA:0, TF32 off, no autocast, no training, eval mode, local_files_only.",
+  "input": "Exact source header/body + existing tokenizer eos token + exact claim; single-string tokenizer, add specials, no truncation; assert length<=512 before GPU.",
+  "batch": "4, per-answer claim-major then source1/2/3, final batch unpadded rows preserved; ordinary dynamic padding within each batch.",
+  "support": "Official softmax(logits)[1]; retain both logits and all three support probabilities, never reinterpret old mixed-source document_chunk scores.",
+  "columns": [
+    "valid_ref_claim_fraction",
+    "any_source_support_mean",
+    "cited_support_gap_mean",
+    "citation_overlap_x_gap"
+  ],
+  "valid_ref_claim_fraction": "Mean over window lexical tokens of whether assigned claim has >=1 recognized citation ID in {1,2,3}.",
+  "any_source_support_mean": "Mean max(support1,support2,support3) over original window lexical tokens, with claim value0 if no valid citation.",
+  "cited_support_gap_mean": "Mean [max(all3)-max(valid-cited sources)] over original window lexical tokens, claim value0 if no valid citation.",
+  "citation_overlap_x_gap": "Original citation_overlap over raw4BPE window multiplied by the preceding window mean gap.",
+  "geometry": "Original full-string Llama BPE offsets, raw4 stride1, punctuation counts length; discard only windows with no alphanumeric character. Token->claim is pre-existing maximum alphanumeric overlap, ties earlier. Compare all210364 window IDs and overlap to frozen lexical producer.",
+  "invalid_unknown": "Never automatic risk labels; all original answers/windows retained. No valid citation gives all4 values0.",
+  "limits": "Additional semantic checker, not native generation probe. Multiple cited sources use maximum individual support, not proof of joint entailment. Reference wording remains in hypothesis. Existing fit/cal development only; no test or gold-driven construction.",
+  "oracle": "Replay first original plan using same original mixed chunks solely to confirm loaded checkpoint/arithmetic. Max abs logit2e-4/probability2e-5, unchanged existing limits; not new source-score equivalence."
+}

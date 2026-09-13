@@ -1,0 +1,3209 @@
+{
+  "schema": "round9-random-context-v1",
+  "pool_file": "../round7_evidence_grounding/data/dev_inputs.jsonl",
+  "pool_sha256": "32180b1f240b6011742f6e60336f32feba0ee28cc3c84ee45a6f5312a9a42dfb",
+  "selection": "SHA256(round9-lumina-20260911:group_id) seeded choice from old development groups, then sample distinct passages; same choice for both conditions",
+  "created_before_generation": true,
+  "assignments": {
+    "ragognize_train_0158": {
+      "donor_id": "r9_random_ragognize_train_0158",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Kim Clijsters",
+          "text": "Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_0287": {
+      "donor_id": "r9_random_ragognize_train_0287",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Lorraine Hansberry Hall",
+          "text": "Since its opening, Lorraine Hansberry Hall has been used to house freshmen women.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry",
+          "text": "Lorraine Vivian Hansberry (May 19, 1930 – January 12, 1965) was an African-American playwright and writer.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_train_0302": {
+      "donor_id": "r9_random_ragognize_train_0302",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Theo van Gogh (film director)",
+          "text": "Theodoor \"Theo\" van Gogh (] ; 23 July 19572 November 2004) was a Dutch film director, film producer, television director, television producer, television presenter, screenwriter, actor, critic and author.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Chris Carter (screenwriter)",
+          "text": "Christopher Carl Carter (born October 13, 1956) is an American television and film producer, director and writer.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_0313": {
+      "donor_id": "r9_random_ragognize_train_0313",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Southend University Hospital NHS Foundation Trust",
+          "text": "Southend University Hospital has 157 consultants providing various services, and serves a catchment area with a population of about 350,000.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_0379": {
+      "donor_id": "r9_random_ragognize_train_0379",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Old Chestnut Hill Historic District",
+          "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Boston College",
+          "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0519": {
+      "donor_id": "r9_random_ragognize_train_0519",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_0580": {
+      "donor_id": "r9_random_ragognize_train_0580",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Wallace Park",
+          "text": "It is a pleasant park with tree-lined walkways.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0623": {
+      "donor_id": "r9_random_ragognize_train_0623",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Huaihua",
+          "text": "Huaihua () is a prefecture-level city in the south western Hunan, China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0656": {
+      "donor_id": "r9_random_ragognize_train_0656",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Chestnut Hill (Leesburg, Virginia)",
+          "text": "Chestnut Hill is an 18th-century Federal-style mansion north of Leesburg in Loudoun County, Virginia, United States.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Stanford University",
+          "text": "Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0692": {
+      "donor_id": "r9_random_ragognize_train_0692",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_0777": {
+      "donor_id": "r9_random_ragognize_train_0777",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Tinley Park station",
+          "text": "Tinley Park Station (also known as Tinley Park-Oak Park Avenue Station) is an elaborate commuter railroad station along Metra's Rock Island District line in Tinley Park, Illinois.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_train_0860": {
+      "donor_id": "r9_random_ragognize_train_0860",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Boston College",
+          "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Old Chestnut Hill Historic District",
+          "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0867": {
+      "donor_id": "r9_random_ragognize_train_0867",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0903": {
+      "donor_id": "r9_random_ragognize_train_0903",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Ankang",
+          "text": "Ankang () is a prefecture-level city in southern Shaanxi Province in the People's Republic of China.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Border effect",
+          "text": "Economic integration (as in the EU) may be a solution to overcome these effects.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_0939": {
+      "donor_id": "r9_random_ragognize_train_0939",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_0988": {
+      "donor_id": "r9_random_ragognize_train_0988",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1041": {
+      "donor_id": "r9_random_ragognize_train_1041",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_1122": {
+      "donor_id": "r9_random_ragognize_train_1122",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Cornel West",
+          "text": "Cornel Ronald West (born June 2, 1953) is an American philosopher, political activist, social critic, author, public intellectual, and prominent member of the Democratic Socialists of America.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Tragoudia Gia Tous Mines",
+          "text": "The vinyl collector's edition release of the album was in the form of a small record player.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_1128": {
+      "donor_id": "r9_random_ragognize_train_1128",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1149": {
+      "donor_id": "r9_random_ragognize_train_1149",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Van Gogh (1991 film)",
+          "text": "Van Gogh is a 1991 French film written and directed by Maurice Pialat.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Chris Carter (screenwriter)",
+          "text": "Christopher Carl Carter (born October 13, 1956) is an American television and film producer, director and writer.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_1153": {
+      "donor_id": "r9_random_ragognize_train_1153",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1180": {
+      "donor_id": "r9_random_ragognize_train_1180",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Riccarton, Ayrshire",
+          "text": "The parish also contains the village of Hurlford.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1187": {
+      "donor_id": "r9_random_ragognize_train_1187",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Odysseas Elytis",
+          "text": "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_1298": {
+      "donor_id": "r9_random_ragognize_train_1298",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_1307": {
+      "donor_id": "r9_random_ragognize_train_1307",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Jet's Pizza",
+          "text": "Jet's Pizza is an American pizza franchise restaurant.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_1347": {
+      "donor_id": "r9_random_ragognize_train_1347",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "7 Days in Havana",
+          "text": "Set during a week in the Cuban capital Havana, the film features one segment for each day, each segment directed by a different filmmaker.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1593": {
+      "donor_id": "r9_random_ragognize_train_1593",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Ankang",
+          "text": "Ankang () is a prefecture-level city in southern Shaanxi Province in the People's Republic of China.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Azia",
+          "text": "It lies in the agricultural belt of the state.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_1617": {
+      "donor_id": "r9_random_ragognize_train_1617",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Qitaihe",
+          "text": "Qitaihe () is a prefecture-level city in eastern Heilongjiang province, People's Republic of China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_1681": {
+      "donor_id": "r9_random_ragognize_train_1681",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_1689": {
+      "donor_id": "r9_random_ragognize_train_1689",
+      "origin_group_id": "hotpot_5ae377a35542994393b9e6db",
+      "passages": [
+        {
+          "title": "Jimmy Barnes",
+          "text": "James Dixon Swan {'1': \", '2': \", '3': \", '4': \"} (born 28 April 1956), better known as Jimmy Barnes, is a Scottish-Australian rock singer-songwriter.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        },
+        {
+          "title": "(No Pussyfooting)",
+          "text": "(No Pussyfooting) is the debut studio album by the British musicians Robert Fripp and Brian Eno (credited as Fripp & Eno).",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        }
+      ]
+    },
+    "ragognize_train_1875": {
+      "donor_id": "r9_random_ragognize_train_1875",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "Reno–Tahoe International Airport",
+          "text": "It is named after Jesse L. Reno and Lake Tahoe.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_1971": {
+      "donor_id": "r9_random_ragognize_train_1971",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Wallace Park",
+          "text": "It is a pleasant park with tree-lined walkways.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_2020": {
+      "donor_id": "r9_random_ragognize_train_2020",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_2030": {
+      "donor_id": "r9_random_ragognize_train_2030",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "Berkeley, Denver",
+          "text": "The neighborhood is bounded by Federal Boulevard on the east, I-70 on the north, Sheridan Boulevard on the West and 38th avenue on the south.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_2036": {
+      "donor_id": "r9_random_ragognize_train_2036",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_2160": {
+      "donor_id": "r9_random_ragognize_train_2160",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "Richard Wallace (director)",
+          "text": "Richard Wallace (August 26, 1894 – November 3, 1951) was an American film director.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "text": "It was based on a short story \"American Beauty\" by Wallace Irwin.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_train_2180": {
+      "donor_id": "r9_random_ragognize_train_2180",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_2212": {
+      "donor_id": "r9_random_ragognize_train_2212",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "Terence Davies",
+          "text": "Terence Davies (born 10 November 1945) is an English screenwriter, film director, novelist and actor.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "text": "It was based on a short story \"American Beauty\" by Wallace Irwin.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_train_2218": {
+      "donor_id": "r9_random_ragognize_train_2218",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Kids on Fire School of Ministry",
+          "text": "Kids on Fire School of Ministry was a Pentecostal summer camp at Devils Lake, North Dakota, United States.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_2271": {
+      "donor_id": "r9_random_ragognize_train_2271",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_test_0044": {
+      "donor_id": "r9_random_ragognize_test_0044",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Azia",
+          "text": "It lies in the agricultural belt of the state.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_test_0130": {
+      "donor_id": "r9_random_ragognize_test_0130",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "Berkeley, Denver",
+          "text": "The neighborhood is bounded by Federal Boulevard on the east, I-70 on the north, Sheridan Boulevard on the West and 38th avenue on the south.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_test_0237": {
+      "donor_id": "r9_random_ragognize_test_0237",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_test_0275": {
+      "donor_id": "r9_random_ragognize_test_0275",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_test_0485": {
+      "donor_id": "r9_random_ragognize_test_0485",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "Berkeley, Denver",
+          "text": "The neighborhood is bounded by Federal Boulevard on the east, I-70 on the north, Sheridan Boulevard on the West and 38th avenue on the south.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_test_0701": {
+      "donor_id": "r9_random_ragognize_test_0701",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_test_0726": {
+      "donor_id": "r9_random_ragognize_test_0726",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Southend University Hospital NHS Foundation Trust",
+          "text": "Southend University Hospital has 157 consultants providing various services, and serves a catchment area with a population of about 350,000.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_test_0970": {
+      "donor_id": "r9_random_ragognize_test_0970",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Kyle Schickner",
+          "text": "Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_test_0998": {
+      "donor_id": "r9_random_ragognize_test_0998",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Lorraine Hansberry Hall",
+          "text": "Since its opening, Lorraine Hansberry Hall has been used to house freshmen women.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Young, Black, and Determined",
+          "text": "It is a biography of the playwright and activist, Lorraine Hansberry.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_test_1264": {
+      "donor_id": "r9_random_ragognize_test_1264",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Riccarton, Ayrshire",
+          "text": "The parish also contains the village of Hurlford.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Wallace Park",
+          "text": "It is a pleasant park with tree-lined walkways.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1284": {
+      "donor_id": "r9_random_ragognize_test_1284",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Odysseas Elytis",
+          "text": "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_1396": {
+      "donor_id": "r9_random_ragognize_train_1396",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Abandoned to God",
+          "text": "This album also features a then-little known Natalie Grant as a background vocalist.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_test_1332": {
+      "donor_id": "r9_random_ragognize_test_1332",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Sandra Gulland",
+          "text": "Sandra Gulland (born November 3, 1944) is an American-born Canadian novelist.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry",
+          "text": "Lorraine Vivian Hansberry (May 19, 1930 – January 12, 1965) was an African-American playwright and writer.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_test_1452": {
+      "donor_id": "r9_random_ragognize_test_1452",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1554": {
+      "donor_id": "r9_random_ragognize_test_1554",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_test_1645": {
+      "donor_id": "r9_random_ragognize_test_1645",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_test_2039": {
+      "donor_id": "r9_random_ragognize_test_2039",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_test_2095": {
+      "donor_id": "r9_random_ragognize_test_2095",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Chestnut Hill (Leesburg, Virginia)",
+          "text": "Chestnut Hill is an 18th-century Federal-style mansion north of Leesburg in Loudoun County, Virginia, United States.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Stanford University",
+          "text": "Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0177": {
+      "donor_id": "r9_random_ragognize_train_0177",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Eatza Pizza",
+          "text": "Eatza Pizza was a buffet-style restaurant chain founded in Arizona in 1997. As recently as 2007, it was one of the largest all-buffet pizza chains in the United States, with 112 locations in 14 states and Puerto Rico.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_0382": {
+      "donor_id": "r9_random_ragognize_train_0382",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Stanford University",
+          "text": "Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Boston College",
+          "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0406": {
+      "donor_id": "r9_random_ragognize_train_0406",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0414": {
+      "donor_id": "r9_random_ragognize_train_0414",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Hunan University of Science and Technology",
+          "text": "Hunan University of Science and Technology was formed by the merger of two earlier universities.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0420": {
+      "donor_id": "r9_random_ragognize_train_0420",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Chris Carter (screenwriter)",
+          "text": "Christopher Carl Carter (born October 13, 1956) is an American television and film producer, director and writer.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Theo van Gogh (film director)",
+          "text": "Theodoor \"Theo\" van Gogh (] ; 23 July 19572 November 2004) was a Dutch film director, film producer, television director, television producer, television presenter, screenwriter, actor, critic and author.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_0473": {
+      "donor_id": "r9_random_ragognize_train_0473",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Pearl Lowe",
+          "text": "Pearl Lowe (born Pearl Samantha Davis; 1970), is an English fashion and textiles designer, and former singer-songwriter.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Anymore (Goldfrapp song)",
+          "text": "The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0683": {
+      "donor_id": "r9_random_ragognize_train_0683",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Cornel West",
+          "text": "Cornel Ronald West (born June 2, 1953) is an American philosopher, political activist, social critic, author, public intellectual, and prominent member of the Democratic Socialists of America.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_0940": {
+      "donor_id": "r9_random_ragognize_train_0940",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Southend University Hospital NHS Foundation Trust",
+          "text": "Southend University Hospital has 157 consultants providing various services, and serves a catchment area with a population of about 350,000.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1158": {
+      "donor_id": "r9_random_ragognize_train_1158",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1379": {
+      "donor_id": "r9_random_ragognize_train_1379",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1520": {
+      "donor_id": "r9_random_ragognize_train_1520",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "Reno–Tahoe International Airport",
+          "text": "It is named after Jesse L. Reno and Lake Tahoe.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_1532": {
+      "donor_id": "r9_random_ragognize_train_1532",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "Terence Davies",
+          "text": "Terence Davies (born 10 November 1945) is an English screenwriter, film director, novelist and actor.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "River of Romance",
+          "text": "It is based on the play \"Magnolia\" by Booth Tarkington.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1586": {
+      "donor_id": "r9_random_ragognize_train_1586",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Sandra Gulland",
+          "text": "Sandra Gulland (born November 3, 1944) is an American-born Canadian novelist.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry Hall",
+          "text": "Since its opening, Lorraine Hansberry Hall has been used to house freshmen women.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_train_1747": {
+      "donor_id": "r9_random_ragognize_train_1747",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_1766": {
+      "donor_id": "r9_random_ragognize_train_1766",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_1782": {
+      "donor_id": "r9_random_ragognize_train_1782",
+      "origin_group_id": "hotpot_5ae377a35542994393b9e6db",
+      "passages": [
+        {
+          "title": "Jimmy Barnes",
+          "text": "James Dixon Swan {'1': \", '2': \", '3': \", '4': \"} (born 28 April 1956), better known as Jimmy Barnes, is a Scottish-Australian rock singer-songwriter.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        },
+        {
+          "title": "(No Pussyfooting)",
+          "text": "(No Pussyfooting) is the debut studio album by the British musicians Robert Fripp and Brian Eno (credited as Fripp & Eno).",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        }
+      ]
+    },
+    "ragognize_train_1861": {
+      "donor_id": "r9_random_ragognize_train_1861",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "7 Days in Havana",
+          "text": "Set during a week in the Cuban capital Havana, the film features one segment for each day, each segment directed by a different filmmaker.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1953": {
+      "donor_id": "r9_random_ragognize_train_1953",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Randal Kleiser",
+          "text": "John Randal Kleiser (born July 20, 1946) is an American film director and producer, best known for directing the 1978 musical romantic comedy film \"Grease\".",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_2125": {
+      "donor_id": "r9_random_ragognize_train_2125",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_2141": {
+      "donor_id": "r9_random_ragognize_train_2141",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Ankang",
+          "text": "Ankang () is a prefecture-level city in southern Shaanxi Province in the People's Republic of China.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_2179": {
+      "donor_id": "r9_random_ragognize_train_2179",
+      "origin_group_id": "hotpot_5ae377a35542994393b9e6db",
+      "passages": [
+        {
+          "title": "All Systems Go (Vinnie Vincent Invasion album)",
+          "text": "The band toured in support for the album, headlining small clubs, but broke up after the completion of the tour at the end of August 1988.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        },
+        {
+          "title": "Robert Fleischman",
+          "text": "Robert Fleischman (born March 11, 1953) is an American musician, songwriter, and record producer.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        }
+      ]
+    },
+    "ragognize_train_2295": {
+      "donor_id": "r9_random_ragognize_train_2295",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Anymore (Goldfrapp song)",
+          "text": "The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Alison Goldfrapp",
+          "text": "Alison Elizabeth Margaret Goldfrapp (born 13 May 1966) is an English musician and record producer, best known as the lead vocalist of the electronic music duo Goldfrapp.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_test_0387": {
+      "donor_id": "r9_random_ragognize_test_0387",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Hounsfield Heights/Briar Hill, Calgary",
+          "text": "Hounsfield Heights/Briar Hill is an inner suburban neighbourhood in northwest Calgary, Alberta, Canada.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_test_0452": {
+      "donor_id": "r9_random_ragognize_test_0452",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Huaihua",
+          "text": "Huaihua () is a prefecture-level city in the south western Hunan, China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_test_0645": {
+      "donor_id": "r9_random_ragognize_test_0645",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_test_0648": {
+      "donor_id": "r9_random_ragognize_test_0648",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Hounsfield Heights/Briar Hill, Calgary",
+          "text": "Hounsfield Heights/Briar Hill is an inner suburban neighbourhood in northwest Calgary, Alberta, Canada.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_test_0681": {
+      "donor_id": "r9_random_ragognize_test_0681",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Lorraine Hansberry Hall",
+          "text": "Since its opening, Lorraine Hansberry Hall has been used to house freshmen women.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry",
+          "text": "Lorraine Vivian Hansberry (May 19, 1930 – January 12, 1965) was an African-American playwright and writer.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_test_0889": {
+      "donor_id": "r9_random_ragognize_test_0889",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_test_0959": {
+      "donor_id": "r9_random_ragognize_test_0959",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Azia",
+          "text": "It lies in the agricultural belt of the state.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_test_0964": {
+      "donor_id": "r9_random_ragognize_test_0964",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Eatza Pizza",
+          "text": "Eatza Pizza was a buffet-style restaurant chain founded in Arizona in 1997. As recently as 2007, it was one of the largest all-buffet pizza chains in the United States, with 112 locations in 14 states and Puerto Rico.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_test_1018": {
+      "donor_id": "r9_random_ragognize_test_1018",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1117": {
+      "donor_id": "r9_random_ragognize_test_1117",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Kim Clijsters",
+          "text": "Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_test_1241": {
+      "donor_id": "r9_random_ragognize_test_1241",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Riccarton, Ayrshire",
+          "text": "The parish also contains the village of Hurlford.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1420": {
+      "donor_id": "r9_random_ragognize_test_1420",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Anymore (Goldfrapp song)",
+          "text": "The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Alison Goldfrapp",
+          "text": "Alison Elizabeth Margaret Goldfrapp (born 13 May 1966) is an English musician and record producer, best known as the lead vocalist of the electronic music duo Goldfrapp.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1463": {
+      "donor_id": "r9_random_ragognize_test_1463",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_test_1548": {
+      "donor_id": "r9_random_ragognize_test_1548",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_test_1740": {
+      "donor_id": "r9_random_ragognize_test_1740",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Abandoned to God",
+          "text": "This album also features a then-little known Natalie Grant as a background vocalist.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_test_1866": {
+      "donor_id": "r9_random_ragognize_test_1866",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Tragoudia Gia Tous Mines",
+          "text": "The vinyl collector's edition release of the album was in the form of a small record player.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_test_1974": {
+      "donor_id": "r9_random_ragognize_test_1974",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Tinley Park station",
+          "text": "Tinley Park Station (also known as Tinley Park-Oak Park Avenue Station) is an elaborate commuter railroad station along Metra's Rock Island District line in Tinley Park, Illinois.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_test_1979": {
+      "donor_id": "r9_random_ragognize_test_1979",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_test_2096": {
+      "donor_id": "r9_random_ragognize_test_2096",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Hunan University of Science and Technology",
+          "text": "Hunan University of Science and Technology was formed by the merger of two earlier universities.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Huaihua",
+          "text": "Huaihua () is a prefecture-level city in the south western Hunan, China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_test_2206": {
+      "donor_id": "r9_random_ragognize_test_2206",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "Reno–Tahoe International Airport",
+          "text": "It is named after Jesse L. Reno and Lake Tahoe.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_test_2293": {
+      "donor_id": "r9_random_ragognize_test_2293",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Hunan University of Science and Technology",
+          "text": "Hunan University of Science and Technology was formed by the merger of two earlier universities.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0088": {
+      "donor_id": "r9_random_ragognize_train_0088",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Azia",
+          "text": "It lies in the agricultural belt of the state.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_0095": {
+      "donor_id": "r9_random_ragognize_train_0095",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Chris Carter (screenwriter)",
+          "text": "Christopher Carl Carter (born October 13, 1956) is an American television and film producer, director and writer.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Van Gogh (1991 film)",
+          "text": "Van Gogh is a 1991 French film written and directed by Maurice Pialat.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_0445": {
+      "donor_id": "r9_random_ragognize_train_0445",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Ocean (Goldfrapp song)",
+          "text": "Written in couplets, the lyrics were described as dark by several commentators.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Alison Goldfrapp",
+          "text": "Alison Elizabeth Margaret Goldfrapp (born 13 May 1966) is an English musician and record producer, best known as the lead vocalist of the electronic music duo Goldfrapp.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0584": {
+      "donor_id": "r9_random_ragognize_train_0584",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Hounsfield Heights/Briar Hill, Calgary",
+          "text": "Hounsfield Heights/Briar Hill is an inner suburban neighbourhood in northwest Calgary, Alberta, Canada.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_train_0613": {
+      "donor_id": "r9_random_ragognize_train_0613",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Qitaihe",
+          "text": "Qitaihe () is a prefecture-level city in eastern Heilongjiang province, People's Republic of China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0845": {
+      "donor_id": "r9_random_ragognize_train_0845",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0855": {
+      "donor_id": "r9_random_ragognize_train_0855",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0913": {
+      "donor_id": "r9_random_ragognize_train_0913",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "750 7th Avenue",
+          "text": "750 Seventh Avenue is a 615 ft (187m) tall Class-A office skyscraper in New York City.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_1145": {
+      "donor_id": "r9_random_ragognize_train_1145",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_1159": {
+      "donor_id": "r9_random_ragognize_train_1159",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Eatza Pizza",
+          "text": "Eatza Pizza was a buffet-style restaurant chain founded in Arizona in 1997. As recently as 2007, it was one of the largest all-buffet pizza chains in the United States, with 112 locations in 14 states and Puerto Rico.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_1168": {
+      "donor_id": "r9_random_ragognize_train_1168",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Young, Black, and Determined",
+          "text": "It is a biography of the playwright and activist, Lorraine Hansberry.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry",
+          "text": "Lorraine Vivian Hansberry (May 19, 1930 – January 12, 1965) was an African-American playwright and writer.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_train_1279": {
+      "donor_id": "r9_random_ragognize_train_1279",
+      "origin_group_id": "hotpot_5ae377a35542994393b9e6db",
+      "passages": [
+        {
+          "title": "All Systems Go (Vinnie Vincent Invasion album)",
+          "text": "The band toured in support for the album, headlining small clubs, but broke up after the completion of the tour at the end of August 1988.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        },
+        {
+          "title": "Robert Fleischman",
+          "text": "Robert Fleischman (born March 11, 1953) is an American musician, songwriter, and record producer.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        }
+      ]
+    },
+    "ragognize_train_1511": {
+      "donor_id": "r9_random_ragognize_train_1511",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_1686": {
+      "donor_id": "r9_random_ragognize_train_1686",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1892": {
+      "donor_id": "r9_random_ragognize_train_1892",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Tutta Bella Neapolitan Pizzeria",
+          "text": "Tutta Bella Neapolitan Pizzeria is an Italian restaurant chain with five locations in Washington State.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_1996": {
+      "donor_id": "r9_random_ragognize_train_1996",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_2214": {
+      "donor_id": "r9_random_ragognize_train_2214",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Border effect",
+          "text": "Economic integration (as in the EU) may be a solution to overcome these effects.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_2266": {
+      "donor_id": "r9_random_ragognize_train_2266",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Kids on Fire School of Ministry",
+          "text": "Kids on Fire School of Ministry was a Pentecostal summer camp at Devils Lake, North Dakota, United States.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_2328": {
+      "donor_id": "r9_random_ragognize_train_2328",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Odysseas Elytis",
+          "text": "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_test_0690": {
+      "donor_id": "r9_random_ragognize_test_0690",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1012": {
+      "donor_id": "r9_random_ragognize_test_1012",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_test_1021": {
+      "donor_id": "r9_random_ragognize_test_1021",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_test_1668": {
+      "donor_id": "r9_random_ragognize_test_1668",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_test_1722": {
+      "donor_id": "r9_random_ragognize_test_1722",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Qitaihe",
+          "text": "Qitaihe () is a prefecture-level city in eastern Heilongjiang province, People's Republic of China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Hunan University of Science and Technology",
+          "text": "Hunan University of Science and Technology was formed by the merger of two earlier universities.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_test_2227": {
+      "donor_id": "r9_random_ragognize_test_2227",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "7 Days in Havana",
+          "text": "Set during a week in the Cuban capital Havana, the film features one segment for each day, each segment directed by a different filmmaker.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_0001": {
+      "donor_id": "r9_random_ragognize_train_0001",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Van Gogh (1991 film)",
+          "text": "Van Gogh is a 1991 French film written and directed by Maurice Pialat.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Copies by Vincent van Gogh",
+          "text": "Rather than replicate, Van Gogh sought to translate the subjects and composition through his perspective, color, and technique.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_0061": {
+      "donor_id": "r9_random_ragognize_train_0061",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_0151": {
+      "donor_id": "r9_random_ragognize_train_0151",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "Berkeley, Denver",
+          "text": "The neighborhood is bounded by Federal Boulevard on the east, I-70 on the north, Sheridan Boulevard on the West and 38th avenue on the south.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "750 7th Avenue",
+          "text": "750 Seventh Avenue is a 615 ft (187m) tall Class-A office skyscraper in New York City.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_0189": {
+      "donor_id": "r9_random_ragognize_train_0189",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Kim Clijsters",
+          "text": "Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_0230": {
+      "donor_id": "r9_random_ragognize_train_0230",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Mingguang",
+          "text": "Mingguang (), formerly Jiashan County (), is a county-level city of Anhui Province, China.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0235": {
+      "donor_id": "r9_random_ragognize_train_0235",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Abandoned to God",
+          "text": "This album also features a then-little known Natalie Grant as a background vocalist.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_0380": {
+      "donor_id": "r9_random_ragognize_train_0380",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Boston College",
+          "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Old Chestnut Hill Historic District",
+          "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0399": {
+      "donor_id": "r9_random_ragognize_train_0399",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_0403": {
+      "donor_id": "r9_random_ragognize_train_0403",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_0466": {
+      "donor_id": "r9_random_ragognize_train_0466",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Chestnut Hill (Leesburg, Virginia)",
+          "text": "Chestnut Hill is an 18th-century Federal-style mansion north of Leesburg in Loudoun County, Virginia, United States.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Old Chestnut Hill Historic District",
+          "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_0514": {
+      "donor_id": "r9_random_ragognize_train_0514",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Eatza Pizza",
+          "text": "Eatza Pizza was a buffet-style restaurant chain founded in Arizona in 1997. As recently as 2007, it was one of the largest all-buffet pizza chains in the United States, with 112 locations in 14 states and Puerto Rico.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Tutta Bella Neapolitan Pizzeria",
+          "text": "Tutta Bella Neapolitan Pizzeria is an Italian restaurant chain with five locations in Washington State.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_0615": {
+      "donor_id": "r9_random_ragognize_train_0615",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Qitaihe",
+          "text": "Qitaihe () is a prefecture-level city in eastern Heilongjiang province, People's Republic of China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0642": {
+      "donor_id": "r9_random_ragognize_train_0642",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_0646": {
+      "donor_id": "r9_random_ragognize_train_0646",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0653": {
+      "donor_id": "r9_random_ragognize_train_0653",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Kim Clijsters",
+          "text": "Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_0949": {
+      "donor_id": "r9_random_ragognize_train_0949",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_1068": {
+      "donor_id": "r9_random_ragognize_train_1068",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Anymore (Goldfrapp song)",
+          "text": "The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Pearl Lowe",
+          "text": "Pearl Lowe (born Pearl Samantha Davis; 1970), is an English fashion and textiles designer, and former singer-songwriter.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1147": {
+      "donor_id": "r9_random_ragognize_train_1147",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Theo van Gogh (film director)",
+          "text": "Theodoor \"Theo\" van Gogh (] ; 23 July 19572 November 2004) was a Dutch film director, film producer, television director, television producer, television presenter, screenwriter, actor, critic and author.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Chris Carter (screenwriter)",
+          "text": "Christopher Carl Carter (born October 13, 1956) is an American television and film producer, director and writer.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_1155": {
+      "donor_id": "r9_random_ragognize_train_1155",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Liling",
+          "text": "Liling () is a county-level city and the 12th most populous county-level division in Hunan Province, China; it is under the administration of Zhuzhou prefecture-level City.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Hounsfield Heights/Briar Hill, Calgary",
+          "text": "Hounsfield Heights/Briar Hill is an inner suburban neighbourhood in northwest Calgary, Alberta, Canada.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_train_1160": {
+      "donor_id": "r9_random_ragognize_train_1160",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1219": {
+      "donor_id": "r9_random_ragognize_train_1219",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Cornel West",
+          "text": "Cornel Ronald West (born June 2, 1953) is an American philosopher, political activist, social critic, author, public intellectual, and prominent member of the Democratic Socialists of America.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Tragoudia Gia Tous Mines",
+          "text": "The vinyl collector's edition release of the album was in the form of a small record player.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_1333": {
+      "donor_id": "r9_random_ragognize_train_1333",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Southend University Hospital NHS Foundation Trust",
+          "text": "Southend University Hospital has 157 consultants providing various services, and serves a catchment area with a population of about 350,000.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1336": {
+      "donor_id": "r9_random_ragognize_train_1336",
+      "origin_group_id": "hotpot_5a835bb5554299123d8c2102",
+      "passages": [
+        {
+          "title": "Van Gogh (1991 film)",
+          "text": "Van Gogh is a 1991 French film written and directed by Maurice Pialat.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        },
+        {
+          "title": "Theo van Gogh (film director)",
+          "text": "Theodoor \"Theo\" van Gogh (] ; 23 July 19572 November 2004) was a Dutch film director, film producer, television director, television producer, television presenter, screenwriter, actor, critic and author.",
+          "origin_row_id": "hotpot_5a835bb5554299123d8c2102__complete"
+        }
+      ]
+    },
+    "ragognize_train_1401": {
+      "donor_id": "r9_random_ragognize_train_1401",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Boston College",
+          "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Stanford University",
+          "text": "Stanford University (Stanford; officially Leland Stanford Junior University, colloquially the Farm) is a private research university in Stanford, California, adjacent to Palo Alto and between San Jose and San Francisco.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_train_1478": {
+      "donor_id": "r9_random_ragognize_train_1478",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Kids on Fire School of Ministry",
+          "text": "Kids on Fire School of Ministry was a Pentecostal summer camp at Devils Lake, North Dakota, United States.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Abandoned to God",
+          "text": "This album also features a then-little known Natalie Grant as a background vocalist.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_1505": {
+      "donor_id": "r9_random_ragognize_train_1505",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Kids on Fire School of Ministry",
+          "text": "Kids on Fire School of Ministry was a Pentecostal summer camp at Devils Lake, North Dakota, United States.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Beyond the Gates of Splendor",
+          "text": "Beyond the Gates of Splendor (also Beyond the Gates) is a feature-length documentary film that was released in 2004.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_1542": {
+      "donor_id": "r9_random_ragognize_train_1542",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1657": {
+      "donor_id": "r9_random_ragognize_train_1657",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1661": {
+      "donor_id": "r9_random_ragognize_train_1661",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1664": {
+      "donor_id": "r9_random_ragognize_train_1664",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Fir",
+          "text": "Firs (Abies) are a genus of 48–56 species of evergreen coniferous trees in the family Pinaceae.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1773": {
+      "donor_id": "r9_random_ragognize_train_1773",
+      "origin_group_id": "hotpot_5ae377a35542994393b9e6db",
+      "passages": [
+        {
+          "title": "Jimmy Barnes",
+          "text": "James Dixon Swan {'1': \", '2': \", '3': \", '4': \"} (born 28 April 1956), better known as Jimmy Barnes, is a Scottish-Australian rock singer-songwriter.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        },
+        {
+          "title": "All Systems Go (Vinnie Vincent Invasion album)",
+          "text": "The band toured in support for the album, headlining small clubs, but broke up after the completion of the tour at the end of August 1988.",
+          "origin_row_id": "hotpot_5ae377a35542994393b9e6db__complete"
+        }
+      ]
+    },
+    "ragognize_train_2028": {
+      "donor_id": "r9_random_ragognize_train_2028",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "750 7th Avenue",
+          "text": "750 Seventh Avenue is a 615 ft (187m) tall Class-A office skyscraper in New York City.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "Berkeley, Denver",
+          "text": "The neighborhood is bounded by Federal Boulevard on the east, I-70 on the north, Sheridan Boulevard on the West and 38th avenue on the south.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_2062": {
+      "donor_id": "r9_random_ragognize_train_2062",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Border effect",
+          "text": "Economic integration (as in the EU) may be a solution to overcome these effects.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Guilin",
+          "text": "Guilin, formerly romanized as Kweilin, is a prefecture-level city in the northeast of China's Guangxi Zhuang Autonomous Region.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_2331": {
+      "donor_id": "r9_random_ragognize_train_2331",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "River of Romance",
+          "text": "It is based on the play \"Magnolia\" by Booth Tarkington.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "text": "It was based on a short story \"American Beauty\" by Wallace Irwin.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_test_0059": {
+      "donor_id": "r9_random_ragognize_test_0059",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_test_0172": {
+      "donor_id": "r9_random_ragognize_test_0172",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_test_1644": {
+      "donor_id": "r9_random_ragognize_test_1644",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "Richard Wallace (director)",
+          "text": "Richard Wallace (August 26, 1894 – November 3, 1951) was an American film director.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "text": "It was based on a short story \"American Beauty\" by Wallace Irwin.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_test_1723": {
+      "donor_id": "r9_random_ragognize_test_1723",
+      "origin_group_id": "hotpot_5a71458e5542994082a3e738",
+      "passages": [
+        {
+          "title": "Chestnut Hill (Leesburg, Virginia)",
+          "text": "Chestnut Hill is an 18th-century Federal-style mansion north of Leesburg in Loudoun County, Virginia, United States.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        },
+        {
+          "title": "Old Chestnut Hill Historic District",
+          "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+          "origin_row_id": "hotpot_5a71458e5542994082a3e738__complete"
+        }
+      ]
+    },
+    "ragognize_test_1817": {
+      "donor_id": "r9_random_ragognize_test_1817",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Kids on Fire School of Ministry",
+          "text": "Kids on Fire School of Ministry was a Pentecostal summer camp at Devils Lake, North Dakota, United States.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_test_1887": {
+      "donor_id": "r9_random_ragognize_test_1887",
+      "origin_group_id": "hotpot_5a7b5e55554299042af8f755",
+      "passages": [
+        {
+          "title": "Lorraine Hansberry",
+          "text": "Lorraine Vivian Hansberry (May 19, 1930 – January 12, 1965) was an African-American playwright and writer.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        },
+        {
+          "title": "Lorraine Hansberry Hall",
+          "text": "Since its opening, Lorraine Hansberry Hall has been used to house freshmen women.",
+          "origin_row_id": "hotpot_5a7b5e55554299042af8f755__complete"
+        }
+      ]
+    },
+    "ragognize_test_2231": {
+      "donor_id": "r9_random_ragognize_test_2231",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Riccarton, Ayrshire",
+          "text": "The parish also contains the village of Hurlford.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_test_2340": {
+      "donor_id": "r9_random_ragognize_test_2340",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Steam (film)",
+          "text": "It stars Ruby Dee, Ally Sheedy and Kate Siegel.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_0043": {
+      "donor_id": "r9_random_ragognize_train_0043",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Cornel West",
+          "text": "Cornel Ronald West (born June 2, 1953) is an American philosopher, political activist, social critic, author, public intellectual, and prominent member of the Democratic Socialists of America.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Odysseas Elytis",
+          "text": "Odysseas Elytis (Greek: Οδυσσέας Ελύτης , ] , pen name of Odysseas Alepoudellis, Greek: Οδυσσέας Αλεπουδέλλης ; 2 November 1911 – 18 March 1996) was regarded as a major exponent of romantic modernism in Greece and the world.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_0169": {
+      "donor_id": "r9_random_ragognize_train_0169",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Tragoudia Gia Tous Mines",
+          "text": "The vinyl collector's edition release of the album was in the form of a small record player.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_0253": {
+      "donor_id": "r9_random_ragognize_train_0253",
+      "origin_group_id": "hotpot_5ae4ace95542995dadf243a2",
+      "passages": [
+        {
+          "title": "Hunan University of Science and Technology",
+          "text": "Hunan University of Science and Technology was formed by the merger of two earlier universities.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        },
+        {
+          "title": "Changsha Huanghua International Airport",
+          "text": "As of 2016, it is the 13th busiest civil airport in China.",
+          "origin_row_id": "hotpot_5ae4ace95542995dadf243a2__complete"
+        }
+      ]
+    },
+    "ragognize_train_0265": {
+      "donor_id": "r9_random_ragognize_train_0265",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "7 Days in Havana",
+          "text": "Set during a week in the Cuban capital Havana, the film features one segment for each day, each segment directed by a different filmmaker.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_0284": {
+      "donor_id": "r9_random_ragognize_train_0284",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Tutta Bella Neapolitan Pizzeria",
+          "text": "Tutta Bella Neapolitan Pizzeria is an Italian restaurant chain with five locations in Washington State.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Jet's Pizza",
+          "text": "Jet's Pizza is an American pizza franchise restaurant.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_0354": {
+      "donor_id": "r9_random_ragognize_train_0354",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "American Beauty (1927 film)",
+          "text": "It was based on a short story \"American Beauty\" by Wallace Irwin.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "River of Romance",
+          "text": "It is based on the play \"Magnolia\" by Booth Tarkington.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_train_0366": {
+      "donor_id": "r9_random_ragognize_train_0366",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "MedStar Washington Hospital Center",
+          "text": "MedStar Washington Hospital Center is the largest private hospital in Washington, D.C. A member of MedStar Health, the not-for-profit Hospital Center is licensed for 926 beds.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_0368": {
+      "donor_id": "r9_random_ragognize_train_0368",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Aleksander Ford",
+          "text": "Aleksander Ford (born Mosze Lifszyc; 24 November 1908 in Kiev, Russian Empire – 4 April 1980 in Naples, Florida, United States) was a Polish Jewish film director; and head of the Polish People's Army Film Crew in the Soviet Union during World War II.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_0498": {
+      "donor_id": "r9_random_ragognize_train_0498",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Wallace Park",
+          "text": "It is a pleasant park with tree-lined walkways.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_0719": {
+      "donor_id": "r9_random_ragognize_train_0719",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "San Diego International Airport",
+          "text": "It is owned and operated by the San Diego County Regional Airport Authority.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_0891": {
+      "donor_id": "r9_random_ragognize_train_0891",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "101 Park Avenue",
+          "text": "101 Park Avenue is a 629 ft tall skyscraper in New York City, New York.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "750 7th Avenue",
+          "text": "750 Seventh Avenue is a 615 ft (187m) tall Class-A office skyscraper in New York City.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_0928": {
+      "donor_id": "r9_random_ragognize_train_0928",
+      "origin_group_id": "hotpot_5a769ac95542993569682c4f",
+      "passages": [
+        {
+          "title": "Race Matters",
+          "text": "The book analyzes moral authority and racial debates concerning skin color in the United States.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        },
+        {
+          "title": "Tragoudia Gia Tous Mines",
+          "text": "The vinyl collector's edition release of the album was in the form of a small record player.",
+          "origin_row_id": "hotpot_5a769ac95542993569682c4f__complete"
+        }
+      ]
+    },
+    "ragognize_train_0951": {
+      "donor_id": "r9_random_ragognize_train_0951",
+      "origin_group_id": "hotpot_5a89eca455429946c8d6ea11",
+      "passages": [
+        {
+          "title": "Jesus Camp",
+          "text": "Jesus Camp is a 2006 American documentary film directed by Rachel Grady and Heidi Ewing about a Charismatic Christian summer camp, where children spend their summers being taught that they have \"prophetic gifts\" and can \"take back America for Christ\".",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        },
+        {
+          "title": "Abandoned to God",
+          "text": "This album also features a then-little known Natalie Grant as a background vocalist.",
+          "origin_row_id": "hotpot_5a89eca455429946c8d6ea11__complete"
+        }
+      ]
+    },
+    "ragognize_train_0974": {
+      "donor_id": "r9_random_ragognize_train_0974",
+      "origin_group_id": "hotpot_5a7a02235542996c55b2dcd3",
+      "passages": [
+        {
+          "title": "Pablo Trapero",
+          "text": "Pablo Trapero (Born 4 October 1971) is an Argentine film producer, editor and director.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        },
+        {
+          "title": "Lion's Den (2008 film)",
+          "text": "Addressing motherhood within the prison system, it stars Martina Gusmán, Elli Medeiros and Rodrigo Santoro.",
+          "origin_row_id": "hotpot_5a7a02235542996c55b2dcd3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1035": {
+      "donor_id": "r9_random_ragognize_train_1035",
+      "origin_group_id": "hotpot_5a8b63755542997f31a41cfe",
+      "passages": [
+        {
+          "title": "South Phoenix",
+          "text": "The area is sometimes simply referred to as \"the Southside\" by its residents.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        },
+        {
+          "title": "750 7th Avenue",
+          "text": "750 Seventh Avenue is a 615 ft (187m) tall Class-A office skyscraper in New York City.",
+          "origin_row_id": "hotpot_5a8b63755542997f31a41cfe__complete"
+        }
+      ]
+    },
+    "ragognize_train_1042": {
+      "donor_id": "r9_random_ragognize_train_1042",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Summer Lovers",
+          "text": "The original music score is composed by Basil Poledouris.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Kyle Schickner",
+          "text": "Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_1205": {
+      "donor_id": "r9_random_ragognize_train_1205",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Huperzia",
+          "text": "Huperzia is a genus of lycophyte plants, sometimes known as the firmosses or fir clubmosses.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1359": {
+      "donor_id": "r9_random_ragognize_train_1359",
+      "origin_group_id": "hotpot_5adc8fd45542994ed6169b8e",
+      "passages": [
+        {
+          "title": "McCarran International Airport",
+          "text": "The airport is owned by Clark County and operated by the Clark County Department of Aviation.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        },
+        {
+          "title": "Champion Air",
+          "text": "It operated general charter services to sports teams, vacation wholesalers and government agencies.",
+          "origin_row_id": "hotpot_5adc8fd45542994ed6169b8e__complete"
+        }
+      ]
+    },
+    "ragognize_train_1415": {
+      "donor_id": "r9_random_ragognize_train_1415",
+      "origin_group_id": "hotpot_5ab51c455542990594ba9d0a",
+      "passages": [
+        {
+          "title": "Chelone (plant)",
+          "text": "Chelone is a genus of four species of perennial herbaceous plants native to eastern North America.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        },
+        {
+          "title": "Peucephyllum",
+          "text": "It is a leafy evergreen shrub with glandular, resinous foliage.",
+          "origin_row_id": "hotpot_5ab51c455542990594ba9d0a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1472": {
+      "donor_id": "r9_random_ragognize_train_1472",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    },
+    "ragognize_train_1543": {
+      "donor_id": "r9_random_ragognize_train_1543",
+      "origin_group_id": "hotpot_5a8e171b554299068b959e5a",
+      "passages": [
+        {
+          "title": "Pearl Lowe",
+          "text": "Pearl Lowe (born Pearl Samantha Davis; 1970), is an English fashion and textiles designer, and former singer-songwriter.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        },
+        {
+          "title": "Anymore (Goldfrapp song)",
+          "text": "The song incorporates several genres, including dance-pop, electronica and synth-pop, and takes influence from disco and glitch music.",
+          "origin_row_id": "hotpot_5a8e171b554299068b959e5a__complete"
+        }
+      ]
+    },
+    "ragognize_train_1711": {
+      "donor_id": "r9_random_ragognize_train_1711",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Kim Clijsters",
+          "text": "Kim Antonie Lode Clijsters (] ; born 8 June 1983) is a Belgian former professional tennis player.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_1777": {
+      "donor_id": "r9_random_ragognize_train_1777",
+      "origin_group_id": "hotpot_5ae0fd14554299422ee995a3",
+      "passages": [
+        {
+          "title": "Terence Davies",
+          "text": "Terence Davies (born 10 November 1945) is an English screenwriter, film director, novelist and actor.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        },
+        {
+          "title": "Richard Wallace (director)",
+          "text": "Richard Wallace (August 26, 1894 – November 3, 1951) was an American film director.",
+          "origin_row_id": "hotpot_5ae0fd14554299422ee995a3__complete"
+        }
+      ]
+    },
+    "ragognize_train_1821": {
+      "donor_id": "r9_random_ragognize_train_1821",
+      "origin_group_id": "hotpot_5ac4f46555429924173fb510",
+      "passages": [
+        {
+          "title": "Ankang",
+          "text": "Ankang () is a prefecture-level city in southern Shaanxi Province in the People's Republic of China.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        },
+        {
+          "title": "Border effect",
+          "text": "Economic integration (as in the EU) may be a solution to overcome these effects.",
+          "origin_row_id": "hotpot_5ac4f46555429924173fb510__complete"
+        }
+      ]
+    },
+    "ragognize_train_1869": {
+      "donor_id": "r9_random_ragognize_train_1869",
+      "origin_group_id": "hotpot_5ab5e4d0554299494045f0a7",
+      "passages": [
+        {
+          "title": "Jinchang",
+          "text": "Jinchang () is a prefecture-level city in the centre of Gansu province, People's Republic of China, bordering Inner Mongolia to the north.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        },
+        {
+          "title": "Liling",
+          "text": "Liling () is a county-level city and the 12th most populous county-level division in Hunan Province, China; it is under the administration of Zhuzhou prefecture-level City.",
+          "origin_row_id": "hotpot_5ab5e4d0554299494045f0a7__complete"
+        }
+      ]
+    },
+    "ragognize_train_1871": {
+      "donor_id": "r9_random_ragognize_train_1871",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Your Pie",
+          "text": "Your Pie is an American fast casual pizza concept, that was started in Athens, Georgia in 2008 by Drew French, and operates as a restaurant franchise with 58 locations across the United States.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Jet's Pizza",
+          "text": "Jet's Pizza is an American pizza franchise restaurant.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_1879": {
+      "donor_id": "r9_random_ragognize_train_1879",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "Mary Pierce",
+          "text": "Mary Pierce (born 15 January 1975) is a French retired tennis professional who played on the Women's Tennis Association (WTA) tour.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_2144": {
+      "donor_id": "r9_random_ragognize_train_2144",
+      "origin_group_id": "hotpot_5ab3fe4055429976abd1bd1a",
+      "passages": [
+        {
+          "title": "Riccarton, Ayrshire",
+          "text": "The parish also contains the village of Hurlford.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        },
+        {
+          "title": "Xiaogan",
+          "text": "Xiaogan () is a prefecture-level city in east-central Hubei province, People's Republic of China, some 60 km northwest of the provincial capital of Wuhan.",
+          "origin_row_id": "hotpot_5ab3fe4055429976abd1bd1a__complete"
+        }
+      ]
+    },
+    "ragognize_train_2167": {
+      "donor_id": "r9_random_ragognize_train_2167",
+      "origin_group_id": "hotpot_5a77bd595542995d83181291",
+      "passages": [
+        {
+          "title": "Clijsters–Henin rivalry",
+          "text": "Justine Henin and Kim Clijsters are Belgian professional tennis players who engaged in a long-standing rivalry which spanned twenty-five meetings over a twelve-year period, with eight taking place in a Grand Slam tournament.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        },
+        {
+          "title": "2003 WTA Tour Championships",
+          "text": "The tournament was held between November 4 and November 10, 2003.",
+          "origin_row_id": "hotpot_5a77bd595542995d83181291__complete"
+        }
+      ]
+    },
+    "ragognize_train_2232": {
+      "donor_id": "r9_random_ragognize_train_2232",
+      "origin_group_id": "hotpot_5adf9e7e5542992d7e9f93be",
+      "passages": [
+        {
+          "title": "Eatza Pizza",
+          "text": "Eatza Pizza was a buffet-style restaurant chain founded in Arizona in 1997. As recently as 2007, it was one of the largest all-buffet pizza chains in the United States, with 112 locations in 14 states and Puerto Rico.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        },
+        {
+          "title": "Jet's Pizza",
+          "text": "Jet's Pizza is an American pizza franchise restaurant.",
+          "origin_row_id": "hotpot_5adf9e7e5542992d7e9f93be__complete"
+        }
+      ]
+    },
+    "ragognize_train_2268": {
+      "donor_id": "r9_random_ragognize_train_2268",
+      "origin_group_id": "hotpot_5a8ce61555429941ae14df36",
+      "passages": [
+        {
+          "title": "Randal Kleiser",
+          "text": "John Randal Kleiser (born July 20, 1946) is an American film director and producer, best known for directing the 1978 musical romantic comedy film \"Grease\".",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        },
+        {
+          "title": "Kyle Schickner",
+          "text": "Kyle Schickner is an American film producer, writer, director, actor and a bisexual civil rights activist.",
+          "origin_row_id": "hotpot_5a8ce61555429941ae14df36__complete"
+        }
+      ]
+    },
+    "ragognize_train_2314": {
+      "donor_id": "r9_random_ragognize_train_2314",
+      "origin_group_id": "hotpot_5a74f2ff5542993748c89748",
+      "passages": [
+        {
+          "title": "Medical Faculty Associates",
+          "text": "The George Washington University Medical Faculty Associates is a non-profit 501(c)3 physician group practice affiliated with the George Washington University.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        },
+        {
+          "title": "George Washington University Hospital",
+          "text": "The George Washington University Hospital is located in Washington, D.C. in the United States.",
+          "origin_row_id": "hotpot_5a74f2ff5542993748c89748__complete"
+        }
+      ]
+    }
+  }
+}

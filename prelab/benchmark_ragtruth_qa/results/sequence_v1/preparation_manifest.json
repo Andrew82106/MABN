@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "source_snapshot_sha256": "db1342f6cc67a5e47bb34647ecb87790f10de75c3f0f94454f396283c4a43a98",
+  "files_sha256": {
+    "raw_token_features.npy": "f94af04fc112ea105aca5b33596516f166cbf4b814f4042f4f54645ac8b5aa78",
+    "standardized_token_features.npy": "bcc40a174eb542327fb07972ec25416b84fa1a8537f38f579c427a64cd64ba28",
+    "fit_token_weights.npz": "5d23d8421a5f8cca488a836feb8970fd7f4d3d33e11e89a61fc0ed4a3c73be02",
+    "token_index.json": "e15126cd8e8340fb811da2d451185eeafaa4c523cbdc99982ed9c4b31860067f",
+    "scaler.pkl": "81c0e82f753ad4c00083867d53f26428c991f53de7e09dd1d23ada0c28718fd7",
+    "epoch_answer_order.npy": "aca11001b418539cc76789bc799e18ec676f4d551f40fc770ac8cf2ebca144bf"
+  },
+  "pca_reused_sha256": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+  "input_shape": [
+    213159,
+    193
+  ],
+  "same_design_and_scaler_for_both_models": true,
+  "loss_mass": 139518.0,
+  "fit_lexical_tokens": 139518,
+  "gpu_used": false
+}

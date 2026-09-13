@@ -1,0 +1,96 @@
+{
+  "status": "passed_fit_OOF_gate_failure_recomputed",
+  "upstream_independent_audit_passed": true,
+  "K1_fit_OOF": {
+    "windows": {
+      "n": 168123,
+      "positive": 21477,
+      "tp": 12360,
+      "fp": 21186,
+      "fn": 9117,
+      "tn": 125460,
+      "precision": 0.36844929350742267,
+      "recall": 0.5754993714205895,
+      "f1": 0.4492666703015103,
+      "auroc": 0.7872662301789213,
+      "average_precision": 0.39551492425500495
+    },
+    "answers": {
+      "n": 634,
+      "positive": 328,
+      "tp": 276,
+      "fp": 157,
+      "fn": 52,
+      "tn": 149,
+      "precision": 0.6374133949191686,
+      "recall": 0.8414634146341463,
+      "f1": 0.7253613666228647,
+      "auroc": 0.7395783516658696,
+      "average_precision": 0.7177981842143605
+    }
+  },
+  "K4_fit_OOF": {
+    "windows": {
+      "n": 168123,
+      "positive": 21477,
+      "tp": 11019,
+      "fp": 14018,
+      "fn": 10458,
+      "tn": 132628,
+      "precision": 0.4401086392139633,
+      "recall": 0.5130604833077246,
+      "f1": 0.47379283656533516,
+      "auroc": 0.7895607402478269,
+      "average_precision": 0.40374795817726417
+    },
+    "answers": {
+      "n": 634,
+      "positive": 328,
+      "tp": 266,
+      "fp": 131,
+      "fn": 62,
+      "tn": 175,
+      "precision": 0.6700251889168766,
+      "recall": 0.8109756097560976,
+      "f1": 0.7337931034482759,
+      "auroc": 0.7469512195121952,
+      "average_precision": 0.7373627494462737
+    }
+  },
+  "relation_control_fit_OOF": {
+    "windows": {
+      "n": 168123,
+      "positive": 21477,
+      "tp": 13058,
+      "fp": 19607,
+      "fn": 8419,
+      "tn": 127039,
+      "precision": 0.39975508954538497,
+      "recall": 0.6079992550169949,
+      "f1": 0.4823611983303166,
+      "auroc": 0.8240490581679959,
+      "average_precision": 0.38627964409181087
+    },
+    "answers": {
+      "n": 634,
+      "positive": 328,
+      "tp": 303,
+      "fp": 186,
+      "fn": 25,
+      "tn": 120,
+      "precision": 0.6196319018404908,
+      "recall": 0.9237804878048781,
+      "f1": 0.7417380660954712,
+      "auroc": 0.7338195440777937,
+      "average_precision": 0.7015704587945985
+    }
+  },
+  "gate_recomputed": false,
+  "calibration_arrays_absent": true,
+  "calibration_labels_accessed": false,
+  "full_fit_model_absent": true,
+  "frozen_hashes_match": true,
+  "formal_baselines_modified": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

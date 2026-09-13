@@ -1,0 +1,318 @@
+{
+  "status": "fit_type_coverage_passed",
+  "fit_examples": 34919,
+  "binary_counts": {
+    "safe": 31445,
+    "risky": 3474
+  },
+  "exclusive_code_counts": {
+    "safe": 31445,
+    "baseless_only": 3052,
+    "conflict_only": 405,
+    "mixed_baseless_conflict": 17
+  },
+  "positive_type_membership": {
+    "Evident Baseless Info": 2153,
+    "Evident Conflict": 380,
+    "Subtle Baseless Info": 920,
+    "Subtle Conflict": 42
+  },
+  "raw_character_overlap_combinations_all_binary_labels": {
+    "Evident Baseless Info": 2141,
+    "Evident Baseless Info + Evident Conflict": 10,
+    "Evident Baseless Info + Subtle Baseless Info": 4,
+    "Evident Baseless Info + Subtle Conflict": 1,
+    "Evident Conflict": 364,
+    "Evident Conflict + Subtle Baseless Info": 6,
+    "Subtle Baseless Info": 912,
+    "Subtle Conflict": 41,
+    "none": 31440
+  },
+  "binary_safe_with_character_span_overlap_but_no_risky_lexical_BPE": 5,
+  "cross_family_mixed_positive": 17,
+  "fold_coverage": [
+    {
+      "fold": 0,
+      "held_examples": 6983,
+      "train_examples": 27936,
+      "held_code_counts": {
+        "safe": 6280,
+        "baseless_only": 636,
+        "conflict_only": 64,
+        "mixed_baseless_conflict": 3
+      },
+      "train_code_counts": {
+        "safe": 25165,
+        "baseless_only": 2416,
+        "conflict_only": 341,
+        "mixed_baseless_conflict": 14
+      },
+      "held_positive_type_membership": {
+        "Evident Baseless Info": 419,
+        "Evident Conflict": 62,
+        "Subtle Baseless Info": 221,
+        "Subtle Conflict": 5
+      },
+      "train_positive_type_membership": {
+        "Evident Baseless Info": 1734,
+        "Evident Conflict": 318,
+        "Subtle Baseless Info": 699,
+        "Subtle Conflict": 37
+      },
+      "held_groups": 122,
+      "train_groups": 493,
+      "group_overlap": 0
+    },
+    {
+      "fold": 1,
+      "held_examples": 6982,
+      "train_examples": 27937,
+      "held_code_counts": {
+        "safe": 6324,
+        "baseless_only": 603,
+        "conflict_only": 53,
+        "mixed_baseless_conflict": 2
+      },
+      "train_code_counts": {
+        "safe": 25121,
+        "baseless_only": 2449,
+        "conflict_only": 352,
+        "mixed_baseless_conflict": 15
+      },
+      "held_positive_type_membership": {
+        "Evident Baseless Info": 432,
+        "Evident Conflict": 52,
+        "Subtle Baseless Info": 175,
+        "Subtle Conflict": 3
+      },
+      "train_positive_type_membership": {
+        "Evident Baseless Info": 1721,
+        "Evident Conflict": 328,
+        "Subtle Baseless Info": 745,
+        "Subtle Conflict": 39
+      },
+      "held_groups": 123,
+      "train_groups": 492,
+      "group_overlap": 0
+    },
+    {
+      "fold": 2,
+      "held_examples": 6982,
+      "train_examples": 27937,
+      "held_code_counts": {
+        "safe": 6303,
+        "baseless_only": 592,
+        "conflict_only": 80,
+        "mixed_baseless_conflict": 7
+      },
+      "train_code_counts": {
+        "safe": 25142,
+        "baseless_only": 2460,
+        "conflict_only": 325,
+        "mixed_baseless_conflict": 10
+      },
+      "held_positive_type_membership": {
+        "Evident Baseless Info": 466,
+        "Evident Conflict": 82,
+        "Subtle Baseless Info": 134,
+        "Subtle Conflict": 5
+      },
+      "train_positive_type_membership": {
+        "Evident Baseless Info": 1687,
+        "Evident Conflict": 298,
+        "Subtle Baseless Info": 786,
+        "Subtle Conflict": 37
+      },
+      "held_groups": 123,
+      "train_groups": 492,
+      "group_overlap": 0
+    },
+    {
+      "fold": 3,
+      "held_examples": 6991,
+      "train_examples": 27928,
+      "held_code_counts": {
+        "safe": 6278,
+        "baseless_only": 589,
+        "conflict_only": 122,
+        "mixed_baseless_conflict": 2
+      },
+      "train_code_counts": {
+        "safe": 25167,
+        "baseless_only": 2463,
+        "conflict_only": 283,
+        "mixed_baseless_conflict": 15
+      },
+      "held_positive_type_membership": {
+        "Evident Baseless Info": 397,
+        "Evident Conflict": 103,
+        "Subtle Baseless Info": 194,
+        "Subtle Conflict": 21
+      },
+      "train_positive_type_membership": {
+        "Evident Baseless Info": 1756,
+        "Evident Conflict": 277,
+        "Subtle Baseless Info": 726,
+        "Subtle Conflict": 21
+      },
+      "held_groups": 124,
+      "train_groups": 491,
+      "group_overlap": 0
+    },
+    {
+      "fold": 4,
+      "held_examples": 6981,
+      "train_examples": 27938,
+      "held_code_counts": {
+        "safe": 6260,
+        "baseless_only": 632,
+        "conflict_only": 86,
+        "mixed_baseless_conflict": 3
+      },
+      "train_code_counts": {
+        "safe": 25185,
+        "baseless_only": 2420,
+        "conflict_only": 319,
+        "mixed_baseless_conflict": 14
+      },
+      "held_positive_type_membership": {
+        "Evident Baseless Info": 439,
+        "Evident Conflict": 81,
+        "Subtle Baseless Info": 196,
+        "Subtle Conflict": 8
+      },
+      "train_positive_type_membership": {
+        "Evident Baseless Info": 1714,
+        "Evident Conflict": 299,
+        "Subtle Baseless Info": 724,
+        "Subtle Conflict": 34
+      },
+      "held_groups": 123,
+      "train_groups": 492,
+      "group_overlap": 0
+    }
+  ],
+  "class_weight_audit": [
+    {
+      "model": "fold_0",
+      "training_examples": 27936,
+      "soft_target_weighted_mass_before": {
+        "entailment": 17486.74215758592,
+        "neutral": 8676.336855590343,
+        "contradiction": 1772.9208709001541
+      },
+      "type_class_weights": {
+        "entailment": 0.5325177311897278,
+        "neutral": 1.0732640027999878,
+        "contradiction": 5.252349376678467
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 9311.999961358806,
+        "neutral": 9311.999961358806,
+        "contradiction": 9311.999961358806
+      }
+    },
+    {
+      "model": "fold_1",
+      "training_examples": 27937,
+      "soft_target_weighted_mass_before": {
+        "entailment": 17383.63887614757,
+        "neutral": 8690.43637496233,
+        "contradiction": 1862.9246799945831
+      },
+      "type_class_weights": {
+        "entailment": 0.5356952548027039,
+        "neutral": 1.0715610980987549,
+        "contradiction": 4.998770713806152
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 9312.33331036816,
+        "neutral": 9312.33331036816,
+        "contradiction": 9312.33331036816
+      }
+    },
+    {
+      "model": "fold_2",
+      "training_examples": 27937,
+      "soft_target_weighted_mass_before": {
+        "entailment": 17447.08460177481,
+        "neutral": 8760.185287892818,
+        "contradiction": 1729.7300598621368
+      },
+      "type_class_weights": {
+        "entailment": 0.5337472558021545,
+        "neutral": 1.0630292892456055,
+        "contradiction": 5.383691787719727
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 9312.333316509923,
+        "neutral": 9312.333316509923,
+        "contradiction": 9312.333316509923
+      }
+    },
+    {
+      "model": "fold_3",
+      "training_examples": 27928,
+      "soft_target_weighted_mass_before": {
+        "entailment": 17500.73515728116,
+        "neutral": 8749.28891813755,
+        "contradiction": 1677.975873351097
+      },
+      "type_class_weights": {
+        "entailment": 0.5319395661354065,
+        "neutral": 1.0640102624893188,
+        "contradiction": 5.547954082489014
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 9309.333316256603,
+        "neutral": 9309.333316256603,
+        "contradiction": 9309.333316256603
+      }
+    },
+    {
+      "model": "fold_4",
+      "training_examples": 27938,
+      "soft_target_weighted_mass_before": {
+        "entailment": 17391.738997593522,
+        "neutral": 8882.288358092308,
+        "contradiction": 1663.9726209640503
+      },
+      "type_class_weights": {
+        "entailment": 0.5354649424552917,
+        "neutral": 1.0484535694122314,
+        "contradiction": 5.596646785736084
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 9312.666658883292,
+        "neutral": 9312.666658883294,
+        "contradiction": 9312.666658883294
+      }
+    },
+    {
+      "model": "full_fit",
+      "training_examples": 34919,
+      "soft_target_weighted_mass_before": {
+        "entailment": 21803.0930467695,
+        "neutral": 10938.902771949768,
+        "contradiction": 2177.004097223282
+      },
+      "type_class_weights": {
+        "entailment": 0.5338538885116577,
+        "neutral": 1.0640616416931152,
+        "contradiction": 5.346644401550293
+      },
+      "soft_target_weighted_mass_after": {
+        "entailment": 11639.666638647517,
+        "neutral": 11639.666638647517,
+        "contradiction": 11639.666638647517
+      }
+    }
+  ],
+  "target_rows_sum_to_one": true,
+  "full_fit_binary_weights_exactly_match_v4": true,
+  "calibration_rows_read": 0,
+  "calibration_label_arrays_accessed": false,
+  "official_test_opened": false,
+  "GPU_used": false,
+  "baselines_modified": false
+}

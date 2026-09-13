@@ -1,0 +1,30 @@
+{
+  "version": "qa-claim-pooling-v1",
+  "methods": {
+    "token_tcn": "sequence_v1",
+    "full_lb_pca64_tcn": "sequence_full_v2",
+    "full_lb_harp64_tcn": "sequence_full_v2",
+    "minicheck_hidden64_risk_tcn_w32": "semantic_sequence_v1"
+  },
+  "alpha": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "hypothesis": "Human spans sometimes mark an entire claim. Test controlled within-claim propagation without changing raw4BPE labels or answer scores.",
+  "groups": "Existing automatic claims, no gold; each lexical raw token assigned to claim with greatest alphanumeric character overlap, ties earlier claim. Every lexical token covered exactly once; no cross-answer group.",
+  "formula": "p_new(token)=p(token)+alpha*(max_lexical_token_p_in_its_claim-p(token)); nonlexical tokens untouched",
+  "invariant": "Every answer maximum is exactly unchanged for all five alphas. Alpha0 is exact identity for all windows. Original answer threshold retained.",
+  "selection": "Window threshold optimized only on calibration. Same q.selection_key then smaller alpha; no fitting, five candidates per input model.",
+  "scope": "Same fit634/calibration159 only, repeated calibration selection optimistic, official test unopened",
+  "offline": true,
+  "script_sha256": "82b328de5829c58c98b30f8a592834ecbf1c2ff961fdc2e7c8f5db49ce45cc99",
+  "plans_sha256": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+  "upstream_complete_sha256": {
+    "semantic_sequence_v1": "4a49c36e295df26c2d40a496c6d18779b3c326e2e3e2955fbf0852b3d0f163d4",
+    "sequence_full_v2": "5d8d669869bb6188e3cd3829b36c59322f72507b3c877875259ddbec15ee2fd3",
+    "sequence_v1": "ac075e8a7a0c08c9634da3ae3853b306aa170344b3fce61319e50e1247d47652"
+  }
+}

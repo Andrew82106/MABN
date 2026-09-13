@@ -1,0 +1,43 @@
+{
+  "version": "r29-full768-semantic-scene-adaptation-v1",
+  "seed": 20261008,
+  "scope": "Same repeatedly developed original R16 train602/301questions/278groups; human_gold=false. Not a fresh test or replacement for public human-gold QA.",
+  "encoder": "Identical frozen auxiliary->QA2 model and existing R28 cache. No new encoder, data, GPU pass or checkpoint selection.",
+  "input": "Exact R28 designs.npz: mean hidden768 over each unchanged four-raw-BPE candidate window including punctuation/whitespace, plus maximum semantic logit over its original lexical tokens. No PCA. Raw769 float32.",
+  "control": "Reuse completed R28 PCA32+z models, fold scores, choices and OOF metrics under fixed hashes; never refit controls. Only representation changes from33 to769.",
+  "probe": {
+    "width": 769,
+    "C": 0.01,
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "seed": 20261008,
+    "LR_fits": 5,
+    "PCA_fits": 0,
+    "loss_mass": 3854,
+    "scaler": "Unchanged fit-only original-base-weighted StandardScaler; transformfloat32.",
+    "weights": "Unchanged R20/R13 group/condition/answer/window weights and fit-only class factors, group reequalization, total3854. Assert identical to corresponding R28 frozen fit.",
+    "nonconvergence": "Preserve failure and stop; no budget/C/solver changes."
+  },
+  "folds": "Exact original five event-group fit/calibration/evaluation sets. Only eligible fit windows fit scaler/LR. All five models and calibration choices committed before outer metrics.",
+  "baselines": [
+    "lookback_tuned",
+    "local_slots_fusion_smooth_global"
+  ],
+  "fusion_alpha": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "fusion": "Identical R28 sigmoid(logit(prior)+alpha*logit(same semantic probe)), clip1e-12 and alpha0 exact identity. Use each corresponding R26 fold_f_scores.npz, never concatenated OOF training scores.",
+  "selection": "One alpha per baseline and fold shared by both units. Calibration min(windowF1,answerF1), windowF1, windowPrecision, smalleralpha; unchanged separate thresholds and all60 candidates retained.",
+  "eligibility": "Only original eligible asserted windows train/score localization. Unknown/refusal windows are not set0. Answer max uses all candidate windows;117 reviewed safe refusals remain original negative answers;4 unresolved answers excluded.",
+  "limits": "Higher dimensionality also changes the number of fitted coefficients and the L2 geometry; sameC does not identify PCA information loss alone. No causal or universal learnability claim from this one comparison.",
+  "historical_limit": "Old R16 validation/test were exposed in earlier rounds. This run does not read them. Public QA official_test150 remains sealed.",
+  "GPU_used": false,
+  "human_gold": false,
+  "original_validation_test_opened": false,
+  "public_QA_test_opened": false
+}

@@ -1,0 +1,631 @@
+{
+  "status": "repaired_pairs_pending_root_final_source_freeze",
+  "groups": 200,
+  "rows": 400,
+  "seed": 20260911,
+  "counts": {
+    "test:time": 8,
+    "train:time": 24,
+    "validation:time": 8,
+    "train:quantity": 24,
+    "test:quantity": 8,
+    "validation:quantity": 8,
+    "train:location": 24,
+    "test:location": 8,
+    "validation:location": 8,
+    "validation:relation": 8,
+    "train:relation": 24,
+    "test:relation": 8,
+    "train:action": 24,
+    "validation:action": 8,
+    "test:action": 8
+  },
+  "proposal_file_sha256": "92a11842e52e2d785d24634a1378254faebf31ecadeba80dc3dee66cf33b8ff1",
+  "original_inputs_sha256": "1c8da44b9cd9d42c95482b714908c3e4871c46422dd80a89fbb5b803410d327c",
+  "original_packets_sha256": "6962523fd9bc31d848d6861126ec3051248453eb7a7d1c91fdca9991a4a52544",
+  "changed_groups": 48,
+  "unchanged_groups": 152,
+  "unchanged_rows_exactly_preserved": 304,
+  "unique_target_sources": 200,
+  "unique_donor_sources": 200,
+  "unique_source_fulltext_hashes": 400,
+  "literal_cross_group_or_old_target_conflicts": 0,
+  "length_gap_max": 0.19811320754716982,
+  "length_gap_over_20pct": 0,
+  "source_review_files": {
+    "Donor block 000-049": "e9ddcc87105b11befa7689f6dda94b495fab1a0c61939ac5a79b35543e97db20",
+    "Donor block 050-099": "1784ed28d1807ec33b5603dcee3b2df981270024b6d5d85eabdbab4b2714c407",
+    "Donor block 100-149": "b5ad30d0f92dab0db51a8077491b9dcc2eb1019a6b2688a192e12eb67f662e62",
+    "Donor block 150-199": "e9bb74ebf1a2dad8c3570352a1edea03d2768b8d11133ba69822898cdc9fb074"
+  },
+  "changes": [
+    {
+      "original_packet_index": 1,
+      "old_question_id": "ragognize_test_0452",
+      "new_question_id": "ragognize_test_0452",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_2335",
+      "new_donor_id": "ragognize_train_2335",
+      "reasons": [
+        "当前 donor 混入此前已发现的 Monterey, Mexico 地名错误风险；不应把疑似错误真实世界事实保留作干扰。建议同文改用 Seiya Suzuki 的 Arakawa, Tokyo 出身句。"
+      ]
+    },
+    {
+      "original_packet_index": 4,
+      "old_question_id": "ragognize_test_0681",
+      "new_question_id": "ragognize_test_0681",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_2172",
+      "new_donor_id": "ragognize_train_0274",
+      "reasons": [
+        "Róa donor 与 row6 的 Shh donor 是逐字相同的 Eurovision 2025 Basel 赛程句；另与 row21 的 Yuval/Survivor 同届赛事重叠，违反独立组/同事件隔离。"
+      ]
+    },
+    {
+      "original_packet_index": 6,
+      "old_question_id": "ragognize_test_0959",
+      "new_question_id": "ragognize_test_0959",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_0789",
+      "new_donor_id": "ragognize_train_0206",
+      "reasons": [
+        "当前 donor 与 row4 完全相同的 Eurovision 2025 赛程，且和 row21/114/124 形成同届赛事链。应换独立来源，不只换同比赛的另一句。"
+      ]
+    },
+    {
+      "original_packet_index": 16,
+      "old_question_id": "ragognize_test_1974",
+      "new_question_id": "ragognize_test_1974",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_1948",
+      "new_donor_id": "ragognize_train_0647",
+      "reasons": [
+        "当前只是南非政府层级制度说明，国家名为主题范围；没有另一个实体的城市/出生地点事实，属于 location 触发词误配，建议换明确城市来源。"
+      ]
+    },
+    {
+      "original_packet_index": 21,
+      "old_question_id": "ragognize_train_0088",
+      "new_question_id": "ragognize_train_0088",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0242",
+      "new_donor_id": "ragognize_train_0291",
+      "reasons": [
+        "Survivor/Parg 与目标 Yuval Raphael 共同指向 Eurovision 2025，还连接 row4/6/114/124 的同届赛事；不能作为独立其他事件干扰，改独立记者城市资料。"
+      ]
+    },
+    {
+      "original_packet_index": 23,
+      "old_question_id": "ragognize_train_0445",
+      "new_question_id": "ragognize_train_0445",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_2058",
+      "new_donor_id": "ragognize_train_2058",
+      "reasons": [
+        "当前句只有 American-born/Asian background 等身份描述和对候选人安排的评论，没有可用城市地点；同文有 Tu Le 出生于 south-west Sydney 的明确完整句可替换。"
+      ]
+    },
+    {
+      "original_packet_index": 27,
+      "old_question_id": "ragognize_train_0855",
+      "new_question_id": "ragognize_train_0855",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0178",
+      "new_donor_id": "ragognize_train_1195",
+      "reasons": [
+        "当前 donor 只解释 White House Faith Office 宗旨，没有真实城镇地点属性；不能因为 White House/American 字样就当作成长城镇干扰。换未占用船俱乐部的明确 Sonning 位置句。"
+      ]
+    },
+    {
+      "original_packet_index": 34,
+      "old_question_id": "ragognize_train_1686",
+      "new_question_id": "ragognize_train_1686",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_2216",
+      "new_donor_id": "ragognize_train_2216",
+      "reasons": [
+        "in Shoojit Sircar’s film 指参演导演作品，既不是出生地也不是地理位置。可直接用同文 Ahilya 出生 Mumbai、成长 Auroville 的两句。"
+      ]
+    },
+    {
+      "original_packet_index": 35,
+      "old_question_id": "ragognize_train_1892",
+      "new_question_id": "ragognize_train_1892",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_0727",
+      "new_donor_id": "ragognize_test_0727",
+      "reasons": [
+        "当前只给 Berlin International Film Festival 机构/节展名称与 German theaters，不能可靠当作明确城市地点关系；同文有 Berlin/Warsaw 的真实拍摄地点，可替换并避开剧情。"
+      ]
+    },
+    {
+      "original_packet_index": 39,
+      "old_question_id": "ragognize_train_2328",
+      "new_question_id": "ragognize_train_2328",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1854",
+      "new_donor_id": "ragognize_test_1854",
+      "reasons": [
+        "当前是电影剧情里虚构家庭在 Provence 度假，不能作另一个真实主体的地点事实；同文真实制作段明确法国 Avignon/Provence-Alpes-Côte d’Azur 拍摄，可替换。"
+      ]
+    },
+    {
+      "original_packet_index": 42,
+      "old_question_id": "ragognize_train_0302",
+      "new_question_id": "ragognize_train_0302",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_0049",
+      "new_donor_id": "ragognize_train_0049",
+      "reasons": [
+        "当前明确表示游戏发行日尚未确定，没有可用实际时间值，不能充当带时间干扰；同文有 Reburn 更名/宣布游戏的 February 2025 可替换。"
+      ]
+    },
+    {
+      "original_packet_index": 50,
+      "old_question_id": "ragognize_train_0777",
+      "new_question_id": "ragognize_train_0777",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0793",
+      "new_donor_id": "ragognize_test_0176",
+      "reasons": [
+        "Same Senedd final-report event directly supplies the target answer"
+      ]
+    },
+    {
+      "original_packet_index": 52,
+      "old_question_id": "ragognize_train_0867",
+      "new_question_id": "ragognize_train_0867",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0038",
+      "new_donor_id": "ragognize_test_0457",
+      "reasons": [
+        "Known internally inconsistent embassy opening interval"
+      ]
+    },
+    {
+      "original_packet_index": 62,
+      "old_question_id": "ragognize_train_1187",
+      "new_question_id": "ragognize_train_1187",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_0779",
+      "new_donor_id": "ragognize_train_0163",
+      "reasons": [
+        "Senedd report event reused across groups"
+      ]
+    },
+    {
+      "original_packet_index": 70,
+      "old_question_id": "ragognize_train_1875",
+      "new_question_id": "ragognize_train_1875",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_0781",
+      "new_donor_id": "ragognize_train_0243",
+      "reasons": [
+        "Remove repeated Senedd report donor; root preferred independent rugby squad announcement."
+      ]
+    },
+    {
+      "original_packet_index": 75,
+      "old_question_id": "ragognize_train_2160",
+      "new_question_id": "ragognize_train_2160",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0795",
+      "new_donor_id": "ragognize_test_0374",
+      "reasons": [
+        "Senedd report event reused across groups"
+      ]
+    },
+    {
+      "original_packet_index": 84,
+      "old_question_id": "ragognize_test_0485",
+      "new_question_id": "ragognize_test_0485",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0372",
+      "new_donor_id": "ragognize_train_1623",
+      "reasons": [
+        "Original donor was transfer money, whereas target asks a circulation count."
+      ]
+    },
+    {
+      "original_packet_index": 91,
+      "old_question_id": "ragognize_test_1285",
+      "new_question_id": "ragognize_train_1396",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0472",
+      "new_donor_id": "ragognize_train_0518",
+      "reasons": [
+        "Root approved replacing the Draft target by previously reviewed Adedoyin Oseni; retain original split and passage order."
+      ]
+    },
+    {
+      "original_packet_index": 92,
+      "old_question_id": "ragognize_test_1332",
+      "new_question_id": "ragognize_test_1332",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0086",
+      "new_donor_id": "ragognize_train_1797",
+      "reasons": [
+        "Replace fictional daughters with an attributed real hospitalization count."
+      ]
+    },
+    {
+      "original_packet_index": 94,
+      "old_question_id": "ragognize_test_1554",
+      "new_question_id": "ragognize_test_1554",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_0989",
+      "new_donor_id": "ragognize_train_0209",
+      "reasons": [
+        "Flintstone 84 percent metric already excluded as ambiguous"
+      ]
+    },
+    {
+      "original_packet_index": 97,
+      "old_question_id": "ragognize_test_2095",
+      "new_question_id": "ragognize_test_2095",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_1208",
+      "new_donor_id": "ragognize_test_0402",
+      "reasons": [
+        "Replace internally inconsistent Grand Prix donor by a genuine area fact."
+      ]
+    },
+    {
+      "original_packet_index": 104,
+      "old_question_id": "ragognize_train_0683",
+      "new_question_id": "ragognize_train_0683",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_1729",
+      "new_donor_id": "ragognize_test_1729",
+      "reasons": [
+        "目标两条件合格；donor 原句 the fire 在多地野火总标题下不能识别具体火场。原文是 Polk County、Highway 176 火灾，不能让该 500 acres/30% 被读作整个东南美国火灾合计。"
+      ]
+    },
+    {
+      "original_packet_index": 109,
+      "old_question_id": "ragognize_train_1532",
+      "new_question_id": "ragognize_train_1532",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_0958",
+      "new_donor_id": "ragognize_train_1296",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 112,
+      "old_question_id": "ragognize_train_1766",
+      "new_question_id": "ragognize_train_1766",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_2327",
+      "new_donor_id": "ragognize_test_0797",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 113,
+      "old_question_id": "ragognize_train_1782",
+      "new_question_id": "ragognize_train_1782",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_0192",
+      "new_donor_id": "ragognize_train_1694",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 114,
+      "old_question_id": "ragognize_train_1861",
+      "new_question_id": "ragognize_train_1861",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0004",
+      "new_donor_id": "ragognize_train_1921",
+      "reasons": [
+        "Same Eurovision 2025 event and not a percentage; Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 115,
+      "old_question_id": "ragognize_train_1953",
+      "new_question_id": "ragognize_train_1953",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_1075",
+      "new_donor_id": "ragognize_train_1334",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 116,
+      "old_question_id": "ragognize_train_2125",
+      "new_question_id": "ragognize_train_2125",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_1531",
+      "new_donor_id": "ragognize_test_0435",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 118,
+      "old_question_id": "ragognize_train_2179",
+      "new_question_id": "ragognize_train_2179",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_test_0219",
+      "new_donor_id": "ragognize_test_1421",
+      "reasons": [
+        "Fails minimum requested physical-unit/real-location/calendar-value check"
+      ]
+    },
+    {
+      "original_packet_index": 124,
+      "old_question_id": "ragognize_test_1722",
+      "new_question_id": "ragognize_test_1722",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1154",
+      "new_donor_id": "ragognize_test_1154",
+      "reasons": [
+        "Root approved retaining the independent biographical identity statement and omitting the Eurovision 2025 sentence."
+      ]
+    },
+    {
+      "original_packet_index": 125,
+      "old_question_id": "ragognize_test_2227",
+      "new_question_id": "ragognize_test_2227",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_1630",
+      "new_donor_id": "ragognize_train_1630",
+      "reasons": [
+        "Length repair by retaining the full relevant Those Not Afraid sentence; unrelated Lobo sentence omitted."
+      ]
+    },
+    {
+      "original_packet_index": 132,
+      "old_question_id": "ragognize_train_0380",
+      "new_question_id": "ragognize_train_0380",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1893",
+      "new_donor_id": "ragognize_test_1893",
+      "reasons": [
+        "完整资料的创办人明确；partial 当前把 Forum 2024 句直接接 The program ... UN Women，但原文后句属于 ReStart Consciousness，不是论坛。应换无指代的另一活动句，避免资料自身造出错误关系。donor 书目引文的 Routledge 归属可读，无创办人泄漏。",
+        "New correctly anchored target partial is longer; retain the donor source but use the complete biographical role/background opening to match length."
+      ]
+    },
+    {
+      "original_packet_index": 133,
+      "old_question_id": "ragognize_train_0399",
+      "new_question_id": "ragognize_train_0399",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1934",
+      "new_donor_id": "ragognize_test_1934",
+      "reasons": [
+        "目标已把 CCJ 作为可见规范答案，局部律师/教会经历不提供代表组织。donor 奖项实际出自 Previous season 的 2024 ACC tournament；仅在 2025 球队标题下摘奖项句会漏掉关键年/赛事，需补紧邻前句。"
+      ]
+    },
+    {
+      "original_packet_index": 138,
+      "old_question_id": "ragognize_train_0642",
+      "new_question_id": "ragognize_train_0642",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_1445",
+      "new_donor_id": "ragognize_train_1445",
+      "reasons": [
+        "目标完整明确 bass 为 Jose Gonzalez，局部单曲发布日期不提供乐手。donor 仅有 guests/session，标题是一部书，未说在哪个讨论会；原文是 Jamia Hamdard 大学讨论，需加紧邻前句使角色归属有明确事件。"
+      ]
+    },
+    {
+      "original_packet_index": 143,
+      "old_question_id": "ragognize_train_1147",
+      "new_question_id": "ragognize_train_1147",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1289",
+      "new_donor_id": "ragognize_test_1289",
+      "reasons": [
+        "完整资料明确 KUET mechanical engineering professor；局部 vice-chancellor 和学位不逻辑蕴含当前系内 professor 职级。donor 的 the companies 在游戏标题下没有任何公司姓名，身份型干扰事实不完整；可改该文开头同时明确开发和发行方。",
+        "Retain the complete developer/publisher relationship sentence; omit the platform list because it mentions the old target Microsoft."
+      ]
+    },
+    {
+      "original_packet_index": 146,
+      "old_question_id": "ragognize_train_1219",
+      "new_question_id": "ragognize_train_1219",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1389",
+      "new_donor_id": "ragognize_test_1389",
+      "reasons": [
+        "目标完整明确 Autlook Filmsales 收购 Cutting Through Rocks；局部获奖/学历不含发行收购公司。donor 中 she 为 Areeb Zuaiter，但可见段没有该姓名且主目标是另一女导演 Sara Khaki，存在错接指代；应换含 Areeb 的连续原文。"
+      ]
+    },
+    {
+      "original_packet_index": 157,
+      "old_question_id": "ragognize_train_2028",
+      "new_question_id": "ragognize_train_2028",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_1792",
+      "new_donor_id": "ragognize_train_1792",
+      "reasons": [
+        "Complete/partial visible-word difference exceeds 20 percent"
+      ]
+    },
+    {
+      "original_packet_index": 160,
+      "old_question_id": "ragognize_test_0059",
+      "new_question_id": "ragognize_test_0059",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_2169",
+      "new_donor_id": "ragognize_train_1860",
+      "reasons": [
+        "Original HIV donor lacked the antecedent for these drugs; replace by an explicit real player withdrawal. The initially proposed extended cancellation paragraph mentioned another formal target, Rose BC, and is not used."
+      ]
+    },
+    {
+      "original_packet_index": 164,
+      "old_question_id": "ragognize_test_1817",
+      "new_question_id": "ragognize_test_1817",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1774",
+      "new_donor_id": "ragognize_test_1774",
+      "reasons": [
+        "Complete/partial visible-word difference exceeds 20 percent"
+      ]
+    },
+    {
+      "original_packet_index": 168,
+      "old_question_id": "ragognize_train_0043",
+      "new_question_id": "ragognize_train_0043",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0800",
+      "new_donor_id": "ragognize_train_0800",
+      "reasons": [
+        "Use the complete 2024 attributed Sonic development statement, excluding the truncated 2017 quotation."
+      ]
+    },
+    {
+      "original_packet_index": 172,
+      "old_question_id": "ragognize_train_0284",
+      "new_question_id": "ragognize_train_0284",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_1947",
+      "new_donor_id": "ragognize_train_1947",
+      "reasons": [
+        "Restore asset declaration requirement and non-declarer antecedent; use genuine unrelated political-visit background to match length."
+      ]
+    },
+    {
+      "original_packet_index": 175,
+      "old_question_id": "ragognize_train_0368",
+      "new_question_id": "ragognize_train_0368",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_1375",
+      "new_donor_id": "ragognize_train_1375",
+      "reasons": [
+        "Complete/partial visible-word difference exceeds 20 percent"
+      ]
+    },
+    {
+      "original_packet_index": 176,
+      "old_question_id": "ragognize_train_0498",
+      "new_question_id": "ragognize_train_0498",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_0659",
+      "new_donor_id": "ragognize_test_0659",
+      "reasons": [
+        "Replace the ambiguous CEO appositive by the source’s unambiguous founder sentence."
+      ]
+    },
+    {
+      "original_packet_index": 181,
+      "old_question_id": "ragognize_train_0974",
+      "new_question_id": "ragognize_train_0974",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_train_2037",
+      "new_donor_id": "ragognize_train_2037",
+      "reasons": [
+        "Complete/partial visible-word difference exceeds 20 percent"
+      ]
+    },
+    {
+      "original_packet_index": 190,
+      "old_question_id": "ragognize_train_1777",
+      "new_question_id": "ragognize_train_1777",
+      "split_preserved": "validation",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0461",
+      "new_donor_id": "ragognize_train_0461",
+      "reasons": [
+        "Complete/partial visible-word difference exceeds 20 percent"
+      ]
+    },
+    {
+      "original_packet_index": 193,
+      "old_question_id": "ragognize_train_1871",
+      "new_question_id": "ragognize_train_1871",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0567",
+      "new_donor_id": "ragognize_train_0262",
+      "reasons": [
+        "Replace the source’s known incorrect January date for the February 2025 private-enterprise symposium; no factual source editing."
+      ]
+    },
+    {
+      "original_packet_index": 194,
+      "old_question_id": "ragognize_train_1879",
+      "new_question_id": "ragognize_train_1879",
+      "split_preserved": "train",
+      "target_passage_position_preserved": 0,
+      "old_donor_id": "ragognize_train_0292",
+      "new_donor_id": "ragognize_train_0292",
+      "reasons": [
+        "Restore the critic and publication attribution rather than quote a sentence from inside an open quotation."
+      ]
+    },
+    {
+      "original_packet_index": 195,
+      "old_question_id": "ragognize_train_2144",
+      "new_question_id": "ragognize_train_2144",
+      "split_preserved": "test",
+      "target_passage_position_preserved": 1,
+      "old_donor_id": "ragognize_test_1228",
+      "new_donor_id": "ragognize_test_1228",
+      "reasons": [
+        "Use the actual film production/author relationship instead of an unanchored fictional protagonist."
+      ]
+    }
+  ],
+  "restrictions": "Source-only curation; no generated model responses or detection scores read; not a data freeze.",
+  "files": {
+    "paired_inputs.jsonl": "137059b3d05e8ee124d23ceed9a44c2182d6075e32a2328a269c7b9531b2f4d7",
+    "paired_references.jsonl": "9b5f0a8ddbf77df6f723348cbd7542d346771d0724e29957e72f599ba0c121a6",
+    "donor_review_packets.jsonl": "36486aefce6c69355d19dfd5690fc7fb270fd101a1691ea0990f3c2b4dc7f843",
+    "curation\\selected_target_candidates.json": "fdb0ec3be6ac7dc6797be31ebd1cc8a432f5e21d6ef29c1077f2ac64ea2c816d",
+    "curation\\donor_assignments_proposed.json": "8993523c5cd707abed0ea7530b2110e6aaca9642eb4e35f7d1187cedf75a7b70",
+    "curation\\pair_lengths.json": "6333d3208b97bb96b87a7a29526875a6cdd4c6e5848d94f5c952deb586d30024",
+    "curation\\pair_conflicts.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+}

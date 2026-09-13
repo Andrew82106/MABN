@@ -1,0 +1,40 @@
+{
+  "status": "passed_CPU_backbone_ablation_audit",
+  "findings": {
+    "same_v1_inputs_byte_exact": true,
+    "same_51953_pair_constructor": true,
+    "same_v1_readout_functions_source_exact": true,
+    "only_planned_model_change": "frozen NLI tokenizer/checkpoint",
+    "official_E_N_C_order_exact": true,
+    "official_reference_first_claim_second_exact": true,
+    "official_is_joint_false_flattening_checked": true,
+    "official_truncation_setting_dormant_all_pairs_below512": true,
+    "full_RefChecker_baseline_or_reproduction": false,
+    "identity_differences": [
+      "no official claim extractor/triplets",
+      "v1 BM25 top2 instead of official references/segmentation",
+      "probability features plus supervised RAGTruth LR instead of official argmax/merge",
+      "v1 four-BPE localization and metrics instead of RefChecker benchmark/aggregation"
+    ],
+    "prepare_check_annotation_key_access": false,
+    "real_fits": 0,
+    "model_instantiated": false,
+    "GPU_initialized": false,
+    "official_test_opened": false
+  },
+  "sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_refchecker_nli_backbone_ablation_v1.py": "9cd8cea5caaabc75790adf9c51134cf5db6785b47ccfa5f211b8f05d99e8b9ed",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\protocol.json": "3a340816b9c25b8411b23e45cc16547d728414e7c1a53ae002d0f82b57711bcc",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\preparation_complete.json": "f427937ad1ef08f91f2a88b6bbff7dc1a5b487555da84a13b928bb486d08c326",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\CPU_CHECK.json": "f2670f43f08952b903e796b4239dab167454b6508d2438fd65babec553532510",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\OFFICIAL_SEMANTICS_CHECK.json": "2880d6b3553da621bff16004d90045ada84d4bf38764cebcb3c8d958ee366170",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\READOUT_IDENTITY.json": "29aa2ace1dd040184a3bf96beb8e50f8ea20b9b96dc39ac2325dd2a6e614017e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\IDENTITY.md": "d4059d66c0208a141ac39db205ce62a922081e97c1df06632a828c5bb1cbd706",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\pair_length_statistics.json": "30c528de18d9aecdb35134fad837cdf03483325d7b38f59583026e5d6a16a3ea",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\model_verification.json": "d7a5cfcc52cdbcadd461e7215fdbc4b056a8c25302036cdf7e3943a9c7442231",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\refchecker_nli_backbone_ablation_v1\\resource_plan.json": "aa6f10ca85fda2eafd718a4b983a698aff22b14360f313abdb161854af23d0f4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\RefChecker-NLIChecker-roberta-large\\download_manifest.json": "fd40f0eb0a68123064cd97e770640604788f591b6da9d42bde048d29963ff6f2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\RefChecker-NLIChecker-roberta-large\\pytorch_model.bin": "a51c55cb7dc41c4c862f06a3d9c413a8aa0619222bc56f06cb6f2f5b2d3ee14a"
+  },
+  "runner_ast_sha256": "2001fb489a8100c23d5ba039443c528248ed20c2382c870c4af2ea241da989fc"
+}

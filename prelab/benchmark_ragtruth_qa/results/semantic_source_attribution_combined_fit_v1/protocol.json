@@ -1,0 +1,51 @@
+{
+  "version": "semantic-source-attribution-combined-fit-v1",
+  "consumer": "future semantic_window_v2 training/scoring code",
+  "scope": {
+    "answers": "Frozen 3,680 fit answers only: native 634 followed by expanded 3,046.",
+    "labels": "Only fit token/window annotations are opened in prepare.",
+    "calibration": "No path constant and no read operation.",
+    "official_test": "No path constant and no read operation."
+  },
+  "identity": {
+    "group": "Locked source-connected group_id; all response, claim and window units inherit it through response_index.",
+    "counts": {
+      "responses": 3680,
+      "sources": 634,
+      "source_connected_groups": 615
+    },
+    "cache_order": "First the whitelist/native 634, then new_token_plans 3,046; exactly the fit token/window order."
+  },
+  "gold": {
+    "tokens": 665708,
+    "lexical_tokens": 560300,
+    "risk_tokens": 47398,
+    "claims": 34919,
+    "positive_claims": 3474,
+    "windows": 653979,
+    "positive_windows": 58433,
+    "excluded_nonlexical_windows": 692,
+    "window_rule": "Every stride-one contiguous raw-BPE window of width 4; answers shorter than 4 yield one shortened window. Eligible iff at least one original alphanumeric-overlap BPE. Label is OR of original token risk over the window."
+  },
+  "projection": {
+    "claim_to_token": "Broadcast each claim scalar to its exact lexical BPE owners; punctuation tokens receive fill_value.",
+    "claim_to_window": "Maximum of claim scores owning lexical BPEs in the exact window. This is a prediction projection and is not asserted to reproduce fine token gold.",
+    "token_to_window": "Maximum over lexical BPE scores in the exact window.",
+    "window_to_answer": "Maximum over every eligible window belonging to the answer.",
+    "threshold": "No threshold exists in this module."
+  },
+  "features": {
+    "native": "Read-only semantic_source_attribution_v1 feature triplets for exact whitelist response IDs only.",
+    "expanded": "Read-only semantic_source_attribution_expanded_fit_v1 feature triplets.",
+    "fixed_width": [
+      "source_total_relevance",
+      "previous_answer_relevance",
+      "other_context_relevance",
+      "passage_relevance",
+      "top_sentence_relevance",
+      "top_sentence_indices"
+    ],
+    "full_edges": "Remain in verified per-answer shards; no second 1.22-GiB CSR copy is made."
+  },
+  "stage_gate": "prepare may run immediately; audit waits for both caches; no training, model selection, threshold selection, calibration, test, model load, or GPU operation"
+}

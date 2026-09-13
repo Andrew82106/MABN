@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "diagnostic_only": true,
+  "frozen_protocol_sha256": "a0de41e7fe84f063330e21c5c7aa82253f23a795240a903057d5e793b665ed4c",
+  "unit_thresholds_sha256": "b803f2f228b27a6778a3c00ac8dd8a89d746045f1077e4ecdbd901123e8b95e1",
+  "new_probe_fitting": false,
+  "automatic_predictions_reproduced": true,
+  "n_paired_units": 40,
+  "n_pipeline_answers": 50,
+  "all_positive_unit_F1": 0.6666666666666666,
+  "all_positive_answer_F1": 0.5714285714285714
+}

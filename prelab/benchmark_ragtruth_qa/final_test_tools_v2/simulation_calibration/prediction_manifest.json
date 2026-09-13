@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "mode": "calibration_simulation",
+  "development_freeze_sha256": "a80a9e1c8f20cd57f42a5a7ea61747fe2c301130038d4580cf5cbf83294fdfef",
+  "bundle_manifest_sha256": "2191c57ce62486d57d0de3fb9a2b1a16f85c1b8383b19f43cafbc91ac57c088c",
+  "methods": [
+    {
+      "method_id": "fixed_old_calibration_fixture",
+      "window_scores_file": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\simulation_calibration\\fixed_old_window_predictions.jsonl",
+      "window_scores_sha256": "69639b8e163587742ad52edb4a36d93c76be894caa44f8bf822e51a6a933756f",
+      "source_artifacts_sha256": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\lookback_mean_C0.001.pkl": "3a77e085ad4eb96290d75ecfff17f9d3cc8214bf38fc1bf31a503be2d2453026",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\lookback_mean_C0.001_result.json": "41fdd066cb85f9e01c90b4dbd84e1adb5d015a79fbaa51a82d3ff13e5d18bf33"
+      },
+      "native_prediction_artifacts_sha256": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\lookback_mean_C0.001_scores.npz": "fe61740e344c0a3028c046b6bb12763228b0a872504422378a9423257a723163"
+      },
+      "fit_performed": false,
+      "threshold_selection_performed": false,
+      "model_selection_performed": false
+    }
+  ]
+}

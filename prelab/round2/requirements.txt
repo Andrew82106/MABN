@@ -1,0 +1,7 @@
+# Add to the first-round environment. Executed Windows/Python 3.11 environment:
+# see results/runtime.json; GPU torch 2.5.1+cu121 inherited from the authorized CA env.
+-r ../requirements.txt
+bitsandbytes==0.49.2
+accelerate==1.13.0
+numpy==2.4.6
+pyarrow==19.0.1

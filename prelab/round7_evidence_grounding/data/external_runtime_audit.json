@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "data_file": "data/external_ragognize/external_inputs.jsonl",
+  "data_sha256": "ac0cc1f6c021c4ea27bb6b2467ed88776f248f85285083c54771a5a8eb2d7c76",
+  "counts": {
+    "features": 100,
+    "attention": 100,
+    "lumina": 100,
+    "baselines": 100,
+    "generation": 100,
+    "items": 100,
+    "truncated_responses": 0
+  },
+  "max_input_tokens": 619,
+  "parse_failures": [],
+  "nonfinite_valid_item_features": [],
+  "labels_read": false,
+  "detector_performance_computed": false,
+  "checks": [
+    "Exact input/output identities and source hashes",
+    "Frozen extractor code signatures",
+    "All requested methods and items present",
+    "Saved array hashes, shapes and finite item values",
+    "UTF-8 response character spans and identical token offsets across methods",
+    "All aggregated token positions within the declared item",
+    "Hidden-state last-content position and attention/LUMINA availability timing",
+    "LUMINA same original answer IDs and paired random context"
+  ]
+}

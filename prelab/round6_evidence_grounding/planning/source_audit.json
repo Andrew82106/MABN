@@ -1,0 +1,30 @@
+{
+  "status": "design_data_audit_not_experiment_result",
+  "ragtruth_local_qa_source_count": 989,
+  "ragtruth_has_canonical_reference_answer_field": false,
+  "ragtruth_qa_question_fields": [
+    "question",
+    "passages"
+  ],
+  "hotpotqa_preview_count": 5,
+  "hotpotqa_observed_fields": [
+    "id",
+    "question",
+    "answer",
+    "type",
+    "level",
+    "supporting_facts",
+    "context"
+  ],
+  "development_only_preview_ids": [
+    "5a8b57f25542995d1e6f1371",
+    "5a8c7595554299585d9e36b6",
+    "5a85ea095542994775f606a8",
+    "5adbf0a255429947ff17385a",
+    "5a8e3ea95542995a26add48d"
+  ],
+  "hotpotqa_official_download_attempt": "HTTPS handshake timeout; no full original file downloaded",
+  "hotpotqa_public_preview": "success",
+  "model_generations": 0,
+  "probe_fits": 0
+}

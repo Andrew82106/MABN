@@ -1,0 +1,46 @@
+{
+  "schema": "round16-dataset-expansion-v1",
+  "task": "dataset construction only; no probe fitting or scoring",
+  "target_new_questions": 400,
+  "independence": "connected event/subject/source groups; related questions stay in one split; report independent group count separately",
+  "conditions": [
+    "complete",
+    "partial"
+  ],
+  "target_split_questions": {
+    "train": 300,
+    "validation": 50,
+    "test": 50
+  },
+  "target_categories": {
+    "quantity": 100,
+    "relation": 120,
+    "time": 80,
+    "action": 80,
+    "location": 20
+  },
+  "seed": 20260916,
+  "old_dataset": "../round10_dual_granularity",
+  "source_dataset": "F4biian/RAGognize",
+  "source_revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "model": "Qwen2.5-7B-Instruct-bnb-4bit",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "reuse": "round7_evidence_grounding/src/model7.py"
+  },
+  "prompt": "Please answer the following questions using these search results. Write one short sentence for each numbered item.",
+  "insufficiency_hint": false,
+  "selection": "source-only; never based on generated errors or detector predictions",
+  "annotation": "assistant annotation and independent review; current visible sources and actual generation, never condition-as-label",
+  "risk_target": "unsupported or contradicted factual assertion relative to visible evidence",
+  "window": {
+    "width": 4,
+    "stride": 1,
+    "include_punctuation_in_width": true,
+    "gold": "any eligible risk token in window"
+  },
+  "refusals_or_unresolved": "explicit records; no automatic all-negative token labels",
+  "old_files_modified": false,
+  "donor_repair": "Preserve still-valid source-reviewed pairs from pair_preferences; only replace excluded or invalid donors before any generation."
+}

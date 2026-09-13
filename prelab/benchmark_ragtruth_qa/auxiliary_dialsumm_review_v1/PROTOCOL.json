@@ -1,0 +1,13 @@
+{
+  "scope": "Author-paper and official-repository availability review. Inspect only explicitly identified train content; mixed archives may be downloaded intact, but validation/test data bytes must not be opened or parsed.",
+  "source_repository": "https://github.com/kite99520/DialSummFactCorr",
+  "paper": "https://aclanthology.org/2023.acl-long.779/",
+  "dataset_link": "https://drive.google.com/file/d/1bIBYc81RsnYDSU_5jI7ALVYe5XqKOKQ-/view",
+  "stages": ["Freeze official source metadata and identify license statements", "Download author-linked archive, list member names only", "Establish train identity before parsing records", "Census train sources, original/corrected summaries, original span metadata and edit alignment", "Export only traceable train normalization if justified, with no invented annotations"],
+  "label_policy": "Do not assume corrected summaries are infallible; distinguish human-correction provenance from local-repair scope. Derived alignments must be labeled derived, never original human character coordinates.",
+  "split_policy": "Original dialogue groups must remain together across generator versions. Do not inspect validation/test contents to estimate quality, choose examples, or train a model.",
+  "training": false,
+  "GPU": false,
+  "QA_calibration_or_test_read": false,
+  "existing_training_files_modified": false
+}

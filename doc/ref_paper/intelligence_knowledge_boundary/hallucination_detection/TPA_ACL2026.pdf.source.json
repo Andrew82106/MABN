@@ -1,0 +1,11 @@
+{
+  "title": "TPA: Next Token Probability Attribution for Detecting Hallucinations in RAG",
+  "venue": "ACL 2026 Main Conference",
+  "source_url": "https://aclanthology.org/2026.acl-long.1159.pdf",
+  "paper_page": "https://aclanthology.org/2026.acl-long.1159/",
+  "official_code": "https://github.com/pengqian-lu/TPA",
+  "downloaded_date": "2026-09-12",
+  "bytes": 2351723,
+  "sha256": "aede5248c939cfd817b98a40c1585cae1186edca1560baca94718e52b9e866b5",
+  "local_experiment_status": "reference_only_no_extraction_or_training"
+}

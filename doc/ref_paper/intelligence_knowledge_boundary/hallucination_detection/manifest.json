@@ -1,0 +1,100 @@
+[
+  {
+    "file": "CORTEX_2026_preprint.pdf",
+    "source": "https://arxiv.org/pdf/2606.31033v1",
+    "sha256": "0a0a1c68b4dae9664daba6df919a552f92e048f70fab21b47b3d84411e34fd69",
+    "bytes": 32902430,
+    "note": "preprint; full method not reproduced"
+  },
+  {
+    "file": "HARP_ICLR2026.pdf",
+    "source": "https://arxiv.org/pdf/2509.11536v2",
+    "sha256": "400b03122692a27a82507a15b511348644cd9ad4bc2bf3d95535b758f6927215",
+    "bytes": 1965039,
+    "note": "ICLR2026; projection-inspired adaptation"
+  },
+  {
+    "file": "MiniCheck_EMNLP2024.pdf",
+    "source": "https://aclanthology.org/2024.emnlp-main.499.pdf",
+    "sha256": "f63a76e127c1bceaae4bf0f8985bc15c44596b34d746424b37f91e34f0dacc14",
+    "bytes": 1545010,
+    "note": "EMNLP2024; not implemented"
+  },
+  {
+    "file": "RAGTruth_ACL2024.pdf",
+    "source": "https://aclanthology.org/2024.acl-long.585.pdf",
+    "sha256": "17afb377ca5ea8cf672efa9a95fca5889713e94c6fd0355f89f8e01651ddfd4d",
+    "bytes": 1020530,
+    "note": "ACL2024; released human-span QA data used"
+  },
+  {
+    "file": "Lookback_Lens_EMNLP2024.pdf",
+    "source": "https://aclanthology.org/2024.emnlp-main.84.pdf",
+    "sha256": "050036edacecdd41c4c75cfdb1d6840f7bb8e88cd23c41c73b293fd67069289c",
+    "bytes": 887255,
+    "note": "EMNLP2024; local window baseline adapted"
+  },
+  {
+    "file": "ReDeEP_ICLR2025.pdf",
+    "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/7daf60e805e596c3bd1e843e72ea5560-Paper-Conference.pdf",
+    "sha256": "cb18f3d21d8bff994b8e26b9f85392f26653ab8c48d33629807d6682650e4479",
+    "bytes": 1284603,
+    "note": "ICLR2025; local ECS/PKS adaptation"
+  },
+  {
+    "file": "LUMINA_ICLR2026.pdf",
+    "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/f5846131aa6a72d1df3bd6d43a4a960b-Paper-Conference.pdf",
+    "sha256": "7861780075ee9585b85d869c75eeefd5d8781f5f60412fae15adea6d9b93b121",
+    "bytes": 1275053,
+    "note": "ICLR2026; R19 only MMD, IPR planned"
+  },
+  {
+    "file": "HalluRAG_workshop2025.pdf",
+    "source": "https://arxiv.org/pdf/2412.17056v2",
+    "sha256": "b9f77746a175cf91ac5cce0dfdf3b0dfedb543a40ff954c259f49f2e7ec9608b",
+    "bytes": 815616,
+    "note": "AAAI2025 workshop, not main conference; sentence pseudo-labels"
+  },
+  {
+    "file": "TRIVIA_Plus_ACL2026.pdf",
+    "source": "https://aclanthology.org/2026.acl-long.680.pdf",
+    "sha256": "8ab5229a0736392b0a5ed5a79a46184251ea9600c0423af492454e4a7cda6850",
+    "bytes": 4140924,
+    "note": "ACL2026; sentence-level long-context benchmark; not used as token gold"
+  },
+  {
+    "file": "RLSeek_ACL2026.pdf",
+    "source": "https://aclanthology.org/2026.acl-long.1492.pdf",
+    "sha256": "57dc01c1746c413569c82b7c5e60ac3d099e769fde6e1c84737c9313887dd9aa",
+    "bytes": 1595049,
+    "note": "ACL2026; evidence-grounded reasoning span detector; not implemented"
+  },
+  {
+    "file": "Temporal_Multi_Signal_Fusion_2026_preprint.pdf",
+    "source": "https://arxiv.org/pdf/2608.18115v1",
+    "sha256": "d28b38d9b7595762363470b5fa56e65fe5104e56e446f3f637bb207b6cc02650",
+    "bytes": 545679,
+    "note": "2026 preprint; AUC and F1 are different metrics; not implemented"
+  },
+  {
+    "file": "LettuceDetect_2025_preprint.pdf",
+    "source": "https://arxiv.org/pdf/2502.17125v1",
+    "sha256": "937d2c1ed962da80e676724e9e04db384d5dcd69f16071c1cfc5df8783e36cd3",
+    "bytes": 936654,
+    "note": "2025 preprint; supervised external encoder, RAGTruth-trained; not implemented"
+  },
+  {
+    "file": "Luna_COLING2025_Industry.pdf",
+    "source": "https://aclanthology.org/2025.coling-industry.34.pdf",
+    "sha256": "57df27f7ac59ba687525e398af165de782713d3e15ce4948c3bcecbeb060002d",
+    "bytes": 485545,
+    "note": "COLING2025 Industry Track, not main track. Section3.2 warns about evidence split over chunks; token support max across chunks. Concept reference, not full reproduction."
+  },
+  {
+    "file": "RAGognizer_2026_preprint.pdf",
+    "source": "https://arxiv.org/pdf/2604.15945",
+    "sha256": "1e3deb4889a3ffc91cd2d3708617d9a112543dabfd030a12b5ac99bb31a647c3",
+    "bytes": 1471218,
+    "note": "2026 preprint; joint language-model fine-tuning and native token detection head; official train data and checkpoints available"
+  }
+]

@@ -1,0 +1,112 @@
+{
+  "status": "cpu_static_audit_complete_no_baseline_inference",
+  "official_source": {
+    "repository": "https://github.com/amazon-science/RefChecker",
+    "commit": "1df1b25cee792ba2b171302e31ca4f768bd67703",
+    "tag": "v0.2.17",
+    "clean_checkout": true,
+    "license": "Apache-2.0",
+    "files_sha256": {
+      "extractor": "33df974bbf575e914f43b690b414d2c877ed39c98551a947902663a5fde78aff",
+      "extractor_parser": "ce1c1d2411ed48aca27c43b9ce37284106b11a913e3d527b1940ea8d96a9508e",
+      "nli": "7c676393d1a21d41a096b3c1aa504eebf87104c7cfc19ca128222b1013601fae",
+      "checker_base": "c55e01f3b97d58a1ac60666216011cd0da4b459c11e2ff19eb5b74c8f2d5de55",
+      "repc": "563d2dfbdd2f1005516f0cebba23387469ccf76031142530b90e6c8998c69630",
+      "localizer": "aefb1180969bae072f1c0dbc63ddbeb03e56f909732eaf34fbab774caeb96fb3",
+      "aggregator": "ec5d97d3801c5495b65f2f370f356c99ed8c09674f9879490d5d575a354e1dc0",
+      "benchmark_driver": "b6b3ab3795526cebf487fee68c06ac7d1e14bcd8207b8c95e2f48b91817d89a5",
+      "package": "8c69c230cfb1672910e4a53f558c660b59640b806d8baf0b33ba528e79342600",
+      "license": "88046bf22d5b4f4b8cc85079ae6aae5424a3a1999db952ed152828ff325b2c6d"
+    }
+  },
+  "dataset_scope": {
+    "partitions_read": [
+      "fit",
+      "calibration"
+    ],
+    "answers": 3839,
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_material_groups": 615,
+    "calibration_material_groups": 154,
+    "fit_cal_material_group_overlap": 0,
+    "eligible_4bpe_windows": 696220,
+    "eligible_4bpe_windows_by_partition": {
+      "fit": 653979,
+      "calibration": 42241
+    },
+    "excluded_no_lexical_windows": 772,
+    "excluded_no_lexical_windows_by_partition": {
+      "fit": 692,
+      "calibration": 80
+    },
+    "passages": 11517,
+    "passages_per_answer": {
+      "min": 3,
+      "mean": 3.0,
+      "median": 3,
+      "p90": 3,
+      "p95": 3,
+      "max": 3
+    },
+    "response_raw_bpe_tokens": {
+      "min": 1,
+      "mean": 184.55483198749675,
+      "median": 171,
+      "p90": 308,
+      "p95": 352,
+      "max": 532
+    },
+    "passage_tokenish_count": {
+      "min": 17,
+      "mean": 91.56004167752019,
+      "median": 83,
+      "p90": 143,
+      "p95": 160,
+      "max": 249
+    },
+    "approx_reference_segments_200_per_answer": {
+      "min": 3,
+      "mean": 3.0268299036207345,
+      "median": 3,
+      "p90": 3,
+      "p95": 3,
+      "max": 4
+    },
+    "approx_reference_segments_total": 11620,
+    "note": "Tokenish/segment counts are CPU planning estimates; exact RefChecker split_text requires spaCy en_core_web_sm."
+  },
+  "pair_projection": {
+    "paper_noisy_context_claims_per_response": 4.9,
+    "paper_noisy_context_response_tokens": 61.3,
+    "same_claim_rate_claims": 18811.100000000002,
+    "length_scaled_claims_rough": 56634.247960848305,
+    "same_rate_checker_pairs": 56938.00000000001,
+    "length_scaled_checker_pairs_rough": 171422.23529696726,
+    "localizer_forward_lower_same_rate": 75244.40000000001,
+    "localizer_forward_lower_length_scaled": 226536.99184339322,
+    "caveat": "Actual claims are unknown until the fixed extractor runs; scaling claims linearly with response length is only a capacity bound, not a result."
+  },
+  "static_interface_findings": {
+    "native_output": "One hard Entailment/Neutral/Contradiction label per extracted claim-triplet; optional strict/soft/major response aggregation.",
+    "no_native_answer_offsets": true,
+    "nli_requires_is_joint_false": true,
+    "noisy_context_segment_length": 200,
+    "noisy_context_merge_passages": true,
+    "repc_hardcoded_backbone_device": "cuda:1",
+    "repc_public_check_dispatcher_runnable_as_is": false,
+    "localizer_output": "HTML-decorated token text, not numeric spans",
+    "localizer_default_thresholds": [
+      0.65,
+      0.6,
+      0.65
+    ]
+  },
+  "guardrails": {
+    "GPU_used": false,
+    "weights_downloaded": false,
+    "official_test_opened": false,
+    "gold_spans_used_as_refchecker_claim_input": false,
+    "formal_baseline_modified": false
+  }
+}

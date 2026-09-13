@@ -1,0 +1,28 @@
+{
+  "version": "qa-unselected-original-all-doc-batches-v2",
+  "scope": "Exact frozen v1 8226 unselected pairs: new3046 + original793; no labels/training/test",
+  "forward": "For each answer with a nonempty complement, original complete claim-major/document-major pairs, original batch4 dynamic padding; then retain only frozen unselected rows. Zero-complement answers skipped.",
+  "maximum_documents": 2,
+  "device": "cuda:0",
+  "dtype": "float32",
+  "batch_size": 4,
+  "TF32": false,
+  "autocast": false,
+  "selection": "Read-only v1 bound complement and old/new selected decisions; never select again",
+  "geometry": "flat=claim_index*D+document_index; original_batch_index=flat//4; original_batch_row=flat%4; original_batch_size=min(4,C*D-4*(flat//4)); original_batch_padding_length=max(original pair_lengths of that batch). Actual batch_padding_length must equal original for every complete-forward pair.",
+  "agreement": {
+    "all_doc_logits_max_abs": 0.0002,
+    "all_doc_support_max_abs": 2e-05,
+    "selected_last_hidden_max_abs": 0.0002,
+    "all_selected_token_ids_offsets_claim_doc_input_indices": "exact",
+    "unselected_claim_ids_and_offsets_vs_selected_same_claim": "exact",
+    "first_two_fresh_active_answer_observers": "exact logits/support/last states"
+  },
+  "schema": "Same v1 two NPZ schemas and metadata. Both encoder22_features and claim_features NPZ additionally contain sequence-level original_batch_index/original_batch_row/original_batch_size/original_batch_padding_length and actual batch_padding_length. All four original fields have length n_unselected_sequences.",
+  "input_indices": "Own document input position; absolute original-answer claim offsets; full-input nonclaim offsets=-1",
+  "storage": "Dedicated minicheck_unselected_v2; never write v1 or selected caches",
+  "labels": "None read or assigned. A missing single-document support is not a global risk label; aggregate all documents downstream.",
+  "verification": "CPU verify hashes frozen v1 binding/plans/code and recomputes complement/batch geometry; infer additionally rechecks every v1 bound source hash before loading the model.",
+  "GPU_run_by_prepare": false,
+  "test_opened": false
+}

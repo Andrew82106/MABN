@@ -1,0 +1,417 @@
+{
+  "status": "passed",
+  "auditor": "plan_review",
+  "audit_code_sha256": "c6dcec2f0b21b3e772f2a652f225066dba9fffa3e3b4bf0dae3755a139dbe294",
+  "complete_sha256": "a235126a6ffab6796bc14a5c070c43a40014e076c22adec6d6066241330e6bd0",
+  "protocol_sha256": "422e19f83298c86fe76b62e332b70a377b1ed5564a78e6aabaca1ef71044fc98",
+  "read_only_fixed_result_audit": true,
+  "gpu_used": false,
+  "new_parameters_or_training": false,
+  "original_validation_or_test_read": false,
+  "source_train_answers": 602,
+  "source_train_questions": 301,
+  "source_train_event_groups": 278,
+  "geometry": {
+    "sequences": 602,
+    "all_output_defined_windows": 12222,
+    "evaluable_windows": 9526,
+    "ineligible_windows_preserved_during_smoothing": 2696,
+    "raw_start_gap_counts": {
+      "1": 11620
+    },
+    "no_answer_or_group_crossing": true,
+    "gold_independent_sequence_membership": true
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "groups": {
+        "fit_groups": 166,
+        "calibration_groups": 56,
+        "evaluation_groups": 56
+      },
+      "raw_baselines_and_original_thresholds_exact": true,
+      "methods": [
+        {
+          "method": "slots_base",
+          "stay": 0.99,
+          "temperature": 1.0,
+          "all_window_log_domain_max_absolute_error": 2.4424906541753444e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "base_harp_delta",
+          "stay": 0.8,
+          "temperature": 2.0,
+          "all_window_log_domain_max_absolute_error": 2.7755575615628914e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "verifier_learned_slots",
+          "stay": 0.8,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.887379141862766e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "lookback_tuned",
+          "stay": 0.8,
+          "temperature": 2.0,
+          "all_window_log_domain_max_absolute_error": 2.3314683517128287e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "groups": {
+        "fit_groups": 166,
+        "calibration_groups": 56,
+        "evaluation_groups": 56
+      },
+      "raw_baselines_and_original_thresholds_exact": true,
+      "methods": [
+        {
+          "method": "slots_base",
+          "stay": 0.8,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.7763568394002505e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "base_harp_delta",
+          "stay": 0.8,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.887379141862766e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "verifier_learned_slots",
+          "stay": 0.99,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 8.382183835919932e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "lookback_tuned",
+          "stay": 0.5,
+          "temperature": 1.0,
+          "all_window_log_domain_max_absolute_error": 0.0,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "groups": {
+        "fit_groups": 167,
+        "calibration_groups": 55,
+        "evaluation_groups": 56
+      },
+      "raw_baselines_and_original_thresholds_exact": true,
+      "methods": [
+        {
+          "method": "slots_base",
+          "stay": 0.95,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.9984014443252818e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "base_harp_delta",
+          "stay": 0.99,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 2.7755575615628914e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "verifier_learned_slots",
+          "stay": 0.5,
+          "temperature": 1.0,
+          "all_window_log_domain_max_absolute_error": 0.0,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "lookback_tuned",
+          "stay": 0.8,
+          "temperature": 1.0,
+          "all_window_log_domain_max_absolute_error": 3.4416913763379853e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "groups": {
+        "fit_groups": 168,
+        "calibration_groups": 55,
+        "evaluation_groups": 55
+      },
+      "raw_baselines_and_original_thresholds_exact": true,
+      "methods": [
+        {
+          "method": "slots_base",
+          "stay": 0.8,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.9984014443252818e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "base_harp_delta",
+          "stay": 0.5,
+          "temperature": 1.0,
+          "all_window_log_domain_max_absolute_error": 0.0,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "verifier_learned_slots",
+          "stay": 0.95,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 9.2148511043888e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "lookback_tuned",
+          "stay": 0.8,
+          "temperature": 2.0,
+          "all_window_log_domain_max_absolute_error": 2.0539125955565396e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "groups": {
+        "fit_groups": 167,
+        "calibration_groups": 56,
+        "evaluation_groups": 55
+      },
+      "raw_baselines_and_original_thresholds_exact": true,
+      "methods": [
+        {
+          "method": "slots_base",
+          "stay": 0.8,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.7763568394002505e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "base_harp_delta",
+          "stay": 0.99,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 1.9984014443252818e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "verifier_learned_slots",
+          "stay": 0.99,
+          "temperature": 0.5,
+          "all_window_log_domain_max_absolute_error": 5.10702591327572e-14,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        },
+        {
+          "method": "lookback_tuned",
+          "stay": 0.8,
+          "temperature": 2.0,
+          "all_window_log_domain_max_absolute_error": 3.608224830031759e-15,
+          "selected_thresholds_recomputed": true,
+          "calibration_grid_selection_recomputed": true
+        }
+      ]
+    }
+  ],
+  "all_20_selected_posteriors_recomputed_in_log_domain": true,
+  "all_240_prespecified_calibration_candidates_recomputed_without_outer_labels": true,
+  "threshold_tolerance_absolute": 5e-12,
+  "calibration_F1_precision_and_grid_selection_exact": true,
+  "all_OOF_scores_predictions_answer_max_and_denominators_exact": true,
+  "all_four_raw_baselines_scores_thresholds_full_metrics_exact_to_R22": true,
+  "recomputed_metrics": {
+    "slots_base": {
+      "windows": {
+        "tp": 738,
+        "fp": 451,
+        "fn": 325,
+        "tn": 8012,
+        "precision": 0.6206896551724138,
+        "recall": 0.6942615239887112,
+        "f1": 0.655417406749556
+      },
+      "answers": {
+        "tp": 94,
+        "fp": 27,
+        "fn": 57,
+        "tn": 420,
+        "precision": 0.7768595041322314,
+        "recall": 0.6225165562913907,
+        "f1": 0.6911764705882353
+      }
+    },
+    "base_harp_delta": {
+      "windows": {
+        "tp": 701,
+        "fp": 344,
+        "fn": 362,
+        "tn": 8119,
+        "precision": 0.6708133971291866,
+        "recall": 0.6594543744120414,
+        "f1": 0.6650853889943074
+      },
+      "answers": {
+        "tp": 103,
+        "fp": 48,
+        "fn": 48,
+        "tn": 399,
+        "precision": 0.6821192052980133,
+        "recall": 0.6821192052980133,
+        "f1": 0.6821192052980133
+      }
+    },
+    "verifier_learned_slots": {
+      "windows": {
+        "tp": 668,
+        "fp": 592,
+        "fn": 395,
+        "tn": 7871,
+        "precision": 0.5301587301587302,
+        "recall": 0.6284101599247413,
+        "f1": 0.5751183814033577
+      },
+      "answers": {
+        "tp": 128,
+        "fp": 32,
+        "fn": 23,
+        "tn": 415,
+        "precision": 0.8,
+        "recall": 0.847682119205298,
+        "f1": 0.8231511254019293
+      }
+    },
+    "lookback_tuned": {
+      "windows": {
+        "tp": 724,
+        "fp": 561,
+        "fn": 339,
+        "tn": 7902,
+        "precision": 0.5634241245136187,
+        "recall": 0.6810912511759172,
+        "f1": 0.616695059625213
+      },
+      "answers": {
+        "tp": 107,
+        "fp": 48,
+        "fn": 44,
+        "tn": 399,
+        "precision": 0.6903225806451613,
+        "recall": 0.7086092715231788,
+        "f1": 0.6993464052287581
+      }
+    },
+    "slots_base_smooth": {
+      "windows": {
+        "tp": 763,
+        "fp": 421,
+        "fn": 300,
+        "tn": 8042,
+        "precision": 0.6444256756756757,
+        "recall": 0.7177798682972719,
+        "f1": 0.6791277258566978
+      },
+      "answers": {
+        "tp": 96,
+        "fp": 30,
+        "fn": 55,
+        "tn": 417,
+        "precision": 0.7619047619047619,
+        "recall": 0.6357615894039735,
+        "f1": 0.6931407942238267
+      }
+    },
+    "base_harp_delta_smooth": {
+      "windows": {
+        "tp": 754,
+        "fp": 586,
+        "fn": 309,
+        "tn": 7877,
+        "precision": 0.5626865671641791,
+        "recall": 0.70931326434619,
+        "f1": 0.6275488972118186
+      },
+      "answers": {
+        "tp": 104,
+        "fp": 46,
+        "fn": 47,
+        "tn": 401,
+        "precision": 0.6933333333333334,
+        "recall": 0.6887417218543046,
+        "f1": 0.6910299003322259
+      }
+    },
+    "verifier_learned_slots_smooth": {
+      "windows": {
+        "tp": 677,
+        "fp": 609,
+        "fn": 386,
+        "tn": 7854,
+        "precision": 0.526438569206843,
+        "recall": 0.6368767638758231,
+        "f1": 0.5764154959557258
+      },
+      "answers": {
+        "tp": 123,
+        "fp": 27,
+        "fn": 28,
+        "tn": 420,
+        "precision": 0.82,
+        "recall": 0.8145695364238411,
+        "f1": 0.8172757475083057
+      }
+    },
+    "lookback_tuned_smooth": {
+      "windows": {
+        "tp": 705,
+        "fp": 500,
+        "fn": 358,
+        "tn": 7963,
+        "precision": 0.5850622406639004,
+        "recall": 0.6632173095014111,
+        "f1": 0.6216931216931217
+      },
+      "answers": {
+        "tp": 100,
+        "fp": 43,
+        "fn": 51,
+        "tn": 404,
+        "precision": 0.6993006993006993,
+        "recall": 0.6622516556291391,
+        "f1": 0.6802721088435374
+      }
+    }
+  },
+  "seconds": 5.168137099943124,
+  "limitations": [
+    "Backward recursion uses future windows: offline localization, not a streaming guarantee.",
+    "Overlapping windows are not independent samples; no causal interpretation of improved smoothing.",
+    "All results use repeatedly examined R16 training-group development folds; this is not a fresh-test performance estimate.",
+    "This audit checks computation and calibration isolation, not bootstrap multiple-comparison correction or generalization."
+  ]
+}

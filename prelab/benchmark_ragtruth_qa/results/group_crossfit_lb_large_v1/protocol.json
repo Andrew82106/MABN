@@ -1,0 +1,70 @@
+{
+  "version": "group-crossfit-lb-large-v1",
+  "folds": 3,
+  "split_seed": 20261012,
+  "split": "Sort615 fit material-group IDs, fixed NumPy permutation, strided3 folds of205. All original and added generator answers share the group holdout.",
+  "scope": "All3680 fit answers retained across folds; native634/168123 windows train combiners. Calibration159/42241 windows unchanged; official test never read.",
+  "large": {
+    "initialization": "Generic answerdotai/ModernBERT-large, revision45bb4654a4d5aaff24dd11d4781fa46d39bf8c13; fresh same-seed token head per fold",
+    "epochs": 3,
+    "seed": 20261005,
+    "effective_batch": 8,
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "foreach": false,
+    "checkpointing": "use_reentrant=False",
+    "precision": "BF16 CUDA forward, FP32 logit difference/mapping/BCE/parameters/gradient/Adam states; TF32 disabled",
+    "order": "First3 original global answer_orders filtered to fold-fit answers without reordering; same initial RNG seed each fold",
+    "weights": "Within fold-fit: equal groups; original/added half base mass when both exist, then answer and lexical-token equal; fit-only binary balancing then equalize group loss. Fixed total560300.",
+    "objective": "Each answer weighted token BCE sum × N_fold_fit/(actual_answers_in_batch ×560300). Accumulate8 answers, actual smaller final batch; clip1 then AdamW.",
+    "selection": "Exactly epoch3; no calibration or holdout gold/score based checkpoint selection. Historical choice of3 inherited from previous calibration-selected large model is disclosed.",
+    "saved": "Three online training logs and one final model/optimizer/CPU+CUDA RNG checkpoint per fold, plus all fold-held token probabilities; no repeated epoch weight copies."
+  },
+  "lookback": {
+    "method": "lb_prefix_pre_header",
+    "C": 0.0001,
+    "solver": "liblinear",
+    "seed": 20260924,
+    "max_iter": 2000,
+    "width": 1024,
+    "scaler": "Fold-fit native windows only, base-weighted StandardScaler partial_fit blocks16384; float32 transform",
+    "weights": "Fold-fit native groups→answer→window equal base; fit-only class balancing then equal group loss; fixed total168123.",
+    "calibration": "No fold calibration or C search. Predict only fold-held native windows."
+  },
+  "combiners": {
+    "inputs": [
+      "Lookback probability",
+      "large probability"
+    ],
+    "model": {
+      "max_iter": 100,
+      "max_depth": 2,
+      "max_leaf_nodes": 4,
+      "min_samples_leaf": 20,
+      "learning_rate": 0.05,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "monotonic_cst": [
+        1,
+        1
+      ],
+      "random_state": 20261008
+    },
+    "modes": [
+      "old_in_sample",
+      "group_oof"
+    ],
+    "fits": 2,
+    "fit": "Both use exactly same native634 labels, q.base_weights and168123 loss mass. Only the two fit-side score columns differ.",
+    "calibration": "Reuse byte-bound old full-fit LB and selected large epoch3 scores; identical two columns in both modes. Separate F1-optimal window/answer thresholds only; no model fit or early stopping on calibration.",
+    "aggregation": "Original four-raw-BPE lexical-max windows, then max all eligible windows per answer. Same candidate supplies both reported F1s."
+  },
+  "limits": [
+    "Corrects own-label exposure of fit-side upstream predictions, not all distribution shift: each OOF upstream sees410 rather than615 groups.",
+    "Hyperparameters and epoch3 were chosen in earlier development. Repeated159 calibration is not an independent final test.",
+    "Large is an additional semantic encoder; reconstructed Llama Lookback features are not original release traces. Offline detection, not a pure generator probe.",
+    "Old controls remain frozen; the new in-sample matched two-input tree is not relabelled as the strongest prior method."
+  ],
+  "official_test_opened": false
+}

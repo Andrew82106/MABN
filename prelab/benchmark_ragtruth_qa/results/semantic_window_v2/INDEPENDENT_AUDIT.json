@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "fit": {
+    "identity": {
+      "rows": 168123,
+      "unique_window_ids": 168123,
+      "union_width": 71,
+      "identity_exact": true
+    },
+    "candidates_recomputed": 12,
+    "candidate_names_match_preregistration": true,
+    "selected_index": 2,
+    "selected_candidate": "whitebox_geometry__C0.1",
+    "selection_recomputed_from_fit_OOF_only": true,
+    "all_fit_thresholds_and_counts_exact": true,
+    "group_folds": 5,
+    "fold_held_windows": [
+      33647,
+      33614,
+      33621,
+      33623,
+      33618
+    ],
+    "each_fit_window_held_exactly_once": true,
+    "all_fold_group_intersections_empty": true,
+    "upstream_source_group_OOF_reconstructed": {
+      "upstream_folds": 3,
+      "source_groups": 615,
+      "fit_windows_reconstructed": 168123,
+      "fit_window_coverage_exactly_once": true,
+      "fit_hold_groups_disjoint": true,
+      "lookback_column_exact": true,
+      "large_column_exact": true,
+      "calibration_used_by_upstream_folds": false
+    }
+  },
+  "calibration": {
+    "identity": {
+      "rows": 42241,
+      "unique_window_ids": 42241,
+      "union_width": 71,
+      "identity_exact": true
+    },
+    "answer_scores_exact_max_over_native_windows": true,
+    "strict_fit_threshold_counts_exact": true,
+    "F1Opt_diagnostic_thresholds_and_counts_exact": true,
+    "strict_window_f1": 0.6539950721576909,
+    "strict_answer_f1": 0.8545454545454545,
+    "diagnostic_window_f1": 0.6604922390875568,
+    "diagnostic_answer_f1": 0.8708133971291866
+  },
+  "freeze_boundary": {
+    "fit_complete_hash_bound_into_summary_and_complete": true,
+    "calibration_used_for_selection": false,
+    "single_use_evaluate_guard_present": true,
+    "recorded_calibration_evaluations": 1
+  },
+  "artifact_hashes_exact": true,
+  "source_inputs_hashes_exact": true,
+  "formal_baseline_hashes_unchanged": true,
+  "formal_baseline_file_count": 7,
+  "GPU_used": false,
+  "official_test_opened": false
+}

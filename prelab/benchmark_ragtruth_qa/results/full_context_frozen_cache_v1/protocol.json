@@ -1,0 +1,21 @@
+{
+  "version": "completed-full-context-frozen-cache-v1",
+  "source": "Only the final selected checkpoint after full_context_encoder_v2 completes epochs0..6. Never select an upstream epoch here.",
+  "scope": "Same3839 development answers:3680fit+159calibration. No official test.",
+  "forward": "One eval/no_grad forward_aligned per answer, original batch1 full input and exact character-to-original-BPE map. BF16 CUDA forward, TF32 disabled, FP32 hidden/logit mapping. Actual two-logit difference is mapped independently of hidden.",
+  "arrays": {
+    "hidden.npy": "float32[708506,768]",
+    "baseline_logit.npy": "float32[708506]",
+    "baseline_gpu_probability.npy": "float32[708506]",
+    "bounds.npy": "int64[3839,2]"
+  },
+  "replay": "Compare every original token GPU probability and both original4rawBPE/answer score vectors. Report exact differences and metrics at the original selected thresholds; do not change upstream selection.",
+  "probability_numeric_gate": {
+    "absolute_tolerance": 2e-06,
+    "relative_tolerance": 0,
+    "reason": "Allow only small floating-point replay discrepancies, record all non-exact values and original-threshold count differences. Exceeding tolerance stops before cache complete."
+  },
+  "cpu_followup": "CPU sigmoid can differ from saved GPU probability; preserve actual CPU sigmoid, require zero-residual logit equality, record probability/count differences. No probability replacement or gradient workaround.",
+  "no_backbone_training": true,
+  "upstream_calibration_reused_not_crossfit": true
+}

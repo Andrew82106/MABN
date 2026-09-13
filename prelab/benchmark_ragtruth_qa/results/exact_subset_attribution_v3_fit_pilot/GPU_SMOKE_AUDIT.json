@@ -1,0 +1,31 @@
+{
+  "status": "passed_independent_read_only_GPU_smoke_audit",
+  "audit_source_sha256": "81c0d452c322dc3416f367fd3eaf61057c6c3fad0b422b9b36b42209312fd2ec",
+  "GPU_SMOKE_sha256": "0208cb18b836cd3a1421f5bd061028c1eca9ef420b12a0a8e79d9f6b5496a4cc",
+  "runtime_signature_sha256": "63f1a0c0a032e74e2199fc62eea292f1100d1f4e2b1f6b4aa64b639686e795c8",
+  "checks": {
+    "runner_gate_protocol_selection_hashes_exact": true,
+    "strict_WDDM_exception_replayed_for_every_foreign_entry": true,
+    "no_gate_blocker": true,
+    "free_memory_at_least_6GiB": true,
+    "same_Llama2_7B_32layer_SDPA_backend": true,
+    "first_last_hash_selected_rows_used": true,
+    "repeat_exact": true,
+    "Shapley_efficiency_within_1e_12": true
+  },
+  "measurements": {
+    "scan_row_counts_before_after": [
+      33,
+      34
+    ],
+    "free_bytes_before_load": 7459569664,
+    "allocated_after_load_bytes": 3868698112,
+    "model_load_seconds": 10.449226099997759,
+    "smoke_compute_seconds": 5.73352749994956,
+    "forward_calls": 17
+  },
+  "fit_gold_files_opened": false,
+  "labels_accessed": false,
+  "official_test_opened": false,
+  "paper_baseline_modified_or_scored": false
+}

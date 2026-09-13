@@ -1,0 +1,21 @@
+{
+  "version": "lumina-frozen-token-to-common-k4-v2-gold-isolated",
+  "role": "evaluation_adapter_for_frozen_lumina_formula; no model change",
+  "native_output": "Frozen per-answer-token float32 LUMINA score: 0.5*IPR-0.5*MMD_squared. IPR and -MMD are retained only as fixed ablations.",
+  "mapping": {
+    "window": "Reconstruct the project's eligible stride-one 4-raw-BPE geometry from label-free answer text and frozen token offsets; take the float64 arithmetic mean of the four token scores (all actual tokens for an answer shorter than four).",
+    "answer": "Maximum over every eligible mapped 4-BPE window in the answer.",
+    "parameters": 0,
+    "training": false,
+    "deterministic": true
+  },
+  "gold_isolation": {
+    "map_stage": "May open only feature_inputs.jsonl (which has labels_used=false), frozen LUMINA feature artifacts, and legacy score arrays. It never opens answers_*, tokens_*, windows_k4_*, gold manifests, metrics, thresholds, or test data.",
+    "score_stage": "Runs only after mapped arrays are frozen and byte-bound; it then opens project answer/window labels solely for thresholds and metrics."
+  },
+  "evaluation": "On calibration, choose separate window and answer thresholds by F1, then precision, then higher threshold; predict score>=threshold and report F1/AUROC/AP.",
+  "legacy_replay": "Every v2 mapped value must equal the corresponding frozen v1 score value exactly; v1 remains historical because its orchestration validated gold before score freeze.",
+  "official_test_opened": false,
+  "model_loaded": false,
+  "new_model_fits": 0
+}

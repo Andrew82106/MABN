@@ -1,0 +1,11 @@
+{
+  "version": "r23-focused-4bpe-verification-v1",
+  "complete": false,
+  "completed_count": 0,
+  "expected_count": 602,
+  "windows_completed": 0,
+  "records": {},
+  "signature_sha256": "318820ad126d75dc7c32e269c3db3b25df07b000d97b3f870e65e2c484f680d5",
+  "labels_used": false,
+  "original_validation_or_test_parsed": false
+}

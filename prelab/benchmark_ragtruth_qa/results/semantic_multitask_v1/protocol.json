@@ -1,0 +1,38 @@
+{
+  "version": "qa-semantic-auxiliary-types-v1",
+  "method": "semantic_tcn_aux_types_w32",
+  "scope": "Frozen fit634/cal159 only; no official test",
+  "input": "Exact standardized1090 token inputs of semantic_sequence_v1; no feature/PCA/scaler/checker refit",
+  "architecture": "Same32width/RF7 trunk and binary risk head; extra Linear32->2 auxiliary independent BCE heads.",
+  "parameters": 41219,
+  "main_seed": 20260926,
+  "aux_seed": 20261001,
+  "auxiliary_rng": "fork_rng CPU isolate, preserve post-main-init RNG state",
+  "types": {
+    "Evident Baseless Info": 0,
+    "Subtle Baseless Info": 0,
+    "Evident Conflict": 1,
+    "Subtle Conflict": 1
+  },
+  "overlap": "Two binary auxiliary labels may both be1 on overlapping spans; their OR must equal unchanged raw lexical risk_mask.",
+  "label_mapping": "Use frozen span_token_mapping, independently recompute each original span overlap containing at least one actual alphanumeric character; nonlexical zeros.",
+  "loss": "original weighted risk BCE +0.25*mean(two auxiliary weighted BCEs); each term normalized by original target139518",
+  "aux_weight": "Start with exact original base group/answer/lexical weights. For each auxiliary head, binary class factor from fit base masses only; reequalize source-connected group mass, normalize total139518. Nonlexical/padding loss0.",
+  "inference": "Only original total-risk head is used in token scores, original4raw lexical-window max, answer max, thresholds and selection. Types never enter inputs or checkpoint selection.",
+  "epochs": 30,
+  "batch_answers": 8,
+  "shuffle": "Same frozen30 answer permutations as original network",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "all_parameters": true
+  },
+  "dropout": 0.2,
+  "cpu_threads": 4,
+  "selection": "Exactly original cal overall-risk maxmin F1, then windowF1/windowprecision/earlier epoch; no type-aware tuning.",
+  "budget": "One additional model, one seed, coefficient0.25 fixed, no early stopping or search",
+  "comparison": "Frozen original semantic width32 model reused, not retrained; all previous baselines retained.",
+  "offline_extra_checker": true,
+  "limits": "Multitask gradients change regularization and optimization, so improvement alone does not establish a unique causal explanation. Single-seed cal-selected development only."
+}

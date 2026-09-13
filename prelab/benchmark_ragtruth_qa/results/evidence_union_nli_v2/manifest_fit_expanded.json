@@ -1,0 +1,71 @@
+{
+  "status": "CPU_manifest_complete_missing_NLI",
+  "version": "attention-bm25-exact-evidence-union-nli-v2",
+  "cohort": "fit_expanded",
+  "answers": 3046,
+  "claims": 25864,
+  "candidate_instances": 175960,
+  "candidate_count_per_claim_histogram": {
+    "3": 167,
+    "4": 221,
+    "5": 1130,
+    "6": 7315,
+    "7": 11658,
+    "8": 4928,
+    "9": 445
+  },
+  "attention_bm25_overlap_instances": 53983,
+  "existing_cache_hit_instances": 4696,
+  "missing_cache_instances": 171264,
+  "unique_candidate_requests": 162250,
+  "unique_missing_requests": 158929,
+  "portable_reuse_instance_status": {
+    "portable_conflict_recompute": 113,
+    "portable_exact_hit": 4696,
+    "portable_missing": 171151
+  },
+  "candidate_files": {
+    "jsonl": {
+      "path": "candidates_fit_expanded.jsonl",
+      "sha256": "8d6ef184fc314561e47bc50e23fe0e036a3c389688f7468c425cc0e5199c675c"
+    },
+    "arrays": {
+      "path": "candidate_arrays_fit_expanded.npz",
+      "sha256": "c652376ea42a43e30bfd9de58d1a77a894204307a5c1252daf0696e649344dd5"
+    },
+    "missing_requests": {
+      "path": "missing_requests_fit_expanded.jsonl",
+      "sha256": "ace189253491a2a83318c0d3b04225d2e77290098ca677e46637f08ac0513379"
+    }
+  },
+  "source_snapshot": {
+    "runner_sha256": "ebcc46faa91e090926d91a1b7dcc485087d99a78af0f4cd576585b1217354a48",
+    "protocol_sha256": "da35dec0c53f195f3db76df0904a8e1a6b9d75c5801f552ace42c49a85859596",
+    "attribution_manifest_sha256": "b01addad0b38050cffc50ab497d542dd6c13c8aa926c0ef85f58983a1fd536a0",
+    "attribution_layouts_sha256": "e2fcb05279dda21b0332c616af9496c8f36b56ef6d5b17723738d172a9f66a0d",
+    "atomic_input_sha256": "2df31cb90161e1fb9b7d560011dce2e2d338e60d984d48599e40f28ba58b2e36",
+    "atomic_extraction_sha256": "c0aa2f5cd4ab7c0623374fdbcb58bf34f5607d2e2e073ba3ce2a9c32e18cbec6",
+    "existing_cache_catalog_audit_sha256": "19794ecfcc231dfd0f08a8919b5654b03c7353cee7c87fbebf70d34bf516edf8",
+    "model": {
+      "checkpoint": "tasksource/ModernBERT-base-nli",
+      "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+      "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+      "class_order": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ],
+      "frozen": true,
+      "maximum_pair_tokens": 2048,
+      "truncation": false
+    },
+    "semantic_units_sha256": "eb3bbb3657a99c70ddde47427a3fcd45966e7f3ff7ef3e83f446d5afeb010820",
+    "expanded_raw_claims_sha256": "c1731ab6ca68569f7811db46f594431751995d65d2468cdec51f8d63f37d585a"
+  },
+  "model_loaded": false,
+  "GPU_used": false,
+  "labels_used": false,
+  "rule_selected": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

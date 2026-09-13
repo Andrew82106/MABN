@@ -1,0 +1,29 @@
+{
+  "version": "ragognize-llama2-unified-k4-train-only-v1",
+  "scope": "Convert only the pinned RAGognize train shard and only its Llama-2-7b-chat-hf response into answer, token-sequence, token-row, and stride-1 4-raw-BPE-window records.",
+  "cohorts": {
+    "all_train": "Exactly the pre-frozen ALL_TRAIN_INDEX.jsonl membership.",
+    "no_unanswerability_hint": "Exactly the pre-frozen NO_UNANSWERABILITY_HINT_INDEX.jsonl membership, selected solely by template_details.settings.unanswerability_hint == false before label descriptives."
+  },
+  "detector_inputs": {
+    "question": "Exact user_prompt.",
+    "retrieved_passages": "Exact documents_str.",
+    "released_prompt": "Exact responses.Llama-2-7b-chat-hf.details.full_prompt.",
+    "original_response": "Exact responses.Llama-2-7b-chat-hf.text."
+  },
+  "labels": "Copy the released outer hallucinations list byte-for-value into each answer record. Derive binary token risk only from valid=true end-exclusive spans by intersecting alphanumeric response characters. Do not repair, expand, merge, delete, or infer spans. For the one released overlap, derived binary masks use the union while the two original spans stay separate.",
+  "tokenization": "Local Llama-2-7b-chat-hf fast tokenizer, local_files_only. Tokenize exact full_prompt + one literal space + response once, add_special_tokens=false, no padding, no truncation, no EOS appended. Preserve full IDs, full positions, clipped and raw response offsets.",
+  "windows": "Width 4 raw answer BPE, stride 1. Punctuation consumes slots. A window is eligible when at least one token contains an alphanumeric character; risk is the OR of derived token risk. All windows, including ineligible punctuation-only windows, remain in output.",
+  "grouping": "Every answer/token/window carries the pre-frozen recommended_group_id: transitive closure of identical official question index, normalized question, source identity, or exact retrieved context. Any later split must operate on group_id, never individual rows.",
+  "provenance_not_model_input": "Dataset/model/revision, row index, source/group hashes, hint flags, label hashes, official token-start audit flags and answerable metadata are bookkeeping only.",
+  "forbidden": [
+    "test or validation download/read",
+    "network access from converter",
+    "model forward",
+    "training",
+    "GPU use",
+    "baseline modification",
+    "label-based cohort selection",
+    "silent sample filtering or label repair"
+  ]
+}

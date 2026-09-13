@@ -1,0 +1,64 @@
+{
+  "version": "semantic-window-v2-expanded-fit-v1",
+  "selection_freeze": {
+    "source": "semantic_window_v2 native-634 fit-only winner",
+    "variant": "whitebox_geometry",
+    "blocks": [
+      "whitebox",
+      "geometry"
+    ],
+    "width": 26,
+    "C": 0.1,
+    "reselection_on_expanded_fit": false
+  },
+  "cohort": {
+    "fit_answers": 3680,
+    "fit_source_connected_groups": 615,
+    "fit_claims": 34919,
+    "fit_windows": 653979,
+    "positive_fit_windows": 58433,
+    "excluded_nonlexical_windows": 692,
+    "calibration_answers": 159,
+    "calibration_windows": 42241
+  },
+  "whitebox": {
+    "columns": [
+      "claim_token_weighted_mean__whitebox_max__oof_lookback",
+      "claim_token_weighted_mean__whitebox_max__oof_large",
+      "claim_token_weighted_mean__whitebox_max__generation_nll",
+      "claim_token_weighted_mean__whitebox_mean__oof_lookback",
+      "claim_token_weighted_mean__whitebox_mean__oof_large",
+      "claim_token_weighted_mean__whitebox_mean__generation_nll",
+      "claim_token_weighted_mean__whitebox_min__oof_lookback",
+      "claim_token_weighted_mean__whitebox_min__oof_large",
+      "claim_token_weighted_mean__whitebox_min__generation_nll",
+      "claim_token_weighted_mean__whitebox_std__oof_lookback",
+      "claim_token_weighted_mean__whitebox_std__oof_large",
+      "claim_token_weighted_mean__whitebox_std__generation_nll"
+    ],
+    "Lookback": "Frozen upstream three-fold source-group-OOF lb_prefix_pre_header model applied only to answers whose source group was held from that model.",
+    "large": "Frozen upstream three-fold source-group-OOF ModernBERT token probabilities; each source group predicted exactly once by a model that excluded it.",
+    "generation_nll": "Label-blind teacher-forced token NLL, pooled by the frozen four-BPE window construction.",
+    "claim_pooling": "For each claim and each of the three window signals: max, mean, min, population standard deviation.",
+    "window_pooling": "Claim summaries averaged by exact lexical-token ownership inside each window.",
+    "in_sample_supervised_columns_allowed": false
+  },
+  "geometry": "The exact 14 fixed semantic_window_v2 window geometry columns.",
+  "fit": {
+    "folds": 5,
+    "split": "sklearn GroupKFold over locked source-connected group IDs",
+    "model": "StandardScaler plus liblinear L2 LogisticRegression",
+    "weights": "Exact semantic_window_v2 equal group/answer/window base mass, then fit-only binary class balance.",
+    "thresholds": "Separate F1-optimal window and answer thresholds from five-fold expanded-fit OOF scores, frozen before calibration.",
+    "answer_score": "Maximum eligible-window probability per answer."
+  },
+  "calibration": "Separate single-use evaluation after full model and both thresholds are frozen; no calibration threshold fitting.",
+  "limitations": [
+    "The upstream source-group OOF folds are frozen three-fold predictions and are not retrained inside each downstream five-fold split.",
+    "The 3,680 answers still cover only 615 source-connected groups.",
+    "Calibration has been used repeatedly elsewhere in the project and is development evidence, not a fresh final test."
+  ],
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,52 @@
+{
+  "status": "complete_existing_cache_catalog",
+  "unique_requests_seen": 72081,
+  "portable_exact_requests": 71273,
+  "portable_conflicting_requests": 808,
+  "cached_occurrences": 76883,
+  "source_occurrences": {
+    "atomic_microclaim_nli_v1_individual": 66410,
+    "semantic_top3_missing_calibration": 2104,
+    "semantic_top3_missing_fit": 8369
+  },
+  "conflict_occurrences": 2136,
+  "reuse_policy": "bit-identical across every cached occurrence",
+  "source_binding": {
+    "atomic_input_sha256": "2df31cb90161e1fb9b7d560011dce2e2d338e60d984d48599e40f28ba58b2e36",
+    "atomic_protocol_sha256": "32641952a733a93b28ed2a94b0abd90717a8d3d15406f16a6bc646a09aababfd",
+    "atomic_extraction_sha256": "c0aa2f5cd4ab7c0623374fdbcb58bf34f5607d2e2e073ba3ce2a9c32e18cbec6",
+    "semantic_top3": {
+      "fit": {
+        "link_manifest_sha256": "82e72bbdc3413fec9d8886209a5bd593e67f38494685a82916ae2477101929a1",
+        "existing_probabilities_sha256": "85f98e4beecd3cd890a64089ae21033d2e83b8400d1f7b76fb6ebcadf59e40ec",
+        "missing_requests_sha256": "26506fedaacf527db42a43b7854da95afee5e07b2b35b843fb487a7b20d5ff42",
+        "missing_probabilities_sha256": "f84f3029f45ca26dff66577bf1e1926802f0af93af6cde1d4b3cf3b8db7f5c3b",
+        "missing_metadata_sha256": "dbff67ea5886bea9c3cc05ff875b5f4762e07242816aaf6d3266d3fe66c5f666"
+      },
+      "calibration": {
+        "link_manifest_sha256": "c7d8caf17287a974275fb3febdcb16501699a614d871b0d8e8e567a2548b181b",
+        "existing_probabilities_sha256": "44923981aa577223c6c8851f77c7e5fa6e81f036e8ca166c886bb3fc5f0f4afc",
+        "missing_requests_sha256": "a45ff2539d5db5af82d70f3b791c89bc143cfe47f87ca1f0e0efa19f6d4db517",
+        "missing_probabilities_sha256": "e803d022b071a8cfd30222597312bf71b39b15afb089de50d88f25089dc8668e",
+        "missing_metadata_sha256": "0d2f2510f859a73f54ea6589e825378943bbf7925f8c1203be2a5a5c079cbc1e"
+      }
+    }
+  },
+  "model": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "maximum_pair_tokens": 2048,
+    "truncation": false
+  },
+  "model_loaded": false,
+  "GPU_used": false,
+  "labels_used": false,
+  "official_test_opened": false
+}

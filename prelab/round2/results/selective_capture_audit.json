@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "model": "random tiny Qwen2 with real tokenizer, same decoder implementation",
+  "before_after_equal_standard_output_hidden_states": true,
+  "scope": "Hook layer indexing and final normalization, not large-model prediction quality"
+}

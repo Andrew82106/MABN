@@ -1,0 +1,40 @@
+{
+  "version": "monotone-two-score-combiner-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "inputs": [
+    "existing peer four-BPE window probability",
+    "selected tail2 four-BPE window probability"
+  ],
+  "training": "Original native634 fit answers/168123 windows only; use unchanged q.base_weights loss and source groups.",
+  "model": {
+    "type": "HistGradientBoostingClassifier",
+    "max_iter": 100,
+    "max_depth": 2,
+    "max_leaf_nodes": 4,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "monotonic_cst": [
+      1,
+      1
+    ],
+    "random_state": 20261008
+  },
+  "monotonicity": "Increasing either input risk cannot reduce predicted risk.",
+  "budget": "Exactly one fixed100-step fit per peer, three fits total; no architecture/hyperparameter search.",
+  "calibration": "Original159 answers/42241 windows only set separate F1-optimal thresholds; no training gradients or early stopping.",
+  "answer": "Maximum over every original eligible window; unchanged human gold and4rawBPE geometry.",
+  "limits": [
+    "Upstream models also trained on the634 fit answers; these are in-sample base predictions, not cross-fitted stacking. Development generalization may fail.",
+    "Tail base trained3680; each peer trained634. Same input supervision is available to all3 combiners.",
+    "This is an offline supervised window-score combiner with extra semantic checking, not a new native attention mechanism.",
+    "Calibration has been repeatedly inspected. Keep all failures and compare with stronger completed fixed-weight combinations."
+  ],
+  "official_test_opened": false,
+  "GPU_used": false
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "lumina",
+  "expected_rows": 2,
+  "completed_rows": 2,
+  "complete": true,
+  "seconds": 2.5249713999801315,
+  "peak_allocated_gib": 5.401998996734619,
+  "record_files": [
+    "5abc0a5d5542993f40c73c64__complete.json",
+    "5abc0a5d5542993f40c73c64__partial.json"
+  ],
+  "labels_read": false
+}

@@ -1,0 +1,14 @@
+{
+  "n": 80,
+  "error": 40,
+  "normal": 40,
+  "methods": 51,
+  "test": "fresh normalized-source-disjoint Llama2-7B summaries; generation domain differs from Mistral training",
+  "selection_manifests_required": [
+    "structure_selection.json",
+    "fusion_selection.json"
+  ],
+  "supplement": "same Qwen7B NF4; no external judge; original released human labels",
+  "probabilities": "scores uncalibrated; validation empirical threshold does not guarantee population FPR",
+  "cost": "additional query costs only; base feature extraction cost excluded, amortized batch times not single-user latency"
+}

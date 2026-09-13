@@ -1,0 +1,41 @@
+{
+  "version": "microclaim-within-answer-contrastive-v5",
+  "scope": "Frozen expanded-v4 fit only; calibration labels and official test are absent from pair mining and training selection.",
+  "pair_unit": "One risky microclaim and one safe microclaim in the exact same generated answer, hence the same question/source/group/fold.",
+  "hard_negative_rule": {
+    "eligible_safe": "gold_label=0 and at least 2 non-stop content words",
+    "maximum_per_positive": 2,
+    "ordered_key": [
+      "same parent atomic claim",
+      "content-word Dice",
+      "character-trigram Dice",
+      "shared selected-evidence sentence count",
+      "smallest answer-span gap",
+      "lowest example index"
+    ],
+    "scores": "Deterministic label-independent surface/context scores; no model score and no calibration statistic."
+  },
+  "initialization": {
+    "fold_f": "Load expanded-v4 fold_f/model.pt, which was trained without source-connected held fold f.",
+    "full_fit": "Load expanded-v4 full_fit/model.pt for calibration inference.",
+    "optimizer": "Fresh AdamW state because v4 checkpoints store model weights only; this is a warm-start stage, not optimizer-state continuation."
+  },
+  "model": "Unchanged 149,607,171-parameter ModernBERT-base NLI encoder/head and unchanged risk logit logsumexp(neutral,contradiction)-entailment; no new head.",
+  "continuation_objective": {
+    "base_supervision": "The starting v4 checkpoint already received one all-fit weighted-BCE epoch.",
+    "extra_pass": "One pass over selected pair endpoints only.",
+    "endpoint_bce": "Original v4 claim weights restricted to selected endpoints; divide by endpoint reuse count before normalization.",
+    "ranknet": "Group -> positive microclaim -> selected pair equal mass; softplus(risk_safe-risk_error).",
+    "lambda": 0.25,
+    "loss": "weighted endpoint BCE + 0.25 * weighted RankNet",
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "epochs": 1
+  },
+  "crossfit": "Pair inherits its source-connected held_fold. Fold f may use only pairs with held_fold != f; full-fit uses all fit pairs.",
+  "evaluation": "Unchanged expanded-v4 4-BPE window projection, fit-OOF threshold selection and strict calibration evaluation.",
+  "selection": "Single frozen candidate; no lambda/LR/pair-rule grid and no calibration-based choice.",
+  "baselines": "Read-only; no baseline model, score, threshold, or artifact is modified.",
+  "available_stages": "CPU prepare -> check -> cpu-tiny -> independent audit -> finalize. This runner has no CUDA stage.",
+  "official_test_opened": false
+}

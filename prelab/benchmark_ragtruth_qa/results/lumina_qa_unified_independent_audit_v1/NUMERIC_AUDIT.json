@@ -1,0 +1,369 @@
+{
+  "status": "passed",
+  "audit_kind": "independent numeric reconstruction from every raw feature NPZ",
+  "producer_aggregation_or_metric_functions_called": false,
+  "producer_modules_imported": false,
+  "new_fits": 0,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "signature_sha256": "b11a164806a1e5f6dd549374155f2a5b0112ce42fc86b92286053005164b6dc9",
+  "model_files_actual_full_SHA_verified": true,
+  "model_asset_bytes_hashed": 13479255401,
+  "feature_records_actual_SHA_verified": 3839,
+  "counts": {
+    "answers": 3839,
+    "fit_answers": 3680,
+    "calibration_answers": 159,
+    "fit_groups": 615,
+    "calibration_groups": 154,
+    "raw_tokens": 708506,
+    "windows": 696220,
+    "fit_windows": 653979,
+    "calibration_windows": 42241,
+    "calibration_positive_answers": 100,
+    "calibration_positive_windows": 5984,
+    "punctuation_slot_occurrences_in_windows": 437624,
+    "short_windows": 1,
+    "raw_tokens_outside_all_eligible_windows": 1,
+    "negative_first_raw_offsets_preserved": 3837
+  },
+  "all_708506_float32_token_formulas_exact": true,
+  "all_eligible_geometry_reenumerated_without_gold_filter": true,
+  "all_3839_answer_labels_preserved_including_unmarked_refusals": true,
+  "calibration_thresholds_recomputed": 9,
+  "metrics_algorithm": "Exact confusion counts; unique-bin threshold search; independent tied-pair AUC and stepwise precision-recall AP.",
+  "methods": {
+    "lumina": {
+      "score_arrays": {
+        "window_scores": {
+          "values": 696220,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "answermax_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "paper_answer_mean_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        }
+      },
+      "thresholds_exact": true,
+      "thresholds": {
+        "window": {
+          "threshold": 0.03749706089729443,
+          "f1": 0.3312991877446235,
+          "precision": 0.221409686673792,
+          "rows": 42241,
+          "positive": 5984
+        },
+        "answermax": {
+          "threshold": 0.5166325927712023,
+          "f1": 0.7850467289719626,
+          "precision": 0.7368421052631579,
+          "rows": 159,
+          "positive": 100
+        },
+        "paper_answer_mean": {
+          "threshold": 0.0002717100664283634,
+          "f1": 0.7914893617021277,
+          "precision": 0.6888888888888889,
+          "rows": 159,
+          "positive": 100
+        }
+      },
+      "calibration_metrics": {
+        "window": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 3936,
+          "fp": 13841,
+          "fn": 2048,
+          "tn": 22416,
+          "precision": 0.221409686673792,
+          "recall": 0.6577540106951871,
+          "f1": 0.3312991877446235,
+          "auroc": 0.6914064188084499,
+          "average_precision": 0.27006244858146744
+        },
+        "answermax": {
+          "n": 159,
+          "positive": 100,
+          "tp": 84,
+          "fp": 30,
+          "fn": 16,
+          "tn": 29,
+          "precision": 0.7368421052631579,
+          "recall": 0.84,
+          "f1": 0.7850467289719626,
+          "auroc": 0.7022033898305085,
+          "average_precision": 0.7908760928061055
+        },
+        "paper_answer_mean": {
+          "n": 159,
+          "positive": 100,
+          "tp": 93,
+          "fp": 42,
+          "fn": 7,
+          "tn": 17,
+          "precision": 0.6888888888888889,
+          "recall": 0.93,
+          "f1": 0.7914893617021277,
+          "auroc": 0.7433898305084746,
+          "average_precision": 0.8400970063412581
+        }
+      },
+      "metric_absolute_errors": {
+        "window": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 0.0
+        },
+        "answermax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 1.1102230246251565e-16
+        },
+        "paper_answer_mean": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 1.1102230246251565e-16,
+          "average_precision": 1.1102230246251565e-16
+        }
+      }
+    },
+    "ipr": {
+      "score_arrays": {
+        "window_scores": {
+          "values": 696220,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "answermax_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "paper_answer_mean_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        }
+      },
+      "thresholds_exact": true,
+      "thresholds": {
+        "window": {
+          "threshold": 0.2561292820610106,
+          "f1": 0.3085320014417383,
+          "precision": 0.22296643596040783,
+          "rows": 42241,
+          "positive": 5984
+        },
+        "answermax": {
+          "threshold": 0.6911095455288887,
+          "f1": 0.78125,
+          "precision": 0.6410256410256411,
+          "rows": 159,
+          "positive": 100
+        },
+        "paper_answer_mean": {
+          "threshold": 0.11922524397399675,
+          "f1": 0.7871485943775101,
+          "precision": 0.6577181208053692,
+          "rows": 159,
+          "positive": 100
+        }
+      },
+      "calibration_metrics": {
+        "window": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 2996,
+          "fp": 10441,
+          "fn": 2988,
+          "tn": 25816,
+          "precision": 0.22296643596040783,
+          "recall": 0.5006684491978609,
+          "f1": 0.3085320014417383,
+          "auroc": 0.6472254518729115,
+          "average_precision": 0.23857691015327986
+        },
+        "answermax": {
+          "n": 159,
+          "positive": 100,
+          "tp": 100,
+          "fp": 56,
+          "fn": 0,
+          "tn": 3,
+          "precision": 0.6410256410256411,
+          "recall": 1.0,
+          "f1": 0.78125,
+          "auroc": 0.6994915254237288,
+          "average_precision": 0.7828361639065853
+        },
+        "paper_answer_mean": {
+          "n": 159,
+          "positive": 100,
+          "tp": 98,
+          "fp": 51,
+          "fn": 2,
+          "tn": 8,
+          "precision": 0.6577181208053692,
+          "recall": 0.98,
+          "f1": 0.7871485943775101,
+          "auroc": 0.6888135593220339,
+          "average_precision": 0.8063362272938152
+        }
+      },
+      "metric_absolute_errors": {
+        "window": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 2.7755575615628914e-17
+        },
+        "answermax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 1.1102230246251565e-16,
+          "average_precision": 1.1102230246251565e-16
+        },
+        "paper_answer_mean": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 1.1102230246251565e-16
+        }
+      }
+    },
+    "negative_mmd": {
+      "score_arrays": {
+        "window_scores": {
+          "values": 696220,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "answermax_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        },
+        "paper_answer_mean_scores": {
+          "values": 3839,
+          "exact": true,
+          "max_abs_error": 0.0
+        }
+      },
+      "thresholds_exact": true,
+      "thresholds": {
+        "window": {
+          "threshold": -0.0741061609322827,
+          "f1": 0.31370453492928646,
+          "precision": 0.19934803277946303,
+          "rows": 42241,
+          "positive": 5984
+        },
+        "answermax": {
+          "threshold": -9.129342456149152e-08,
+          "f1": 0.7773279352226721,
+          "precision": 0.6530612244897959,
+          "rows": 159,
+          "positive": 100
+        },
+        "paper_answer_mean": {
+          "threshold": -0.1591144843115057,
+          "f1": 0.7982456140350878,
+          "precision": 0.7109375,
+          "rows": 159,
+          "positive": 100
+        }
+      },
+      "calibration_metrics": {
+        "window": {
+          "n": 42241,
+          "positive": 5984,
+          "tp": 4403,
+          "fp": 17684,
+          "fn": 1581,
+          "tn": 18573,
+          "precision": 0.19934803277946303,
+          "recall": 0.7357954545454546,
+          "f1": 0.31370453492928646,
+          "auroc": 0.6294020634628695,
+          "average_precision": 0.17804449002292977
+        },
+        "answermax": {
+          "n": 159,
+          "positive": 100,
+          "tp": 96,
+          "fp": 51,
+          "fn": 4,
+          "tn": 8,
+          "precision": 0.6530612244897959,
+          "recall": 0.96,
+          "f1": 0.7773279352226721,
+          "auroc": 0.5494915254237288,
+          "average_precision": 0.6897400674847605
+        },
+        "paper_answer_mean": {
+          "n": 159,
+          "positive": 100,
+          "tp": 91,
+          "fp": 37,
+          "fn": 9,
+          "tn": 22,
+          "precision": 0.7109375,
+          "recall": 0.91,
+          "f1": 0.7982456140350878,
+          "auroc": 0.7350847457627119,
+          "average_precision": 0.8385373040333467
+        }
+      },
+      "metric_absolute_errors": {
+        "window": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 1.1102230246251565e-16,
+          "average_precision": 0.0
+        },
+        "answermax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 0.0
+        },
+        "paper_answer_mean": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "auroc": 0.0,
+          "average_precision": 1.1102230246251565e-16
+        }
+      }
+    }
+  },
+  "all_original_scoring_artifacts_unchanged_after_audit": true,
+  "seconds": 56.30980849999469,
+  "limitations": [
+    "Read-only score/geometry audit; no GPU model replay or independent world-truth relabeling.",
+    "Four-raw-BPE mean and answermax are the unified evaluation adaptation; raw whole-answer mean is separate.",
+    "All reported metrics are repeatedly exposed calibration results, not official sealed-test performance.",
+    "IPR and negative-MMD readouts are components/ablations, not alternatives selected as the formal LUMINA result."
+  ],
+  "audit_script_sha256": "2c8a3b340feb01c68cd26042914ec7a9a843f64fe65faec16c397580cee73589",
+  "per_record_checks_sha256": "f5af2ccd0f121e0025070c9a6e118e9077d36f14340f00fe370a3dd3e17c057c",
+  "verified_input_hashes_sha256": "88e0bf1c9311e77cae4ba399ca8af6f8b3ce1bce559fb564b5b67167bfa6fdc7"
+}

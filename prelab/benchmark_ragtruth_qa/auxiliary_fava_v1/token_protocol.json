@@ -1,0 +1,12 @@
+{
+  "version": "fava-silver-token-preparation-v1",
+  "source": "Only previously staged exact-aligned factual-only official FAVA TRAIN candidates after source quarantine; retain synthetic provenance.",
+  "input": "Five original references + ModernBERT SEP + empty question + SEP + original corrupted answer; no correction, markup, original-label type or generator ID enters model input.",
+  "raw_tokenization": "Use existing Llama chat-wrapper encode_view only for consistent raw-token/offset machinery, with the released FAVA checking-prompt prefix. This is auxiliary tokenization, not an observed native generation trace or a fabricated factual user question.",
+  "labels": "Original four factual-candidate type spans are silver positives; other lexical positions are silver negatives under the released synthetic annotation, not verified truth. No edited projection is used.",
+  "mapping": "Unchanged QA nonwhitespace character-average map from whole-input encoder positions to raw tokens. Main QA labels, tokenization, windows, train/cal lists remain unchanged.",
+  "limits": "No span repair, whitespace normalization, answer rewrite, silent truncation or dropped exception. Any exception leaves preparation requiring review, not ready for training.",
+  "GPU_used": false,
+  "trained": false,
+  "official_test_answers_or_labels_read": false
+}

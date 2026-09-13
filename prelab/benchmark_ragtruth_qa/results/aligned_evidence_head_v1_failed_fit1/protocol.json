@@ -1,0 +1,78 @@
+{
+  "version": "aligned-evidence-head-v1",
+  "purpose": "Repair cross-sentence feature mismatch in the 315-wide atomic NLI aggregate.",
+  "scope": "Original RAGTruth QA fit634/calibration159 development data only; official test is absent.",
+  "frozen_inputs": {
+    "microclaims": "Exact label-blind atomic_microclaim_nli_v1 geometry.",
+    "nli": "Every actual frozen ModernBERT NLI pair probability; no GPU inference or parameter update.",
+    "incumbent": "Read-only semantic_claim__old_tree__large_weight0.4 window scores."
+  },
+  "pair_alignment": {
+    "slots": [
+      "individual_top_entailment",
+      "individual_top_contradiction",
+      "individual_top_neutral",
+      "individual_top_bm25",
+      "joint_top_entailment",
+      "joint_top_contradiction"
+    ],
+    "slot_width": 72,
+    "rule": "One slot is copied from one actual evidence/hypothesis pair. E/N/C, BM25, subject/entity/predicate, negation, comparison, quantity, time, condition, and source features never come from different sentences inside a slot.",
+    "selection": "Deterministic label-free argmax with stable pair-order ties: top E/C/N/BM25 individual pair and top E/C joint pair.",
+    "same_pair_interactions": [
+      "entailment_x_claim_token_coverage",
+      "entailment_x_subject_token_coverage",
+      "entailment_x_entity_token_coverage",
+      "entailment_x_predicate_token_match",
+      "entailment_x_negation_match",
+      "entailment_x_comparator_match",
+      "entailment_x_quantity_any_exact",
+      "entailment_x_quantity_all_exact",
+      "entailment_x_temporal_match",
+      "entailment_x_condition_match",
+      "contradiction_x_negation_mismatch",
+      "contradiction_x_comparator_reversal",
+      "contradiction_x_comparator_missing",
+      "contradiction_x_quantity_same_unit_different_value",
+      "contradiction_x_quantity_missing",
+      "contradiction_x_temporal_reversal",
+      "contradiction_x_temporal_missing",
+      "contradiction_x_condition_mismatch",
+      "entailment_x_cited_source",
+      "contradiction_x_cited_source",
+      "lack_x_missing_claim_coverage",
+      "neutral_x_missing_claim_coverage"
+    ]
+  },
+  "readout": {
+    "candidates": [
+      "any_error__lr",
+      "any_error__hgb",
+      "conflict_only__lr",
+      "conflict_only__hgb"
+    ],
+    "models": {
+      "lr": "StandardScaler plus L2 logistic regression C=0.01.",
+      "hgb": "HistGradientBoosting: 7 leaves, 180 iterations, min leaf 40, L2=2."
+    },
+    "targets": {
+      "any_error": "Any unchanged human risk token in the microclaim.",
+      "conflict_only": "Any unchanged Evident/Subtle Conflict span in the microclaim."
+    },
+    "crossfit": "Five-fold GroupKFold by locked source-connected group. Every fit claim score is held-group OOF.",
+    "weights": "Equal source-group mass, answer mass, claim mass, then binary class balance."
+  },
+  "incumbent_add_gate": {
+    "base_thresholds": "Window and answer cutoffs selected on fit only.",
+    "gate_threshold": "For each OOF head, fit-only threshold maximizes union window F1; no-add is an allowed choice.",
+    "score_mapping": "Added windows are placed above the fit window cutoff and below the fit answer cutoff, preserving base answer decisions.",
+    "veto": "None in v1; therefore all base TP and FP are retained, and additions are reported separately."
+  },
+  "selection": "Fit only: maximize min(window F1, answer F1), then window F1, precision, incremental precision, then earlier candidate.",
+  "projection": "Claim score takes max over claims touched by each unchanged eligible 4-raw-BPE stride-one window.",
+  "calibration": "The selected model and thresholds are frozen in fit_complete.json before calibration labels are opened. Calibration is reported once; no calibration F1 optimization is computed.",
+  "candidate_count": 4,
+  "formal_baselines_modified": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

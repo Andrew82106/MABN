@@ -1,0 +1,27 @@
+{
+  "status": "passed_independent_arithmetic_and_wiring_replay",
+  "fold_answer_coverage_exactly_once": true,
+  "fold_window_coverage_exactly_once": true,
+  "fit_hold_groups_disjoint": true,
+  "oof_columns_reconstructed_exactly": true,
+  "calibration_columns_same_between_modes_exactly": true,
+  "methods": {
+    "old_in_sample": {
+      "saved_model_probability_max_abs_error": 0.0,
+      "answer_max_exact": true,
+      "thresholds_exact": true,
+      "metrics_exact": true,
+      "calibration_windows_f1": 0.6708578046157664,
+      "calibration_answers_f1": 0.8585365853658536
+    },
+    "group_oof": {
+      "saved_model_probability_max_abs_error": 0.0,
+      "answer_max_exact": true,
+      "thresholds_exact": true,
+      "metrics_exact": true,
+      "calibration_windows_f1": 0.6680847443205989,
+      "calibration_answers_f1": 0.8625592417061612
+    }
+  },
+  "official_test_opened": false
+}

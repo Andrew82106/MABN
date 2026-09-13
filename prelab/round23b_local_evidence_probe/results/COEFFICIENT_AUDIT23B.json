@@ -1,0 +1,1295 @@
+{
+  "status": "passed",
+  "reviewer": "/root/data_build/extract_review",
+  "utc": "2026-09-11T16:43:15.140607+00:00",
+  "scope": "R23b R16 actual-train602 frozen5fold PCA/45LR only",
+  "no_fit_or_SVD": true,
+  "no_GPU": true,
+  "original_R16_validation_or_test_opened": false,
+  "production_modules_imported": false,
+  "old_files_modified": false,
+  "limits": [
+    "Frozen PCA fit provenance, weighted means and exact fixed-basis forward checked; no PCA or SVD refit.",
+    "All45 coefficient arrays reconstruct full scores, but only15 selected full arrays were saved; other30 are checked against calibration thresholds in the independent peer audit.",
+    "Candidate answer score must max ALL candidate windows including safe-refusal non-main windows, then filter answer eligibility; QA rules are not used.",
+    "Hash and numerical checks do not independently prove unrecorded external execution history."
+  ],
+  "frozen_files_sha256": {
+    "fit_freeze.json": "c97e3f0b7e705ed79f4c23f88349f2424bacccdbc81ff973618f0b8954143aaf",
+    "summary.json": "a7d2ad34c45b6b738c0a254148176d41876164235dde84bc9c0ebde16740ac6d",
+    "window_scores_oof.jsonl": "ca73e2249d4fd32f8783f63548915c95e67e6c909d91c71ef045c0f17f35e163",
+    "answer_scores_oof.jsonl": "8417f8a10231c4190ee830ab78ce892c5175f070f60cadd3c706811aa28558aa",
+    "fold_0_frozen.pkl": "80e541bdd35da96a98259ea030b61f4251ad414e4c131ee2540601472ca6985a",
+    "fold_0_scores.npz": "e6009b3d838f8581273560eba1fab4600a5d826b8a54b198bb871e098d1cfd71",
+    "fold_1_frozen.pkl": "26d339b1f6ab3f5d7375d8b16473779f305eed31c2aa67c51a773ac344062f72",
+    "fold_1_scores.npz": "cd0aefe8fbf26b509f1a74bd247d58a43014052108fb38c71e251b8714bede76",
+    "fold_2_frozen.pkl": "01cab0cdbb9e8178b08dd9c7431a6a0707b5aee3212d81fe5654e8ea9a693000",
+    "fold_2_scores.npz": "fa2197ede112e529bad895ef470c72bc22dc89f8132d98cf0eda3b823a89a466",
+    "fold_3_frozen.pkl": "72b1defdb9f4bb5936a8737b688d6343e57359d3992d8e4086e9840e3ea7682c",
+    "fold_3_scores.npz": "5967d2aa7cb646e180f25aa812742e27e6daec42091ef736f6f944db789ed2a0",
+    "fold_4_frozen.pkl": "d47f8ec489f90227e73832106c4e6e4669e245a651582077026f8a5ca410bd75",
+    "fold_4_scores.npz": "cba53781cdce4f5adfaa36b5563211af90c146a504a87b4b1bd8529aff7b6fcb",
+    "feature_files.json": "5e7eddc1565f5b93e1f7844ab9c77d2d60c6c8de5457f297fec8d456154e67ed",
+    "designs.npz": "09069cbc7f03a62ceb0f1de7062d08ff4b70ce6df97a702ed82abf4acad4da73",
+    "candidate_windows.jsonl": "e6523ca14cc83ac90404613724b5cbe6a9d53617de50287014497b6c8459c052"
+  },
+  "source_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\protocol.json": "adf81273ea39a7b855f22cf889598c6321a07808872e6a65cb598a0ea897fe89",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\src\\run23.py": "3010a2d4512bd092b55db56e383ba6738259836fda4dcab4666fc84680f99213",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round21_semantic_internal_probe\\src\\run21.py": "bafdd3df606530eb4331346c38982c137eec0077b715354c55e265fe07339523",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round20_localization_optimization\\src\\run20.py": "bd1bc411319681023f7c357e0c64a7b79c442a2230e918184c6aaf8b345bbd14",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round13_generalization_diagnostics\\src\\run13.py": "e8172e27db343e2c651e4a65f2b8f6d8cdf0f60dc1771cd39b53f8b9151e8fb7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round10_dual_granularity\\src\\evaluate10.py": "f2aa8d52e8512cce7a78a401947e16f8d400f463874a7d7e37acc0e64a64404b"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "fit_windows": 5444,
+      "fit_answers": 280,
+      "fit_groups": 166,
+      "fit_class_counts": [
+        4883,
+        561
+      ],
+      "fit_ix_keys_groups_exact": true,
+      "PCA_weight_max_abs": 8.881784197001252e-16,
+      "PCA_normalized_weight_max_abs": 2.168404344971009e-19,
+      "PCA_fit_mean_max_abs": 1.9184653865522705e-13,
+      "PCA_orthonormal_max_abs": 2.6645352591003757e-15,
+      "PCA_all12222_forward_exact": true,
+      "families": {
+        "local_probe": {
+          "width": 66,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.2947435571348426e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                4
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.2947435571348426e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.2947435571348426e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        },
+        "local_mean_fusion": {
+          "width": 851,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.773959005888173e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.773959005888173e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.773959005888173e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        },
+        "local_slots_fusion": {
+          "width": 3210,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.551914400963142e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.551914400963142e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.019806626980426e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.551914400963142e-15,
+                "variance": 7.73070496506989e-12,
+                "scale": 7.105427357601002e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "fit_windows": 5506,
+      "fit_answers": 286,
+      "fit_groups": 166,
+      "fit_class_counts": [
+        4903,
+        603
+      ],
+      "fit_ix_keys_groups_exact": true,
+      "PCA_weight_max_abs": 8.881784197001252e-16,
+      "PCA_normalized_weight_max_abs": 2.168404344971009e-19,
+      "PCA_fit_mean_max_abs": 2.6290081223123707e-13,
+      "PCA_orthonormal_max_abs": 2.220446049250313e-15,
+      "PCA_all12222_forward_exact": true,
+      "families": {
+        "local_probe": {
+          "width": 66,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                5
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_mean_fusion": {
+          "width": 851,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        },
+        "local_slots_fusion": {
+          "width": 3210,
+          "selected_candidate": 0,
+          "selected_C": 0.001,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 2.6645352591003757e-14,
+              "loss_weight_max_abs": 1.687538997430238e-14,
+              "loss_total_mass": 3853.9999999999995,
+              "per_group_equal_loss_max_abs": 2.4868995751603507e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.2121531076433134e-15,
+                "variance": 2.2737367544323206e-12,
+                "scale": 3.552713678800501e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "fit_windows": 6324,
+      "fit_answers": 311,
+      "fit_groups": 167,
+      "fit_class_counts": [
+        5622,
+        702
+      ],
+      "fit_ix_keys_groups_exact": true,
+      "PCA_weight_max_abs": 8.881784197001252e-16,
+      "PCA_normalized_weight_max_abs": 2.168404344971009e-19,
+      "PCA_fit_mean_max_abs": 3.410605131648481e-13,
+      "PCA_orthonormal_max_abs": 2.6645352591003757e-15,
+      "PCA_all12222_forward_exact": true,
+      "families": {
+        "local_probe": {
+          "width": 66,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.905566841755725e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                5
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.905566841755725e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.905566841755725e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_mean_fusion": {
+          "width": 851,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.774758283725532e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.774758283725532e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.774758283725532e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        },
+        "local_slots_fusion": {
+          "width": 3210,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 5.329070518200751e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 5.329070518200751e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 5.1514348342607263e-14,
+              "loss_weight_max_abs": 3.108624468950438e-14,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 5.329070518200751e-15,
+                "variance": 1.000444171950221e-11,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 4,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "fit_windows": 5738,
+      "fit_answers": 287,
+      "fit_groups": 168,
+      "fit_class_counts": [
+        5054,
+        684
+      ],
+      "fit_ix_keys_groups_exact": true,
+      "PCA_weight_max_abs": 8.881784197001252e-16,
+      "PCA_normalized_weight_max_abs": 2.168404344971009e-19,
+      "PCA_fit_mean_max_abs": 2.6290081223123707e-13,
+      "PCA_orthonormal_max_abs": 4.440892098500626e-15,
+      "PCA_all12222_forward_exact": true,
+      "families": {
+        "local_probe": {
+          "width": 66,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.3285794435945933e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                4
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.3285794435945933e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                5
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.3285794435945933e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_mean_fusion": {
+          "width": 851,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.440892098500626e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.440892098500626e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.440892098500626e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_slots_fusion": {
+          "width": 3210,
+          "selected_candidate": 1,
+          "selected_C": 0.01,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.3298697960381105e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.3298697960381105e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 1.5987211554602254e-14,
+              "loss_weight_max_abs": 9.769962616701378e-15,
+              "loss_total_mass": 3854.0,
+              "per_group_equal_loss_max_abs": 2.1316282072803006e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.3298697960381105e-15,
+                "variance": 7.275957614183426e-12,
+                "scale": 9.237055564881302e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "fit_windows": 5566,
+      "fit_answers": 279,
+      "fit_groups": 167,
+      "fit_class_counts": [
+        4927,
+        639
+      ],
+      "fit_ix_keys_groups_exact": true,
+      "PCA_weight_max_abs": 8.881784197001252e-16,
+      "PCA_normalized_weight_max_abs": 2.168404344971009e-19,
+      "PCA_fit_mean_max_abs": 2.5579538487363607e-13,
+      "PCA_orthonormal_max_abs": 1.9984014443252818e-15,
+      "PCA_all12222_forward_exact": true,
+      "families": {
+        "local_probe": {
+          "width": 66,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.930184368751291e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                4
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.930184368751291e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 1.930184368751291e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_mean_fusion": {
+          "width": 851,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.552713678800501e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                6
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.552713678800501e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 3.552713678800501e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 0,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        },
+        "local_slots_fusion": {
+          "width": 3210,
+          "selected_candidate": 2,
+          "selected_C": 0.1,
+          "candidates": [
+            {
+              "C": 0.001,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.107825191113079e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.01,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.107825191113079e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                7
+              ],
+              "selected": false,
+              "selected_saved_score_max_abs": null
+            },
+            {
+              "C": 0.1,
+              "fit_indices_keys_groups_y_exact": true,
+              "full12222_coef_replay_finite": true,
+              "base_weight_max_abs": 8.881784197001252e-16,
+              "class_factor_max_abs": 7.016609515630989e-14,
+              "loss_weight_max_abs": 4.3520742565306136e-14,
+              "loss_total_mass": 3854.0000000000005,
+              "per_group_equal_loss_max_abs": 1.7763568394002505e-14,
+              "scaler_moment_max_abs": {
+                "mean": 4.107825191113079e-15,
+                "variance": 3.183231456205249e-12,
+                "scale": 2.842170943040401e-14,
+                "n_samples_seen": 0.0
+              },
+              "constant_columns": 1,
+              "scaler_effective_weights": "base float32 before float64 moments",
+              "iterations": [
+                8
+              ],
+              "selected": true,
+              "selected_saved_score_max_abs": 2.220446049250313e-16
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "pca_checked": 5,
+  "LR_candidates_checked": 45,
+  "all_candidate_coefficients_replayed_windows": 549990,
+  "selected_saved_scores_compared": 183330,
+  "max_selected_saved_probability_abs": 2.220446049250313e-16,
+  "max_PCA_fit_mean_abs": 3.410605131648481e-13,
+  "max_scaler_mean_abs": 5.329070518200751e-15,
+  "max_scaler_var_abs": 1.000444171950221e-11,
+  "max_loss_weight_abs": 4.3520742565306136e-14,
+  "eligible_windows": 9526,
+  "ineligible_windows": 2696,
+  "all_eligible_fit_appearances": 3,
+  "all_ineligible_fit_appearances": 0,
+  "independent_calibration_audit": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round23b_local_evidence_probe\\results\\CALIBRATION_AUDIT23B.json",
+    "sha256": "8cb81d0924de3c9d21da0b80f5c002f1b6ec1437fa31e3e92593b17f359af78e",
+    "passed": true
+  },
+  "audit_script_sha256": "2ef9157785dfbd15265ce06d51491d5859cac2c6f316e178ebee8d982e357085"
+}

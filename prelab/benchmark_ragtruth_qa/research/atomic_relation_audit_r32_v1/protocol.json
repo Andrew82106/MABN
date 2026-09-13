@@ -1,0 +1,42 @@
+{
+  "schema_version": "ragtruth-qa-atomic-relation-v1",
+  "scope": "RAGTruth QA original fit634 + calibration159 only; official test excluded by explicit path allowlist.",
+  "parent_geometry": "Exact frozen 8,852 sentence-like answer claims from semantic_baseline/cuda_variant/plans.jsonl; used only as label-blind parent spans.",
+  "atomic_split": {
+    "boundaries": [
+      "semicolon",
+      "but/yet/whereas/while",
+      "comma which/who",
+      "result participle",
+      "and/or"
+    ],
+    "guard": "Both sides require a deterministic surface predicate; and/or additionally requires an independent-looking right clause. Between/both/either/neither coordination is protected.",
+    "invariant": "Every answer alphanumeric character remains in exactly one ordered microclaim; whitespace/punctuation gaps may remain outside claims.",
+    "determinism": "No model, parser download, random seed, corpus statistic, label, score, or threshold participates."
+  },
+  "relation_features": {
+    "negation": "Fixed lexical cues including not/n't/never/no/without/neither/nor/unable/lack/fail to.",
+    "comparator": "Fixed symbols and ordered phrases for >, >=, <, <=, equality, range, contrast, increase, decrease.",
+    "number_unit": "Digit/currency/date/range extraction with a fixed unit vocabulary; list markers and recognized passage citations excluded from quantities.",
+    "temporal_order": "Fixed before/after/sequence/boundary cues.",
+    "condition": "Fixed if/unless/only-if/provided/as-long-as/in-case/when/depending cues.",
+    "source_passage": "Explicit claim IDs and parent-claim passage context kept separately; available IDs are 1,2,3 and dataset source_id stays categorical metadata.",
+    "subject_entity": "Surface subject before first predicate, previous atomic sibling as marked antecedent, plus capitalized/quoted entity candidates. These are candidates, not linguistic gold."
+  },
+  "prepare": "Writes label-free microclaim records and prevalence only.",
+  "audit": "Reads original fit/cal gold after preparation to measure span/window coverage and relation-feature activation; gold never enters exported features.",
+  "incumbent_context": "Calibration missed Evident Conflict spans are joined only for post-hoc diagnosis against the frozen R32 error audit.",
+  "prohibitions": [
+    "no training",
+    "no threshold selection",
+    "no baseline changes",
+    "no GPU",
+    "no official test"
+  ],
+  "limits": [
+    "Rules approximate syntax and coreference; candidate subjects/entities are not a dependency parse or NER.",
+    "Feature presence is coverage, not proof that a feature predicts conflict.",
+    "Parent passage context is exported separately from an explicit citation to avoid hiding inheritance.",
+    "Calibration findings are post-selection diagnostics and not independent-test evidence."
+  ]
+}

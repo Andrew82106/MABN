@@ -1,0 +1,105 @@
+{
+  "version": "r22-answer-verification-v1",
+  "methods": [
+    "base",
+    "slots_base",
+    "r19_all",
+    "base_harp_delta",
+    "lookback_tuned",
+    "redeep_tuned",
+    "verifier_direct_broadcast",
+    "verifier_learned_broadcast",
+    "verifier_direct_slots",
+    "verifier_learned_slots"
+  ],
+  "primary_method": "verifier_learned_slots",
+  "scope": "Exploratory repeated CV on R16 actual train301 questions/278 groups/602 frozen answers; original validation/test excluded",
+  "seed": 20260922,
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "T": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "loss_mass": 3854.0,
+  "probe": "Answer-level LR on fit-only PCA64 verifier_hidden plus B-A logit and full-vocabulary A+B probability mass",
+  "pca": {
+    "components": 64,
+    "n_iter": 3,
+    "seed_rule": "20260922 + zero_based_outer_fold",
+    "whiten": false,
+    "weights": "fit-only answer base weights normalized to sum1"
+  },
+  "weights": "Each fit event group equal, condition equal, answer equal before fit-only class factors; re-equalize group loss and normalize total mass3854",
+  "lr": {
+    "solver": "liblinear",
+    "penalty": "l2",
+    "max_iter": 2000,
+    "scaler": "fit-only base-weighted StandardScaler",
+    "cpu_threads": 4
+  },
+  "folds": "Fixed R18/R19 assignment; outer=f, calibration=(f+1)%5, remaining three folds fit",
+  "answer_labels": "Resolved asserted risk; individually reviewed safe refusals risk0; unresolved excluded without zero imputation",
+  "window_labels": "Unchanged 4 raw BPE, punctuation counts length, OR of labeled lexical risk; only resolved assertions evaluated",
+  "direct_score": "Saved softmax over A/B, B probability; model verdict is never used as gold",
+  "relative_slots": "exp((clip-logit(s)-max_answer_clip-logit(s))/T), all visible output windows, epsilon=float64 machine epsilon",
+  "joint_score": "Verifier answer risk * relative_slots; exact max over answer windows equals verifier risk",
+  "broadcast": "Verifier answer risk copied to every answer window; explicit post-answer localization control",
+  "individual_threshold_rule": "Each calibration window and answer threshold maximizes risk F1; tie precision then higher threshold",
+  "learned_broadcast_selection": "Choose C by calibration answer F1, answer precision, smaller C; independently freeze window threshold of selected C",
+  "joint_selection": "Choose T or C/T by min(cal window F1, cal answer F1); tie window F1, window precision, smaller C, smaller T",
+  "fit_counts": {
+    "new_lr": 15,
+    "pca": 5,
+    "learned_joint_candidates": 75,
+    "direct_joint_candidates": 25
+  },
+  "all_candidate_tables_saved": true,
+  "no_fit_plus_cal_refit": true,
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260922
+  },
+  "contrasts": {
+    "primary_vs_slots": [
+      "verifier_learned_slots",
+      "slots_base"
+    ],
+    "primary_vs_lookback": [
+      "verifier_learned_slots",
+      "lookback_tuned"
+    ],
+    "primary_vs_redeep": [
+      "verifier_learned_slots",
+      "redeep_tuned"
+    ],
+    "primary_vs_r19": [
+      "verifier_learned_slots",
+      "r19_all"
+    ],
+    "primary_vs_r21": [
+      "verifier_learned_slots",
+      "base_harp_delta"
+    ],
+    "primary_vs_direct_joint": [
+      "verifier_learned_slots",
+      "verifier_direct_slots"
+    ],
+    "primary_vs_learned_broadcast": [
+      "verifier_learned_slots",
+      "verifier_learned_broadcast"
+    ]
+  },
+  "extra_same_qwen_verification": true,
+  "original_generation_state": false,
+  "original_answer_changed": false,
+  "risk_scores_proven_calibrated": false,
+  "original_validation_or_test_used": false,
+  "gold_changed": false
+}

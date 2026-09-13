@@ -1,0 +1,39 @@
+{
+  "version": "fava-full-training-exact-character-census-v1",
+  "repository": "fava-uw/fava-data",
+  "revision": "f4e40415d525b18bcb49ba241f26fd8e12eeb606",
+  "population": 30073,
+  "input_bytes": 137320668,
+  "input_sha256": "5f6422b13b48b3f6fdff7bab4698b3702c90154c10cad519047f58600e6536a7",
+  "scope": "Existing official training.json only, all rows in original order. No download, model, GPU, training, current fit/cal mutation or human evaluation/test reads.",
+  "parser": "Reuse unchanged inspect_training.py prompt_parts and parse_markup. No whitespace normalization, fuzzy matching, tag repair, answer rewriting or new parser heuristics for acceptance.",
+  "acceptance": "Prompt and known balanced markup parse; reconstructed corrupted answer equals original prompt answer character-for-character; every nonempty span bounds/text matches the answer. Positions are Python Unicode codepoint half-open offsets, not tokenizer offsets.",
+  "factual_candidate_types": [
+    "contradictory",
+    "entity",
+    "invented",
+    "relation"
+  ],
+  "separately_reported_other_types": [
+    "subjective",
+    "unverifiable"
+  ],
+  "semantic_limit": "All original labels stay synthetic and retain their original six types. Exact alignment does not verify facts or annotation completeness. These four factual candidates are not automatically converted to public QA human classes.",
+  "negative_limit": "No-span rows are only unmarked, not certified negatives. The edited projection is never exported as a clean training example or treated as pre-corruption original truth. Unmarked answer positions are not certified true tokens.",
+  "failure_retention": "Every failed record retains raw index, original prompt/completion, raw type/tag counts, stage/category/reason and source hashes when available. Mismatch may report whitespace-normalized equality for diagnosis only, never acceptance.",
+  "grouping": "Per-reference SHA256 in original order; unordered exact reference-multiset hash and member lists; separate shared-reference-block members. Preserve duplicates in the multiset. No split creation or connected-component merging. These are conservative grouping proxies; shared retrieval distractors do not identify original article IDs.",
+  "outputs": [
+    "rows.jsonl",
+    "failures.jsonl",
+    "reference_groups.jsonl",
+    "shared_reference_blocks.jsonl",
+    "summary.json",
+    "SAMPLE100_AGREEMENT.json",
+    "complete.json"
+  ],
+  "crosscheck": "Verify all100 previously sampled outcomes and exact aligned spans against unchanged SAMPLE100_INSPECTION.jsonl.",
+  "existing_fit_cal_modified": false,
+  "GPU_used": false,
+  "trained": false,
+  "evaluation_data_opened": false
+}

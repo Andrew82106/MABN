@@ -1,0 +1,13 @@
+{
+  "actual_exit_code": 1,
+  "reason": "Extra auditor check replayed old primary sigmoid using current default14 CPU threads, but original trainer used4. This is an auditor execution-context mismatch, not incorrect saved readout.",
+  "measured": {
+    "old_primary_default14_maxdiff": 2.9802322387695312e-08,
+    "old_primary_default14_different_tokens": 2,
+    "old_primary_original4_exact": true,
+    "new_aux_default14_exact": true,
+    "new_aux_using4_maxdiff": 3.725290298461914e-09,
+    "new_aux_using4_different_tokens": 1
+  },
+  "repair": "Replay each existing sigmoid under its original CPU thread context; preserve original probabilities, thresholds and all source outputs."
+}

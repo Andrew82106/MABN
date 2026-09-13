@@ -1,0 +1,1005 @@
+{
+  "status": "passed",
+  "scope": "Independent read-only auxiliary human TRAIN data audit; no model forward, GPU, fit or official test answer/gold access.",
+  "script_sha256": "3e8dcf2b1649027cbd96a0dd908eb1b71c9c483d91839452c3f9ef661a684827",
+  "code_and_manifest_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\prepare_auxiliary_human.py": "98c622e245973096abbc70b6596e97d04129d9c50e4aace526afc482af3a2645",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\prepare_auxiliary_tokens.py": "d0dd2d7c1c95775c8ada7d39266a06d958a0df742b11e533f05344e81501dad2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_human_v1\\manifest.json": "4dcd15891f34b249fe6669cf120ce9c1694fe1aa4820427acca96ac7fc00abb1",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\auxiliary_human_v1\\token_input_preparation.json": "364f57ca7fb964f22d870b3a73e4fd30e3c7aefa513e9800eac9150ed2a5a2de"
+  },
+  "source_and_labels": {
+    "status": "passed",
+    "counts": {
+      "Summary": {
+        "answers": 4383,
+        "sources": 731,
+        "groups": 677,
+        "risk_answers": 1370,
+        "span_types": {
+          "Evident Baseless Info": 868,
+          "Evident Conflict": 572,
+          "Subtle Baseless Info": 175,
+          "Subtle Conflict": 71
+        }
+      },
+      "Data2txt": {
+        "answers": 5295,
+        "sources": 883,
+        "groups": 881,
+        "risk_answers": 3672,
+        "span_types": {
+          "Evident Baseless Info": 3151,
+          "Evident Conflict": 3680,
+          "Subtle Baseless Info": 1339,
+          "Subtle Conflict": 58
+        }
+      }
+    },
+    "candidate_train_sources_before_quarantine": 1676,
+    "quarantined_train_sources": 62,
+    "unique_sources": 1614,
+    "unique_groups": 1558,
+    "answers": 9678,
+    "quality_excluded_rows": 6,
+    "span_alignment_issues": 0,
+    "same_source_exact_answer_gold_duplicates_removed": 0,
+    "parsed_train_rows_by_task": {
+      "Summary": 4386,
+      "Data2txt": 5298
+    },
+    "identity_only_lines": 17790,
+    "test_answer_or_gold_JSON_parsed": false,
+    "blank_Data2txt_entity_keys": [],
+    "retained_sources_material_linked_to_QA_fit": [],
+    "quarantine_witnesses": [
+      {
+        "quarantined_source": "11333",
+        "path": [
+          "11333",
+          "15786"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "11365",
+        "path": [
+          "11365",
+          "12068"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "11901",
+        "path": [
+          "11901",
+          "15628"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "11940",
+        "path": [
+          "11940",
+          "15695"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "12002",
+        "path": [
+          "12002",
+          "15702"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "12011",
+        "path": [
+          "12011",
+          "12068"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "12061",
+        "path": [
+          "12061",
+          "15596"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13487",
+        "path": [
+          "13487",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13488",
+        "path": [
+          "13488",
+          "13577"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13491",
+        "path": [
+          "13491",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13498",
+        "path": [
+          "13498",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13500",
+        "path": [
+          "13500",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13505",
+        "path": [
+          "13505",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13510",
+        "path": [
+          "13510",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13512",
+        "path": [
+          "13512",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13517",
+        "path": [
+          "13517",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13519",
+        "path": [
+          "13519",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13521",
+        "path": [
+          "13521",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13529",
+        "path": [
+          "13529",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13534",
+        "path": [
+          "13534",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13536",
+        "path": [
+          "13536",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13538",
+        "path": [
+          "13538",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13540",
+        "path": [
+          "13540",
+          "13857"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13545",
+        "path": [
+          "13545",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13547",
+        "path": [
+          "13547",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13548",
+        "path": [
+          "13548",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13549",
+        "path": [
+          "13549",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13550",
+        "path": [
+          "13550",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13566",
+        "path": [
+          "13566",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13575",
+        "path": [
+          "13575",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13579",
+        "path": [
+          "13579",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13585",
+        "path": [
+          "13585",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13588",
+        "path": [
+          "13588",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13594",
+        "path": [
+          "13594",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13801",
+        "path": [
+          "13801",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13802",
+        "path": [
+          "13802",
+          "13535"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13805",
+        "path": [
+          "13805",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13810",
+        "path": [
+          "13810",
+          "13569"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13811",
+        "path": [
+          "13811",
+          "13569"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13812",
+        "path": [
+          "13812",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13822",
+        "path": [
+          "13822",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13824",
+        "path": [
+          "13824",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13828",
+        "path": [
+          "13828",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13844",
+        "path": [
+          "13844",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13845",
+        "path": [
+          "13845",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13849",
+        "path": [
+          "13849",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13889",
+        "path": [
+          "13889",
+          "13896",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13896",
+        "path": [
+          "13896",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13897",
+        "path": [
+          "13897",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13900",
+        "path": [
+          "13900",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13903",
+        "path": [
+          "13903",
+          "13823"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13907",
+        "path": [
+          "13907",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13912",
+        "path": [
+          "13912",
+          "13799"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "13974",
+        "path": [
+          "13974",
+          "13818"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15624",
+        "path": [
+          "15624",
+          "11940",
+          "15695"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15625",
+        "path": [
+          "15625",
+          "15786"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15633",
+        "path": [
+          "15633",
+          "11900"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15639",
+        "path": [
+          "15639",
+          "11940",
+          "15695"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15684",
+        "path": [
+          "15684",
+          "15696"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15719",
+        "path": [
+          "15719",
+          "11979"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15812",
+        "path": [
+          "15812",
+          "11911"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      },
+      {
+        "quarantined_source": "15823",
+        "path": [
+          "15823",
+          "11911"
+        ],
+        "blocking_identity_reason": "official_test_source"
+      }
+    ],
+    "task_reassembly": "All released evidence and task instructions preserved; only final output:/Overview: cues omitted."
+  },
+  "token_coordinates": {
+    "status": "passed",
+    "answers_with_all_gold_and_all_mapping_coefficients_rebuilt": 9678,
+    "original_human_spans_checked": 9914,
+    "max_mapping_float32_difference": 0.0,
+    "tokenization_replay_sample_size": 100,
+    "sample_seed": 20260912,
+    "sample": [
+      {
+        "index": 489,
+        "response_id": "2085"
+      },
+      {
+        "index": 626,
+        "response_id": "2260"
+      },
+      {
+        "index": 628,
+        "response_id": "2262"
+      },
+      {
+        "index": 711,
+        "response_id": "2345"
+      },
+      {
+        "index": 732,
+        "response_id": "2378"
+      },
+      {
+        "index": 787,
+        "response_id": "2439"
+      },
+      {
+        "index": 876,
+        "response_id": "2558"
+      },
+      {
+        "index": 911,
+        "response_id": "2593"
+      },
+      {
+        "index": 1018,
+        "response_id": "2730"
+      },
+      {
+        "index": 1035,
+        "response_id": "2753"
+      },
+      {
+        "index": 1051,
+        "response_id": "2769"
+      },
+      {
+        "index": 1080,
+        "response_id": "2804"
+      },
+      {
+        "index": 1108,
+        "response_id": "2832"
+      },
+      {
+        "index": 1140,
+        "response_id": "2870"
+      },
+      {
+        "index": 1238,
+        "response_id": "2980"
+      },
+      {
+        "index": 1264,
+        "response_id": "3006"
+      },
+      {
+        "index": 1286,
+        "response_id": "3028"
+      },
+      {
+        "index": 1337,
+        "response_id": "3085"
+      },
+      {
+        "index": 1412,
+        "response_id": "3166"
+      },
+      {
+        "index": 1482,
+        "response_id": "3242"
+      },
+      {
+        "index": 1695,
+        "response_id": "3467"
+      },
+      {
+        "index": 1729,
+        "response_id": "3501"
+      },
+      {
+        "index": 1739,
+        "response_id": "3511"
+      },
+      {
+        "index": 1740,
+        "response_id": "3512"
+      },
+      {
+        "index": 1789,
+        "response_id": "3573"
+      },
+      {
+        "index": 1944,
+        "response_id": "3740"
+      },
+      {
+        "index": 1957,
+        "response_id": "3753"
+      },
+      {
+        "index": 2087,
+        "response_id": "5101"
+      },
+      {
+        "index": 2200,
+        "response_id": "5256"
+      },
+      {
+        "index": 2297,
+        "response_id": "5425"
+      },
+      {
+        "index": 2321,
+        "response_id": "5449"
+      },
+      {
+        "index": 2452,
+        "response_id": "5634"
+      },
+      {
+        "index": 2465,
+        "response_id": "5647"
+      },
+      {
+        "index": 2650,
+        "response_id": "5886"
+      },
+      {
+        "index": 2719,
+        "response_id": "5956"
+      },
+      {
+        "index": 2728,
+        "response_id": "5965"
+      },
+      {
+        "index": 2793,
+        "response_id": "6036"
+      },
+      {
+        "index": 2809,
+        "response_id": "6058"
+      },
+      {
+        "index": 2833,
+        "response_id": "6082"
+      },
+      {
+        "index": 3134,
+        "response_id": "6437"
+      },
+      {
+        "index": 3186,
+        "response_id": "6489"
+      },
+      {
+        "index": 3267,
+        "response_id": "6576"
+      },
+      {
+        "index": 3438,
+        "response_id": "3795"
+      },
+      {
+        "index": 3463,
+        "response_id": "3832"
+      },
+      {
+        "index": 3507,
+        "response_id": "3954"
+      },
+      {
+        "index": 3519,
+        "response_id": "3966"
+      },
+      {
+        "index": 3526,
+        "response_id": "3973"
+      },
+      {
+        "index": 3670,
+        "response_id": "4189"
+      },
+      {
+        "index": 3775,
+        "response_id": "4336"
+      },
+      {
+        "index": 3783,
+        "response_id": "4368"
+      },
+      {
+        "index": 3818,
+        "response_id": "4415"
+      },
+      {
+        "index": 3994,
+        "response_id": "4645"
+      },
+      {
+        "index": 4056,
+        "response_id": "4707"
+      },
+      {
+        "index": 4114,
+        "response_id": "4772"
+      },
+      {
+        "index": 4485,
+        "response_id": "7195"
+      },
+      {
+        "index": 4831,
+        "response_id": "7631"
+      },
+      {
+        "index": 5173,
+        "response_id": "8003"
+      },
+      {
+        "index": 5221,
+        "response_id": "8051"
+      },
+      {
+        "index": 5346,
+        "response_id": "8194"
+      },
+      {
+        "index": 5407,
+        "response_id": "8267"
+      },
+      {
+        "index": 5458,
+        "response_id": "8324"
+      },
+      {
+        "index": 5487,
+        "response_id": "8353"
+      },
+      {
+        "index": 5547,
+        "response_id": "8425"
+      },
+      {
+        "index": 5923,
+        "response_id": "8891"
+      },
+      {
+        "index": 6017,
+        "response_id": "8997"
+      },
+      {
+        "index": 6133,
+        "response_id": "9137"
+      },
+      {
+        "index": 6255,
+        "response_id": "9277"
+      },
+      {
+        "index": 6391,
+        "response_id": "9413"
+      },
+      {
+        "index": 6850,
+        "response_id": "9974"
+      },
+      {
+        "index": 6883,
+        "response_id": "10013"
+      },
+      {
+        "index": 6969,
+        "response_id": "10118"
+      },
+      {
+        "index": 7067,
+        "response_id": "10223"
+      },
+      {
+        "index": 7073,
+        "response_id": "10229"
+      },
+      {
+        "index": 7200,
+        "response_id": "10374"
+      },
+      {
+        "index": 7217,
+        "response_id": "10391"
+      },
+      {
+        "index": 7331,
+        "response_id": "10511"
+      },
+      {
+        "index": 7400,
+        "response_id": "10586"
+      },
+      {
+        "index": 7409,
+        "response_id": "10595"
+      },
+      {
+        "index": 7569,
+        "response_id": "10767"
+      },
+      {
+        "index": 7765,
+        "response_id": "10987"
+      },
+      {
+        "index": 7771,
+        "response_id": "10993"
+      },
+      {
+        "index": 7781,
+        "response_id": "11003"
+      },
+      {
+        "index": 7960,
+        "response_id": "11200"
+      },
+      {
+        "index": 7981,
+        "response_id": "11221"
+      },
+      {
+        "index": 8152,
+        "response_id": "11404"
+      },
+      {
+        "index": 8231,
+        "response_id": "11507"
+      },
+      {
+        "index": 8275,
+        "response_id": "11557"
+      },
+      {
+        "index": 8351,
+        "response_id": "11633"
+      },
+      {
+        "index": 8626,
+        "response_id": "76"
+      },
+      {
+        "index": 8628,
+        "response_id": "78"
+      },
+      {
+        "index": 8687,
+        "response_id": "155"
+      },
+      {
+        "index": 8795,
+        "response_id": "323"
+      },
+      {
+        "index": 9172,
+        "response_id": "850"
+      },
+      {
+        "index": 9234,
+        "response_id": "942"
+      },
+      {
+        "index": 9237,
+        "response_id": "945"
+      },
+      {
+        "index": 9243,
+        "response_id": "951"
+      },
+      {
+        "index": 9384,
+        "response_id": "1122"
+      },
+      {
+        "index": 9392,
+        "response_id": "1130"
+      },
+      {
+        "index": 9540,
+        "response_id": "1302"
+      },
+      {
+        "index": 9557,
+        "response_id": "1325"
+      }
+    ],
+    "boundary_crossing_tokens_retained": 9655,
+    "stats": {
+      "Summary": {
+        "answers": 4383,
+        "encoder_input_tokens": 3899345,
+        "raw_answer_tokens": 730956,
+        "lexical_answer_tokens": 648865,
+        "risk_answer_tokens": 20398,
+        "windows": 717777,
+        "risk_windows": 26055,
+        "max_input_tokens": 2629,
+        "median_input_tokens": 723.0
+      },
+      "Data2txt": {
+        "answers": 5295,
+        "encoder_input_tokens": 5192769,
+        "raw_answer_tokens": 1263874,
+        "lexical_answer_tokens": 1090308,
+        "risk_answer_tokens": 58922,
+        "windows": 1247331,
+        "risk_windows": 86070,
+        "max_input_tokens": 2325,
+        "median_input_tokens": 942.0
+      }
+    },
+    "coverage_limit": "Exact tokenizer replay checks 100 seeded answers; original spans, character gold, every mapping coefficient and every 4-BPE window count check all 9678 answers.",
+    "native_trace_claim": false,
+    "no_truncation_in_replayed_inputs": true
+  },
+  "conclusion": "Suitable staged human-supervised auxiliary tasks for later QA detection training, with original QA calibration/test unchanged. It is not new QA data and has not been used to train any model by this preparation/audit.",
+  "limitations": [
+    "Exact 20-word material and full business-identity grouping does not prove exhaustive semantic/entity/event independence.",
+    "Source identities, not 9678 generator answers, count independent material; 1614 retained sources form 1558 conservative material groups.",
+    "Summary/Data2txt differ from QA: original task instructions and schema fields are retained; labels are not reinterpreted as world-false-only.",
+    "4 raw BPE windows retain punctuation and use OR over lexical risk. Their roughly 1.97 million overlapping windows must not be reported as independent observations.",
+    "No mixture weights, fitted model, calibration selection or improvement evidence is produced here; future auxiliary/QA mixing and source balancing must be predefined."
+  ],
+  "wall_seconds": 17.05606698989868
+}

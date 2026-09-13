@@ -1,0 +1,35 @@
+{
+  "version": "qa-window-persistence-v1",
+  "scope": "Existing fit634/cal159 only; no official test",
+  "source_folders": [
+    "development_v1",
+    "harp_development_v1",
+    "sequence_v1"
+  ],
+  "source_selection": "Already frozen selected C/epoch per family; never refit",
+  "stay": [
+    0.5,
+    0.8,
+    0.95,
+    0.99
+  ],
+  "temperature": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "uniform_initial": true,
+  "epsilon": 1e-12,
+  "emission": "sigmoid(logit(clipped original risk)/temperature)",
+  "geometry": "Unchanged eligible 4 raw BPE windows; separate chains for each answer and each gap in raw start positions",
+  "selection": "Cal max min(windowF1,answerF1), windowF1, precision, exact identity, lower stay, temperature nearest1",
+  "threshold": "Separate cal F1 then precision then higher threshold for windows and answers",
+  "answer_score": "Maximum over ALL unchanged eligible windows; no gold-dependent filtering",
+  "budget": "Same12 candidates per selected LR/MLP/TCN, with exact identity included",
+  "new_training": false,
+  "future_windows_used": true,
+  "online_detector": false,
+  "reference": "https://arxiv.org/html/2606.31033v1",
+  "full_CORTEX_reproduction": false,
+  "interpretation": "Calibration selects parameters; reported F1 is optimistic development performance, not held-out test."
+}

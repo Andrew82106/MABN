@@ -1,0 +1,58 @@
+{
+  "baseline_mutated": false,
+  "calibration_or_test_labels_read": false,
+  "gpu_started": false,
+  "outputs": {
+    "ANSWERS.jsonl.gz": {
+      "bytes": 32581,
+      "sha256": "3e1d47354128bdb3c85b2917795e507992dc51a422e975d0774c15f6d7a89292"
+    },
+    "FOLD_MODELS.json": {
+      "bytes": 69059,
+      "sha256": "fe36b0715875b3ca9bf2100526cd5f772961ac7d016e00afd68180ca0d9e7668"
+    },
+    "METRICS.json": {
+      "bytes": 40780,
+      "sha256": "beccc79efb8cd26979f3853ccf9ab8e5b84c2ed033a3db834d05ad91aafaf0a2"
+    },
+    "SPANS.jsonl.gz": {
+      "bytes": 51795,
+      "sha256": "6cbfdb1140a58dfb6379a7e1c316d308e7b0d17cc92648717c8140d1e7bd2b88"
+    },
+    "TOKENS.jsonl.gz": {
+      "bytes": 15015789,
+      "sha256": "fd603d2aff4b6f64be1a19a86db917f5bef8bbf37be7c1f36abc2c010959e3a3"
+    },
+    "WINDOWS.jsonl.gz": {
+      "bytes": 4224802,
+      "sha256": "11435b8e3f58b3b76867c26ac93dd387e5b2b4e0762bceff0c2ae63d9b2ecc53"
+    }
+  },
+  "provenance": {
+    "answers_fit_sha256": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "fit_feature_pairs": 634,
+    "hidden_projection_sha256": "4b57d6b2c5b7a7ec70aac0d67dbec7ca75835ea5101610cfbde5375f4894c429",
+    "lookback_projection_sha256": "e8ec5a62301cbedd7bad059a11e4803579aa7e17976b557fdd2cd4db0a6852ae",
+    "npz_hashes_recomputed": true,
+    "ordered_fit_feature_pairs_sha256": "7b6d505901d5cf354765d3456024c29689945f337ba5d30f3d00e18573408335",
+    "protocol_sha256": "61fb3bd4079fda35c17efc5e9c32f1866454d5ba6bac0942f515c835b802eef6",
+    "reused_fit_loader_sha256": "cac9c6de0449b80e64e2d0a7698c22c1c6a356ef0c2d28cf6741e4008eba0a19",
+    "runner_sha256": "d9db3a2e22c955d08ed8cfc85ee6d73f9835a99d7bd077f9448154c59c5099dc",
+    "tokens_fit_sha256": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+    "v1_protocol_sha256": "3dc8420db28a160f09afc088ad4282a2023deb02b8d7694d30c9663bd4504edf"
+  },
+  "schema_version": "osr-emission-anchor-fit-oof-manifest-v2",
+  "selfcheck": {
+    "checks": [
+      "three frozen decoder outputs",
+      "direct emission false-state exit",
+      "threshold tie rule",
+      "ranking metric bounds"
+    ],
+    "device": "CPU",
+    "gpu_framework_imported": false,
+    "status": "PASS"
+  },
+  "status": "COMPLETE",
+  "wall_seconds": 32.88077950000297
+}

@@ -1,0 +1,48 @@
+{
+  "version": "semantic-source-attribution-v1-score",
+  "role": "ours; formal baseline models and artifacts are read-only and unchanged",
+  "task_interface": {
+    "data": "Frozen native RAGTruth QA: fit 634 answers, calibration 159 answers.",
+    "split": "Five-fold source-connected GroupKFold on fit; calibration is opened only by evaluate, once the method is frozen.",
+    "labels": "Unchanged human factual-risk spans; any-error and Evident/Subtle Conflict claim heads are trained separately.",
+    "localization": "Unchanged eligible 4-original-BPE stride-one windows. A window takes the maximum score of its overlapping microclaims; an answer takes its maximum window.",
+    "thresholds": "Fit-OOF thresholds are frozen for strict calibration. Final evaluate may additionally report the common calibration F1-opt diagnostic without changing the model.",
+    "official_test": "No official-test path occurs in this runner."
+  },
+  "semantic_source_attribution": {
+    "primitive": "Frozen extractor attention times per-head V-vector norm at post-token query states.",
+    "extractor_binding": {
+      "runner_sha256": "a87b4c8bcc232cead05cdaa23deb67642c8551f11870b5fd1a640513e78b977b",
+      "signature_file_sha256": "1c74873c6c6bd9882879309aa889a09d9990d9a91b5e888eaf56ac385d15aafa",
+      "global_csr_index_sha256": "207e892248143c029070668755994f7acf3611f0ea5a97399c3149abe01b9467"
+    },
+    "raw_1024": "For every layer/head, sum the float16 claim-to-source-sentence masses, apply log1p, retain all 32x32 coordinates; no layer/head selection.",
+    "sentence_selection": "Rank every exact source sentence by the arithmetic mean of all 1024 unrounded attribution coordinates; stable ties use passage/order sentence_index. Keep top 1 and top 3.",
+    "compact": "Per-layer source/strict-previous-answer/other shares, three within-source passage shares, top1/top3 sentence concentration, and normalized sentence entropy.",
+    "nli": "Top1 and attribution-weighted top3 exact-sentence ModernBERT E/N/C plus same-pair relation features. Reuse exact frozen atomic cache; missing exact pairs must be listed and scored by the same frozen checkpoint before fit.",
+    "whitebox": "Reuse the 12 clean fit-group-OOF/full-fit-cal Lookback/large/NLL summaries; no historical calibration-selected incumbent score is an input."
+  },
+  "models": {
+    "clean_aligned_base": "Pair-aligned claim/evidence/whitebox features with the six historical-incumbent aggregates removed; StandardScaler plus L2 LR C=0.01.",
+    "semantic_head": "All 1394 frozen semantic-attribution features; StandardScaler plus L2 LR C=0.001.",
+    "targets": [
+      "any_error",
+      "conflict_only"
+    ],
+    "fusion": "Within each component take max(any-error, conflict-only). A fit-OOF add gate may add semantic-positive windows to the clean-base decisions; no-add is an allowed outcome and base positives are retained.",
+    "selection_freedom": "No tree/model-family, layer, head, C, or feature-subset search. Only fit-OOF decision thresholds are learned."
+  },
+  "dimensions": {
+    "raw_attribution": 1024,
+    "compact_region": 288,
+    "selected_nli": 66,
+    "selection": 4,
+    "whitebox": 12,
+    "semantic_total": 1394,
+    "clean_aligned_base": 517
+  },
+  "stage_gate": "prepare -> cpu-check -> extractor completion -> link-nli -> fill missing frozen NLI -> fit -> evaluate",
+  "calibration_labels_opened_in_prepare": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

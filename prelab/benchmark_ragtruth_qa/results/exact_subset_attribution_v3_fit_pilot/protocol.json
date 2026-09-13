@@ -1,0 +1,136 @@
+{
+  "version": "exact-three-passage-subset-attribution-v3-fit-pilot",
+  "role": "ours_method_internal_ablation_pilot; not a paper baseline",
+  "selection": {
+    "population": "All 615 fit source-connected groups in the frozen label-free v1 prepared inputs.",
+    "group_rule": "Sort by sha256(UTF8(seed||str(group_id))); take the smallest 256.",
+    "response_rule": "Within each selected group, take the smallest sha256(UTF8(seed||str(response_id))).",
+    "seed": "exact-subset-attribution-v3-fit-pilot-20260912",
+    "selected_groups": 256,
+    "one_answer_per_group": true,
+    "forbidden_selection_inputs": [
+      "labels",
+      "answer length",
+      "input length",
+      "model score",
+      "risk type"
+    ]
+  },
+  "extraction": {
+    "model": "NousResearch/Llama-2-7b-chat-hf@351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "backend": "llama2_7b_chat_nf4_bf16_sdpa_teacher_forced_selected_logprob_v1",
+    "views": "The unchanged v1 masks 000..111 and same published answer axis.",
+    "features": [
+      "full_nll",
+      "empty_nll",
+      "full_minus_empty",
+      "shapley_passage_1",
+      "shapley_passage_2",
+      "shapley_passage_3",
+      "single_gain_passage_1",
+      "single_gain_passage_2",
+      "single_gain_passage_3",
+      "loo_drop_passage_1",
+      "loo_drop_passage_2",
+      "loo_drop_passage_3",
+      "subset_range",
+      "subset_std",
+      "pair_interaction_12",
+      "pair_interaction_13",
+      "pair_interaction_23",
+      "triple_interaction",
+      "interaction_l1",
+      "shapley_abs_max",
+      "shapley_positive_sum",
+      "shapley_negative_mass",
+      "citation_any",
+      "citation_source_fraction",
+      "citation_shapley_sum",
+      "citation_shapley_mean",
+      "citation_positive_shapley_sum",
+      "citation_single_gain_max",
+      "citation_loo_drop_max"
+    ],
+    "feature_width": 29,
+    "GPU_gate": "Reuse the frozen v2 WDDM process gate; write independent v3 smoke/cache/lineage."
+  },
+  "fit_only_scoring": {
+    "gold_paths": [
+      "fit_expansion/data/answers_fit.jsonl",
+      "fit_expansion/data/tokens_fit.jsonl",
+      "fit_expansion/data/windows_k4_fit.jsonl"
+    ],
+    "gold_open_time": "Only the explicit score command, after all 256 GPU caches are frozen.",
+    "folds": "Fixed label-free five-fold GroupKFold over the 256 distinct source-connected groups.",
+    "training": "Lexical raw-BPE labels; same v1 group/answer/token weights, StandardScaler, L2 liblinear LR C=0.1.",
+    "projection": "Unified eligible stride-one 4-original-BPE windows take max lexical-token risk; answer takes max window risk.",
+    "thresholds": "Each readout chooses window and answer thresholds on its complete fit OOF predictions only.",
+    "metrics": [
+      "precision",
+      "recall",
+      "F1",
+      "AUROC",
+      "average precision"
+    ],
+    "readouts": {
+      "A_full_nll_citation": [
+        "full_nll",
+        "citation_any",
+        "citation_source_fraction"
+      ],
+      "B_full_empty_delta_citation": [
+        "full_nll",
+        "empty_nll",
+        "full_minus_empty",
+        "citation_any",
+        "citation_source_fraction"
+      ],
+      "C_all_29": [
+        "full_nll",
+        "empty_nll",
+        "full_minus_empty",
+        "shapley_passage_1",
+        "shapley_passage_2",
+        "shapley_passage_3",
+        "single_gain_passage_1",
+        "single_gain_passage_2",
+        "single_gain_passage_3",
+        "loo_drop_passage_1",
+        "loo_drop_passage_2",
+        "loo_drop_passage_3",
+        "subset_range",
+        "subset_std",
+        "pair_interaction_12",
+        "pair_interaction_13",
+        "pair_interaction_23",
+        "triple_interaction",
+        "interaction_l1",
+        "shapley_abs_max",
+        "shapley_positive_sum",
+        "shapley_negative_mass",
+        "citation_any",
+        "citation_source_fraction",
+        "citation_shapley_sum",
+        "citation_shapley_mean",
+        "citation_positive_shapley_sum",
+        "citation_single_gain_max",
+        "citation_loo_drop_max"
+      ]
+    },
+    "identity": "A/B/C are internal ablations of our method, not paper baselines.",
+    "limitations": "Same OOF cohort supplies threshold choice and reporting; pilot evidence is developmental, not independent test evidence."
+  },
+  "common_evaluation_policy": {
+    "owner": "Our dataset, group split, labels, 4-BPE windows, answer labels, and metrics define the common exam.",
+    "paper_baselines": "Any future paper baseline must retain author architecture, features, training, and native readout unchanged.",
+    "allowed_baseline_mapping": "Only predeclared parameter-free label-independent output mapping.",
+    "current_A_B_C": "Internal method ablations; no paper baseline is run or modified here."
+  },
+  "stage_gate": "initialize -> prepare -> check -> audit; review; gpu-smoke -> extract; review; score",
+  "prohibitions": [
+    "CPU stages do not read fit label files.",
+    "Calibration and official test are never addressed.",
+    "v1/v2 artifacts are read-only and never overwritten.",
+    "No baseline is modified or scored."
+  ]
+}

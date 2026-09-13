@@ -1,0 +1,66 @@
+{
+  "version": "token-source-attribution-v4",
+  "scope": "native",
+  "role": "ours token-level source-attribution extractor; formal baselines untouched",
+  "data": {
+    "native": "Frozen native QA fit634 plus calibration159 replay plans.",
+    "expanded": "Optional same-schema extra fit replay layouts; scoring is not enabled in v4.",
+    "official_test": "No official-test or withheld-data path occurs in this runner."
+  },
+  "coordinates": {
+    "source": "Every frozen rendered source-sentence span is re-intersected with original full-string tokenizer offsets; nonspace and alphanumeric coverage are asserted.",
+    "answer": "Every lexical answer BPE is owned exactly once by a frozen claim and retains local plus absolute coordinates.",
+    "query": "Post-token query at the original answer-token position; causal mask is rebuilt explicitly.",
+    "previous_answer": "Only original answer positions strictly smaller than q; q itself is excluded.",
+    "other": "All pre-answer positions outside the exact source-sentence union."
+  },
+  "primitive": "float32 softmax attention(q,k) multiplied by the corresponding repeated V-head L2 norm",
+  "aggregation": {
+    "fragment": "Maximum over fragment key tokens independently per head, unchanged from semantic-source-attribution v1.",
+    "query": "No claim/query averaging. Every lexical query BPE is an output row.",
+    "heads": "Arithmetic mean across all heads after fragment aggregation.",
+    "region_share": "Per layer normalize head-mean source, strict-previous-answer, and other-context relevance to sum one.",
+    "sentence": "Per token/layer/source-sentence head-mean relevance; float16 cache supports later exact all-sentence NLI weighting."
+  },
+  "raw_outputs": {
+    "token_region_share": "float16 [lexical_BPE,32,3]",
+    "token_sentence_relevance": "float16 [lexical_BPE,32,source_sentences_in_answer]",
+    "coordinates": "query local/absolute position, token id, unique claim id, exact sentence identity",
+    "forbidden": "No full attention matrix and no token x sentence x head cache."
+  },
+  "downstream_contract": {
+    "token_features": "Per layer: source/previous/other share, all-sentence attention-weighted frozen NLI E/N/C, top1 and top3 sentence concentration.",
+    "window_supervision": "Unchanged eligible 4-raw-BPE stride-one windows are the training rows; no claim-score projection.",
+    "optional_score_inputs": "Frozen generation NLL and clean group-OOF Lookback/large probabilities may be appended only in the scorer.",
+    "split": "Source-group OOF on fit; freeze model and thresholds before one calibration evaluation; official test sealed."
+  },
+  "model": {
+    "checkpoint": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "load_config": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "llm_int8_skip_modules": [
+        "lm_head"
+      ],
+      "torch_dtype": "bfloat16",
+      "attn_implementation": "sdpa",
+      "device_map": {
+        "": "cuda:0"
+      },
+      "local_files_only": true,
+      "trust_remote_code": false,
+      "padding": "one unpadded sequence and explicit all-ones mask; generation_config is not used",
+      "tf32_allowed": false
+    },
+    "teacher_forced": true,
+    "trained_here": false
+  },
+  "stage_gate": "prepare -> cpu-check -> explicit extract -> status; no training or labels in this runner",
+  "labels_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,3 @@
+CPU准备首次退出1：合成映射检查从metadata.answers读取tokens，引发KeyError。
+实际tokens位于metadata.by_response中。已修正索引；尚未写preparation_complete，未读取large预测、未训练任何新模型。
+首次已完成的12个旧控制回放全部精确一致。保留此失败记录，重新执行完整CPU准备。

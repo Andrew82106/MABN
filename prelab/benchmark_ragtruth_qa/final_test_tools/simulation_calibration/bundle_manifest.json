@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "selfcheck_passed": true,
+  "mode": "calibration_simulation",
+  "partition": "calibration",
+  "binding": {
+    "calibration_jsonl_sha256": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "gold_manifest_sha256": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+    "tools_protocol_sha256": "b472f57c822186dc46ac7e4f99394547a7c088cc4e80f0f8de5459e9ba4850a5"
+  },
+  "counts": {
+    "official_candidate_answers": 162,
+    "quality_good_answers": 159,
+    "quality_excluded_answers": 3,
+    "groups": 154,
+    "risk_answers": 100,
+    "raw_tokens": 42798,
+    "lexical_tokens": 35000,
+    "risk_tokens": 4692,
+    "eligible_windows": 42241,
+    "risk_windows": 5984,
+    "windows_without_lexical_tokens": 80,
+    "official_spans": 200
+  },
+  "outputs_sha256": {
+    "calibration_original_records.jsonl": "0240147f64b66b6e61e062103fb8e244deb34aa47c1f97d223acf8bf3dfb8387",
+    "calibration_quality_excluded.jsonl": "687be7e74cd2d0259dcf7e0a8ac13f245040119fb87132dac6af33e06e452a8f",
+    "calibration_inputs.jsonl": "4f6f7404d3d5ab9a74eaa0346b94237557448e2d17c67468c691a1badf21ca01",
+    "feature_preparation_calibration/plans.jsonl": "11966159bc63edac0c93de4e9ca80312f3197f17f06ea0ef938c461327ff3c84",
+    "tokens_calibration.jsonl": "1e0a78040e4036a2ade49bda3afcbeb53d806f25f1c6ad5b2d2fbbbd8d0f003e",
+    "windows_k4_calibration.jsonl": "8596f64d243ce81209b36bd083af3787fcee7d1696b19dadb8c0dbf7b1cc059b",
+    "windows_excluded_calibration.jsonl": "8fde96b09e89cc7d42f271de58b669e4f32f1101d69c1af40a5f68eeb497e33e",
+    "answers_calibration.jsonl": "e0cb5abdf472dbb00eaccec705b13da0db2cad20409a991f594453c0ac7909e9",
+    "gold_edge_cases.json": "09ca99abd9d7096bfd1adf5142c622d723e62417a7c3d376ce4692cb0d88f693"
+  },
+  "completed_at_utc": "2026-09-11T18:49:17.031712+00:00",
+  "labels_changed": false,
+  "quality_rule": "official_quality_good_only",
+  "all_four_types_retained": true,
+  "refusal_classifier_used": false,
+  "models_run_or_fitted": false,
+  "official_test_read": false,
+  "canonical_first_boundary_token_retained": true,
+  "no_eligible_window_answer_ids": [],
+  "stable_data_layer_only": "Model-specific feature/inference adapters are separate and must be frozen before release; test partition is preserved as test."
+}

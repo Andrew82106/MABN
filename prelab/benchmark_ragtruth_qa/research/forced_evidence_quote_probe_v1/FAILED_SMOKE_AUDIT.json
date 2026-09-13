@@ -1,0 +1,174 @@
+{
+  "status": "FAIL_CLOSED_V1_MUST_STOP",
+  "audit_time": "2026-09-12T21:46:47.6613345+08:00",
+  "audit_scope": "independent_read_only_audit_of_two_failed_label_free_GPU_smokes",
+  "auditor_constraints": {
+    "code_modified": false,
+    "GPU_used": false,
+    "fit_gold_read": false,
+    "calibration_read": false,
+    "official_test_read": false,
+    "real_scoring_run": false
+  },
+  "protocol_binding": {
+    "protocol_sha256": "78e5558b61592238b0979c7c60aea23c79b8c7d3181e88113d3972b4d056f7aa",
+    "plan_sha256": "6d439ee257dde65d2ef2c9974cd3dd716f4f0d06890cfb7df9c8af6da562680c",
+    "frozen_rtol": 0.005,
+    "frozen_atol": 0.005,
+    "failure_action": "stop_before_full_run_without_tolerance_precision_prompt_or_decoding_change"
+  },
+  "failed_smokes": [
+    {
+      "order": 1,
+      "failure_path": "results/forced_evidence_quote_probe_v1/GPU_RUNNER_FAILURE_gpu-smoke_1789218774898748800.json",
+      "failure_sha256": "ee530073a5d9f24179d87b68fd8144d16ad4dba602111a13e285d61fa1991bb2",
+      "failure_time": "2026-09-12T21:12:54.899+08:00",
+      "runner_sha256": "7989c1c9f5e8c835df8ccf4797a242b50138513e6a9c255374d386787c574139",
+      "record_index": 2826,
+      "microclaim_id": "16215__atomic_000",
+      "prompt_tokens": 255,
+      "exception": "Final generated text does not exactly re-encode to generated IDs",
+      "classification": "invalid_tokenizer_inverse_assumption_in_offset_implementation",
+      "CUDA_initialized": true,
+      "scoring_run": false
+    },
+    {
+      "order": 2,
+      "failure_path": "results/forced_evidence_quote_probe_v1/GPU_RUNNER_FAILURE_gpu-smoke_1789220311551900900.json",
+      "failure_sha256": "e3e986e1ef93d4fe4e6953b0655952bb5f02f066c820520bbdf485e45cca7184",
+      "failure_time": "2026-09-12T21:38:31.552+08:00",
+      "runner_sha256": "a142d00ef1601aff6af203cfaf60644a11c37f108c8c4043f641b51f8e01e0cb",
+      "record_index": 2826,
+      "microclaim_id": "16215__atomic_000",
+      "prompt_tokens": 255,
+      "exception": "selected_logprob cache/replay allclose assertion",
+      "classification": "frozen_numeric_smoke_oracle_failure",
+      "canonical_runner_hash_matches_current_and_reviewed_runner": true,
+      "CUDA_initialized": true,
+      "scoring_run": false
+    }
+  ],
+  "independent_recomputation": {
+    "offset_failure": {
+      "diagnosis_path": "results/forced_evidence_quote_probe_v1/OFFSET_DIAGNOSIS_SMOKE1.json",
+      "diagnosis_sha256": "4b37d7771ef819ee01dd1e7c2e9694923bf42840741ab58675ca8f1af1ea1e47",
+      "generated_token_count": 29,
+      "reencoded_token_count": 29,
+      "mismatch_count": 1,
+      "mismatch_indices": [0],
+      "first_generated_id": 8003,
+      "first_generated_piece": "Position",
+      "first_reencoded_id": 20627,
+      "first_reencoded_piece": "▁Position",
+      "remaining_positions_equal": 28,
+      "decoded_characters": 149,
+      "generated_ids_canonical_digest": "a1371f02ee8ba0749b77814ba79ed790f3741a8ba12887bbcacb3d62d5f655d7",
+      "reencoded_ids_canonical_digest": "6ec3310d2c1fb5ef2b786a8e1021c56aa25a0b982405f6bdf0dbfef5195d83d3",
+      "decoded_sha256": "436bd6a65b15a5f358f68d64355463a57635ef5f7e7bbe279f2813b2fc4ad0fd",
+      "prefix_lcp_offsets_equal_reencoded_offsets_for_this_sample": true,
+      "finding": "decode_then_encode_is_not_an_ID_inverse_for_SentencePiece"
+    },
+    "cache_replay_failure": {
+      "diagnosis_path": "results/forced_evidence_quote_probe_v1/CACHE_REPLAY_DIAGNOSIS_SMOKE1.json",
+      "diagnosis_sha256": "fdca1a0a34446a0620e026eaeee1f9825ed1e55e10f2edf2ed9f118315c858d6",
+      "generated_positions": 29,
+      "content_positions": 26,
+      "argmax_mismatch_count": 0,
+      "argmax_mismatch_indices": [],
+      "signals": {
+        "selected_logprob": {
+          "max_abs": 0.023988783359527588,
+          "mean_abs": 0.001003499529566664,
+          "p50_abs": 1.192074705613777e-07,
+          "p95_abs": 0.0018069241195917125,
+          "max_index": 2,
+          "cached_at_max": -0.22549645602703094,
+          "replay_at_max": -0.20150767266750336,
+          "allclose_rtol_0.005_atol_0.005": false,
+          "failed_positions": [2],
+          "failed_positions_count": 1,
+          "content_failed_positions_count": 1,
+          "max_abs_over_element_tolerance": 3.993113636348134
+        },
+        "vocab_entropy": {
+          "max_abs": 0.027759075164794922,
+          "mean_abs": 0.0017951455672612705,
+          "p50_abs": 1.3761546142632142e-06,
+          "p95_abs": 0.008461678028106689,
+          "max_index": 2,
+          "cached_at_max": 0.5037962794303894,
+          "replay_at_max": 0.4760372042655945,
+          "allclose_rtol_0.005_atol_0.005": false,
+          "failed_positions": [0, 2, 18, 27],
+          "failed_positions_count": 4,
+          "content_failed_positions_count": 3,
+          "max_abs_over_element_tolerance": 3.7612974909540315
+        },
+        "signed_margin": {
+          "max_abs": 0.25,
+          "mean_abs": 0.07758620689655173,
+          "p50_abs": 0.0625,
+          "p95_abs": 0.25,
+          "max_index": 8,
+          "cached_at_max": 14.875,
+          "replay_at_max": 15.125,
+          "allclose_rtol_0.005_atol_0.005": false,
+          "failed_positions": [1, 2, 5, 6, 8, 10, 11, 14, 17, 18, 20, 25, 26, 27],
+          "failed_positions_count": 14,
+          "content_failed_positions_count": 12,
+          "max_abs_over_element_tolerance": 10.0
+        }
+      },
+      "direct_finding": "discrete_token_trajectory_is_identical_but_all_three_continuous_signals_violate_the_frozen_tolerance",
+      "technical_explanation_is_inference": "NF4_BF16_cached_and_full_replay_paths_have_different_operation_shapes_and_rounding_order"
+    }
+  },
+  "formal_artifact_inventory": {
+    "GPU_SMOKE.json": false,
+    "GPU_SMOKE_INDEPENDENT_REVIEW.json": false,
+    "gpu_claim_records_directory": false,
+    "GPU_EXTRACTION_COMPLETE.json": false,
+    "frozen_features_directory": false,
+    "FEATURE_FREEZE.json": false,
+    "FEATURE_MANIFEST.json": false,
+    "claim_features.npz": false,
+    "EVALUATION.json": false,
+    "formal_feature_array_file_count_in_v1_results_tree": 0,
+    "formal_claim_records_written": 0,
+    "real_gold_scores_written": 0,
+    "synthetic_evaluator_selftest_only": true
+  },
+  "data_and_baseline_integrity": {
+    "label_free_input_sha256": "ae6bf145a0e48ff310cdde5f54457eec7e8986c9b012d52cc463bb9e357e2777",
+    "label_free_rows": 3776,
+    "label_free_answers": 256,
+    "label_free_groups": 256,
+    "label_free_fields": 14,
+    "forbidden_label_or_existing_score_key_hits": 0,
+    "fit_gold_opened": false,
+    "calibration_or_official_test_opened": false,
+    "baseline_training_or_scoring_run": false,
+    "baseline_write_target_present_in_GPU_runner": false,
+    "P0_Lookback_raw_and_indices_modified_by_smoke": false,
+    "Lookback_adapter_results_modified_by_smoke": false,
+    "LUMINA_results_modified_by_smoke": false,
+    "GHOST_results_modified_by_smoke": false,
+    "baseline_model_structure_modified": false,
+    "existing_baseline_scores_modified": false,
+    "evidence": [
+      "all checked baseline artifact and result modification times precede the first GPU smoke",
+      "GPU runner write targets are confined to the V1 result tree plus the temporary global GPU lease",
+      "no real feature freeze or evaluator output exists"
+    ]
+  },
+  "decision": {
+    "V1_full_extraction_allowed": false,
+    "V1_feature_finalization_allowed": false,
+    "V1_gold_evaluation_allowed": false,
+    "V1_can_report_experimental_score": false,
+    "V1_must_stop": true,
+    "decisive_reason": "the canonical repaired runner violates the preregistered cache/replay numeric oracle on the fixed first smoke claim",
+    "next_valid_action": "create_and_freeze_V2_before_any_GPU_rerun_or_gold_access_if_the_oracle_precision_or_signal_source_is_changed",
+    "post_hoc_V1_tolerance_change_allowed": false
+  }
+}

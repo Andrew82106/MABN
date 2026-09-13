@@ -1,0 +1,98 @@
+{
+  "version": "ragognize-llama2-unified-k4-train-only-v1",
+  "status": "complete_converted_and_audited_not_trained",
+  "source_revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "source_train_sha256": "6ad56f84a06863b4dea28e86014cc16e37a64fefe8965c53902b370f51839a44",
+  "conversion_design_sha256": "bc16e304d76b04fcc1184485d6e231c9019f21c3ac01ed1bedf790301d5c71c7",
+  "cohorts": {
+    "all_train": {
+      "answers": 1842,
+      "risk_answers": 1007,
+      "valid_spans": 1483,
+      "tokens": 203286,
+      "lexical_tokens": 174928,
+      "risk_tokens": 45664,
+      "windows": 197760,
+      "lexical_windows": 197452,
+      "risk_windows": 53841,
+      "groups": 917,
+      "risk_answer_rate": 0.5466883821932682,
+      "risk_token_rate_among_lexical": 0.2610445440409769,
+      "risk_window_rate_among_lexical": 0.2726789295626279
+    },
+    "no_unanswerability_hint": {
+      "answers": 971,
+      "risk_answers": 542,
+      "valid_spans": 797,
+      "tokens": 102778,
+      "lexical_tokens": 88133,
+      "risk_tokens": 23571,
+      "windows": 99865,
+      "lexical_windows": 99649,
+      "risk_windows": 27816,
+      "groups": 491,
+      "risk_answer_rate": 0.5581874356333677,
+      "risk_token_rate_among_lexical": 0.2674480614525774,
+      "risk_window_rate_among_lexical": 0.2791397806300113
+    }
+  },
+  "test_or_validation_content_read": false,
+  "model_forward": false,
+  "training": false,
+  "GPU_used": false,
+  "baseline_modified": false,
+  "files": {
+    "all_train\\answers.jsonl": {
+      "bytes": 11755934,
+      "sha256": "c57ac1e958fb5c8c6ba8ded82c1e8d485f571590ea74e8ea44f1070f0ce98cfb"
+    },
+    "all_train\\groups.jsonl": {
+      "bytes": 319199,
+      "sha256": "277c53f76fcda3ca99c18c5391874dea222a8e7106f75c84d10c4ed2fe45fbde"
+    },
+    "all_train\\manifest.json": {
+      "bytes": 2684,
+      "sha256": "8734190485f0bed72fc8e6799647d8c2813fb4a9b8817983e878ff223b99ff90"
+    },
+    "all_train\\sequences.jsonl": {
+      "bytes": 21435057,
+      "sha256": "620919d00814bc8cd3fec6194a208211a175877bc521786290fa0ab004a023c4"
+    },
+    "all_train\\tokens.jsonl": {
+      "bytes": 87798749,
+      "sha256": "b20216056928aece504c451e300693f9dc414972e9b83e7046751b0336796f35"
+    },
+    "all_train\\windows.jsonl": {
+      "bytes": 97166852,
+      "sha256": "1d113229aa603381bcf4c753b26bc1c9db50a71056869c1c623e4b94db8335b1"
+    },
+    "AUDIT.json": {
+      "bytes": 1264,
+      "sha256": "09b433d3d99f80356218558d9db550930b88cb044d4eb7669350a210f1a4e4a0"
+    },
+    "no_unanswerability_hint\\answers.jsonl": {
+      "bytes": 6052205,
+      "sha256": "4032e6ce21aa849c232fa6b875ec26a105a1a6ed139f99362d5f1285f1c42a6e"
+    },
+    "no_unanswerability_hint\\groups.jsonl": {
+      "bytes": 169658,
+      "sha256": "761a919507f9ef0a127ef174c89f69220fe75070ab9aad3c4f806a3040e81c39"
+    },
+    "no_unanswerability_hint\\manifest.json": {
+      "bytes": 2705,
+      "sha256": "4c1318973cb2111d830b52261fb9ad2944f50ecdc1b9de7ceee491c96ce2480f"
+    },
+    "no_unanswerability_hint\\sequences.jsonl": {
+      "bytes": 10960142,
+      "sha256": "0d93285bc268f9b10e6a9110d3c5c4468128b1ca44f27239083f6c9ac5538ddc"
+    },
+    "no_unanswerability_hint\\tokens.jsonl": {
+      "bytes": 44381399,
+      "sha256": "206b593856aa85ded10534e3a0459fe50a718545b4c60d47f406482cf05e8321"
+    },
+    "no_unanswerability_hint\\windows.jsonl": {
+      "bytes": 49062433,
+      "sha256": "9a10ce8fcf7e0198dbd1d4664f9284b65d10b12ec1450254f2b31d429f63abb7"
+    }
+  }
+}

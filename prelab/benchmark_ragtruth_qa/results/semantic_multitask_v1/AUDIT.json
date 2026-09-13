@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "code_sha256": "e780ae643c38b46f8cc0c0add860d5b97004231c52866d1adf82a232c62b83f3",
+  "complete_sha256": "354fa76060332d5e7bc2ea5cb020af936694e7a78d6a65a9b9405d4f2cfcdc28",
+  "all_frozen_input_and_output_hashes_verified": true,
+  "binary_risk_labels_and_main_weights_unchanged": true,
+  "auxiliary_fit_only_factors_and615_group_weights_independently_checked": true,
+  "nonlexical_and_padding_excluded_from_losses": true,
+  "all30_epoch_main_only_aggregation_threshold_counts_exact": true,
+  "all30_primary_auxiliary_combined_losses_checked": true,
+  "selected_epoch": 3,
+  "full213159_main_and_auxiliary_checkpoint_predictions_exact": true,
+  "no_PCA_scaler_or_baseline_refit": true,
+  "test_opened": false,
+  "GPU_used": false,
+  "seconds": 25.734258600044996
+}

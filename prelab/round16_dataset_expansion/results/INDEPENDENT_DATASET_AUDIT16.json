@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "annotation_freeze_sha256": "4f4f5d467188108e23820d7e80dc5136244e29c44b6a6f8f9ef020f121dbc537",
+  "auditor_sha256": "becad1bb92eb5833625c9e01e0d08f8a90e349d4c04d2f1ca4693527e0e3836b",
+  "new": {
+    "train": {
+      "questions": 301,
+      "event_or_subject_groups": 278,
+      "answers": 602,
+      "supported_answers": 330,
+      "risky_answers": 151,
+      "safe_refusals": 117,
+      "unresolved_or_other": 4,
+      "localization_answers": 481,
+      "eligible_tokens": 9716,
+      "risk_tokens": 768,
+      "windows_4": 9526,
+      "risk_windows_4": 1063,
+      "question_categories": {
+        "action": 60,
+        "relation": 90,
+        "time": 60,
+        "quantity": 76,
+        "location": 15
+      }
+    },
+    "validation": {
+      "questions": 49,
+      "event_or_subject_groups": 46,
+      "answers": 98,
+      "supported_answers": 54,
+      "risky_answers": 26,
+      "safe_refusals": 16,
+      "unresolved_or_other": 2,
+      "localization_answers": 80,
+      "eligible_tokens": 1588,
+      "risk_tokens": 135,
+      "windows_4": 1546,
+      "risk_windows_4": 186,
+      "question_categories": {
+        "quantity": 12,
+        "relation": 15,
+        "action": 10,
+        "location": 2,
+        "time": 10
+      }
+    },
+    "test": {
+      "questions": 50,
+      "event_or_subject_groups": 49,
+      "answers": 100,
+      "supported_answers": 54,
+      "risky_answers": 26,
+      "safe_refusals": 20,
+      "unresolved_or_other": 0,
+      "localization_answers": 80,
+      "eligible_tokens": 1640,
+      "risk_tokens": 147,
+      "windows_4": 1610,
+      "risk_windows_4": 211,
+      "question_categories": {
+        "relation": 15,
+        "action": 10,
+        "time": 10,
+        "quantity": 12,
+        "location": 3
+      }
+    }
+  },
+  "checks": [
+    "frozen source/output/label hashes",
+    "legacy bytes unchanged",
+    "800 exact answer spans",
+    "safe refusal answer-only0; no unknown token0",
+    "original BPE axes including punctuation",
+    "sliding4 OR risk labels",
+    "whole question groups remain one split",
+    "independent counts equal exported statistics"
+  ],
+  "limitation": "Checks consistency and counts, not annotation semantic truth. No probe training or performance scoring."
+}

@@ -1,0 +1,64 @@
+{
+  "version": "local-pair-silver-transfer-v1",
+  "variants": {
+    "paired_bce": 0.0,
+    "paired_rank": 1.0
+  },
+  "margin": 1.0,
+  "initialization": "Fresh generic ModernBERT-base via original v2.load_model, same pretrained revision and seed20261005 for each variant. No QA-fitted initialization.",
+  "paired_data": {
+    "candidate_pairs": 10040,
+    "eligible_pairs": 10036,
+    "excluded_from_training_but_retained": 4,
+    "original_answers": 5274,
+    "material_groups": 5237,
+    "encoder_input_tokens": 15897749,
+    "raw_answer_tokens_both_versions": 2723094,
+    "local_target_raw_tokens_both_versions": 42127,
+    "max_side_input_tokens": 1483,
+    "longest_pair_index": 5145,
+    "longest_pair_id": "fava_train_15033__typed_019",
+    "longest_pair_lengths": [
+      1481,
+      1483
+    ],
+    "source_isolation_inherited_not_rescanned": true,
+    "token_manifest_sha256": "97173d5fe843282407d8d1ffdd06ca070e6263a4691ce27e9cfccefab84531b5"
+  },
+  "pair_order_seed": 20261007,
+  "local_supervision": "Each original/preferred side has only its own target_raw_lexical_indices. z1-z0 FP32 -> original answer-character map -> each side raw coordinates. No repaired whole-answer or outside-target zero labels.",
+  "loss": "Exactly frozen local_repair_pair_loss: half original local BCE(y=1)+half repaired local BCE(y=0); plus lambda*softplus(1-mean_bad+mean_repaired). No rescaling of the sum, no new class factors. Silver editing roles are not certified truth.",
+  "pair_weights": "Final eligible pairs only, equal material groups -> equal original answers within group -> equal eligible pairs per original answer. Both versions are one unit. Sum base weights1.",
+  "aux_minibatch": "For batch B_actual complete pairs, sum_i Npairs/B_actual * normalized_pair_weight[i] * pair_loss[i]. Two separate full forwards per pair, retain both graphs until one backward. 8pairs accumulation; final actual pair count used, not8. One fixed auxiliary epoch.",
+  "matched_compute": "Same pair IDs, order, target positions, base weights, two forwards, local BCE and rank calculation in both modes; only multiplication weight0 versus1 changes. Same model seed, optimizer, QA inputs/weights/orders and budgets.",
+  "precision": "BF16 CUDA model forward/non-reentrant checkpoint recomputation; FP32 parameters, gradients, optimizer states, both output logits before subtraction, mapping, BCE and rank. CPU FP32. TF32 off. No GradScaler.",
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "effective_batch_pairs": 8,
+    "scheduler": null,
+    "continuous_across_aux_and_QA": true,
+    "aux_updates": 1255,
+    "last_aux_batch_pairs": 4,
+    "QA_updates_each": 460,
+    "updates_total_each": 2635
+  },
+  "QA": {
+    "fit_answers": 3680,
+    "fit_groups": 615,
+    "calibration_answers": 159,
+    "epochs": 3,
+    "mass": 560300,
+    "reuse": "QA inputs, weights and all6 stored orders copied byte-exact; use only original first3 orders, no optimizer/RNG reset at transition.",
+    "evaluation": "Unchanged raw4BPE stride1 lexical max; answermax; original labels and refusals. No test opened.",
+    "selection": "Only after all3 QA epochs complete, one epoch per variant by min(windowF1,answerF1),windowF1,windowprecision,earlier epoch. Each epoch uses original separate cal thresholds and precision/higher-cutoff ties. No auxiliary cal evaluation or checkpoint selection."
+  },
+  "artifacts": "Each variant independently keeps auxiliary_final and QA1/2/3 model+optimizer+CPU/CUDA RNG; all QA raw-token predictions, geometry scores, thresholds, logs, logical tokens/time/peak memory. No automatic resume or overwrite.",
+  "GPU_gate": "Explicit longest-complete-pair by sum of two encoder lengths (then max length, first index) paired two-graph smoke; repeat each side <=2e-6, nonzero finite gradient, BF16 forward and checkpoint replay, FP32 optimizer. Failure preserved; no truncation or altered precision/budget.",
+  "interpretation": "Paired local silver supervision; not human factual gold. Rank is shift-invariant alone, full BCE+rank is not. Adding rank changes gradient strength and shape; do not attribute results exclusively to contrast reasoning. Context/shared-parameter indirect gradients remain.",
+  "scope": "CPU preparation only until separate explicit GPU commands. No additional model/grid/score-combination branch.",
+  "automatic_GPU_or_training": false,
+  "official_test_opened": false
+}

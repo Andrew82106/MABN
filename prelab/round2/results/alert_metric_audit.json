@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checked": {
+    "news_small": {
+      "method_runs": 40,
+      "max_difference": 1.1102230246251565e-16
+    },
+    "news_large": {
+      "method_runs": 46,
+      "max_difference": 1.1102230246251565e-16
+    },
+    "rag_large": {
+      "method_runs": 34,
+      "max_difference": 1.1102230246251565e-16
+    },
+    "confirmation": {
+      "method_runs": 15,
+      "max_difference": 2.220446049250313e-16
+    }
+  },
+  "scope": "independent saved-score metric checks; small validation sample does not guarantee population false alarm <=5%"
+}

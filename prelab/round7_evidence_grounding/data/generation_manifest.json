@@ -1,0 +1,38 @@
+{
+  "expected_rows": 500,
+  "completed_rows": 500,
+  "complete": true,
+  "generated_file_sha256": "83e70f69483d4d746421c914763f37b9bcc0088f8e71ef8da199f71fe5dad324",
+  "generation_signature_hash": "293848ee0810c3eb5df19a369e2f95806cdcff0bf2c03ba449d817866e6d7b82",
+  "generation_signature": {
+    "config": {
+      "schema_version": "round7-model-v1",
+      "model": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Qwen2.5-7B-Instruct-bnb-4bit",
+      "system": "You are a helpful assistant.",
+      "do_sample": false,
+      "max_new_tokens": 256,
+      "max_input_tokens": 3072,
+      "repetition_penalty": 1.0,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": null,
+      "seed": 20260910,
+      "attn_implementation": "sdpa",
+      "layers": [
+        7,
+        14,
+        21,
+        28
+      ],
+      "hidden_size": 3584,
+      "feature_timing": "After last lexical content token has been read; causal replay of own exact generated IDs",
+      "final_layer": "Layer 28 after model final RMSNorm; layers 7/14/21 after decoder block, before final RMSNorm",
+      "self_confidence_max_new_tokens": 12
+    },
+    "generator_functions_sha256": "fdef83d53169f262f7e26ae09a77e47099d1c15b1b2f6d72602bbadb87c619b9",
+    "model_config_sha256": "c9b481809ae2e99227ac323b77a9da0b5387a0a21f46329327132273435fa3f7",
+    "tokenizer_config_sha256": "0553ada6e92b1a29b4431c72782c6e5e6ab675ef0b20ceb2833cd1074c7fb932"
+  },
+  "external_generation_model_calls": 0,
+  "labels_read": false
+}

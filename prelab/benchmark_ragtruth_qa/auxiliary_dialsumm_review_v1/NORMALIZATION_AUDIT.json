@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "original_rows_replayed": 2400,
+  "original_human_spans": 1379,
+  "exact_paired_human_scopes": 33,
+  "new_formal_labels": false,
+  "official_val_test_total_opened": false,
+  "GPU_used": false
+}

@@ -1,0 +1,33 @@
+{
+  "version": "ragtruth-qa-final-data-metrics-interface-v2",
+  "real_test_released": false,
+  "final_models_specified": false,
+  "identity_manifest_sha256": "84930091c4450c80ddfdc174c8672f8e9130fb318358758418a45fe4d2a23344",
+  "source_index_sha256": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+  "annotation_protocol_sha256": "a2416a33f724ef4a202b32ece4f8cac157d284672a065f584de8ce3deda2dc66",
+  "old_gold_manifest_sha256": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+  "tool_files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\contracts.py": "fc377ed932ecaf776f0e10ea12b7b51c12712327909646db1bdef199d50855b8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\gold_rows.py": "9ba3d71561bb0510bb7254ae443ada1a785402527aaf4563d1d17119010c53c7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\export_qa.py": "f0917a3eeed1d8714cba826f61984e2a63a599431ed93d0fdf0207dcbfee74e3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\score_frozen.py": "4ed8071882f4ea83e1c9df101da195bb5585cdb24e5bd1dce919aded7d2d794e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\simulate_calibration.py": "5e8accbaea1df62ca22ff1ce4590d1d63e88387b43dcf10519bd52984466c85e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\final_test_tools_v2\\initialize_tools.py": "01d79d6b0b1fcfc55b4c2fdcf62d70ea8e814e7f2105883e4ff8ca00f4955f43",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_gold.py": "55e217a2eddf9b443d5dab2547292ac072d451f1dedac148764732be49bf51d7",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\development_manifest.json": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\manifest.json": "723a6be3e3f70ecc1b51bb4140cf31866214f41c6d495636848935c51ac76e1f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd"
+  },
+  "identity": "Fixed150 official test QA sources/147 associated groups, specified original llama-2-7b-chat response per source. Withheld linked31 train sources and other model responses excluded by identity.",
+  "raw_access_gate": "Explicit root authorization at data/FINAL_TEST_RELEASE_AUTHORIZATION.json must bind complete final development freeze, these tools and fixed identity. No authorize or model-fit command is provided.",
+  "quality": "Exactly official quality==good. Preserve all150 records and non-good exclusion reasons after authorization. Good count unknown before release.",
+  "canonical_layout": "Same frozen Llama tokenizer and literal wrapper, full-string offsets with boundary-crossing first token; max4096. Preserve genuine test metadata; old development-only model adapters are not bypassed.",
+  "gold": "Reuse old character helpers; all four human span types and implicit_true/due_to_null preserved. Lexical=covered isalnum; positive token=overlapping risk isalnum;4rawBPE stride1 window any risk lexical token. N<4 one actual window. Exclude only no-lexical windows; no automatic refusal exclusions.",
+  "edge_policy": "Report zero/nonalnum spans without relabeling. Invalid geometry, lost content, empty tokenized answer or missing inference prevent complete main scoring. A good answer with no eligible window remains in gold and stops max-window scoring, never dropped or scored0.",
+  "scoring": "No fitting or threshold/candidate selection. Require all frozen methods and every eligible window exactly once. Larger score meansrisk, fixed per-method thresholds, answer=max all eligible windows.",
+  "bootstrap": "Actual parameters must be supplied by root development freeze before release. Interface supports group_id pooled-confusion percentile CIs with common group draws across all methods, linear quantiles, zero denominators0. Example5000 seed20261001 level.95 is a proposal, not selection from test.",
+  "model_adapter_boundary": "These tools do not invent or run final models. A separately frozen adapter must produce complete canonical window predictions and bind actual model/transform/code/native prediction artifacts. Raw-token scores only exist for methods whose native output defines them; no fake token probabilities are assigned to window classifiers.",
+  "validation": "Round-trip only already-open159 calibration, known3 non-good calibration rows, and one fixed old LR prediction/threshold artifact. Official test answer/quality/labels remain unread.",
+  "test_exposure": "Once final results are inspected, subsequent model changes require a new independent held-out test; do not overwrite this release/freeze/result directory."
+}

@@ -1,0 +1,61 @@
+{
+  "version": "within-answer-pairwise-ranker-v1",
+  "identity": "ours_method_candidate; never a baseline",
+  "question": "Can within-answer risk ranking remove the main localization error that whole-answer gating cannot remove?",
+  "scope": {
+    "fit": "Original native 634 answers, 615 material-connected groups and 168123 eligible 4-raw-BPE windows.",
+    "calibration": "Original 159 answers and 42241 windows, evaluated once only after model and fit threshold freeze.",
+    "test": "Official test is never read."
+  },
+  "inputs": [
+    "current",
+    "large",
+    "nli_init",
+    "fava",
+    "tail2",
+    "semantic_claim",
+    "harp_claim",
+    "lookback",
+    "minicheck",
+    "local_nli",
+    "raw_nll"
+  ],
+  "input_semantics": {
+    "absolute": "Clipped logit of each completed risk score.",
+    "relative": "Within-answer mid-rank of each score, centered at 0.5; ties receive their average rank.",
+    "direction": "Every source is oriented so larger means more hallucination risk.",
+    "reuse": "No new language-model inference and no source model refit."
+  },
+  "pairs": {
+    "unit": "Each contiguous positive-window run inside a risky fit answer.",
+    "positive_representatives": "First, middle and last window of the run, deduplicated.",
+    "negative_representatives": "Nearest negative on the left, nearest negative on the right and highest-current-score negative in the answer, deduplicated.",
+    "rows": "Cartesian product of those representatives plus its reversed copy.",
+    "weight": "Equal total mass per material group, then answer, then positive run, then unordered pair; reverse copies split the pair mass equally.",
+    "reason": "Directly learns which detail is riskier inside the same response and avoids counting thousands of overlapping windows as independent examples."
+  },
+  "model": {
+    "type": "StandardScaler + LogisticRegression",
+    "C": 0.01,
+    "penalty": "L2",
+    "solver": "liblinear",
+    "fit_intercept": false,
+    "max_iter": 2000,
+    "random_state": 20261013,
+    "feature_width": 22
+  },
+  "crossfit": {
+    "folds": 5,
+    "split": "GroupKFold by material-connected group; every fit answer/window gets one OOF score.",
+    "selection": "The sole window threshold is selected from all fit OOF window scores. No C, source, pair, fold or feature search.",
+    "final": "One same-configuration full-fit model scores calibration after the model and OOF threshold are saved and hashed."
+  },
+  "answer": {
+    "primary_two_head": "Keep the already-fixed current answer score and threshold exactly; the new ranker changes localization only.",
+    "secondary": "Also report max ranker score per answer with the fit-OOF-derived answer threshold."
+  },
+  "known_limit": "The meta ranker is group-cross-fitted, but most cached upstream fit scores were themselves trained in-sample. The unfinished upstream large crossfit must still be completed for a fully honest stack.",
+  "not_a_conflict_detector": "This v1 adds no new source-conditioned evidence. It is a localization/overfitting diagnostic and cannot by itself repair the very low recall on explicit or coverage-gap Evident Conflict.",
+  "GPU_used": false,
+  "official_test_opened": false
+}

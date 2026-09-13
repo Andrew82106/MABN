@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "numeric_audit_sha256": "59813eec3d983949c4e4689a9d8860763bc1932bbe95309296d2a09767bec581",
+  "mapping_audit_sha256": "23376d2280f20f08c555f74f6cf28ad67396e2e258e97ecf749e5e81fdda0eae",
+  "production_complete_sha256": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9",
+  "original793_features_exact": true,
+  "additional3046_mapping_exact": true,
+  "all12_candidates_replayed": true,
+  "thresholds24_and_family_selection4_exact": true,
+  "source_groups_fit615_cal154_disjoint": true,
+  "loss_mass_each168123": true,
+  "new_training_performed_by_reviewers": false,
+  "GPU_used_by_reviewers": false,
+  "official_test_read": false,
+  "limitations": [
+    "Added3046 responses share original615 fit source groups; not additional independent questions.",
+    "MiniCheck states come from an additional checker, not each source generator.",
+    "Repeated calibration development results remain optimistic."
+  ]
+}

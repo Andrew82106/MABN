@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "scope": "Static runner diff plus CPU artifacts only; no model load, GPU, calibration, or test.",
+  "hashes": {
+    "v1_runner_sha256": "4e89de369c54131516d8689f30e6b6337b1333e3a152ad3bd0d2830de9e4bade",
+    "v2_runner_sha256": "07a65892e1318f586d6d06bcc7d34786b601e08d0f5384e47155aec3435d33d3",
+    "failure_history_sha256": "92788f562244f4c345ef8b4c9828be68bf81e3aedde437014ac33ca5a37bab44",
+    "v2_cpu_check_sha256": "14c07066c8a4e4e6ac139fcd2dd4eb0bf8b778cdc064f568ef36de5b0d6af54c",
+    "v2_gpu_plan_sha256": "08adaa3016f9efa402d8a362ee712ae2a8e75bdc0113c407426358a00bd81d84",
+    "core_manifest_sha256": "5532553daa2b05f24e7aed62228b2bcfbab49493ea08d9b82d5546b56e78e83f",
+    "protocol_sha256": "4ab452c90dac2240406a701756844b8899823b4c0a1c6d495605a4aa6486eaa7",
+    "audit_script_sha256": "665586fa1f303bf6392a16ba9c7416f657a0a93c332d99cd7c44b674baa972b9"
+  },
+  "intentional_differences": {
+    "backend": "from_pretrained(attn_implementation='sdpa', reference_compile=False) plus config assertions",
+    "output_directory": "gpu_runs_v2",
+    "reporting_only": "answer score=max window; F1/AP added for v4, candidate, and control"
+  },
+  "invariants": {
+    "unchanged_constant_assignments": [
+      "HERE",
+      "ROOT",
+      "DATA",
+      "MODEL",
+      "V4_CHECKPOINT",
+      "SEED",
+      "PAD_ID",
+      "TOKEN_BUDGET",
+      "MAX_EXAMPLES",
+      "ACCUM",
+      "EVAL_TOKEN_BUDGET",
+      "EVAL_MAX_EXAMPLES",
+      "LR",
+      "WEIGHT_DECAY",
+      "CLIP_NORM",
+      "MIN_FREE_GPU_BYTES",
+      "STAGE_CODES"
+    ],
+    "unchanged_function_asts": [
+      "sha",
+      "read_json",
+      "save_json",
+      "load_data",
+      "make_batches",
+      "batch_tensors",
+      "token_logits",
+      "conflict_logit",
+      "exact_span_loss",
+      "batch_plan",
+      "plan_stats",
+      "grouped_train",
+      "held_inference",
+      "gpu_preflight",
+      "train_arm",
+      "choose_threshold",
+      "count",
+      "top_k"
+    ],
+    "initialization_equal_after_removing_backend_keywords_and_assertions": true,
+    "estimate_and_smoke_equal_after_output_root_normalization": true,
+    "cpu_check_equal_after_backend_config_diagnostic_and_output_normalization": true,
+    "window_readout_and_gate_unchanged": true,
+    "v2_gpu_plan_bitwise_equal_to_v1": true,
+    "v2_cpu_gradient_check_equal_to_v1": true,
+    "core_data_manifest_valid": true,
+    "v1_runner_matches_pre_failure_cpu_seal": true,
+    "published_baselines_modified": false
+  },
+  "failure_preservation": {
+    "v1_success_smoke_artifact_exists": false,
+    "v1_gpu_run_directory_exists": false,
+    "history_written": true
+  },
+  "execution": {
+    "v2_cpu_check": "passed",
+    "v2_loader_config_attn_implementation": "sdpa",
+    "v2_loader_config_reference_compile": false,
+    "v2_gpu_plan_reproduced": true,
+    "v2_gpu_smoke_run": false,
+    "model_checkpoint_loaded": false,
+    "GPU_used": false,
+    "calibration_rows_read": 0,
+    "test_rows_read": 0
+  }
+}

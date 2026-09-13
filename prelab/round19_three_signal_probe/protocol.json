@@ -1,0 +1,39 @@
+{
+  "schema": "round19-three-signal-probe-v1",
+  "scope": "Exploratory follow-up on R16 actual train301 questions/278 event groups/602 fixed responses; R18 same group folds; no original validation/test evaluation",
+  "methods": ["base", "base_mmd", "base_ecs", "base_pks", "base_all", "signals_only"],
+  "primary_method": "base_all",
+  "primary_outcome": "pooled group-held-out four-BPE window F1",
+  "primary_contrast": "all_vs_base",
+  "primary_contrasts": {
+    "mmd_vs_base": ["base_mmd", "base"],
+    "ecs_vs_base": ["base_ecs", "base"],
+    "pks_vs_base": ["base_pks", "base"],
+    "all_vs_base": ["base_all", "base"],
+    "all_vs_mmd": ["base_all", "base_mmd"],
+    "all_vs_ecs": ["base_all", "base_ecs"],
+    "all_vs_pks": ["base_all", "base_pks"],
+    "signals_only_vs_base": ["signals_only", "base"],
+    "base_contribution": ["base_all", "signals_only"]
+  },
+  "width": 4,
+  "stride": 1,
+  "folds": 5,
+  "fold_assignment_source": "../round18_input_information_diagnostics/data/fold_assignment.json",
+  "calibration": "evaluation fold f; calibration fold(f+1)%5; remaining3 fit; same R18 groups",
+  "C": 0.01,
+  "target_loss_mass": 3854,
+  "classifier_seed": 20260913,
+  "lr_max_iter": 2000,
+  "baseline": "Exact R18 float32 mean4 LB784+NLL1 cache; per-fold scaler/weights/LR/threshold/probability must reproduce R18 mean_lr",
+  "signals": {
+    "mmd": {"raw": "token_lumina_mmd[N,2]", "dimensions": 2, "aggregation": "per-token source mean and source maximum, then mean across raw BPE window", "time": "pre-current-token P+j-1", "kernel": "original lumina7 top100 unnormalized cosine kernel MMD", "perturbation": "replace strictly interior body tokens of one source at a time with equally many frozen independent ordinary donor tokens; preserve question/titles/other sources/answer/prefix length", "donors": "deduplicated old R6 actual train visible source pool, frozen before extraction; input-only overlap audit against R16 train; question-text hash + source slot selects token stream independent of labels and conditions"},
+    "ecs": {"raw": "token_redeep_ecs[N,784]", "dimensions": 4, "aggregation": "reshape layer28/head28; mean all heads and layers in each fixed band, then BPE window mean", "bands_1based": [[1,7],[8,14],[15,21],[22,28]], "time": "post-current-token P+j", "formula": "original attention7 external_context_score with top10pct attended context and final normalized hidden cosine"},
+    "pks": {"raw": "token_redeep_pks[N,28]", "dimensions": 4, "aggregation": "mean layers in same four fixed bands, then BPE window mean", "time": "post-current-token P+j", "formula": "original attention7 standard JSD between FFN-pre/post residual LogitLens distributions"}
+  },
+  "thresholds": "calibration-only maxF1, then higher precision then higher threshold; separate window and answer-max cutoffs; same R18",
+  "eligibility": "same R18 frozen gold/geometry; safe refusals answer negative only; unresolved excluded not zero-filled",
+  "bootstrap": {"seed": 20260918, "draws": 2000, "unit": "event group", "fixed_fitted_models": true},
+  "secondary_strata": {"category": "frozen question category", "condition": "complete/partial only for reporting", "answer_length": "raw generated BPE count <=16,17..32,>32; fixed before fitting"},
+  "limits": ["R18-informed exploratory reuse, not confirmatory or SOTA evidence", "MMD is conditional sensitivity under a fixed answer prefix, not factuality", "donor themes and token joining may differ despite identical prefix length", "ECS/PKS compression can discard useful head/layer structure", "same C does not equalize effective capacity", "labels are existing assistant annotations, human_gold=false", "fixed-fold bootstrap excludes refitting uncertainty and multiple-comparison correction"]
+}

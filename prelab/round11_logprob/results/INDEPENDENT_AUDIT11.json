@@ -1,0 +1,870 @@
+{
+  "schema": "round11-independent-audit-v1",
+  "status": "passed",
+  "exploratory_reuse_of_seen_test": true,
+  "gold": {
+    "train": {
+      "coverage": {
+        "groups": 120,
+        "planned_answers": 240,
+        "item_evaluable": 232,
+        "risk_answers": 67,
+        "asserted_evaluable": 195,
+        "reviewed_safe_refusals": 37,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 203,
+          "abstained": 37
+        },
+        "localization_statuses": {
+          "resolved": 195,
+          "excluded": 37,
+          "unresolved": 8
+        },
+        "total_bpe_tokens": 5974,
+        "eligible_tokens": 3854,
+        "risk_tokens": 339,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 3515,
+      "risk_only_tokens": 1378,
+      "safe_refusal_ids": [
+        "ragognize_train_0287__partial__1",
+        "ragognize_train_0302__partial__1",
+        "ragognize_train_0313__partial__1",
+        "ragognize_train_0580__partial__1",
+        "ragognize_train_0692__partial__1",
+        "ragognize_train_0903__partial__1",
+        "ragognize_train_0939__partial__1",
+        "ragognize_train_1041__partial__1",
+        "ragognize_train_1122__partial__1",
+        "ragognize_train_1347__partial__1",
+        "ragognize_train_2036__partial__1",
+        "ragognize_train_2180__partial__1",
+        "ragognize_test_0044__partial__1",
+        "ragognize_test_0485__partial__1",
+        "ragognize_test_0970__partial__1",
+        "ragognize_test_1264__partial__1",
+        "ragognize_test_1284__partial__1",
+        "ragognize_test_1554__partial__1",
+        "ragognize_test_2039__partial__1",
+        "ragognize_train_0382__partial__1",
+        "ragognize_train_0406__partial__1",
+        "ragognize_train_0473__partial__1",
+        "ragognize_train_0683__partial__1",
+        "ragognize_train_1379__partial__1",
+        "ragognize_train_1520__partial__1",
+        "ragognize_train_1766__partial__1",
+        "ragognize_train_1782__partial__1",
+        "ragognize_train_2141__partial__1",
+        "ragognize_test_1018__partial__1",
+        "ragognize_test_1548__partial__1",
+        "ragognize_test_2206__partial__1",
+        "ragognize_train_0855__partial__1",
+        "ragognize_train_0466__partial__1",
+        "ragognize_train_0514__partial__1",
+        "ragognize_train_0653__partial__1",
+        "ragognize_train_0974__partial__1",
+        "ragognize_train_1879__partial__1"
+      ]
+    },
+    "validation": {
+      "coverage": {
+        "groups": 40,
+        "planned_answers": 80,
+        "item_evaluable": 76,
+        "risk_answers": 20,
+        "asserted_evaluable": 60,
+        "reviewed_safe_refusals": 16,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 64,
+          "abstained": 16
+        },
+        "localization_statuses": {
+          "resolved": 60,
+          "excluded": 16,
+          "unresolved": 4
+        },
+        "total_bpe_tokens": 2018,
+        "eligible_tokens": 1220,
+        "risk_tokens": 87,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 1133,
+      "risk_only_tokens": 436,
+      "safe_refusal_ids": [
+        "ragognize_train_0379__partial__1",
+        "ragognize_train_1128__partial__1",
+        "ragognize_train_1307__partial__1",
+        "ragognize_test_0701__partial__1",
+        "ragognize_train_0414__partial__1",
+        "ragognize_train_1532__partial__1",
+        "ragognize_train_2125__partial__1",
+        "ragognize_train_2179__partial__1",
+        "ragognize_train_0088__partial__1",
+        "ragognize_train_0095__partial__1",
+        "ragognize_train_1996__partial__1",
+        "ragognize_train_2214__partial__1",
+        "ragognize_test_0690__partial__1",
+        "ragognize_test_1668__partial__1",
+        "ragognize_train_0230__partial__1",
+        "ragognize_train_1160__partial__1"
+      ]
+    },
+    "test": {
+      "coverage": {
+        "groups": 60,
+        "planned_answers": 120,
+        "item_evaluable": 115,
+        "risk_answers": 34,
+        "asserted_evaluable": 100,
+        "reviewed_safe_refusals": 15,
+        "refusals_without_explicit_safe_review": [],
+        "stances": {
+          "asserted": 105,
+          "abstained": 15
+        },
+        "localization_statuses": {
+          "resolved": 100,
+          "excluded": 15,
+          "unresolved": 5
+        },
+        "total_bpe_tokens": 2568,
+        "eligible_tokens": 1683,
+        "risk_tokens": 164,
+        "failed_parse_answers": 0
+      },
+      "token_nonspan": 1519,
+      "risk_only_tokens": 642,
+      "safe_refusal_ids": [
+        "ragognize_train_0085__partial__1",
+        "ragognize_train_0307__partial__1",
+        "ragognize_train_1060__partial__1",
+        "ragognize_train_0107__partial__1",
+        "ragognize_train_0355__partial__1",
+        "ragognize_train_0609__partial__1",
+        "ragognize_train_0693__partial__1",
+        "ragognize_train_1546__partial__1",
+        "ragognize_train_1329__partial__1",
+        "ragognize_test_0064__partial__1",
+        "ragognize_test_1848__partial__1",
+        "ragognize_train_2000__partial__1",
+        "ragognize_test_0850__partial__1",
+        "ragognize_train_0035__partial__1",
+        "ragognize_train_0182__partial__1"
+      ]
+    }
+  },
+  "answer_counts": {
+    "nll__item": {
+      "primary": {
+        "tp": 27,
+        "fp": 39,
+        "fn": 7,
+        "tn": 42,
+        "precision": 0.4090909090909091,
+        "recall": 0.7941176470588235,
+        "f1": 0.54,
+        "missing_predictions": 0
+      },
+      "asserted_only": {
+        "tp": 27,
+        "fp": 24,
+        "fn": 7,
+        "tn": 42,
+        "precision": 0.5294117647058824,
+        "recall": 0.7941176470588235,
+        "f1": 0.6352941176470588,
+        "missing_predictions": 0
+      },
+      "reviewed_safe_refusals": {
+        "tp": 0,
+        "fp": 15,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": null,
+        "missing_predictions": 0
+      }
+    },
+    "lb__item": {
+      "primary": {
+        "tp": 28,
+        "fp": 10,
+        "fn": 6,
+        "tn": 71,
+        "precision": 0.7368421052631579,
+        "recall": 0.8235294117647058,
+        "f1": 0.7777777777777778,
+        "missing_predictions": 0
+      },
+      "asserted_only": {
+        "tp": 28,
+        "fp": 10,
+        "fn": 6,
+        "tn": 56,
+        "precision": 0.7368421052631579,
+        "recall": 0.8235294117647058,
+        "f1": 0.7777777777777778,
+        "missing_predictions": 0
+      },
+      "reviewed_safe_refusals": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 15,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "missing_predictions": 0
+      }
+    },
+    "lb_nll__item": {
+      "primary": {
+        "tp": 28,
+        "fp": 11,
+        "fn": 6,
+        "tn": 70,
+        "precision": 0.717948717948718,
+        "recall": 0.8235294117647058,
+        "f1": 0.7671232876712328,
+        "missing_predictions": 0
+      },
+      "asserted_only": {
+        "tp": 28,
+        "fp": 11,
+        "fn": 6,
+        "tn": 55,
+        "precision": 0.717948717948718,
+        "recall": 0.8235294117647058,
+        "f1": 0.7671232876712328,
+        "missing_predictions": 0
+      },
+      "reviewed_safe_refusals": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 15,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "missing_predictions": 0
+      }
+    }
+  },
+  "token_counts": {
+    "nll__token": {
+      "primary": {
+        "tp": 79,
+        "fp": 167,
+        "fn": 85,
+        "tn": 1352,
+        "precision": 0.32113821138211385,
+        "recall": 0.4817073170731707,
+        "f1": 0.3853658536585366,
+        "missing_predictions": 0
+      },
+      "risk_items_only": {
+        "tp": 79,
+        "fp": 84,
+        "fn": 85,
+        "tn": 394,
+        "precision": 0.48466257668711654,
+        "recall": 0.4817073170731707,
+        "f1": 0.4831804281345566,
+        "missing_predictions": 0
+      }
+    },
+    "lb__token": {
+      "primary": {
+        "tp": 84,
+        "fp": 48,
+        "fn": 80,
+        "tn": 1471,
+        "precision": 0.6363636363636364,
+        "recall": 0.5121951219512195,
+        "f1": 0.5675675675675675,
+        "missing_predictions": 0
+      },
+      "risk_items_only": {
+        "tp": 84,
+        "fp": 37,
+        "fn": 80,
+        "tn": 441,
+        "precision": 0.6942148760330579,
+        "recall": 0.5121951219512195,
+        "f1": 0.5894736842105263,
+        "missing_predictions": 0
+      }
+    },
+    "lb_nll__token": {
+      "primary": {
+        "tp": 83,
+        "fp": 47,
+        "fn": 81,
+        "tn": 1472,
+        "precision": 0.6384615384615384,
+        "recall": 0.5060975609756098,
+        "f1": 0.564625850340136,
+        "missing_predictions": 0
+      },
+      "risk_items_only": {
+        "tp": 83,
+        "fp": 36,
+        "fn": 81,
+        "tn": 442,
+        "precision": 0.6974789915966386,
+        "recall": 0.5060975609756098,
+        "f1": 0.5865724381625441,
+        "missing_predictions": 0
+      }
+    }
+  },
+  "baseline_replication": {
+    "item": {
+      "rows": 120,
+      "max_absolute_score_difference": 0.0,
+      "threshold_equal_atol_1e_10": true,
+      "all_binary_decisions_equal": true
+    },
+    "token": {
+      "rows": 2568,
+      "max_absolute_score_difference": 0.0,
+      "threshold_equal_atol_1e_10": true,
+      "all_binary_decisions_equal": true
+    }
+  },
+  "paired_f1": {
+    "item": {
+      "groups": 60,
+      "draws": 2000,
+      "seed": 20260912,
+      "methods": {
+        "nll__item": {
+          "ci95": [
+            0.4234967320261438,
+            0.6346153846153846
+          ],
+          "defined_draws": 2000
+        },
+        "lb__item": {
+          "ci95": [
+            0.6575244618395303,
+            0.8767123287671232
+          ],
+          "defined_draws": 2000
+        },
+        "lb_nll__item": {
+          "ci95": [
+            0.6470588235294118,
+            0.8615909090909089
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "lb_nll_minus_lb": {
+        "ci95": [
+          -0.03529411764705892,
+          0.0
+        ],
+        "defined_draws": 2000
+      }
+    },
+    "token": {
+      "groups": 60,
+      "draws": 2000,
+      "seed": 20260912,
+      "methods": {
+        "nll__token": {
+          "ci95": [
+            0.29507486022931867,
+            0.46393689970175883
+          ],
+          "defined_draws": 2000
+        },
+        "lb__token": {
+          "ci95": [
+            0.46645708197220365,
+            0.6592726231386024
+          ],
+          "defined_draws": 2000
+        },
+        "lb_nll__token": {
+          "ci95": [
+            0.4621360711002145,
+            0.6557403661911858
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "lb_nll_minus_lb": {
+        "ci95": [
+          -0.01836415157863,
+          0.010775322570471414
+        ],
+        "defined_draws": 2000
+      }
+    }
+  },
+  "baseline_validation_replication": {
+    "item": {
+      "rows": 80,
+      "max_absolute_score_difference": 0.0,
+      "threshold_equal_atol_1e_10": true,
+      "all_binary_decisions_equal": true
+    },
+    "token": {
+      "rows": 2018,
+      "max_absolute_score_difference": 0.0,
+      "threshold_equal_atol_1e_10": true,
+      "all_binary_decisions_equal": true
+    }
+  },
+  "cache_provenance": {
+    "rows": 440,
+    "tokens": 10560,
+    "axis_and_finite_checks": "passed",
+    "materialized_round11_cache": false,
+    "source_phase": "P+j-1 logits predict observed token j",
+    "meaning": "Source code/hash and exact cached arrays checked; no new GPU probability recomputation"
+  },
+  "actual_operating_point_changes": {
+    "item": {
+      "main_changes": [
+        {
+          "id": "ragognize_train_0961__complete__1",
+          "row_id": "ragognize_train_0961__complete",
+          "text": "Cecelie Williams advocates for a law change that would allow pregnant women to divorce.",
+          "start": 3,
+          "end": 90,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.44037816793194823,
+          "lb_nll_score": 0.6142964405039232,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "TN->FP"
+        }
+      ],
+      "excluded_changes": []
+    },
+    "token": {
+      "main_changes": [
+        {
+          "id": "ragognize_train_0115__partial__token15",
+          "row_id": "ragognize_train_0115__partial",
+          "text": " January",
+          "start": 67,
+          "end": 75,
+          "main_eligible": true,
+          "gold": 1,
+          "lb_score": 0.8163018791422354,
+          "lb_nll_score": 0.7864324151174017,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "TP->FN"
+        },
+        {
+          "id": "ragognize_train_1126__complete__token23",
+          "row_id": "ragognize_train_1126__complete",
+          "text": "2",
+          "start": 87,
+          "end": 88,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.7799769699967715,
+          "lb_nll_score": 0.8088575780314733,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "TN->FP"
+        },
+        {
+          "id": "ragognize_train_0339__partial__token9",
+          "row_id": "ragognize_train_0339__partial",
+          "text": " a",
+          "start": 30,
+          "end": 32,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.8416841529053369,
+          "lb_nll_score": 0.7864833110367371,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "FP->TN"
+        },
+        {
+          "id": "ragognize_train_0145__partial__token18",
+          "row_id": "ragognize_train_0145__partial",
+          "text": " provided",
+          "start": 83,
+          "end": 92,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.7659763142859196,
+          "lb_nll_score": 0.865677544874048,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "TN->FP"
+        },
+        {
+          "id": "ragognize_train_0961__partial__token7",
+          "row_id": "ragognize_train_0961__partial",
+          "text": " for",
+          "start": 29,
+          "end": 33,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.8039083090381615,
+          "lb_nll_score": 0.7641511138443425,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "FP->TN"
+        },
+        {
+          "id": "ragognize_train_0961__partial__token17",
+          "row_id": "ragognize_train_0961__partial",
+          "text": " choose",
+          "start": 86,
+          "end": 93,
+          "main_eligible": true,
+          "gold": 0,
+          "lb_score": 0.8273820466765106,
+          "lb_nll_score": 0.8002395449363658,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "FP->TN"
+        }
+      ],
+      "excluded_changes": [
+        {
+          "id": "ragognize_train_0085__partial__token3",
+          "row_id": "ragognize_train_0085__partial",
+          "text": " do",
+          "start": 18,
+          "end": 21,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.7629983301631783,
+          "lb_nll_score": 0.8032985862761883,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0307__partial__token14",
+          "row_id": "ragognize_train_0307__partial",
+          "text": " reg",
+          "start": 76,
+          "end": 80,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8115881282503696,
+          "lb_nll_score": 0.7741869636693407,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_1060__partial__token7",
+          "row_id": "ragognize_train_1060__partial",
+          "text": " provide",
+          "start": 28,
+          "end": 36,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8058179854727718,
+          "lb_nll_score": 0.7938427559466725,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0355__partial__token13",
+          "row_id": "ragognize_train_0355__partial",
+          "text": " grandchildren",
+          "start": 67,
+          "end": 81,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8339114823148848,
+          "lb_nll_score": 0.7970136176425344,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_1546__partial__token26",
+          "row_id": "ragognize_train_1546__partial",
+          "text": " results",
+          "start": 108,
+          "end": 116,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8196100329931609,
+          "lb_nll_score": 0.8010978363900981,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_1329__partial__token0",
+          "row_id": "ragognize_train_1329__partial",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8371657371509761,
+          "lb_nll_score": 0.7888527597766605,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_test_0064__partial__token5",
+          "row_id": "ragognize_test_0064__partial",
+          "text": " provide",
+          "start": 25,
+          "end": 33,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8105062818895776,
+          "lb_nll_score": 0.793535645084862,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_test_1848__partial__token9",
+          "row_id": "ragognize_test_1848__partial",
+          "text": " on",
+          "start": 48,
+          "end": 51,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.7498026409855183,
+          "lb_nll_score": 0.846300514189442,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_test_1848__partial__token10",
+          "row_id": "ragognize_test_1848__partial",
+          "text": " how",
+          "start": 51,
+          "end": 55,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.787615196146431,
+          "lb_nll_score": 0.810426048718524,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_test_1482__partial__token0",
+          "row_id": "ragognize_test_1482__partial",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8471718228556574,
+          "lb_nll_score": 0.7955415194597437,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_test_0850__complete__token0",
+          "row_id": "ragognize_test_0850__complete",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8445129708142315,
+          "lb_nll_score": 0.7844647549105521,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0339__complete__token0",
+          "row_id": "ragognize_train_0339__complete",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8291721478974187,
+          "lb_nll_score": 0.7739536206798217,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_1521__partial__token0",
+          "row_id": "ragognize_train_1521__partial",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8038115062127156,
+          "lb_nll_score": 0.7309211641408226,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0081__partial__token0",
+          "row_id": "ragognize_train_0081__partial",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8373599900517911,
+          "lb_nll_score": 0.7873852754523072,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0121__complete__token0",
+          "row_id": "ragognize_train_0121__complete",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8151174061606019,
+          "lb_nll_score": 0.7668150362199363,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0145__partial__token0",
+          "row_id": "ragognize_train_0145__partial",
+          "text": "1",
+          "start": 0,
+          "end": 1,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.8176175009000456,
+          "lb_nll_score": 0.7692129084486605,
+          "lb_prediction": 1,
+          "lb_nll_prediction": 0,
+          "transition": "excluded->excluded"
+        },
+        {
+          "id": "ragognize_train_0583__partial__token13",
+          "row_id": "ragognize_train_0583__partial",
+          "text": " Pakistan",
+          "start": 71,
+          "end": 80,
+          "main_eligible": false,
+          "gold": null,
+          "lb_score": 0.6991649575813361,
+          "lb_nll_score": 0.8123844835259578,
+          "lb_prediction": 0,
+          "lb_nll_prediction": 1,
+          "transition": "excluded->excluded"
+        }
+      ]
+    }
+  },
+  "unresolved_descriptive_only": [
+    {
+      "item_id": "ragognize_train_0348__partial__1",
+      "text": "Bhale Unnade premiered in theaters on an unspecified date in 2024.",
+      "rationale": "Final blind adjudication: a 2024 film can mean release/film year without strictly determining theatrical premiere year. Independent reviewer identified this event-specific ambiguity; do not import the other condition or force a risk label.",
+      "excluded_from_primary_metrics": true,
+      "item_alerts": {
+        "nll__item": 1,
+        "lb__item": 1,
+        "lb_nll__item": 1
+      },
+      "lexical_tokens": 17,
+      "token_alerts": {
+        "nll__token": 3,
+        "lb__token": 9,
+        "lb_nll__token": 9
+      }
+    },
+    {
+      "item_id": "ragognize_train_0472__partial__1",
+      "text": "The solar farm project approved by the Northern Territory government did not cover Spring Bayou Wildlife Management Area, as it is located in Louisiana.",
+      "rationale": "The source locates Spring Bayou in Louisiana, but never locates the solar project explicitly or says whether it covers the protected area. Answer is a plausible geographic exclusion rather than a requested numeric area; strict entailment versus ordinary inference is ambiguous, so exclude pending independent review instead of forcing a binary gold.",
+      "excluded_from_primary_metrics": true,
+      "item_alerts": {
+        "nll__item": 1,
+        "lb__item": 1,
+        "lb_nll__item": 1
+      },
+      "lexical_tokens": 25,
+      "token_alerts": {
+        "nll__token": 8,
+        "lb__token": 3,
+        "lb_nll__token": 3
+      }
+    },
+    {
+      "item_id": "ragognize_train_0256__partial__1",
+      "text": "The studio that develops and publishes the video game Cairn is not explicitly stated in the given information, but it can be inferred to be the developer who released a playable demo through Steam.",
+      "rationale": "回答未给工作室名字，准确说明名字未给，又将它描述为通过 Steam 发布试玩版的开发者。资料仅以被动句说明试玩版发布，未明确发布主体；将其视为常规同指概括或额外猜测开发者实施发布行为均有解释空间，保留未决供独立裁决。",
+      "excluded_from_primary_metrics": true,
+      "item_alerts": {
+        "nll__item": 1,
+        "lb__item": 1,
+        "lb_nll__item": 1
+      },
+      "lexical_tokens": 35,
+      "token_alerts": {
+        "nll__token": 18,
+        "lb__token": 9,
+        "lb_nll__token": 9
+      }
+    },
+    {
+      "item_id": "ragognize_train_0081__partial__1",
+      "text": "The White Collar Support Group advocates for community support and resources for those dealing with the challenges of the white-collar criminal justice system.",
+      "rationale": "Final blind adjudication: offers support/resources may be ordinary paraphrase of a community group purpose, or distinct from a formal advocacy position. Initial and second judgments differ on this ambiguous relation, so retain unresolved; incompleteness alone is not risk.",
+      "excluded_from_primary_metrics": true,
+      "item_alerts": {
+        "nll__item": 1,
+        "lb__item": 1,
+        "lb_nll__item": 1
+      },
+      "lexical_tokens": 25,
+      "token_alerts": {
+        "nll__token": 5,
+        "lb__token": 3,
+        "lb_nll__token": 3
+      }
+    },
+    {
+      "item_id": "ragognize_train_0583__partial__1",
+      "text": "The government-established schools in the People's School Program in Pakistan are operated by the Sindh Education Foundation, Government of Sindh.",
+      "rationale": "The current source says PSP is under SEF/Government of Sindh and PSP operates 35 schools. Operated by SEF can be a broad administrative-responsibility paraphrase, but could instead assert direct operation not established by under. The wording does not disambiguate the operational relationship; do not use the other condition to decide. Country and institution names themselves are supported.",
+      "excluded_from_primary_metrics": true,
+      "item_alerts": {
+        "nll__item": 1,
+        "lb__item": 1,
+        "lb_nll__item": 1
+      },
+      "lexical_tokens": 24,
+      "token_alerts": {
+        "nll__token": 6,
+        "lb__token": 3,
+        "lb_nll__token": 4
+      }
+    }
+  ],
+  "metrics_sha256": "9db4e716729ceba9723cffc90d724b62d02d8017feccc2e10730c6193500443b"
+}

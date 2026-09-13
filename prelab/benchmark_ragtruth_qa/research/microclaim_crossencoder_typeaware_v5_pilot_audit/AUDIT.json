@@ -1,0 +1,305 @@
+{
+  "status": "independent_fit_fold0_only_audit_passed",
+  "scope": "Exactly fit held fold 0; calibration labels/scores and official test were not read.",
+  "integrity": {
+    "fit_rows_read": 34919,
+    "calibration_rows_read": 0,
+    "official_test_opened": false,
+    "held_indices_exact": true,
+    "train_held_counts": {
+      "train": 27936,
+      "held": 6983
+    },
+    "train_held_overlap": {
+      "group_id": 0,
+      "source_id": 0,
+      "response_id": 0,
+      "input_pair_sha256": 0
+    },
+    "source_runner_sha256": "15a761fef83904d597b82f3dc7e81124737487cba3fa69421a473906799a8e86",
+    "type_predictions_sha256": "a3233ab7f83bc280bfcf43afc8bc2cfb1a7b2052c3928c07b42ab6e4346434b5",
+    "v4_predictions_sha256": "93d3e0a2a33ad09f1ecc94c968bab4d09ab354a3e786c5e1adc9362bae70cc75",
+    "checkpoint": {
+      "parent_sha256": "4e7fc075b3a0ee3a0cbe9ebd0cd69182bdb49663496ebcfee7b551427103b048",
+      "child_sha256": "0863b044c5f3ae6a583203973cb3715a2b4aae0c30ea50e72838632703455b47",
+      "state_tensors": 138,
+      "changed_tensors": 138,
+      "unchanged_tensors": 0,
+      "changed_parameters": 149607171,
+      "encoder_and_classifier_both_changed": true,
+      "metadata_parent_binding_passed": true
+    },
+    "baselines_modified": false
+  },
+  "fold0_gold": {
+    "microclaims": {
+      "n": 6983,
+      "positive": 703
+    },
+    "windows": {
+      "n": 132213,
+      "positive": 11734
+    },
+    "positive_type_membership": {
+      "Evident Baseless Info": 419,
+      "Evident Conflict": 62,
+      "Subtle Baseless Info": 221,
+      "Subtle Conflict": 5
+    },
+    "raw_character_span_type_membership_all_binary_labels": {
+      "Evident Baseless Info": 421,
+      "Evident Conflict": 62,
+      "Subtle Baseless Info": 223,
+      "Subtle Conflict": 5
+    }
+  },
+  "methods": {
+    "expanded_v4_fold0": {
+      "microclaims": {
+        "ranking": {
+          "n": 6983,
+          "positive": 703,
+          "positive_rate": 0.10067306315337247,
+          "auroc": 0.9152166329923621,
+          "average_precision": 0.6482768492003093
+        },
+        "same_fold_F1Opt": {
+          "threshold": 0.6480876207351685,
+          "f1": 0.6074646074646075,
+          "precision": 0.554641598119859,
+          "recall": 0.6714082503556188,
+          "tp": 472,
+          "fp": 379,
+          "fn": 231,
+          "tn": 5901,
+          "false_positive_rate": 0.06035031847133758
+        }
+      },
+      "windows_4BPE_stride1_max_projection": {
+        "ranking": {
+          "n": 132213,
+          "positive": 11734,
+          "positive_rate": 0.08875072799195238,
+          "auroc": 0.9282869926602688,
+          "average_precision": 0.6390503697171015
+        },
+        "same_fold_F1Opt": {
+          "threshold": 0.8502532839775085,
+          "f1": 0.6227159646564295,
+          "precision": 0.6268566493955094,
+          "recall": 0.618629623316857,
+          "tp": 7259,
+          "fp": 4321,
+          "fn": 4475,
+          "tn": 116158,
+          "false_positive_rate": 0.03586517152366803
+        }
+      },
+      "microclaim_recall_by_gold_type_at_own_same_fold_F1Opt": {
+        "Evident Baseless Info": {
+          "total": 419,
+          "detected": 316,
+          "recall": 0.7541766109785203
+        },
+        "Subtle Baseless Info": {
+          "total": 221,
+          "detected": 145,
+          "recall": 0.6561085972850679
+        },
+        "Evident Conflict": {
+          "total": 62,
+          "detected": 11,
+          "recall": 0.1774193548387097
+        },
+        "Subtle Conflict": {
+          "total": 5,
+          "detected": 2,
+          "recall": 0.4
+        }
+      },
+      "microclaim_ranking_by_gold_type_against_safe": {
+        "Evident Baseless Info": {
+          "n": 6699,
+          "positive": 419,
+          "positive_rate": 0.0625466487535453,
+          "auroc": 0.945544061535655,
+          "average_precision": 0.6453774165843392
+        },
+        "Subtle Baseless Info": {
+          "n": 6501,
+          "positive": 221,
+          "positive_rate": 0.03399477003537917,
+          "auroc": 0.9133750756549557,
+          "average_precision": 0.3615512485952957
+        },
+        "Evident Conflict": {
+          "n": 6342,
+          "positive": 62,
+          "positive_rate": 0.009776095868811101,
+          "auroc": 0.7364829463735361,
+          "average_precision": 0.02534305721519159
+        },
+        "Subtle Conflict": {
+          "n": 6285,
+          "positive": 5,
+          "positive_rate": 0.0007955449482895784,
+          "auroc": 0.6946496815286625,
+          "average_precision": 0.0229079834073872
+        }
+      }
+    },
+    "typeaware_v5_fold0": {
+      "microclaims": {
+        "ranking": {
+          "n": 6983,
+          "positive": 703,
+          "positive_rate": 0.10067306315337247,
+          "auroc": 0.9032601407978544,
+          "average_precision": 0.621752729895035
+        },
+        "same_fold_F1Opt": {
+          "threshold": 0.6961508393287659,
+          "f1": 0.6045454545454546,
+          "precision": 0.646677471636953,
+          "recall": 0.5675675675675675,
+          "tp": 399,
+          "fp": 218,
+          "fn": 304,
+          "tn": 6062,
+          "false_positive_rate": 0.03471337579617834
+        }
+      },
+      "windows_4BPE_stride1_max_projection": {
+        "ranking": {
+          "n": 132213,
+          "positive": 11734,
+          "positive_rate": 0.08875072799195238,
+          "auroc": 0.9179543040098874,
+          "average_precision": 0.6153052203599856
+        },
+        "same_fold_F1Opt": {
+          "threshold": 0.6961508393287659,
+          "f1": 0.615857406269207,
+          "precision": 0.593086575645174,
+          "recall": 0.6404465655360491,
+          "tp": 7515,
+          "fp": 5156,
+          "fn": 4219,
+          "tn": 115323,
+          "false_positive_rate": 0.042795839938910514
+        }
+      },
+      "microclaim_recall_by_gold_type_at_own_same_fold_F1Opt": {
+        "Evident Baseless Info": {
+          "total": 419,
+          "detected": 279,
+          "recall": 0.665871121718377
+        },
+        "Subtle Baseless Info": {
+          "total": 221,
+          "detected": 111,
+          "recall": 0.502262443438914
+        },
+        "Evident Conflict": {
+          "total": 62,
+          "detected": 10,
+          "recall": 0.16129032258064516
+        },
+        "Subtle Conflict": {
+          "total": 5,
+          "detected": 2,
+          "recall": 0.4
+        }
+      },
+      "microclaim_ranking_by_gold_type_against_safe": {
+        "Evident Baseless Info": {
+          "n": 6699,
+          "positive": 419,
+          "positive_rate": 0.0625466487535453,
+          "auroc": 0.9330630634054391,
+          "average_precision": 0.620993710905046
+        },
+        "Subtle Baseless Info": {
+          "n": 6501,
+          "positive": 221,
+          "positive_rate": 0.03399477003537917,
+          "auroc": 0.8980830475257227,
+          "average_precision": 0.3011794473307846
+        },
+        "Evident Conflict": {
+          "n": 6342,
+          "positive": 62,
+          "positive_rate": 0.009776095868811101,
+          "auroc": 0.7528893568933634,
+          "average_precision": 0.02967685461944289
+        },
+        "Subtle Conflict": {
+          "n": 6285,
+          "positive": 5,
+          "positive_rate": 0.0007955449482895784,
+          "auroc": 0.5531210191082803,
+          "average_precision": 0.01811299612360924
+        }
+      }
+    }
+  },
+  "typeaware_native_threeway_head_diagnostics": {
+    "Evident Baseless Info": {
+      "native_head": "neutral",
+      "ranking_against_safe": {
+        "n": 6699,
+        "positive": 419,
+        "positive_rate": 0.0625466487535453,
+        "auroc": 0.9381667756107201,
+        "average_precision": 0.6098967737710689
+      }
+    },
+    "Subtle Baseless Info": {
+      "native_head": "neutral",
+      "ranking_against_safe": {
+        "n": 6501,
+        "positive": 221,
+        "positive_rate": 0.03399477003537917,
+        "auroc": 0.9045184021673343,
+        "average_precision": 0.29457005224109495
+      }
+    },
+    "Evident Conflict": {
+      "native_head": "contradiction",
+      "ranking_against_safe": {
+        "n": 6342,
+        "positive": 62,
+        "positive_rate": 0.009776095868811101,
+        "auroc": 0.7648076330388329,
+        "average_precision": 0.07032764068602022
+      }
+    },
+    "Subtle Conflict": {
+      "native_head": "contradiction",
+      "ranking_against_safe": {
+        "n": 6285,
+        "positive": 5,
+        "positive_rate": 0.0007955449482895784,
+        "auroc": 0.5077707006369426,
+        "average_precision": 0.0015229721157911519
+      }
+    }
+  },
+  "typeaware_minus_v4": {
+    "microclaim_auroc": -0.011956492194507673,
+    "microclaim_average_precision": -0.026524119305274207,
+    "microclaim_same_fold_F1Opt": -0.002919152919152901,
+    "microclaim_FP": -161,
+    "window_auroc": -0.010332688650381394,
+    "window_average_precision": -0.023745149357115913,
+    "window_same_fold_F1Opt": -0.006858558387222491,
+    "window_FP": 835,
+    "type_recall": {
+      "Evident Baseless Info": -0.08830548926014326,
+      "Subtle Baseless Info": -0.15384615384615385,
+      "Evident Conflict": -0.01612903225806453,
+      "Subtle Conflict": 0.0
+    }
+  },
+  "interpretation_guard": "Same-fold F1Opt is descriptive and optimistic; the threshold is selected and evaluated on fold 0 itself. AUROC/AP are threshold-free."
+}

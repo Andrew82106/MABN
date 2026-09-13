@@ -1,0 +1,36 @@
+{
+  "status": "passed_WAIT_UPSTREAM",
+  "pooled_claims": 11322,
+  "independent_exact_repool": [
+    {
+      "response_id": "16023",
+      "claim_id": 8,
+      "BPEs": 5
+    },
+    {
+      "response_id": "13707",
+      "claim_id": 3,
+      "BPEs": 32
+    },
+    {
+      "response_id": "15975",
+      "claim_id": 7,
+      "BPEs": 15
+    }
+  ],
+  "fit_four_BPE_windows_mapped": 168123,
+  "fit_answers_mapped": 634,
+  "claim_identity_order_exact": true,
+  "cross_cache_token_axes_checked": true,
+  "upstream_missing": [
+    "complete.json",
+    "evidence_features.npy",
+    "feature_names.json",
+    "microclaim_labels.npy",
+    "summary.json"
+  ],
+  "metrics_emitted": false,
+  "labels_used_for_audit_decision": false,
+  "GPU_used": false,
+  "official_test_opened": false
+}

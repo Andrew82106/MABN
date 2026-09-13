@@ -1,0 +1,30 @@
+{
+  "version": "answer-conditioned-window-risk-v1",
+  "local": "Each already-selected two_scores_and_citation LR; do not reopen its C selection.",
+  "shared_global": "Already-completed Lookback+tail2 monotone tree answer-max score; currently strongest answer detector. Same score for all three peers.",
+  "own_control": "Use each local detector own answer-max score, to separate answer-wise rescaling from new global information.",
+  "formula": "sigmoid(logit(local_window)+alpha*logit(global_answer)). Broadcast only within that answer. Clip probabilities to [1e-6,1-1e-6] for logits; alpha=0 returns exact original scores.",
+  "alpha": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "modes": [
+    "own_answer_control",
+    "shared_lookback_tree_answer"
+  ],
+  "selection": "Same6 alpha per family, original cal-only separate F1 thresholds; q.selection_key selects one alpha for both levels.",
+  "evaluation": "Unchanged793 answers/210364 windows, original634fit/159cal; all original eligible4BPE windows. Answer score remains max final window score.",
+  "training": "No new training or model inference. Existing upstream heads are trained; not cross-fitted.",
+  "limits": "Repeatedly used calibration and prior best selection remain optimistic development. Added answer information cannot by itself identify the wrong words inside a risky answer.",
+  "official_test_opened": false,
+  "GPU_used": false
+}

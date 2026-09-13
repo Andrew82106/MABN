@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "records": 793,
+  "response_tokens": 213159,
+  "signature_sha256": "0a8b2061ff7188086e117d9b35b4b6d9c09709a37a4104ec36481982acbb7666",
+  "feature_manifest_sha256": "1731cc532289ad927cb8b9bd5eea3fc9a9916105f3695bb71e0b593c34ef883d",
+  "all_npz_hashes_shapes_coordinates_finite_values_checked": true,
+  "audit_seconds": 18.244490399956703,
+  "test_content_read": false,
+  "labels_used": false
+}

@@ -1,0 +1,44 @@
+{
+  "status": "CPU_preparation_only",
+  "seed": 20261011,
+  "cohort": {
+    "fit": 3680,
+    "fit_material_groups": 615,
+    "calibration": 159,
+    "calibration_material_groups": 154,
+    "donor_fit_materials": 634
+  },
+  "selection": "One donor per source_id shared by all generator answers. Lowest SHA256 of seed|target_source_id|donor_source_id over fit-only materials excluding same source_id, known group_id, exact whole-material hash. No answer, question, gold, score, length or topic criterion.",
+  "intervention": "Replace the complete frozen retrieved_passages character block, including its original headers/body, with another fit material block. Preserve original prompt prefix/suffix, question/instructions, answer bytes and wrapper. No original title retention, tiling, truncation or length matching.",
+  "boundary": "Frozen rendered_reference_character_range minus literal wrapper length; prove unique occurrence and exact previously frozen no-context deletion. Preserve the answer-boundary crossing raw token and its negative raw offset.",
+  "timing": "Both sides predictor P+i-1 for each frozen answer token i; full sequence is prefix_ids+same_answer_token_ids. Any trailing suffix or changed answer IDs/offsets is a blocking error, never silently removed.",
+  "formula": {
+    "official_commit": "c43ff41d872b05f659dcb3ad3a6dd78226954319",
+    "port": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\round7_evidence_grounding\\src\\lumina7.py",
+    "official_sha256": "1b5ecd8c08982b40dae59f299e580219074ee83673768feb53cf15612b7d8a5f",
+    "port_sha256": "ea1d1e45e22a510450a4428335a5b3f3366d09459f41db40aaf83ea98278aab8",
+    "functions": [
+      "collect_response_hidden",
+      "final_statistics",
+      "ipr_from_hidden",
+      "cosine_mmd_from_topk"
+    ],
+    "top_k": 100,
+    "lambda": 0.5,
+    "vocabulary_chunk": 16,
+    "score": "0.5*IPR-0.5*MMD_squared; higher risk",
+    "author_code_convention": "All output hidden layers including final state; norm applied again to last hidden. Paper Eq8 ends at L-1. Pin code convention rather than silently merge definitions.",
+    "aggregation_status": "No scores or metrics produced. Paper answer aggregation is mean over all answer tokens. Any future 4BPE window mean and answer-max variant must be reported separately as localization adaptation, not substituted silently."
+  },
+  "model": "Existing Llama-2-7B-chat NF4/BF16 reconstruction, not historical native traces; same checkpoint and explicit wrapper as frozen QA extraction.",
+  "limitations": [
+    "Different source/group identities do not establish semantic irrelevance.",
+    "Whole-material replacement changes sequence length, position and topic together; it is an evidence-reliance probe, not a pure semantic or factuality causal estimate.",
+    "Original instructions are preserved, including any source refusal wording. Do not add insufficient-context guidance.",
+    "Official script adds an extra space and truncates prompts at 12000 characters; this QA adapter does neither and retains every frozen raw BPE."
+  ],
+  "GPU_used": false,
+  "fits": 0,
+  "official_test_opened": false,
+  "future_execution": "Root-owned formula/extraction layer and explicit GPU scheduling; this file has no model-loader, scoring, training or GPU CLI."
+}

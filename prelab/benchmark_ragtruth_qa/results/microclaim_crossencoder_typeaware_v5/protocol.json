@@ -1,0 +1,62 @@
+{
+  "version": "microclaim-crossencoder-typeaware-v5",
+  "scope": "Fit-only type target construction and a single frozen fold-0 continuation pilot; calibration/test labels remain unopened.",
+  "parent": {
+    "dataset": "atomic-microclaim-relation-expanded-v4",
+    "model_run": "microclaim-crossencoder-expanded-v4",
+    "initialization": "The matching completed v4 fold checkpoint, not the original NLI checkpoint."
+  },
+  "three_way_target": {
+    "safe_binary_gold_0": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "EBI_or_SBI_only": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "EC_or_SC_only": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "both_baseless_and_conflict": [
+      0.0,
+      0.5,
+      0.5
+    ],
+    "same_family_multiple_types": "Collapse to that family's one-hot target.",
+    "precedence": "Binary gold=0 always maps to entailment, including five character-overlap-only cases with no risky lexical BPE."
+  },
+  "loss": {
+    "formula": "weighted_mean(BCEWithLogits(logsumexp(N,C)-E, binary_gold) + 0.25 * weighted_soft_CE([E,N,C], type_target))",
+    "binary_risk_logit": "logsumexp(neutral, contradiction) - entailment",
+    "lambda_type": 0.25,
+    "example_weights": "Exact expanded-v4 canonical source-group/answer/claim binary weights, recomputed from fit only for each training fold.",
+    "type_class_weights": "Within each fold, M/(3*m_c), where m_c is example-weighted soft-target mass and M=sum_c m_c; this gives equal aggregate CE target mass to E/N/C.",
+    "mixed_target": "The 17 cross-family microclaims contribute half neutral and half contradiction before class weighting; none is discarded or given arbitrary precedence."
+  },
+  "pilot": {
+    "fold": 0,
+    "epochs": 1,
+    "optimizer": "fresh AdamW state over all model parameters",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "scheduler": null,
+    "batching": {
+      "train_padded_token_budget": 1536,
+      "train_max_examples": 8,
+      "gradient_accumulation_microbatches": 4,
+      "eval_padded_token_budget": 4096,
+      "eval_max_examples": 16
+    },
+    "precision": "FP32 parameters/optimizer, BF16 CUDA forward, non-reentrant gradient checkpointing, TF32 off.",
+    "selection": "One configuration, one epoch, one seed, no checkpoint/grid/calibration selection."
+  },
+  "evaluation_output": "The risk score is unchanged from v4: sigmoid(logsumexp(N,C)-E). Three-way probabilities are diagnostics only.",
+  "official_test_opened": false,
+  "baselines_modified": false
+}

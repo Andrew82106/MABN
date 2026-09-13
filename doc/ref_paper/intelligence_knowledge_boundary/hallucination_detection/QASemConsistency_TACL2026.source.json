@@ -1,0 +1,9 @@
+{
+  "url": "https://aclanthology.org/2026.tacl-1.6.pdf",
+  "title": "Localizing Factual Inconsistencies in Attributable Text Generation",
+  "venue": "TACL 2026",
+  "retrieved_utc": "2026-09-12T02:26:02.196675+00:00",
+  "bytes": 1013989,
+  "sha256": "973590e5e7a7025ad460e6ee9d3b59ccdb031dcd2fb9dfd0b9836cadfd9b7bf7",
+  "purpose": "Annotation-method reference; no dataset/test imported or model trained."
+}

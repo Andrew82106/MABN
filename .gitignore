@@ -35,3 +35,45 @@ htmlcov/
 # mypy
 .mypy_cache/
 .dmypy.json
+
+# Local credentials and key material.  Keep the example template only.
+*.env
+*.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local workspaces, caches, and scratch output.
+**/.venv/
+**/venv/
+**/.cache/
+tmp/
+
+# Model weights and generated numerical artifacts.  These are kept locally or
+# downloaded from the manifests; they do not belong in the source repository.
+**/*.safetensors
+**/*.bin
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.gguf
+**/*.npy
+**/*.npz
+**/*.pkl
+**/*.pickle
+**/*.joblib
+**/*.arrow
+**/*.parquet
+
+# Generated experiment products and raw line-oriented data.
+**/checkpoints/
+**/matrices/
+**/scores/
+**/logs/
+**/*predictions*.jsonl
+**/*.jsonl.pending
+**/*.jsonl.partial
+**/FAILED_*_SNAPSHOT.py
+**/testing_utils.py

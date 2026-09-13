@@ -1,0 +1,51 @@
+{
+  "version": "ragognizer-dependency-audit-v1",
+  "date": "2026-09-13",
+  "author_inference_pyproject": {
+    "python": ">=3.10",
+    "transformers": "4.57.1",
+    "python_dotenv": "1.1.1",
+    "transformer_heads": "unpinned Git URL",
+    "protobuf": "6.33.0",
+    "sentencepiece": "0.2.1",
+    "openai": "2.15.0",
+    "scikit_learn": "1.7.2",
+    "gradio": "6.5.1"
+  },
+  "author_fine_tuning_requirements": {
+    "datasets": "4.5.0",
+    "trl": "0.23.1",
+    "transformers": "4.56.2",
+    "transformer_heads": "0.2.2",
+    "peft": "0.18.1",
+    "torch": "2.10.0",
+    "note": "these training pins conflict with the separate inference pyproject on transformers and do not identify the exact environment that produced the released checkpoint"
+  },
+  "frozen_local_route_A": {
+    "python": "3.11.15",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "peft": "0.18.1",
+    "accelerate": "1.13.0",
+    "safetensors": "0.7.0",
+    "transformer_heads": "source import at 6a2ca2a12a25035ea290b0b0e03839fc16348e44",
+    "cpu_import_smoke": "pass",
+    "meta_device_headed_model_skeleton": "pass; generation-mixin warning observed, irrelevant to teacher-forced detector forward",
+    "full_model_load": "not_run_to_avoid_resource_contention_before_GPU_smoke"
+  },
+  "main_path_not_required": [
+    "bitsandbytes because formal quantization is forbidden",
+    "gradio because no UI is launched",
+    "openai because no API detector is used",
+    "datasets and trl because no training occurs"
+  ],
+  "reproducibility_limits": [
+    "author did not pin the transformer-heads Git commit",
+    "author inference package did not pin torch, peft, or accelerate transitively",
+    "adapter_config does not pin the base-model revision",
+    "actual parameter dtype distribution remains a mandatory GPU-smoke audit because transformer-heads non-kbit set_compute_dtype does not mutate parameters by itself"
+  ],
+  "formal_policy": "package/runtime differences are reported as compute environment; they may not justify weight, head, score, or quantization changes",
+  "gpu_workload_started": false
+}

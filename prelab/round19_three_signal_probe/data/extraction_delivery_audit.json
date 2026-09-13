@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "responses": 602,
+  "response_tokens": 14968,
+  "questions": 301,
+  "group_ids": 278,
+  "actual_split": "R16 train only",
+  "original_validation_or_test_extracted": 0,
+  "donor_sources": 89,
+  "single_body_interventions": 1204,
+  "original_lb_vs_r18_max_absolute_difference": 0.0,
+  "identity_mmd_max": 0.0,
+  "repeat_all_fields_max_absolute_difference": 0.0,
+  "signal_min_max": {
+    "token_lumina_mmd": [
+      0.0,
+      1.0984562635421753
+    ],
+    "token_redeep_ecs": [
+      -0.3985369801521301,
+      0.8412750959396362
+    ],
+    "token_redeep_pks": [
+      2.13953832428615e-08,
+      0.6930843591690063
+    ]
+  },
+  "npz_bytes": 44918567,
+  "saved_row_timing_sum_seconds": 955.2413930001203,
+  "main_loop_wall_seconds": 1010.157,
+  "peak_allocated_gib": 5.3886027336120605,
+  "files_sha256": {
+    "src/extract19.py": "c74ea6e104f2176699a253d1d072905d8bf636c5cc2579fdb271b4dce774a47d",
+    "data/donor_pool.json": "6ffc074acc732b77ebaddccfdddd0f7332f8d5d1672963d8e8e7388089506ed5",
+    "data/donor_independence_review.json": "ed5564b242536e74371f699ed3abe319baacc477914ef1fd8c56d7b5ca57d426",
+    "data/perturbation_manifest.json": "b5632917837d20cf33f3fe058f5755f2e0eedd62caefdfd7208f6c1cfcd3d053",
+    "data/perturbation_plans.jsonl": "f53b857706da0eb9df95df9da9046feaced9f58a732349c44439b2d291d4fbb7",
+    "data/extraction_selfcheck.json": "c75d1dae95ae480cd4ceb90e2e6f97c59f6f9477463c576728986511b0a02a14",
+    "data/feature_manifest.json": "bcc79f15c60f05830570be635c9f5a261a0eddfa20b3f006d1f393254a7d8ab1"
+  },
+  "independent_static_and_plan_review": {
+    "reviewer": "/root/data_build/extract_review",
+    "status": "pass",
+    "scope": "All602 original prompt tokenizations and1204 strict body masks independently reconstructed; same-question-slot donor stream hashes/prefixes checked; original MMD/ECS/PKS interfaces independently inspected. No held-out content, labels, detector scores or GPU used by reviewer."
+  },
+  "new_file_only": "This delivery sidecar does not modify any pinned code, input, donor pool, intervention plan, feature array or main manifest.",
+  "labels_or_detector_scores_read": false,
+  "response_regenerated": false,
+  "limitations": [
+    "Intervention is artificial equal-length token substitution, not natural retrieved text.",
+    "A is pre-read distribution sensitivity; B/C are post-read existing attention7 signals.",
+    "Feature validity does not establish hallucination-detection improvement; fitting/evaluation remain separate."
+  ]
+}

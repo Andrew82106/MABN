@@ -1,0 +1,30 @@
+{
+  "version": "ghost-generator-distribution-v1",
+  "methods": [
+    "ghost_lr",
+    "nll_tree",
+    "ghost_tree",
+    "nll_ghost_tree"
+  ],
+  "partitions": [
+    "native634_fit",
+    "added3046_fit",
+    "cal159"
+  ],
+  "added_generators": "Exclusive canonical model field from frozen fit.jsonl; report multi-generator dedup provenance separately. Generator names are analysis metadata, not model features.",
+  "metrics": "Unweighted descriptive window and answer positive rates, AUROC/AP, confusion and F1 at each already-saved calibration threshold. Same all-eligible-window answermax.",
+  "no_threshold_selection": true,
+  "no_bootstrap": true,
+  "new_fits": 0,
+  "GPU_used": false,
+  "test_opened": false,
+  "limits": "Native/added are training subsets of shared source groups, while calibration is held-out sources. Differences mix generator, length, prevalence and sample selection; no causal attribution or proof about overfitting.",
+  "equivalent_result_search": {
+    "searched": [
+      "results/ghost_matched_diagnostics_v1/diagnose.py",
+      "results/ghost_nll_nonlinear_v1/RUN_REPORT.md",
+      "results/ghost_matched_lr_v1/RUN_REPORT.md"
+    ],
+    "finding": "Existing diagnostics use combined fit/cal or calibration only; no equivalent native/added/generator breakdown."
+  }
+}

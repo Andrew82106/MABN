@@ -1,0 +1,63 @@
+{
+  "cache_reuse": {
+    "ambiguity": "Reuse only if every finite repeated cached value is bit-identical.",
+    "gpu_smoke_replay_tolerance": 1e-05,
+    "identity": "SHA256 of checkpoint, revision, exact premise, exact hypothesis.",
+    "source": "Existing fit-only semantic-attribution NLI cache with the exact same checkpoint/revision."
+  },
+  "label_boundary": {
+    "corrupted_role": "Controlled synthetic corruption.",
+    "human_gold": false,
+    "interpretation": "All pair metrics diagnose frozen-NLI sensitivity on fit-only silver; they are not factual accuracy, held-out evaluation, or a RAGTruth score.",
+    "supported_role": "Mechanically supported by an exact source sentence/passage identity."
+  },
+  "nli": {
+    "attention": "SDPA math; reference_compile=False",
+    "batch": 16,
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "frozen": true,
+    "gpu_gate": "gpu-smoke and extract are separate explicit commands after CPU check.",
+    "maximum_pair_tokens": 2048,
+    "pair": "Use each row's exact nli_premise as premise and each endpoint claim as hypothesis.",
+    "precision": "CUDA FP32; autocast and TF32 disabled",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "trained": false,
+    "truncation": false,
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465"
+  },
+  "purpose": "Paired sensitivity stress test of an unchanged frozen NLI checkpoint.",
+  "qualitative_qc": {
+    "ambiguous_or_reject_removed_from_primary": false,
+    "independent_human_gold": false,
+    "selection_or_filtering": false,
+    "source": "Frozen 92-row research-agent review produced before this stress test.",
+    "use": "Descriptive stratification only after primary all-4109 metrics are computed."
+  },
+  "runner_sha256": "ecf70dd358916a127e06735921d93272994a3312a69b9e4084dbca31b5f9f4a3",
+  "scope": {
+    "calibration_read": false,
+    "formal_baseline_modified": false,
+    "human_gold_read": false,
+    "input": "research/semantic_conflict_augmentation_v1/pairs_fit_silver_strict.jsonl",
+    "official_test_read": false,
+    "pair_count": 4109,
+    "partition": "fit only",
+    "training": false
+  },
+  "scores": {
+    "contradiction": "P(contradiction), class index 2.",
+    "endpoint_AUROC": "Across the 2N endpoints, corrupted=1 and supported=0; threshold-free and unpaired across endpoint rows.",
+    "hard_pair_accuracy": "Both supported argmax=entailment and corrupted argmax=contradiction.",
+    "pair_accuracy": "Fraction with corrupted endpoint score strictly greater than its supported endpoint; ties count as incorrect and are reported.",
+    "paired_concordance": "Same comparison with a tie worth 0.5.",
+    "reporting": "Overall and separately for entity, number, negation, temporal, attribution.",
+    "risk": "max(P(contradiction), 1-P(entailment)); under normalized E/N/C this equals 1-P(entailment)."
+  },
+  "status": "frozen_before_gpu_inference",
+  "version": "semantic-conflict-pair-nli-stress-v1"
+}

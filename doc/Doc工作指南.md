@@ -220,6 +220,8 @@
 
 本项目的唯一 Python 环境见：[项目统一 Python 环境](./Python环境说明.md)。
 
+`prelab` 的 2026-09-09 用户授权例外以该环境说明和 `prelab/README.md` 为准。
+
 当前固定为：
 
 ```text

@@ -1,0 +1,20 @@
+{
+  "artifact": "research\\counterfactual_repair_v3\\input\\claim_source_pairs_fit_label_blind.jsonl",
+  "artifact_sha256": "961dee33b57376bfd6e311fc0933e416076bbf28036026d9bd32ad0f04f8eba6",
+  "claims": 34919,
+  "gpu_used": false,
+  "model_loaded": false,
+  "official_test_opened": false,
+  "pairs": 237739,
+  "partition": "fit",
+  "responses": 3680,
+  "selection_used_labels": false,
+  "source_ids": 634,
+  "source_sha256": {
+    "research\\atomic_relation_expanded_fit_v1\\microclaims_fit3680.jsonl": "c1731ab6ca68569f7811db46f594431751995d65d2468cdec51f8d63f37d585a",
+    "results\\evidence_union_nli_v2\\candidates_fit_expanded.jsonl": "8d6ef184fc314561e47bc50e23fe0e036a3c389688f7468c425cc0e5199c675c",
+    "results\\evidence_union_nli_v2\\candidates_fit_native.jsonl": "129a11a87d4726724876761fdf3a4428f3f7365e6ccb4c05d5887d6ca8cbc84b",
+    "results\\semantic_source_attribution_expanded_fit_v1\\semantic_units.jsonl": "eb3bbb3657a99c70ddde47427a3fcd45966e7f3ff7ef3e83f446d5afeb010820"
+  },
+  "status": "physically_label_blind_pair_manifest_complete"
+}

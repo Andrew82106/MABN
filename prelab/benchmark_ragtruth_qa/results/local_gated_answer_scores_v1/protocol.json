@@ -1,0 +1,31 @@
+{
+  "version": "local-gated-answer-risk-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "alpha": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "new_score_candidates": 18,
+  "new_fits": 0,
+  "hypothesis": "Uniform answer-level logit shifts can increase false alarms in otherwise-supported parts of risky answers. Restrict that correction using an already-estimated local-risk gate.",
+  "gate": "(local_window_probability / max_local_probability_in_same_answer)**8. Fixed power8, no gate search. This uses predictions only, never gold or sentence selection.",
+  "formula": "sigmoid(logit(local_window)+alpha*gate*logit(shared_global_answer)). Shared global is the same completed Lookback+tail2 tree. Clip logits at1e-6; alpha0 exact old scores.",
+  "control": "Reuse all18 completed shared_lookback_tree_answer uniform-broadcast candidates at identical six alphas. Verify stored score/metrics/hash. No control refit.",
+  "selection": "Same original159cal thresholds and q.selection_key: min twoF1, windowF1, windowprecision, smalleralpha. Select one alpha for both levels.",
+  "scope": "All793 answers/210364 original4BPE windows, original634fit/159cal. Answer remains max over ALL final windows; no separate answer override or scoring-unit change.",
+  "limits": [
+    "The gate can amplify an incorrectly located local peak; global evidence does not prove that peak is the actual error.",
+    "This is offline extra-semantic-model score fusion, not a pure generator probe.",
+    "Repeatedly viewed calibration and in-sample upstream fitting remain optimistic development; no heldout guarantee."
+  ],
+  "official_test_opened": false,
+  "GPU_used": false
+}

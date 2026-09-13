@@ -1,0 +1,67 @@
+{
+  "version": "semantic-source-attribution-v1",
+  "role": "ours semantic source-attribution feature extractor; formal baselines untouched",
+  "data": {
+    "answers": "Frozen 793 native Llama-2-7b-chat RAGTruth QA development replay plans only.",
+    "claims": "Frozen 11,322 scored atomic_microclaim_nli_v1 microclaims, without annotation values.",
+    "test": "No official-test or withheld-data path occurs in this runner."
+  },
+  "coordinates": {
+    "source_sentences": "Atomic sentence document character spans are shifted by the frozen rendered-reference start and intersected with the original full-string tokenizer offsets. Every non-whitespace sentence character and every alphanumeric character is checked for coverage.",
+    "claims": "Frozen lexical answer-token indices are mapped through each plan's original absolute answer_token_positions; claim text and alphanumeric overlap are rechecked.",
+    "query_timing": "Post-token query at the original answer token position.",
+    "previous_answer": "Strictly smaller absolute answer positions; the query token itself is excluded.",
+    "other_context": "All pre-answer tokens outside the union of source-sentence tokens."
+  },
+  "primitive": "float32 softmax attention(q,s) multiplied by the corresponding repeated V-head L2 norm",
+  "aggregation": {
+    "fragment": "Maximum over fragment tokens independently in every head.",
+    "claim": "Arithmetic mean over that claim's unique lexical query tokens.",
+    "compact": "Arithmetic mean over attention heads, retained per layer.",
+    "csr": "For every claim and every source sentence retain layer x head values before the head mean as float16.",
+    "top_k": 15
+  },
+  "outputs": {
+    "compact_float32": [
+      "source_total_relevance",
+      "previous_answer_relevance",
+      "other_context_relevance",
+      "passage_relevance",
+      "sentence_relevance",
+      "top_sentence_indices",
+      "top_sentence_relevance"
+    ],
+    "csr": [
+      "Per-answer claim_sentence_mass shards whose response-order concatenation is float16 [166644,1024]",
+      "global_csr_index.npz claim_indptr int64 [11323]",
+      "claim/edge response indices and exact sentence identity"
+    ],
+    "forbidden": "No token x sentence x head cache and no full attention matrix is stored."
+  },
+  "model": {
+    "checkpoint": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "load_config": {
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "llm_int8_skip_modules": [
+        "lm_head"
+      ],
+      "torch_dtype": "bfloat16",
+      "attn_implementation": "sdpa",
+      "device_map": {
+        "": "cuda:0"
+      },
+      "local_files_only": true,
+      "trust_remote_code": false,
+      "padding": "one unpadded sequence and explicit all-ones mask; generation_config is not used",
+      "tf32_allowed": false
+    },
+    "teacher_forced": true,
+    "trained_here": false
+  },
+  "stage_gate": "prepare -> cpu-check -> explicit extract -> status; no training/scoring command exists"
+}

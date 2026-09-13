@@ -1,0 +1,139 @@
+{
+  "schema": "round8-token-localization-protocol-v1",
+  "created_utc": "2026-09-11T00:50:33.499816+00:00",
+  "scope": "Localization diagnostic on previously evaluated Round7 questions, not an independent benchmark or SOTA claim",
+  "data": {
+    "validation": {
+      "question_groups": 40,
+      "answers": 80,
+      "items": 240
+    },
+    "test": {
+      "question_groups": 40,
+      "answers": 80,
+      "items": 240
+    },
+    "external_test": {
+      "question_groups": 50,
+      "answers": 100,
+      "items": 100
+    },
+    "responses_changed": false,
+    "round7_item_labels_changed": false
+  },
+  "annotation": {
+    "risk_definition": "Unsupported or contradicted by currently supplied evidence; not necessarily world-false",
+    "new_gold": "Minimal risky expression spans; retain whole claim scope",
+    "annotators": "Assistant agents with independent second review and root adjudication; not human gold",
+    "blind_to_new_token_scores": true,
+    "supported_items": "Reuse prior reviewed item label with empty spans",
+    "abstained_tentative_unresolved": "Excluded from primary denominator; alert behavior described separately",
+    "gold_frozen_before_scoring": true
+  },
+  "token_unit": {
+    "tokenizer": "Original generated Qwen BPE IDs and character offsets; no retokenization",
+    "eligible": "Token intersects resolved item and contains Unicode alphanumeric character; mixed excluded lexical overlap excluded",
+    "positive": "Alphanumeric character overlap with risk span",
+    "negative": "Outside marked risky expression, not independently verified word truth",
+    "cross_item": "Count once; risk-label OR; broadcast score max",
+    "pure_punctuation_whitespace_numbering": "Excluded",
+    "numeric_subtokens": "Retained",
+    "score_shift": 0,
+    "tolerance_window": 0
+  },
+  "methods": {
+    "native": [
+      "hidden_probe",
+      "hallurag_mlp_seed_20260910",
+      "hallurag_mlp_seed_20260911",
+      "hallurag_mlp_seed_20260912",
+      "lookback_lens",
+      "redeep",
+      "lumina",
+      "nll",
+      "entropy"
+    ],
+    "broadcast": "All 14 frozen Round7 item predictors, each original item score repeated over its tokens",
+    "model": "Qwen2.5-7B-Instruct NF4 4-bit",
+    "classifier_heads_retrained": false,
+    "hidden_probe_layer": 28,
+    "mlp_layer": 21,
+    "mlp_seeds": [
+      20260910,
+      20260911,
+      20260912
+    ],
+    "mlp_aggregation": "Report each seed and mean/sample standard deviation; do not average probabilities or select best test seed",
+    "frozen_feature_scalers_and_weights": true
+  },
+  "timing": {
+    "hidden_lookback_redeep": "Post-read current token; no future-answer input",
+    "lumina_nll_entropy": "Predictive position immediately before current observed token, original Round7 alignment",
+    "broadcast": "Post-hoc control; uses item-end score and can include later tokens within item",
+    "prefix_audit": "Original item-end allclose; short-prefix cosine diagnostic; fixed-length future-token perturbation checks current states invariant"
+  },
+  "threshold_regimes": {
+    "original_threshold": "Original frozen Round7 item thresholds applied unchanged",
+    "validation_token_threshold": "Choose one threshold per predictor using only validation token micro F1 over all resolved items; ties higher precision then higher threshold; fixed constant thresholds 0.5",
+    "heldout_retuning": false
+  },
+  "metrics": {
+    "primary_scopes": [
+      "all_resolved_items",
+      "risk_items_only"
+    ],
+    "token": [
+      "TP",
+      "FP",
+      "FN",
+      "TN",
+      "precision",
+      "recall",
+      "F1",
+      "AUROC",
+      "average_precision"
+    ],
+    "answer": [
+      "macro_F1_positive_answers",
+      "any_alert_rate_pure_normal_answers",
+      "token_false_positive_rate_pure_normal_answers"
+    ],
+    "span": [
+      "any_token_hit_recall",
+      "risk_span_token_coverage",
+      "risk_character_coverage",
+      "extra_nonspan_alerts"
+    ],
+    "strata": [
+      "birth_year",
+      "other_attributes",
+      "external_unclassified"
+    ],
+    "excluded_text": "Alert behavior descriptive only, no review strategy changes"
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260911,
+    "unit": "Original group_id, preserve paired conditions and all their tokens",
+    "confidence": 0.95,
+    "outputs": [
+      "micro_F1 in both scopes and threshold regimes",
+      "native token minus own broadcast micro_F1 paired difference"
+    ],
+    "mlp": "Each seed independently; report seed mean and sample SD separately"
+  },
+  "reporting": {
+    "all_23_predictors": true,
+    "both_threshold_regimes": true,
+    "main_and_external_separate": true,
+    "do_not_claim_native_method_reproduction": "These are frozen Round7 feature adaptations to per-token scoring",
+    "data_limit": "147/200 main groups ask birth years (73.5%); short contexts and source presence cues remain",
+    "next_step": "Use diagnosis to choose improvements; evaluate on a new, more diverse held-out corpus before superiority claims"
+  },
+  "source_sha256": {
+    "PLAN.md": "79630de08c3818c79551bd1a4b37745683d90ddc86078d9595c7336249794aaf",
+    "ANNOTATION_GUIDE.md": "2d4666090bf4587fa4b235f567527f2ef96135f68b4f04b581039f24167d3af8",
+    "round7/results/freeze.json": "80e135f07c13d950bc79aa6d47ff23e32361c6c16e61647df5256cf44e9956aa",
+    "round7/src/evaluate7.py": "2589ca4e3ab7fb137949a840e92c0007454fdba9bfb6ad81cb68da3bc3de104d"
+  }
+}

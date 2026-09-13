@@ -1,0 +1,7 @@
+Please answer the following questions using these search results. Write one short sentence for each numbered item.
+
+Questions:
+{questions}
+
+Search results:
+{search_results}

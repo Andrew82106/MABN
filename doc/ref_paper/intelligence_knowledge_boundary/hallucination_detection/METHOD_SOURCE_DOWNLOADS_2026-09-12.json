@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\doc\\ref_paper\\intelligence_knowledge_boundary\\hallucination_detection\\Representation_Generalization_EMNLP2025_Findings.pdf",
+      "url": "https://aclanthology.org/2025.findings-emnlp.952.pdf",
+      "sha256": "1f4a8fec91ae7a6670753187da5ff867f6ff1aa456dc8c468380e415c833b710",
+      "bytes": 239701,
+      "downloaded": true
+    },
+    {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\doc\\ref_paper\\intelligence_knowledge_boundary\\hallucination_detection\\Multi_View_Attention_STARSEM2025.pdf",
+      "url": "https://aclanthology.org/2025.starsem-1.31.pdf",
+      "sha256": "368db1911512f35b839a7b2ac67dc4464c282fef7073d4ea52f817e9196be04d",
+      "bytes": 451527,
+      "downloaded": true
+    },
+    {
+      "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\doc\\ref_paper\\intelligence_knowledge_boundary\\hallucination_detection\\RAGLens_author_preprint_v1.pdf",
+      "url": "https://zhenghao-he.github.io/assets/pdf/iclr2026.pdf",
+      "sha256": "c4bc1d946d317d395018b7eb5efb0ac7422ef29c00e9ef7feee20f8815f5ca7a",
+      "bytes": 963019,
+      "downloaded": true
+    }
+  ],
+  "note": "RAGLens author PDF is arXiv v1; repository labels ICLR2026, but use precise version when quoting."
+}

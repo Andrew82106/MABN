@@ -1,0 +1,15 @@
+{
+  "scope": "Only original R16 train602 answers/301questions/278groups. Repeated development, not a fresh test.",
+  "purpose": "Transfer an externally trained semantic detector into the existing neutral incomplete-retrieval scene.",
+  "input": "Exact visible search-results rendering, original neutral task/questions, unchanged full Qwen answer; no condition/category/annotation fields enter model input.",
+  "labels": "Existing assistant annotation and independent assistant review, human_gold=false. No relabeling or new human-gold claim.",
+  "geometry": "Exact original Qwen raw BPE IDs/offsets and12222 candidate4-BPE windows. Window score=max lexical token risk; all candidate windows feed answer max, including safe refusals.",
+  "eligibility": "Original9526 asserted windows/1063positive;598resolved answers/151positive including117safe-refusal negatives. Unresolved labels stay None, no zero imputation.",
+  "model_selection": "Choose QA checkpoint by its already-fixed QA rule only, before any R16 inference. No R16 epoch/model selection.",
+  "thresholds": "Report both unchanged QA window/answer thresholds and separately the existing5fold R16 development calibration: each threshold selected only on that fold calibration groups; evaluate its original outer groups, no neural fitting.",
+  "comparison_limits": "External QA or auxiliary supervision and another encoder differ from original Qwen-state baselines. This transfer alone does not prove a pure native-whitebox advantage or fresh-event test performance.",
+  "original_R16_validation_test_opened": false,
+  "RAGTruth_test_opened": false,
+  "no_new_generation": true,
+  "no_truncation": true
+}

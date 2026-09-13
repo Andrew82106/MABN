@@ -1,0 +1,77 @@
+{
+  "identity": "gold microclaim geometry oracle; not a model result",
+  "microclaim_statistics": {
+    "fit": {
+      "claims": 9061,
+      "positive": 1291,
+      "mixed": 294,
+      "without_owned_lexical_bpe": 6
+    },
+    "calibration": {
+      "claims": 2268,
+      "positive": 363,
+      "mixed": 90,
+      "without_owned_lexical_bpe": 1
+    }
+  },
+  "partitions": {
+    "fit": {
+      "windows": {
+        "n": 168123,
+        "positive": 21477,
+        "tp": 21477,
+        "fp": 3948,
+        "fn": 0,
+        "tn": 142698,
+        "precision": 0.8447197640117994,
+        "recall": 1.0,
+        "f1": 0.9158244850965843
+      },
+      "answers": {
+        "n": 634,
+        "positive": 328,
+        "tp": 328,
+        "fp": 0,
+        "fn": 0,
+        "tn": 306,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "calibration": {
+      "windows": {
+        "n": 42241,
+        "positive": 5984,
+        "tp": 5984,
+        "fp": 1489,
+        "fn": 0,
+        "tn": 34768,
+        "precision": 0.800749364378429,
+        "recall": 1.0,
+        "f1": 0.8893512669985881
+      },
+      "answers": {
+        "n": 159,
+        "positive": 100,
+        "tp": 100,
+        "fp": 0,
+        "fn": 0,
+        "tn": 59,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    }
+  },
+  "source_sha256": {
+    "atomic_script": "6d31680783fdd6264730bb89d083a2c096066b811d1c7fdf37c5c3ba856fbb8e",
+    "microclaims_fit": "e6c13412b979479b12e2de21d8eced3c567fdc579b21d5efb45f56f633fee070",
+    "microclaims_calibration": "1fc9486af70385f19d05c8ccf1e4c9255b375ef4ee7e3d01d32d574699b96060",
+    "gold_manifest": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7"
+  },
+  "trained_models": 0,
+  "thresholds_selected": 0,
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

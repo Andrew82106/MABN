@@ -1,0 +1,63 @@
+{
+  "status": "pilot_inputs_and_analysis_choices_frozen_before_primary_generation",
+  "utc": "2026-09-10T11:16:53.857120+00:00",
+  "scope": "30 curated HotpotQA groups,60inputvariants,180plannedfacts; pilot only",
+  "selection_review": "Data preparation plus independent head and tail source review. All final input structures audited by root. No test outputs generated or viewed before freezing.",
+  "primary_generation": "One greedy own-Qwen answer per input; normal prompt, no insufficiency or refusal cues. Two exactly matching train smoke outputs retained, not regenerated.",
+  "runtime": {
+    "schema_version": "round6-model-v1",
+    "model": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\models\\Qwen2.5-7B-Instruct-bnb-4bit",
+    "system": "You are a helpful assistant.",
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "max_input_tokens": 3072,
+    "repetition_penalty": 1.0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": null,
+    "seed": 20260910,
+    "attn_implementation": "sdpa",
+    "layers": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "hidden_size": 3584,
+    "feature_timing": "After last lexical content token has been read; causal replay of own exact generated IDs",
+    "final_layer": "Layer 28 after model final RMSNorm; layers 7/14/21 after decoder block, before final RMSNorm",
+    "self_confidence_max_new_tokens": 12,
+    "code_hashes": {
+      "model6.py": "41c2ec2b3a272ea6d5b1802ace9fcc169ff29060a9a6db3880ea97f16ace02a4",
+      "run_model.py": "4402debfdee970f22cd9a554a2d54c75e142237e8421907e9065bd8964f078a9"
+    },
+    "model_config_hash": "c9b481809ae2e99227ac323b77a9da0b5387a0a21f46329327132273435fa3f7"
+  },
+  "probe": {
+    "layer": 21,
+    "classifier": "StandardScaler + balanced L2 logistic regression C0.1",
+    "train_groups": 18,
+    "validation_groups": 6,
+    "test_groups": 6,
+    "threshold": "Max validation risk-class F1, then precision, then higherthreshold",
+    "test_access": "Only after labels/features/baselines and trained classifier/thresholds frozen"
+  },
+  "annotation": "Source-based assistant annotation blind to detection scores; not independent human gold. Actual assertions, separate support versus reference correctness.",
+  "files_sha256": {
+    "PLAN.md": "b60990e5bbb4e4c1dfc8935c01fea95dcbdb1e9dd18d0e7657cf85350d7c9b4b",
+    "design_v1.json": "b2598ec6f2932db8bbbf7a0a122b18960ec92684e40cbc037cc9c3d2adfb7c83",
+    "prompts/answer.txt": "f43d9ed78fdf9007a88442e6f82154d143a3cc74d4308cdeca0486a347a2c6e3",
+    "LABELING.md": "18d9ef08cdd8166b661e1517eb801a77d53d87e33c53fb1a2d6300f86472451f",
+    "data/inputs.jsonl": "3321bae3efd543010654e5d0d2dbf3ae477ecd2fc670c3eea30d990bb2f18d6e",
+    "data/references.jsonl": "ac3d7a78eb97dea43d5dd933c99fc86d9379ce9c0c1d1da8542e4cd00ca12c95",
+    "data/curated/independent_review_head.json": "d54b4f289fb5f31602dfa317b7c831ff4d8cdb646096078ca86c68acd924638c",
+    "data/curated/independent_review_tail.json": "925132cdbc7c9db190c91acf9e47056f6f9a31b7e47afb631a279b38987c713c",
+    "data/curated/review_notes.json": "9017ea1b2798ad1a6fa6c458044aa8f4bf16dd819ba61e0ff57cd5d2c3ef38ce",
+    "data/curated/selected_groups.json": "41994abaa6107abc72b16463c9a7feff4cf00bd945d7b0b8b303a4896bf25dd9",
+    "results/data_audit.json": "3784cd1bfb793598f24d19afda6f53de9e4fec97eadd028526c8460d888fd209",
+    "smoke_protocol.json": "b39dd9391bea259e9b86e0e2f5edc79885005e11c6e6d21f637d6ed8372fbfd4",
+    "src/model6.py": "41c2ec2b3a272ea6d5b1802ace9fcc169ff29060a9a6db3880ea97f16ace02a4",
+    "src/run_model.py": "4402debfdee970f22cd9a554a2d54c75e142237e8421907e9065bd8964f078a9",
+    "src/evaluate6.py": "71db9005991116ec4b73d2067c4f12551da875e180cfbb28fbb68d40b27ace2f"
+  }
+}

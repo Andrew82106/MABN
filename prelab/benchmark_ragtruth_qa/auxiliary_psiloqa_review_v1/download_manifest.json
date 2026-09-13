@@ -1,0 +1,105 @@
+{
+  "dataset": "s-nlp/PsiloQA",
+  "dataset_revision": "375c3321b8331a689d664f77eb2753c6cdb17159",
+  "github_revision": "95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d",
+  "files": [
+    {
+      "path": "GITHUB_COMMIT.json",
+      "url": "https://api.github.com/repos/s-nlp/PsiloQA/commits/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d",
+      "sha256": "8ffa5a31f29a2f8c0322fe61ba3f2c707aae6b519257d2c884e67718ffc0c4fe",
+      "bytes": 76073
+    },
+    {
+      "path": "HF_API.json",
+      "url": "https://huggingface.co/api/datasets/s-nlp/PsiloQA",
+      "sha256": "5e6248bff3e9bd7fbc89775b592f47366861a9128713da8ffc4c0f429f6f9363",
+      "bytes": 3124
+    },
+    {
+      "path": "HF_README.md",
+      "url": "https://huggingface.co/datasets/s-nlp/PsiloQA/resolve/375c3321b8331a689d664f77eb2753c6cdb17159/README.md",
+      "sha256": "91336b36248de7615803f8edae5336df2640a38769e5dc4a70cd821af8f84620",
+      "bytes": 17253
+    },
+    {
+      "path": "official_code/psilo/dataset/annotator.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/annotator.py",
+      "sha256": "2c731d26f76b46d6091258e3ca0eba0931bebf0dadfcfb9882fe1bcdd0b09156",
+      "bytes": 2620
+    },
+    {
+      "path": "official_code/psilo/dataset/cli.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/cli.py",
+      "sha256": "16646e08a1e343bbd3170f0ecd73a6c60f689b7b4bc2c481dff78bcc0048ec7a",
+      "bytes": 9630
+    },
+    {
+      "path": "official_code/psilo/dataset/filter_samples.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/filter_samples.py",
+      "sha256": "68af508897a3fa16b72137401e1836238a28b30029d13de75fdce56778f670d3",
+      "bytes": 5340
+    },
+    {
+      "path": "official_code/psilo/dataset/generate_hypotheses.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/generate_hypotheses.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "official_code/psilo/dataset/generate_qa.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/generate_qa.py",
+      "sha256": "cf707eecb63042414097e9f42ca86e1b83e409581eed1595a1cea4c475c03e3a",
+      "bytes": 3464
+    },
+    {
+      "path": "official_code/psilo/dataset/prompts/annotator_system_prompt.txt",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/prompts/annotator_system_prompt.txt",
+      "sha256": "1fb17dd6d8ff625e5fbe78831f5b9e78ce87a32e785e443e43bb06dbf17383d5",
+      "bytes": 1517
+    },
+    {
+      "path": "official_code/psilo/dataset/prompts/annotator_template.txt",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/prompts/annotator_template.txt",
+      "sha256": "ddf61224d2d29e27a1b6f1cf18b3cc1e1597d8e8196a4d5cbfb08de308c0faac",
+      "bytes": 109
+    },
+    {
+      "path": "official_code/psilo/dataset/prompts/filter_refusals.txt",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/prompts/filter_refusals.txt",
+      "sha256": "c994b69aa3d89ff3f2d834fddcbd259ff27ffc02835643b73a1430ed92b3497f",
+      "bytes": 421
+    },
+    {
+      "path": "official_code/psilo/dataset/settings.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/psilo/dataset/settings.py",
+      "sha256": "9e4ca039fca5b88d5514587d572ad88e713bf168251b4e8c67b576c58a46baf0",
+      "bytes": 1767
+    },
+    {
+      "path": "official_code/README.md",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/README.md",
+      "sha256": "9ee2a321437610df2c89e7d3127d7beeba453e155ce2ecf546993931067d8cc2",
+      "bytes": 7142
+    },
+    {
+      "path": "official_code/train_script.py",
+      "url": "https://raw.githubusercontent.com/s-nlp/PsiloQA/95233aefcfbdfc2b0876ffc7d45729d7fc69bd2d/train_script.py",
+      "sha256": "c6fa3935c8557918755af591e88dde16d9c4030c37f05f4743842152257a0460",
+      "bytes": 3456
+    },
+    {
+      "path": "train-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/s-nlp/PsiloQA/resolve/375c3321b8331a689d664f77eb2753c6cdb17159/data/train-00000-of-00001.parquet",
+      "sha256": "314b2b8d9f76eb929d4471d4d4b0ae1f2d171101bc0b84e74bf1ec331f5e22e9",
+      "bytes": 43155008
+    }
+  ],
+  "downloaded_splits": [
+    "train"
+  ],
+  "validation_test_files_downloaded": false,
+  "models_downloaded": false,
+  "GPU_used": false,
+  "trained": false,
+  "timestamp": 1789173582.8643885
+}

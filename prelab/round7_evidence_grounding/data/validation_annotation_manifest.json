@@ -1,0 +1,45 @@
+{
+  "status": "frozen_assistant_labels_after_two_reviews",
+  "utc": "2026-09-10T15:12:13.044436+00:00",
+  "items": 240,
+  "groups": 40,
+  "agreements": 239,
+  "disputes": [
+    {
+      "item_id": "hotpot_5ab2653e554299340b5254b1__partial__2",
+      "final": "Retain asserted/unresolved; risk remains null.",
+      "reason": "Cedric naturally could refer to the requested musician in the music context, but the visible passages do not establish the full-name mapping. Retain the existing ambiguous-coreference rule instead of treating exact name mismatch as absence or importing unseen biographical knowledge as certain evidence.",
+      "alternative": {
+        "item_id": "hotpot_5ab2653e554299340b5254b1__partial__2",
+        "group_index": 4,
+        "text": "Cedric Bixler-Zavala was not mentioned in the provided search results.",
+        "fields_differing": [
+          "evidence_relation",
+          "reference_correctness"
+        ],
+        "initial": {
+          "stance": "asserted",
+          "evidence_relation": "unresolved",
+          "reference_correctness": "unresolved",
+          "rationale": "实际断言目标未被提及，但Los Dregtones正文有Cedric与Omar及The Mars Volta。按合理简称同指则该资料断言矛盾；仅当前四段不能明确核验完整姓名同指，故保留未决供根裁决。",
+          "multi_claim": false,
+          "false_refusal_rationale": null
+        },
+        "second_review": {
+          "stance": "asserted",
+          "evidence_relation": "contradicted",
+          "reference_correctness": "incorrect",
+          "rationale": "Los Dregtones片段已提Cedric与Omar使用The Mars Volta商品图案；在本题音乐及同乐队上下文中Cedric是目标首名简称，无竞争同名主体，故笼统称未提目标与资料矛盾。",
+          "multi_claim": false,
+          "false_refusal_rationale": true
+        }
+      }
+    }
+  ],
+  "secondary_flag_adjudication": "Keep initial multi_claim granularity: nested city/state locations count as one location fact; restatement of a known year within a refusal is not a separately answered comparison. No main-label effect.",
+  "initial_sha256": "fda0cebabf24096860a046661463254f22633db0399c7870f90505affa9fd50e",
+  "review_sha256": "71939efdc37f9cd2e7f83d330f71f233eaa4d4a8864ec8499f04a7f02e374433",
+  "final_sha256": "8a1e2a56a8b2dfd660d19cb6132dbefc9e954e56db6047aab40ceb244ec715ed",
+  "human_gold": false,
+  "detector_scores_used": false
+}

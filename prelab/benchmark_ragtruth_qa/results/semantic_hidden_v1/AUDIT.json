@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "code_sha256": "115aa40ce176ebcf4e567b283a9efa28258d0c6d2efb6041607b549a6bed223a",
+  "complete_sha256": "cab8cf378db3691ed50e4945391cbcdd92197ecec1e736678212c2382fe56433",
+  "all793_character_weighted_hidden_alignment_verified": true,
+  "hidden_mapping_max_abs_difference": 4.76837158203125e-07,
+  "independent_official_scalar_mapping_all210364_exact": true,
+  "all213159_projection_values_exact": true,
+  "fit_only_PCA_sample_and_weights_exact": true,
+  "PCA_orthogonality_max_error": 3.3306690738754696e-15,
+  "PCA_actual_projection_variance_ratio": 0.9770003322863566,
+  "PCA_randomized_SVD_variance_ratio": 0.9769608321209254,
+  "fit_only_scaler_independent_weighted_moments_passed": true,
+  "candidates": [
+    {
+      "candidate": "minicheck_hidden64_C0.001",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        6
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_C0.01",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        6
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_C0.1",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        6
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_C0.001",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        7
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_C0.01",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        7
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_C0.1",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        8
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_risk_C0.001",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        7
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_risk_C0.01",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        7
+      ]
+    },
+    {
+      "candidate": "minicheck_hidden64_lookback_nll_risk_C0.1",
+      "full210364_predictions_reload_exact": true,
+      "thresholds_counts_exact": true,
+      "iterations": [
+        8
+      ]
+    }
+  ],
+  "all_frozen_input_and_output_hashes_verified": true,
+  "test_opened": false,
+  "GPU_used": false,
+  "no_refitting": true,
+  "seconds": 42.44060440000612,
+  "limitation": "Implementation self-audit; separate interface review provided by evaluation agent."
+}

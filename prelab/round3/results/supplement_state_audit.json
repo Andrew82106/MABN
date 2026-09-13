@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "sample_seed": 250911,
+  "samples": [
+    {
+      "arm": "direct",
+      "query_id": "2840_0",
+      "prompt_relative_error": 0.028389329090714455,
+      "last_relative_error": null,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 0.6150200366973877
+    },
+    {
+      "arm": "direct",
+      "query_id": "1316_2",
+      "prompt_relative_error": 0.023968243971467018,
+      "last_relative_error": null,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 1.1841187477111816
+    },
+    {
+      "arm": "direct",
+      "query_id": "3764_6",
+      "prompt_relative_error": 0.02862239070236683,
+      "last_relative_error": null,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 1.9098663330078125
+    },
+    {
+      "arm": "verify",
+      "query_id": "2840_0",
+      "prompt_relative_error": 0.020810095593333244,
+      "last_relative_error": 0.02234123833477497,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 0.8147284984588623
+    },
+    {
+      "arm": "verify",
+      "query_id": "1316_2",
+      "prompt_relative_error": 0.020115263760089874,
+      "last_relative_error": 0.02290435880422592,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 1.8523223400115967
+    },
+    {
+      "arm": "verify",
+      "query_id": "3764_6",
+      "prompt_relative_error": 0.021054470911622047,
+      "last_relative_error": 0.022341346368193626,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 2.843113660812378
+    },
+    {
+      "arm": "expand",
+      "query_id": "2840_0",
+      "prompt_relative_error": 0.018549546599388123,
+      "last_relative_error": 0.028253111988306046,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 0.6833035945892334
+    },
+    {
+      "arm": "expand",
+      "query_id": "1316_2",
+      "prompt_relative_error": 0.0,
+      "last_relative_error": 0.01905043050646782,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 1.791677474975586
+    },
+    {
+      "arm": "expand",
+      "query_id": "3764_6",
+      "prompt_relative_error": 0.0,
+      "last_relative_error": 0.020298853516578674,
+      "hook_logits_exactly_unchanged": true,
+      "seconds_two_prompt_forwards_plus_optional_prefix": 2.8016419410705566
+    }
+  ],
+  "scope": "nine training-query numerical checks; float/quantized batched-versus-single tolerance .05; captured generation states checked by original-token causal replay",
+  "prompt_only_ablation": "verification prompt state is available before any extra output; no future generated tokens needed"
+}

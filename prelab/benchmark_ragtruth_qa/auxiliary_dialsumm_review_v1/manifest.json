@@ -1,0 +1,16 @@
+{
+  "status": "train_only_provenance_normalization_not_ready_for_training",
+  "answers": 2400,
+  "groups": 600,
+  "license": "No dataset-specific license in archive README, archive member list, root README or repository API. errant/LICENSE.md is inherited MIT software license, not assumed to license dialogue annotations.",
+  "source_isolation_with_QA_completed": false,
+  "artifacts_sha256": {
+    "train_pairs_review.jsonl": "ac6d955a3c40ec7adb3e518ae525ed2112b5e69fd5cdb6106cc4f3b8a6832f28",
+    "train_dialogue_groups.jsonl": "05f110e9b1d526474032c360fd1114aca5c8a1d44e38cf4192cdbefd85b658c6",
+    "alignment_failures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TRAIN_EXAMPLES.json": "9b8fbe3b7cca068bc4055d9ed4ab4517fd67746110b8b75bf657445ab00e4dc4",
+    "STRUCTURAL_SINGLE_PREDICATE_IDS.json": "c60daf7cbfcd2183689a90453d13c624306e427bbcf072df93c20bb060585b8b",
+    "TRAIN_REVIEW.json": "b6ddb56dcf124e91dc2a259fb843da4c4d3206b91665def549c10acbe434bab5"
+  },
+  "protocol_sha256": "f8105a32516f84323b68bcd372ed99fcc3e5d4c4852141318f918933b5fefeda"
+}

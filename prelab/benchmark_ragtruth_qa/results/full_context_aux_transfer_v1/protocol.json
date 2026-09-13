@@ -1,0 +1,49 @@
+{
+  "version": "human-aux-to-QA-full-context-v1",
+  "scope": "One auxiliary train epoch followed by three QA train epochs. CPU preparation is not training; official test stays sealed.",
+  "initialization": "Exactly run_full_context_encoder_v2.load_model: generic ModernBERT-base, same pretrained revision, fresh two-class head and initial seed20261005. Never start from a QA-fitted checkpoint.",
+  "architecture_and_precision": "Unchanged v2 full-context two-logit classifier and character mapping. CUDA BF16 forward/checkpoint recompute; FP32 parameters, gradients, optimizer, logit difference, mapping and BCE. CPU FP32; TF32 disabled.",
+  "input": "Original entire source + separator + original task instruction/question + separator + complete original answer. Existing auxiliary token_inputs and byte-identical QA v2 inputs; no truncation or generator identity feature.",
+  "auxiliary": {
+    "answers": 9678,
+    "sources": 1614,
+    "groups": 1558,
+    "epochs": 1,
+    "order_seed": 20261007,
+    "target_loss_mass": 1739173,
+    "weights": "Equal source-material group, then equal answer within group, then equal lexical raw token within answer. Scale base to lexical mass; binary class factors from auxiliary train base mass only; reequalize each group loss and total mass.",
+    "selection": "None. Do not score calibration, choose an auxiliary checkpoint, or evaluate an auxiliary validation set. Save online training loss and the final auxiliary checkpoint only."
+  },
+  "QA": {
+    "fit_answers": 3680,
+    "fit_groups": 615,
+    "calibration_answers": 159,
+    "calibration_groups": 154,
+    "epochs": 3,
+    "weights": "Exact v2 training_weights.npz including its original/added-answer split, class factors and group reweighting; target_mass560300.",
+    "orders": "Exact first three rows of v2 answer_orders.npy. No RNG reseed at phase transition.",
+    "selection": "Only the three QA epochs: separate calibration-only window/answer F1 thresholds, precision/higher cutoff ties; epoch selection by min(two F1), windowF1, window precision, earlier QA epoch.",
+    "metrics": "Unchanged original4rawBPE stride1 lexical risk union/max; full fit3680 and calibration159; calibration42241 windows. Answermax includes all eligible good answers, including refusals."
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "microbatch_answers": 1,
+    "effective_batch_answers": 8,
+    "scheduler": "none",
+    "continuity": "One optimizer object created before auxiliary epoch; all state, moments and step counters continue through QA epochs. No optimizer reset.",
+    "expected_updates": {
+      "auxiliary": 1210,
+      "each_QA_epoch": 460,
+      "total": 2590
+    }
+  },
+  "loss": "Same v2 weighted BCE scaling per answer: sum(tokenBCE*phase_loss_weight)*phase_answer_count/(actual_accumulated_batch_answers*phase_target_mass). Final short auxiliary batch has6 answers.",
+  "artifacts": "Final auxiliary model+optimizer/RNG checkpoint and training loss. Preserve each of all3 QA model+optimizer/RNG checkpoints, complete predictions, thresholds/metrics, actual logical input tokens, updates, wall time and CUDA peaks. No automatic resume or overwrite.",
+  "resource_gate": "Future explicit GPU smoke on longest2629-token auxiliary input before training, synthetic zero target only; repeated inference<=2e-6, finite nonzero gradient, original precision and full context retained. Failure is recorded; no silent truncation/fallback.",
+  "comparison_limits": "Additional human-supervised tasks and training schedule together change. 20718 answer presentations vs QA-only6epoch22080 does not establish equal computation: auxiliary inputs are longer. Report actual tokens/time/memory. No isolated architecture or independent-test improvement claim.",
+  "token_accounting": "Logical input tokens processed by forward calls; training and full-QA evaluation separated. Checkpoint recomputation is excluded from logical-token counts but included in wall time and memory.",
+  "automatic_GPU_or_training": false
+}

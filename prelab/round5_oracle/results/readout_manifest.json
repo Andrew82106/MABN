@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "queries": 1191,
+  "fresh_this_run": 179,
+  "seconds": 82.04530429840088,
+  "replay_checks": [
+    {
+      "query_id": "fbc84a2518324072d3ed",
+      "hidden_difference": 0.0,
+      "ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    },
+    {
+      "query_id": "913b38fe9c6ae7a83a0e",
+      "hidden_difference": 0.0,
+      "ABC_difference": 0.0,
+      "hook_logits_unchanged": true
+    }
+  ],
+  "protocol_sha256": "a0de41e7fe84f063330e21c5c7aa82253f23a795240a903057d5e793b665ed4c",
+  "external_llm_calls": 0,
+  "generated_tokens": 0
+}

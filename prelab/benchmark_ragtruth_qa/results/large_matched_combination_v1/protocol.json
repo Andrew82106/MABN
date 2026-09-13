@@ -1,0 +1,62 @@
+{
+  "version": "large-matched-combination-v1",
+  "peers": [
+    "lookback",
+    "harp_claim",
+    "semantic_claim"
+  ],
+  "large_selection": "Use only completed six-epoch run selected epoch1..6. Never select a different epoch for an individual combination.",
+  "scope": "Original634 fit answers/168123 windows,159 calibration answers/42241 windows; no new gold or official-test access.",
+  "mapping": "Unchanged original4rawBPE window, maximum over existing lexical token indices; answer is maximum over all original eligible windows.",
+  "large_signal": "One identical selected whole-input ModernBERT-large window probability for all3 peers. Its backbone trained3680 fit answers.",
+  "linear": {
+    "control": "Reuse all frozen original2scores+8citation-feature LR and scalers, no refit.",
+    "candidate": "Append just large probability to original2scores+8features =>11columns.",
+    "C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "fits": 9,
+    "scaler": "Original fit-only weighted StandardScaler; original q.base_weights base and loss unchanged.",
+    "hyperparameters": {
+      "solver": "liblinear",
+      "penalty": "l2",
+      "max_iter": 2000,
+      "seed": 20261010,
+      "sample_weight": "Original source group/class loss, total168123."
+    },
+    "selection": "Original q.selection_key selects one C per peer; same candidate serves both units."
+  },
+  "tree": {
+    "control": "Reuse each original two-score monotone tree, no refit.",
+    "candidate": "Append same large probability to original peer+tail2 probabilities =>3columns.",
+    "fits": 3,
+    "hyperparameters": {
+      "type": "HistGradientBoostingClassifier",
+      "max_iter": 100,
+      "max_depth": 2,
+      "max_leaf_nodes": 4,
+      "min_samples_leaf": 20,
+      "learning_rate": 0.05,
+      "l2_regularization": 1.0,
+      "early_stopping": false,
+      "monotonic_cst": [
+        1,
+        1,
+        1
+      ],
+      "random_state": 20261008
+    }
+  },
+  "calibration": "Only original159 calibration answers choose two F1-optimal thresholds, original tie rules; no gradient or early stopping on calibration.",
+  "budget": "Exactly9LR and3fixed100-step trees. Same signal and fit budget for every peer. No extra C,depth or epoch search.",
+  "limits": [
+    "Additional offline semantic encoder; not a pure generator white-box probe.",
+    "Base fit predictions are in-sample, not cross-fitted stacking.",
+    "Calibration repeatedly developed; cannot claim independent-test improvement or SOTA.",
+    "Must compare each single candidate against all stronger existing controls and standalone large; do not combine maxima from different candidates."
+  ],
+  "GPU_used": false,
+  "official_test_opened": false
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "local_markdown_links_checked": true,
+  "final_metric_audit_passed": true,
+  "artifacts": {
+    "results\\REPORT.md": "0751b46f6021410398b3a05958f46f091765df2b6f59e7b2174575872e97cf4c",
+    "results\\comparison.png": "1d76fd6ee7532ab73019370b407ec4067650f2884e0006340c1b23a72dc9569b",
+    "configs\\protocol.json": "baf0ba55628e108952ccea3996bb841ba1c9c2ee48d8ecd23f8384aa00b0a9bc",
+    "BASELINES.md": "6912983cbf039bbe669eff90111cde3e5204b6dc5a30776b9a86714feed1dc68",
+    "results\\confirmation\\metrics.json": "fa5629164106d0cd17ef3915cb2523696d1ca6cb430122f27af0a562d75a0fe3",
+    "results\\confirmation\\confidence_intervals.json": "8929ec8dd219e9ce740efe9245689b76f9eaf131dd12b6c4d16498d84054afa0"
+  }
+}

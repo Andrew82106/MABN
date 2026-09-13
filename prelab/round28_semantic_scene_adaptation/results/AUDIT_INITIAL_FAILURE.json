@@ -1,0 +1,11 @@
+{
+  "stage": "first CPU audit attempt",
+  "model_failure": false,
+  "reason": "Auditor used float64 sample weights to reconstruct a StandardScaler fit on float32 X. sklearn StandardScaler.partial_fit explicitly casts sample_weight to X.dtype before computing means/variances.",
+  "observed_max_mean_diff_float64_weights": 1.2337063692816597e-08,
+  "observed_max_var_diff_float64_weights": 1.268193727810285e-07,
+  "observed_max_mean_diff_actual_float32_weights": 4.0199699279722383e-16,
+  "observed_max_var_diff_actual_float32_weights": 5.3290705182007514e-14,
+  "fix": "Reconstruct the actual float32 sample-weight cast in auditor only; no tolerance relaxation, model/feature/label change or refit.",
+  "initial_auditor_sha256": "2eaa9bf2de85d0cd89c836769c577a7a0d51312fc392b5a7cd15164fa82c83cd"
+}

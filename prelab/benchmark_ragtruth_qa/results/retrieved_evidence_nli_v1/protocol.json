@@ -1,0 +1,94 @@
+{
+  "version": "native-qa-retrieved-evidence-nli-v1",
+  "status": "refrozen_after_label_free_preparation_failure_01_before_any_label_or_model_access",
+  "role": "ours_method_candidate; never a baseline",
+  "scope": {
+    "answers": "Exactly the existing 634 fit and 159 calibration llama-2-7b-chat QA answers.",
+    "claims": "Reuse exact automatic claim text/spans from semantic_baseline/cuda_variant/plans.jsonl. Retain punctuation-only records in an explicit audit list but do not treat them as factual claims or NLI hypotheses; this fixed isalnum rule uses no annotation.",
+    "windows": "Evaluation later uses the unchanged eligible four-original-BPE stride-one windows; preparation derives only label-free token-to-claim geometry.",
+    "test": "No official validation/test file or path is opened."
+  },
+  "evidence_units": {
+    "passages": "Parse exactly the original line-start passage 1/2/3 headers and retain body plus original document coordinates and hashes.",
+    "sentences": "Within each passage body, split at newline or .!?/CJK equivalents followed by whitespace/end; retain closing punctuation, protect fixed abbreviations, initials, dotted acronyms and list markers; trim only outer whitespace.",
+    "provenance": "Every selected item retains passage id, sentence id, passage-relative and document-relative character ranges, exact text and SHA256."
+  },
+  "retrieval": {
+    "unit": "Independently rank sentences inside each of the three passages for every answer claim.",
+    "tokenization": "Unicode alphanumeric words, casefolded; no stemming, stopword removal, synonym expansion, question expansion or citation deletion.",
+    "formula": "Robertson BM25: idf=ln(1+(N-df+0.5)/(df+0.5)), k1=1.2, b=0.75; sum once per unique query term.",
+    "selection": "Top min(2,N) sentences per passage by descending BM25; exact ties use earlier sentence id. Zero-overlap claims still receive the deterministic first two sentences.",
+    "labels": "Question labels, hallucination spans, token risk, prior detector scores and NLI outputs are unavailable to retrieval."
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "weights_sha256": "86c32c52ce38b8f26e028ca959b06daee3a5f3f6947c63258bc8695dde88a465",
+    "frozen": true,
+    "pair": "Premise is one exact selected evidence sentence; hypothesis is one exact automatic answer claim. Source markers are metadata, not added to text.",
+    "pair_order": "answer order, claim id, passage id 1/2/3, retrieval rank 1/2.",
+    "class_order": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "maximum_pair_tokens": 2048,
+    "truncation": false,
+    "extraction": "Separate explicit CUDA FP32 eval/inference command, cuda_fp32_sdpa_math_batch16_v1; batch 16; no training."
+  },
+  "claim_features": {
+    "per_passage": "Over its selected one/two evidence pairs: max/mean E, max/mean N, max/mean C, union query-term coverage, and top BM25 score (8 x 3).",
+    "global": "Across every selected pair/source: max/mean E, N and C; max/mean per-passage query coverage; 1-maxE; max(maxC,1-maxE); and maxC*(1-maxE) (11).",
+    "width": 35,
+    "names": [
+      "passage_1_max_entailment",
+      "passage_1_mean_entailment",
+      "passage_1_max_neutral",
+      "passage_1_mean_neutral",
+      "passage_1_max_contradiction",
+      "passage_1_mean_contradiction",
+      "passage_1_selected_union_query_coverage",
+      "passage_1_top_bm25",
+      "passage_2_max_entailment",
+      "passage_2_mean_entailment",
+      "passage_2_max_neutral",
+      "passage_2_mean_neutral",
+      "passage_2_max_contradiction",
+      "passage_2_mean_contradiction",
+      "passage_2_selected_union_query_coverage",
+      "passage_2_top_bm25",
+      "passage_3_max_entailment",
+      "passage_3_mean_entailment",
+      "passage_3_max_neutral",
+      "passage_3_mean_neutral",
+      "passage_3_max_contradiction",
+      "passage_3_mean_contradiction",
+      "passage_3_selected_union_query_coverage",
+      "passage_3_top_bm25",
+      "global_max_entailment",
+      "global_mean_entailment",
+      "global_max_neutral",
+      "global_mean_neutral",
+      "global_max_contradiction",
+      "global_mean_contradiction",
+      "global_max_selected_union_query_coverage",
+      "global_mean_selected_union_query_coverage",
+      "global_lack_of_entailment",
+      "global_or_risk",
+      "global_contradiction_x_lack_of_entailment"
+    ],
+    "raw_risk": "max(global maximum contradiction, 1-global maximum entailment)."
+  },
+  "readout": {
+    "label": "Opened only after all frozen NLI caches exist. A scored fit claim is positive iff any original lexical BPE assigned to it has the unchanged human risk label.",
+    "learned": "One StandardScaler plus L2 logistic regression, liblinear, fixed C=0.1 and seed; no architecture or hyperparameter selection.",
+    "crossfit": "Five-fold GroupKFold by locked source-connected group supplies every fit claim prediction; full-fit model predicts calibration claims.",
+    "weights": "Within each training fold: equal source-group mass, then equal answer mass, then equal claim mass; labels supply binary class balance.",
+    "projection": "Assign each lexical original BPE its claim score. A four-BPE window receives the maximum score among its lexical BPE claims; answer score is its maximum eligible window.",
+    "thresholds": "For raw and learned scores separately, select window and answer F1 thresholds only on fit (learned uses OOF fit predictions); ties use precision then higher threshold; freeze for calibration.",
+    "report": "Report both raw and learned fit/calibration window and answer AUROC/AP/F1. Calibration is reporting only, never model/threshold/feature selection."
+  },
+  "stage_gate": "initialize -> CPU prepare -> CPU check. After code review only: gpu-smoke -> extract. A separate CPU score command then opens development gold and trains the readout.",
+  "preparation_repair": "First label-free prepare stopped because 7/8852 inherited automatic records contain punctuation only (``` or \"\":\") and therefore cannot own a lexical BPE or form a BM25 query. The failure is retained. Before any label/model access, v1 was refrozen to retain those 7 records in an audit list and score the other 8845 alphanumeric claims.",
+  "limitations": "Retrieval failure and NLI failure remain conflated. Sentence-level claim broadcasting is intentionally coarser than token attribution. This is a new candidate, not a modified formal baseline."
+}

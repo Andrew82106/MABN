@@ -1,0 +1,15 @@
+{
+  "model": "Qwen2.5-0.5B-Instruct",
+  "layers": [
+    8,
+    16,
+    24
+  ],
+  "dtype": "float16",
+  "device": "NVIDIA GeForce RTX 3070",
+  "alignment": "h_t after consuming response token t; nll_t from previous state h_(t-1)",
+  "future_access": false,
+  "n_files": 394,
+  "seconds": 22.46456527709961,
+  "feature_source": "Replayed released Mistral answers; not Qwen spontaneous generations"
+}

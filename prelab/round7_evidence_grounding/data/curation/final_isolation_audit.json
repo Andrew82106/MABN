@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "groups": 270,
+  "main_groups": 200,
+  "external_groups": 50,
+  "development_groups": 20,
+  "shared_source_titles_across_groups": 0,
+  "shared_key_subjects_across_groups": 0,
+  "true_cross_subject_mentions_remaining": 0,
+  "lexical_homonyms_adjudicated": [
+    {
+      "owner": "hotpot_5a71458e5542994082a3e738",
+      "other": "hotpot_5ae09cb25542993d6555ebba",
+      "subject": "Chestnut",
+      "title": "Chestnut Hill (Leesburg, Virginia)",
+      "text": "Chestnut Hill is an 18th-century Federal-style mansion north of Leesburg in Loudoun County, Virginia, United States.",
+      "decision": "different referent: Chestnut Hill place name versus chestnut plant genus"
+    },
+    {
+      "owner": "hotpot_5a71458e5542994082a3e738",
+      "other": "hotpot_5ae09cb25542993d6555ebba",
+      "subject": "Chestnut",
+      "title": "Chestnut Hill West station",
+      "text": "It was originally built by the Philadelphia, Germantown and Chestnut Hill Railroad between 1883 and 1884, and later acquired by the Pennsylvania Railroad.",
+      "decision": "different referent: Chestnut Hill place name versus chestnut plant genus"
+    },
+    {
+      "owner": "hotpot_5a71458e5542994082a3e738",
+      "other": "hotpot_5ae09cb25542993d6555ebba",
+      "subject": "Chestnut",
+      "title": "Boston College",
+      "text": "Boston College (also referred to as BC) is a private Jesuit Catholic research university located in the affluent village of Chestnut Hill, Massachusetts, United States, 6 mi west of downtown Boston.",
+      "decision": "different referent: Chestnut Hill place name versus chestnut plant genus"
+    },
+    {
+      "owner": "hotpot_5a71458e5542994082a3e738",
+      "other": "hotpot_5ae09cb25542993d6555ebba",
+      "subject": "Chestnut",
+      "title": "Old Chestnut Hill Historic District",
+      "text": "A further expansion in 1999 added a single property on Suffolk Road.",
+      "decision": "different referent: Chestnut Hill place name versus chestnut plant genus"
+    },
+    {
+      "owner": "ragognize_test_0078",
+      "other": "hotpot_5ab51c455542990594ba9d0a",
+      "subject": "Fir",
+      "title": "2025 Nagpur violence",
+      "text": "ing late-night raids. An FIR filed at the Ganesh Peth Police Station named 52 Muslim men, and six FIRs were registered against several individuals.\nOn 18 March 2025, a key accused according to the local police in the matter, Fahim Shamim Khan a worker of the local Minorities Democratic Party (MDP), was arrested by the police. After the arrest of Khan MDP party leader Alim Patel said “Everyone in the country has the right to protest. The Constitution allows you to burn the effigy of Aurangzeb and we do not have a problem with that. But why desecrate holy verses? Fahim along with a delegation of our workers went there to request a",
+      "decision": "different referent: FIR police-document abbreviation versus fir tree genus"
+    },
+    {
+      "owner": "ragognize_test_1551",
+      "other": "ragognize_test_1253",
+      "subject": "National Security Council (Syria)",
+      "title": "Amir Saeed Iravani",
+      "text": "upreme National Security Council from 2013 to 2021, and Iran's ambassador to Iraq from 1998 to 2001. Born on September 17, 1961, Iravani holds a Master of Arts in State Management from the University of Tehran and a Bachelor of Science in Mathematics from Bhopal University in India.\nIn October 2024, Iravani condemned Israeli military actions in Lebanon during a UN Security Council session. He described the attacks as violations of international law and called for immediate cessation of hostilities, urging the Council to hold Israel accountable.\nElon Musk reportedly met with Iravani in November 2024 for over one hour in secret in New York City. This meeting occurred at Amir Saeid Iravani 's residence in New York. The meeting was requested by Musk. An Ir",
+      "decision": "different referent: Iran Supreme National Security Council versus Syrian National Security Council"
+    }
+  ],
+  "group_id_rule": "question_id; all final groups independent after source/entity isolation",
+  "model_outputs_consulted": false
+}

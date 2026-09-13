@@ -1,0 +1,308 @@
+{
+  "status": "complete_posthoc_development_error_audit",
+  "new_strict_cal": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 4033,
+      "fp": 2738,
+      "fn": 1951,
+      "tn": 33519,
+      "precision": 0.5956284153005464,
+      "recall": 0.6739639037433155,
+      "f1": 0.6323794590356723,
+      "auroc": 0.8946420050511361,
+      "average_precision": 0.6589610683634715
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 87,
+      "fp": 15,
+      "fn": 13,
+      "tn": 44,
+      "precision": 0.8529411764705882,
+      "recall": 0.87,
+      "f1": 0.8613861386138614,
+      "auroc": 0.882542372881356,
+      "average_precision": 0.9287560620301698
+    }
+  },
+  "incumbent_cal": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3839,
+      "fp": 1300,
+      "fn": 2145,
+      "tn": 34957,
+      "precision": 0.7470324965946682,
+      "recall": 0.6415441176470589,
+      "f1": 0.6902813989031736,
+      "auroc": 0.9133666623513158,
+      "average_precision": 0.7214057282802487
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 90,
+      "fp": 12,
+      "fn": 10,
+      "tn": 47,
+      "precision": 0.8823529411764706,
+      "recall": 0.9,
+      "f1": 0.8910891089108911,
+      "auroc": 0.9061016949152542,
+      "average_precision": 0.9468402501582236
+    }
+  },
+  "comparison": {
+    "new_true_positive_not_incumbent": 450,
+    "incumbent_true_positive_not_new": 256,
+    "new_false_positive_not_incumbent": 1524,
+    "incumbent_false_positive_not_new": 86,
+    "both_true_positive": 3583,
+    "both_false_positive": 1214,
+    "posthoc_union_cal": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 4289,
+      "fp": 2824,
+      "fn": 1695,
+      "tn": 33433,
+      "precision": 0.6029804583157599,
+      "recall": 0.7167446524064172,
+      "f1": 0.6549591509505994,
+      "auroc": 0.8194281223253368,
+      "average_precision": 0.47230990993873856
+    },
+    "posthoc_intersection_cal": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 3583,
+      "fp": 1214,
+      "fn": 2401,
+      "tn": 35043,
+      "precision": 0.7469251615593079,
+      "recall": 0.5987633689839572,
+      "f1": 0.664687876820332,
+      "auroc": 0.782640089765443,
+      "average_precision": 0.504071936518721
+    }
+  },
+  "label_type_recall": {
+    "new": {
+      "Evident Baseless Info": {
+        "positive_windows": 4086,
+        "hits": 3123,
+        "recall": 0.76431718061674
+      },
+      "Evident Conflict": {
+        "positive_windows": 997,
+        "hits": 257,
+        "recall": 0.2577733199598796
+      },
+      "Subtle Baseless Info": {
+        "positive_windows": 814,
+        "hits": 600,
+        "recall": 0.7371007371007371
+      },
+      "Subtle Conflict": {
+        "positive_windows": 109,
+        "hits": 74,
+        "recall": 0.6788990825688074
+      }
+    },
+    "incumbent": {
+      "Evident Baseless Info": {
+        "positive_windows": 4086,
+        "hits": 3034,
+        "recall": 0.7425354870288791
+      },
+      "Evident Conflict": {
+        "positive_windows": 997,
+        "hits": 195,
+        "recall": 0.19558676028084251
+      },
+      "Subtle Baseless Info": {
+        "positive_windows": 814,
+        "hits": 548,
+        "recall": 0.6732186732186732
+      },
+      "Subtle Conflict": {
+        "positive_windows": 109,
+        "hits": 82,
+        "recall": 0.7522935779816514
+      }
+    }
+  },
+  "relation_subgroups_calibration": {
+    "has_negation": {
+      "windows": 4692,
+      "positive": 560,
+      "new_hits": 115,
+      "new_false_positives": 122,
+      "incumbent_hits": 130,
+      "incumbent_false_positives": 99
+    },
+    "has_comparator": {
+      "windows": 4801,
+      "positive": 1053,
+      "new_hits": 743,
+      "new_false_positives": 371,
+      "incumbent_hits": 690,
+      "incumbent_false_positives": 179
+    },
+    "has_number_or_unit": {
+      "windows": 8664,
+      "positive": 1299,
+      "new_hits": 790,
+      "new_false_positives": 821,
+      "incumbent_hits": 772,
+      "incumbent_false_positives": 303
+    },
+    "has_temporal_order": {
+      "windows": 5030,
+      "positive": 630,
+      "new_hits": 318,
+      "new_false_positives": 311,
+      "incumbent_hits": 342,
+      "incumbent_false_positives": 131
+    },
+    "has_condition": {
+      "windows": 2947,
+      "positive": 474,
+      "new_hits": 264,
+      "new_false_positives": 103,
+      "incumbent_hits": 205,
+      "incumbent_false_positives": 37
+    },
+    "has_explicit_passage_id": {
+      "windows": 9046,
+      "positive": 860,
+      "new_hits": 270,
+      "new_false_positives": 544,
+      "incumbent_hits": 256,
+      "incumbent_false_positives": 321
+    },
+    "has_parent_passage_context": {
+      "windows": 10548,
+      "positive": 1028,
+      "new_hits": 325,
+      "new_false_positives": 611,
+      "incumbent_hits": 309,
+      "incumbent_false_positives": 360
+    },
+    "has_local_subject": {
+      "windows": 32363,
+      "positive": 4569,
+      "new_hits": 3112,
+      "new_false_positives": 2291,
+      "incumbent_hits": 2987,
+      "incumbent_false_positives": 1094
+    },
+    "has_effective_subject": {
+      "windows": 34269,
+      "positive": 4864,
+      "new_hits": 3297,
+      "new_false_positives": 2443,
+      "incumbent_hits": 3193,
+      "incumbent_false_positives": 1181
+    },
+    "has_entity_candidate": {
+      "windows": 27703,
+      "positive": 4281,
+      "new_hits": 2867,
+      "new_false_positives": 2065,
+      "incumbent_hits": 2726,
+      "incumbent_false_positives": 962
+    },
+    "has_any_core_relation": {
+      "windows": 20188,
+      "positive": 2844,
+      "new_hits": 1698,
+      "new_false_positives": 1246,
+      "incumbent_hits": 1610,
+      "incumbent_false_positives": 521
+    },
+    "has_any_relation_or_source": {
+      "windows": 26272,
+      "positive": 3391,
+      "new_hits": 1941,
+      "new_false_positives": 1611,
+      "incumbent_hits": 1821,
+      "incumbent_false_positives": 764
+    }
+  },
+  "atomic_geometry_gold_microclaim_oracle": {
+    "fit": {
+      "windows": {
+        "n": 168123,
+        "positive": 21477,
+        "tp": 21477,
+        "fp": 3948,
+        "fn": 0,
+        "tn": 142698,
+        "precision": 0.8447197640117994,
+        "recall": 1.0,
+        "f1": 0.9158244850965843,
+        "auroc": 0.9865390123153718,
+        "average_precision": 0.8447197640117994
+      },
+      "answers": {
+        "n": 634,
+        "positive": 328,
+        "tp": 328,
+        "fp": 0,
+        "fn": 0,
+        "tn": 306,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "auroc": 1.0,
+        "average_precision": 1.0
+      }
+    },
+    "calibration": {
+      "windows": {
+        "n": 42241,
+        "positive": 5984,
+        "tp": 5984,
+        "fp": 1489,
+        "fn": 0,
+        "tn": 34768,
+        "precision": 0.800749364378429,
+        "recall": 1.0,
+        "f1": 0.8893512669985881,
+        "auroc": 0.9794660341451307,
+        "average_precision": 0.800749364378429
+      },
+      "answers": {
+        "n": 159,
+        "positive": 100,
+        "tp": 100,
+        "fp": 0,
+        "fn": 0,
+        "tn": 59,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "auroc": 1.0,
+        "average_precision": 1.0
+      }
+    }
+  },
+  "interpretation_limits": [
+    "Oracle uses gold-derived microclaim labels and measures geometry only, not deployable prediction.",
+    "Union/intersection and subgroup comparisons are post-hoc calibration diagnostics, not fit-selected candidates.",
+    "The incumbent threshold has repeatedly used calibration and is only a fixed development reference."
+  ],
+  "formal_baselines_modified": false,
+  "official_test_opened": false,
+  "source_sha256": {
+    "results\\atomic_microclaim_nli_v1\\summary.json": "3d841a5c1ec0de8e51dcddda41e5b6e87d0bf95f5c422867b9acf9339db044fe",
+    "results\\atomic_microclaim_nli_v1\\scores.npz": "a39070f21a1e065c59e5518032e4cdea8e36fa335060a615cf84266086b3b1c0",
+    "results\\large_fixed_convex_v1\\semantic_claim__old_tree__large_weight0.4_scores.npz": "64b3972dd999c9655a302ad04a8709a1866b169a141e6167042e159bf601645f",
+    "results\\large_fixed_convex_v1\\semantic_claim__old_tree__large_weight0.4.json": "c837e8fb289985d7d1579e51d77e7302348970b7665a50a704e3e1ca7dc46db6"
+  }
+}

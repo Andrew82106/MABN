@@ -1,0 +1,27 @@
+{
+  "status": "CPU data preparation delivered; weights download independently active; no GPU model loaded",
+  "data_source_index_sha256": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+  "development_manifest_sha256": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+  "files_sha256": {
+    "CHECKPOINT_AND_QUALITY.md": "28fd01e335b343ff760a0b7434889e2fffa913da07467ddc29a263b30bf9d95e",
+    "data\\calibration.jsonl": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+    "data\\development_manifest.json": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+    "data\\development_profile.json": "78dfdb9d7bf7c7d273bcc84fa5aff92ccc88908b22e502b1f794163903495353",
+    "data\\fit.jsonl": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+    "data\\material_overlap_audit.json": "70ab997ffb1177a4f8e31bfa594a480c2c317129df4586c22a2c94e0fa0df60a",
+    "data\\quality_excluded_development.jsonl": "88db3ea87c9f7e1d1f406e873353ccbf3e2b51e7d50f2819be0d185ee3ca5d36",
+    "data\\question_link_candidates.json": "344b4db355a7eb97e6688ef80e4296e16fba35aeeffd9274ca78393d5ecda954",
+    "data\\sealed_source_index.jsonl": "dbf18655c86dc6da729596ed3553debd7ec5e34ead7f8d80d6e515ac39fc69db",
+    "data\\semantic_group_review.json": "a5121009131e5dc47775c95d371e250bc888b86e7769478fb27c4a61d72b555e",
+    "data\\source_audit_summary.json": "1847753dd4acb9ce1c4f7a8c7b6c81a41620fb94cad5f607978b2478566a2d72",
+    "data\\source_index.jsonl": "b587a2ad89da36515eb141bea4599f4526f74ca72d6b15ace5189dbff4db2ac5",
+    "data\\span_integrity_review.json": "916cfeafe3bf01621967655366096a85df612fa56f875b1492c2eaea4891ce57",
+    "data\\tokenizer_feasibility.json": "0b3d7455a9125f8d2583f821e990d106d8b8f770860760ff4c598741573e2dd6",
+    "data\\tokenizer_prefix_check.json": "2f20804e69c94ab70fb7ec262d82a0692742655623e8f0823b74b167d67668c2",
+    "README.md": "14d233b785e3dd0a162e8ee6d8b4fd30e46608b461e164dfdb1f76cd1cd25852",
+    "src\\audit_sources.py": "66702886a984443a36b4586b5a1d14035597d162d6ba26372c07b920a7dd7973",
+    "src\\download_checkpoint.py": "84f84936c1cca174f7d53ef681c49f6dab682c45a3be292b0704a271092e7292",
+    "src\\prepare_development.py": "8954650841af604eb9444f14ac7c822ee664ab2d8399c2edcc8f3c566f736a94",
+    "src\\tokenizer_feasibility.py": "cdd5c372a2858a0ac9a86a63efc2bd69beff1c473f22cee4801ba236bd9bb6d0"
+  }
+}

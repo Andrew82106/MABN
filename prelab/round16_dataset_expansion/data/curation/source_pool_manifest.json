@@ -1,0 +1,63 @@
+{
+  "schema": "round16-source-only-allocation-v1",
+  "status": "source_pool_and_exclusive_candidates_ready_not_curated_or_frozen",
+  "original_round9_pool_articles": 1852,
+  "round10_previously_screened_pool_articles": 1373,
+  "excluded_now": 121,
+  "available_source_articles": 1252,
+  "allocated_target_candidates": 520,
+  "primary_target_slots": 400,
+  "backup_target_slots": 120,
+  "donor_reserved_articles": 732,
+  "semantic_acceptance_not_implied": true,
+  "no_generations_or_scores_used": true,
+  "original_types": {
+    "OTHER": 403,
+    "TEMPORAL": 347,
+    "IDENTITY": 347,
+    "NUMERICAL": 146,
+    "SPATIAL": 9
+  },
+  "allocation_counts": {
+    "data_build/quantity/primary_candidate": 100,
+    "data_build/quantity/backup_candidate": 30,
+    "evaluation/relation/primary_candidate": 120,
+    "evaluation/relation/backup_candidate": 30,
+    "plan_review/action/primary_candidate": 80,
+    "plan_review/action/backup_candidate": 20,
+    "plan_review/time/primary_candidate": 20,
+    "plan_review/time/backup_candidate": 10,
+    "root/time/primary_candidate": 60,
+    "root/time/backup_candidate": 20,
+    "root/location/primary_candidate": 20,
+    "root/location/backup_candidate": 10
+  },
+  "donor_original_types": {
+    "OTHER": 282,
+    "IDENTITY": 197,
+    "TEMPORAL": 237,
+    "NUMERICAL": 16
+  },
+  "selection": "Deterministic SHA ordering, source length/sentence sufficiency screen; protect numeric-bearing articles for donors where possible; official types guide allocation, actual category must be reviewed. No source reuse between allocated candidates and donor reserve.",
+  "warnings": [
+    "Old source/target aliases and concrete event overlap still require per-candidate semantic review; the pool is not a claim of 1252 fully independent qualified question groups.",
+    "Four bare-title substring matches (1991, Deaf, Cave, Elle) were not automatically rejected because they are common-word/name collisions; contextual review remains necessary.",
+    "Do not count unused backup candidates as accepted questions; rejected sources require reasons and cannot silently migrate to donor use if source truth/isolation is defective."
+  ],
+  "input_sha256": {
+    "prelab\\round10_dual_granularity\\data\\curation\\remaining_source_pool.jsonl": "47f6cc66e4be1a5f03b30338c1109631661951f0d2a4ff474132aaacfa607ef4",
+    "prelab\\round9_evidence_binding\\data\\references.jsonl": "9b5f0a8ddbf77df6f723348cbd7542d346771d0724e29957e72f599ba0c121a6",
+    "prelab\\round10_dual_granularity\\data\\test_references.jsonl": "43ea8bf7c3975fc69a292f04fb1237f0b5fc0a0b3d79bfea85106015d24ec606",
+    "prelab\\round10_dual_granularity\\data\\curation\\legacy_isolation_inventory.json": "fc877c79db477620f70c2b6f007aca8f7a179c9fa75a6aa6c2f8e667347b484c"
+  },
+  "output_sha256": {
+    "available_source_pool.jsonl": "664de3747aeedf1f814026d31d60ea1e7a21b2abff2c046080289e91c489406d",
+    "source_exclusions.jsonl": "58a27c0ea92674763d15a0bf609ee9bd15d5bb822fc9639cf75494dabf716426",
+    "candidate_allocations.jsonl": "82a437f9e9261612ba67354f47c193c73c8af82198490878da51fd5b7c18d719",
+    "donor_reserved_pool.jsonl": "42d5c785a4a164194652bff06fc7c25ac8027ebef73644d055bcaf4396e9cfe0",
+    "allocation_data_build.jsonl": "a1b88bb3b3772aa268871930747cbedac5eb5926abbe4e190142072aa8caea4d",
+    "allocation_evaluation.jsonl": "a8ff1847dd458dbf534c3b907894af16580e127b87c22d25c0e9113a0536c601",
+    "allocation_plan_review.jsonl": "28daf15bf3ad1558e6256ea01ad6df8efc75e042dfa41ea7cd9deb9a100c4e32",
+    "allocation_root.jsonl": "93aa370b0fdc634013cb4ccd3b489d1fd83b85df3fd7766f957c24a7622a0454"
+  }
+}

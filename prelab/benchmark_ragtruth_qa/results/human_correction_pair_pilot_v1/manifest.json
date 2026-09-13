@@ -1,0 +1,13 @@
+{
+  "status": "cpu_data_ready_gpu_not_run",
+  "files_sha256": {
+    "PROTOCOL.md": "64f91ca90d1f53e71dfedf2e402c6b3bc3793bf43bb086e9580320f5d9383f0a",
+    "triples.jsonl": "f73db9bfb3625efcd18973cf370289b07a371b9ec4c7264cfa10cc7cd1358e5f",
+    "span_audit.jsonl": "92f7bb1d5216a4f0544dc9ca812276bee790a83e652b3fcb2683df8d57b1720a",
+    "arrays.npz": "925956aa24a004eb3590aca77a729715f69977e722be75b63a8a9143af196f3b",
+    "preparation_complete.json": "6861771ab3b70c08d7ed57e55f8ba98c5c770156f13c88c9359c1dd4ad8232ba"
+  },
+  "other_dataset_rows_read": 0,
+  "model_weights_loaded": false,
+  "GPU_used": false
+}

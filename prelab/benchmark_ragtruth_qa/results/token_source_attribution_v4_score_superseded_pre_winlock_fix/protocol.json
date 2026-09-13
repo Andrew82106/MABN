@@ -1,0 +1,56 @@
+{
+  "version": "token-source-attribution-v4-score",
+  "scope": "Native RAGTruth QA fit634 plus calibration159 only.",
+  "label_separation": {
+    "initialize_link_materialize": "Only label-free plans, layouts, white-box caches, and frozen NLI probabilities are opened.",
+    "fit": "Only answers/tokens/windows_fit are opened.",
+    "evaluate": "Calibration annotations are opened once after fit_complete freezes candidate, model, and thresholds.",
+    "official_test": "No official-test path occurs in this module."
+  },
+  "nli": {
+    "checkpoint": "tasksource/ModernBERT-base-nli",
+    "revision": "de4ab7e77845098b7fab7f6ab9d370ddff27b19c",
+    "classes": [
+      "support_entailment",
+      "neutral",
+      "conflict_contradiction"
+    ],
+    "coverage": "Every exact frozen claim x source-sentence edge, not only claim-average top3.",
+    "reuse": "Reuse only bit-identical probabilities for the exact checkpoint/revision/premise/hypothesis request; ambiguous duplicates are recomputed.",
+    "combination": "For each token and layer, normalize all source-sentence attribution and take its weighted E/N/C average."
+  },
+  "per_token_per_layer_features": [
+    "source_share",
+    "strict_previous_answer_share",
+    "other_context_share",
+    "attention_weighted_support",
+    "attention_weighted_neutral",
+    "attention_weighted_conflict",
+    "top1_sentence_concentration",
+    "top3_sentence_concentration"
+  ],
+  "window_design": {
+    "rows": "Every unchanged eligible 4-raw-BPE stride-one window; short answers retain their original shorter window.",
+    "attribution": "Mean and max over the lexical BPE rows touched by that exact window, plus lexical-token fraction.",
+    "registered_representations": "Full retains 32x8; band4 first averages each consecutive eight-layer band per token and retains 4x8. Both use token mean and max.",
+    "fusion": "The formal optional column is frozen label-blind window mean NLL.",
+    "excluded_diagnostics": "Existing Lookback/ModernBERT-large OOF columns are excluded from every formal candidate because their fixed C/epoch were historically selected on this same calibration159 split.",
+    "no_claim_projection": true
+  },
+  "training": {
+    "candidates": [
+      "token_attr_full_lr",
+      "token_attr_full_nll_lr",
+      "token_attr_band4_lr",
+      "token_attr_band4_nll_lr"
+    ],
+    "model": "StandardScaler plus L2 liblinear logistic regression, fixed C=0.01",
+    "crossfit": "5-fold GroupKFold by source-connected group.",
+    "weights": "Equal source-group mass, answer mass within group, and window mass within answer; then one fit-only binary-class balance and global scale.",
+    "selection": "Fit OOF only: maximize min(window F1, answer F1), then window F1, answer F1, precision, then earlier candidate.",
+    "thresholds": "Window and answer thresholds are chosen on fit OOF and frozen."
+  },
+  "calibration": "One strict evaluation with fit-frozen model and thresholds; no cal-F1Opt and no refit.",
+  "formal_baselines_modified": false,
+  "official_test_opened": false
+}

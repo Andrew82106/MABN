@@ -1,0 +1,46 @@
+{
+  "status": "passed_with_explicit_adaptations",
+  "created_at_utc": "2026-09-11T16:03:06.640512+00:00",
+  "scope": "Frozen development_v1 only; fit634/calibration159, no official test/withheld answers or labels",
+  "no_new_fit": true,
+  "no_gpu": true,
+  "frozen_files_modified": false,
+  "blocking_errors": [],
+  "key_finding": "Lookback mean/mean formula is faithful, but source-only context and post-read timing/current-token membership are adaptations; current results are not an exact original experimental replication. No causal claim that adaptations explain scores.",
+  "proof_records": 793,
+  "raw_response_tokens": 213159,
+  "lr_candidates": 12,
+  "manual_lr_window_scores": 2524368,
+  "manual_lr_answer_scores": 9516,
+  "max_manual_lr_abs_error": 2.220446049250313e-16,
+  "thresholds_verified": 24,
+  "selected_C_verified": [
+    0.001,
+    0.001,
+    0.001,
+    0.001
+  ],
+  "known_fit_calibration_groups_disjoint": true,
+  "subreports": {
+    "FEATURE_DEFINITION_AUDIT_QA.json": {
+      "sha256": "27c9144507164ae76a42583ff2654ec37e703c72d7afec1ac07bacc162ae1ee9",
+      "status": "passed_with_explicit_adaptations"
+    },
+    "COEFFICIENT_AUDIT_QA.json": {
+      "sha256": "b3d3de1eafb985dcddbbe7f9a44cf0b91ff4a8b1d2c144cd8863f0c7e9878a85",
+      "status": "passed"
+    },
+    "CALIBRATION_AUDIT_QA.json": {
+      "sha256": "64d5b7a20123d2c098601f73320ed7c1748b5266fc798fee698d06ac3bb6e73f",
+      "status": "passed"
+    }
+  },
+  "narrative_sha256": "5bea5e667130cb536059ffefba89b84190370623f515a36f037fccabb291d129",
+  "limits": [
+    "Read-only audit establishes current artifact consistency, not cryptographic proof of historical execution order.",
+    "PCA components were not re-fitted; fit sample/weights/mean and all stored-component projections were independently checked.",
+    "All793 hash/coordinate checks differ from the existing two-example sampled GPU numerical oracle.",
+    "Calibration selection is optimistic; sealed official test remains unused.",
+    "Unlabeled refusal window policy, long answers, model quantization and 4-token windows differ from R16 and/or original Lookback experiments."
+  ]
+}

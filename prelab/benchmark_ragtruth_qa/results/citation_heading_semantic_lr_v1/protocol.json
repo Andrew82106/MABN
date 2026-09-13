@@ -1,0 +1,54 @@
+{
+  "version": "heading-semantic-lr-runner-v1",
+  "frozen_producer_training_protocol": {
+    "version": "heading-semantic-matched-lr-v1",
+    "status": "design_only_not_trained",
+    "peers": [
+      "lookback",
+      "harp_claim",
+      "semantic_claim"
+    ],
+    "modes": [
+      "any_source_control",
+      "inherited_source_gap"
+    ],
+    "C": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "planned_fits": 18,
+    "common14": "Frozen peer/tail2 two probabilities + exact original8 citation lexical features + exact frozen3 heading-scope features + new max-any-source support mean.",
+    "treatment15": "Identical14 common columns plus only new max-any-source minus inherited-source support mean.",
+    "equal_inference_budget": "Both receive same1161 new MiniCheck pairs. No old6252 score substitution. No-scope windows have both new semantic values0.",
+    "fit": "Original634 fit /168123 windows, exact original q.base_weights base/loss/class/group scheme; loss mass168123. StandardScaler fitted only on fit with base weights.",
+    "LR": {
+      "solver": "liblinear",
+      "penalty": "l2",
+      "max_iter": 2000,
+      "random_state": 20261010
+    },
+    "thresholds": "Same original159 calibration /42241 windows; independent window and answer F1 thresholds, ties precision then higher threshold.",
+    "candidate_selection": "Per peer/mode max(min(windowF1,answerF1),windowF1,windowprecision,-C), exactly q.selection_key. All18 candidates/model/scaler/scores retained.",
+    "answer": "Max score over ALL original eligible windows; original answers/labels and order unchanged.",
+    "CPU_only_training": true,
+    "training_authorized_now": false,
+    "official_test_opened": false,
+    "limits": "Upstream fit probabilities not cross-fitted; same repeatedly exposed calibration. Never describe this as an independent test or semantically certified labels."
+  },
+  "new_input_names": [
+    "inherited_any_source_support_mean",
+    "inherited_source_support_gap_mean"
+  ],
+  "producer": "citation_heading_semantic_v1",
+  "input_widths": {
+    "any_source_control": 14,
+    "inherited_source_gap": 15
+  },
+  "feature_gate": "Must have features_complete statuscomplete/no_testtrue/trainedfalse, exact two names/shape/float32 and bound1161pair inference/387claims; all file hashes, original window order and no-scope zero checked before any fit.",
+  "prior_reference": "Keep completed13-column heading_scope selected and all3C entries with scores/model/scaler hashes; no refit. They are historical references, not the matched14-column common-control family.",
+  "all_candidates_retained": true,
+  "threads": 4,
+  "GPU_used": false,
+  "official_test_opened": false
+}

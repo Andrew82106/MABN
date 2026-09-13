@@ -1,0 +1,38 @@
+{
+  "status": "passed_CPU_only_WDDM_gate_and_lineage_audit",
+  "source_sha256": "1ba9713bb4e1260096749044f95fbf662db78bd2c6396b0f5a1385b4cd074b3c",
+  "protocol_sha256": "248a368d406031b18ce55dea4b3cb51532c5f6ced322cee863e23ef7b25ae8a4",
+  "CPU_CHECK_sha256": "1d01db44eb0cbe79d00f2930087e143e27fd801d3717741d2666278fd55927fa",
+  "prepared_inputs_sha256": "55753d10aa79f2069acfed7161c9b64fa8bcc4ed21da97c1a403ec73e1ff1f2a",
+  "v1_preparation_complete_sha256": "f68257930b58c4ab44ed1b990e01e012beb19279ddd69f3082bf5c5a97efcb17",
+  "assertions": {
+    "v1_source_and_existing_artifacts_hash_unchanged": true,
+    "label_free_prepared_input_hash_exact": true,
+    "new_v2_output_directory": true,
+    "explicit_bracketed_NA_only": true,
+    "numeric_memory_always_blocks": true,
+    "pure_C_and_unknown_type_block": true,
+    "unreviewed_graphics_executable_blocks": true,
+    "global_O_EXCL_lock": true,
+    "free_memory_gate": true,
+    "two_process_scans": true,
+    "CPU_selfcheck_synthetic_only": true,
+    "no_gold_loader_or_score_stage": true,
+    "no_official_test_IO": true,
+    "no_baseline_path_or_mutation": true
+  },
+  "GPU_commands_ready_but_not_run": [
+    "gpu-smoke",
+    "extract"
+  ],
+  "limitations": [
+    "The C+G exception is limited to the frozen reviewed GUI basename list; a new UI executable fails closed until a new version reviews it.",
+    "A global lock coordinates project runners; the two process scans and free-memory gate reduce but cannot eliminate an external process starting after admission.",
+    "No empirical GPU result exists yet; this audit validates only CPU logic and immutable lineage."
+  ],
+  "labels_accessed": false,
+  "model_loaded": false,
+  "GPU_used": false,
+  "official_test_opened": false,
+  "baseline_modified": false
+}

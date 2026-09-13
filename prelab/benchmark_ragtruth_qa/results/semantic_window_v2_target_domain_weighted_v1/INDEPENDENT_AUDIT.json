@@ -1,0 +1,30 @@
+{
+  "status": "passed_independent_fit_replay_without_reopening_calibration_labels",
+  "target_generator_provenance_replayed": true,
+  "calibration_identity_proved_from_hash_bound_manifest_and_exporter": true,
+  "calibration_answer_or_span_rows_opened_by_audit": false,
+  "candidate_grid_exact": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "source_connected_five_fold_all_domain_coverage_exactly_once": true,
+  "all_20_crossfit_model_predictions_exact": true,
+  "all_candidate_native_and_all_domain_metrics_exact": true,
+  "selection_native_only": true,
+  "selected_alpha": 0.0,
+  "alpha_zero_auxiliary_weights_exactly_zero": true,
+  "alpha_zero_native_score_replay_max_abs_error": 1.1102230246251565e-16,
+  "alpha_zero_native_threshold_decisions_and_confusion_counts_identical": true,
+  "full_fit_weight_mass_replayed": true,
+  "generator_identity_feature_count": 0,
+  "generator_identity_absent_from_fit_and_predict_interfaces": true,
+  "serialized_model_numeric_feature_width": 26,
+  "calibration_scores_exact_native_control_without_label_reopen": true,
+  "calibration_evaluations": 1,
+  "calibration_thresholds_used_for_selection": 0,
+  "formal_baseline_files_unchanged": true,
+  "official_test_opened": false,
+  "GPU_used": false
+}

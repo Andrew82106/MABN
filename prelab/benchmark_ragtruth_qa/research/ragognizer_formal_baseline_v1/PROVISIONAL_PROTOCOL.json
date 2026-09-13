@@ -1,0 +1,28 @@
+{
+  "version": "ragognizer-calibration-provisional-protocol-v1",
+  "date": "2026-09-13",
+  "status": "frozen_before_provisional_inference",
+  "purpose": "early calibration diagnostic because measured full-run extrapolation exceeds 90 minutes",
+  "formal_status": "N/A_until_full_3839_coverage",
+  "method_identity_unchanged": true,
+  "plan_sha256": "90d21b3bc9aa8e92dc7c6ef8fac3d7e178effa0236a5464831541ea401343a76",
+  "selection": {
+    "partition": "calibration",
+    "answers": 159,
+    "groups": 154,
+    "eligible_windows": 42241,
+    "order": "the calibration subsequence in the frozen full plan"
+  },
+  "runner_script_sha256": "4eeec3e46f16d3be9efddb18059deb6a27568328bba8b66e79c39fda771469f7",
+  "adapter_script_sha256": "1ccd640c461bbc05662176e0abfbe305fb34f12420e60ee45a9dd971bdae37fd",
+  "evaluator_script_sha256": "dfa367a472d9b00a0cfc0e9de9d2c7ca1bffbb03fda6b17a26ed85a5d162667a",
+  "shared_metric_library_sha256": "b3d999e22e5c5556598e89b980ddd54e64df0087ca78c50a196445a0ef8a2b30",
+  "native_output": "unchanged sigmoid(hallu_head_neg_16) probabilities",
+  "mapping": "same frozen label-free character-overlap adapter and shared window geometry as formal full run",
+  "threshold_rule": "window and answer separately maximize F1, then precision, then higher threshold; score >= threshold",
+  "author_threshold_0_6523": "appendix only",
+  "freeze_before_gold": "runner GPU audit -> raw chain -> adapter audit -> adapted chain -> PROVISIONAL_CAL_SCORE_FREEZE; only then evaluate",
+  "fit_gold_opened": false,
+  "calibration_gold_opened_at_protocol_freeze": false,
+  "test_opened": false
+}

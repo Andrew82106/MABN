@@ -1,0 +1,30 @@
+{
+  "version": "fava-six-original-controls-convex-v1",
+  "target": "fava",
+  "bases": "Exactly the original3 selected two-score+8citation LRs and original3 two-score monotone trees used by large_fixed_convex_v1. Never use the new large convex combinations or large-trained combiners as bases.",
+  "detector": "One already selected epoch from the complete upstream run; selection belongs to that run, not individual fusion families. FAVA permits only its3 QA epochs, never the auxiliary checkpoint.",
+  "weights": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "candidate_count": 36,
+  "formula": "For each original eligible window: (1-alpha)*original_control_probability + alpha*target_detector_probability. Then recompute answermax over all original eligible windows.",
+  "scope": "Original634 native fit answers/168123 windows and159 calibration answers/42241 windows; human labels, raw4BPE stride1 lexical windows and refusals unchanged.",
+  "calibration": "Original two F1-optimal thresholds, ties by precision then higher threshold. One alpha per family selected by max min(two F1), windowF1, window precision, then smaller alpha. Both metrics come from the same candidate.",
+  "endpoints": "alpha0 exactly replays original controls, answers, thresholds and both partitions metrics; alpha1 exactly replays the single target detector and its calibration thresholds/metrics.",
+  "training": "No model/scaler fitting or optimizer steps. Do not change original base C choices or upstream epoch choices. Prepare reads static completed preparation and old control metadata only; run requires upstream completion first.",
+  "artifacts": "Independent target output, preparation/protocol freeze, selected target binding, target window cache, all36 scores/thresholds/counts and6 selected candidates.",
+  "limits": [
+    "Synthetic silver FAVA auxiliary supervision, then original human QA training; auxiliary final checkpoint never enters model selection.",
+    "Extra offline semantic detector, not a pure original-generator white-box probe.",
+    "Repeated calibration; alpha0 fallback does not guarantee nondegradation on unseen data.",
+    "Upstream training cost and supervision differ. NLI and FAVA are independent comparisons, not cumulative large→NLI→FAVA fusions."
+  ],
+  "GPU_used": false,
+  "new_fits": 0,
+  "official_test_opened": false
+}

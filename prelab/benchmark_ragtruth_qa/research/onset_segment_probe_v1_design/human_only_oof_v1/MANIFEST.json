@@ -1,0 +1,56 @@
+{
+  "baseline_mutated": false,
+  "calibration_or_test_labels_read": false,
+  "gpu_started": false,
+  "outputs": {
+    "ANSWERS.jsonl.gz": {
+      "bytes": 18782,
+      "sha256": "ee41891d063ac89a90a8519eda54bcce95798aa818ae3fa0a870695bb0a1b217"
+    },
+    "FOLD_MODELS.json": {
+      "bytes": 49268,
+      "sha256": "6461f0b9f4ebc1f481c6b2becb52ca3fad110e28239c5acc1b8d576af4a33124"
+    },
+    "METRICS.json": {
+      "bytes": 10058,
+      "sha256": "697e72d3771928f4eea5c99cdee0edd29f033cbfc2148b5d2a4bd25b85e9ed7d"
+    },
+    "SPANS.jsonl.gz": {
+      "bytes": 18517,
+      "sha256": "e76e3df6243672e5bc3fc13ceb067d889452a958316ffbede05f38df59274fc0"
+    },
+    "TOKENS.jsonl.gz": {
+      "bytes": 5358184,
+      "sha256": "5bd9daf96c8a9135ec2c99aae5cec5c1bfdbf5ca407a4d4554b4603cf80e27d1"
+    },
+    "WINDOWS.jsonl.gz": {
+      "bytes": 1933693,
+      "sha256": "2af35c2a052a7384cd59bddbb1b0d42f114b1aca9398a615c5743921666f0495"
+    }
+  },
+  "provenance": {
+    "answers_fit_sha256": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+    "design_protocol_sha256": "3dc8420db28a160f09afc088ad4282a2023deb02b8d7694d30c9663bd4504edf",
+    "fit_feature_pairs": 634,
+    "hidden_projection_sha256": "4b57d6b2c5b7a7ec70aac0d67dbec7ca75835ea5101610cfbde5375f4894c429",
+    "lookback_projection_sha256": "e8ec5a62301cbedd7bad059a11e4803579aa7e17976b557fdd2cd4db0a6852ae",
+    "npz_hashes_recomputed": true,
+    "ordered_fit_feature_pairs_sha256": "7b6d505901d5cf354765d3456024c29689945f337ba5d30f3d00e18573408335",
+    "runner_sha256": "cac9c6de0449b80e64e2d0a7698c22c1c6a356ef0c2d28cf6741e4008eba0a19",
+    "tokens_fit_sha256": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c"
+  },
+  "schema_version": "osr-human-only-oof-output-manifest-v1",
+  "selfcheck": {
+    "checks": [
+      "deterministic PCG64 projections",
+      "threshold tie handling",
+      "ranking metrics bounded",
+      "stable group fold"
+    ],
+    "device": "CPU",
+    "gpu_framework_imported": false,
+    "status": "PASS"
+  },
+  "status": "COMPLETE",
+  "wall_seconds": 27.36776779999491
+}

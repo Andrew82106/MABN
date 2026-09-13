@@ -1,0 +1,66 @@
+{
+  "complete": true,
+  "source_snapshot": {
+    "producer_source_snapshot": {
+      "files_sha256": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_llama_baselines.py": "d338b15b64ee7768d8bfd1ed576dddb602b38357169c6637ef6a7be26dcc3f91",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\run_probe_expansion.py": "9f1683f4bfd9fc41add103606bcb259d94c6ca7ce5191bf453a6d6690dcae4ee",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\export_freeze.json": "e68d662e53b3554c2cc28ba436c6d6525462619a023c40b17caebccea0980b86",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\new_token_plans.jsonl": "f22efc2cb7bcee00a9bbb6c5ef0a305b4fde40f92c2622b4fd67a8390734326c",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\answers_fit.jsonl": "8adef0c27d5021acdf559c1566db2d6d949ecccb88ad2532ae626381add0aa33",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\tokens_fit.jsonl": "18501c2a53a22620f24827d3181d831f2aee77da2b335bd50270fbe939048ec2",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\data\\windows_k4_fit.jsonl": "cfaf5af088eaac422ee2685c9150a774171d930666426e936f86d0cee905eec3",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\signature.json": "f498a0c9b59d13ddf6499ad480534d6deb6665e6c938c4715a8b1966e03c928a",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\protocol.json": "0a638d7a69374de3620edc838866d3b02003a0f55eb277a847ee5140caa264df",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\preparation_freeze.json": "2b6d71fcda3e91300cd752be93bbcacd2e9f2757ad0115c287beef5ff18d2fcc",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_manifest.json": "1731cc532289ad927cb8b9bd5eea3fc9a9916105f3695bb71e0b593c34ef883d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_signature.json": "131815b0e3b53a978c9a462ff289e6b95ab8e56dc7921d925538518691ee9f09",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\feature_manifest.json": "5f9e6569325cc54e37163d977e78f91501e37a22205617a2976ec06bbce0dd11",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\signature.json": "d71393febe535d30c158a8743a6602b0146867a3714413407521c136c617fbe6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\lookback_controls_v2\\layouts.jsonl": "2de5dc758cf1036fe11378af8b5aaf47fc265e1a8789a9af5dba451c7f0a2f5f",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\gold_manifest.json": "e4e192e0c24339e89135390fcfb1bfcfb69b54d824c3803e2efb9b494c7546b7",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_basis.npz": "cc69e4d72b52e0a5e91e036feee847867ce492c80eb894ae9e373207e116c5f6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_basis.json": "9f5bd619dd28c03e8af912af788c6c0a10caa588e2f2f40bdafbea5370be250b",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_manifest.json": "fbc7e5e7f74fd8ae7be318d512b5dce298f9b500a3ab83668a1004f38ae371d8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\harp_signature.json": "86749e3d48fedb1aa5ec47ec388bcc8543d9a882b329037e3cbcb47bb69414cb",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\hidden_pca.pkl": "f4f10a2d7cbe773a9ca78e7bc20b6f6c808c2bea7fac03216dee39f0ca515d94",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\development_v1\\complete.json": "c4c0efc2a806775c50e406575677f88962db3ed10a2c98604ec04d029be44c9a",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\harp_development_v1\\complete.json": "cbbdeff57e35d69359bdd421e44a560a6c2d3ff1ab86e4ed07dc58c531109a60",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\lookback_controls_v2\\complete.json": "7b13837857a20e0320d63c5b84ccd1af07d6821c13ef4b1cf0230f7f90eefaa0",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\complete.json": "0d3637bdd5d9e9db4e1fb375e62b307312a045491fb3e0b072769b04555559e9",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\probe_v1\\expanded3680_weights.npz": "4cd9e49e2bf7df873ed9592a9e9ce7221b43a827d0093e905f306c9ee3dd8950",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_features_v3\\feature_manifest.json": "f0f1ffb8bba18d8815e3ac37770038ad4cdcdf6d658e951b2f5d21795b22d564",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\fit_expansion\\llama_baselines_v1\\protocol.json": "5ddad47937584876edfa54b291470d38d72328b42a79a954420904823e3c52db"
+      },
+      "new_manifest_complete": true,
+      "old793_unchanged": true,
+      "official_test_opened": false
+    },
+    "producer_preparation_sha256": "84d211dd085d18c40b0be537da0d53d457d643a06dabec89a62c41cd5739e252",
+    "producer_token_index_sha256": "fb5af32803033f9cad1825aaf7a4971f8effb219d0b4087664483816386fe1fe",
+    "producer_harp64_sha256": "c869e78ebd51f48695aae015955b183fd2bb7b50d12580c90faf7fa4384bf5fc",
+    "TCN_protocol_sha256": "ef3d43b7d3d43a8104aa650c9bfc1846b63136a93707428c89ce8b818c1adffb",
+    "metadata_manifest_sha256": "8dad9b30c6dce2a9d54996ce8a71351c14ab01ebfb7edceeb3a192bbcb5a48a0"
+  },
+  "files_sha256": {
+    "matrices/raw1089.npy": "58b62463261039c09bf7bc5937a307d46a73cd6e57c4dff16ef9d866ff12d817",
+    "matrices/standardized1089.npy": "0b6ba5f9864d43d4bdf02c69e2dcc54b337a9abf657caf0c5fffe3679b64c7bf",
+    "scaler.pkl": "4aaf225fb428c996f8fa9790aa9b51805f0c55d77fab45019f6ea78913e01cda",
+    "token_index.json": "3aeeb40b9a6476fd7325d5d3b1307e324dd8eb83d60f3269c44950424c1899b1",
+    "fit_token_weights.npz": "8838fbadb20392b4bcff0b845c8e52a5472a32d535b27d56af6cd0b4b58118bd",
+    "epoch_answer_order.npy": "95c44c79c9edc7d1cac1245c57b161ba95ff23aa482115c0fb3097efbb2dd74d"
+  },
+  "shape": [
+    708506,
+    1089
+  ],
+  "fit_raw_tokens": 665708,
+  "fit_lexical_tokens": 560300,
+  "loss_mass": 139518.0,
+  "all793_original_raw_common_and_HARP_exact": true,
+  "scaler_fit_only": true,
+  "GPU_used": false,
+  "official_test_opened": false
+}

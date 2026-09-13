@@ -1,0 +1,560 @@
+{
+  "status": "passed",
+  "all_16_methods_recounted": true,
+  "subsets": 2,
+  "per_answer_and_category_condition_counts_checked": true,
+  "methods": {
+    "lb_coarse": {
+      "all_resolved_items": {
+        "tp": 48,
+        "fp": 83,
+        "fn": 69,
+        "tn": 1118,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.366412213740458,
+        "recall": 0.41025641025641024,
+        "f1": 0.3870967741935484
+      },
+      "risk_items_only": {
+        "tp": 48,
+        "fp": 65,
+        "fn": 69,
+        "tn": 178,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.4247787610619469,
+        "recall": 0.41025641025641024,
+        "f1": 0.41739130434782606
+      }
+    },
+    "lb_fine": {
+      "all_resolved_items": {
+        "tp": 59,
+        "fp": 28,
+        "fn": 58,
+        "tn": 1173,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.6781609195402298,
+        "recall": 0.5042735042735043,
+        "f1": 0.5784313725490197
+      },
+      "risk_items_only": {
+        "tp": 59,
+        "fp": 15,
+        "fn": 58,
+        "tn": 228,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.7972972972972973,
+        "recall": 0.5042735042735043,
+        "f1": 0.6178010471204188
+      }
+    },
+    "binding_coarse": {
+      "all_resolved_items": {
+        "tp": 83,
+        "fp": 207,
+        "fn": 34,
+        "tn": 994,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.28620689655172415,
+        "recall": 0.7094017094017094,
+        "f1": 0.40786240786240785
+      },
+      "risk_items_only": {
+        "tp": 83,
+        "fp": 146,
+        "fn": 34,
+        "tn": 97,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.3624454148471616,
+        "recall": 0.7094017094017094,
+        "f1": 0.4797687861271676
+      }
+    },
+    "binding_fine": {
+      "all_resolved_items": {
+        "tp": 64,
+        "fp": 36,
+        "fn": 53,
+        "tn": 1165,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.64,
+        "recall": 0.5470085470085471,
+        "f1": 0.5898617511520737
+      },
+      "risk_items_only": {
+        "tp": 64,
+        "fp": 16,
+        "fn": 53,
+        "tn": 227,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.8,
+        "recall": 0.5470085470085471,
+        "f1": 0.649746192893401
+      }
+    },
+    "hidden_lr": {
+      "all_resolved_items": {
+        "tp": 26,
+        "fp": 10,
+        "fn": 91,
+        "tn": 1191,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.7222222222222222,
+        "recall": 0.2222222222222222,
+        "f1": 0.33986928104575165
+      },
+      "risk_items_only": {
+        "tp": 26,
+        "fp": 1,
+        "fn": 91,
+        "tn": 242,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.9629629629629629,
+        "recall": 0.2222222222222222,
+        "f1": 0.3611111111111111
+      }
+    },
+    "hidden_mlp_seed_20260910": {
+      "all_resolved_items": {
+        "tp": 60,
+        "fp": 42,
+        "fn": 57,
+        "tn": 1159,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.5882352941176471,
+        "recall": 0.5128205128205128,
+        "f1": 0.547945205479452
+      },
+      "risk_items_only": {
+        "tp": 60,
+        "fp": 15,
+        "fn": 57,
+        "tn": 228,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.8,
+        "recall": 0.5128205128205128,
+        "f1": 0.625
+      }
+    },
+    "hidden_mlp_seed_20260911": {
+      "all_resolved_items": {
+        "tp": 65,
+        "fp": 43,
+        "fn": 52,
+        "tn": 1158,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.6018518518518519,
+        "recall": 0.5555555555555556,
+        "f1": 0.5777777777777777
+      },
+      "risk_items_only": {
+        "tp": 65,
+        "fp": 12,
+        "fn": 52,
+        "tn": 231,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.8441558441558441,
+        "recall": 0.5555555555555556,
+        "f1": 0.6701030927835051
+      }
+    },
+    "hidden_mlp_seed_20260912": {
+      "all_resolved_items": {
+        "tp": 54,
+        "fp": 34,
+        "fn": 63,
+        "tn": 1167,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.6136363636363636,
+        "recall": 0.46153846153846156,
+        "f1": 0.526829268292683
+      },
+      "risk_items_only": {
+        "tp": 54,
+        "fp": 10,
+        "fn": 63,
+        "tn": 233,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.84375,
+        "recall": 0.46153846153846156,
+        "f1": 0.5966850828729282
+      }
+    },
+    "nll": {
+      "all_resolved_items": {
+        "tp": 53,
+        "fp": 137,
+        "fn": 64,
+        "tn": 1064,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.2789473684210526,
+        "recall": 0.452991452991453,
+        "f1": 0.34527687296416937
+      },
+      "risk_items_only": {
+        "tp": 53,
+        "fp": 47,
+        "fn": 64,
+        "tn": 196,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.53,
+        "recall": 0.452991452991453,
+        "f1": 0.48847926267281105
+      }
+    },
+    "entropy": {
+      "all_resolved_items": {
+        "tp": 56,
+        "fp": 142,
+        "fn": 61,
+        "tn": 1059,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.2828282828282828,
+        "recall": 0.47863247863247865,
+        "f1": 0.35555555555555557
+      },
+      "risk_items_only": {
+        "tp": 56,
+        "fp": 49,
+        "fn": 61,
+        "tn": 194,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.5333333333333333,
+        "recall": 0.47863247863247865,
+        "f1": 0.5045045045045045
+      }
+    },
+    "redeep": {
+      "all_resolved_items": {
+        "tp": 52,
+        "fp": 285,
+        "fn": 65,
+        "tn": 916,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.1543026706231454,
+        "recall": 0.4444444444444444,
+        "f1": 0.2290748898678414
+      },
+      "risk_items_only": {
+        "tp": 52,
+        "fp": 73,
+        "fn": 65,
+        "tn": 170,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.416,
+        "recall": 0.4444444444444444,
+        "f1": 0.4297520661157025
+      }
+    },
+    "lumina": {
+      "all_resolved_items": {
+        "tp": 48,
+        "fp": 92,
+        "fn": 69,
+        "tn": 1109,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.34285714285714286,
+        "recall": 0.41025641025641024,
+        "f1": 0.3735408560311284
+      },
+      "risk_items_only": {
+        "tp": 48,
+        "fp": 42,
+        "fn": 69,
+        "tn": 201,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.5333333333333333,
+        "recall": 0.41025641025641024,
+        "f1": 0.463768115942029
+      }
+    },
+    "all_positive": {
+      "all_resolved_items": {
+        "tp": 117,
+        "fp": 1201,
+        "fn": 0,
+        "tn": 0,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.08877086494688922,
+        "recall": 1.0,
+        "f1": 0.16306620209059233
+      },
+      "risk_items_only": {
+        "tp": 117,
+        "fp": 243,
+        "fn": 0,
+        "tn": 0,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.325,
+        "recall": 1.0,
+        "f1": 0.49056603773584906
+      }
+    },
+    "all_negative": {
+      "all_resolved_items": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 117,
+        "tn": 1201,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "risk_items_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 117,
+        "tn": 243,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "lb_coarse_broadcast": {
+      "all_resolved_items": {
+        "tp": 109,
+        "fp": 235,
+        "fn": 8,
+        "tn": 966,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.3168604651162791,
+        "recall": 0.9316239316239316,
+        "f1": 0.47288503253796094
+      },
+      "risk_items_only": {
+        "tp": 109,
+        "fp": 205,
+        "fn": 8,
+        "tn": 38,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.3471337579617834,
+        "recall": 0.9316239316239316,
+        "f1": 0.505800464037123
+      }
+    },
+    "binding_coarse_broadcast": {
+      "all_resolved_items": {
+        "tp": 109,
+        "fp": 205,
+        "fn": 8,
+        "tn": 996,
+        "tokens": 1318,
+        "risk_tokens": 117,
+        "nonspan_tokens": 1201,
+        "missing_predictions": 0,
+        "precision": 0.3471337579617834,
+        "recall": 0.9316239316239316,
+        "f1": 0.505800464037123
+      },
+      "risk_items_only": {
+        "tp": 109,
+        "fp": 205,
+        "fn": 8,
+        "tn": 38,
+        "tokens": 360,
+        "risk_tokens": 117,
+        "nonspan_tokens": 243,
+        "missing_predictions": 0,
+        "precision": 0.3471337579617834,
+        "recall": 0.9316239316239316,
+        "f1": 0.505800464037123
+      }
+    }
+  },
+  "freeze9_sha256": "32384d9425c3145b7c72d640ee1fb730172e01adfa6e04c35a46ff3686a25236",
+  "token_scores_sha256": "e9894dea9e1fbfec853c14d14a5c2cd074d8892ffce5b82e47ad5756eb80447c",
+  "metrics_sha256": "46bbc1cb6cc0f88beedeaa16a95608f443b5c0daaeb7923772c0367074593001",
+  "gold_audit": {
+    "train": {
+      "groups": 120,
+      "rows": 240,
+      "items": 240,
+      "statuses": {
+        "resolved": 195,
+        "excluded": 37,
+        "unresolved": 8
+      },
+      "stances": {
+        "asserted": 203,
+        "abstained": 37
+      },
+      "item_risk_counts": {
+        "0": 128,
+        "None": 45,
+        "1": 67
+      },
+      "failed_parse_items": 0,
+      "all_tokens": 5974,
+      "lexical_tokens": 5217,
+      "eligible_tokens": 3854,
+      "risk_tokens": 339,
+      "nonspan_tokens": 3515,
+      "risk_items_only_tokens": 1378,
+      "risk_items_only_positive": 339,
+      "risk_items_only_nonspan": 1039,
+      "abstention_lexical_tokens": 983,
+      "other_excluded_lexical_tokens": 164,
+      "outside_item_lexical_tokens": 216,
+      "boundary_crossing_lexical_tokens": 0
+    },
+    "validation": {
+      "groups": 40,
+      "rows": 80,
+      "items": 80,
+      "statuses": {
+        "resolved": 60,
+        "excluded": 16,
+        "unresolved": 4
+      },
+      "stances": {
+        "asserted": 64,
+        "abstained": 16
+      },
+      "item_risk_counts": {
+        "0": 40,
+        "None": 20,
+        "1": 20
+      },
+      "failed_parse_items": 0,
+      "all_tokens": 2018,
+      "lexical_tokens": 1763,
+      "eligible_tokens": 1220,
+      "risk_tokens": 87,
+      "nonspan_tokens": 1133,
+      "risk_items_only_tokens": 436,
+      "risk_items_only_positive": 87,
+      "risk_items_only_nonspan": 349,
+      "abstention_lexical_tokens": 391,
+      "other_excluded_lexical_tokens": 80,
+      "outside_item_lexical_tokens": 72,
+      "boundary_crossing_lexical_tokens": 0
+    },
+    "test": {
+      "groups": 40,
+      "rows": 80,
+      "items": 80,
+      "statuses": {
+        "resolved": 63,
+        "excluded": 15,
+        "unresolved": 2
+      },
+      "stances": {
+        "asserted": 65,
+        "abstained": 15
+      },
+      "item_risk_counts": {
+        "0": 45,
+        "None": 17,
+        "1": 18
+      },
+      "failed_parse_items": 0,
+      "all_tokens": 2086,
+      "lexical_tokens": 1830,
+      "eligible_tokens": 1318,
+      "risk_tokens": 117,
+      "nonspan_tokens": 1201,
+      "risk_items_only_tokens": 360,
+      "risk_items_only_positive": 117,
+      "risk_items_only_nonspan": 243,
+      "abstention_lexical_tokens": 403,
+      "other_excluded_lexical_tokens": 40,
+      "outside_item_lexical_tokens": 69,
+      "boundary_crossing_lexical_tokens": 0
+    }
+  },
+  "models_retrained": false,
+  "thresholds_changed": false,
+  "interpretation": "Two mean item broadcasts use completed answers; they are not causal token-local predictors."
+}

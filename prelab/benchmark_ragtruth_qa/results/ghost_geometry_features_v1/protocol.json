@@ -1,0 +1,40 @@
+{
+  "status": "prepared_not_GPU_run",
+  "signature_sha256": "5b4913b98b6d1c8994e8d714923c631bcd42847cbcb48809afcfe22375baef3f",
+  "commands": {
+    "check": "CPU validation only",
+    "gpu-smoke": "explicit GPU only: fixed first/shortest fit and longest full input",
+    "extract": "explicit GPU only after gpu-smoke; resume all frozen 3839 rows"
+  },
+  "smoke_indices": [
+    0,
+    985,
+    196
+  ],
+  "smoke_response_ids": [
+    "16023",
+    "16656",
+    "17751"
+  ],
+  "longest_input_tokens": 1232,
+  "longest_record_index": 196,
+  "oracle": "Independent dense hidden_states from a complete causal decoder forward; exact original full input, all-ones mask; independent layer/pairwise reductions and identical 16-row lm_head geometry.",
+  "head_geometry": "No whole-sequence-vs-chunked BF16 GEMM identity claim; both reference and production explicitly use chunks of16 predictor states.",
+  "oracle_atol": 8e-06,
+  "oracle_rtol": 0,
+  "repeat_exact": true,
+  "causality": "Same-shape intervention at a target and every later token must leave all earlier pre-read features exact.",
+  "no_truncation_or_regeneration": true,
+  "raw_axis_includes_punctuation": true,
+  "no_label_or_lexical_filter": true,
+  "train_classifier": false,
+  "feature_shape": [
+    708506,
+    4
+  ],
+  "format": "per-record NPZ and JSON, ordered manifest on completion",
+  "resume": "Skip only signature/identity/axes/finite values/hash-verified records; preserve invalid files and fail; recover missing JSON from self-identifying valid NPZ.",
+  "failure": "Append a unique failure report; do not change frozen source, tolerances, input or prior records.",
+  "GPU_scheduling": "No wait, automatic queue, background launch or GPU use in check; explicit user/root authorization required externally.",
+  "scope": "Existing public-QA development3839 only, no test and no fitting."
+}

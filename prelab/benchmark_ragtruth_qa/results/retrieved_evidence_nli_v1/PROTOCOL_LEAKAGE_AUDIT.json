@@ -1,0 +1,151 @@
+{
+  "status": "passed_protocol_and_label_flow_audit",
+  "conclusion": "Retrieval, claim geometry, NLI feature aggregation and claim-to-window projection do not access label/gold/risk keys. Learned preprocessing, GroupKFold training, full model fit and threshold fitting index fit only. Calibration labels are consumed only by q.metrics after scores and fit thresholds exist. Official test is never opened.",
+  "stage_findings": {
+    "prepare_and_retrieval": {
+      "q_metadata_called": false,
+      "returned_development_fields": [
+        "source_id",
+        "group_id",
+        "partition",
+        "official_split",
+        "response_id",
+        "model",
+        "question",
+        "retrieved_passages",
+        "released_prompt",
+        "original_response",
+        "answer_sha256",
+        "prompt_sha256"
+      ],
+      "forbidden_annotation_fields_returned": false,
+      "claim_plan_labels_used_false": true
+    },
+    "claim_geometry": {
+      "functions": [
+        "build_input_row",
+        "trace_claim_tokens"
+      ],
+      "annotation_key_access": false,
+      "fixed_nonlexical_rule_only": true
+    },
+    "feature_construction": {
+      "function": "aggregate_claim_features",
+      "inputs": [
+        "prepared label-free retrieval metadata",
+        "frozen E/N/C probability cache"
+      ],
+      "annotation_key_access": false
+    },
+    "window_projection": {
+      "function": "project_claim_scores",
+      "annotation_key_access": false,
+      "accessed_metadata_keys": [
+        "answer_windows",
+        "answers",
+        "by_response",
+        "lexical_mask",
+        "lexical_token_claim",
+        "response_id",
+        "token_count",
+        "token_indices",
+        "tokens",
+        "windows"
+      ],
+      "note": "q.metadata container is present during score for coordinate compatibility, but this function reads only answer ids, token count/lexical mask, token_indices and window indices; label fields are not referenced."
+    },
+    "training": {
+      "fit_claims": 7091,
+      "calibration_claims_prediction_only": 1754,
+      "fit_groups": 615,
+      "calibration_groups": 154,
+      "group_sets_disjoint": true,
+      "folds": 5,
+      "fixed_C": 0.1,
+      "scaler_and_model_train_indices": "train subset of fit_claim_indices only",
+      "full_model_indices": "fit_claim_indices only"
+    },
+    "thresholds": {
+      "window": "meta bounds fit slice only",
+      "answer": "answers whose partition is fit only",
+      "learned_fit_scores": "GroupKFold OOF",
+      "calibration_use": "q.metrics reporting after frozen fit thresholds only"
+    },
+    "official_test": {
+      "literal_data_path_present": false,
+      "opened": false
+    }
+  },
+  "label_free_function_key_access": {
+    "build_input_row": [
+      "answer_sha256",
+      "answer_token_ids",
+      "claims",
+      "document_sha256",
+      "end",
+      "group_id",
+      "original",
+      "original_response",
+      "partition",
+      "question",
+      "response_id",
+      "response_token_offsets",
+      "retrieved_passages",
+      "source_id",
+      "start",
+      "text"
+    ],
+    "bm25_rank": [
+      "bm25",
+      "sentence_id",
+      "text"
+    ],
+    "select_evidence": [
+      "bm25",
+      "passage_id",
+      "query_term_coverage",
+      "sentence_id",
+      "sentences",
+      "text",
+      "text_sha256"
+    ],
+    "aggregate_claim_features": [
+      "bm25",
+      "claim_id",
+      "claims",
+      "passage_id",
+      "retrieval",
+      "selected",
+      "selected_union_query_coverage"
+    ],
+    "project_claim_scores": [
+      "answer_windows",
+      "answers",
+      "by_response",
+      "lexical_mask",
+      "lexical_token_claim",
+      "response_id",
+      "token_count",
+      "token_indices",
+      "tokens",
+      "windows"
+    ]
+  },
+  "source_and_artifact_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_retrieved_evidence_nli_v1.py": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\protocol.json": "a7e55e74cf87e734b6948f49aae47bc8ec8e8418fc742e81c797412598c56c52",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\inputs.jsonl": "aaad043a5ecae7ff881758cc7b0717b2771168c8473a3f84096045f7fe151408",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\preparation_complete.json": "4f5f34fd6404c33a03c46b52b6a8abc331a404143f36498bee1e16bf4cd334ec",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\preparation_statistics.json": "6244d9febaed69a06997626c064b90a7f45dba4755307d2c80dbcd9736c7da04",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\CPU_CHECK.json": "2151bf1a40ed1642325d74d454085377ec8c4c659f92cb2c18dc4ec870588820",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\retrieved_evidence_nli_v1\\INDEPENDENT_CPU_AUDIT.json": "fc788de6e255749b4eb495a164a17bbd52503fb1d005f4c532fdb83cc278649e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\feature_qa.py": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_development.py": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd"
+  },
+  "runner_ast_sha256": "5fa65b76050a82b67303be7588da1d31b3735d3011b24b1a83870da1dabd2818",
+  "GPU_initialized": false,
+  "model_loaded": false,
+  "official_test_opened": false
+}

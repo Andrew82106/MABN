@@ -1,0 +1,30 @@
+{
+  "version": "qa-harp-projection-controls-v1",
+  "methods": [
+    "harp256",
+    "harp64_lookback_nll",
+    "harp256_lookback_nll"
+  ],
+  "widths": {
+    "harp256": 256,
+    "harp64_lookback_nll": 1089,
+    "harp256_lookback_nll": 1281
+  },
+  "C": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "seed": 20260927,
+  "fit_windows": 168123,
+  "calibration_windows": 42241,
+  "source": "https://arxiv.org/html/2509.11536v2",
+  "adaptation": "Only bottom singular subspace projection; local supervised LR, not full original HARP training",
+  "rank": "Bottom64 provides same-width alternative to fit-PCA64; bottom256 also tested without/with baseline LB+NLL",
+  "data_and_weights": "Exact same all-window QA fit/cal and frozen base/class weights as development_v1; all human spans unchanged",
+  "standardization": "Fit-only weighted StandardScaler partial_fit, same batch16384",
+  "selection": "Cal max min(windowF1,answerF1), then windowF1, window precision, lowerC; separate cal thresholds",
+  "fit_counts": 9,
+  "test_opened": false,
+  "candidate_budget_same_as_baseline": true
+}

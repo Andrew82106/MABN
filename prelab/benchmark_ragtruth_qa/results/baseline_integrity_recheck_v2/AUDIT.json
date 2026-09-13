@@ -1,0 +1,357 @@
+{
+  "schema_version": "baseline-integrity-recheck-v2",
+  "audit_time_local": "2026-09-12T19:34:39+08:00",
+  "scope": "CPU-only read of fit/calibration artifacts; no GPU, training, baseline mutation, or sealed test read.",
+  "policy": {
+    "evaluation_owned_by_project": true,
+    "common_units": "same cal159, 154 groups, 42241 eligible 4-raw-BPE stride-1 windows, same answer/window gold",
+    "common_threshold_rule": "separate cal F1 -> precision -> higher-threshold tie-break; score >= threshold",
+    "baseline_method_owned_by_authors": "preserve declared features, architecture, training recipe, and native score",
+    "allowed_mapping": "deterministic, parameter-free, label-independent output-coordinate mapping only"
+  },
+  "overall": {
+    "completed_common_eval_pass": true,
+    "no_learned_or_label_conditioned_adapter": true,
+    "no_deliberate_baseline_weakening_found": true,
+    "frozen_hashes_checked": 21,
+    "all_frozen_hashes_match": true,
+    "completed_formal_baselines": [
+      "Lookback Lens structure transfer",
+      "LUMINA official-formula transfer",
+      "GHOST final-structure/parameter transfer"
+    ],
+    "not_scored_as_formal_baselines": [
+      "ReDeEP",
+      "MVA",
+      "RefChecker"
+    ]
+  },
+  "common_evaluation": {
+    "answers": 159,
+    "groups": 154,
+    "windows": 42241,
+    "positive_answers": 100,
+    "positive_windows": 5984
+  },
+  "adapter_training_calls": {
+    "lookback": [],
+    "ghost": [],
+    "lumina": []
+  },
+  "scores": {
+    "lookback": {
+      "mapping": "frozen 8-BPE span -> covering-span token mean -> 4-BPE mean -> answer max",
+      "window_max_abs_error": 3.3306690738754696e-16,
+      "answer_max_abs_error": 2.220446049250313e-16,
+      "native_model": {
+        "class": "sklearn.linear_model._logistic.LogisticRegression",
+        "features": 1024,
+        "parameters": {
+          "C": 1.0,
+          "class_weight": null,
+          "dual": false,
+          "fit_intercept": true,
+          "intercept_scaling": 1,
+          "l1_ratio": null,
+          "max_iter": 1000,
+          "multi_class": "deprecated",
+          "n_jobs": null,
+          "penalty": "l2",
+          "random_state": null,
+          "solver": "lbfgs",
+          "tol": 0.0001,
+          "verbose": 0,
+          "warm_start": false
+        }
+      },
+      "window": {
+        "threshold": 0.3606295689280757,
+        "f1": 0.6008821240162587,
+        "precision": 0.6226922387524646,
+        "recall": 0.580548128342246,
+        "tp": 3474,
+        "fp": 2105,
+        "fn": 2510,
+        "tn": 34152,
+        "auroc": 0.8723995893693551,
+        "average_precision": 0.6380608132989607
+      },
+      "answer": {
+        "threshold": 0.19991126123595265,
+        "f1": 0.8454545454545456,
+        "precision": 0.775,
+        "recall": 0.93,
+        "tp": 93,
+        "fp": 27,
+        "fn": 7,
+        "tn": 32,
+        "auroc": 0.8488135593220338,
+        "average_precision": 0.906297344345461
+      }
+    },
+    "ghost": {
+      "mapping": "frozen whole-answer probability copied unchanged to every 4-BPE window",
+      "window_exact": true,
+      "answer_exact": true,
+      "native_localization": false,
+      "native_model": {
+        "class": "sklearn.ensemble._forest.RandomForestClassifier",
+        "features": 4,
+        "parameters": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": "balanced_subsample",
+          "criterion": "gini",
+          "max_depth": 40,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 2,
+          "min_samples_split": 8,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 750,
+          "n_jobs": 4,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      },
+      "window": {
+        "threshold": 0.4620325443433537,
+        "f1": 0.3203608127586367,
+        "precision": 0.2219287508857824,
+        "recall": 0.575701871657754,
+        "tp": 3445,
+        "fp": 12078,
+        "fn": 2539,
+        "tn": 24179,
+        "auroc": 0.6327125596362805,
+        "average_precision": 0.23909235714547927
+      },
+      "answer": {
+        "threshold": 0.06919275334110253,
+        "f1": 0.7722007722007722,
+        "precision": 0.6289308176100629,
+        "recall": 1.0,
+        "tp": 100,
+        "fp": 59,
+        "fn": 0,
+        "tn": 0,
+        "auroc": 0.5889830508474576,
+        "average_precision": 0.7349417224200967
+      }
+    },
+    "lumina": {
+      "mapping": "fixed token score 0.5*IPR-0.5*MMD^2 -> 4-BPE mean -> answer max",
+      "new_fits": 0,
+      "calibration_feature_files_hash_checked": 159,
+      "window_max_abs_error": 0.0,
+      "answer_max_abs_error": 0.0,
+      "window": {
+        "threshold": 0.03749706089729443,
+        "f1": 0.3312991877446235,
+        "precision": 0.221409686673792,
+        "recall": 0.6577540106951871,
+        "tp": 3936,
+        "fp": 13841,
+        "fn": 2048,
+        "tn": 22416,
+        "auroc": 0.6914064188084499,
+        "average_precision": 0.27006244858146744
+      },
+      "answer": {
+        "threshold": 0.5166325927712023,
+        "f1": 0.7850467289719626,
+        "precision": 0.7368421052631579,
+        "recall": 0.84,
+        "tp": 84,
+        "fp": 30,
+        "fn": 16,
+        "tn": 29,
+        "auroc": 0.7022033898305085,
+        "average_precision": 0.7908760928061056
+      }
+    }
+  },
+  "hashes": {
+    "lookback_runner": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_lookback_official_span_v1.py",
+      "sha256": "a4d1a7feb10974a5707749b9da6a3781882e6653b18580f92c43f01227d7d99b",
+      "match": true
+    },
+    "lookback_extractor": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\feature_lookback_controls_v2.py",
+      "sha256": "b49629aa5370444f74afe9e313b01330bf31e6210156e8c0069088aabb84426f",
+      "match": true
+    },
+    "lookback_author_step03": {
+      "path": "prelab\\benchmark_ragtruth_qa\\results\\lookback_official_span_v1\\author_step03_lookback_lens.py",
+      "sha256": "8039386cc1d43eec1752d88184e62ab1969532b2b05c8ea2e5eb1a3084915c93",
+      "match": true
+    },
+    "lookback_adapter": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_lookback_k4_evaluation_adapter_v1.py",
+      "sha256": "b726eaf9b015ff672d0588606877c9fc28090b770ae3b0a3094a0bb106603e8c",
+      "match": true
+    },
+    "lookback_verifier": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\verify_lookback_k4_evaluation_adapter_v1.py",
+      "sha256": "991a6f76d8f480b86ba0c96e79776c4b86f93bf0f8fb835959e7ed517882cbf7",
+      "match": true
+    },
+    "ghost_runner": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_ghost_official_answer_rf_v1.py",
+      "sha256": "e2cb7bfc6466392b83c1e285230c56a1944f473a2e90c7c5711e6b5e5019572a",
+      "match": true
+    },
+    "ghost_geometry": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\ghost_geometry.py",
+      "sha256": "2d3976a0c22c122e4ea95c2b68b9122d984b1dca8b4bbd516ce476553d98b17e",
+      "match": true
+    },
+    "ghost_extractor": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_ghost_feature_extraction_v1.py",
+      "sha256": "55898518b3d0f7fc9f9bf068e09c7631532bc0785d03d200339cd1b1e3bd6a57",
+      "match": true
+    },
+    "ghost_adapter": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_ghost_k4_evaluation_adapter_v1.py",
+      "sha256": "a1eb4fd383027b0ecf34ef69a0eddddcbf9cb14d3d8bcab9f624c1c28c74bfdf",
+      "match": true
+    },
+    "ghost_verifier": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\verify_ghost_k4_evaluation_adapter_v1.py",
+      "sha256": "9f63751499c602824f1830cd6ad011be7e3e2c2be8a0454c8301d781dd78f190",
+      "match": true
+    },
+    "lumina_extractor": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\run_lumina_qa_extraction_v1.py",
+      "sha256": "b7038aefefe82de948955d25d4bd616805aa104e451413887f28ee324a03d76d",
+      "match": true
+    },
+    "lumina_adapter": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\score_lumina_qa_v1.py",
+      "sha256": "e5fcdb74d3c07290330235aa8928ac7984dcaf9b8c3b4d7bc6ce881e0a36f2b9",
+      "match": true
+    },
+    "lumina_native_aggregation": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\score_lumina_official_answer_v1.py",
+      "sha256": "891ec560d6be46e569f4e4a58679f0011959b3e58ad2c6c304dae9f4e8ad8cf5",
+      "match": true
+    },
+    "lumina_formula": {
+      "path": "prelab\\benchmark_ragtruth_qa\\src\\lumina_qa_signals.py",
+      "sha256": "15910f994e66ebc88bd5f826c9081b292fd13c4259ce35bd7214d17987983626",
+      "match": true
+    },
+    "lumina_memory_port": {
+      "path": "prelab\\round7_evidence_grounding\\src\\lumina7.py",
+      "sha256": "ea1d1e45e22a510450a4428335a5b3f3366d09459f41db40aaf83ea98278aab8",
+      "match": true
+    },
+    "lumina_author_source": {
+      "path": "prelab\\round7_evidence_grounding\\references\\lumina_official.py",
+      "sha256": "1b5ecd8c08982b40dae59f299e580219074ee83673768feb53cf15612b7d8a5f",
+      "match": true
+    },
+    "refchecker_extractor": {
+      "path": "prelab\\benchmark_ragtruth_qa\\third_party\\reference\\refchecker_1df1b25\\refchecker\\extractor\\llm_extractor.py",
+      "sha256": "33df974bbf575e914f43b690b414d2c877ed39c98551a947902663a5fde78aff",
+      "match": true
+    },
+    "refchecker_nli": {
+      "path": "prelab\\benchmark_ragtruth_qa\\third_party\\reference\\refchecker_1df1b25\\refchecker\\checker\\nli_checker.py",
+      "sha256": "7c676393d1a21d41a096b3c1aa504eebf87104c7cfc19ca128222b1013601fae",
+      "match": true
+    },
+    "refchecker_repc": {
+      "path": "prelab\\benchmark_ragtruth_qa\\third_party\\reference\\refchecker_1df1b25\\refchecker\\checker\\repc\\repc_checker.py",
+      "sha256": "563d2dfbdd2f1005516f0cebba23387469ccf76031142530b90e6c8998c69630",
+      "match": true
+    },
+    "refchecker_localizer": {
+      "path": "prelab\\benchmark_ragtruth_qa\\third_party\\reference\\refchecker_1df1b25\\refchecker\\localizer\\embed_localizer.py",
+      "sha256": "aefb1180969bae072f1c0dbc63ddbeb03e56f909732eaf34fbab774caeb96fb3",
+      "match": true
+    },
+    "refchecker_feasibility": {
+      "path": "prelab\\benchmark_ragtruth_qa\\research\\refchecker_baseline_feasibility_r32_v1\\FEASIBILITY_CHECKLIST.json",
+      "sha256": "8129f42b54536411f172d6237e22d205503da4460887fe0f8a08083b0a51da90",
+      "match": true
+    }
+  },
+  "artifact_sets": {
+    "lookback_official_span_v1": {
+      "files_checked": 6,
+      "passed": true
+    },
+    "lookback_k4_evaluation_adapter_v1": {
+      "files_checked": 4,
+      "passed": true
+    },
+    "ghost_official_answer_rf_v1": {
+      "files_checked": 4,
+      "passed": true
+    },
+    "ghost_k4_evaluation_adapter_v1": {
+      "files_checked": 2,
+      "passed": true
+    },
+    "lumina_qa_scoring_v1": {
+      "files_checked": 12,
+      "passed": true
+    },
+    "lumina_official_answer_v1": {
+      "files_checked": 7,
+      "passed": true
+    },
+    "lookback_official_preparation": {
+      "files_checked": 6,
+      "passed": true
+    },
+    "ghost_official_preparation": {
+      "files_checked": 6,
+      "passed": true
+    },
+    "ghost_adapter_preparation": {
+      "files_checked": 4,
+      "passed": true
+    }
+  },
+  "refchecker_checkout": {
+    "head": "1df1b25cee792ba2b171302e31ca4f768bd67703",
+    "tree": "9f2e810cc91abaeeceb105cf4b8027eb463580f8",
+    "clean": true
+  },
+  "material_caveats": [
+    {
+      "method": "GHOST",
+      "severity": "strict-author-training-failure",
+      "finding": "The final published 750-tree RF parameters are used, but the paper's 50-configuration five-fold search was not rerun and seed 42 is local. Call it a final-structure/parameter transfer, not unchanged author training or official reproduction."
+    },
+    {
+      "method": "Lookback Lens",
+      "severity": "transfer-limit",
+      "finding": "The classifier recipe is preserved, but attention extraction is local NF4 teacher-forced replay rather than an end-to-end author trace reproduction."
+    },
+    {
+      "method": "LUMINA",
+      "severity": "transfer-limit",
+      "finding": "The official formula is preserved exactly; local evidence replacement, prompt convention, NF4 replay, and 4-BPE/answer-max aggregation are disclosed task adaptations."
+    },
+    {
+      "method": "ReDeEP/MVA/RefChecker",
+      "severity": "not-comparable-yet",
+      "finding": "No complete formal common-eval scores exist. Historical local ReDeEP variants and RefChecker-backbone ablations must remain excluded from the formal baseline ranking."
+    }
+  ],
+  "documentation_finding": {
+    "severity": "corrected",
+    "file": "CURRENT_STATUS.md",
+    "finding": "The prior blanket phrase that all baselines preserve author training overstated GHOST. It was corrected to the accurate final-structure/parameter-transfer terminology."
+  },
+  "official_test_opened": false
+}

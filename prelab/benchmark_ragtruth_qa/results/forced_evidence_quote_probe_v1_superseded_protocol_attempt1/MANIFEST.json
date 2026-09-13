@@ -1,0 +1,19 @@
+{
+  "status": "CPU_inputs_ready_GPU_and_scoring_blocked",
+  "sole_GPU_input": "label_free_inputs.jsonl",
+  "files_sha256": {
+    "label_free_inputs.jsonl": "ae6bf145a0e48ff310cdde5f54457eec7e8986c9b012d52cc463bb9e357e2777",
+    "RESOURCE_ESTIMATE.json": "c15ddefca6fd465910f827fccc3484cb9c1c92e174e2a351f738d4d0aa996db4",
+    "PREPARATION.json": "3221e73b10d0da3730ac928ecb2399f4338b9ebbe23e75857758c7f3dae7bb01"
+  },
+  "counts": {
+    "groups": 256,
+    "answers": 256,
+    "claims": 3776
+  },
+  "calibration_read": false,
+  "official_test_read": false,
+  "model_weights_loaded": false,
+  "GPU_used": false,
+  "scoring_run": false
+}

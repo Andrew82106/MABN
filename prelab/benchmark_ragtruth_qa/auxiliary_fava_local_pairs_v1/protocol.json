@@ -1,0 +1,40 @@
+{
+  "version": "fava-local-silver-repair-candidates-v1",
+  "fixed_count": 10040,
+  "original_answers": 5275,
+  "material_groups": 5238,
+  "selection": "Exactly preceding10040 top-level entity/relation nodes, one mark+one delete, no descendant type, unequal nonempty sides each1..3 whitespace words. No selection by model score, QA outcome or semantic judgment.",
+  "construction": "Use original erroneous answer y and markup-coordinate [s,e); produce only y[:s]+repair+y[e:]. Other marked or unmarked errors stay verbatim. Check prefix/suffix and exact reverse. Never use the whole edited projection.",
+  "model_inputs": "Two separate rows per pair. Each model_inputs has ONLY retrieved_passages (unchanged original numbered reference text), question empty, response ONE version. No target, other version, markup, completion, original checking instructions, gold answer or generator metadata in model_inputs.",
+  "targets": "Independent Python Unicode-codepoint half-open char ranges in each response. Original author-marked error and author-suggested preferred repair are silver targets, not certified truth. Outside both local ranges unknown; no whole-answer labels or full repaired token labels.",
+  "provenance": "Original source revision/raw_index/response_id/source_id/group_id/prompt+completion SHA; typed node preorder ordinal and raw completion markup bounds+SHA. No first-str.find lookup.",
+  "eligibility": "Retain every10040 pair. Structural unusable flags: all evidence bodies empty/whitespace, all evidence bodies without alnum, either target without alnum, empty answer. Partial empty reference sections are warnings only when other evidence exists. Unicode str.isalnum used for pre-tokenization structural checks, not a tokenizer eligibility guarantee.",
+  "isolation": "Inherit frozen auxiliary_fava_v2 exact nonempty SHA/20-word and material-component quarantine. Bind complete/manifest/source-isolation report and per-row group membership. No renewed QA material scan and no QA gold/cal/test reads; inherited limitations remain.",
+  "weights_suggestion": "Retain original group IDs. Equal participating material groups, then original answers within group, then pairs within original answer: 1/(G*A_g*P_a). Both variants are one pair unit. This is a candidate base-weight suggestion, not final loss/class calibration. If structural pairs later excluded, recompute participating fit-only denominators explicitly.",
+  "training_comparison_plan": "Same local pair data for local silver BCE versus local silver BCE+relative ranking; no whole corrected-answer negative. Fix optimizer/budget/material split before future training. This preparation trains neither.",
+  "operations": {
+    "CPU_only": true,
+    "tokenize": false,
+    "training": false,
+    "GPU": false,
+    "QA_gold_cal_test": false,
+    "old_data_modified": false
+  },
+  "sources_sha256": {
+    "auxiliary_fava_local_pairs_v1\\prepare_local_pairs.py": "2763fea73e72032343369ac785669ebc197f21fd65d82be38797ed77286f51c7",
+    "additional_data\\fava_training\\training.json": "5f6422b13b48b3f6fdff7bab4698b3702c90154c10cad519047f58600e6536a7",
+    "auxiliary_fava_v2\\candidate_fit.jsonl": "66f02fd14fbd0fe98ad93133c81d7eb7a84ce1f0b86f33ee3be911daa016b7c1",
+    "additional_data\\fava_training\\inspect_training.py": "7b78493f4db7ab59855388e053a4ef7d9924687d7abda94f1a706bfa95929643",
+    "research\\fact_pair_data_feasibility_v1\\audit_fava_pairs.py": "4cd41abf8f569764ecc563d041fded21382374b93a96661aedc53de1c2c68f95",
+    "auxiliary_fava_v2\\complete.json": "cc0c77a54610cc0482180606df92ec72de1158cbece3ff4526bc21a751f280e6",
+    "auxiliary_fava_v2\\manifest.json": "ae2df270257af5a17154dc62d01e27f42e92985e05afefc5ff50063e6e4ed2c9",
+    "auxiliary_fava_v2\\DATA_PROTOCOL.json": "8d988e3025906bbca4b290328f3d3540319b2b15c7898ffa17a9cc378e1a2c8d",
+    "auxiliary_fava_v2\\SOURCE_ISOLATION_REPORT.json": "fa303c36b7249a82157dd23933bcb99ff64e480c131ee2be29c0eded4d7e343a",
+    "auxiliary_fava_v2\\candidate_material_group_index.jsonl": "b3e64b99c21606e70546a365b817bd8913a27c224564c980732200c9a2cb115a",
+    "auxiliary_fava_v2\\fixed_candidate_index.jsonl": "682318a623c0b3314c052897e2c4201744bef856374526a7f2b2f5d77ecf5d28",
+    "research\\fava_local_relative_repair_v1\\PROTOCOL.json": "00ff1977b4c5ba35d684769b715fa62f1a4673ce08f67e62be0fbe3135fd32fa",
+    "research\\fava_local_relative_repair_v1\\COUNTS.json": "08a6c058ea582a81b78b628eb72980c30a15702c5d657624a94dd970ac7a9345",
+    "research\\fava_local_relative_repair_v1\\ROW_COUNT_INDEX.jsonl": "12a728a0b0b868dcc877853406a84bae1f8db70060eee9fd7b24a089cad1d1d4",
+    "research\\fava_local_relative_repair_v1\\complete.json": "4a0a60eec011b2c1ed0a6b3cb7ec14f968653ac4f741912e52eaa98ad61613da"
+  }
+}

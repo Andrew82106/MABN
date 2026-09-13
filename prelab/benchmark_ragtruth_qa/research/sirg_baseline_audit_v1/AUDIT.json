@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "sirg_baseline_audit_v1",
+  "audit_date": "2026-09-13",
+  "paper": {
+    "title": "Detecting Hallucinations in Retrieval-Augmented Generation via Semantic-level Internal Reasoning Graph",
+    "venue": "Findings of ACL 2026",
+    "anthology_id": "2026.findings-acl.1385",
+    "doi": "10.18653/v1/2026.findings-acl.1385",
+    "acl_url": "https://aclanthology.org/2026.findings-acl.1385/",
+    "arxiv_url": "https://arxiv.org/abs/2601.03052",
+    "local_pdf_sha256": "d78247635643e79d67a849367cee5fabea19dbad0a0bf5a672f4c06ffdbd4efa"
+  },
+  "official_implementation": {
+    "repository": "https://github.com/hk-hp/SIRG",
+    "branch": "main",
+    "commit": "0e5e310891f16d81b8f91c874125bdcc8000c259",
+    "tags": [],
+    "releases": [],
+    "license_declared_at_repository_root": false,
+    "anonymous_repository_url": "https://anonymous.4open.science/r/SIRG-1022",
+    "anonymous_repository_status": "expired",
+    "author_artifact_link_status": "NJUBox external link absent",
+    "other_author_mirror_found": false,
+    "source_hash_manifest": "official_source_hashes.json"
+  },
+  "verdict": {
+    "formal_baseline_relevance": "high",
+    "exact_paper_number_reproduction": "blocked",
+    "official_code_structure_transfer": "conditionally_feasible",
+    "current_formal_score": null,
+    "score_status": "N/A_not_run",
+    "gpu_job_launched_during_audit": false,
+    "required_name": "SIRG official-code-structure transfer, Llama-2-7B teacher-forced common replay"
+  },
+  "method_identity": {
+    "target": "RAG faithfulness hallucination relative to supplied context",
+    "native_localization_unit": "semantic response fragment",
+    "trace_model": "full-BF16 Llama-2-7B-chat for the common replay migration",
+    "attribution": "LXT 2.0 AttenLRP teacher-forced target-token relevance",
+    "max_answer_steps": 500,
+    "fragmentation": "newline then spaCy sentence splitting; minimum 5 characters",
+    "substantive_extraction": "frozen official-code union of noun_spacy, entity_spacy, verb_stan, noun_stan and negations",
+    "graph_target_pool": "mean absolute relevance over mapped substantive target tokens, with all-target-token fallback",
+    "graph_source_pool": "maximum relevance over source-fragment token positions",
+    "top_k": 15,
+    "linearization": "Context i plus source fragment plus contribution score rounded to two decimals; earlier answer fragments prefixed Previous Generate:",
+    "discriminator": "AlignScore-base RoBERTa-base pooled output, dropout 0.1, linear binary head",
+    "risk_class": 1,
+    "class_weights_safe_risk": [0.1, 0.9],
+    "training": {
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "max_length": 512,
+      "truncation": "only_first",
+      "seed": 2022,
+      "optimizer": "AdamW",
+      "learning_rate": 0.00001,
+      "adam_epsilon": 0.000001,
+      "weight_decay": 0.1,
+      "warmup_fraction": 0.06,
+      "epochs": 100,
+      "precision": "fp32",
+      "mlm": false,
+      "checkpoint_selection": "maximum validation fragment F1 at native p(risk)>0.5, once per epoch"
+    },
+    "native_fragment_score": "softmax probability of binary class 1",
+    "native_fragment_threshold": ">0.5",
+    "native_answer_rule": "hallucinated-fragment proportion greater than alpha",
+    "native_answer_positive_label_in_code": "correct_or_non_hallucinated"
+  },
+  "paper_reported_results_percent": {
+    "ragtruth_llama_2_7b": {
+      "precision": 73.64,
+      "recall": 79.83,
+      "f1": 76.61
+    },
+    "ragtruth_llama_2_13b": {
+      "precision": 78.48,
+      "recall": 85.51,
+      "f1": 81.84
+    },
+    "dolly_qwen_2_5_3b": {
+      "precision": 72.1,
+      "recall": 95.49,
+      "f1": 82.17
+    },
+    "dolly_qwen_2_5_7b_table": {
+      "precision": 84.21,
+      "recall": 96.0,
+      "f1": 89.71
+    },
+    "top15_ablation_ragtruth_llama_2_13b_f1": 87.21
+  },
+  "paper_code_conflicts": [
+    "Paper says Adam and 100 iterations; code uses AdamW and 100 epochs.",
+    "Paper describes substantive source-token pooling; code takes maximum over every token in each source sentence.",
+    "Code writes noun_stan into the noun_spacy field, dropping spaCy noun chunks from the used union.",
+    "Main RAGTruth Llama-13B table reports F1 81.84 while the Top-15 ablation table reports 87.21 and code defaults to Top-15.",
+    "Dolly Qwen2.5-7B table reports F1 89.71 while prose reports 89.17.",
+    "graph_test.py enumerates answer-ratio alpha values but does not freeze one final alpha.",
+    "README and entry scripts disagree on output paths, model branch defaults, filenames and checkpoint identity."
+  ],
+  "missing_artifacts": [
+    "SIRG-finetuned AlignScore checkpoint",
+    "original training and evaluation data used by the authors",
+    "LRP dumps",
+    "semantic graph dumps",
+    "prediction outputs",
+    "complete dependency lock",
+    "exact Hugging Face revisions"
+  ],
+  "benchmark_interface": {
+    "fit_answers": 3680,
+    "fit_material_groups": 615,
+    "cal_answers": 159,
+    "cal_material_groups": 154,
+    "window_definition": "4 original BPE tokens, stride 1, project eligibility geometry",
+    "fit_internal_split": "deterministic label-blind 80/20 split by material-group SHA256 rank",
+    "fragment_training_label": "1 iff fragment character span overlaps any positive project 4-BPE window; otherwise 0",
+    "fragment_to_window": "maximum frozen SIRG fragment risk among fragments whose character span overlaps the window; 0.0 if none",
+    "window_to_answer": "maximum eligible window risk",
+    "calibration": "window and answer thresholds selected independently on cal by F1, then precision, then higher threshold",
+    "metrics": [
+      "risk-positive F1",
+      "AUROC",
+      "average precision"
+    ],
+    "learned_adapter_allowed": false,
+    "test_status": "sealed"
+  },
+  "common_replay_limitation": {
+    "reason": "Closed generator rows do not expose generation-time internal states.",
+    "main_protocol": "Teacher-force every fixed answer through the same full-BF16 Llama-2-7B-chat trace model.",
+    "claim_allowed": "common-replay official-code-structure transfer",
+    "claim_forbidden": "recovered original GPT-3.5, GPT-4, Mistral or Llama-70B generation-time reasoning",
+    "native_llama_2_7b_subset_role": "secondary diagnostic only"
+  },
+  "resource_estimate": {
+    "answers": 3839,
+    "estimated_relevance_cells": 486125729,
+    "raw_float32_gib": 1.81,
+    "estimated_json_gib_lower_bound": 4.5,
+    "answers_over_500_answer_tokens": 18,
+    "estimated_unprocessed_tail_tokens": 203,
+    "paper_a100_seconds_per_sample": {
+      "generation": 12.12,
+      "lrp": 25.49,
+      "entity": 0.59,
+      "graph": 0.05,
+      "discrimination": 1.51,
+      "total": 39.76
+    },
+    "a100_hours_existing_answers_lrp": 27.18,
+    "a100_hours_existing_answers_pipeline_without_unknown_training": 29.47,
+    "a100_hours_with_generation": 42.4,
+    "recommended_engineering_budget_a100_hours": "35-50",
+    "recommended_gpu": "A100 40GB",
+    "current_rtx_3070_8gb_faithful_run_feasible": false,
+    "disk_reserve_gib": "25-40",
+    "alignscore_base_checkpoint_bytes": 1966965771
+  },
+  "v4_identity_boundary": {
+    "is_sirg": false,
+    "status": "self-developed source-attribution window classifier",
+    "run_source_sha256": "2dcbd70831ef34f5dea316653b610175f842a5053048ebc832f54808fcc73db6",
+    "score_source_sha256": "c3d39d1a3c8e712efde81cda2a4ac36431121671a9bb74ace767a2c795fe4514",
+    "key_differences": [
+      "NF4 replay instead of full-BF16 LXT AttenLRP",
+      "attention times value-head norm instead of target-token backward relevance",
+      "4-BPE logistic regression instead of semantic graph plus fine-tuned AlignScore",
+      "source/previous/other, NLI and NLL features instead of Top-15 graph linearization"
+    ],
+    "forbidden_names": [
+      "SIRG baseline",
+      "SIRG implementation",
+      "SIRG score"
+    ]
+  },
+  "execution_gates": [
+    "source_environment_and_asset_freeze",
+    "cpu_data_interface_and_group_isolation",
+    "eight-sample_full_bf16_lrp_pilot",
+    "full_lrp_graph_and_linearization",
+    "unchanged_alignscore_training_and_checkpoint_selection",
+    "gold-blind_native_score_freeze",
+    "deterministic_4bpe_mapping_and_independent_scoring"
+  ]
+}

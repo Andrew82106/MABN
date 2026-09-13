@@ -1,0 +1,54 @@
+{
+  "version": "microclaim-full-evidence-crossencoder-v1",
+  "scope": "Only original RAGTruth QA fit634+calibration159 development answers; official test absent.",
+  "unit": "One deterministic atomic microclaim; gold risk=1 iff any lexical original-answer BPE owned by the microclaim has a released human risk label.",
+  "input": {
+    "premise": "Question plus all three complete released retrieved passages, in released passage order.",
+    "hypothesis": "The deterministic contextualized atomic microclaim.",
+    "tokenizer": "tasksource/ModernBERT-base-nli tokenizer; paired encoding; no truncation.",
+    "max_length_gate": 768,
+    "reason": "Full evidence removes BM25 miss as a false-positive cause. Question disambiguates what the evidence must answer."
+  },
+  "trained_candidate": {
+    "name": "fp_aware_full_evidence",
+    "initialization": "Exact frozen tasksource/ModernBERT-base-nli 3-way checkpoint.",
+    "architecture": "Unchanged 3-way NLI cross-encoder. Risk logit=logsumexp(neutral,contradiction)-entailment.",
+    "parameters": "All encoder and NLI-head parameters fine-tuned; no added head.",
+    "loss": "Binary BCE on microclaim gold. Existing group/answer/claim weights are retained; within each answer, clean claims are redistributed by 1+2*(frozen atomic-NLI risk)^2 and renormalized to preserve that answer's clean mass.",
+    "fp_design": "The bounded 1..3 redistribution concentrates clean supervision on NLI-hard false-positive-like claims without reducing positive loss mass.",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 1e-05,
+      "weight_decay": 0.01,
+      "clip_norm": 1.0,
+      "epochs": 1,
+      "scheduler": null
+    },
+    "precision": "FP32 parameters/gradients/optimizer; BF16 CUDA forward; non-reentrant gradient checkpointing; TF32 off."
+  },
+  "minimal_control": {
+    "name": "frozen_full_evidence_nli",
+    "model": "Same untouched NLI checkpoint and exact same paired inputs.",
+    "score": "1-softmax(entailment); no fit, feature learner, or parameter search."
+  },
+  "crossfit": {
+    "folds": 5,
+    "split": "GroupKFold over locked source-connected group_id; zero shared group, source_id, response_id, answer hash, or passage-body hash across train/held.",
+    "fit_prediction": "Every fit claim predicted only by the fold model that excluded its source-connected group.",
+    "calibration_prediction": "A sixth model trained once on all fit groups predicts calibration; no calibration label is used during GPU training/inference."
+  },
+  "batching": {
+    "train_padded_token_budget": 1536,
+    "train_max_examples": 8,
+    "accumulated_microbatches": 4,
+    "eval_padded_token_budget": 4096,
+    "eval_max_examples": 16,
+    "length_bucketing": "Deterministic sort-pack, then seeded batch and within-batch permutations."
+  },
+  "evaluation": "Unchanged 4-original-BPE stride-1 windows. Microclaim score is copied to owned lexical BPEs; a window and answer use max overlap. Thresholds chosen only on fit OOF and frozen for calibration.",
+  "selection": "Exactly one trained candidate and one frozen control; no hyperparameter grid or calibration selection.",
+  "baselines": "Read-only. No baseline implementation, score, threshold, or artifact is changed.",
+  "stage_gate": "prepare -> check -> cpu-tiny -> gpu-smoke -> five train-fold calls + one train-full call + frozen control -> finalize -> verify.",
+  "seed": 20261023,
+  "official_test_opened": false
+}

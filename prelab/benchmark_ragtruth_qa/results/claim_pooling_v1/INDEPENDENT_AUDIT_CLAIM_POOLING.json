@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "blockers": [],
+  "no_new_fit_or_GPU": true,
+  "official_test_opened": false,
+  "geometry": {
+    "raw_tokens": 213159,
+    "lexical_tokens": 174518,
+    "automatic_claims": 8852,
+    "assigned_claim_groups": 8845,
+    "claims_without_lexical_tokens": 7,
+    "answers": 793,
+    "windows": 210364,
+    "cross_claim_tokens": 0,
+    "greatest_overlap_ties": 0,
+    "text_only_independent_reconstruction": true,
+    "label_values_not_used_in_grouping": true,
+    "each_lexical_token_one_group_and_no_cross_answer_group": true
+  },
+  "all20_token_arrays_exact": 4263180,
+  "all20_window_arrays_exact": 4207280,
+  "all20_answer_arrays_exact": 15860,
+  "each_claim_and_answer_raw_max_unchanged": true,
+  "answer_raw_max_checks": 15860,
+  "calibration_window_thresholds_exact": 20,
+  "original_answer_thresholds_unchanged": 20,
+  "identity_full_metrics_exact": 4,
+  "selection_keys_exact": 20,
+  "alpha_choices_exact": 4,
+  "metric_blocks": 80,
+  "metrics_max_abs": 0.0,
+  "results": {
+    "token_tcn": {
+      "alpha": 0.75,
+      "window_F1": 0.6190879810137312,
+      "answer_F1": 0.8270042194092827
+    },
+    "full_lb_pca64_tcn": {
+      "alpha": 0.75,
+      "window_F1": 0.6296955821249894,
+      "answer_F1": 0.8542713567839196
+    },
+    "full_lb_harp64_tcn": {
+      "alpha": 0.75,
+      "window_F1": 0.6389953518714834,
+      "answer_F1": 0.8542713567839196
+    },
+    "minicheck_hidden64_risk_tcn_w32": {
+      "alpha": 0.5,
+      "window_F1": 0.6502933124755573,
+      "answer_F1": 0.8602150537634409
+    }
+  },
+  "interpretation": "Within existing automatic claim propagation is offline and may broaden a local alert to other facts in a claim; fixed raw4BPE gold stays unchanged. Entire-answer metrics are invariant by construction, not an additional improvement.",
+  "limits": [
+    "Repeated calibration selection; not independent test improvement.",
+    "Original code reads gold spans only to write descriptive extent diagnostics; those values do not feed assignment, token scores, filtering, or alpha candidates.",
+    "Upstream model training not reaudited here; source completion and selected score hashes verified."
+  ],
+  "seconds": 7.6711417000042275,
+  "files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\claim_pooling_v1\\audit_claim_pooling.py": "90f9fd1e86acab090e3b9e341abe6d80f874dc6f2e347d11fa8f0626f05345bd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\run_claim_pooling.py": "82b328de5829c58c98b30f8a592834ecbf1c2ff961fdc2e7c8f5db49ce45cc99",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\semantic_baseline\\cuda_variant\\plans.jsonl": "0d1cb843bab1f43f6bd2719616943774a38e022f934b8e7d3f2bf066ef03afcd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\claim_pooling_v1\\protocol.json": "6660b945e01cce01fe7650e8bc0e8f05ae0abb484d2aa1f6a552786d56e5cb1a",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\claim_pooling_v1\\geometry.json": "dbcd9332a5dfafa08464152ebcaa734c423e536205e4133a758cf021fc2827a9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\claim_pooling_v1\\complete.json": "1aba5582f29f4d5f003e400784ed867288799942f0b413bd267f46a4c58179c5",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\results\\claim_pooling_v1\\summary.json": "b8ade3d8dfaba9c04c436c1603eb427751134e318f0462717dd46296af0e7afb"
+  }
+}

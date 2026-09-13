@@ -1,0 +1,12 @@
+{
+  "source_split_disjoint": true,
+  "no_span_annotations_in_training_rows": true,
+  "feature_files_valid": 394,
+  "annotation_spans_valid": 174,
+  "causal_prefix_relative_error": 0.002203109208494425,
+  "nll_alignment_absolute_error": 8.892267942428589e-05,
+  "python": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\.venv\\Scripts\\python.exe",
+  "torch": "2.5.1+cu121",
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "status": "passed"
+}

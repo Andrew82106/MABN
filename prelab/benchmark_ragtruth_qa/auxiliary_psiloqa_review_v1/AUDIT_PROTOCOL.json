@@ -1,0 +1,9 @@
+{
+  "scope": "Only pinned PsiloQA train parquet; inspect every lang=en row. Language code is metadata, not independently verified text language.",
+  "alignment": "Strict no-nested HAL scanner; Unicode Python character end-exclusive offsets. Original llm_answer and labels unchanged. Strict pass requires markup projection exactly original answer, valid ordered nonoverlapping labels, exact ordered span pairs. Strip comparison is diagnostic only, no transformed training examples.",
+  "inventory": "All rows retained. Empty labels are not called clean when HAL positive or alignment fails. Exact article URL (decoded path, underscores→spaces, host lowercase) and exact nonempty passage hash connected inside English train. No other split inspected.",
+  "numeric_diagnostics": "Unicode isdigit any; pure ASCII digits after strip; numeric notation characters [0-9,. whitespace / % : + dash]. These are string statistics, not dates, quantities or semantic error taxonomy.",
+  "overlap": "Reused frozen FAVA source-only material identities and original source_info evidence only. Exact nonempty raw part SHA or 20 consecutive Unicode word runs after casefold. Return unique material-group matches, preserve source witness. Propagate protected matches over English article/material groups for reported quarantine only.",
+  "prohibited": "No validation/test files or answers, no models/GPU/tokenizer/training, no edits to source text/labels or existing data. No external judge. No claim of human gold, split independence or full paraphrase/entity isolation.",
+  "preliminary_read": "A preliminary full English alignment count preceded this frozen audit; no model or selection used it."
+}

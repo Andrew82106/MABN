@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "selected": "conflict_only__hgb",
+  "candidate_count": 4,
+  "feature_width": 523,
+  "pair_slot_width": 72,
+  "pair_alignment_protocol": {
+    "slots": [
+      "individual_top_entailment",
+      "individual_top_contradiction",
+      "individual_top_neutral",
+      "individual_top_bm25",
+      "joint_top_entailment",
+      "joint_top_contradiction"
+    ],
+    "slot_width": 72,
+    "rule": "One slot is copied from one actual evidence/hypothesis pair. E/N/C, BM25, subject/entity/predicate, negation, comparison, quantity, time, condition, and source features never come from different sentences inside a slot.",
+    "selection": "Deterministic label-free argmax with stable pair-order ties: top E/C/N/BM25 individual pair and top E/C joint pair.",
+    "same_pair_interactions": [
+      "entailment_x_claim_token_coverage",
+      "entailment_x_subject_token_coverage",
+      "entailment_x_entity_token_coverage",
+      "entailment_x_predicate_token_match",
+      "entailment_x_negation_match",
+      "entailment_x_comparator_match",
+      "entailment_x_quantity_any_exact",
+      "entailment_x_quantity_all_exact",
+      "entailment_x_temporal_match",
+      "entailment_x_condition_match",
+      "contradiction_x_negation_mismatch",
+      "contradiction_x_comparator_reversal",
+      "contradiction_x_comparator_missing",
+      "contradiction_x_quantity_same_unit_different_value",
+      "contradiction_x_quantity_missing",
+      "contradiction_x_temporal_reversal",
+      "contradiction_x_temporal_missing",
+      "contradiction_x_condition_mismatch",
+      "entailment_x_cited_source",
+      "contradiction_x_cited_source",
+      "lack_x_missing_claim_coverage",
+      "neutral_x_missing_claim_coverage"
+    ]
+  },
+  "fit_group_OOF_partition_exact": true,
+  "fit_metrics_independently_recomputed": {
+    "windows": {
+      "n": 168123,
+      "positive": 21477,
+      "tp": 18232,
+      "fp": 4953,
+      "fn": 3245,
+      "tn": 141693,
+      "precision": 0.7863704981669183,
+      "recall": 0.8489081342831867,
+      "f1": 0.8164435090233308,
+      "auroc": 0.9721384758662399,
+      "average_precision": 0.8696665690310367
+    },
+    "answers": {
+      "n": 634,
+      "positive": 328,
+      "tp": 286,
+      "fp": 20,
+      "fn": 42,
+      "tn": 286,
+      "precision": 0.934640522875817,
+      "recall": 0.8719512195121951,
+      "f1": 0.9022082018927445,
+      "auroc": 0.9583333333333335,
+      "average_precision": 0.9598941743639091
+    }
+  },
+  "strict_calibration_metrics_independently_recomputed": {
+    "windows": {
+      "n": 42241,
+      "positive": 5984,
+      "tp": 4019,
+      "fp": 1689,
+      "fn": 1965,
+      "tn": 34568,
+      "precision": 0.7040995094604064,
+      "recall": 0.6716243315508021,
+      "f1": 0.6874786178583647,
+      "auroc": 0.9134348333104476,
+      "average_precision": 0.7216676478609529
+    },
+    "answers": {
+      "n": 159,
+      "positive": 100,
+      "tp": 73,
+      "fp": 8,
+      "fn": 27,
+      "tn": 51,
+      "precision": 0.9012345679012346,
+      "recall": 0.73,
+      "f1": 0.8066298342541437,
+      "auroc": 0.906271186440678,
+      "average_precision": 0.9469445003587047
+    }
+  },
+  "strict_calibration_additions_independently_recomputed": {
+    "added": 75,
+    "added_tp": 35,
+    "added_fp": 40,
+    "incremental_precision": 0.4666666666666667,
+    "base_tp_retained": 3984,
+    "base_tp_total": 3984,
+    "base_fp_retained": 1649,
+    "base_fp_total": 1649,
+    "base_fp_removed": 0
+  },
+  "calibration_used_for_selection": false,
+  "calibration_F1Opt_computed": false,
+  "GPU_used": false,
+  "formal_baselines_modified": false,
+  "official_test_opened": false,
+  "audited_files_sha256": {
+    "results\\aligned_evidence_head_v1\\protocol.json": "bce5a79ca9705fdb7a0c9871ac716d349f95466760f2cad2968287de0bd0a04a",
+    "results\\aligned_evidence_head_v1\\initialized.json": "86ec4f8dc5a8b2808bf72484b141ffd5bf9e1f315fcd4f8cb3b2e5040c9e7ee1",
+    "results\\aligned_evidence_head_v1\\fit_complete.json": "f655dac4704687faf12ced85f78ebe675e9c84e779977a7f3361636607b0c21b",
+    "results\\aligned_evidence_head_v1\\fit_scores.npz": "5b4c346c4609bd0eb639df5379cf7addcfdf55f4c48e6484c0e58fb3f81de664",
+    "results\\aligned_evidence_head_v1\\model.pkl": "650c1458af9cf9269a1173abf45f3648196e7076ad36b481a5184540bc86412c",
+    "results\\aligned_evidence_head_v1\\scores.npz": "14f4182092e70fa24f1b0c7f47f13f5850f901a0e8244ffc0f9caf4fa5e5abfc",
+    "results\\aligned_evidence_head_v1\\summary.json": "ce172002faff6f72b658b7591a7ab585e993cff27ca35733323b3d0ac77da007",
+    "results\\aligned_evidence_head_v1\\REPORT.md": "c7ecc82a24a8978ff1c6f5e9a574a60bbf147e8c4bb2e950d66f29bef6c3a67f",
+    "results\\aligned_evidence_head_v1\\complete.json": "d919f2ca34995e127b00d01f3b892c45ce6f9b16848a6bab3cdc0dc1dd59cd42"
+  }
+}

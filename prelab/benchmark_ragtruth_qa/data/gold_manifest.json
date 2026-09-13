@@ -1,0 +1,140 @@
+{
+  "complete": true,
+  "version": "ragtruth-qa-gold-v1",
+  "completed_at_utc": "2026-09-11T15:08:07.330815+00:00",
+  "signature": {
+    "version": "ragtruth-qa-gold-v1",
+    "files_sha256": {
+      "annotation_protocol": "a2416a33f724ef4a202b32ece4f8cac157d284672a065f584de8ce3deda2dc66",
+      "build_gold_code": "55e217a2eddf9b443d5dab2547292ac072d451f1dedac148764732be49bf51d7",
+      "development_manifest": "0d81dcd85f05db0bce9e7058f5cbb39265e905c40db98cb906ac2dfcc114df45",
+      "feature_preparation_manifest": "723a6be3e3f70ecc1b51bb4140cf31866214f41c6d495636848935c51ac76e1f",
+      "feature_preparation_plans": "d17bbca7e45de142bdce7143b180e10843ce91cfd6df939e40d77b47f6c5cdcd",
+      "fit_source": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+      "calibration_source": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7"
+    },
+    "window_k": 4,
+    "window_stride": 1,
+    "label_types_filtered": false,
+    "refusal_classifier_used": false,
+    "tokenizer_rerun": false
+  },
+  "signature_sha256": "3cf31bf8c1a57faf935f8ad5abdeef0ca247e74118a1a294647944779f2fc3e1",
+  "source_paths": {
+    "annotation_protocol": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\ANNOTATION_PROTOCOL.md",
+    "build_gold_code": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\src\\build_gold.py",
+    "development_manifest": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\development_manifest.json",
+    "feature_preparation_manifest": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\manifest.json",
+    "feature_preparation_plans": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\feature_preparation\\plans.jsonl",
+    "fit_source": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\fit.jsonl",
+    "calibration_source": "D:\\Projects\\Multi_Agent_Graph_Analysis\\prelab\\benchmark_ragtruth_qa\\data\\calibration.jsonl"
+  },
+  "counts": {
+    "fit": {
+      "answers": 634,
+      "positive_answers": 328,
+      "negative_answers": 306,
+      "raw_tokens": 170361,
+      "lexical_tokens": 139518,
+      "risk_tokens": 17159,
+      "official_spans": 646,
+      "candidate_windows": 168459,
+      "eligible_windows": 168123,
+      "positive_windows": 21477,
+      "negative_windows": 146646,
+      "excluded_no_lexical_windows": 336,
+      "groups": 615
+    },
+    "calibration": {
+      "answers": 159,
+      "positive_answers": 100,
+      "negative_answers": 59,
+      "raw_tokens": 42798,
+      "lexical_tokens": 35000,
+      "risk_tokens": 4692,
+      "official_spans": 200,
+      "candidate_windows": 42321,
+      "eligible_windows": 42241,
+      "positive_windows": 5984,
+      "negative_windows": 36257,
+      "excluded_no_lexical_windows": 80,
+      "groups": 154
+    }
+  },
+  "total_answers": 793,
+  "total_raw_tokens": 213159,
+  "total_official_spans": 846,
+  "edge_case_counts": {
+    "zero_length_spans": 0,
+    "spans_without_isalnum": 0,
+    "uncovered_span_nonwhitespace_characters": 0,
+    "uncovered_span_isalnum_characters": 0,
+    "risk_answers_without_risk_tokens": 0,
+    "answers_without_eligible_windows": 0
+  },
+  "official_test_opened": false,
+  "model_or_probe_state_written": false,
+  "all_quality_good_answers_eligible": true,
+  "difference_from_r16": "No automatic refusal exclusion: unlabeled quality-good refusals retain eligible negative lexical windows. Cross-dataset F1 differences are not evidence of an algorithmic gain.",
+  "outputs": [
+    {
+      "path": "data\\tokens_fit.jsonl",
+      "sha256": "48cd942d3d5a1321eb1fb99a53d8ef3c259aa9ecd6d51ec7edaead5e09bc4c5c",
+      "bytes": 8689010,
+      "rows": 634
+    },
+    {
+      "path": "data\\windows_k4_fit.jsonl",
+      "sha256": "d24e74b363879a7bef8f3eb9a76526e14054d2c45b759b4f3cfbcb236e061d73",
+      "bytes": 90974323,
+      "rows": 168123
+    },
+    {
+      "path": "data\\answers_fit.jsonl",
+      "sha256": "baf29c13077ba08cb71c1b1c2bef59010d96ca4e258d749480cd84b867472238",
+      "bytes": 1243200,
+      "rows": 634
+    },
+    {
+      "path": "data\\windows_excluded_fit.jsonl",
+      "sha256": "f00141eb5954de3c371b45cd67c56c775873742c65c96686f9995a7d99dd9c47",
+      "bytes": 183729,
+      "rows": 336
+    },
+    {
+      "path": "data\\tokens_calibration.jsonl",
+      "sha256": "7a7eebcac1581cf16f7c3be9cda55fdb8ad66bce69a8be682ce351ea85fcf3b4",
+      "bytes": 2228014,
+      "rows": 159
+    },
+    {
+      "path": "data\\windows_k4_calibration.jsonl",
+      "sha256": "dd7c17add9aed79f5b6637c87c6b918a17d9ac0ff73014318b29a6c24228b510",
+      "bytes": 23256535,
+      "rows": 42241
+    },
+    {
+      "path": "data\\answers_calibration.jsonl",
+      "sha256": "2432052cd7d7d5185d95c9b57596f11979208a08a83579b83a48751510618645",
+      "bytes": 324785,
+      "rows": 159
+    },
+    {
+      "path": "data\\windows_excluded_calibration.jsonl",
+      "sha256": "f1a902f0fb2f4d233fcdf6c5f07f83dcc980a226e8ed2ca30d484858891417ba",
+      "bytes": 44303,
+      "rows": 80
+    },
+    {
+      "path": "data\\gold_selfcheck.json",
+      "sha256": "fa1a61d27074717cd11d32606cf37d4854cbce65d7f123f75e83bb95af7ad0ca",
+      "bytes": 1947
+    },
+    {
+      "path": "data\\gold_edge_cases.json",
+      "sha256": "8bff15040a8d35d1f80bae14419520c763c047faba30e54774420b9e16207120",
+      "bytes": 674
+    }
+  ],
+  "selfcheck_passed": true
+}

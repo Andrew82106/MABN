@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "rows_by_split": {
+    "test": 80,
+    "validation": 80,
+    "external_test": 100
+  },
+  "arrays_verified": 260,
+  "original_item_end_states_checked": 580,
+  "maximum_absolute_item_end_state_difference": 0.0,
+  "causal_audit_sites": 9,
+  "causal_layers": [
+    21,
+    28
+  ],
+  "maximum_fixed_shape_future_perturbation_difference": 0.0,
+  "short_prefix_cosine_range": [
+    0.9996081590652466,
+    1.0000001192092896
+  ],
+  "total_bpe_tokens": 10690,
+  "extraction_reported_seconds": 58.56383229943458,
+  "new_detector_scores_read": false,
+  "notes": [
+    "Different-length NF4/bfloat16 forward passes can show numerical differences; same-length future perturbation audit was exactly invariant at sampled sites.",
+    "Native hidden-token arrays are replayed original generated IDs. Original item broadcast controls use item-end information."
+  ]
+}

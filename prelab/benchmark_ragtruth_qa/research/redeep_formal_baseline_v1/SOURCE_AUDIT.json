@@ -1,0 +1,62 @@
+{
+  "version": "redeep-source-audit-v1",
+  "paper_code_agreements": [
+    "Token-level ECS is cosine similarity between final-layer current-token state and the mean final-layer state of top-attended context tokens.",
+    "The selected proportion is top 10 percent.",
+    "Token-level PKS compares LogitLens vocabulary distributions before and after each FFN.",
+    "The final detector is a positive PKS term minus a positive ECS term; response-native pooling is token mean.",
+    "The published RAGTruth Llama2-7B Token settings are Khead=1, Klayer=10, alpha=1, beta=0.2."
+  ],
+  "paper_code_conflicts": [
+    {
+      "issue": "ECS region",
+      "paper": "retrieved context q:c only (paper text lines 287-293)",
+      "code": "all separately-tokenized prefix positions, including BOS/system/query/template (token_level_detect.py:235)"
+    },
+    {
+      "issue": "PKS divergence",
+      "paper": "standard JSD(P||Q), paper equation (5), vocabulary sum",
+      "code": "reverse KL from mixture to each component, vocabulary mean times 1e6 (token_level_detect.py:98-105)"
+    },
+    {
+      "issue": "ranking text versus executable return",
+      "paper": "rank correlation with hallucination on validation (Appendix J lines 1540-1547)",
+      "code": "computes Pearson but returns and sorts AUROC (token_level_reg.py:88-100, 223)"
+    }
+  ],
+  "released_code_defects_or_missing_details": [
+    {
+      "issue": "invalid dataframe slice",
+      "evidence": "token_level_reg.py:223 passes only the first half of columns to calculate_auc_pcc, which then asks for missing PKS columns and hallucination_label; current source raises KeyError"
+    },
+    {
+      "issue": "no executable hyperparameter search",
+      "evidence": "token_level_reg.py sets run_all=False and hard-codes i,j,k,m at lines 225-246; the paper omits greedy search order/objective/ties"
+    },
+    {
+      "issue": "evaluation split hard-coded",
+      "evidence": "token_level_detect.py:152 and token_level_reg.py:41 only accept rows named test, so the release does not implement independent fit-to-evaluation transfer"
+    },
+    {
+      "issue": "normalization refit on evaluated dataframe",
+      "evidence": "token_level_reg.py:137-143 and 167-171 fit MinMax bounds in place rather than carrying training bounds to a held-out split"
+    },
+    {
+      "issue": "token label offset",
+      "evidence": "detector loops predictor positions prefix_len-1 through full_len-2 (line 224) but assigns its training label to seq_i rather than generated target i+1 (lines 268-273)"
+    },
+    {
+      "issue": "double BOS",
+      "evidence": "chat template renders an initial BOS and token_level_detect.py then tokenizes that rendered string with add_special_tokens default true; all 3839 prepared inputs begin [1,1]"
+    }
+  ],
+  "native_output_granularity": {
+    "paper": "H_t(t) is explicitly token-level in section 4.1/equation (7); H_t(r) is its token mean",
+    "released_detector": "one ECS vector and one PKS vector for every predictor position aligned to a response token",
+    "consequence": "ReDeEP has genuine local output and must not be described as an answer-only score broadcast to windows"
+  },
+  "cache_reuse": {
+    "existing_project_caches": "not reusable: they omit exact candidate-head top-prefix identities, all per-layer before/after-FFN LogitLens distributions, or use quantized/post-read representations",
+    "upstream_cached_test_artifact": "retired and prohibited after the documented access incident; it is not a fit/cal feature source"
+  }
+}
