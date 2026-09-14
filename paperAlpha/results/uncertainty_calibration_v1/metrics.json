@@ -1,0 +1,2008 @@
+{
+  "model": "LearnableNoisyORGraph v1",
+  "dataset": {
+    "input": "paperAlpha\\results\\compositional_mas_v1\\episodes.jsonl",
+    "n": 2000,
+    "positive": 774,
+    "negative": 1226,
+    "label_source": "independent structural reachability rule; controlled synthetic mechanism benchmark"
+  },
+  "protocol": {
+    "split": "stratified random split; fit and temperature use train only",
+    "test_size": 0.3,
+    "seeds": [
+      20260914,
+      20260915,
+      20260916,
+      20260917,
+      20260918
+    ],
+    "bootstrap_resamples": 2000,
+    "ece": "10 equal-width probability bins",
+    "bootstrap_ci": "percentile 95% CI conditional on each held-out split"
+  },
+  "across_seed_summary": {
+    "raw": {
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "auroc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "auprc": {
+        "mean": 1.0,
+        "std": 5.551115123125783e-17,
+        "min": 0.9999999999999999,
+        "max": 1.0,
+        "n": 5
+      },
+      "brier": {
+        "mean": 0.00233288367244925,
+        "std": 0.00022851059136160093,
+        "min": 0.001967129901052922,
+        "max": 0.0025165907632133905,
+        "n": 5
+      },
+      "log_loss": {
+        "mean": 0.04307625787378254,
+        "std": 0.0012738878395420683,
+        "min": 0.04099364575647291,
+        "max": 0.04410895444655458,
+        "n": 5
+      },
+      "ece_10": {
+        "mean": 0.04183290107870472,
+        "std": 0.0011411871211341575,
+        "min": 0.039963822627825704,
+        "max": 0.04275735337568026,
+        "n": 5
+      },
+      "mce_10": {
+        "mean": 0.2512422330626868,
+        "std": 0.07591224540150092,
+        "min": 0.1155538247686985,
+        "max": 0.28951677739472004,
+        "n": 5
+      }
+    },
+    "temperature_scaled": {
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "auroc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "auprc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 5
+      },
+      "brier": {
+        "mean": 3.2712647782514174e-18,
+        "std": 2.3982740681795807e-18,
+        "min": 2.078080859223467e-27,
+        "max": 5.7288951107276094e-18,
+        "n": 5
+      },
+      "log_loss": {
+        "mean": 1.0000000494736472e-07,
+        "std": 1.4797056634707887e-23,
+        "min": 1.0000000494736474e-07,
+        "max": 1.0000000494736474e-07,
+        "n": 5
+      },
+      "ece_10": {
+        "mean": 7.844186931452196e-11,
+        "std": 5.4620273443692375e-11,
+        "min": 2.186088061225886e-15,
+        "max": 1.3055738048869228e-10,
+        "n": 5
+      },
+      "mce_10": {
+        "mean": 1.2789435214324234e-10,
+        "std": 8.90547936581941e-11,
+        "min": 3.564274012868293e-15,
+        "max": 2.1286529427504176e-10,
+        "n": 5
+      }
+    }
+  },
+  "mas_baseline_summary": {
+    "per_agent_max": {
+      "f1": {
+        "mean": 0.5576923076923077,
+        "std": 0.0
+      },
+      "auroc": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "auprc": {
+        "mean": 0.38666666666666666,
+        "std": 0.0
+      },
+      "brier": {
+        "mean": 0.25,
+        "std": 0.0
+      },
+      "ece_10": {
+        "mean": 0.11333333333333333,
+        "std": 1.5515838457795457e-17
+      }
+    },
+    "per_agent_mean": {
+      "f1": {
+        "mean": 0.5576923076923077,
+        "std": 0.0
+      },
+      "auroc": {
+        "mean": 0.5459567091454274,
+        "std": 0.014093252548330402
+      },
+      "auprc": {
+        "mean": 0.46847926321040384,
+        "std": 0.008839318289773067
+      },
+      "brier": {
+        "mean": 0.24089814814814817,
+        "std": 0.0015792271655783437
+      },
+      "ece_10": {
+        "mean": 0.11594444444444445,
+        "std": 0.0086152543795695
+      }
+    },
+    "topology_only": {
+      "f1": {
+        "mean": 0.6559496994593516,
+        "std": 0.004676456479638666
+      },
+      "auroc": {
+        "mean": 0.6692934782608696,
+        "std": 0.006834117576064839
+      },
+      "auprc": {
+        "mean": 0.4880539774876104,
+        "std": 0.005184412590491519
+      },
+      "brier": {
+        "mean": 0.4056666666666667,
+        "std": 0.008383184226639532
+      },
+      "ece_10": {
+        "mean": 0.4056666666666667,
+        "std": 0.008383184226639532
+      }
+    },
+    "edge_count": {
+      "f1": {
+        "mean": 0.5576923076923077,
+        "std": 0.0
+      },
+      "auroc": {
+        "mean": 0.5013399550224887,
+        "std": 0.02006433597328646
+      },
+      "auprc": {
+        "mean": 0.39017140522329524,
+        "std": 0.01632607253168004
+      },
+      "brier": {
+        "mean": 0.28210884353741494,
+        "std": 0.00761107150531525
+      },
+      "ece_10": {
+        "mean": 0.17257142857142857,
+        "std": 0.007752550600694374
+      }
+    },
+    "no_taint_contribution": {
+      "f1": {
+        "mean": 0.6559496994593516,
+        "std": 0.004676456479638666
+      },
+      "auroc": {
+        "mean": 0.7673081428035984,
+        "std": 0.015084770907485359
+      },
+      "auprc": {
+        "mean": 0.62174269711675,
+        "std": 0.02004706358919772
+      },
+      "brier": {
+        "mean": 0.19834722222222223,
+        "std": 0.003631285274672901
+      },
+      "ece_10": {
+        "mean": 0.12755555555555556,
+        "std": 0.003128239062096997
+      }
+    },
+    "dynamic_taint_path": {
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "auroc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "auprc": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "brier": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "ece_10": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 20260914,
+      "train": 1400,
+      "test": 600,
+      "temperature": {
+        "value": 0.054247625500863844,
+        "fit_success": true,
+        "train_nll": 1.0000000494736474e-07
+      },
+      "raw": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 0.9999999999999999,
+        "brier": 0.0023962606716266756,
+        "log_loss": 0.04363719024977144,
+        "ece_10": 0.042361869147203544,
+        "mce_10": 0.2811520688232649,
+        "threshold": 0.9442171303882637,
+        "predicted_positive": 232
+      },
+      "temperature_scaled": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 1.5521475253940368e-18,
+        "log_loss": 1.0000000494736474e-07,
+        "ece_10": 5.086250730463653e-11,
+        "mce_10": 8.292800104016826e-11,
+        "threshold": 1.0,
+        "predicted_positive": 232
+      },
+      "raw_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 0.9999999999999998,
+          "high": 1.0000000000000002,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 0.0020582129178602694,
+          "high": 0.0027875678736637645,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 0.04052058104457976,
+          "high": 0.04444532946377882,
+          "n_boot": 2000
+        }
+      },
+      "temperature_scaled_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 1.2040589460612442e-31,
+          "high": 4.656442575854744e-18,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 3.197217438645408e-17,
+          "high": 1.525866491121628e-10,
+          "n_boot": 2000
+        }
+      },
+      "baselines": {
+        "per_agent_max": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5,
+          "auprc": 0.38666666666666666,
+          "brier": 0.25,
+          "log_loss": 0.6931471805599453,
+          "ece_10": 0.11333333333333334,
+          "mce_10": 0.11333333333333334,
+          "threshold": 0.5,
+          "predicted_positive": 600
+        },
+        "per_agent_mean": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5588631465517242,
+          "auprc": 0.47099268547544404,
+          "brier": 0.24037037037037043,
+          "log_loss": 0.6775713256982964,
+          "ece_10": 0.11138888888888888,
+          "mce_10": 0.5,
+          "threshold": 0.25,
+          "predicted_positive": 600
+        },
+        "topology_only": {
+          "f1": 0.6572237960339944,
+          "precision": 0.48945147679324896,
+          "recall": 1.0,
+          "auroc": 0.6711956521739131,
+          "auprc": 0.48945147679324896,
+          "brier": 0.4033333333333333,
+          "log_loss": 6.500965305765489,
+          "ece_10": 0.4033333333333333,
+          "mce_10": 0.510548523206751,
+          "threshold": 1.0,
+          "predicted_positive": 474
+        },
+        "edge_count": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.502442138305847,
+          "auprc": 0.38826532260639535,
+          "brier": 0.285,
+          "log_loss": 0.8963712747210767,
+          "ece_10": 0.18500000000000003,
+          "mce_10": 0.5555555555555556,
+          "threshold": 0.14285714285714285,
+          "predicted_positive": 600
+        },
+        "no_taint_contribution": {
+          "f1": 0.6572237960339944,
+          "precision": 0.48945147679324896,
+          "recall": 1.0,
+          "auroc": 0.7609866941529235,
+          "auprc": 0.6066648058527843,
+          "brier": 0.2009259259259259,
+          "log_loss": 0.5585202859765297,
+          "ece_10": 0.12555555555555556,
+          "mce_10": 0.23529411764705888,
+          "threshold": 0.25,
+          "predicted_positive": 474
+        },
+        "dynamic_taint_path": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "brier": 0.0,
+          "log_loss": 1.0000000494736474e-07,
+          "ece_10": 0.0,
+          "mce_10": 0.0,
+          "threshold": 1.0,
+          "predicted_positive": 232
+        }
+      },
+      "reliability_raw": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 332,
+          "mean_probability": 0.031320526915691926,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 35,
+          "mean_probability": 0.12220076073276889,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 1,
+          "mean_probability": 0.2811520688232649,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 0.9549115178541283,
+          "empirical_rate": 1.0
+        }
+      ],
+      "reliability_temperature_scaled": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 368,
+          "mean_probability": 8.292800104016826e-11,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 1.0,
+          "empirical_rate": 1.0
+        }
+      ],
+      "parameters": [
+        -1.3776359436877739,
+        4.62918200907747,
+        0.3935766354854674,
+        -3.513297979783985,
+        7.107672426643894,
+        0.0004199254553879923
+      ]
+    },
+    {
+      "seed": 20260915,
+      "train": 1400,
+      "test": 600,
+      "temperature": {
+        "value": 0.05452613129715141,
+        "fit_success": true,
+        "train_nll": 1.0000000494736474e-07
+      },
+      "raw": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 0.00226916089598649,
+        "log_loss": 0.042749247897097484,
+        "ece_10": 0.04154325005277428,
+        "mce_10": 0.2858296906022302,
+        "threshold": 0.944715594688438,
+        "predicted_positive": 232
+      },
+      "temperature_scaled": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 4.3107329027737414e-18,
+        "log_loss": 1.0000000494736474e-07,
+        "ece_10": 8.476271327399303e-11,
+        "mce_10": 1.3820007599020604e-10,
+        "threshold": 1.0,
+        "predicted_positive": 232
+      },
+      "raw_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 0.9999999999999998,
+          "high": 1.0000000000000002,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 0.0019339704878528795,
+          "high": 0.0026484283770194,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 0.03972249079617801,
+          "high": 0.04345682417950359,
+          "n_boot": 2000
+        }
+      },
+      "temperature_scaled_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 3.1464686041148236e-32,
+          "high": 1.2932198708169216e-17,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 1.53074016193959e-17,
+          "high": 2.5428724411093163e-10,
+          "n_boot": 2000
+        }
+      },
+      "baselines": {
+        "per_agent_max": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5,
+          "auprc": 0.38666666666666666,
+          "brier": 0.25,
+          "log_loss": 0.6931471805599453,
+          "ece_10": 0.11333333333333334,
+          "mce_10": 0.11333333333333334,
+          "threshold": 0.5,
+          "predicted_positive": 600
+        },
+        "per_agent_mean": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.556421008245877,
+          "auprc": 0.4778307654683297,
+          "brier": 0.23924768518518524,
+          "log_loss": 0.6752834201520604,
+          "ece_10": 0.10902777777777779,
+          "mce_10": 0.5,
+          "threshold": 0.25,
+          "predicted_positive": 600
+        },
+        "topology_only": {
+          "f1": 0.6526019690576652,
+          "precision": 0.48434237995824636,
+          "recall": 1.0,
+          "auroc": 0.6644021739130435,
+          "auprc": 0.48434237995824636,
+          "brier": 0.4116666666666667,
+          "log_loss": 6.6352827686945295,
+          "ece_10": 0.4116666666666667,
+          "mce_10": 0.5156576200417536,
+          "threshold": 1.0,
+          "predicted_positive": 479
+        },
+        "edge_count": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.49321823463268366,
+          "auprc": 0.3857929576218329,
+          "brier": 0.28578231292517003,
+          "log_loss": 0.8964906870380545,
+          "ece_10": 0.1752380952380952,
+          "mce_10": 0.5555555555555556,
+          "threshold": 0.14285714285714285,
+          "predicted_positive": 600
+        },
+        "no_taint_contribution": {
+          "f1": 0.6526019690576652,
+          "precision": 0.48434237995824636,
+          "recall": 1.0,
+          "auroc": 0.7734257871064467,
+          "auprc": 0.6371167500907209,
+          "brier": 0.19466435185185185,
+          "log_loss": 0.5462277820074157,
+          "ece_10": 0.13180555555555554,
+          "mce_10": 0.2755102040816326,
+          "threshold": 0.25,
+          "predicted_positive": 479
+        },
+        "dynamic_taint_path": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "brier": 0.0,
+          "log_loss": 1.0000000494736474e-07,
+          "ece_10": 0.0,
+          "mce_10": 0.0,
+          "threshold": 1.0,
+          "predicted_positive": 232
+        }
+      },
+      "reliability_raw": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 335,
+          "mean_probability": 0.03174554234045412,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 32,
+          "mean_probability": 0.11899240131249075,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 1,
+          "mean_probability": 0.2858296906022302,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 0.9560447982111616,
+          "empirical_rate": 1.0
+        }
+      ],
+      "reliability_temperature_scaled": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 368,
+          "mean_probability": 1.3820007599020604e-10,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 1.0,
+          "empirical_rate": 1.0
+        }
+      ],
+      "parameters": [
+        -1.384984662266286,
+        4.648849725254721,
+        0.37840029867835157,
+        -3.5139621758861295,
+        7.109326124094923,
+        -0.0025813332262939713
+      ]
+    },
+    {
+      "seed": 20260916,
+      "train": 1400,
+      "test": 600,
+      "temperature": {
+        "value": 0.060441619733390566,
+        "fit_success": true,
+        "train_nll": 1.0000000494736474e-07
+      },
+      "raw": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 0.001967129901052922,
+        "log_loss": 0.04099364575647291,
+        "ece_10": 0.039963822627825704,
+        "mce_10": 0.1155538247686985,
+        "threshold": 0.9443537425031117,
+        "predicted_positive": 232
+      },
+      "temperature_scaled": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 2.078080859223467e-27,
+        "log_loss": 1.0000000494736474e-07,
+        "ece_10": 2.186088061225886e-15,
+        "mce_10": 3.564274012868293e-15,
+        "threshold": 1.0,
+        "predicted_positive": 232
+      },
+      "raw_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 0.9999999999999998,
+          "high": 1.0000000000000002,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 0.001757033567112348,
+          "high": 0.0021892399307083584,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 0.03852565391726988,
+          "high": 0.04155968846869848,
+          "n_boot": 2000
+        }
+      },
+      "temperature_scaled_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 2.6812741004818168e-30,
+          "high": 6.22462399106301e-27,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 1.4179763383930097e-16,
+          "high": 6.164088991037395e-15,
+          "n_boot": 2000
+        }
+      },
+      "baselines": {
+        "per_agent_max": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5,
+          "auprc": 0.38666666666666666,
+          "brier": 0.25,
+          "log_loss": 0.6931471805599453,
+          "ece_10": 0.11333333333333334,
+          "mce_10": 0.11333333333333334,
+          "threshold": 0.5,
+          "predicted_positive": 600
+        },
+        "per_agent_mean": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5420258620689655,
+          "auprc": 0.46299895506792055,
+          "brier": 0.24175925925925923,
+          "log_loss": 0.6809502015991976,
+          "ece_10": 0.11361111111111113,
+          "mce_10": 0.5,
+          "threshold": 0.25,
+          "predicted_positive": 600
+        },
+        "topology_only": {
+          "f1": 0.6628571428571428,
+          "precision": 0.49572649572649574,
+          "recall": 1.0,
+          "auroc": 0.6793478260869565,
+          "auprc": 0.49572649572649574,
+          "brier": 0.3933333333333333,
+          "log_loss": 6.3397843502506435,
+          "ece_10": 0.3933333333333333,
+          "mce_10": 0.5042735042735043,
+          "threshold": 1.0,
+          "predicted_positive": 468
+        },
+        "edge_count": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5269455116191903,
+          "auprc": 0.40905455860677953,
+          "brier": 0.27309523809523806,
+          "log_loss": 0.8458012751167657,
+          "ece_10": 0.16738095238095235,
+          "mce_10": 0.5714285714285714,
+          "threshold": 0.14285714285714285,
+          "predicted_positive": 600
+        },
+        "no_taint_contribution": {
+          "f1": 0.6628571428571428,
+          "precision": 0.49572649572649574,
+          "recall": 1.0,
+          "auroc": 0.7909131371814093,
+          "auprc": 0.649118597846351,
+          "brier": 0.19409722222222223,
+          "log_loss": 0.5418673826427115,
+          "ece_10": 0.12916666666666665,
+          "mce_10": 0.2954545454545454,
+          "threshold": 0.25,
+          "predicted_positive": 468
+        },
+        "dynamic_taint_path": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "brier": 0.0,
+          "log_loss": 1.0000000494736474e-07,
+          "ece_10": 0.0,
+          "mce_10": 0.0,
+          "threshold": 1.0,
+          "predicted_positive": 232
+        }
+      },
+      "reliability_raw": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 341,
+          "mean_probability": 0.030800913441631352,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 27,
+          "mean_probability": 0.1155538247686985,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 0.9553653929985161,
+          "empirical_rate": 1.0
+        }
+      ],
+      "reliability_temperature_scaled": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 368,
+          "mean_probability": 3.564274012868293e-15,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 1.0,
+          "empirical_rate": 1.0
+        }
+      ],
+      "parameters": [
+        -1.4239599616565246,
+        4.680185414275054,
+        0.3899044850321487,
+        -3.518608249287844,
+        7.112819537908229,
+        0.004301982317547162
+      ]
+    },
+    {
+      "seed": 20260917,
+      "train": 1400,
+      "test": 600,
+      "temperature": {
+        "value": 0.05244344145527248,
+        "fit_success": true,
+        "train_nll": 1.0000000494736474e-07
+      },
+      "raw": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 0.0025152761303667706,
+        "log_loss": 0.04389225101901631,
+        "ece_10": 0.042538210190039796,
+        "mce_10": 0.28951677739472004,
+        "threshold": 0.9444490786427391,
+        "predicted_positive": 232
+      },
+      "temperature_scaled": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 5.7288951107276094e-18,
+        "log_loss": 1.0000000494736474e-07,
+        "ece_10": 1.3055738048869228e-10,
+        "mce_10": 2.1286529427504176e-10,
+        "threshold": 1.0,
+        "predicted_positive": 232
+      },
+      "raw_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 0.9999999999999998,
+          "high": 1.0000000000000002,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 0.00208327980071203,
+          "high": 0.0030486743636147515,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 0.04049544251914299,
+          "high": 0.044730796093170475,
+          "n_boot": 2000
+        }
+      },
+      "temperature_scaled_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 5.303228215430188e-29,
+          "high": 1.609616463656113e-17,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 4.2600806889342487e-16,
+          "high": 3.4903806374406617e-10,
+          "n_boot": 2000
+        }
+      },
+      "baselines": {
+        "per_agent_max": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5,
+          "auprc": 0.38666666666666666,
+          "brier": 0.25,
+          "log_loss": 0.6931471805599453,
+          "ece_10": 0.11333333333333334,
+          "mce_10": 0.11333333333333334,
+          "threshold": 0.5,
+          "predicted_positive": 600
+        },
+        "per_agent_mean": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5487666323088457,
+          "auprc": 0.474461672041677,
+          "brier": 0.23991898148148152,
+          "log_loss": 0.6769181355737467,
+          "ece_10": 0.11486111111111115,
+          "mce_10": 0.5,
+          "threshold": 0.25,
+          "predicted_positive": 600
+        },
+        "topology_only": {
+          "f1": 0.6507713884992987,
+          "precision": 0.48232848232848236,
+          "recall": 1.0,
+          "auroc": 0.6616847826086957,
+          "auprc": 0.48232848232848236,
+          "brier": 0.415,
+          "log_loss": 6.689009753866145,
+          "ece_10": 0.415,
+          "mce_10": 0.5176715176715176,
+          "threshold": 1.0,
+          "predicted_positive": 481
+        },
+        "edge_count": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.47314233508245884,
+          "auprc": 0.3664447804748307,
+          "brier": 0.29125850340136056,
+          "log_loss": 0.9326829340078518,
+          "ece_10": 0.16880952380952377,
+          "mce_10": 0.8571428571428572,
+          "threshold": 0.14285714285714285,
+          "predicted_positive": 600
+        },
+        "no_taint_contribution": {
+          "f1": 0.6507713884992987,
+          "precision": 0.48232848232848236,
+          "recall": 1.0,
+          "auroc": 0.7546558751874064,
+          "auprc": 0.6103070058515389,
+          "brier": 0.2007638888888889,
+          "log_loss": 0.5600907252852814,
+          "ece_10": 0.12749999999999997,
+          "mce_10": 0.25,
+          "threshold": 0.25,
+          "predicted_positive": 481
+        },
+        "dynamic_taint_path": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "brier": 0.0,
+          "log_loss": 1.0000000494736474e-07,
+          "ece_10": 0.0,
+          "mce_10": 0.0,
+          "threshold": 1.0,
+          "predicted_positive": 232
+        }
+      },
+      "reliability_raw": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 334,
+          "mean_probability": 0.031763726186528875,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 32,
+          "mean_probability": 0.1245891249854616,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 2,
+          "mean_probability": 0.28951677739472004,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 0.9553967413215559,
+          "empirical_rate": 1.0
+        }
+      ],
+      "reliability_temperature_scaled": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 368,
+          "mean_probability": 2.1286529427504176e-10,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 1.0,
+          "empirical_rate": 1.0
+        }
+      ],
+      "parameters": [
+        -1.3651961513920778,
+        4.6229323910065805,
+        0.3809013527532509,
+        -3.5146814799122117,
+        7.1092600900352485,
+        -8.46993525892457e-05
+      ]
+    },
+    {
+      "seed": 20260918,
+      "train": 1400,
+      "test": 600,
+      "temperature": {
+        "value": 0.05405987718390754,
+        "fit_success": true,
+        "train_nll": 1.0000000494736474e-07
+      },
+      "raw": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 0.0025165907632133905,
+        "log_loss": 0.04410895444655458,
+        "ece_10": 0.04275735337568026,
+        "mce_10": 0.2841588037245202,
+        "threshold": 0.9442732247329322,
+        "predicted_positive": 232
+      },
+      "temperature_scaled": {
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 4.764548350283618e-18,
+        "log_loss": 1.0000000494736474e-07,
+        "ece_10": 1.2602455941722672e-10,
+        "mce_10": 2.0547482513678272e-10,
+        "threshold": 1.0,
+        "predicted_positive": 232
+      },
+      "raw_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 0.9999999999999998,
+          "high": 1.0000000000000002,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 0.002105159077762343,
+          "high": 0.0030384698054314145,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 0.04074325873114288,
+          "high": 0.045053301115316795,
+          "n_boot": 2000
+        }
+      },
+      "temperature_scaled_bootstrap_95ci": {
+        "f1": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auroc": {
+          "low": 0.9999999999999999,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "auprc": {
+          "low": 1.0,
+          "high": 1.0,
+          "n_boot": 2000
+        },
+        "brier": {
+          "low": 1.5135013344168402e-28,
+          "high": 1.1911370874916232e-17,
+          "n_boot": 2000
+        },
+        "ece_10": {
+          "low": 5.334217752282822e-16,
+          "high": 3.150596480168325e-10,
+          "n_boot": 2000
+        }
+      },
+      "baselines": {
+        "per_agent_max": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5,
+          "auprc": 0.38666666666666666,
+          "brier": 0.25,
+          "log_loss": 0.6931471805599453,
+          "ece_10": 0.11333333333333334,
+          "mce_10": 0.11333333333333334,
+          "threshold": 0.5,
+          "predicted_positive": 600
+        },
+        "per_agent_mean": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5237068965517242,
+          "auprc": 0.45611223799864775,
+          "brier": 0.24319444444444446,
+          "log_loss": 0.684438522557628,
+          "ece_10": 0.13083333333333336,
+          "mce_10": 0.5,
+          "threshold": 0.25,
+          "predicted_positive": 600
+        },
+        "topology_only": {
+          "f1": 0.6562942008486563,
+          "precision": 0.4884210526315789,
+          "recall": 1.0,
+          "auroc": 0.6698369565217391,
+          "auprc": 0.4884210526315789,
+          "brier": 0.405,
+          "log_loss": 6.527828798351299,
+          "ece_10": 0.405,
+          "mce_10": 0.5115789473684211,
+          "threshold": 1.0,
+          "predicted_positive": 475
+        },
+        "edge_count": {
+          "f1": 0.5576923076923077,
+          "precision": 0.38666666666666666,
+          "recall": 1.0,
+          "auroc": 0.5109515554722639,
+          "auprc": 0.40129940680663745,
+          "brier": 0.27540816326530615,
+          "log_loss": 0.8259372909940912,
+          "ece_10": 0.16642857142857145,
+          "mce_10": 0.4285714285714286,
+          "threshold": 0.14285714285714285,
+          "predicted_positive": 600
+        },
+        "no_taint_contribution": {
+          "f1": 0.6562942008486563,
+          "precision": 0.4884210526315789,
+          "recall": 1.0,
+          "auroc": 0.756559220389805,
+          "auprc": 0.6055063259423552,
+          "brier": 0.20128472222222224,
+          "log_loss": 0.5596112561645286,
+          "ece_10": 0.12375000000000004,
+          "mce_10": 0.23529411764705888,
+          "threshold": 0.25,
+          "predicted_positive": 475
+        },
+        "dynamic_taint_path": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "brier": 0.0,
+          "log_loss": 1.0000000494736474e-07,
+          "ece_10": 0.0,
+          "mce_10": 0.0,
+          "threshold": 1.0,
+          "predicted_positive": 232
+        }
+      },
+      "reliability_raw": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 332,
+          "mean_probability": 0.03167112326067054,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 34,
+          "mean_probability": 0.12157370607699187,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 2,
+          "mean_probability": 0.2841588037245202,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 0.9550095884103501,
+          "empirical_rate": 1.0
+        }
+      ],
+      "reliability_temperature_scaled": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 368,
+          "mean_probability": 2.0547482513678272e-10,
+          "empirical_rate": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 3,
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 6,
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 7,
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "mean_probability": null,
+          "empirical_rate": null
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 232,
+          "mean_probability": 1.0,
+          "empirical_rate": 1.0
+        }
+      ],
+      "parameters": [
+        -1.3700984304220363,
+        4.622006737944887,
+        0.39323404058706113,
+        -3.512087947445399,
+        7.107222620323906,
+        -0.0017695008598580101
+      ]
+    }
+  ],
+  "caveats": [
+    "This benchmark tests a designed reachability mechanism, not all MAS safety risks.",
+    "Bootstrap intervals quantify test-sample uncertainty conditional on each split; seed std quantifies split sensitivity.",
+    "Temperature scaling changes probability calibration only; it does not add new detection evidence.",
+    "No causal-discovery claim is made; explicit edges are observed protocol relations."
+  ]
+}
