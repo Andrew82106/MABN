@@ -51,10 +51,16 @@ def make_episode(i, n_agents, path_len, decoy_multiplier, reliability, label, rn
     for u, v in zip(path_nodes[:-1], path_nodes[1:]):
         dc = "untrusted" if label else "clean"
         conf = reliability if label else 1.0
-        # Reliability models an observation channel: the latent positive edge
-        # exists, but may be absent from the API event stream.
-        if (not label) or rng.random() < reliability:
-            ev.append(event(seq, u, "message_sent", v, dc, conf, "workflow")); seq += 1
+        # Reliability models an observation channel.  A missing positive
+        # provenance annotation is retained as an ``unknown`` edge so event
+        # counts and topology remain matched across classes; only the taint
+        # attribute is unobserved.  This prevents a count-based shortcut.
+        if not label:
+            ev.append(event(seq, u, "message_sent", v, "clean", 1.0, "workflow")); seq += 1
+        elif rng.random() < reliability:
+            ev.append(event(seq, u, "message_sent", v, "untrusted", conf, "workflow")); seq += 1
+        else:
+            ev.append(event(seq, u, "message_sent", v, "unknown", 0.0, "redacted")); seq += 1
     # Match edge/event counts: every class gets dead-end untrusted decoys.
     # Repeated messages are allowed and collapse to one graph edge for reachability.
     off = names[1] if names[1] not in path_nodes else None
