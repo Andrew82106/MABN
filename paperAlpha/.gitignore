@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.venv-baselines/
 .env
 .env.*
 !.env.example
@@ -32,3 +33,7 @@ data/processed/*
 !data/processed/.gitkeep
 results/*
 !results/.gitkeep
+
+# External MAST/MAD release is downloaded locally for audit; keep large raw files out of Git.
+data/external/MAST/*
+!data/external/MAST/.gitkeep
