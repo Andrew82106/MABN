@@ -79,3 +79,18 @@ MAS 威胁与协作拓扑补充参考 IEEE TDSC 的 *Cracks in Collaboration*，
 当前已经有一套可复现、可解释、对强基线有成对统计优势的 MAS 风险监测实验包；但按投稿标准，
 它仍不能诚实地写成“最终已投”结果。提交前还缺三项硬证据：独立人工/许可的 MAS 安全确认集、
 完整在线语义抽取与内存/延迟测量、以及固定低误报点下的独立早期预警确认。
+
+## 再现入口
+
+在仓库根目录执行以下命令可重建主公开轨迹和主评测；所有生成结果默认留在被忽略的
+`paperAlpha/results/` 下，不会污染 Git：
+
+```powershell
+python paperAlpha/scripts/generate_independent_mas_benchmark_v3.py --n 4000 --seed 20260917 --out paperAlpha/results/independent_mas_v3
+python paperAlpha/scripts/evaluate_independent_mas_journal_v1.py --input paperAlpha/results/independent_mas_v3/traces_public.jsonl --labels paperAlpha/results/independent_mas_v3/labels.jsonl --out paperAlpha/results/independent_mas_journal_v1 --folds 5 --seed 20261002
+python paperAlpha/scripts/evaluate_reliability_bayes_baseline_v1.py --input paperAlpha/results/independent_mas_v3/traces_public.jsonl --labels paperAlpha/results/independent_mas_v3/labels.jsonl --out paperAlpha/results/submission/final_eval/reliability_bayes_baseline_v1
+python paperAlpha/scripts/compare_primary_vs_reliability_v1.py
+```
+
+主模型、基线和结果摘要的协议入口是 `submission/protocol.json`；独立确认集的标注要求见
+`submission/EXTERNAL_CONFIRMATION_PLAN.md`。
