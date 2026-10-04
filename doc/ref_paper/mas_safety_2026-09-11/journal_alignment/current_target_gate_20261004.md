@@ -15,6 +15,7 @@
 |---|---|---|
 | 双线方法本身可审计 | workflow/knowledge BN + runtime BN；模型变量、因子、路径和未知证据策略均有冻结说明 | 已有 |
 | 强基线与同信息条件 | runtime logistic、graph/local learned controls、topology/taint controls；family-disjoint 5-fold OOF | 已有，但仍需外部复现 |
+| 期刊近邻 Bayesian fusion 对照 | reliability-weighted Bayesian control AUROC/AUPRC 0.763/0.596；双线融合 0.820/0.675 | 已有开发评测，非 ATC 任务直接复现 |
 | 严格 MAS 结构评测 | 186 topology families；A2ASecBench leave-one-attack-family-out；LANYUN 80-case transfer | 部分已有，外部标签仍非独立人工标注 |
 | 多后端/跨 API 迁移 | 本地网关与 LANYUN `glm-5.3-flash` 均已跑通；LANYUN 80 案例 64 完成 | 有迁移证据，样本标签仍来自同一模拟器 |
 | 低阳性率与固定 FPR | 主集 family-cluster CI、5% FPR 诊断 | 已有；动作前固定 FPR 仍出现分布偏移 |
