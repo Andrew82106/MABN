@@ -75,14 +75,20 @@ def public_features(row: dict) -> tuple[np.ndarray, np.ndarray, dict]:
     missing_stop = int(stop == 0)
     repeated = int(repetition > 0)
     runtime_failure = int(errors > 0 or conflict > 0 or repeated)
+    message_density = min(messages / max(1.0, agent_count * 4.0), 1.0)
+    tool_density = min(tools / max(1.0, messages), 1.0)
+    error_density = min(errors / max(1.0, messages), 1.0)
+    verify_density = min(verify / max(1.0, messages + tools), 1.0)
+    stop_density = min(stop / max(1.0, messages + tools), 1.0)
+    conflict_density = min(conflict / max(1.0, messages), 1.0)
     normative = np.asarray([
-        int(agent_count > 1), int(messages > 0), int(delegations > 0),
-        missing_verify, missing_stop, int(tools > 0), int(injection > 0),
+        int(agent_count > 1), float(message_density > 0.1), int(delegations > 0),
+        float(verify_density < 0.1), float(stop_density < 0.05),
+        float(tool_density > 0.1), int(injection > 0),
     ], dtype=float)
     runtime = np.asarray([
-        min(messages / 20.0, 1.0), min(tools / 20.0, 1.0),
-        min(errors / 10.0, 1.0), min(conflict / 5.0, 1.0),
-        float(repeated), float(missing_verify), float(missing_stop),
+        message_density, tool_density, error_density, conflict_density,
+        float(repeated), float(verify_density < 0.1), float(stop_density < 0.05),
         float(runtime_failure),
     ], dtype=float)
     audit = {
@@ -91,6 +97,9 @@ def public_features(row: dict) -> tuple[np.ndarray, np.ndarray, dict]:
         "errors": errors, "verification_mentions": verify,
         "termination_mentions": stop, "repetition_mentions": repetition,
         "conflict_mentions": conflict, "injection_mentions": injection,
+        "message_density": message_density, "tool_density": tool_density,
+        "error_density": error_density, "verify_density": verify_density,
+        "stop_density": stop_density, "conflict_density": conflict_density,
     }
     return normative, runtime, audit
 
@@ -201,7 +210,7 @@ def evaluate(rows: list[dict], out: Path) -> dict:
     report = {
         "n": int(len(y)), "positives": int(y.sum()), "groups": int(len(np.unique(groups))),
         "label_source": "released MAST annotation (secondary external benchmark; not human gold)",
-        "feature_boundary": "trajectory text only; excludes mast_annotation, MAS/benchmark identifiers and human annotations",
+        "feature_boundary": "trajectory text only; excludes mast_annotation, MAS/benchmark identifiers and human annotations; counts are normalized to agent/message density",
         "methods": {
             "two_line_bn_fusion": metrics(y, p_fusion, threshold),
             "flat_logistic_public_text": metrics(y, p_flat, threshold),

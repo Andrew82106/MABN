@@ -10,9 +10,9 @@
 
 ## 适配实验
 
-`paperAlpha/scripts/evaluate_mast_external_v1.py` 只读取轨迹文本提取公开可见的角色、消息、工具、错误、验证、终止和重复等信号；不读取 `mast_annotation`、人工标注或标签字段。按 `mas_name::benchmark_name` 做五折分组留出，并使用内层 OOF 训练双线融合。
+`paperAlpha/scripts/evaluate_mast_external_v1.py` 只读取轨迹文本提取公开可见的角色、消息、工具、错误、验证、终止和重复等信号；计数进一步归一化为每个 Agent/每条消息的密度，减少不同框架日志 verbosity 的影响；不读取 `mast_annotation`、人工标注或标签字段。按 `mas_name::benchmark_name` 做五折分组留出，并使用内层 OOF 训练双线融合。
 
-结果：双线 BN AUROC/AUPRC/F1/Brier = 0.680/0.851/0.858/0.178；匹配平面逻辑回归 AUROC/AUPRC = 0.640/0.831。按 MAS 系统拆分的 AUROC 为 0.069--0.931，说明迁移高度依赖系统和轨迹格式。该目标是“任意 MAST 失败”，与主实验的授权/污染/运行时风险不同，因此只能作为外部迁移证据，不能并入主表或宣称安全性能已被独立人工验证。
+结果：双线 BN AUROC/AUPRC/F1/Brier = 0.681/0.852/0.858/0.178；匹配平面逻辑回归 AUROC/AUPRC = 0.640/0.831。按 MAS 系统拆分的 AUROC 为 0.034--0.931，说明迁移高度依赖系统和轨迹格式，密度归一化没有消除这一问题。该目标是“任意 MAST 失败”，与主实验的授权/污染/运行时风险不同，因此只能作为外部迁移证据，不能并入主表或宣称安全性能已被独立人工验证。
 
 ## 投稿边界
 

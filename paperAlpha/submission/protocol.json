@@ -260,7 +260,7 @@
       "coverage": {"traces": 1642, "positive_released_mast_annotations": 1237, "mas_benchmark_groups": 11, "human_pilot_traces": 19, "human_pilot_positive": 18},
       "feature_boundary": "Trajectory text only; mast_annotation, MAS/benchmark identifiers and human annotations are excluded from features.",
       "split": "Five-fold StratifiedGroupKFold by mas_name::benchmark_name with inner OOF fusion calibration.",
-      "result": {"two_line_bn_fusion": {"auroc": 0.680, "auprc": 0.851, "f1": 0.858, "brier": 0.178}, "flat_logistic": {"auroc": 0.640, "auprc": 0.831}, "max_line_rule": {"auroc": 0.676, "auprc": 0.858}},
+      "result": {"two_line_bn_fusion": {"auroc": 0.681, "auprc": 0.852, "f1": 0.858, "brier": 0.178}, "flat_logistic": {"auroc": 0.640, "auprc": 0.831}, "max_line_rule": {"auroc": 0.676, "auprc": 0.858}},
       "interpretation": "The public MAST annotation target is any released MAS failure, not the operational authorization/taint target of the main experiment. It is secondary transfer evidence; the 19 human traces are too small and imbalanced for a powered estimate and are reported descriptively only.",
       "artifacts": ["scripts/evaluate_mast_external_v1.py", "results/submission/final_eval/mast_external_v1/REPORT.md", "results/submission/final_eval/mast_external_v1/REPORT.json", "data/external/MAST/MAD_full_dataset.json", "data/external/MAST/MAD_human_labelled_dataset.json"]
     },
