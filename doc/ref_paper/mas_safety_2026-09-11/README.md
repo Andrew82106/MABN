@@ -12,6 +12,7 @@
 - [本地论文清单](./本地论文清单.md)：按同一编号打开 PDF，检查下载状态。
 - [归档记录](./manifest.json)：论文来源、实际下载地址、时间、大小与 SHA-256。
 - [当前投稿门槛](./journal_alignment/current_target_gate_20261004.md)：按 ESWA/TDSC 参照论文核对当前实验，区分已完成证据与真正缺口。
+- [MAST/MAD 外部审计](./journal_alignment/mast_external_audit_20261004.md)：公开 MAS 失败轨迹的独立迁移检查及其标签边界。
 
 ## 目录规则
 

@@ -19,7 +19,7 @@
 | 多后端/跨 API 迁移 | 本地网关与 LANYUN `glm-5.3-flash` 均已跑通；LANYUN 80 案例 64 完成 | 有迁移证据，样本标签仍来自同一模拟器 |
 | 低阳性率与固定 FPR | 主集 family-cluster CI、5% FPR 诊断 | 已有；动作前固定 FPR 仍出现分布偏移 |
 | API 真实成本 | LANYUN 请求数、token、p50/p95 传输；监测器 CPU p50/p95 | 部分已有；语义抽取端到端成本/内存仍缺 |
-| 真实外部效度 | AgentLeak、QuadSentinel、A2ASecBench 边界/迁移实验 | 仍缺独立 MAS 人工标注或授权队列 |
+| 真实外部效度 | AgentLeak、QuadSentinel、A2ASecBench 边界/迁移实验；新增 MAST/MAD 1,642 条轨迹迁移审计 | MAST 标签是公开 annotation pipeline，人工子集仅 19 条且 18 阳性；仍缺与本文安全目标一致的独立人工标注或授权队列 |
 | 可复现性 | 公开字段、冻结协议、manifest、失败记录、目标脚本 | 已有；结果文件按仓库规则保留在本地结果目录 |
 
 ## 结论
