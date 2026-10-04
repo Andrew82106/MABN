@@ -213,6 +213,18 @@ def evaluate(rows: list[dict], out: Path) -> dict:
     }
     for row, pf, pl, pr in zip(rows, p_fusion, p_flat, p_rule):
         report["predictions"].append({"trace_id": row.get("trace_id"), "mas_name": row.get("mas_name"), "benchmark_name": row.get("benchmark_name"), "y": label_full(row), "fusion": float(pf), "flat": float(pl), "rule": float(pr)})
+    for field in ("mas_name", "benchmark_name"):
+        by_group = {}
+        for value in sorted({str(x[field]) for x in report["predictions"]}):
+            subset = [x for x in report["predictions"] if str(x[field]) == value]
+            gy = np.asarray([x["y"] for x in subset], dtype=int)
+            gp = np.asarray([x["fusion"] for x in subset], dtype=float)
+            by_group[value] = {
+                "n": int(len(gy)), "positives": int(gy.sum()),
+                "auroc": safe_auc(gy, gp),
+                "auprc": float(average_precision_score(gy, gp)) if gy.sum() else None,
+            }
+        report[f"by_{field}"] = by_group
     return report
 
 
@@ -244,7 +256,8 @@ def main() -> None:
     (args.out / "FEATURE_AUDIT.json").write_text(json.dumps(report["feature_audit"], ensure_ascii=False, indent=2), encoding="utf-8")
     f = report["methods"]["two_line_bn_fusion"]
     h = report["human_pilot"]
-    md = ["# External MAST/MAD audit", "", f"- Full release: {report['n']} traces, {report['positives']} positive MAST annotations, {report['groups']} MAS×benchmark groups.", "- Features: trajectory text only; labels, identifiers and annotations excluded.", f"- Two-line BN fusion: AUROC {f['auroc']:.3f}, AUPRC {f['auprc']:.3f}, F1 {f['f1']:.3f}, Brier {f['brier']:.3f}.", f"- Human pilot: {h['n']} traces, {h['positives']} positive; descriptive only.", "", "This is external transfer evidence, not an independent human-gold superiority result: the full release uses the published MAST annotation pipeline, and the human subset is too small and imbalanced for a powered estimate.", ""]
+    mas_aucs = [v["auroc"] for v in report["by_mas_name"].values() if v["auroc"] is not None]
+    md = ["# External MAST/MAD audit", "", f"- Full release: {report['n']} traces, {report['positives']} positive MAST annotations, {report['groups']} MAS×benchmark groups.", "- Features: trajectory text only; labels, identifiers and annotations excluded.", f"- Two-line BN fusion: AUROC {f['auroc']:.3f}, AUPRC {f['auprc']:.3f}, F1 {f['f1']:.3f}, Brier {f['brier']:.3f}.", f"- MAS-level AUROC range: {min(mas_aucs):.3f}--{max(mas_aucs):.3f}; transfer is heterogeneous and the pooled score must not hide system-specific failures.", f"- Human pilot: {h['n']} traces, {h['positives']} positive; descriptive only.", "", "This is external transfer evidence, not an independent human-gold superiority result: the full release uses the published MAST annotation pipeline, and the human subset is too small and imbalanced for a powered estimate.", ""]
     (args.out / "REPORT.md").write_text("\n".join(md), encoding="utf-8")
     print(json.dumps({"n": report["n"], "positives": report["positives"], "groups": report["groups"], "fusion": f, "human_pilot": h}, ensure_ascii=False))
 
