@@ -1,6 +1,7 @@
 {
   "schema": "paperalpha-submission-protocol",
   "status": "development_in_progress_not_submission_ready",
+  "current_result_summary": "submission/FINAL_RESULTS.md",
   "as_of": "2026-10-04",
   "user_requirements": {
     "journal_system": "Chinese Academy of Sciences journal partition",
