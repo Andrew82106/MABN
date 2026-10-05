@@ -420,8 +420,11 @@ def fit_model(train_eps: Sequence[dict], y: np.ndarray, bn: dict, seed: int) -> 
         bce = -np.mean(y * np.log(np.clip(p, 1e-7, 1-1e-7)) + (1-y) * np.log(np.clip(1-p, 1e-7, 1-1e-7)))
         # Keep local/graph terms identifiable and discourage extreme gates.
         return float(bce + 1e-3 * np.sum(t * t))
+    # A bounded budget keeps the nested grouped-OOF evaluator reproducible on
+    # a single workstation; the objective is smooth and this is ample for the
+    # low-dimensional gate/head parameterization.
     res = minimize(objective, x0, method="L-BFGS-B", bounds=[(-8., 8.)] * 13,
-                   options={"maxiter": 500, "ftol": 1e-10})
+                   options={"maxiter": 180, "ftol": 1e-10})
     return res.x, {"success": bool(res.success), "iterations": int(res.nit), "train_loss": float(res.fun), "message": str(res.message)}
 
 

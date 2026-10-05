@@ -31,6 +31,8 @@ This is an evidence score, not a causal probability and not a claim that the wor
 
 The runtime parser creates explicit message/delegation edges. Each edge has an inspectable feature vector for carrier, untrusted provenance, unexpectedness, confidence, unknownness, delegation and workflow membership. A learned sigmoid gate scores transmission propensity from the non-confidence features; confidence is used once as observation reliability in the point/interval policy, not again as a gate feature. A single temporal/topological pass applies each observed edge once, so one edge is not repeatedly re-propagated to saturation. The privileged-sink risk is a sigmoid head over propagated path evidence, local evidence, Layer-1 node evidence, asserted path evidence and path distance. Unknown/redacted edges are evaluated under point, lower and upper observation policies; they are not silently treated as safe.
 
+The per-agent local factors in this line are weakly supervised evidence scores: the available label is an episode outcome, not a ground-truth label for every agent node. They should therefore be read as inspectable local risk evidence, not as claims that each node independently caused the episode outcome.
+
 ## Fusion
 
 ## Explicit factor graph

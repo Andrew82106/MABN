@@ -200,7 +200,7 @@ def episode_noisy_or_fit(x: np.ndarray, y: np.ndarray, names: list[str], seed: i
         bce = -np.mean(y * np.log(np.clip(p, 1e-7, 1 - 1e-7)) + (1.0 - y) * np.log(np.clip(1 - p, 1e-7, 1 - 1e-7)))
         return float(bce + 1e-3 * np.sum(theta * theta))
 
-    result = minimize(objective, x0, method="L-BFGS-B", bounds=[(-12.0, 12.0)] * len(x0), options={"maxiter": 500, "ftol": 1e-10})
+    result = minimize(objective, x0, method="L-BFGS-B", bounds=[(-12.0, 12.0)] * len(x0), options={"maxiter": 120, "ftol": 1e-10})
     q = unpack(result.x)
     return {"prior": prior, "names": names, "cpt": {name: float(q[j]) for j, name in enumerate(names)}, "fit": {"success": bool(result.success), "loss": float(result.fun), "iterations": int(result.nit), "method": "joint_noisy_or_bce"}}
 
@@ -276,7 +276,7 @@ def fit_logistic(train_x: np.ndarray, train_y: np.ndarray, test_x: np.ndarray, s
     return model.predict_proba(train_x)[:, 1], model.predict_proba(test_x)[:, 1], model
 
 
-def fit_runtime_bn_inner(two, train_eps: list[dict], y: np.ndarray, bn: dict, seed: int, maxiter: int = 80):
+def fit_runtime_bn_inner(two, train_eps: list[dict], y: np.ndarray, bn: dict, seed: int, maxiter: int = 35):
     """Fit the same runtime BN with a bounded inner-CV budget."""
     rng = np.random.default_rng(seed)
     x0 = np.array([-2., 3., .2, .8, -.4, .1, .1, -2., 4., .2, 1., 1., .3], dtype=float)
