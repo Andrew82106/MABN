@@ -36,7 +36,7 @@
 
 AgentMonitor-style 适配基线只使用其公开的逐 Agent 活动统计与工作流图统计，得到 AUROC 0.712、AUPRC 0.503、Brier 0.197、F1 0.581；这是同信息适配，不是原论文安全目标复现。完整记录见 `results/submission/development/agentmonitor_style_baseline_20261005/REPORT.md`。另有同信息强基线审计显示，平面 Logistic 的 AUROC 与本文双线 BN 接近，因此本文不宣称全面击败所有同信息模型；见 `results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md`。
 
-另有一个严格同信息的 zero-shot LLM judge 对照：LANYUN `glm-5.3-flash` 对 4,000 条公开轨迹最终全部返回有效预测；judge 的 AUROC/AUPRC/F1/Brier 为 0.771/0.578/0.571/0.317，本文双层 BN 为 0.820/0.675/0.634/0.160。它是全量辅助 baseline，不是已发表方法复现，也不支持普遍优越性结论；完整协议和重试账本见 `results/submission/final_eval/LLM_JUDGE_BASELINE.md`。
+另有一个严格同信息的 zero-shot LLM judge 对照：LANYUN `glm-5.3-flash` 对 4,000 条公开轨迹最终全部返回有效预测；judge 的 AUROC/AUPRC/F1/Brier 为 0.771/0.578/0.571/0.317，本文双层 BN 为 0.820/0.675/0.633/0.160。它是全量辅助 baseline，不是已发表方法复现，也不支持普遍优越性结论；完整协议和重试账本见 `results/submission/final_eval/LLM_JUDGE_BASELINE.md`。
 
 ## LANYUN 完整通信队列
 

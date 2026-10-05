@@ -321,7 +321,7 @@
       "cost": {"measured": false, "monitor": "One judge call per scheduled prefix for the simplest profile; cost grows with full-prefix length. Freeze token budgets and truncation rules fairly."},
       "run_status": "full_coverage_auxiliary_baseline_completed_not_published_method_reproduction",
       "artifacts": {"adapter": "scripts/llm_judge_baseline.py", "evaluation": "scripts/evaluate_llm_judge_baseline.py", "retry": "scripts/retry_llm_judge_batches.py", "assembly": "scripts/assemble_llm_judge_outputs.py", "report": "results/submission/final_eval/LLM_JUDGE_BASELINE.md", "raw_run": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_assembled_final_r1"},
-      "result_summary": "LANYUN glm-5.3-flash returned 4000/4000 usable predictions; AUROC/AUPRC/F1/Brier are 0.771/0.578/0.571/0.317 versus the two-line BN 0.820/0.675/0.634/0.160.",
+      "result_summary": "LANYUN glm-5.3-flash returned 4000/4000 usable predictions; AUROC/AUPRC/F1/Brier are 0.771/0.578/0.571/0.317 versus the two-line BN 0.820/0.675/0.633/0.160.",
       "pending": ["calibrate probabilities and alarm thresholds on independent development groups", "prevent exposure of future outcomes", "record tokens and latency", "do not present as a published-method reproduction or universal superiority claim"]
     },
     {
