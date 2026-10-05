@@ -38,3 +38,13 @@ semantic extraction latency, API cost and memory separately.
 
 Until this cohort exists, `FINAL_RESULTS.md` is a complete development package,
 not a final deployment or journal-superiority claim.
+
+## Reproducible annotation entry point
+
+The repository includes `scripts/prepare_mas_annotation_packets_v1.py`. It
+creates separate, shuffled `annotator_a.jsonl` and `annotator_b.jsonl` packets
+from a public-trace input, recursively removes evaluator-only fields, and
+leaves the five label fields blank. After two raters complete the packets, run
+its `agreement` command to report raw agreement and Cohen's kappa before
+adjudication. The script does not invent labels, so the confirmation gate
+remains pending until independent raters complete and adjudicate the packets.

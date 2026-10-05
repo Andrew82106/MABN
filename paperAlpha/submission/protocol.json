@@ -387,6 +387,13 @@
       "limitation": "The original observed_violation target is emitted by the same reference harness that emits runtime events. The strict role audit removes that target-derived channel but still uses benchmark-design attack/control labels, so it is independent API execution and leakage control, not human-adjudicated real-world ground truth or a causal-discovery result.",
       "next_action": "Collect a frozen, unseen MAS/API confirmation cohort with labels independent of the feature adapter; then rerun the same baselines, calibration, low-FPR warning and latency protocol."
     },
+    "annotation_packet_pipeline": {
+      "status": "implemented_not_yet_labeled",
+      "purpose": "Generate label-blind annotator A/B packets from public traces and compute pre-adjudication agreement.",
+      "script": "scripts/prepare_mas_annotation_packets_v1.py",
+      "boundary": "The script does not create labels or call the monitor; independent raters must complete the packets without seeing scores or hidden outcomes.",
+      "tests": "tests/test_mas_annotation_packets.py"
+    },
     "formal_collection": {
       "status": "not_frozen_or_started",
       "risk_families": ["privacy and information flow", "delegated authorization", "shared resources and action combinations"],
