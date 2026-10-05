@@ -46,3 +46,19 @@ def test_agreement_rejects_unlabeled_packets(tmp_path):
     b.write_text(json.dumps(row) + "\n", encoding="utf-8")
     with pytest.raises(ValueError):
         agreement(a, b, tmp_path / "out.json")
+
+
+def test_prepare_complete_only_filters_failed_episodes(tmp_path):
+    source = tmp_path / "episodes.jsonl"
+    source.write_text(
+        json.dumps({"run_id": "ok", "failed_request_ids": [], "records": []}) + "\n"
+        + json.dumps({"run_id": "bad", "failed_request_ids": ["x"], "records": []}) + "\n",
+        encoding="utf-8",
+    )
+    out = tmp_path / "packets"
+    prepare(source, out, seed=7, complete_only=True)
+    rows = json.loads((out / "annotator_a.jsonl").read_text(encoding="utf-8"))
+    assert rows["packet_id"]
+    manifest = json.loads((out / "MANIFEST.json").read_text(encoding="utf-8"))
+    assert manifest["episodes"] == 1
+    assert manifest["complete_only"] is True

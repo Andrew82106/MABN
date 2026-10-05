@@ -78,8 +78,10 @@ def _packet(row: dict[str, Any], index: int) -> dict[str, Any]:
     }
 
 
-def prepare(input_path: Path, output: Path, seed: int) -> dict[str, Any]:
+def prepare(input_path: Path, output: Path, seed: int, complete_only: bool = False) -> dict[str, Any]:
     rows = _rows(input_path)
+    if complete_only:
+        rows = [row for row in rows if not row.get("failed_request_ids")]
     if not rows:
         raise ValueError("input contains no episodes")
     packets = [_packet(row, index) for index, row in enumerate(rows)]
@@ -94,6 +96,7 @@ def prepare(input_path: Path, output: Path, seed: int) -> dict[str, Any]:
     manifest = {
         "schema": "paperalpha-mas-annotation-packets-v1",
         "episodes": len(packets),
+        "complete_only": complete_only,
         "seed": seed,
         "source": str(input_path),
         "source_sha256": hashlib.sha256(input_path.read_bytes()).hexdigest() if input_path.is_file() else None,
@@ -154,12 +157,16 @@ def main(argv=None) -> int:
     prep.add_argument("--input", type=Path, required=True)
     prep.add_argument("--output", type=Path, required=True)
     prep.add_argument("--seed", type=int, default=20261005)
+    prep.add_argument("--complete-only", action="store_true",
+                      help="discard episodes with non-empty failed_request_ids")
     check = sub.add_parser("agreement")
     check.add_argument("--annotator-a", type=Path, required=True)
     check.add_argument("--annotator-b", type=Path, required=True)
     check.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
-    result = prepare(args.input, args.output, args.seed) if args.command == "prepare" else agreement(args.annotator_a, args.annotator_b, args.output)
+    result = (prepare(args.input, args.output, args.seed, complete_only=args.complete_only)
+              if args.command == "prepare"
+              else agreement(args.annotator_a, args.annotator_b, args.output))
     print(json.dumps(result, ensure_ascii=False))
     return 0
 
