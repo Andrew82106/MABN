@@ -5,3 +5,6 @@
 *.jpeg binary
 *.zip binary
 *.gz binary
+
+# Development-only reports stay available locally but are excluded from release archives.
+paperAlpha/results/submission/development/** export-ignore
