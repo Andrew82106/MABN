@@ -6,7 +6,8 @@ joined by this script.  Sampling and batching are deterministic.
 """
 from __future__ import annotations
 
-import argparse, hashlib, json, os, random, sys
+import argparse, hashlib, json, os, random, sys, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 from urllib.request import Request, urlopen
@@ -70,18 +71,29 @@ def make_prompt(group: list[dict[str, Any]]) -> str:
     return "Judge each trace independently. Input JSON follows:\n" + payload
 
 
-def call_judge(endpoint: str, model: str, api_key: str, prompt: str, timeout: float) -> Any:
+def call_judge(endpoint: str, model: str, api_key: str, prompt: str, timeout: float, retries: int = 3) -> Any:
     body = {"model": model, "temperature": 0, "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": prompt}]}
     req = Request(endpoint.rstrip("/") + "/chat/completions", data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}, method="POST")
-    with urlopen(req, timeout=timeout) as response:
-        obj = json.loads(response.read().decode())
-    content = obj["choices"][0]["message"]["content"]
-    if isinstance(content, list):
-        content = "".join(str(x.get("text", "")) for x in content if isinstance(x, dict))
-    text = str(content).strip()
-    if text.startswith("```"):
-        text = text.strip("`").replace("json\n", "", 1).strip()
-    return json.loads(text)
+    last_error: Exception | None = None
+    for attempt in range(max(1, retries + 1)):
+        try:
+            with urlopen(req, timeout=timeout) as response:
+                raw = response.read().decode()
+            if not raw.strip():
+                raise ValueError("empty HTTP response")
+            obj = json.loads(raw)
+            content = obj["choices"][0]["message"]["content"]
+            if isinstance(content, list):
+                content = "".join(str(x.get("text", "")) for x in content if isinstance(x, dict))
+            text = str(content).strip()
+            if text.startswith("```"):
+                text = text.strip("`").replace("json\n", "", 1).strip()
+            return json.loads(text)
+        except Exception as exc:  # retain the final error in the batch ledger
+            last_error = exc
+            if attempt < max(1, retries + 1) - 1:
+                time.sleep(min(8.0, 2.0 ** attempt))
+    raise RuntimeError(str(last_error)) from last_error
 
 
 def main() -> int:
@@ -93,7 +105,10 @@ def main() -> int:
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--endpoint", default=os.getenv("OPENAI_BASE_URL", "http://localhost:58661/v1"))
     ap.add_argument("--model", default=os.getenv("OPENAI_MODEL", "gpt-5.5"))
+    ap.add_argument("--key-env", default="OPENAI_API_KEY")
     ap.add_argument("--timeout", type=float, default=120)
+    ap.add_argument("--retries", type=int, default=3)
+    ap.add_argument("--workers", type=int, default=1)
     ap.add_argument("--dry-run", action="store_true", help="write sampled prompts, make no API calls")
     args = ap.parse_args()
     rows = select_records(read_records(args.input), args.limit, args.seed)
@@ -101,19 +116,40 @@ def main() -> int:
     args.out.mkdir(parents=True, exist_ok=True)
     manifest = {"protocol_version": "llm-judge-baseline-v1", "input": str(args.input), "count": len(rows), "episode_ids": [r.get("episode_id") for r in rows], "seed": args.seed, "batch_size": args.batch_size, "model": args.model, "endpoint": args.endpoint, "temperature": 0, "label_policy": "labels are rejected recursively; no label file is read", "input_sha256": hashlib.sha256(args.input.read_bytes()).hexdigest()}
     (args.out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    predictions = []
-    for index, group in enumerate(groups):
+    if args.workers < 1:
+        raise SystemExit("--workers must be positive")
+
+    def run_one(index_group):
+        index, group = index_group
         prompt = make_prompt(group)
         (args.out / f"prompt_{index:04d}.json").write_text(prompt, encoding="utf-8")
         if args.dry_run:
-            continue
-        key = os.getenv("OPENAI_API_KEY", "")
+            return index, [], None
+        key = os.getenv(args.key_env, "")
         if not key:
-            raise SystemExit("OPENAI_API_KEY is required unless --dry-run is used")
-        result = call_judge(args.endpoint, args.model, key, prompt, args.timeout)
-        predictions.extend(result if isinstance(result, list) else [result])
+            raise SystemExit(f"{args.key_env} is required unless --dry-run is used")
+        try:
+            result = call_judge(args.endpoint, args.model, key, prompt, args.timeout, args.retries)
+            return index, result if isinstance(result, list) else [result], None
+        except Exception as exc:
+            return index, [], {"batch": index, "error_type": type(exc).__name__, "error": str(exc)}
+
+    predictions = []
+    errors = []
+    work = list(enumerate(groups))
+    if args.workers == 1:
+        completed = [run_one(item) for item in work]
+    else:
+        with ThreadPoolExecutor(max_workers=args.workers) as executor:
+            futures = [executor.submit(run_one, item) for item in work]
+            completed = [future.result() for future in as_completed(futures)]
+    for _, batch_predictions, error in sorted(completed, key=lambda item: item[0]):
+        predictions.extend(batch_predictions)
+        if error is not None:
+            errors.append(error)
     (args.out / "predictions.jsonl").write_text("".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in predictions), encoding="utf-8")
-    print(json.dumps({"selected": len(rows), "batches": len(groups), "dry_run": args.dry_run, "out": str(args.out)}, ensure_ascii=False))
+    (args.out / "errors.jsonl").write_text("".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in errors), encoding="utf-8")
+    print(json.dumps({"selected": len(rows), "batches": len(groups), "completed_batches": len(groups) - len(errors), "failed_batches": len(errors), "predictions": len(predictions), "workers": args.workers, "dry_run": args.dry_run, "out": str(args.out)}, ensure_ascii=False))
     return 0
 
 

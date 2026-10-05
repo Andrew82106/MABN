@@ -10,7 +10,7 @@
 | `workflow_only` | 只使用规范 DAG 与执行图差异 |
 | `ours_hierarchical_bn_runtime` | 局部 BN + 运行时传播 + 规范 DAG + 知识模板的双线融合 |
 | `taint_path_rule` | 透明污点可达性规则 |
-| `llm_judge_prefix` | 同一可见前缀、固定 token 预算的 LLM-as-Judge 对照；适配器已实现但尚未完成 API 运行，因此不纳入主表 |
+| `llm_judge_prefix` | 同一公开轨迹的 zero-shot LLM judge；适配器已实现，LANYUN 400 条抽样中 368 条解析成功，但目前只是同子集诊断，不纳入主表 |
 | `policy_guard_proxy` | 规范/策略守卫式确定性检查；尚未纳入主表 |
 | `temporal_graph_classifier` | 时序图分类器或锁定 ALTEDA 作者实现；尚未纳入主表 |
 | `QuadSentinel_native_guard` | 作者实现重放；已在 HarnessAudit 派生 cohort 完成，但目标是 current-policy action detection，不能与本文 future/system-risk 指标直接拼表 |
