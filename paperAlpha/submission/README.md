@@ -38,6 +38,7 @@ F1 **0.668**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 - [Who-and-When 失败定位审计](../results/external_who_when_audit_v1/REPORT.md)：只有失败样本，只作响应边界。
 - [低阳性率压力诊断](../results/submission/development/prevalence_shift_20261005/REPORT.md)：把主集 OOF 结果重加权到 5%/10% 阳性率，作为部署压力检查，不替代独立测试集。
 - [配对族级 bootstrap](../results/submission/development/paired_bootstrap_20261005/REPORT.md)：补充与 trust/reputation、graph 和 local 基线的成对差异区间。
+- [端到端成本闭合](../results/submission/development/e2e_cost_closure_20261005/REPORT.md)：分开记录 API、语义抽取和图/BN 监测成本，不伪造单一 episode 延迟。
 - [独立确认集审计](INDEPENDENT_CONFIRMATION_AUDIT_20261005.md)：当前仍缺双盲人工 MAS 确认集。
 
 ## 投稿对标
