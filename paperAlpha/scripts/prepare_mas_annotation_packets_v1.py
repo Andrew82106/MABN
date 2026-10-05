@@ -22,6 +22,10 @@ PRIVATE_KEYS = {
     "success", "success_evidence", "private_tags", "mechanism", "hidden_fields",
     "terminal_effect", "variant", "reference_label", "reference_label_basis",
 }
+IDENTITY_KEYS = {
+    "episode_id", "trace_id", "case_id", "run_id", "scenario_id",
+    "request_id", "parent_ids", "event_id", "id", "attack_id",
+}
 ANNOTATION_KEYS = ("risk_label", "first_violation_index", "violation_class",
                    "evidence_event_ids", "rationale")
 ALLOWED_CLASSES = {"scope", "routing", "permission", "privacy", "resource", "other"}
@@ -30,7 +34,8 @@ ALLOWED_CLASSES = {"scope", "routing", "permission", "privacy", "resource", "oth
 def _clean(value: Any) -> Any:
     if isinstance(value, dict):
         return {str(k): _clean(v) for k, v in value.items()
-                if str(k).lower() not in PRIVATE_KEYS}
+                if str(k).lower() not in PRIVATE_KEYS
+                and str(k).lower() not in IDENTITY_KEYS}
     if isinstance(value, list):
         return [_clean(v) for v in value]
     return value
@@ -55,10 +60,12 @@ def _episode_id(row: dict[str, Any], index: int) -> str:
 
 def _packet(row: dict[str, Any], index: int) -> dict[str, Any]:
     clean = _clean(row)
-    episode_id = _episode_id(clean, index)
+    # Packet identity is intentionally independent of source IDs.  Source IDs
+    # in this queue encode scenario variants, so retaining or hashing them can
+    # leak the label to a human annotator.
+    packet_id = hashlib.sha256(f"paperalpha-blind-v2\0{index}".encode("utf-8")).hexdigest()[:16]
     return {
-        "packet_id": hashlib.sha256(episode_id.encode("utf-8")).hexdigest()[:16],
-        "episode_id": episode_id,
+        "packet_id": packet_id,
         "observable_trace": clean,
         "annotation": {key: None for key in ANNOTATION_KEYS},
         "instructions": {
@@ -91,7 +98,9 @@ def prepare(input_path: Path, output: Path, seed: int) -> dict[str, Any]:
         "source": str(input_path),
         "source_sha256": hashlib.sha256(input_path.read_bytes()).hexdigest() if input_path.is_file() else None,
         "label_blinded": True,
+        "source_identity_blinded": True,
         "removed_keys": sorted(PRIVATE_KEYS),
+        "removed_identity_keys": sorted(IDENTITY_KEYS),
         "raters": ["annotator_a", "annotator_b"],
         "adjudication": "not included; compute agreement before adjudication",
     }

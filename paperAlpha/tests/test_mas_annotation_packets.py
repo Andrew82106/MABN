@@ -20,6 +20,10 @@ def test_prepare_removes_evaluator_fields_and_agreement(tmp_path):
     observable = json.dumps(a["observable_trace"])
     assert "label" not in observable
     assert "scenario_role" not in observable
+    assert "episode_id" not in observable
+    assert "request_id" not in observable
+    assert "scenario_id" not in observable
+    assert "episode_id" not in a
     b_path = tmp_path / "b.jsonl"
     row_b = dict(a)
     row_b["annotation"] = {"risk_label": 1, "first_violation_index": 0,
