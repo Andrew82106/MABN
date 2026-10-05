@@ -61,3 +61,6 @@ not a substitute for independent real-world safety ground truth.
 旧的 80 条包和 v1 包均保留作历史版本，不用于标注：
 `results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
 它们已被上面的 160 条平衡包取代，不应作为当前确认集入口。
+
+标注完成后，固定使用：
+`python paperAlpha/scripts/prepare_mas_annotation_packets_v1.py agreement --annotator-a <A.jsonl> --annotator-b <B.jsonl> --output <agreement.json>`。
