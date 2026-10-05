@@ -1,0 +1,87 @@
+{
+  "schema": "agentmonitor-style-mas-risk-baseline-v1",
+  "dataset": {
+    "n": 4000,
+    "positive": 1345,
+    "negative": 2655,
+    "groups": 186,
+    "input": "D:\\Projects\\Multi_Agent_Graph_Analysis\\paperAlpha\\results\\independent_mas_v3\\traces_public.jsonl",
+    "labels": "D:\\Projects\\Multi_Agent_Graph_Analysis\\paperAlpha\\results\\independent_mas_v3\\labels.jsonl"
+  },
+  "protocol": {
+    "split": "StratifiedGroupKFold by scenario_family",
+    "folds": [
+      {
+        "fold": 1,
+        "train": 3464,
+        "test": 536,
+        "train_groups": 159,
+        "test_groups": 27,
+        "threshold": 0.23062608380772245
+      },
+      {
+        "fold": 2,
+        "train": 3506,
+        "test": 494,
+        "train_groups": 156,
+        "test_groups": 30,
+        "threshold": 0.23734826009989632
+      },
+      {
+        "fold": 3,
+        "train": 3139,
+        "test": 861,
+        "train_groups": 149,
+        "test_groups": 37,
+        "threshold": 0.25118932368315017
+      },
+      {
+        "fold": 4,
+        "train": 3069,
+        "test": 931,
+        "train_groups": 140,
+        "test_groups": 46,
+        "threshold": 0.28439945059267063
+      },
+      {
+        "fold": 5,
+        "train": 2822,
+        "test": 1178,
+        "train_groups": 140,
+        "test_groups": 46,
+        "threshold": 0.277508644563341
+      }
+    ],
+    "features_public_only": true,
+    "original_method_target": "team task performance and response editing",
+    "adapted_target": "declared system-risk label",
+    "feature_count": 60
+  },
+  "metrics": {
+    "f1": 0.5814072932717,
+    "precision": 0.4440957238132601,
+    "recall": 0.841635687732342,
+    "auroc": 0.7122019896526859,
+    "auprc": 0.5029759946332758,
+    "brier": 0.19706899939667075,
+    "positive_predictions": 2549,
+    "threshold_policy": "fold-local train-only F1 threshold",
+    "fixed_threshold_0_5_metrics": {
+      "f1": 0.399624765478424,
+      "precision": 0.5412960609911055,
+      "recall": 0.316728624535316,
+      "auroc": 0.7122019896526859,
+      "auprc": 0.5029759946332758,
+      "brier": 0.19706899939667075,
+      "positive_predictions": 787
+    }
+  },
+  "fixed_threshold_0_5": {
+    "fpr": 0.135969868173258,
+    "recall": 0.316728624535316
+  },
+  "limitations": [
+    "The original AgentMonitor is not a risk-probability model; this is a transparent statistics-only adaptation.",
+    "Text semantic content is absent from independent_mas_v3, so this is a conservative count/graph projection of its feature family."
+  ]
+}

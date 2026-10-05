@@ -18,6 +18,7 @@
 | `graph_features_learned` | 同一公开字段上的学习型图统计/连通性控制；已在严格五折 family holdout 中运行 |
 | `local_only_learned` | 同一公开字段上的局部 Agent 池化控制；已在严格五折 family holdout 中运行 |
 | `dynamic_taint_path` | 透明污点可达性规则控制；已在严格五折 family holdout 中运行，不是外部论文复现 |
+| `agentmonitor_style_statistics` | 按 AgentMonitor 原始公开思路提取逐 Agent 输入/输出/调用与图统计，再用同一 family-disjoint 训练协议预测本文风险标签；这是目标适配，不是原论文安全目标复现 |
 
 `per_agent_max` 在当前公开释放中几乎恒为 0.5，因此全预测为正，只保留为 sanity control；主竞争表使用 `local_only_learned`、`graph_features_learned` 和 `dynamic_taint_path`，避免把退化规则误写成强基线。
 
