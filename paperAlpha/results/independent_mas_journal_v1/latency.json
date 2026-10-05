@@ -1,0 +1,11 @@
+{
+  "n": 1000,
+  "cpu_inference_ms": {
+    "p50": 1.0110000148415565,
+    "p95": 1.7114299815148113,
+    "mean": 1.055753304157406,
+    "max": 2.2721998393535614
+  },
+  "peak_tracemalloc_mb": 0.0471649169921875,
+  "scope": "feature extraction plus runtime BN propagation; excludes API generation, network, semantic parsing and training"
+}

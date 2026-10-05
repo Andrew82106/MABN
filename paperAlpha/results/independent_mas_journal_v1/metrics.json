@@ -1,0 +1,400 @@
+{
+  "dataset": {
+    "input": "paperAlpha\\results\\independent_mas_v3\\traces_public.jsonl",
+    "labels": "paperAlpha\\results\\independent_mas_v3\\labels.jsonl",
+    "n": 4000,
+    "positive": 1345,
+    "negative": 2655,
+    "groups": 186,
+    "public_fields_only": true
+  },
+  "protocol": {
+    "split": "StratifiedGroupKFold by scenario_family",
+    "thresholds": "fold-local thresholds; fusion threshold from nested inner-OOF scores; ranking/calibration are pooled outer OOF",
+    "fixed_fpr": "fold-local 5% train-negative FPR thresholds",
+    "forbidden_features": [
+      "external_effect",
+      "hidden_fields",
+      "label",
+      "label_source",
+      "mechanism",
+      "scenario_family"
+    ]
+  },
+  "methods": {
+    "workflow_bn": {
+      "f1": 0.516496465043205,
+      "precision": 0.35094742460635175,
+      "recall": 0.9776951672862454,
+      "auroc": 0.5167630689097515,
+      "auprc": 0.3397615246367674,
+      "brier": 0.6385145663241941,
+      "ece_10bin": 0.6449606401787715,
+      "threshold": "fold-local train-only",
+      "positive_predictions": 3747
+    },
+    "runtime_bn": {
+      "f1": 0.6263557483731019,
+      "precision": 0.49295774647887325,
+      "recall": 0.8587360594795539,
+      "auroc": 0.7162767871519682,
+      "auprc": 0.5452730286256882,
+      "brier": 0.1963489195936229,
+      "ece_10bin": 0.112842286535363,
+      "threshold": "fold-local train-only",
+      "positive_predictions": 2343
+    },
+    "workflow_logistic": {
+      "f1": 0.5179299103504482,
+      "precision": 0.3567218635980915,
+      "recall": 0.9449814126394052,
+      "auroc": 0.5776213779149952,
+      "auprc": 0.3887487339734008,
+      "brier": 0.21852256710284632,
+      "ece_10bin": 0.0088942154203693,
+      "threshold": "fold-local train-only",
+      "positive_predictions": 3563
+    },
+    "runtime_logistic": {
+      "f1": 0.6525265127885215,
+      "precision": 0.5620634067705534,
+      "recall": 0.7776951672862453,
+      "auroc": 0.8045655598260979,
+      "auprc": 0.652543779163594,
+      "brier": 0.16713560318208479,
+      "ece_10bin": 0.018678749446204596,
+      "threshold": "fold-local train-only",
+      "positive_predictions": 1861
+    },
+    "hierarchical_fusion": {
+      "f1": 0.6677609980302035,
+      "precision": 0.5978835978835979,
+      "recall": 0.7561338289962826,
+      "auroc": 0.8196710982294751,
+      "auprc": 0.6747922469648412,
+      "brier": 0.16035252556265614,
+      "ece_10bin": 0.01930768543054132,
+      "threshold": "fold-local train-only",
+      "positive_predictions": 1701
+    }
+  },
+  "fixed_fpr_5pct": {
+    "workflow_bn": {
+      "fpr": 0.7427495291902072,
+      "recall": 0.7992565055762082,
+      "predicted_positive": 3047
+    },
+    "runtime_bn": {
+      "fpr": 0.05084745762711865,
+      "recall": 0.25799256505576207,
+      "predicted_positive": 482
+    },
+    "workflow_logistic": {
+      "fpr": 0.054613935969868174,
+      "recall": 0.07509293680297398,
+      "predicted_positive": 246
+    },
+    "runtime_logistic": {
+      "fpr": 0.051224105461393596,
+      "recall": 0.2921933085501859,
+      "predicted_positive": 529
+    },
+    "hierarchical_fusion": {
+      "fpr": 0.0519774011299435,
+      "recall": 0.3033457249070632,
+      "predicted_positive": 546
+    }
+  },
+  "hierarchical_fusion_bootstrap_95": {
+    "auroc": {
+      "mean": 0.8197153217739774,
+      "low": 0.8041899957365906,
+      "high": 0.8356334761015034,
+      "n": 1000
+    },
+    "auprc": {
+      "mean": 0.675264994442231,
+      "low": 0.6436335197353247,
+      "high": 0.7065158750529376,
+      "n": 1000
+    },
+    "brier": {
+      "mean": 0.16029343590582848,
+      "low": 0.15387604592945794,
+      "high": 0.16658226734730774,
+      "n": 1000
+    },
+    "f1": {
+      "mean": 0.6675788247795197,
+      "low": 0.6436491096154807,
+      "high": 0.6917428045587073,
+      "n": 1000
+    }
+  },
+  "hierarchical_fusion_by_mechanism": {
+    "benign": {
+      "n": 831,
+      "positive": 0,
+      "auroc": null,
+      "auprc": null,
+      "f1": 0.0
+    },
+    "collusion": {
+      "n": 715,
+      "positive": 231,
+      "auroc": 0.7910450431111589,
+      "auprc": 0.6475875339904865,
+      "f1": 0.6405959031657356
+    },
+    "privilege_only": {
+      "n": 700,
+      "positive": 378,
+      "auroc": 0.6732516678168852,
+      "auprc": 0.6658639883146149,
+      "f1": 0.6866840731070496
+    },
+    "taint_path": {
+      "n": 1028,
+      "positive": 437,
+      "auroc": 0.8073447246454251,
+      "auprc": 0.780213099503947,
+      "f1": 0.707193515704154
+    },
+    "unexpected_edge": {
+      "n": 726,
+      "positive": 299,
+      "auroc": 0.7211156626694759,
+      "auprc": 0.6268518899252045,
+      "f1": 0.643646408839779
+    }
+  },
+  "fold_thresholds": {
+    "workflow_bn": [
+      0.9769450673406537,
+      0.975615261252786,
+      0.9760557410870665,
+      0.9789034003062564,
+      0.9729104783109465
+    ],
+    "runtime_bn": [
+      0.3301245115114304,
+      0.31919830731029636,
+      0.32288481561419907,
+      0.3347436255169258,
+      0.32270216009148883
+    ],
+    "workflow_logistic": [
+      0.2698954527779467,
+      0.2805242432121887,
+      0.25649099329457875,
+      0.2783030555502514,
+      0.275552731337922
+    ],
+    "runtime_logistic": [
+      0.38635726824177163,
+      0.3405065168328392,
+      0.3313407435667378,
+      0.38163575915375647,
+      0.3434067374884415
+    ],
+    "hierarchical_fusion": [
+      0.3731625797229955,
+      0.36933967410684126,
+      0.35228455396977193,
+      0.3610922620820817,
+      0.35543022811323705
+    ]
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train_count": 3103,
+      "test_count": 897,
+      "train_groups": 146,
+      "test_groups": 40,
+      "positive_test": 294,
+      "negative_test": 603,
+      "runtime_optimizer_success": true,
+      "fusion_inner_oof": true,
+      "fusion_base_scores": [
+        "workflow_bn_inner_oof",
+        "runtime_bn_inner_oof"
+      ],
+      "fusion_coefficients": [
+        -0.11710141868558101,
+        0.07704888643805792,
+        -0.5692283860737974,
+        -0.030380352968900026,
+        0.5426570460681113,
+        2.120397050082279,
+        -0.08301281301041064,
+        -0.13577994087408687,
+        0.5146243790038267,
+        0.2828356194761436,
+        -0.16213101845530478,
+        -0.16213101845530478,
+        0.5132950857044857,
+        0.3691916256360795,
+        0.2881459044936203,
+        1.957079391144049,
+        -0.04392252970591345,
+        1.0146461645306886,
+        0.011361210390620043,
+        0.2913048510251084
+      ],
+      "fusion_intercept": -2.4495780501191047
+    },
+    {
+      "fold": 2,
+      "train_count": 3325,
+      "test_count": 675,
+      "train_groups": 160,
+      "test_groups": 26,
+      "positive_test": 233,
+      "negative_test": 442,
+      "runtime_optimizer_success": true,
+      "fusion_inner_oof": true,
+      "fusion_base_scores": [
+        "workflow_bn_inner_oof",
+        "runtime_bn_inner_oof"
+      ],
+      "fusion_coefficients": [
+        -0.13031218059618516,
+        0.040836928069696035,
+        -0.5902446638614615,
+        -0.042605106596429146,
+        0.43991424540058105,
+        2.025925722808101,
+        -0.09809043464798552,
+        -0.13876557010409665,
+        0.7961934385867637,
+        0.38527347361549186,
+        -0.1425816696141776,
+        -0.1425816696141776,
+        0.5276145340539968,
+        0.3875632904767055,
+        0.2312376980097845,
+        1.8603069878084453,
+        0.17276338664826532,
+        0.6424438473838607,
+        0.03192937411100706,
+        -0.057097701247259956
+      ],
+      "fusion_intercept": -2.384432941328291
+    },
+    {
+      "fold": 3,
+      "train_count": 2902,
+      "test_count": 1098,
+      "train_groups": 139,
+      "test_groups": 47,
+      "positive_test": 371,
+      "negative_test": 727,
+      "runtime_optimizer_success": true,
+      "fusion_inner_oof": true,
+      "fusion_base_scores": [
+        "workflow_bn_inner_oof",
+        "runtime_bn_inner_oof"
+      ],
+      "fusion_coefficients": [
+        -0.22133957026920628,
+        0.14990134653787734,
+        -0.7329454956278864,
+        -0.018422019875511488,
+        0.5606423515243014,
+        1.3694513967537216,
+        -0.06989895602007065,
+        -0.1473157122245497,
+        0.5533809897524125,
+        0.16576182585196075,
+        -0.17695879079191157,
+        -0.17695879079191157,
+        0.5354957033469886,
+        0.4451078916939335,
+        0.34605933823196733,
+        1.8104446754415089,
+        0.18089345335563933,
+        0.5949186089444144,
+        0.0935492399598653,
+        0.2055689253965933
+      ],
+      "fusion_intercept": -1.9341837605884769
+    },
+    {
+      "fold": 4,
+      "train_count": 3263,
+      "test_count": 737,
+      "train_groups": 146,
+      "test_groups": 40,
+      "positive_test": 215,
+      "negative_test": 522,
+      "runtime_optimizer_success": true,
+      "fusion_inner_oof": true,
+      "fusion_base_scores": [
+        "workflow_bn_inner_oof",
+        "runtime_bn_inner_oof"
+      ],
+      "fusion_coefficients": [
+        -0.20733014990345525,
+        0.14777970620260036,
+        -0.7194216236333171,
+        -0.052620290711459725,
+        0.6270830775828475,
+        1.5150869116618133,
+        -0.08475326580142957,
+        -0.17034723228435855,
+        0.2480810618483317,
+        0.34341120721962537,
+        -0.1581067833508573,
+        -0.1581067833508573,
+        0.5124799359992191,
+        0.40711446432220577,
+        0.29569140714283637,
+        1.8208972109197084,
+        -0.08847297581983087,
+        0.7818087480782825,
+        0.023082784159192394,
+        0.6745080300948469
+      ],
+      "fusion_intercept": -1.8118508830009081
+    },
+    {
+      "fold": 5,
+      "train_count": 3407,
+      "test_count": 593,
+      "train_groups": 153,
+      "test_groups": 33,
+      "positive_test": 232,
+      "negative_test": 361,
+      "runtime_optimizer_success": true,
+      "fusion_inner_oof": true,
+      "fusion_base_scores": [
+        "workflow_bn_inner_oof",
+        "runtime_bn_inner_oof"
+      ],
+      "fusion_coefficients": [
+        -0.15651749821783992,
+        0.08533432845354352,
+        -0.6254491029192703,
+        -0.1091554028330205,
+        0.675820330713322,
+        1.6917464587363416,
+        -0.055058446366298114,
+        -0.16465840448851748,
+        0.6556145237269285,
+        0.19425784708316288,
+        -0.16040083309885672,
+        -0.16040083309885672,
+        0.5178319877176111,
+        0.4301510647936064,
+        0.30474785105875596,
+        1.8305833865273282,
+        0.06128581386399385,
+        0.6165392689113174,
+        0.03607537055479289,
+        0.41456731589338325
+      ],
+      "fusion_intercept": -2.3305067144282487
+    }
+  ]
+}

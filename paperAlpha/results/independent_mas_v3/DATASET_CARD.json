@@ -1,0 +1,23 @@
+{
+  "n": 4000,
+  "positive": 1345,
+  "negative": 2655,
+  "topology_families": 186,
+  "families_with_both_labels": 138,
+  "mechanisms": {
+    "taint_path": 1028,
+    "collusion": 715,
+    "privilege_only": 700,
+    "benign": 831,
+    "unexpected_edge": 726
+  },
+  "normative_runtime_separation": "runtime expected-edge dropout plus unexpected edges",
+  "public_trace_excluded_fields": [
+    "external_effect",
+    "hidden_fields",
+    "label",
+    "label_source",
+    "scenario_family"
+  ],
+  "label_source": "hidden multi-mechanism unauthorized external effect"
+}

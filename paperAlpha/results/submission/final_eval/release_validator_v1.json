@@ -1,0 +1,11 @@
+{
+  "schema": "independent-mas-release-validator-v1",
+  "trace_count": 4000,
+  "label_count": 4000,
+  "trace_duplicates": [],
+  "label_duplicates": [],
+  "labels_without_trace": [],
+  "traces_without_label": [],
+  "forbidden_public_keys": [],
+  "pass": true
+}

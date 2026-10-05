@@ -1,0 +1,55 @@
+{
+  "source": "paperAlpha\\results\\independent_mas_journal_v1\\predictions_oof.jsonl",
+  "note": "descriptive OOF strata; no threshold or retraining is selected by these bins",
+  "strata": {
+    "no_unknown": {
+      "n": 1632,
+      "positive": 461,
+      "auroc": 0.841214194812821,
+      "auprc": 0.6569781820953228,
+      "brier": 0.1410291283031478
+    },
+    "some_unknown": {
+      "n": 1453,
+      "positive": 545,
+      "auroc": 0.8112637917794933,
+      "auprc": 0.690288488671888,
+      "brier": 0.1702351839726311
+    },
+    "high_unknown": {
+      "n": 915,
+      "positive": 339,
+      "auroc": 0.7827377294329728,
+      "auprc": 0.6768022115518536,
+      "brier": 0.1791244180848682
+    },
+    "low_missing": {
+      "n": 3790,
+      "positive": 1292,
+      "auroc": 0.8204047758330505,
+      "auprc": 0.6802766865271912,
+      "brier": 0.16093503852428537
+    },
+    "high_missing": {
+      "n": 210,
+      "positive": 53,
+      "auroc": 0.8066939069823338,
+      "auprc": 0.5499464368672811,
+      "brier": 0.14983955354087106
+    },
+    "no_unexpected": {
+      "n": 3168,
+      "positive": 1049,
+      "auroc": 0.8196099928424607,
+      "auprc": 0.669434613437247,
+      "brier": 0.15955369761003876
+    },
+    "some_unexpected": {
+      "n": 832,
+      "positive": 296,
+      "auroc": 0.8194300877369907,
+      "auprc": 0.6968899257514928,
+      "brier": 0.16339421661300696
+    }
+  }
+}
