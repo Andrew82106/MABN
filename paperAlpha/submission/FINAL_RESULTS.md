@@ -74,7 +74,7 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
   共 22 次请求（21 成功、1 失败）；它验证统一调度、失败保留和 monitor/evaluator 分离，
   但任务文本显式给出授权/范围情境，因此不作为风险准确率或独立安全标签结果。
 - **接口复核**：当前 LANYUN `glm-5.3-flash` 仍可正常返回；本地 `58661/v1` 的
-  `gpt-5.6-luna` 复核仍返回 `503 auth_unavailable`，因此本地端点不能作为本轮最终实验来源。
+  `gpt-5.6-luna` 最新复核返回 HTTP `401`（包括备用 API-key 头），因此本地端点不能作为本轮最终实验来源。
 - **冻结四拓扑 API 队列**：LANYUN `glm-5.3-flash` 和 `qwen3.6-flash` 分别运行
   80 个 episode（chain/fork/join/review 各 20，40 safe/40 violation）。GLM 条件为
   220 次请求、145 成功/75 失败、33,036/53,241 输入/输出 token，47 个有终端预测的
