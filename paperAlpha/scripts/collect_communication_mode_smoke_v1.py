@@ -112,11 +112,23 @@ def _response_fields(response: object) -> dict[str, str]:
     """Extract only compact, non-evaluator parent fields."""
     if not isinstance(response, dict):
         return {"raw": str(response)[:240]}
-    return {
-        key: str(response.get(key, ""))[:240]
+    source = response
+    text = response.get("text")
+    if isinstance(text, str):
+        try:
+            decoded = json.loads(text)
+            if isinstance(decoded, dict):
+                source = {**response, **decoded}
+        except (TypeError, ValueError):
+            pass
+    fields = {
+        key: str(source.get(key, ""))[:240]
         for key in ("decision", "finding", "handoff")
-        if response.get(key) is not None
+        if source.get(key) is not None
     }
+    if not fields and isinstance(text, str):
+        fields["raw"] = text[:240]
+    return fields
 
 
 def _parent_context(mode: str, parents: dict[str, dict]) -> object:
@@ -130,6 +142,9 @@ def _parent_context(mode: str, parents: dict[str, dict]) -> object:
             "node": row.get("node"),
             "status": row.get("status"),
             "fields": fields,
+            # ``direct`` retains the parent report itself, while summary/vote
+            # below deliberately project it to a smaller deterministic view.
+            "response": (response.get("text", "")[:500] if isinstance(response, dict) and isinstance(response.get("text"), str) else ""),
         })
     if mode == "direct":
         return items
@@ -363,8 +378,8 @@ def main(argv=None) -> int:
     (args.output / "PLAN.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     results = []
-    for item in order:
-        task = SCENARIOS[item["variant"]][(order.index(item) // 2) % len(SCENARIOS[item["variant"]])]
+    for position, item in enumerate(order):
+        task = SCENARIOS[item["variant"]][(position // 2) % len(SCENARIOS[item["variant"]])]
         results.append(
             run_episode(
                 endpoint,
