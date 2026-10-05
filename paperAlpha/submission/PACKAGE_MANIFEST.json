@@ -24,7 +24,6 @@
     "scripts/retry_llm_judge_batches.py",
     "scripts/merge_llm_judge_outputs.py",
     "scripts/assemble_llm_judge_outputs.py",
-    "scripts/audit_submission_comparison.py",
     "scripts/prepare_mas_annotation_packets_v1.py",
     "src/paperalpha_runtime/unified_topology_queue.py"
   ],
