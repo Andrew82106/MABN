@@ -82,6 +82,7 @@ graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
   chain/fork/join/review × direct/summary/vote，共 33 次请求（25 成功、8 失败）；
   它验证统一调度、失败保留和 monitor/evaluator 分离，但任务文本显式给出授权/范围情境，
   因此不作为风险准确率或独立安全标签结果。
+- **同 episode 成本审计**：LANYUN authority-payment 队列前 10 个 episode 与语义抽取账成功对齐；串行 API+语义服务时间估计 p50/p95 为 47.386/83.429 秒，同一 monitor projection 的本地语义+图/BN p50/p95 为 0.691/0.996 ms。覆盖仅 10/80 episode，属于成本闭合诊断，不是部署吞吐保证。
 - **接口复核**：当前 LANYUN `glm-5.3-flash` 仍可正常返回；本地 `58661/v1` 的
   `gpt-5.6-luna` 最新复核返回 HTTP `401`（包括备用 API-key 头），因此本地端点不能作为本轮最终实验来源。
 - **冻结四拓扑 API 队列**：LANYUN `glm-5.3-flash` 和 `qwen3.6-flash` 分别运行

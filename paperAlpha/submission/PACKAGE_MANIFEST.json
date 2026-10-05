@@ -16,6 +16,7 @@
     "scripts/evaluate_prevalence_shift_v1.py",
     "scripts/paired_group_bootstrap_v1.py",
     "scripts/audit_e2e_cost_closure_v1.py",
+    "scripts/audit_e2e_episode_cost_v1.py",
     "scripts/evaluate_agentmonitor_style_baseline_v1.py",
     "src/paperalpha_runtime/unified_topology_queue.py"
   ],
@@ -43,7 +44,8 @@
     "results/submission/development/prevalence_shift_20261005/REPORT.md",
     "results/submission/development/paired_bootstrap_20261005/REPORT.md",
     "results/submission/development/e2e_cost_closure_20261005/REPORT.md",
-    "results/submission/development/agentmonitor_style_baseline_20261005/REPORT.md"
+    "results/submission/development/agentmonitor_style_baseline_20261005/REPORT.md",
+    "results/submission/development/e2e_episode_cost_20261005/REPORT.md"
   ],
   "excluded": [
     "API keys and credentials",

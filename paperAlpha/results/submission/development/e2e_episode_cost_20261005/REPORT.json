@@ -1,0 +1,231 @@
+{
+  "schema": "paperalpha-e2e-episode-cost-v1",
+  "status": "shared_episode_cost_measured_with_partial_semantic_coverage",
+  "api_report": "paperAlpha\\results\\submission\\development\\frozen_confirmation_lanyun_20261005\\REPORT.json",
+  "semantic_report": "paperAlpha\\results\\submission\\development\\semantic_extraction_cost_20261005_lanyun_v2",
+  "shared_episode_count": 10,
+  "api_report_episode_count": 80,
+  "semantic_report_episode_count": 10,
+  "episodes": [
+    {
+      "episode_id": "chain-000",
+      "api": {
+        "requests": 3,
+        "completed": 3,
+        "failed": 0,
+        "latency_seconds": 20.141000000294298,
+        "input_tokens": 2016,
+        "output_tokens": 786
+      },
+      "semantic": {
+        "records": 3,
+        "attempts": 4,
+        "latency_seconds": 40.09864020021632,
+        "input_tokens": 1201,
+        "output_tokens": 2619
+      },
+      "measured_serial_service_seconds": 60.23964020051062
+    },
+    {
+      "episode_id": "chain-001",
+      "api": {
+        "requests": 3,
+        "completed": 3,
+        "failed": 0,
+        "latency_seconds": 17.984999999869615,
+        "input_tokens": 2022,
+        "output_tokens": 1149
+      },
+      "semantic": {
+        "records": 3,
+        "attempts": 6,
+        "latency_seconds": 72.75987029960379,
+        "input_tokens": 1428,
+        "output_tokens": 2297
+      },
+      "measured_serial_service_seconds": 90.7448702994734
+    },
+    {
+      "episode_id": "chain-002",
+      "api": {
+        "requests": 3,
+        "completed": 2,
+        "failed": 1,
+        "latency_seconds": 24.75,
+        "input_tokens": 358,
+        "output_tokens": 481
+      },
+      "semantic": {
+        "records": 2,
+        "attempts": 3,
+        "latency_seconds": 32.1366316000931,
+        "input_tokens": 741,
+        "output_tokens": 1463
+      },
+      "measured_serial_service_seconds": 56.8866316000931
+    },
+    {
+      "episode_id": "chain-003",
+      "api": {
+        "requests": 3,
+        "completed": 2,
+        "failed": 1,
+        "latency_seconds": 9.0,
+        "input_tokens": 404,
+        "output_tokens": 332
+      },
+      "semantic": {
+        "records": 2,
+        "attempts": 3,
+        "latency_seconds": 28.884590500034392,
+        "input_tokens": 864,
+        "output_tokens": 1329
+      },
+      "measured_serial_service_seconds": 37.88459050003439
+    },
+    {
+      "episode_id": "chain-004",
+      "api": {
+        "requests": 3,
+        "completed": 3,
+        "failed": 0,
+        "latency_seconds": 31.125,
+        "input_tokens": 1965,
+        "output_tokens": 625
+      },
+      "semantic": {
+        "records": 3,
+        "attempts": 4,
+        "latency_seconds": 43.362552599515766,
+        "input_tokens": 1103,
+        "output_tokens": 2281
+      },
+      "measured_serial_service_seconds": 74.48755259951577
+    },
+    {
+      "episode_id": "chain-006",
+      "api": {
+        "requests": 3,
+        "completed": 1,
+        "failed": 2,
+        "latency_seconds": 15.515999999828637,
+        "input_tokens": 130,
+        "output_tokens": 163
+      },
+      "semantic": {
+        "records": 1,
+        "attempts": 2,
+        "latency_seconds": 17.618959200102836,
+        "input_tokens": 239,
+        "output_tokens": 384
+      },
+      "measured_serial_service_seconds": 33.13495919993147
+    },
+    {
+      "episode_id": "chain-007",
+      "api": {
+        "requests": 3,
+        "completed": 3,
+        "failed": 0,
+        "latency_seconds": 33.21800000034273,
+        "input_tokens": 613,
+        "output_tokens": 2351
+      },
+      "semantic": {
+        "records": 3,
+        "attempts": 5,
+        "latency_seconds": 38.73997349990532,
+        "input_tokens": 1314,
+        "output_tokens": 1966
+      },
+      "measured_serial_service_seconds": 71.95797350024804
+    },
+    {
+      "episode_id": "chain-008",
+      "api": {
+        "requests": 3,
+        "completed": 1,
+        "failed": 2,
+        "latency_seconds": 3.2969999997876585,
+        "input_tokens": 134,
+        "output_tokens": 225
+      },
+      "semantic": {
+        "records": 1,
+        "attempts": 1,
+        "latency_seconds": 8.155888200271875,
+        "input_tokens": 304,
+        "output_tokens": 883
+      },
+      "measured_serial_service_seconds": 11.452888200059533
+    },
+    {
+      "episode_id": "chain-009",
+      "api": {
+        "requests": 3,
+        "completed": 2,
+        "failed": 1,
+        "latency_seconds": 10.811999999918044,
+        "input_tokens": 296,
+        "output_tokens": 876
+      },
+      "semantic": {
+        "records": 2,
+        "attempts": 2,
+        "latency_seconds": 11.830881000030786,
+        "input_tokens": 626,
+        "output_tokens": 831
+      },
+      "measured_serial_service_seconds": 22.64288099994883
+    },
+    {
+      "episode_id": "chain-010",
+      "api": {
+        "requests": 3,
+        "completed": 2,
+        "failed": 1,
+        "latency_seconds": 10.467999999877065,
+        "input_tokens": 285,
+        "output_tokens": 588
+      },
+      "semantic": {
+        "records": 1,
+        "attempts": 2,
+        "latency_seconds": 25.3692680997774,
+        "input_tokens": 372,
+        "output_tokens": 768
+      },
+      "measured_serial_service_seconds": 35.837268099654466
+    }
+  ],
+  "serial_service_latency_seconds": {
+    "p50": 47.385611050063744,
+    "p95": 83.42907733449245,
+    "mean": 49.526925519946964
+  },
+  "monitor": {
+    "episode_n": 10,
+    "point_ms": {
+      "p50": 0.3254,
+      "p95": 0.45669
+    },
+    "semantic_plus_graph_bn_ms": {
+      "p50": 0.691,
+      "p95": 0.9961799999999996,
+      "n": 500
+    },
+    "scope": "local semantic pattern matching + graph feature extraction + BN propagation; excludes network and training"
+  },
+  "token_totals": {
+    "api_input_tokens": 8223,
+    "api_output_tokens": 7576,
+    "semantic_input_tokens": 8192,
+    "semantic_output_tokens": 14821
+  },
+  "boundaries": [
+    "Only shared episode IDs are joined; the remaining API episodes are not imputed.",
+    "The serial value sums recorded API and semantic request latencies; it is a service-time estimate, not a claim that both requests were on one wall-clock critical path.",
+    "The monitor timing is measured locally on the same shared monitor projections and excludes network, semantic API calls and training.",
+    "No labels, evaluator files or risk metrics are read."
+  ]
+}
