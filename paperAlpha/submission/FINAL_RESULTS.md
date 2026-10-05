@@ -88,6 +88,7 @@ MAS 威胁与协作拓扑补充参考 IEEE TDSC 的 *Cracks in Collaboration*，
 
 这些是方法和实验规范的邻近参照，不等于已经复现了对方任务，也不等于当前年份中科院分区
 已经完成认证；`protocol.json` 明确要求提交前补做学校采用版本的 CAS 官方核验。
+逐项的期刊/论文对照表见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/target_comparison_20261005.md`。
 
 ## 当前结论
 
