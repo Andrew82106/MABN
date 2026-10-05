@@ -113,8 +113,10 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
   AUROC/AUPRC = **0.561/0.353**。它是重要的失败诊断：说明当前模型对真实泄露流的迁移仍弱，
   不能把主数据集上的优势外推成普适优势。
 - **ATBench 外部迁移**：1,000 条人审过的通用 Agent 轨迹（497 unsafe/503 safe）；排除
-  `label/risk_source/failure_mode/reason/real_world_harm` 后，双线 AUROC/AUPRC = **0.593/0.554**。
-  这是非 MAS 的弱迁移边界，不进入 MAS 主表，也不支持普适安全检测结论。
+  `label/risk_source/failure_mode/reason/real_world_harm` 后，加入可审计的
+  prompt-injection、工具滥用、权限升级和未验证输出知识子图，双线 AUROC/AUPRC =
+  **0.608/0.582**，Brier = **0.257**，F1@0.5 = **0.173**。这是非 MAS 的弱迁移边界：知识层改善了排序，
+  但召回仍只有 **0.097**，不进入 MAS 主表，也不支持普适安全检测结论。
 
 ## 运行时审计
 
