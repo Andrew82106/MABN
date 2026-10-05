@@ -21,6 +21,10 @@ The two-line model is a white-box monitor of observable evidence, not a claim
 that the protected API model has become internally transparent and not a causal
 discovery method.
 
+The repaired canonical run also changes the workflow-line Brier from the
+pre-fix saturated value 0.639 to 0.236; this is why the current tracked
+`metrics.json` and `REPORT.md` must be used instead of older exploratory tables.
+
 ## Checks completed
 
 - Nested OOF fusion, family-cluster bootstrap intervals and public-field release validation.
