@@ -53,6 +53,6 @@ MAST 的 19 条 human-labelled 轨迹虽然含有三个 annotator 字段，但�
 
 在第 5 步完成前，主结果仍应写作“development package / external diagnostic”，不能写成“independent human-confirmed superiority”。审计脚本为 `scripts/audit_independent_confirmation_sources_v1.py`，默认只读现有文件并输出忽略的 JSON/Markdown 报告。
 
-当前已为完整的 80 条 Qwen 冻结队列生成去标签 A/B 标注包：
-`results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
-该目录只完成了准备，两个标注文件尚未填写，因此不会进入任何性能数字或门槛判定。
+后续已按上述方案生成平衡的 160 条去标签 A/B 标注包：Qwen 80 条、DeepSeek 80 条，四种拓扑每格各 20 条；模型与提供商字段已删除，两个标注文件均为空白。当前包位于：
+`results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2/`。
+该目录只完成了准备，两个标注文件尚未填写，因此不会进入任何性能数字或门槛判定。旧的 Qwen-only 目录仅保留作历史审计。

@@ -475,6 +475,20 @@
       "label_boundary": "All labels are hand-authored policy-intent evaluator targets; they are not blind human security labels.",
       "artifacts": ["scripts/collect_frozen_communication_queue_v1.py", "scripts/evaluate_two_layer_v2.py", "results/submission/development/frozen_communication_lanyun_qwen_full_20261005/REPORT.json", "results/submission/development/frozen_communication_transfer_qwen_full_20261005/REPORT.json"]
     },
+    "balanced_confirmation_packets_20261007": {
+      "status": "prepared_blind_packets_not_human_labelled",
+      "directory": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2",
+      "episodes": 160,
+      "conditions": [
+        {"provider": "LANYUN", "model": "qwen3.6-flash", "episodes": 80, "requests": 220, "completed": 220, "failed": 0},
+        {"provider": "LANYUN", "model": "deepseek-v4.1-flash", "episodes": 80, "requests": 220, "completed": 220, "failed": 0}
+      ],
+      "topologies": ["chain", "fork", "join", "review"],
+      "episodes_per_condition_topology": 20,
+      "blind_packet": "Model/provider identity and hidden simulator fields are removed; annotator A/B labels are blank.",
+      "label_boundary": "The source labels are hand-authored simulator policy-intent targets. Human security labels and Cohen's kappa are still pending; this packet is not an independent gold test set.",
+      "artifacts": ["scripts/prepare_mas_annotation_packets_v1.py", "tests/test_mas_annotation_packets.py", "results/submission/final_eval/CONFIRMATION_COHORT_STATUS.md"]
+    },
     "formal_collection": {
       "status": "not_frozen_or_started",
       "risk_families": ["privacy and information flow", "delegated authorization", "shared resources and action combinations"],
