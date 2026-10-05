@@ -76,9 +76,10 @@ graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
 - **API 前执行策略目标**：以预先声明的 scope/revocation policy 为标签、保留失败样本时，
   透明知识规则在 LANYUN 上 AUROC/AUPRC = **0.950/0.950**，本地端为
   **0.913/0.913**；这是策略绑定诊断，不是通用安全准确率。
-- **四拓扑 API 集成 smoke**：新增 8 个低成本 LANYUN episode，覆盖 chain/fork/join/review，
-  共 22 次请求（21 成功、1 失败）；它验证统一调度、失败保留和 monitor/evaluator 分离，
-  但任务文本显式给出授权/范围情境，因此不作为风险准确率或独立安全标签结果。
+- **四拓扑 API 集成 smoke**：最新低成本 LANYUN smoke 为 12 个 episode，覆盖
+  chain/fork/join/review × direct/summary/vote，共 33 次请求（25 成功、8 失败）；
+  它验证统一调度、失败保留和 monitor/evaluator 分离，但任务文本显式给出授权/范围情境，
+  因此不作为风险准确率或独立安全标签结果。
 - **接口复核**：当前 LANYUN `glm-5.3-flash` 仍可正常返回；本地 `58661/v1` 的
   `gpt-5.6-luna` 最新复核返回 HTTP `401`（包括备用 API-key 头），因此本地端点不能作为本轮最终实验来源。
 - **冻结四拓扑 API 队列**：LANYUN `glm-5.3-flash` 和 `qwen3.6-flash` 分别运行
