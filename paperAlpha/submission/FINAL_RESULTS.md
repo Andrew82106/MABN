@@ -55,6 +55,9 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
 - **四拓扑 API 集成 smoke**：新增 8 个低成本 LANYUN episode，覆盖 chain/fork/join/review，
   共 22 次请求（21 成功、1 失败）；它验证统一调度、失败保留和 monitor/evaluator 分离，
   但任务文本显式给出授权/范围情境，因此不作为风险准确率或独立安全标签结果。
+- **结构升级审计**：将 Layer-1 的局部 BN 风险作为节点状态沿运行时边传播，在 600 条开发轨迹
+  的固定诊断划分上 AUROC/AUPRC 为 **0.772/0.618**，低于现有并行双线融合的 **0.775/0.635**；
+  因此保留现有模型为主模型，把层间传播作为可解释结构审计，不用测试结果反向改主模型。
 - **MAST/MAD 外部审计**：1,642 条轨迹，按 MAS×benchmark 分组；AUROC/AUPRC =
   **0.681/0.852**。但 flat logistic 为 0.640/0.831，max-line rule 为 0.676/0.858，
   所以这里是外部稳健性补充，不宣称 BN 在该数据上胜出。该标签是公开失败注释流水线，

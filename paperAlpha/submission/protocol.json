@@ -322,6 +322,16 @@
       "boundary": "The public task text explicitly states the authorization/scope condition for each variant; evaluator labels and scores remain in evaluator.json, but this is not an independent security label or fair risk-prediction cohort.",
       "artifacts": ["scripts/collect_unified_topology_api_v1.py", "scripts/run_unified_topology_queue.py", "scripts/UNIFIED_TOPOLOGY_QUEUE.md", "results/submission/development/unified_topology_api_20261005_lanyun_r2/PLAN.json", "results/submission/development/unified_topology_api_20261005_lanyun_r2/REPORT.json"]
     },
+    "local_seeded_relation_architecture_audit": {
+      "directory": "results/submission/development/local_seeded_relation_v1",
+      "status": "completed_diagnostic_not_primary_model",
+      "method": "Propagate the inspectable Layer-1 local BN node score through explicit runtime message/delegation edges before the final risk head.",
+      "protocol": {"dataset": "independent_mas_v3", "n": 600, "train": 420, "test": 180, "seed": 20261005},
+      "seeded_relation": {"f1": 0.647887, "auroc": 0.771764, "auprc": 0.617917, "brier": 0.185565},
+      "v2_separately_fitted": {"f1": 0.662162, "auroc": 0.775226, "auprc": 0.634957, "brier": 0.186531},
+      "interpretation": "The stricter hierarchical propagation is more semantically aligned with the white-box story but does not improve this development split; the existing parallel two-line fusion remains the primary model. No causal claim is made.",
+      "artifacts": ["scripts/evaluate_local_seeded_relation_v1.py", "tests/test_local_seeded_relation.py", "results/submission/development/local_seeded_relation_v1/REPORT.json"]
+    },
     "binding_consistency_extension": {
       "directory": "results/submission/development/binding_consistency_extension_v2",
       "status": "completed_development_diagnostic_not_main_result",
