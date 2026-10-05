@@ -44,7 +44,7 @@ discovery method.
 - An independently adjudicated/licensed MAS confirmation cohort is still missing; the current 160-episode API queues use shared simulator policies and evaluator labels, and the blind annotator packets remain unfilled.
 - The prefix alarm audit is complete but weak at the fixed 5% false-alarm operating point; it must not be advertised as reliable early warning.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
-- End-to-end online cost still needs semantic extraction and process-level memory/scaling measurements; API transport and Python-path tracemalloc are already reported separately.
+- Component-wise online cost is now closed in `development/e2e_cost_closure_20261005/REPORT.md` (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
 
 Until these gates are closed, the numbers above are a strong development package
 and a reproducible paper candidate, not a final superiority claim for a journal.
