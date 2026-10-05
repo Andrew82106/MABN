@@ -28,6 +28,7 @@ F1 **0.667**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 - [同信息 LLM judge 对照](../results/submission/final_eval/LLM_JUDGE_BASELINE.md)
 - [同信息强基线审计](../results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md)
 - [按拓扑族校准审计](../results/submission/final_eval/GROUP_CALIBRATION_AUDIT.md)
+- [独立确认集准备状态](../results/submission/final_eval/CONFIRMATION_COHORT_STATUS.md)
 - [原生 MAS baseline 可复现性审计](../../doc/ref_paper/mas_safety_2026-09-11/journal_alignment/native_mas_baseline_audit_20261005.md)
 - [基线目录](baselines.json)
 - [跨 Agent 约束目录](relational_contracts.json)
