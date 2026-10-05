@@ -34,7 +34,7 @@ discovery method.
 - QuadSentinel external replay: completed, but only 5.19% action coverage and a different target.
 - AgentMonitor-style statistics control: completed under the same five-fold family split; AUROC 0.712/AUPRC 0.503/Brier 0.197. This is an explicit risk-target adaptation of the original task-performance monitor, not a direct original-target replication.
 - MAST/MAD external text audit (boundary-clean v2): 1,642 trajectories; structural-only AUROC/AUPRC 0.295/0.675 and semantic-extension 0.468/0.763 after stripping the terminal `Evaluation` block. It is secondary transfer evidence only; released annotations are not an independent human-gold confirmation of the main security target.
-- Prefix alarm audit: completed; it exposes held-out false-alarm shift instead of claiming reliable early warning.
+- Prefix alarm audit: completed; action-before stopping gives 6.7% negative false-alarm rate (177/2655) and 15.5% positive pre-action recall, while the 20.0% any-time rate includes post-action alarms; it remains a weak diagnostic rather than reliable early warning.
 - Grouped uncertainty audit: completed; runtime-BN intervals abstain on 6.1% of episodes (coverage 93.9%, mean width 0.030) and report selective coverage-risk without calling the interval a calibrated confidence interval.
 - Monitor-side scaling audit: completed; p95 is 0.532 ms for 1--3 events, 1.398 ms for 7--10 events and 1.905 ms for 11+ events, excluding API/semantic extraction.
 - Same-episode cost audit: 10/80 LANYUN episodes align API and semantic ledgers; serial service-time estimate p50/p95 47.386/83.429 s, local semantic+graph+BN p50/p95 0.691/0.996 ms. Coverage is partial and this is not a deployment throughput guarantee.
@@ -44,7 +44,7 @@ discovery method.
 
 ## Remaining gates
 
-- An independently adjudicated/licensed MAS confirmation cohort is still missing; the current 160-episode API queues use shared simulator policies and evaluator labels, and the blind annotator packets remain unfilled.
+- An independently adjudicated/licensed MAS confirmation cohort is still missing; the current blind materials contain 152 complete episodes across two API/model conditions, but use shared simulator policies, remain below the 160-episode target, and the annotator packets are unfilled.
 - The prefix alarm audit is complete but weak at the fixed 5% false-alarm operating point; it must not be advertised as reliable early warning.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
 - Component-wise online cost is now closed in `development/e2e_cost_closure_20261005/REPORT.md` (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
