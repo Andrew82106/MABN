@@ -6,7 +6,9 @@ cohort and from public benchmark labels.
 
 ## Minimum cohort
 
-- At least 100 complete MAS episodes from at least 4 workflow/topology families.
+- At least 160 complete MAS episodes: four workflow/topology families × two
+  independent API/model conditions × 20 episodes per condition/topology cell
+  (10 benign and 10 violating).
 - At least 2 independently labeled API/model conditions; endpoint/model identity
   is a grouping variable, never a feature.
 - Both benign and violating episodes, with the positive rate declared before

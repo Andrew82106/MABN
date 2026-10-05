@@ -83,13 +83,15 @@ graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
 - **API 前执行策略目标**：以预先声明的 scope/revocation policy 为标签、保留失败样本时，
   透明知识规则在 LANYUN 上 AUROC/AUPRC = **0.950/0.950**，本地端为
   **0.913/0.913**；这是策略绑定诊断，不是通用安全准确率。
-- **四拓扑 API 集成 smoke**：最新低成本 LANYUN smoke 为 12 个 episode，覆盖
-  chain/fork/join/review × direct/summary/vote，共 33 次请求（25 成功、8 失败）；
-  它验证统一调度、失败保留和 monitor/evaluator 分离，但任务文本显式给出授权/范围情境，
-  因此不作为风险准确率或独立安全标签结果。
+- **四拓扑 API 集成 smoke**：最新低成本 LANYUN `qwen3.6-flash` smoke 为 8 个
+  episode，覆盖 chain/fork/join/review，共 22 次请求且全部成功；传输 p50/p95 为
+  6.750/8.922 s，策略意图 evaluator 命中率为 1.000。它只验证统一调度、失败保留和
+  monitor/evaluator 分离；任务文本显式给出授权/范围情境，因此不作为风险准确率或独立
+  安全标签结果。原始记录见 `results/submission/development/frozen_confirmation_lanyun_20261006_flash/`。
 - **同 episode 成本审计**：LANYUN authority-payment 队列前 10 个 episode 与语义抽取账成功对齐；串行 API+语义服务时间估计 p50/p95 为 47.386/83.429 秒，同一 monitor projection 的本地语义+图/BN p50/p95 为 0.691/0.996 ms。覆盖仅 10/80 episode，属于成本闭合诊断，不是部署吞吐保证。
-- **接口复核**：当前 LANYUN `glm-5.3-flash` 仍可正常返回；本地 `58661/v1` 的
-  `gpt-5.6-luna` 最新复核返回 HTTP `401`（包括备用 API-key 头），因此本地端点不能作为本轮最终实验来源。
+- **接口复核**：当前 LANYUN `qwen3.6-flash` 可正常返回；本地 `58661/v1` 带有效
+  key 的最小生成复核返回 HTTP `503`（上游账号池不可用），因此本地端点不能作为本轮
+  最终实验来源。
 - **冻结四拓扑 API 队列**：LANYUN `glm-5.3-flash` 和 `qwen3.6-flash` 分别运行
   80 个 episode（chain/fork/join/review 各 20，40 safe/40 violation）。GLM 条件为
   220 次请求、145 成功/75 失败、33,036/53,241 输入/输出 token，47 个有终端预测的
