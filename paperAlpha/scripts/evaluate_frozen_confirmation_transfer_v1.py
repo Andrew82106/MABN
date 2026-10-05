@@ -54,8 +54,15 @@ def public_episode(directory: Path, plan_by_id: dict) -> tuple[dict, int, dict]:
             events.append({"event_type": "message_failed", "actor": node, "target": target,
                            "data_class": "unknown", "edge_kind": "workflow", "edge_confidence": 0.0,
                            "sequence": seq})
+    task_text = ""
+    for row in monitor.get("records", []):
+        request = row.get("request") or {}
+        if isinstance(request.get("task"), str):
+            task_text = request["task"]
+            break
     episode = {"episode_id": monitor.get("run_id", directory.name), "agents": nodes,
-               "workflow_dag": {"nodes": nodes, "edges": edges}, "events": events}
+               "workflow_dag": {"nodes": nodes, "edges": edges}, "events": events,
+               "task_text": task_text}
     label = int(evaluator["expected_policy_intent"])
     return episode, label, {"episode_id": episode["episode_id"], "topology": monitor.get("topology"),
                             "variant": evaluator.get("variant"), "completed_nodes": evaluator.get("completed_nodes"),

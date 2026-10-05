@@ -416,7 +416,7 @@
         {"directory": "results/submission/development/frozen_confirmation_lanyun_qwen_20261005", "model": "qwen3.6-flash", "episodes": 80, "requests": 220, "completed": 220, "failed": 0, "input_tokens": 41312, "output_tokens": 187869, "policy_intent_accuracy": 1.0}
       ],
       "label_boundary": "Both queues use hand-authored policy-intent evaluator targets; they are not blind human security labels.",
-      "transfer_boundary": "The frozen public projections transfer poorly to the current structural/tool-sink monitor (AUROC 0.500 for two-line BN; 0.424/0.500 for runtime logistic). A fixed public policy-text rule is a diagnostic control only.",
+      "transfer_boundary": "The pre-semantic structural/tool-sink projection transfers poorly (AUROC 0.500 for two-line BN; 0.424/0.500 for runtime logistic). The runtime semantic subgraph upgrade reaches AUROC/AUPRC 0.991/0.986 on the Lanyun GLM queue, but the queue labels are hand-authored policy intent and the semantic template has not yet been independently human validated.",
       "artifacts": ["scripts/collect_frozen_confirmation_queue_v1.py", "scripts/summarize_frozen_confirmation_queue_v1.py", "scripts/evaluate_frozen_confirmation_transfer_v1.py"]
     },
     "balanced_communication_queue_20261005": {
