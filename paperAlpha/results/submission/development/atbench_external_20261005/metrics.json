@@ -1,0 +1,599 @@
+{
+  "dataset": {
+    "name": "ATBench test",
+    "path": "paperAlpha\\data\\external\\ATBench\\test.json",
+    "role": "external single/general-agent transfer"
+  },
+  "training": {
+    "dataset": "independent_mas_v3",
+    "n": 4000,
+    "positive": 1345,
+    "seed": 20261005,
+    "optimizer": {
+      "success": true,
+      "iterations": 19,
+      "train_loss": 0.5941799343581213,
+      "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    "atbench_labels_used_for_fit": false
+  },
+  "model": {
+    "name": "TwoLayerBNGraphMonitor-v2",
+    "layer1": "frozen local BN CPT",
+    "layer2": "frozen edge-gated noisy-OR propagation + fixed semantic policy evidence",
+    "threshold": 0.5,
+    "causal_claim": false
+  },
+  "metrics": {
+    "ours": {
+      "f1": 0.043222003929273084,
+      "precision": 0.9166666666666666,
+      "recall": 0.022132796780684104,
+      "auroc": 0.5931253525126905,
+      "auprc": 0.553832593117019,
+      "brier": 0.2638997670249017,
+      "threshold": 0.5,
+      "predicted_positive": 12
+    },
+    "baselines": {
+      "layer1_bn": {
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "auroc": 0.5861671020156726,
+        "auprc": 0.545463159359616,
+        "brier": 0.2543003302655534,
+        "threshold": 0.5,
+        "predicted_positive": 0
+      },
+      "topology_only": {
+        "f1": 0.6515533165407221,
+        "precision": 0.5590778097982709,
+        "recall": 0.7806841046277666,
+        "auroc": 0.5861671020156726,
+        "auprc": 0.545463159359616,
+        "brier": 0.415,
+        "threshold": 0.5,
+        "predicted_positive": 694
+      },
+      "edge_count": {
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "auroc": 0.5,
+        "auprc": 0.497,
+        "brier": 0.497,
+        "threshold": 0.5,
+        "predicted_positive": 0
+      },
+      "single_agent": {
+        "f1": 0.6515533165407221,
+        "precision": 0.5590778097982709,
+        "recall": 0.7806841046277666,
+        "auroc": 0.5861671020156726,
+        "auprc": 0.545463159359616,
+        "brier": 0.415,
+        "threshold": 0.5,
+        "predicted_positive": 694
+      },
+      "dynamic_rule": {
+        "f1": 0.6515533165407221,
+        "precision": 0.5590778097982709,
+        "recall": 0.7806841046277666,
+        "auroc": 0.5861671020156726,
+        "auprc": 0.545463159359616,
+        "brier": 0.415,
+        "threshold": 0.5,
+        "predicted_positive": 694
+      },
+      "flat_logistic": {
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "auroc": 0.44672008192294926,
+        "auprc": 0.5300706624680946,
+        "brier": 0.2737023509852185,
+        "threshold": 0.5,
+        "predicted_positive": 0
+      }
+    }
+  },
+  "strata": {
+    "risk_source": {
+      "benign": {
+        "n": 250,
+        "positive": 0,
+        "metrics": null
+      },
+      "corrupted_tool_feedback": {
+        "n": 56,
+        "positive": 44,
+        "metrics": {
+          "f1": 0.044444444444444446,
+          "precision": 1.0,
+          "recall": 0.022727272727272728,
+          "auroc": 0.5198863636363636,
+          "auprc": 0.7943219571126547,
+          "brier": 0.35321080888596884,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "direct_prompt_injection": {
+        "n": 72,
+        "positive": 39,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.5804195804195804,
+          "auprc": 0.5870315581854043,
+          "brier": 0.3073236947773942,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "indirect_prompt_injection": {
+        "n": 95,
+        "positive": 77,
+        "metrics": {
+          "f1": 0.09876543209876543,
+          "precision": 1.0,
+          "recall": 0.05194805194805195,
+          "auroc": 0.8560606060606061,
+          "auprc": 0.9403280929596719,
+          "brier": 0.29758244205634643,
+          "threshold": 0.5,
+          "predicted_positive": 4
+        }
+      },
+      "inherent_agent_failures": {
+        "n": 196,
+        "positive": 135,
+        "metrics": {
+          "f1": 0.043478260869565216,
+          "precision": 1.0,
+          "recall": 0.022222222222222223,
+          "auroc": 0.7539162112932606,
+          "auprc": 0.8236860670194003,
+          "brier": 0.28363190313827324,
+          "threshold": 0.5,
+          "predicted_positive": 3
+        }
+      },
+      "malicious_tool_execution": {
+        "n": 53,
+        "positive": 25,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6971428571428573,
+          "auprc": 0.6133433962264152,
+          "brier": 0.2508310212585341,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "malicious_user_instruction_or_jailbreak": {
+        "n": 73,
+        "positive": 61,
+        "metrics": {
+          "f1": 0.06349206349206349,
+          "precision": 1.0,
+          "recall": 0.03278688524590164,
+          "auroc": 0.5942622950819673,
+          "auprc": 0.8644853338175078,
+          "brier": 0.39350024029891645,
+          "threshold": 0.5,
+          "predicted_positive": 2
+        }
+      },
+      "tool_description_injection": {
+        "n": 102,
+        "positive": 52,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.7742307692307693,
+          "auprc": 0.7177850821025071,
+          "brier": 0.23713871279526935,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "unreliable_or_misinformation": {
+        "n": 103,
+        "positive": 64,
+        "metrics": {
+          "f1": 0.03076923076923077,
+          "precision": 1.0,
+          "recall": 0.015625,
+          "auroc": 0.7469951923076923,
+          "auprc": 0.7742790684234859,
+          "brier": 0.2753859800088796,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      }
+    },
+    "failure_mode": {
+      "benign": {
+        "n": 250,
+        "positive": 0,
+        "metrics": null
+      },
+      "choosing_malicious_tool": {
+        "n": 32,
+        "positive": 18,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6111111111111112,
+          "auprc": 0.6256944444444444,
+          "brier": 0.2922006886687154,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "failure_to_validate_tool_outputs": {
+        "n": 99,
+        "positive": 67,
+        "metrics": {
+          "f1": 0.029411764705882353,
+          "precision": 1.0,
+          "recall": 0.014925373134328358,
+          "auroc": 0.7243470149253731,
+          "auprc": 0.7943059820514653,
+          "brier": 0.2687657467462097,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "flawed_planning_or_reasoning": {
+        "n": 66,
+        "positive": 46,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.716304347826087,
+          "auprc": 0.8067224315960413,
+          "brier": 0.3102756254850321,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "generation_of_harmful_offensive_content": {
+        "n": 14,
+        "positive": 3,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6515151515151515,
+          "auprc": 0.29365079365079366,
+          "brier": 0.16255318415447073,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "generation_of_malicious_executables": {
+        "n": 19,
+        "positive": 10,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.5166666666666667,
+          "auprc": 0.5348178137651821,
+          "brier": 0.2992694769213603,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "incorrect_tool_parameters": {
+        "n": 58,
+        "positive": 36,
+        "metrics": {
+          "f1": 0.15384615384615385,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "auroc": 0.7916666666666667,
+          "auprc": 0.8117816091954023,
+          "brier": 0.24997411959658897,
+          "threshold": 0.5,
+          "predicted_positive": 3
+        }
+      },
+      "inefficient_or_wasteful_execution": {
+        "n": 53,
+        "positive": 37,
+        "metrics": {
+          "f1": 0.05263157894736842,
+          "precision": 1.0,
+          "recall": 0.02702702702702703,
+          "auroc": 0.6858108108108107,
+          "auprc": 0.7939826619071901,
+          "brier": 0.336123354267574,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "insecure_interaction_or_execution": {
+        "n": 54,
+        "positive": 39,
+        "metrics": {
+          "f1": 0.05,
+          "precision": 1.0,
+          "recall": 0.02564102564102564,
+          "auroc": 0.8452991452991453,
+          "auprc": 0.9033852857382269,
+          "brier": 0.2902545116615936,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "instruction_for_harmful_illegal_activity": {
+        "n": 22,
+        "positive": 12,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.7833333333333333,
+          "auprc": 0.7744107744107744,
+          "brier": 0.2679289630479422,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "procedural_deviation_or_inaction": {
+        "n": 60,
+        "positive": 28,
+        "metrics": {
+          "f1": 0.06896551724137931,
+          "precision": 1.0,
+          "recall": 0.03571428571428571,
+          "auroc": 0.7572544642857142,
+          "auprc": 0.6679723502304147,
+          "brier": 0.22143541024913407,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "provide_inaccurate_misleading_or_unverified_information": {
+        "n": 66,
+        "positive": 40,
+        "metrics": {
+          "f1": 0.04878048780487805,
+          "precision": 1.0,
+          "recall": 0.025,
+          "auroc": 0.7625,
+          "auprc": 0.7806818181818181,
+          "brier": 0.2761303084047071,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "tool_misuse_in_specific_context": {
+        "n": 58,
+        "positive": 38,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6684210526315789,
+          "auprc": 0.7455132083081266,
+          "brier": 0.31274157012263193,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "unauthorized_information_disclosure": {
+        "n": 62,
+        "positive": 52,
+        "metrics": {
+          "f1": 0.03773584905660377,
+          "precision": 1.0,
+          "recall": 0.019230769230769232,
+          "auroc": 0.5826923076923077,
+          "auprc": 0.8633919843597263,
+          "brier": 0.43787547534704235,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "unconfirmed_or_over_privileged_action": {
+        "n": 87,
+        "positive": 71,
+        "metrics": {
+          "f1": 0.0547945205479452,
+          "precision": 1.0,
+          "recall": 0.028169014084507043,
+          "auroc": 0.7825704225352113,
+          "auprc": 0.9119313582645296,
+          "brier": 0.290393594503331,
+          "threshold": 0.5,
+          "predicted_positive": 2
+        }
+      }
+    },
+    "real_world_harm": {
+      "benign": {
+        "n": 250,
+        "positive": 0,
+        "metrics": null
+      },
+      "fairness_equity_and_allocative_harm": {
+        "n": 71,
+        "positive": 42,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.7787356321839081,
+          "auprc": 0.7768861229391855,
+          "brier": 0.25649824291203444,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "financial_and_economic_harm": {
+        "n": 76,
+        "positive": 45,
+        "metrics": {
+          "f1": 0.043478260869565216,
+          "precision": 1.0,
+          "recall": 0.022222222222222223,
+          "auroc": 0.6172043010752688,
+          "auprc": 0.6623781676413255,
+          "brier": 0.3127453245743528,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "functional_and_opportunity_harm": {
+        "n": 81,
+        "positive": 52,
+        "metrics": {
+          "f1": 0.03773584905660377,
+          "precision": 1.0,
+          "recall": 0.019230769230769232,
+          "auroc": 0.6744031830238726,
+          "auprc": 0.7390788224121558,
+          "brier": 0.29274913026184457,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "info_ecosystem_and_societal_harm": {
+        "n": 69,
+        "positive": 43,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6721824686940966,
+          "auprc": 0.7205089315807213,
+          "brier": 0.2947783398004094,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "physical_and_health_harm": {
+        "n": 62,
+        "positive": 40,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.7261363636363637,
+          "auprc": 0.7781336405529955,
+          "brier": 0.30472634999925147,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "privacy_and_confidentiality_harm": {
+        "n": 82,
+        "positive": 62,
+        "metrics": {
+          "f1": 0.14925373134328357,
+          "precision": 1.0,
+          "recall": 0.08064516129032258,
+          "auroc": 0.6524193548387096,
+          "auprc": 0.8262897605934584,
+          "brier": 0.3771754121199595,
+          "threshold": 0.5,
+          "predicted_positive": 5
+        }
+      },
+      "psychological_and_emotional_harm": {
+        "n": 45,
+        "positive": 25,
+        "metrics": {
+          "f1": 0.07692307692307693,
+          "precision": 1.0,
+          "recall": 0.04,
+          "auroc": 0.84,
+          "auprc": 0.8073015873015873,
+          "brier": 0.21497447448256354,
+          "threshold": 0.5,
+          "predicted_positive": 1
+        }
+      },
+      "public_service_and_resource_harm": {
+        "n": 59,
+        "positive": 42,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.7752100840336134,
+          "auprc": 0.8533145736535567,
+          "brier": 0.30842039156325124,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "reputational_and_interpersonal_harm": {
+        "n": 59,
+        "positive": 33,
+        "metrics": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "auroc": 0.6369463869463869,
+          "auprc": 0.6409710263149945,
+          "brier": 0.2914449089808342,
+          "threshold": 0.5,
+          "predicted_positive": 0
+        }
+      },
+      "security_and_system_integrity_harm": {
+        "n": 146,
+        "positive": 113,
+        "metrics": {
+          "f1": 0.05172413793103448,
+          "precision": 1.0,
+          "recall": 0.02654867256637168,
+          "auroc": 0.8407079646017699,
+          "auprc": 0.9165917707893537,
+          "brier": 0.27001394628182745,
+          "threshold": 0.5,
+          "predicted_positive": 3
+        }
+      }
+    }
+  },
+  "audit": {
+    "n": 1000,
+    "positive": 497,
+    "negative": 503,
+    "label_balance": 0.497,
+    "unique_risk_sources": 9,
+    "unique_failure_modes": 15,
+    "unique_harms": 11,
+    "parse_failures": 0,
+    "episodes_with_tools": 999,
+    "mean_event_count": 4.518,
+    "mean_public_text_chars": 9404.204,
+    "tool_name_count": 1953,
+    "feature_label_exclusion": [
+      "label",
+      "risk_source",
+      "failure_mode",
+      "reason",
+      "real_world_harm"
+    ]
+  },
+  "limitations": [
+    "ATBench is not a multi-agent benchmark and is reported only as external transfer.",
+    "Labels are benchmark annotations; no ATBench label, reason, failure mode, or harm field enters features or fitting.",
+    "Tool-name normalization is a fixed name-only policy prior; it is not learned or tuned on ATBench.",
+    "Results do not replace independent human/labelling validation for MAS deployment."
+  ]
+}
