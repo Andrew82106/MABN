@@ -14,6 +14,7 @@ families), family-disjoint five-fold OOF evaluation gives:
 | runtime logistic | 0.653 | 0.805 [0.791, 0.818] | 0.653 [0.622, 0.683] | 0.167 |
 | graph-features logistic | 0.578 | 0.724 [0.708, 0.739] | 0.527 [0.500, 0.558] | 0.194 |
 | local-only logistic | 0.564 | 0.688 [0.672, 0.705] | 0.485 [0.460, 0.516] | 0.204 |
+| AgentMonitor-style statistics + logistic (adapted target) | 0.581 | 0.712 | 0.503 | 0.197 |
 | two-line BN fusion | **0.668** | **0.820 [0.804, 0.835]** | **0.675 [0.646, 0.707]** | **0.160** |
 
 The two-line model is a white-box monitor of observable evidence, not a claim
@@ -31,6 +32,7 @@ discovery method.
 - A2ASecBench API leave-one-attack-family-out adapter: 80 episodes; fusion AUROC 0.833/AUPRC 0.899, retained only as an integration benchmark because the reference harness emits part of the labels.
 - Leakage-controlled A2ASecBench role audit: 80 episodes; outcome metrics and `observed_violation` excluded, two-line AUROC/AUPRC 0.788/0.835. Labels remain benchmark-design roles, not human adjudication.
 - QuadSentinel external replay: completed, but only 5.19% action coverage and a different target.
+- AgentMonitor-style statistics control: completed under the same five-fold family split; AUROC 0.712/AUPRC 0.503/Brier 0.197. This is an explicit risk-target adaptation of the original task-performance monitor, not a direct original-target replication.
 - MAST/MAD external text audit (boundary-clean v2): 1,642 trajectories; structural-only AUROC/AUPRC 0.295/0.675 and semantic-extension 0.468/0.763 after stripping the terminal `Evaluation` block. It is secondary transfer evidence only; released annotations are not an independent human-gold confirmation of the main security target.
 - Prefix alarm audit: completed; it exposes held-out false-alarm shift instead of claiming reliable early warning.
 - Grouped uncertainty audit: completed; runtime-BN intervals abstain on 6.1% of episodes (coverage 93.9%, mean width 0.030) and report selective coverage-risk without calling the interval a calibrated confidence interval.

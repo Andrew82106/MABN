@@ -25,6 +25,7 @@
 | runtime logistic（同一运行时特征） | 0.653 | 0.805 | 0.653 | 0.167 |
 | graph-features logistic | 0.578 | 0.724 | 0.527 | 0.194 |
 | local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
+| AgentMonitor-style statistics + logistic (adapted target) | 0.581 | 0.712 | 0.503 | 0.197 |
 | reliability-weighted Bayesian fusion（期刊邻近对照） | 0.604 | 0.763 | 0.596 | 0.459 |
 | **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
 
@@ -40,9 +41,10 @@ scenario-family 留出上的 MAS 结构对照。它们只使用公开事件流�
 | no-taint contribution（图贡献但忽略 provenance） | 0.503 | 0.573 | 0.382 | 0.242 |
 | dynamic taint path（规则传播） | 0.503 | 0.597 | 0.405 | 0.321 |
 | trust/reputation risk（CogTrust 同信息代理） | 0.634 | 0.730 | 0.499 | 0.245 |
+| AgentMonitor-style statistics + logistic（目标适配） | 0.581 | 0.712 | 0.503 | 0.197 |
 | **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
 
-这些是与 MAS 近邻论文中“独立 Agent 聚合、拓扑传播、日志图/路径评分”相对应的
+AgentMonitor-style 对照严格采用其公开的逐 Agent 输入/输出/调用与图统计特征，但将原论文的“任务表现预测”目标适配为本文风险标签；因此它是同信息可复现适配，不是原论文安全目标复现。上述结果是与 MAS 近邻论文中“独立 Agent 聚合、拓扑传播、日志图/路径评分”相对应的
 同信息代理基线；ALTEDA 使用主机/网络日志，不能与本 API 可见条件直接混比，另列为
 richer-observation 上界参考。
 

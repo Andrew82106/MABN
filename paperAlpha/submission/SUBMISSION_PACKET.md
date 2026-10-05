@@ -21,7 +21,9 @@
 | runtime logistic | 0.653 | 0.805 | 0.653 | 0.167 |
 | graph-features logistic | 0.578 | 0.724 | 0.527 | 0.194 |
 | local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
+| AgentMonitor-style statistics + logistic（目标适配） | 0.581 | 0.712 | 0.503 | 0.197 |
 | reliability-weighted Bayesian fusion | 0.604 | 0.763 | 0.596 | 0.459 |
+| AgentMonitor-style adapted baseline | 0.653 | 0.811 | 0.657 | 0.164 |
 | **two-line BN fusion** | **0.668** | **0.820** | **0.675** | **0.160** |
 
 主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。相对最强同信息 trust/reputation proxy 的 ΔAUROC/ΔAUPRC 为 0.090 [0.077, 0.103] / 0.176 [0.153, 0.200]；相对 graph-features logistic 为 0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]。
@@ -30,7 +32,9 @@
 
 ## MAS 基线
 
-同一数据、同一五折的结构对照：per-agent mean（AUROC 0.480）、topology-only（0.545）、no-taint contribution（0.573）、dynamic taint path（0.597）、trust/reputation risk（0.730）；本文方法 0.820。上述为同信息代理基线。ALTEDA 使用主机/网络日志，属于 richer-observation 上界参考，不可直接混比。
+同一数据、同一五折的结构对照：per-agent mean（AUROC 0.480）、topology-only（0.545）、no-taint contribution（0.573）、dynamic taint path（0.597）、AgentMonitor-style statistics（0.712）、trust/reputation risk（0.730）；本文方法 0.820。AgentMonitor-style 使用原论文公开的统计特征族，但目标改为本文风险标签，属于同信息适配而非原方法复现。上述为同信息代理基线。ALTEDA 使用主机/网络日志，属于 richer-observation 上界参考，不可直接混比。
+
+另外已加入一个 AgentMonitor-style 适配基线：它只使用 AgentMonitor 公开实现所依赖的每 Agent 活动统计与工作流图统计，在相同风险标签和 family-disjoint 划分上重训；AUROC 0.811、AUPRC 0.657、Brier 0.164、F1 0.653。原论文的目标是任务表现预测且依赖文本/token 统计和外部 LLM judge，因此这里是适配实验，不是原论文精确复现。完整记录见 `results/submission/development/agentmonitor_adapter_20261005/REPORT.md`。
 
 ## LANYUN 完整通信队列
 
