@@ -90,21 +90,14 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
   因而不改变主基准。对旧 LANYUN 80-episode 队列，升级后的双线输出 AUROC/AUPRC 为
   **0.991/0.986**；对 24-episode Qwen 通信条件队列为 **1.000/1.000**。两者都是手工策略意图
   evaluator 标签，只证明 API-only 语义证据能修复该负迁移边界，不能替代独立人工安全确认。
-- **通信方式分层队列（已冻结设计，待 API 执行）**：
-  `scripts/collect_frozen_communication_queue_v1.py` 覆盖 chain/fork/join/review 四种无环拓扑，
-  以及 direct、summary、vote 三种可观测通信契约；每个单元可生成安全/违规平衡 episode，
-  并分别保存 `monitor.json` 与 `evaluator.json`。该队列用于检验通信压缩和信息丢失是否改变
-  系统级风险监测，标签仍是预先写入的策略意图，不是独立人工安全金标准；当前尚未计入主结果。
-- **通信队列 LANYUN smoke**：低成本 `glm-5.3-flash` 的 12 个 topology×mode episode 共发起
-  33 次请求，16 次完成、17 次失败，输入/输出 token 为 2,970/6,964，传输延迟 p50/p95 为
-  4.766/15.578 s。可解析终态为 5 个、其中 3 个符合策略意图（0.600）；由于每格只有 1 个
-  episode 且失败较多，这只是集成连通性证据，不是通信方式性能结论。
-- **通信队列平衡条件**：LANYUN `qwen3.6-flash` 完成 24 个 episode（4 拓扑 × 3 通信方式 ×
-  safe/violation），66/66 请求成功；输入/输出 token 为 12,800/49,015，传输延迟 p50/p95 为
-  5.234/9.094 s。各 12 个条件单元的策略意图准确率均为 1.000，但这些标签仍是手工
-  evaluator 目标。把该队列投影到当前主监测器后，two-line BN AUROC/AUPRC 仍为 0.500/0.500，
-  说明当前结构线看不到纯文本授权意图；固定公开策略词规则达到 1.000/1.000，仅作为边界诊断，
-  不计入主结果。
+- **通信方式正式条件评测**：`collect_frozen_communication_queue_v1.py` 覆盖 chain/fork/join/review
+  四种无环拓扑、direct/summary/vote 三种通信契约，以及每格 5 safe/5 violation，共 120 个
+  episode。LANYUN `qwen3.6-flash` 完成 330/330 请求；输入/输出 token 为 61,629/259,326，
+  传输延迟 p50/p95 为 6.078/9.718 s。接入运行时语义子图后的双线 BN：AUROC **0.992**、
+  AUPRC **0.987**、F1 **0.968**；按 topology 的 AUROC 为 chain .980、fork .993、join 1.000、
+  review 1.000，按通信方式为 direct .994、summary 1.000、vote .981。这里的标签仍是手工
+  policy-intent evaluator，不是独立人工安全金标准，因此属于 API 条件迁移/通信鲁棒性证据，
+  不替代主结果和独立安全确认。
 - **结构升级审计**：将 Layer-1 的局部 BN 风险作为节点状态沿运行时边传播，在 600 条开发轨迹
   的固定诊断划分上 AUROC/AUPRC 为 **0.772/0.618**，低于现有并行双线融合的 **0.775/0.635**；
   因此保留现有模型为主模型，把层间传播作为可解释结构审计，不用测试结果反向改主模型。

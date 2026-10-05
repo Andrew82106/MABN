@@ -417,7 +417,7 @@
       ],
       "label_boundary": "Both queues use hand-authored policy-intent evaluator targets; they are not blind human security labels.",
       "transfer_boundary": "The pre-semantic structural/tool-sink projection transfers poorly (AUROC 0.500 for two-line BN; 0.424/0.500 for runtime logistic). The runtime semantic subgraph upgrade reaches AUROC/AUPRC 0.991/0.986 on the Lanyun GLM queue, but the queue labels are hand-authored policy intent and the semantic template has not yet been independently human validated.",
-      "artifacts": ["scripts/collect_frozen_confirmation_queue_v1.py", "scripts/summarize_frozen_confirmation_queue_v1.py", "scripts/evaluate_frozen_confirmation_transfer_v1.py"]
+      "artifacts": ["scripts/collect_frozen_confirmation_queue_v1.py", "scripts/summarize_frozen_confirmation_queue_v1.py", "scripts/evaluate_frozen_confirmation_transfer_v1.py", "scripts/evaluate_two_layer_v2.py"]
     },
     "balanced_communication_queue_20261005": {
       "status": "completed_policy_intent_integration_only",
@@ -437,6 +437,27 @@
       "label_boundary": "All labels are hand-authored policy-intent evaluator targets; they are not blind human security labels.",
       "transfer_boundary": "The current structural/tool-sink monitor remains at AUROC/AUPRC 0.500/0.500 on this text-only cohort; the public policy rule is a diagnostic control only.",
       "artifacts": ["scripts/collect_frozen_communication_queue_v1.py", "results/submission/development/frozen_communication_lanyun_qwen_balanced_20261005/REPORT.json", "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005/REPORT.json"]
+    },
+    "full_communication_queue_20261005": {
+      "status": "completed_policy_intent_transfer_only",
+      "directory": "results/submission/development/frozen_communication_lanyun_qwen_full_20261005",
+      "transfer_directory": "results/submission/development/frozen_communication_transfer_qwen_full_20261005",
+      "model": "qwen3.6-flash",
+      "episodes": 120,
+      "episodes_per_cell": 10,
+      "topologies": ["chain", "fork", "join", "review"],
+      "communication_modes": ["direct", "summary", "vote"],
+      "requests": 330,
+      "completed": 330,
+      "failed": 0,
+      "input_tokens": 61629,
+      "output_tokens": 259326,
+      "policy_intent_accuracy": 1.0,
+      "latency_p50_seconds": 6.078,
+      "latency_p95_seconds": 9.718,
+      "transfer_metrics": {"semantic_two_line_bn_auroc": 0.9916666666666667, "semantic_two_line_bn_auprc": 0.9870389344262296, "semantic_two_line_bn_f1": 0.967741935483871, "semantic_two_line_bn_brier": 0.03891294948496355, "runtime_logistic_auroc": 0.5, "runtime_logistic_auprc": 0.5},
+      "label_boundary": "All labels are hand-authored policy-intent evaluator targets; they are not blind human security labels.",
+      "artifacts": ["scripts/collect_frozen_communication_queue_v1.py", "scripts/evaluate_two_layer_v2.py", "results/submission/development/frozen_communication_lanyun_qwen_full_20261005/REPORT.json", "results/submission/development/frozen_communication_transfer_qwen_full_20261005/REPORT.json"]
     },
     "formal_collection": {
       "status": "not_frozen_or_started",
