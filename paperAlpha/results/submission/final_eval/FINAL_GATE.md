@@ -46,8 +46,8 @@ discovery method.
 
 - An independently adjudicated/licensed MAS confirmation cohort is still missing; the current blind materials contain 152 complete episodes across two API/model conditions, but use shared simulator policies, remain below the 160-episode target, and the annotator packets are unfilled.
 - The prefix alarm audit is complete but weak at the fixed 5% false-alarm operating point; it must not be advertised as reliable early warning.
-- A strict same-information zero-shot LLM-judge adapter is implemented and tested; the local gateway currently returns an upstream account-pool 503, and the LANYUN run is partial with transient empty-content failures.
-- A LANYUN `glm-5.3-flash` judge smoke on 400 sampled public traces parsed 368/400; on the same 368 episodes, the two-line monitor scores AUROC/AUPRC 0.801/0.674 versus the judge's 0.747/0.562. This is a partial same-subset diagnostic, not a full 4,000-episode baseline.
+- A strict same-information zero-shot LLM-judge adapter is implemented and tested. The local gateway still returns an upstream account-pool 503. The completed LANYUN run returned 3,119/4,000 usable predictions; 881 traces were missing after 110 failed batches and are retained in the error ledger.
+- On the same 3,119 episodes, the two-line monitor scores AUROC/AUPRC/F1/Brier 0.825/0.681/0.645/0.158 versus the LLM judge's 0.778/0.585/0.574/0.315. This is a partial-coverage baseline, not a full-coverage API judge claim; details are in `LLM_JUDGE_BASELINE.md`.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
 - Component-wise online cost is now closed in `development/e2e_cost_closure_20261005/REPORT.md` (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
 
