@@ -155,7 +155,8 @@ graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
   记录在 `results/submission/development/semantic_extraction_cost_20261005_lanyun_v2/`。
 - **端到端成本闭合**：已将 API transport、语义抽取和图/BN 监测三份账本合并为组件级审计，
   见 `results/submission/development/e2e_cost_closure_20261005/REPORT.md`；由于三者不是同一
-  episode，报告不虚构单一端到端延迟，部署级 RSS 和训练成本仍单列为待补项。
+  episode，报告不虚构单一端到端延迟。当前主评测五折复跑耗时 **1,082.5 秒**；监测器 RSS/缩放见
+  `results/submission/final_eval/online_scaling_v2/REPORT.md`，但这仍不是部署吞吐保证。
 
 ## 期刊对照边界
 

@@ -66,7 +66,7 @@ pre-fix saturated value 0.639 to 0.236; this is why the current tracked
 - The matched-information audit now has paired topology-family bootstrap intervals for the flat controls, but still lacks a preregistered untouched confirmation cohort; the current 4,000-episode OOF package remains development evidence, not final generalization proof.
 - The release-specific judge/annotation tests pass (6/6); the broader historical `paperAlpha/tests` collection still needs the optional `openai-agents` SDK and is not claimed green in the current environment.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
-- Component-wise online cost is recorded in a local-only diagnostic (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
+- Component-wise online cost is recorded in local-only diagnostics (API transport, semantic extraction and monitor path). A fresh canonical five-fold OOF rerun completed in **1,082.5 s** on the current host; monitor-side scaling reports sampled RSS deltas up to **0.031 MB** per event-bin pass. These are reproducibility and monitor-resource measurements, not a deployment throughput guarantee; full API/semantic same-episode coverage remains partial.
 
 Until these gates are closed, the numbers above are a strong development package
 and a reproducible paper candidate, not a final superiority claim for a journal.
