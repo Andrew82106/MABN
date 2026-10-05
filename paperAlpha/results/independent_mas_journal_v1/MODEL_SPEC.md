@@ -1,6 +1,10 @@
 # Two-line MAS risk monitor — inspectable specification
 
-This is the active development candidate evaluated in `metrics.json`.
+This is the active development candidate evaluated in `metrics.json`. In the paper,
+call it a **knowledge-compiled conditional BN factorization**: the graph, named
+conditional factors and noisy-OR composition are explicit and inspectable, but this
+is not causal discovery and not a claim that the protected LLM internally uses the
+same graph.
 
 ## Inputs
 

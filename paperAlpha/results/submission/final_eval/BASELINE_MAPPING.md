@@ -10,7 +10,7 @@
 | `workflow_only` | 只使用规范 DAG 与执行图差异 |
 | `ours_hierarchical_bn_runtime` | 局部 BN + 运行时传播 + 规范 DAG + 知识模板的双线融合 |
 | `taint_path_rule` | 透明污点可达性规则 |
-| `llm_judge_prefix` | 同一公开轨迹的 zero-shot LLM judge；LANYUN 完整请求返回 3,119/4,000 条有效预测，因 110 批失败仍是部分覆盖对照，不纳入主表；对齐结果见 `LLM_JUDGE_BASELINE.md` |
+| `llm_judge_prefix` | 同一公开轨迹的 zero-shot LLM judge；LANYUN 经定向重试后 4,000/4,000 条有效预测，作为全量同信息辅助对照但不是已发表方法复现；对齐结果见 `LLM_JUDGE_BASELINE.md` |
 | `policy_guard_proxy` | 规范/策略守卫式确定性检查；尚未纳入主表 |
 | `temporal_graph_classifier` | 时序图分类器或锁定 ALTEDA 作者实现；尚未纳入主表 |
 | `QuadSentinel_native_guard` | 作者实现重放；已在 HarnessAudit 派生 cohort 完成，但目标是 current-policy action detection，不能与本文 future/system-risk 指标直接拼表 |
@@ -35,6 +35,6 @@
 | ESWA — PenExpert | ATT&CK 知识库与任务状态编译 | 知识模板可审计性、知识增量消融 | 其目标是渗透测试任务辅助，不等于 MAS 系统风险概率 |
 | ESWA — ATC-Bayes | 多角色 Agent + 规则护栏 + reliability-weighted Bayesian fusion；多后端、重复留出、低阳性率和延迟报告 | 多后端风险监测、规则下限、概率校准、FPR/召回和成本 | 原论文标签与我们的 API MAS 风险谓词不同；必须在同一输入/标签/分组上重跑，不能直接搬其 recall/FPR |
 
-主表/补表现在包含同一输入、同一标签、同一 family split 下的学习型图控制和透明规则控制；详细数值见 `independent_mas_learned_baselines_v1` 与 `independent_mas_mas_baselines_v1`。这些仍是协议兼容的 proxy，不是已发表方法的复现。`llm_judge_prefix` 已完成一次 LANYUN 运行，但有部分批次失败，不能替代全覆盖外部 MAS 监测实现；`policy_guard_proxy` 和至少一个可运行的外部 MAS 监测实现仍需按同信息协议核验。若复现失败，报告失败原因，不以风格适配器冒充原方法。上述期刊论文作为方法与实验设计参照，不能用论文摘要中的任务成功率替代公平的风险监测基线；完整来源和核验等级见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/catalog.json`。
+主表/补表现在包含同一输入、同一标签、同一 family split 下的学习型图控制和透明规则控制；详细数值见 `independent_mas_learned_baselines_v1` 与 `independent_mas_mas_baselines_v1`。这些仍是协议兼容的 proxy，不是已发表方法的复现。`llm_judge_prefix` 已完成 LANYUN 全量运行并经定向重试得到 4,000/4,000 条有效预测；它仍只是同信息辅助对照，不能替代已发表的外部 MAS 监测实现。`policy_guard_proxy` 和至少一个可运行的外部 MAS 监测实现仍需按同信息协议核验。若复现失败，报告失败原因，不以风格适配器冒充原方法。上述期刊论文作为方法与实验设计参照，不能用论文摘要中的任务成功率替代公平的风险监测基线；完整来源和核验等级见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/catalog.json`。
 
 原生 MAS 方法的输入/目标边界审计见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/native_mas_baseline_audit_20261005.md`。其中 AgentMonitor 可作为统计聚合控制，BlindGuard/G-Safeguard 需按本文 schema 重训，QuadSentinel 是策略守卫目标，ALTEDA 是 richer-observation 上界；均不得在未满足同信息、同标签、同划分前写成公平复现。

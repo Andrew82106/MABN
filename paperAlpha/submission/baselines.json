@@ -319,8 +319,10 @@
       "target_alignment": "Use separate prompts/outputs and labels for current detection and future risk. Explanations are model statements, not automatically verified evidence.",
       "artifacts": {"pretrained_local_monitor_weights_required": false, "uses_hosted_backbone_models": true},
       "cost": {"measured": false, "monitor": "One judge call per scheduled prefix for the simplest profile; cost grows with full-prefix length. Freeze token budgets and truncation rules fairly."},
-      "run_status": "specification_only_not_submission_evaluated",
-      "pending": ["freeze complete prompt and permitted input projection", "select the same or explicitly cost-matched backbone profile", "validate output parsing and failure handling", "calibrate probabilities and alarm thresholds on independent development groups", "prevent exposure of future outcomes", "record tokens and latency"]
+      "run_status": "full_coverage_auxiliary_baseline_completed_not_published_method_reproduction",
+      "artifacts": {"adapter": "scripts/llm_judge_baseline.py", "evaluation": "scripts/evaluate_llm_judge_baseline.py", "retry": "scripts/retry_llm_judge_batches.py", "assembly": "scripts/assemble_llm_judge_outputs.py", "report": "results/submission/final_eval/LLM_JUDGE_BASELINE.md", "raw_run": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_assembled_final_r1"},
+      "result_summary": "LANYUN glm-5.3-flash returned 4000/4000 usable predictions; AUROC/AUPRC/F1/Brier are 0.771/0.578/0.571/0.317 versus the two-line BN 0.820/0.675/0.634/0.160.",
+      "pending": ["calibrate probabilities and alarm thresholds on independent development groups", "prevent exposure of future outcomes", "record tokens and latency", "do not present as a published-method reproduction or universal superiority claim"]
     },
     {
       "id": "same_information_glm",
@@ -337,8 +339,10 @@
       "local_reuse": {"path": "src/paperalpha_monitor/structured_event_baseline.py", "lines": [24, 25, 49, 66, 85, 141], "entry_points": ["event_features", "training_table", "glm_objective", "StructuredEventBaseline", "predict_joint"], "qualification": "The existing feature function explicitly excludes policy and IDs. Policy may be applied by the shared interpreter; audit whether learned behavior also needs policy context, and match that context across methods before calling this a fair comparison. Do not silently reuse a restricted historical feature view."},
       "artifacts": {"trained_submission_checkpoint_available": false},
       "cost": {"measured": false, "training": "CPU-feasible for modest feature counts; exact runtime unmeasured.", "inference": "Factor inference cost depends on retained graph structure, not only classifier size."},
-      "run_status": "existing_code_entry_verified_submission_fairness_and_run_pending",
-      "pending": ["freeze matched information and feature semantics", "verify identical supervised event targets and group splits", "tune regularization on development only", "compare joint and system-risk proper scores", "report dependence-removed variants as ablations, not the only external controls"]
+      "run_status": "matched_information_development_audit_completed_submission_freeze_pending",
+      "artifacts": {"audit": "results/submission/final_eval/comparison_audit.json", "report": "results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md"},
+      "result_summary": "Five repeated family holdouts: matched public logistic mean AUROC/AUPRC/F1/Brier 0.817/0.661/0.658/0.163; two-line BN 0.816/0.666/0.659/0.165.",
+      "pending": ["freeze matched information and feature semantics before a final test", "verify identical supervised event targets and group splits", "report dependence-removed variants as ablations, not the only external controls", "retain the audit caveat that no broad all-metric superiority is established"]
     },
     {
       "id": "same_information_histgb",
@@ -355,8 +359,10 @@
       "local_reuse": {"path": "src/paperalpha_monitor/structured_event_baseline.py", "lines": [85, 97, 114, 120, 141], "qualification": "Existing class supports the tree profile; source explicitly notes its own mean-row loss and L2, not numerically matched BN regularization. Tune fairly rather than asserting equal numerical objectives."},
       "artifacts": {"trained_submission_checkpoint_available": false},
       "cost": {"measured": false, "training": "CPU-feasible for modest tabular data; actual time and memory unmeasured.", "inference": "Includes shared probabilistic/policy composition cost."},
-      "run_status": "existing_code_entry_verified_submission_fairness_and_run_pending",
-      "pending": ["match information and supervision", "tune depth, leaves, learning rate and regularization on development groups", "evaluate calibration without confirmation-label tuning", "retain object and relation evidence", "record model size, latency and inference-width scaling"]
+      "run_status": "matched_information_development_audit_completed_submission_freeze_pending",
+      "artifacts": {"audit": "results/submission/final_eval/comparison_audit.json", "report": "results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md"},
+      "result_summary": "Five repeated family holdouts: matched public HistGB mean AUROC/AUPRC/F1/Brier 0.807/0.649/0.651/0.167; two-line BN 0.816/0.666/0.659/0.165.",
+      "pending": ["match information and supervision before a final test", "evaluate calibration without confirmation-label tuning", "retain object and relation evidence", "record model size, latency and inference-width scaling"]
     }
   ],
   "reserve_or_nonprimary_methods": [

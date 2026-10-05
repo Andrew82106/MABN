@@ -6,11 +6,12 @@
 
 ## 方法
 
-本文方法是 **two-line BN fusion（Knowledge-compiled relational event risk monitor）**：
+本文方法是 **two-line knowledge-compiled conditional BN factorization（Knowledge-compiled relational event risk monitor）**：
 
 - 规范/工作流线：角色、能力、权限、工作流边和危险汇点；
 - 运行时线：消息、工具调用、权限不匹配、异常边、冲突、验证与终止事件；
 - 两线先分别评分，再以训练折内 OOF 分数融合。监测器自身变量、关系、概率因子和证据路径可检查，但不读取模型权重或隐藏状态；“白盒”不等于被保护 LLM 白盒化。
+- 这里的 BN 指显式 DAG、条件风险因子与 noisy-OR/融合组合；它不是因果发现，也不声称被保护 LLM 内部实际采用同一计算图。
 
 ## 主结果（`independent_mas_v3`）
 
@@ -23,7 +24,6 @@
 | local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
 | AgentMonitor-style statistics + logistic（目标适配） | 0.581 | 0.712 | 0.503 | 0.197 |
 | reliability-weighted Bayesian fusion | 0.604 | 0.763 | 0.596 | 0.459 |
-| AgentMonitor-style adapted baseline | 0.653 | 0.811 | 0.657 | 0.164 |
 | **two-line BN fusion** | **0.668** | **0.820** | **0.675** | **0.160** |
 
 主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。相对最强同信息 trust/reputation proxy 的 ΔAUROC/ΔAUPRC 为 0.090 [0.077, 0.103] / 0.176 [0.153, 0.200]；相对 graph-features logistic 为 0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]。
@@ -34,7 +34,9 @@
 
 同一数据、同一五折的结构对照：per-agent mean（AUROC 0.480）、topology-only（0.545）、no-taint contribution（0.573）、dynamic taint path（0.597）、AgentMonitor-style statistics（0.712）、trust/reputation risk（0.730）；本文方法 0.820。AgentMonitor-style 使用原论文公开的统计特征族，但目标改为本文风险标签，属于同信息适配而非原方法复现。上述为同信息代理基线。ALTEDA 使用主机/网络日志，属于 richer-observation 上界参考，不可直接混比。
 
-另外已加入一个 AgentMonitor-style 适配基线：它只使用 AgentMonitor 公开实现所依赖的每 Agent 活动统计与工作流图统计，在相同风险标签和 family-disjoint 划分上重训；AUROC 0.811、AUPRC 0.657、Brier 0.164、F1 0.653。原论文的目标是任务表现预测且依赖文本/token 统计和外部 LLM judge，因此这里是适配实验，不是原论文精确复现。完整记录见 `results/submission/development/agentmonitor_adapter_20261005/REPORT.md`。
+AgentMonitor-style 适配基线只使用其公开的逐 Agent 活动统计与工作流图统计，得到 AUROC 0.712、AUPRC 0.503、Brier 0.197、F1 0.581；这是同信息适配，不是原论文安全目标复现。完整记录见 `results/submission/development/agentmonitor_style_baseline_20261005/REPORT.md`。另有同信息强基线审计显示，平面 Logistic 的 AUROC 与本文双线 BN 接近，因此本文不宣称全面击败所有同信息模型；见 `results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md`。
+
+另有一个严格同信息的 zero-shot LLM judge 对照：LANYUN `glm-5.3-flash` 对 4,000 条公开轨迹最终全部返回有效预测；judge 的 AUROC/AUPRC/F1/Brier 为 0.771/0.578/0.571/0.317，本文双层 BN 为 0.820/0.675/0.634/0.160。它是全量辅助 baseline，不是已发表方法复现，也不支持普遍优越性结论；完整协议和重试账本见 `results/submission/final_eval/LLM_JUDGE_BASELINE.md`。
 
 ## LANYUN 完整通信队列
 
@@ -69,3 +71,5 @@
 3. 在最后冻结模型/阈值后才打开确认标签，完成独立 fit/calibration/confirmation；报告 AUROC、AUPRC、group-weighted Brier、固定 FPR 召回、lead time、误报率、弃权覆盖率。当前已准备 120 条 Qwen 加 32 条完整 GLM、覆盖两个 API/model 条件的去标识双盲标注包，但尚未完成两名独立标注者的标注与仲裁。
 4. 补齐部署级 API/语义抽取成本、训练成本、端到端内存、监测 p50/p95 与失败率，并完成固定低误报点的独立在线预警确认。
 5. 完成学校采用年份/版本/类别的 CAS 官方记录核验；在上述事项完成前，投稿状态只能写 development package / external diagnostic。
+
+补充公平性边界：同信息 Logistic/HistGB 审计已经完成开发集比较，但尚未在模型冻结后的新确认集上完成配对显著性检验；因此主模型的论文卖点应优先放在双线可审计结构、知识增量与校准/解释路径，而不是“全面性能领先”。
