@@ -10,6 +10,8 @@
 
 当前主开发结果为 `results/independent_mas_journal_v1/`。4,000 条自建合成轨迹按 186 个 topology family 做五折 StratifiedGroupKFold；融合头使用内层 OOF 分数，避免把基础模型的训练内预测当作无偏证据。两线融合得到 F1=0.668、AUROC=0.820、AUPRC=0.675、Brier=0.160；同信息运行时逻辑回归为 F1=0.653、AUROC=0.805。该结果说明规范 DAG 与运行时证据互补，但仍是合成基准开发证据，不能宣称全面胜出或替代真实独立 MAS 测试。字段公平性复核、聚类区间和解释路径反事实审计已补齐，仍不等于独立外部确认。
 
+主基准可用 [reproduce_main.ps1](reproduce_main.ps1) 从固定种子重新生成公开轨迹并运行唯一的五折评测入口；生成的原始数据和结果默认留在本地 `results/`，不提交 API key 或外部原始数据。
+
 - [执行协议](protocol.json)定义研究对象、两条线、预测任务、数据与统计边界，以及 E1 至 E7 验收要求。
 - [修正版五折主评测](../results/independent_mas_journal_v1/REPORT.md)给出 family-disjoint OOF 主表、固定 5% FPR 结果、机制分解与聚类 bootstrap；[动作前前缀评测](../results/independent_mas_prefix_v1/REPORT.md)单独报告早期预警检查。
 - [首次报警/提前量审计](../results/submission/final_eval/prefix_alarm_v1/REPORT.md)报告固定误报率下的动作前及时召回、误报和提前事件数。
