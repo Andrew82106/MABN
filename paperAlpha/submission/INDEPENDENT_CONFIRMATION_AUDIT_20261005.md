@@ -52,3 +52,7 @@ MAST 的 19 条 human-labelled 轨迹虽然含有三个 annotator 字段，但�
 5. 固定模型、阈值和 baseline 后，才打开确认标签并运行一次最终评测。
 
 在第 5 步完成前，主结果仍应写作“development package / external diagnostic”，不能写成“independent human-confirmed superiority”。审计脚本为 `scripts/audit_independent_confirmation_sources_v1.py`，默认只读现有文件并输出忽略的 JSON/Markdown 报告。
+
+当前已为完整的 80 条 Qwen 冻结队列生成去标签 A/B 标注包：
+`results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
+该目录只完成了准备，两个标注文件尚未填写，因此不会进入任何性能数字或门槛判定。
