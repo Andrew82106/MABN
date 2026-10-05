@@ -24,6 +24,8 @@
 - [投稿实验要求固定表](../../doc/ref_paper/mas_safety_2026-09-11/journal_alignment/submission_requirements_20261002.md)把 ESWA/Elsevier/TDSC 官方要求映射到当前实验验收项。
 - [当前主评测结果](../results/submission/final_eval/RESULTS.md)包含最终候选模型与所有声明基线的同划分统计；[基线映射](../results/submission/final_eval/BASELINE_MAPPING.md)说明哪些是可直接比较的算法、哪些只是文献参照。
 - [最终实验门槛审计](../results/submission/final_eval/FINAL_GATE.md)是当前投稿候选的单页结论；历史运行只作为可复现原始证据保留。
+- [单页最终汇报包](SUBMISSION_PACKET.md)汇总当前方法、主结果、MAS 基线、API 通信队列、外部边界和投稿前硬门槛。
+- [ATBench 外部迁移审计](../results/submission/development/atbench_external_20261005/REPORT.md)是 1,000 条人审通用 Agent 数据的非 MAS 边界检查；结果不并入 MAS 主表。
 - [学习型 MAS 基线](../results/independent_mas_learned_baselines_v1/REPORT.md)和 [透明结构/污点规则控制](../results/independent_mas_mas_baselines_v1/REPORT.md)已按同一五折 topology-family holdout 运行；它们是协议兼容的 proxy/control，不冒充外部论文复现。
 - [字段公平性复核](../results/independent_mas_journal_parity_v1/REPORT.md)去掉运行时 `permission_mismatch` 后重跑同一协议；双线融合 AUROC/AUPRC=0.811/0.661，说明主结果不是由该单字段单独造成的。
 - [全方法 family-cluster bootstrap](../results/submission/final_eval/all_methods_ci_v1/REPORT.md)为主模型、学习型基线和规则控制统一给出 95% 区间；其中 F1@0.5 仅是补充诊断，主表仍使用 fold-local threshold。
