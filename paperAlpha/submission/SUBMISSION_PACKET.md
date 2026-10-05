@@ -24,7 +24,7 @@
 | reliability-weighted Bayesian fusion | 0.604 | 0.763 | 0.596 | 0.459 |
 | **two-line BN fusion** | **0.668** | **0.820** | **0.675** | **0.160** |
 
-主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。
+主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。相对最强同信息 trust/reputation proxy 的 ΔAUROC/ΔAUPRC 为 0.090 [0.077, 0.103] / 0.176 [0.153, 0.200]；相对 graph-features logistic 为 0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]。
 
 按训练折负类 5% 固定误报点，主模型测试 FPR 0.052、召回 0.303；ECE 0.019、Brier 0.160。该低误报点召回仍不高，因此不能把结果写成稳定的在线预警保证。
 
@@ -45,6 +45,7 @@
 - **AgentLeak**：4,258 条轨迹、937 个 request group；独立留组 late fusion AUROC/AUPRC 0.561/0.353，显示真实泄露流迁移较弱。
 - **ATBench**：1,000 条人审过的通用 Agent 轨迹（497 unsafe/503 safe）作为非 MAS 外部迁移；排除所有标签与风险解释字段后，加入四类知识层风险模式，双线 AUROC/AUPRC **0.608/0.582**、Brier **0.257**、F1@0.5 **0.173**。这仍是弱迁移边界，不能宣称普适安全检测。
 - **Who-and-When**：126 条 Algorithm-Generated failure-localization 样本全部为失败样本，只作外部响应边界审计；监测器分数平均变化 **+0.039**，上升率 **5.6%**，首报警率 **19.8%**，不作为二分类安全结果。
+- **低阳性率压力**：将主集 OOF 结果重加权到 5%/10% 阳性率时，两线 AUROC 保持 **0.820**，AUPRC 分别为 **0.201/0.336**；这是 prevalence-shift 诊断，不是新测试集。
 - A2ASecBench API、HarnessAudit、本地/LANYUN authority-payment 队列均为外部/迁移诊断，不能拼接冒充独立确认集。MAST 人工标注子集仅 19 条，也不足以替代新确认队列。
 
 ## 期刊对照
