@@ -12,6 +12,8 @@
     "scripts/evaluate_independent_fair_baselines_v1.py",
     "scripts/evaluate_independent_prefix_v1.py",
     "scripts/evaluate_same_information_strong_baselines_v1.py",
+    "scripts/evaluate_hierarchical_monitor_v3.py",
+    "scripts/evaluate_unified_monitor_v2.py",
     "scripts/evaluate_reliability_bayes_baseline_v1.py",
     "scripts/collect_frozen_confirmation_queue_v1.py",
     "scripts/collect_communication_mode_smoke_v1.py",
