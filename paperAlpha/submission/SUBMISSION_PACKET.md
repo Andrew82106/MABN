@@ -26,6 +26,8 @@
 
 主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。
 
+按训练折负类 5% 固定误报点，主模型测试 FPR 0.052、召回 0.303；ECE 0.019、Brier 0.160。该低误报点召回仍不高，因此不能把结果写成稳定的在线预警保证。
+
 ## MAS 基线
 
 同一数据、同一五折的结构对照：per-agent mean（AUROC 0.480）、topology-only（0.545）、no-taint contribution（0.573）、dynamic taint path（0.597）、trust/reputation risk（0.730）；本文方法 0.820。上述为同信息代理基线。ALTEDA 使用主机/网络日志，属于 richer-observation 上界参考，不可直接混比。
