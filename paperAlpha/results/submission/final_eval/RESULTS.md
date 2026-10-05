@@ -14,12 +14,12 @@ The fusion head uses inner OOF scores from both the normative workflow BN and th
 
 | method | F1 | precision | recall | AUROC | AUPRC | Brier | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| workflow + observed-endpoints BN | 0.516 | 0.351 | 0.978 | 0.517 | 0.340 | 0.639 | 0.645 |
+| workflow + observed-endpoints BN | 0.516 | 0.351 | 0.978 | 0.517 | 0.340 | 0.236 | 0.123 |
 | runtime BN only | 0.626 | 0.493 | 0.859 | 0.716 | 0.545 | 0.196 | 0.113 |
 | runtime logistic (same public runtime features) | 0.653 | 0.562 | 0.778 | 0.805 | 0.653 | 0.167 | 0.019 |
 | graph-features logistic (learned MAS graph control) | 0.578 | 0.449 | 0.813 | 0.724 | 0.527 | 0.194 | — |
 | local-only logistic (learned MAS local control) | 0.564 | 0.447 | 0.763 | 0.688 | 0.485 | 0.204 | — |
-| two-line BN fusion | **0.668** | **0.598** | 0.756 | **0.820** | **0.675** | **0.160** | 0.019 |
+| two-line BN fusion | **0.667** | **0.604** | 0.744 | **0.820** | **0.675** | **0.160** | 0.020 |
 
 As a direct journal-neighbor control, a transparent reliability-weighted
 Bayesian fusion baseline (train-only smoothed likelihoods and line reliabilities)
@@ -39,11 +39,11 @@ edge-count and taint-path rule controls are reported separately in
 `../../independent_mas_mas_baselines_v1/REPORT.md`; they are sanity controls,
 not published-method reproductions.
 
-To check feature parity, the same evaluator was rerun with the runtime
-`permission_mismatch` component removed. The two-line fusion then gives
-AUROC 0.811, AUPRC 0.661, Brier 0.165 and F1 0.650, versus 0.820/0.675/0.160/0.668
-in the full model. This narrows, but does not erase, the gap to the matched
-runtime-logistic control; it is an ablation, not a new headline result. See
+To check feature parity, a pre-fix run removed the runtime
+`permission_mismatch` component. That historical audit gave AUROC 0.811,
+AUPRC 0.661, Brier 0.165 and F1 0.650, versus 0.820/0.675/0.160/0.667
+in the repaired full model. It is not a new headline result; rerun it if it is
+used for a final paper claim. See
 `../../independent_mas_journal_parity_v1/REPORT.md`.
 
 All frozen OOF methods now also have family-cluster bootstrap intervals in
@@ -51,7 +51,7 @@ All frozen OOF methods now also have family-cluster bootstrap intervals in
 is explicitly F1 at 0.5; the main table's fold-local F1 remains the primary
 classification number.
 
-At fold-local empirical 5% train-negative FPR thresholds, the two-line fusion has test FPR 0.052 and recall 0.303. This is a development threshold diagnostic, not an independently calibrated deployment guarantee. Family-cluster bootstrap 95% intervals are AUROC [0.804, 0.836], AUPRC [0.644, 0.707], F1 [0.644, 0.692].
+At fold-local empirical 5% train-negative FPR thresholds, the two-line fusion has test FPR 0.052 and recall 0.304. This is a development threshold diagnostic, not an independently calibrated deployment guarantee. Family-cluster bootstrap 95% intervals are AUROC [0.804, 0.836], AUPRC [0.644, 0.707], F1 [0.644, 0.691].
 
 ## Scope
 
