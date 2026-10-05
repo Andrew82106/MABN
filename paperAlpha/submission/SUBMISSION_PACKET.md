@@ -45,7 +45,7 @@
 
 ## 期刊对照
 
-首选主题候选为 **Expert Systems with Applications**（风险评估、MAS、知识管理方向匹配）；这只是主题匹配，不代表录用或 CAS 资格。MAS 威胁/拓扑参考 IEEE TDSC *Cracks in Collaboration*；MAST 使用其官方仓库。不得用 JCR/SJR 代替学校采用版本的 CAS 官方核验；`Computers & Security` 当前官方范围被协议列为不适合作为本轮目标。逐项对照见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/target_comparison_20261005.md`。
+首选主题候选为 **Expert Systems with Applications**（风险评估、MAS、知识管理方向匹配）；这只是主题匹配，不代表录用或 CAS 资格。MAS 威胁/拓扑参考 IEEE TDSC *Cracks in Collaboration*；MAST 使用其官方仓库。不得用 JCR/SJR 代替学校采用版本的 CAS 官方核验；`Computers & Security` 当前官方范围被协议列为不适合作为本轮目标。逐项对照见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/target_comparison_20261005.md`，最新近邻刷新见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/near_neighbor_refresh_20261005.md`。
 
 ## 不可宣称
 
