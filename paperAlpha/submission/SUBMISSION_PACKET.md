@@ -68,7 +68,7 @@ AgentMonitor-style 适配基线只使用其公开的逐 Agent 活动统计与工
 
 1. 冻结至少 160 个目标完成 episode：四拓扑 × 两个独立 API/model 条件 × 每格 20（10 benign/10 violating）；失败、拒答、超时、截断全部保留。
 2. 两名标注者独立只看监测器可见材料与执行证据，报告 agreement、Cohen’s κ，争议按预注册规则裁决；确认标签不得来自 monitor、hidden attack ID 或同一 oracle。
-3. 在最后冻结模型/阈值后才打开确认标签，完成独立 fit/calibration/confirmation；报告 AUROC、AUPRC、group-weighted Brier、固定 FPR 召回、lead time、误报率、弃权覆盖率。当前已准备 120 条 Qwen 加 32 条完整 GLM、覆盖两个 API/model 条件的去标识双盲标注包，但尚未完成两名独立标注者的标注与仲裁。
+3. 在最后冻结模型/阈值后才打开确认标签，完成独立 fit/calibration/confirmation；报告 AUROC、AUPRC、group-weighted Brier、固定 FPR 召回、lead time、误报率、弃权覆盖率。当前已准备 160 条平衡双条件去标识双盲标注包（Qwen 80、DeepSeek 80），但尚未完成两名独立标注者的标注与仲裁。
 4. 补齐部署级 API/语义抽取成本、训练成本、端到端内存、监测 p50/p95 与失败率，并完成固定低误报点的独立在线预警确认。
 5. 完成学校采用年份/版本/类别的 CAS 官方记录核验；在上述事项完成前，投稿状态只能写 development package / external diagnostic。
 

@@ -21,6 +21,7 @@ PRIVATE_KEYS = {
     "scenario_role", "observed_violation", "risk_label", "risk_label_source",
     "success", "success_evidence", "private_tags", "mechanism", "hidden_fields",
     "terminal_effect", "variant", "reference_label", "reference_label_basis",
+    "model", "model_name", "provider", "provider_status", "endpoint",
 }
 IDENTITY_KEYS = {
     "episode_id", "trace_id", "case_id", "run_id", "scenario_id",

@@ -57,7 +57,7 @@ pre-fix saturated value 0.639 to 0.236; this is why the current tracked
 
 ## Remaining gates
 
-- An independently adjudicated/licensed MAS confirmation cohort is still missing; the current blind materials contain 152 complete episodes across two API/model conditions, but use shared simulator policies, remain below the 160-episode target, and the annotator packets are unfilled.
+- An independently adjudicated/licensed MAS confirmation cohort is still missing; a balanced 160-episode blind packet now exists (80 Qwen and 80 DeepSeek, four topologies × 20 per condition), but it uses shared simulator policies and both annotator packets remain unfilled.
 - The prefix alarm audit is complete but weak at the fixed 5% false-alarm operating point; it must not be advertised as reliable early warning.
 - A strict same-information zero-shot LLM-judge adapter is implemented and tested. The local gateway still returns an upstream account-pool 503. After targeted retries, the LANYUN `glm-5.3-flash` run has 4,000/4,000 valid predictions; original failures and retries remain separately logged.
 - On all 4,000 episodes, the two-line monitor scores AUROC/AUPRC/F1/Brier 0.820/0.675/0.633/0.160 versus the LLM judge's 0.771/0.578/0.571/0.317. This is a full-coverage same-information auxiliary baseline, not a published-method reproduction or a universal superiority claim; details are in `LLM_JUDGE_BASELINE.md`.

@@ -61,4 +61,4 @@ F1 **0.667**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 在独立人工确认、原生 MAS baseline、端到端 API 成本和低误报早期预警补齐前，主包应称为
 **development / external-diagnostic package**，不能写成“已完成独立安全优越性验证”。
 
-独立确认的准备工作已扩展到 120 条 Qwen API 轨迹，并另备 32 条完整 GLM 轨迹；两包均去除了 episode/scenario/request 编号。它们仍是空白双盲标注材料，在两名独立标注者完成标注、仲裁前，不能写成独立安全金标准。
+独立确认的准备工作现已形成平衡的 160 条双条件 API 轨迹（Qwen 80、DeepSeek 80）；两个标注文件均去除了 episode/scenario/request 编号和模型身份。它们仍是空白双盲标注材料，在两名独立标注者完成标注、仲裁前，不能写成独立安全金标准。

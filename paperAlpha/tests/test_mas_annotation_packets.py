@@ -13,7 +13,8 @@ from prepare_mas_annotation_packets_v1 import agreement, prepare  # noqa: E402
 def test_prepare_removes_evaluator_fields_and_agreement(tmp_path):
     source = tmp_path / "episodes.jsonl"
     source.write_text(json.dumps({"episode_id": "e1", "events": [{"event_id": "x", "label": 1}],
-                                  "label": 1, "scenario_role": "attack", "public": {"role": "worker"}}) + "\n", encoding="utf-8")
+                                  "label": 1, "scenario_role": "attack", "model": "qwen3.6-flash",
+                                  "public": {"role": "worker"}}) + "\n", encoding="utf-8")
     out = tmp_path / "packets"
     prepare(source, out, seed=7)
     a = json.loads((out / "annotator_a.jsonl").read_text(encoding="utf-8"))
@@ -23,6 +24,7 @@ def test_prepare_removes_evaluator_fields_and_agreement(tmp_path):
     assert "episode_id" not in observable
     assert "request_id" not in observable
     assert "scenario_id" not in observable
+    assert "qwen3.6-flash" not in observable
     assert "episode_id" not in a
     b_path = tmp_path / "b.jsonl"
     row_b = dict(a)

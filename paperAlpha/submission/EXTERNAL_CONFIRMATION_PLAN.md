@@ -54,13 +54,9 @@ Because the queue tasks explicitly declare authorization, scope, and side-effect
 conditions, these packets measure blind policy-consistency agreement; they are
 not a substitute for independent real-world safety ground truth.
 
-当前已生成一份 120 条 Qwen 队列的待标注包：
-`results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v3/`。
-它覆盖 chain/fork/join/review 四类拓扑（每类 30 条），两个标注文件均为空白，且目前只有一个 API/model 条件；因此它只是标注材料，尚未关闭独立确认门禁，也不进入主评测。
-
-第二个条件的完整 episode 另有 32 条 GLM 队列，已生成同样脱敏的待标注包：
-`results/submission/development/frozen_confirmation_blind_packets_glm_complete_20261006_v1/`。
-两包合计 152 条完整 episode、覆盖两个 API/model 条件，但仍低于投稿包预设的 160 条目标，且尚未完成双人标注与仲裁。
+当前已生成一份平衡的 160 条待标注包：
+`results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2/`。
+它包含 Qwen 80 条和 DeepSeek 80 条，覆盖 chain/fork/join/review 四类拓扑（每个条件每类 20 条）；两个标注文件均为空白，且来源仍是同一手工策略模拟器。因此它只是标注材料，尚未关闭独立确认门禁，也不进入主评测。
 
 旧的 80 条包和 v1 包均保留作历史版本，不用于标注：
 `results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
