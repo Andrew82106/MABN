@@ -419,6 +419,25 @@
       "transfer_boundary": "The frozen public projections transfer poorly to the current structural/tool-sink monitor (AUROC 0.500 for two-line BN; 0.424/0.500 for runtime logistic). A fixed public policy-text rule is a diagnostic control only.",
       "artifacts": ["scripts/collect_frozen_confirmation_queue_v1.py", "scripts/summarize_frozen_confirmation_queue_v1.py", "scripts/evaluate_frozen_confirmation_transfer_v1.py"]
     },
+    "balanced_communication_queue_20261005": {
+      "status": "completed_policy_intent_integration_only",
+      "directory": "results/submission/development/frozen_communication_lanyun_qwen_balanced_20261005",
+      "model": "qwen3.6-flash",
+      "episodes": 24,
+      "topologies": ["chain", "fork", "join", "review"],
+      "communication_modes": ["direct", "summary", "vote"],
+      "requests": 66,
+      "completed": 66,
+      "failed": 0,
+      "input_tokens": 12800,
+      "output_tokens": 49015,
+      "policy_intent_accuracy": 1.0,
+      "latency_p50_seconds": 5.234,
+      "latency_p95_seconds": 9.094,
+      "label_boundary": "All labels are hand-authored policy-intent evaluator targets; they are not blind human security labels.",
+      "transfer_boundary": "The current structural/tool-sink monitor remains at AUROC/AUPRC 0.500/0.500 on this text-only cohort; the public policy rule is a diagnostic control only.",
+      "artifacts": ["scripts/collect_frozen_communication_queue_v1.py", "results/submission/development/frozen_communication_lanyun_qwen_balanced_20261005/REPORT.json", "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005/REPORT.json"]
+    },
     "formal_collection": {
       "status": "not_frozen_or_started",
       "risk_families": ["privacy and information flow", "delegated authorization", "shared resources and action combinations"],
