@@ -1,0 +1,60 @@
+# Submission Packet（截至 2026-10-05）
+
+## 一句话状态
+
+这是可复现的 **development / external-diagnostic package**，尚未达到“独立人工确认、可直接投稿”的门槛。所有数字均来自 `FINAL_RESULTS.md`、`protocol.json` 及最新独立确认/MAST 审计；不得把条件迁移结果写成独立安全金标准。
+
+## 方法
+
+本文方法是 **two-line BN fusion（Knowledge-compiled relational event risk monitor）**：
+
+- 规范/工作流线：角色、能力、权限、工作流边和危险汇点；
+- 运行时线：消息、工具调用、权限不匹配、异常边、冲突、验证与终止事件；
+- 两线先分别评分，再以训练折内 OOF 分数融合。监测器自身变量、关系、概率因子和证据路径可检查，但不读取模型权重或隐藏状态；“白盒”不等于被保护 LLM 白盒化。
+
+## 主结果（`independent_mas_v3`）
+
+4,000 条公开 MAS 轨迹、1,345 条正例、186 个拓扑族；按拓扑族隔离的五折 StratifiedGroupKFold，阈值仅在训练折确定。
+
+| 方法 | F1 | AUROC | AUPRC | Brier |
+|---|---:|---:|---:|---:|
+| runtime logistic | 0.653 | 0.805 | 0.653 | 0.167 |
+| graph-features logistic | 0.578 | 0.724 | 0.527 | 0.194 |
+| local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
+| reliability-weighted Bayesian fusion | 0.604 | 0.763 | 0.596 | 0.459 |
+| **two-line BN fusion** | **0.668** | **0.820** | **0.675** | **0.160** |
+
+主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。
+
+## MAS 基线
+
+同一数据、同一五折的结构对照：per-agent mean（AUROC 0.480）、topology-only（0.545）、no-taint contribution（0.573）、dynamic taint path（0.597）、trust/reputation risk（0.730）；本文方法 0.820。上述为同信息代理基线。ALTEDA 使用主机/网络日志，属于 richer-observation 上界参考，不可直接混比。
+
+## LANYUN 完整通信队列
+
+冻结队列为 `qwen3.6-flash`，120 episodes（chain/fork/join/review × direct/summary/vote × 每格 10），330/330 请求完成；输入/输出 token 61,629/259,326，传输延迟 p50/p95 为 6.078/9.718 秒，策略意图 evaluator 准确率 1.000。接入运行时语义子图后：AUROC 0.992、AUPRC 0.987、F1 0.968、Brier 0.039；拓扑 AUROC：chain .980、fork .993、join 1.000、review 1.000；通信方式：direct .994、summary 1.000、vote .981。
+
+这些标签是手工 policy-intent evaluator，不是独立人工安全金标准；因此只能作为 API 条件迁移/通信鲁棒性证据。结构/tool-sink 旧投影在文本队列上为 AUROC/AUPRC 0.500/0.500，语义子图修复的是可观测边界，不是普适安全准确率。
+
+## 外部数据集与审计边界
+
+- **MAST/MAD full**：1,642 条轨迹，AUROC/AUPRC 0.681/0.852；flat logistic 0.640/0.831、max-line 0.676/0.858，不能宣称本文方法胜出。标签为公开失败注释，不是本文安全目标的人类金标准；不同 MAS 的 AUROC 0.034–0.931。
+- **A2ASecBench**：严格角色审计 AUROC/AUPRC 0.788/0.835；标签是 benchmark 角色定义，不是人工安全裁决。
+- **AgentLeak**：4,258 条轨迹、937 个 request group；独立留组 late fusion AUROC/AUPRC 0.561/0.353，显示真实泄露流迁移较弱。
+- A2ASecBench API、HarnessAudit、本地/LANYUN authority-payment 队列均为外部/迁移诊断，不能拼接冒充独立确认集。MAST 人工标注子集仅 19 条，也不足以替代新确认队列。
+
+## 期刊对照
+
+首选主题候选为 **Expert Systems with Applications**（风险评估、MAS、知识管理方向匹配）；这只是主题匹配，不代表录用或 CAS 资格。MAS 威胁/拓扑参考 IEEE TDSC *Cracks in Collaboration*；MAST 使用其官方仓库。不得用 JCR/SJR 代替学校采用版本的 CAS 官方核验；`Computers & Security` 当前官方范围被协议列为不适合作为本轮目标。逐项对照见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/target_comparison_20261005.md`。
+
+## 不可宣称
+
+不可宣称：因果发现、绝对安全、自动理解任意 MAS、对所有指标或所有模型/数据集的普遍优越性、独立人工确认优越性、稳定在线早期预警、部署级端到端成本/内存上限，以及“白盒 LLM”。前缀预警固定开发点正例及时召回仅 0.145、负例误报率 0.200；语义抽取 v2 最终 abstain 28.6%，尚未达部署门槛（≤10%）。
+
+## 提交前硬门槛
+
+1. 冻结至少 160 个目标完成 episode：四拓扑 × 两个独立 API/model 条件 × 每格 20（10 benign/10 violating）；失败、拒答、超时、截断全部保留。
+2. 两名标注者独立只看监测器可见材料与执行证据，报告 agreement、Cohen’s κ，争议按预注册规则裁决；确认标签不得来自 monitor、hidden attack ID 或同一 oracle。
+3. 在最后冻结模型/阈值后才打开确认标签，完成独立 fit/calibration/confirmation；报告 AUROC、AUPRC、group-weighted Brier、固定 FPR 召回、lead time、误报率、弃权覆盖率。
+4. 补齐部署级 API/语义抽取成本、训练成本、端到端内存、监测 p50/p95 与失败率，并完成固定低误报点的独立在线预警确认。
+5. 完成学校采用年份/版本/类别的 CAS 官方记录核验；在上述事项完成前，投稿状态只能写 development package / external diagnostic。
