@@ -35,3 +35,5 @@
 | ESWA — ATC-Bayes | 多角色 Agent + 规则护栏 + reliability-weighted Bayesian fusion；多后端、重复留出、低阳性率和延迟报告 | 多后端风险监测、规则下限、概率校准、FPR/召回和成本 | 原论文标签与我们的 API MAS 风险谓词不同；必须在同一输入/标签/分组上重跑，不能直接搬其 recall/FPR |
 
 主表/补表现在包含同一输入、同一标签、同一 family split 下的学习型图控制和透明规则控制；详细数值见 `independent_mas_learned_baselines_v1` 与 `independent_mas_mas_baselines_v1`。这些仍是协议兼容的 proxy，不是已发表方法的复现。投稿前还必须补齐同可见字段、同 API 预算的 `llm_judge_prefix`、`policy_guard_proxy` 和至少一个可运行的外部 MAS 监测实现；若复现失败，报告失败原因，不以风格适配器冒充原方法。上述期刊论文作为方法与实验设计参照，不能用论文摘要中的任务成功率替代公平的风险监测基线；完整来源和核验等级见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/catalog.json`。
+
+原生 MAS 方法的输入/目标边界审计见 `doc/ref_paper/mas_safety_2026-09-11/journal_alignment/native_mas_baseline_audit_20261005.md`。其中 AgentMonitor 可作为统计聚合控制，BlindGuard/G-Safeguard 需按本文 schema 重训，QuadSentinel 是策略守卫目标，ALTEDA 是 richer-observation 上界；均不得在未满足同信息、同标签、同划分前写成公平复现。
