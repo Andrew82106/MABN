@@ -143,6 +143,9 @@ graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
   abstain **28.6%**，p50/p95 **10.62/16.39 s**，输入/输出 token **8,192/14,821**。
   这显著改善了 v1，但仍未达到部署门槛（最终 abstain ≤10%）；结果仍不接入风险评测，
   记录在 `results/submission/development/semantic_extraction_cost_20261005_lanyun_v2/`。
+- **端到端成本闭合**：已将 API transport、语义抽取和图/BN 监测三份账本合并为组件级审计，
+  见 `results/submission/development/e2e_cost_closure_20261005/REPORT.md`；由于三者不是同一
+  episode，报告不虚构单一端到端延迟，部署级 RSS 和训练成本仍单列为待补项。
 
 ## 期刊对照边界
 
