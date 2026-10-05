@@ -39,7 +39,15 @@
 - **与本文的关系**：不是通用风险概率监测器，而是授权和执行边界架构。它最值得借鉴的是“规范约束阻止什么、运行语义补充什么”的双线消融。
 - **本文必须对齐**：预注册规范线/运行线消融，并报告攻击成功、漏报、拦截位置和模糊语义输入的代价。
 
-### 3. Yang et al., IEEE TDSC：协作拓扑与攻击面
+### 3. Wang et al., ESWA：CogTrust 动态信任评估
+
+- 论文：[CogTrust: Cognitive Logic-Based framework for dynamic trust evaluation in multi-agent systems](https://doi.org/10.1016/j.eswa.2026.131535)
+- 出版社摘要和 Crossref 可核验：ESWA，vol. 313，article 131535，2026-06 发布记录；面向 LLM-MAS 的动态 trust evaluation，使用认知逻辑、带时间衰减的 multi-weight subjective logic 计算 agent reputation，并把 reputation 接入自适应扰动防御。
+- 摘要报告：在多种 LLM 协作系统和模型上评估；危险样本比例降至 14%，任务成功率保持在 93% 以上。完整样本量、攻击分母和统计区间尚未从全文核验。
+- **与本文的关系**：这是“每个 Agent 的信任/信誉聚合”近邻，不等于我们的系统级风险概率监测；它提供了一个必须比较的 trust/reputation baseline 方向。
+- **本文必须对齐**：加入 agent-level trust/reputation 聚合控制，并报告它在拓扑变化、首个违规事件和跨 Agent 风险传播上的失效情况；不能只比较最终任务成功率。
+
+### 4. Yang et al., IEEE TDSC：协作拓扑与攻击面
 
 - 论文：[Cracks in Collaboration: Threat Models and Attacks on Multi-LLM Collaborative Systems](https://doi.org/10.1109/TDSC.2026.3670889)
 - 作者公开仓库：[Cracks-in-Agent-Collaboration](https://github.com/S1mpleyang/Cracks-in-Agent-Collaboration)
@@ -47,20 +55,20 @@
 - **未核验**：完整论文样本量、重复次数、置信区间、完整 baseline/消融表。仓库文件名不能替代论文分母。
 - **本文必须对齐**：按拓扑/通信方式分层报告风险传播、系统漏报、拓扑留出和攻击预算，不能只给一个合并 F1。
 
-### 4. Rabieinejad et al., IPM：ALTEDA 日志图威胁检测
+### 5. Rabieinejad et al., IPM：ALTEDA 日志图威胁检测
 
 - 论文：[Beyond the prompt: Log-based threat detection and attribution for multi-Agent LLMs](https://doi.org/10.1016/j.ipm.2026.104768)
 - 出版社摘要和 Crossref 可核验：Information Processing & Management，vol. 63，issue 6，article 104768，2026-09 发布记录；800 条红队轨迹、31.4% attack success rate；同步应用/网络/主机日志构成带属性有向多重图；图级威胁分类、SHAP 归因和部分轨迹早报。
 - **输入边界**：ALTEDA 使用主机、系统和网络日志；本文声明 API 可见文本/消息/工具调用边界。因此只能作为 richer-observation 上界，或先做同信息投影后比较。
 - **本文必须对齐**：归因到 agent/交互边、部分轨迹早报、按任务/拓扑划分、同信息输入控制，并独立记录端到端资源开销。
 
-### 5. Ben Hassouna et al., Information Fusion：LLM-Agent-UMF
+### 6. Ben Hassouna et al., Information Fusion：LLM-Agent-UMF
 
 - 论文：[LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Design of Multi Active/Passive Core-Agent Architectures](https://doi.org/10.1016/j.inffus.2025.103865)
 - 出版社/作者公开摘要可核验：Information Fusion，vol. 127，article 103865，2026-03 卷期记录；把 core-agent 拆成 planning、memory、profile、action、security，并区分 active/passive core-agent；评估 13 个既有 agents 和 5 个混合架构。
 - **与本文的关系**：架构语义参照，不是风险检测 baseline。可帮助固定第一层工作流节点/边的词汇，但不能把架构分类分数混入风险检测结果。
 
-### 6. Wang et al., Information Fusion：PTFusion
+### 7. Wang et al., Information Fusion：PTFusion
 
 - 论文：[PTFusion: LLM-driven context-aware knowledge fusion for web penetration testing](https://doi.org/10.1016/j.inffus.2025.103731)
 - 出版社/元数据可核验：Information Fusion，vol. 127，article 103731，2026-03 卷期记录；Master/Recon/Attack 半去中心化多 Agent、MCP 工具调用和动态知识图。
