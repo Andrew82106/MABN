@@ -57,6 +57,12 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
 - ΔAUPRC = **0.079**，95% CI **[0.061, 0.098]**；
 - 两项差值在 **2,000/2,000** 次重采样中为正。
 
+对同一 OOF 结果与 MAS 结构代理做补充成对 bootstrap：相对 trust/reputation risk 的
+ΔAUROC/ΔAUPRC 为 **0.090 [0.077, 0.103] / 0.176 [0.153, 0.200]**；相对
+graph-features logistic 为 **0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]**，
+2,000 个族级重采样均为正。低阳性率压力诊断把主集 OOF 重加权到 5%/10% 阳性率，
+两线 AUROC 仍为 **0.820**，AUPRC 为 **0.201/0.336**；这不是独立测试集。
+
 去掉 `permission_mismatch` 后仍为 AUROC 0.811、AUPRC 0.661，说明结果不只依赖一个字段。
 
 ## 外部与 API 迁移
