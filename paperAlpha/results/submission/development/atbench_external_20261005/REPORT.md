@@ -2,6 +2,8 @@
 
 冻结模型在 independent_mas_v3 上拟合；ATBench 仅在特征构造完成后用于计算指标。ATBench 是单代理/通用 Agent 迁移集，不是 MAS 主结果。
 
+数据来源：AgentDoG 公开 ATBench 测试划分（仓库内本地副本 `paperAlpha/data/external/ATBench/test.json`）；来源：[AI45Lab/AgentDoG](https://github.com/AI45Lab/AgentDoG)。
+
 ## Overall
 
 | method | F1 | precision | recall | AUROC | AUPRC | Brier |

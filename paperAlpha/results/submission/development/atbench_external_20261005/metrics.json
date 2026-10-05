@@ -2,6 +2,8 @@
   "dataset": {
     "name": "ATBench test",
     "path": "paperAlpha\\data\\external\\ATBench\\test.json",
+    "source": "AgentDoG public ATBench split; local copy supplied in repository",
+    "source_reference": "https://github.com/AI45Lab/AgentDoG",
     "role": "external single/general-agent transfer"
   },
   "training": {

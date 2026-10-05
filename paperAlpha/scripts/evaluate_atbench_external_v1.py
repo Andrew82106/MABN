@@ -183,7 +183,10 @@ def main():
         "feature_label_exclusion": ["label", "risk_source", "failure_mode", "reason", "real_world_harm"],
     }
     report = {
-        "dataset": {"name": "ATBench test", "path": str(args.input), "role": "external single/general-agent transfer"},
+        "dataset": {"name": "ATBench test", "path": str(args.input),
+                     "source": "AgentDoG public ATBench split; local copy supplied in repository",
+                     "source_reference": "https://github.com/AI45Lab/AgentDoG",
+                     "role": "external single/general-agent transfer"},
         "training": {"dataset": "independent_mas_v3", "n": len(train_eps),
                      "positive": int(y_train.sum()), "seed": args.seed,
                      "optimizer": optimizer, "atbench_labels_used_for_fit": False},
