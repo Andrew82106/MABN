@@ -48,6 +48,9 @@ leaves the five label fields blank. After two raters complete the packets, run
 its `agreement` command to report raw agreement and Cohen's kappa before
 adjudication. The script does not invent labels, so the confirmation gate
 remains pending until independent raters complete and adjudicate the packets.
+Because the queue tasks explicitly declare authorization, scope, and side-effect
+conditions, these packets measure blind policy-consistency agreement; they are
+not a substitute for independent real-world safety ground truth.
 
 当前已生成一份 120 条 Qwen 队列的待标注包：
 `results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v3/`。
