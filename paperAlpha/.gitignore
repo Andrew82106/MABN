@@ -34,6 +34,8 @@ data/processed/*
 results/*
 !results/.gitkeep
 
-# External MAST/MAD release is downloaded locally for audit; keep large raw files out of Git.
-data/external/MAST/*
-!data/external/MAST/.gitkeep
+# External benchmark releases are downloaded locally for audit; keep raw files
+# out of Git and record provenance in the tracked external-data manifest.
+data/external/*
+!data/external/README.md
+!data/external/.gitkeep
