@@ -39,6 +39,7 @@ scenario-family 留出上的 MAS 结构对照。它们只使用公开事件流�
 | topology-only（忽略数据 provenance） | 0.503 | 0.545 | 0.358 | 0.531 |
 | no-taint contribution（图贡献但忽略 provenance） | 0.503 | 0.573 | 0.382 | 0.242 |
 | dynamic taint path（规则传播） | 0.503 | 0.597 | 0.405 | 0.321 |
+| trust/reputation risk（CogTrust 同信息代理） | 0.634 | 0.730 | 0.499 | 0.245 |
 | **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
 
 这些是与 MAS 近邻论文中“独立 Agent 聚合、拓扑传播、日志图/路径评分”相对应的

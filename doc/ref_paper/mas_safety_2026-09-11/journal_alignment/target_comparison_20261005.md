@@ -41,6 +41,7 @@
 | topology-only | 0.545 | 0.358 | 只看可达性，不看 provenance |
 | no-taint contribution | 0.573 | 0.382 | 图贡献分数，但不区分数据来源 |
 | dynamic taint path | 0.597 | 0.405 | 规则式跨 Agent 传播 |
+| trust/reputation risk | 0.730 | 0.499 | 衰减式 agent reputation 同信息代理，近似 CogTrust 的 agent-level 视角 |
 | **本文双线 BN** | **0.820** | **0.675** | 工作流规范线 + 运行时证据线 + OOF 融合 |
 
 这些代理不是对论文代码的逐行复现，而是严格同信息量、同数据划分的协议兼容对照；
