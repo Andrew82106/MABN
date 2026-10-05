@@ -247,7 +247,7 @@
       "finding": "The corrected two-BN-line fusion uses nested inner-OOF workflow-BN and runtime-BN scores and reaches F1 0.668, AUROC 0.820, AUPRC 0.675, Brier 0.160 and ECE 0.019. At fold-local 5% train-negative FPR thresholds it has test FPR 0.052 and recall 0.303. The matched runtime-logistic control reaches F1 0.653 and AUROC 0.805. The workflow-only BN line is not sufficient alone (AUROC 0.517), so the result supports complementary normative and runtime evidence rather than a claim that the DAG alone solves risk detection.",
       "artifact": "results/independent_mas_journal_v1/metrics.json",
       "model_spec": "results/independent_mas_journal_v1/MODEL_SPEC.md",
-      "manifest": "results/independent_mas_journal_v1/MANIFEST.json",
+      "manifest": "submission/PACKAGE_MANIFEST.json",
       "prefix_artifact": "results/independent_mas_prefix_v1/metrics.json",
       "observability_strata_artifact": "results/independent_mas_journal_v1/strata.json",
       "latency_artifact": "results/independent_mas_journal_v1/latency.json",
