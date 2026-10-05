@@ -28,6 +28,23 @@
 | reliability-weighted Bayesian fusion（期刊邻近对照） | 0.604 | 0.763 | 0.596 | 0.459 |
 | **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
 
+### MAS 专用结构对照
+
+为避免只和单体分类器比较，补充在同一 `independent_mas_v3`、同一五折
+scenario-family 留出上的 MAS 结构对照。它们只使用公开事件流，不读取标签字段。
+
+| 方法 | F1 | AUROC | AUPRC | Brier |
+|---|---:|---:|---:|---:|
+| per-agent mean（独立 Agent 分数平均） | 0.503 | 0.480 | 0.324 | 0.248 |
+| topology-only（忽略数据 provenance） | 0.503 | 0.545 | 0.358 | 0.531 |
+| no-taint contribution（图贡献但忽略 provenance） | 0.503 | 0.573 | 0.382 | 0.242 |
+| dynamic taint path（规则传播） | 0.503 | 0.597 | 0.405 | 0.321 |
+| **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
+
+这些是与 MAS 近邻论文中“独立 Agent 聚合、拓扑传播、日志图/路径评分”相对应的
+同信息代理基线；ALTEDA 使用主机/网络日志，不能与本 API 可见条件直接混比，另列为
+richer-observation 上界参考。
+
 主模型的族聚类 95% CI 为 AUROC **[0.804, 0.835]**、AUPRC **[0.646, 0.707]**、
 Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC 为
 **[0.791, 0.818]/[0.622, 0.683]**。
@@ -55,6 +72,8 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
 - **四拓扑 API 集成 smoke**：新增 8 个低成本 LANYUN episode，覆盖 chain/fork/join/review，
   共 22 次请求（21 成功、1 失败）；它验证统一调度、失败保留和 monitor/evaluator 分离，
   但任务文本显式给出授权/范围情境，因此不作为风险准确率或独立安全标签结果。
+- **接口复核**：当前 LANYUN `glm-5.3-flash` 仍可正常返回；本地 `58661/v1` 的
+  `gpt-5.6-luna` 复核仍返回 `503 auth_unavailable`，因此本地端点不能作为本轮最终实验来源。
 - **冻结四拓扑 API 队列**：LANYUN `glm-5.3-flash` 和 `qwen3.6-flash` 分别运行
   80 个 episode（chain/fork/join/review 各 20，40 safe/40 violation）。GLM 条件为
   220 次请求、145 成功/75 失败、33,036/53,241 输入/输出 token，47 个有终端预测的
