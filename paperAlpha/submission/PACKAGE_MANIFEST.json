@@ -54,6 +54,7 @@
     "results/submission/final_eval/LLM_JUDGE_BASELINE.md",
     "results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md",
     "results/submission/final_eval/GROUP_CALIBRATION_AUDIT.md",
+    "results/submission/final_eval/CONFIRMATION_COHORT_STATUS.md",
     "results/external_who_when_audit_v1/REPORT.md"
   ],
   "local_only_diagnostics": "results/submission/development/",
