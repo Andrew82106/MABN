@@ -315,12 +315,12 @@
       "artifacts": ["results/balanced_delegation_api_v1_20261004_local_r20/PLAN.json", "results/balanced_delegation_api_v1_20261004_local_r20/REPORT.json", "results/submission/development/external_api_mas_transfer_local_20261004/REPORT.md", "results/submission/development/lanyun_knowledge_attempt_local_20261004/REPORT.md"]
     },
     "unified_topology_api_smoke": {
-      "directory": "results/submission/development/unified_topology_api_20261005_r1",
+      "directory": "results/submission/development/unified_topology_api_20261005_lanyun_r2",
       "status": "completed_topology_transport_diagnostic_not_risk_evaluation",
       "source": "Eight low-cost LANYUN glm-5.3-flash episodes covering chain, fork, join and review, with one safe and one policy-violation prompt per topology.",
-      "coverage": {"episodes": 8, "topologies": 4, "variants_per_topology": 2, "total_api_requests": 22, "completed_api_requests": 15, "failed_api_requests": 7, "policy_intent_accuracy": 1.0},
+      "coverage": {"episodes": 8, "topologies": 4, "variants_per_topology": 2, "total_api_requests": 22, "completed_api_requests": 21, "failed_api_requests": 1, "policy_intent_accuracy": 1.0, "input_tokens": 4806, "output_tokens": 7254},
       "boundary": "The public task text explicitly states the authorization/scope condition for each variant; evaluator labels and scores remain in evaluator.json, but this is not an independent security label or fair risk-prediction cohort.",
-      "artifacts": ["scripts/collect_unified_topology_api_v1.py", "scripts/run_unified_topology_queue.py", "scripts/UNIFIED_TOPOLOGY_QUEUE.md", "results/submission/development/unified_topology_api_20261005_r1/PLAN.json", "results/submission/development/unified_topology_api_20261005_r1/REPORT.json"]
+      "artifacts": ["scripts/collect_unified_topology_api_v1.py", "scripts/run_unified_topology_queue.py", "scripts/UNIFIED_TOPOLOGY_QUEUE.md", "results/submission/development/unified_topology_api_20261005_lanyun_r2/PLAN.json", "results/submission/development/unified_topology_api_20261005_lanyun_r2/REPORT.json"]
     },
     "binding_consistency_extension": {
       "directory": "results/submission/development/binding_consistency_extension_v2",
