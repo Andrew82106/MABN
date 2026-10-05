@@ -513,6 +513,8 @@
   },
   "artifact_contract": {
     "one_active_protocol": "submission/protocol.json",
+    "tracked_package_manifest": "submission/PACKAGE_MANIFEST.json",
+    "artifact_reading_rule": "Only files listed in PACKAGE_MANIFEST.json are required for a clean archive. Other results/... paths named below are local generated artifacts retained for provenance and may be absent from an external checkout.",
     "one_baseline_catalog": "submission/baselines.json",
     "one_literature_catalog": "../doc/ref_paper/mas_safety_2026-09-11/journal_alignment/catalog.json",
     "final_result_entry": "results/submission/final_eval/RESULTS.md and results/submission/final_eval/FINAL_GATE.md; the gate file is the compact active audit and is not a claim that unresolved submission requirements are complete",
