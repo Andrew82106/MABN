@@ -357,6 +357,17 @@
       "artifacts": ["scripts/adapt_agentleak_traces_v1.py", "scripts/evaluate_agentleak_external_journal_v1.py", "results/submission/development/agentleak_external_projection_v1/ADAPTER_REPORT.md", "results/submission/development/agentleak_external_journal_v1_r3/REPORT.md", "results/submission/development/agentleak_external_journal_v1_r3/metrics.json"],
       "next_action": "Use a genuinely independent MAS cohort whose target is observable policy/action risk, or extend the monitor with an explicit privacy-schema knowledge layer and evaluate it as a separate task; do not merge this label with the operational-risk headline metric."
     },
+    "atbench_external_transfer": {
+      "directory": "results/submission/development/atbench_external_20261005",
+      "status": "completed_non_mas_transfer_boundary",
+      "source": "Public ATBench test release: 1000 human-audited general-agent trajectories.",
+      "coverage": {"traces": 1000, "positive": 497, "negative": 503, "unique_tool_names": 1953},
+      "feature_boundary": "Only public contents (user/agent/environment messages and tool actions) are adapted; label, risk_source, failure_mode, reason and real_world_harm are excluded before scoring.",
+      "protocol": "Freeze model parameters on independent_mas_v3, then evaluate ATBench without fitting or threshold selection on ATBench.",
+      "result": {"two_line_bn_fusion": {"auroc": 0.5931, "auprc": 0.5538, "f1": 0.043, "brier": 0.2639}, "topology_only": {"auroc": 0.586, "auprc": 0.545}},
+      "interpretation": "ATBench is single/general-agent transfer rather than a MAS headline set. The weak transfer is retained as a boundary result and prevents a universal safety-monitoring claim.",
+      "artifacts": ["scripts/evaluate_atbench_external_v1.py", "results/submission/development/atbench_external_20261005/REPORT.md", "results/submission/development/atbench_external_20261005/metrics.json"]
+    },
     "api_stage_forecast_development": {
       "directory": "results/submission/development/api_stage_forecast_20261001_v6",
       "status": "completed_development_and_rerun_replication_not_final_test",

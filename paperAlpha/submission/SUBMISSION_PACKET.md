@@ -43,6 +43,7 @@
 - **MAST/MAD full**：旧版冻结结果为 1,642 条轨迹，AUROC/AUPRC 0.681/0.852；flat logistic 0.640/0.831、max-line 0.676/0.858，不能宣称本文方法胜出。后续边界审计发现旧版适配器可能把轨迹尾部 `Evaluation` 字段带入特征，因此该数字只保留为历史外部诊断，不能当作独立无泄漏证据。新版适配器已剥离该标签通道并通过边界测试，但完整重跑尚未完成。标签也不是本文安全目标的人类金标准；不同 MAS 的旧版 AUROC 0.034–0.931。
 - **A2ASecBench**：严格角色审计 AUROC/AUPRC 0.788/0.835；标签是 benchmark 角色定义，不是人工安全裁决。
 - **AgentLeak**：4,258 条轨迹、937 个 request group；独立留组 late fusion AUROC/AUPRC 0.561/0.353，显示真实泄露流迁移较弱。
+- **ATBench**：1,000 条人审过的通用 Agent 轨迹（497 unsafe/503 safe）作为非 MAS 外部迁移；排除所有标签与风险解释字段后，双线 AUROC/AUPRC 0.593/0.554，说明当前模型只有弱的通用 Agent 迁移能力，不能宣称普适安全检测。
 - A2ASecBench API、HarnessAudit、本地/LANYUN authority-payment 队列均为外部/迁移诊断，不能拼接冒充独立确认集。MAST 人工标注子集仅 19 条，也不足以替代新确认队列。
 
 ## 期刊对照
