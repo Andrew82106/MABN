@@ -51,6 +51,7 @@ discovery method.
 - A matched-information development audit is also present: a flat Logistic reaches mean AUROC 0.817 versus 0.816 for the two-line BN on five repeated family holdouts, while the BN has slightly higher mean AUPRC/F1 (0.666/0.659 versus 0.661/0.658). This prevents a broad “beats every same-information model” claim; details are in `MATCHED_INFORMATION_AUDIT.md`.
 - Calibration is now reported both episode-micro and family-macro: two-line BN Brier 0.16035/0.14609 versus runtime logistic 0.16714/0.15985, with family-bootstrap intervals recorded in `GROUP_CALIBRATION_AUDIT.md`.
 - The matched-information audit still lacks a preregistered untouched confirmation cohort and paired significance intervals for the flat controls; the current 4,000-episode OOF package remains development evidence, not final generalization proof.
+- The release-specific judge/annotation tests pass (6/6); the broader historical `paperAlpha/tests` collection still needs the optional `openai-agents` SDK and is not claimed green in the current environment.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
 - Component-wise online cost is now closed in `development/e2e_cost_closure_20261005/REPORT.md` (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
 
