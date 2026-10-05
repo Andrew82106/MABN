@@ -28,7 +28,7 @@ discovery method.
 - ESWA-neighbor reliability-weighted Bayesian control: AUROC 0.763/AUPRC 0.596, below the proposed two-line fusion 0.820/0.675 on the same grouped split.
 - Paired family-cluster bootstrap against that control: ΔAUROC 0.056 [0.045, 0.067] and ΔAUPRC 0.079 [0.061, 0.098], positive in all 2,000 resamples.
 - Explanation-faithfulness audit: a top path is found in 71.85% of episodes; deleting it lowers the score by 0.042 on average.
-- Lanyun `glm-5.3-flash` transfer: 64/80 cases complete; fusion AUROC 0.854/AUPRC 0.824.
+- Lanyun `glm-5.3-flash` transfer: 64/80 cases complete; fusion AUROC 0.854/AUPRC 0.824. This is a separate transfer/cost cohort, not the 32-complete GLM blind-confirmation packet.
 - A2ASecBench API leave-one-attack-family-out adapter: 80 episodes; fusion AUROC 0.833/AUPRC 0.899, retained only as an integration benchmark because the reference harness emits part of the labels.
 - Leakage-controlled A2ASecBench role audit: 80 episodes; outcome metrics and `observed_violation` excluded, two-line AUROC/AUPRC 0.788/0.835. Labels remain benchmark-design roles, not human adjudication.
 - QuadSentinel external replay: completed, but only 5.19% action coverage and a different target.
