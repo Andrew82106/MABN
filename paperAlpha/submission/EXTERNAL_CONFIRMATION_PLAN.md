@@ -48,3 +48,7 @@ leaves the five label fields blank. After two raters complete the packets, run
 its `agreement` command to report raw agreement and Cohen's kappa before
 adjudication. The script does not invent labels, so the confirmation gate
 remains pending until independent raters complete and adjudicate the packets.
+
+当前已生成一份 80 条 Qwen 队列的待标注包：
+`results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
+它仍低于本计划的 100 条最低规模，且两个标注文件为空白，因此不进入主评测。
