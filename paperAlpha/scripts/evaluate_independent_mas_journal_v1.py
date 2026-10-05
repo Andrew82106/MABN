@@ -279,11 +279,12 @@ def fit_logistic(train_x: np.ndarray, train_y: np.ndarray, test_x: np.ndarray, s
 def fit_runtime_bn_inner(two, train_eps: list[dict], y: np.ndarray, bn: dict, seed: int, maxiter: int = 35):
     """Fit the same runtime BN with a bounded inner-CV budget."""
     rng = np.random.default_rng(seed)
+    parsed_train = [two.event_features(e) for e in train_eps]
     x0 = np.array([-2., 3., .2, .8, -.4, .1, .1, -2., 4., .2, 1., 1., .3], dtype=float)
     x0 += rng.normal(0, .03, len(x0))
 
     def objective(theta):
-        p = np.asarray([two._propagate(theta, two.event_features(e), bn) for e in train_eps])
+        p = np.asarray([two._propagate(theta, parsed, bn) for parsed in parsed_train])
         bce = -np.mean(y * np.log(np.clip(p, 1e-7, 1 - 1e-7)) + (1 - y) * np.log(np.clip(1 - p, 1e-7, 1 - 1e-7)))
         return float(bce + 1e-3 * np.sum(theta * theta))
 

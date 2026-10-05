@@ -414,9 +414,10 @@ def _propagate(theta: np.ndarray, parsed: dict, bn: dict, mode: str = "point", e
 
 def fit_model(train_eps: Sequence[dict], y: np.ndarray, bn: dict, seed: int) -> Tuple[np.ndarray, dict]:
     rng = np.random.default_rng(seed)
+    parsed_train = [event_features(e) for e in train_eps]
     x0 = np.array([-2., 3., .2, .8, -.4, .1, .1, -2., 4., .2, 1., 1., .3], dtype=float) + rng.normal(0, .03, 13)
     def objective(t):
-        p = np.asarray([_propagate(t, event_features(e), bn) for e in train_eps])
+        p = np.asarray([_propagate(t, parsed, bn) for parsed in parsed_train])
         bce = -np.mean(y * np.log(np.clip(p, 1e-7, 1-1e-7)) + (1-y) * np.log(np.clip(1-p, 1e-7, 1-1e-7)))
         # Keep local/graph terms identifiable and discourage extreme gates.
         return float(bce + 1e-3 * np.sum(t * t))
