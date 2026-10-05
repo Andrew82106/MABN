@@ -169,14 +169,40 @@ def runtime_vector(ep: dict) -> np.ndarray:
     )
 
 
-def episode_label_cpts(x: np.ndarray, y: np.ndarray, names: list[str]) -> dict:
-    """Estimate P(risk|evidence) with Laplace smoothing on episodes."""
+def episode_noisy_or_fit(x: np.ndarray, y: np.ndarray, names: list[str], seed: int = 0) -> dict:
+    """Fit a weakly supervised noisy-OR CPD on episode labels.
+
+    ``y`` is an episode outcome, not a node outcome.  The old implementation
+    estimated ``P(y|f=1)`` for every factor and then multiplied those values as
+    if they were independent latent causes; with ten mostly-always-positive
+    structural factors this saturated near one.  Here each factor has an
+    explicit latent hazard ``H_f`` with ``P(H_f=1|f=1)=q_f`` and a fixed
+    Laplace-smoothed leak.  The q values are fitted jointly by episode BCE,
+    which is the identifiable noisy-OR likelihood under this weak supervision.
+    """
+    binary = (np.asarray(x, dtype=float) > 0).astype(float)
+    y = np.asarray(y, dtype=float)
     prior = float((y.sum() + 1.0) / (len(y) + 2.0))
-    cpt = {}
-    for j, name in enumerate(names):
-        mask = x[:, j] > 0
-        cpt[name] = float((y[mask].sum() + 1.0) / (mask.sum() + 2.0)) if mask.any() else prior
-    return {"prior": prior, "names": names, "cpt": cpt}
+    rng = np.random.default_rng(seed)
+    # Small initial hazard probabilities avoid the all-factors-active
+    # saturation that occurs when each q is estimated as P(y|f=1).
+    initial_q = np.full(binary.shape[1], 0.05, dtype=float)
+    initial_q += rng.normal(0.0, 0.005, binary.shape[1])
+    initial_q = np.clip(initial_q, 0.005, 0.2)
+    x0 = np.log(initial_q / (1.0 - initial_q))
+
+    def unpack(theta: np.ndarray) -> np.ndarray:
+        return 1.0 / (1.0 + np.exp(-np.clip(theta, -12.0, 12.0)))
+
+    def objective(theta: np.ndarray) -> float:
+        q = unpack(theta)
+        p = 1.0 - (1.0 - prior) * np.prod(1.0 - binary * q[None, :], axis=1)
+        bce = -np.mean(y * np.log(np.clip(p, 1e-7, 1 - 1e-7)) + (1.0 - y) * np.log(np.clip(1 - p, 1e-7, 1 - 1e-7)))
+        return float(bce + 1e-3 * np.sum(theta * theta))
+
+    result = minimize(objective, x0, method="L-BFGS-B", bounds=[(-12.0, 12.0)] * len(x0), options={"maxiter": 500, "ftol": 1e-10})
+    q = unpack(result.x)
+    return {"prior": prior, "names": names, "cpt": {name: float(q[j]) for j, name in enumerate(names)}, "fit": {"success": bool(result.success), "loss": float(result.fun), "iterations": int(result.nit), "method": "joint_noisy_or_bce"}}
 
 
 def workflow_bn_fit(x: np.ndarray, y: np.ndarray) -> dict:
@@ -185,9 +211,9 @@ def workflow_bn_fit(x: np.ndarray, y: np.ndarray) -> dict:
         "normative_source_sink_path", "normative_short_path", "max_out_degree",
         "max_in_degree", "mean_out_degree", "expected_edge_missingness",
     ]
-    # Binary evidence is easier to inspect; retain a second normalized vector
-    # for the model ablation, but CPTs are learned only from presence events.
-    return episode_label_cpts((x > 0).astype(float), y, names)
+    # Fit latent factor hazards jointly against the episode outcome.  This is
+    # a weakly supervised conditional BN/noisy-OR CPD, not a node-label CPT.
+    return episode_noisy_or_fit(x, y, names)
 
 
 def workflow_bn_score(x: np.ndarray, bn: dict) -> np.ndarray:

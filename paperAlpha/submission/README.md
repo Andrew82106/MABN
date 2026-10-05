@@ -22,6 +22,7 @@ F1 **0.668**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 - [主基准复现脚本](reproduce_main.ps1)
 - [模型规格](../results/independent_mas_journal_v1/MODEL_SPEC.md)
 - [主评测报告](../results/independent_mas_journal_v1/REPORT.md)
+- [发布包清单](PACKAGE_MANIFEST.json)：包含主脚本及其动态导入的公平基线、前缀评测依赖
 - [结果门槛审计](../results/submission/final_eval/FINAL_GATE.md)
 - [同信息基线映射](../results/submission/final_eval/BASELINE_MAPPING.md)
 - [同信息 LLM judge 对照](../results/submission/final_eval/LLM_JUDGE_BASELINE.md)

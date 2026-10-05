@@ -215,6 +215,50 @@ def local_vector(parsed: dict) -> np.ndarray:
     return np.asarray(vals, dtype=float)
 
 
+def _ordered_runtime_edges(edges: Sequence[tuple], node_count: int) -> list[tuple]:
+    """Return a single temporal/topological pass order for edge occurrences.
+
+    Runtime records normally provide event ``sequence`` values; those make an
+    agent-level cycle harmless because each message occurrence is processed at
+    its observed time.  For static acyclic inputs without sequence values, a
+    deterministic topological order is used.  Cyclic, unsequenced inputs fall
+    back to the input order and remain an explicitly approximate one-pass
+    monitor rather than silently iterating a persistent state to saturation.
+    """
+    indexed = list(enumerate(edges))
+    parsed_sequences = []
+    for index, edge in indexed:
+        value = edge[3].get("sequence") if len(edge) > 3 and isinstance(edge[3], dict) else None
+        try:
+            parsed_sequences.append((index, float(value)))
+        except (TypeError, ValueError):
+            parsed_sequences.append((index, None))
+    if indexed and all(value is not None for _, value in parsed_sequences):
+        order = {index: value for index, value in parsed_sequences}
+        return [edge for index, edge in sorted(indexed, key=lambda item: (order[item[0]], item[0]))]
+
+    adjacency = {node: set() for node in range(node_count)}
+    indegree = {node: 0 for node in range(node_count)}
+    for edge in edges:
+        u, v = edge[0], edge[1]
+        if v not in adjacency[u]:
+            adjacency[u].add(v)
+            indegree[v] += 1
+    queue = [node for node, degree in indegree.items() if degree == 0]
+    topo = []
+    while queue:
+        node = queue.pop(0)
+        topo.append(node)
+        for child in sorted(adjacency[node]):
+            indegree[child] -= 1
+            if indegree[child] == 0:
+                queue.append(child)
+    if len(topo) != node_count:
+        return list(edges)
+    rank = {node: index for index, node in enumerate(topo)}
+    return [edge for _, edge in sorted(indexed, key=lambda item: (rank[item[1][0]], rank[item[1][1]], item[0]))]
+
+
 def fit_bn(train_eps: Sequence[dict], y: np.ndarray) -> dict:
     """Fit an episode-balanced, weakly supervised local CPT on train only.
 
@@ -288,23 +332,22 @@ def _propagate(theta: np.ndarray, parsed: dict, bn: dict, mode: str = "point", e
         # estimates how strongly an *asserted/possible tainted* edge transmits
         # evidence; multiplying by the taint indicator prevents clean DAG
         # length from becoming a spurious risk signal under distribution shift.
-        gate = float(sigmoid(np.dot(ew, ff)))
+        # Confidence is an observation-reliability multiplier below.  Do not
+        # also feed it into the learned gate, otherwise the same evidence is
+        # counted once as propensity and once as reliability.
+        gate_features = ff.copy()
+        gate_features[3] = 0.0
+        gate = float(sigmoid(np.dot(ew, gate_features)))
         carrier = float(ff[1] > 0 or (mode == "upper" and ff[4] > 0))
         g = gate * carrier
         if mode == "point": g *= max(0., min(1., ff[3]))
         edges.append((u, v, g, info, ff))
-    state = source.copy(); history = [state.copy()]
-    for _ in range(max(1, n)):
-        incoming = [[] for _ in range(n)]
-        for u, v, g, _, _ in edges: incoming[v].append((u, g))
-        nxt = state.copy()
-        for v in range(n):
-            prod = 1.0
-            for u, g in incoming[v]: prod *= 1.0 - state[u] * g
-            propagated = 1.0 - prod
-            # Differentiable union with persistent state.
-            nxt[v] = 1.0 - (1.0 - state[v]) * (1.0 - propagated)
-        state = nxt; history.append(state.copy())
+    state = source.copy()
+    # Each observed message/delegation occurrence transmits once.  Repeating
+    # the old persistent update n times made even one edge g=.5 become .75,
+    # which is not a noisy-OR CPD and silently saturated long paths.
+    for u, v, g, _, _ in _ordered_runtime_edges(edges, n):
+        state[v] = 1.0 - (1.0 - state[v]) * (1.0 - state[u] * g)
     path = float(1.0 - np.prod(1.0 - state * sink))
     # Explicit path evidence is kept separate from the learned soft state.
     # It is computed only from observed asserted-untrusted edges (or the
