@@ -12,6 +12,8 @@
     "scripts/evaluate_reliability_bayes_baseline_v1.py",
     "scripts/collect_frozen_confirmation_queue_v1.py",
     "scripts/collect_communication_mode_smoke_v1.py",
+    "scripts/audit_tamas_release_v1.py",
+    "scripts/evaluate_prevalence_shift_v1.py",
     "src/paperalpha_runtime/unified_topology_queue.py"
   ],
   "protocol_and_docs": [
@@ -34,7 +36,8 @@
     "results/submission/development/mast_two_layer_v2_20261005/REPORT.md",
     "results/submission/development/atbench_external_20261005_v2/REPORT.md",
     "results/external_who_when_audit_v1/REPORT.md",
-    "results/submission/development/communication_mode_smoke_lanyun_20261005_r1/REPORT.md"
+    "results/submission/development/communication_mode_smoke_lanyun_20261005_r1/REPORT.md",
+    "results/submission/development/prevalence_shift_20261005/REPORT.md"
   ],
   "excluded": [
     "API keys and credentials",
