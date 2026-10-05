@@ -34,6 +34,23 @@ The runtime parser creates explicit message/delegation edges. Each edge has an i
 
 ## Fusion
 
+## Explicit factor graph
+
+The released monitor has the following inspectable dependency DAG (arrows are
+model dependencies, not causal claims): `W_f -> W_R`,
+`R_edge -> R_path -> R_R`, `W_f -> R_R`, and
+`(W_R, R_R, runtime summaries) -> F`.
+
+For each workflow factor, `P(W_f=1)=q_f`; the workflow node uses
+`P(W_R=1 | W_1,...,W_m)=1-prod_f(1-W_f q_f)`. Each runtime edge has the
+explicit sigmoid CPD `P(R_edge=1 | x_edge)=sigmoid(theta^T x_edge)`, path
+propagation is the declared noisy-OR over observed edges, and the sink node is
+the documented sigmoid head over path/local/workflow evidence. The fusion head
+is fit only on inner-OOF line scores and declared summaries. Every active
+factor, edge, parameter and missingness policy can therefore be inspected or
+replayed; the graph is knowledge-compiled rather than discovered from hidden
+LLM state.
+
 The outer test fold is never used to fit a factor or threshold. Within each outer training fold, three grouped inner folds create OOF `p_W` and `p_R` scores. A logistic fusion head then receives the raw workflow/runtime summaries plus these two OOF BN scores. The outer test episode receives scores from factors fit on the full outer training fold. The classification threshold is also selected from inner-OOF fusion scores.
 
 The final monitor exposes both line scores, fusion score, active factors, observed edges, unknown evidence and the interval/abstention policy. It is therefore white-box at the monitor level, while the protected API LLM remains black-box.
