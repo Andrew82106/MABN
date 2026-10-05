@@ -256,16 +256,16 @@
       "required_before_submission": ["larger independently adjudicated or licensed MAS confirmation cohort across generating endpoints", "online monitor p50/p95 latency and memory", "independent confirmation of low-false-alarm operating point", "at least one runnable external MAS detector reproduction or an explicit non-SOTA framing", "separate full-trace classification and pre-action early-warning reports with lead-time/false-alarm metrics"]
     },
     "mast_external_audit": {
-      "directory": "results/submission/final_eval/mast_external_v1",
-      "status": "completed_external_transfer_secondary_not_human_gold",
+      "directory": "results/submission/development/mast_two_layer_v2_20261005",
+      "status": "completed_external_transfer_secondary_not_human_gold_boundary_clean",
       "source": "Public MAST/MAD release: 1642 MAS trajectories across seven systems and eight task benchmarks; downloaded from the authors' Hugging Face release.",
       "coverage": {"traces": 1642, "positive_released_mast_annotations": 1237, "mas_benchmark_groups": 11, "human_pilot_traces": 19, "human_pilot_positive": 18},
-      "feature_boundary": "Trajectory text only; mast_annotation, MAS/benchmark identifiers and human annotations are excluded from features.",
+      "feature_boundary": "Trajectory text and message headers only; terminal Evaluation block is stripped before event parsing and semantic matching; mast_annotation, MAS/benchmark identifiers and human annotations are excluded from features.",
       "split": "Five-fold StratifiedGroupKFold by mas_name::benchmark_name with inner OOF fusion calibration.",
-      "result": {"two_line_bn_fusion": {"auroc": 0.681, "auprc": 0.852, "f1": 0.858, "brier": 0.178}, "flat_logistic": {"auroc": 0.640, "auprc": 0.831}, "max_line_rule": {"auroc": 0.676, "auprc": 0.858}},
-      "interpretation": "The public MAST annotation target is any released MAS failure, not the operational authorization/taint target of the main experiment. It is secondary transfer evidence; the 19 human traces are too small and imbalanced for a powered estimate and are reported descriptively only. A later boundary audit found that the v1 adapter could retain the terminal Evaluation field in trajectory text; therefore the v1 number is historical diagnostic evidence, not independent leakage-free confirmation.",
-      "boundary_audit": {"adapter": "scripts/evaluate_mast_two_layer_v2.py", "status": "adapter_fixed_full_semantic_rerun_pending", "finding": "Strip terminal Evaluation block before event parsing and semantic matching; labels are added only after feature extraction.", "tests": "tests/test_mast_two_layer_v2.py: 8 passed", "reporting_rule": "Do not cite v2 numbers until the complete rerun is finished; do not treat v1 score as final external confirmation."},
-      "artifacts": ["scripts/evaluate_mast_external_v1.py", "scripts/evaluate_mast_two_layer_v2.py", "tests/test_mast_two_layer_v2.py", "results/submission/final_eval/mast_external_v1/REPORT.md", "results/submission/final_eval/mast_external_v1/REPORT.json", "data/external/MAST/MAD_full_dataset.json", "data/external/MAST/MAD_human_labelled_dataset.json"]
+      "result": {"structural_only": {"auroc": 0.2948621216, "auprc": 0.6748810228, "f1": 0.8593261549, "brier": 0.1972093497}, "semantic_runtime_extension": {"auroc": 0.4681397647, "auprc": 0.7628133202, "f1": 0.8593261549, "brier": 0.1885348427}},
+      "interpretation": "The public MAST annotation target is any released MAS failure, not the operational authorization/taint target of the main experiment. It is secondary transfer evidence; the 19 human traces are too small and imbalanced for a powered estimate. The boundary-clean rerun is weak in AUROC, so it is retained as a limitation and not a superiority claim.",
+      "boundary_audit": {"adapter": "scripts/evaluate_mast_two_layer_v2.py", "status": "completed", "finding": "Strip terminal Evaluation block before event parsing and semantic matching; labels are added only after feature extraction.", "tests": "tests/test_mast_two_layer_v2.py: 8 passed", "reporting_rule": "Treat v1 score as historical diagnostic; report v2 only as secondary boundary evidence, never as independent human confirmation."},
+      "artifacts": ["scripts/evaluate_mast_external_v1.py", "scripts/evaluate_mast_two_layer_v2.py", "tests/test_mast_two_layer_v2.py", "results/submission/development/mast_two_layer_v2_20261005/REPORT.md", "results/submission/development/mast_two_layer_v2_20261005/REPORT.json", "data/external/MAST/MAD_full_dataset.json", "data/external/MAST/MAD_human_labelled_dataset.json"]
     },
     "balanced_api_transfer_check": {
       "directory": "results/balanced_delegation_api_v1_20261002_r7",

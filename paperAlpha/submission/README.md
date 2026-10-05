@@ -26,6 +26,7 @@
 - [最终实验门槛审计](../results/submission/final_eval/FINAL_GATE.md)是当前投稿候选的单页结论；历史运行只作为可复现原始证据保留。
 - [单页最终汇报包](SUBMISSION_PACKET.md)汇总当前方法、主结果、MAS 基线、API 通信队列、外部边界和投稿前硬门槛。
 - [ATBench 外部迁移审计](../results/submission/development/atbench_external_20261005_v2/REPORT.md)是 1,000 条人审通用 Agent 数据的非 MAS 边界检查；结果不并入 MAS 主表。
+- [MAST/MAD 修正版外部审计](../results/submission/development/mast_two_layer_v2_20261005/REPORT.md)剥离 `Evaluation` 标签通道；结果不作为独立人类金标准。
 - [Who-and-When 外部失败定位审计](../results/external_who_when_audit_v1/REPORT.md)仅作失败定位响应边界检查，不作为二分类安全集。
 - [学习型 MAS 基线](../results/independent_mas_learned_baselines_v1/REPORT.md)和 [透明结构/污点规则控制](../results/independent_mas_mas_baselines_v1/REPORT.md)已按同一五折 topology-family holdout 运行；它们是协议兼容的 proxy/control，不冒充外部论文复现。
 - [字段公平性复核](../results/independent_mas_journal_parity_v1/REPORT.md)去掉运行时 `permission_mismatch` 后重跑同一协议；双线融合 AUROC/AUPRC=0.811/0.661，说明主结果不是由该单字段单独造成的。
