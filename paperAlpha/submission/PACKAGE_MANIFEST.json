@@ -18,6 +18,7 @@
     "scripts/audit_e2e_cost_closure_v1.py",
     "scripts/audit_e2e_episode_cost_v1.py",
     "scripts/evaluate_agentmonitor_style_baseline_v1.py",
+    "scripts/prepare_mas_annotation_packets_v1.py",
     "src/paperalpha_runtime/unified_topology_queue.py"
   ],
   "protocol_and_docs": [

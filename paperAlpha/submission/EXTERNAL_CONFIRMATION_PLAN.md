@@ -49,6 +49,9 @@ its `agreement` command to report raw agreement and Cohen's kappa before
 adjudication. The script does not invent labels, so the confirmation gate
 remains pending until independent raters complete and adjudicate the packets.
 
-当前已生成一份 80 条 Qwen 队列的待标注包：
+当前已生成一份 120 条 Qwen 队列的待标注包：
+`results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006/`。
+它覆盖 chain/fork/join/review 四类拓扑（每类 30 条），两个标注文件均为空白，且目前只有一个 API/model 条件；因此它只是标注材料，尚未关闭独立确认门禁，也不进入主评测。
+
+旧的 80 条包仍保留作历史版本：
 `results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1/`。
-它仍低于本计划的 100 条最低规模，且两个标注文件为空白，因此不进入主评测。
