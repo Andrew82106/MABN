@@ -59,7 +59,7 @@ F1 **0.667**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 - [近邻论文刷新](../../doc/ref_paper/mas_safety_2026-09-11/journal_alignment/near_neighbor_refresh_20261005.md)
 - [投稿要求对照](../../doc/ref_paper/mas_safety_2026-09-11/journal_alignment/submission_requirements_20261002.md)
 
-当前没有把 AgentMonitor、ALTEDA 或 QuadSentinel 声称为原生安全方法复现；现有结果是同信息适配或不同目标的辅助对照。在独立人工确认、原生 MAS baseline 公平复现（或明确 non-SOTA framing）、端到端 API 成本和低误报早期预警补齐前，主包应称为
+当前没有把 AgentMonitor、ALTEDA 或 QuadSentinel 声称为原生安全方法复现；现有结果是同信息适配或不同目标的辅助对照。本包明确采用 **non-SOTA framing**：不声称复现或击败这些方法，只报告同信息控制和目标边界。在独立人工确认、端到端 API 成本和低误报早期预警补齐前，主包应称为
 **development / external-diagnostic package**，不能写成“已完成独立安全优越性验证”。
 
 独立确认的准备工作现已形成平衡的 160 条双条件 API 轨迹（Qwen 80、DeepSeek 80）；两个标注文件均去除了 episode/scenario/request 编号和模型身份。它们仍是空白双盲标注材料，在两名独立标注者完成标注、仲裁前，不能写成独立安全金标准。
