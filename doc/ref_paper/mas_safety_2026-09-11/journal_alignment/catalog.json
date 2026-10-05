@@ -1,0 +1,537 @@
+{
+  "schema_version": "1.0",
+  "catalog_type": "rolling_journal_alignment_evidence",
+  "retrieved_on": "2026-10-01",
+  "language": "zh-CN",
+  "scope": {
+    "user_requirement": "以中科院一区或二区期刊为目标；JCR、SJR、CCF等级均不能替代中科院分区。",
+    "research_object": "仅依据可观测文本、消息、工具调用和执行结果，对API驱动的多智能体系统进行运行时风险评估与安全监测。",
+    "positioning_boundary": "白盒是监测器及其证据、关系、风险计算可检查，不代表被监测API大模型内部已白盒化。",
+    "selection_principle": "区分可直接比较的监测算法与期刊论文的实验设计参照；本目录不能代替baseline专门目录。",
+    "update_policy": "在此JSON中滚动补充已核验事实与来源，不以多个总结文档复制维护。"
+  },
+  "evidence_policy": {
+    "levels": {
+      "A_official_database": "分区发布机构数据库中的具体年度、版本及大小类条目。",
+      "B_publisher_or_author": "出版社论文页、出版社登记元数据、作者代码或机构作者稿；能支持论文事实，不自动支持中科院分区。",
+      "C_institutional_statement": "大学或研究机构官网说明；若未注明分区表年份、版本或大小类，不得补全为官方完整认证。",
+      "D_secondary_discovery_only": "仅用于发现线索，不据此确认最新分区或实验细节。"
+    },
+    "reading_rule": "摘要、章节节选、搜索索引中的作者稿片段均不等于完整阅读全文。",
+    "publication_rule": "出版社已上线的Journal Pre-proof与作者预印本分开记录；online年份与未来卷期年份分开记录。",
+    "negative_evidence_rule": "未核验或未找到不等于论文没有提供。",
+    "sample_size_rule": "未发现并不宣称任何候选期刊存在统一硬性样本量门槛。"
+  },
+  "official_partition_verification": {
+    "entry_source_id": "s_cas_portal",
+    "institutional_instructions_source_id": "s_cas_lookup_instructions",
+    "status": "官方入口已定位；本次未获得登录后具体期刊的完整分区条目。",
+    "required_record_before_target_is_finalized": [
+      "学校实际采用的分区年份和版本（例如升级版）",
+      "期刊英文全名与ISSN",
+      "大类名称与分区",
+      "各小类名称与分区",
+      "Top标识以及学校是否以大类分区认定",
+      "查询日期及可复查的官方或校图书馆查询凭据"
+    ],
+    "latest_2026_partition_authenticated": false,
+    "do_not_substitute": ["JCR quartile", "SJR quartile", "CCF等级", "未辨明发布机构及学校认定规则的其他分区产品"]
+  },
+  "journal_candidates": [
+    {
+      "id": "computers_security",
+      "title": "Computers & Security",
+      "fit_assessment": "不作为当前投稿目标。2026-09-30读取Elsevier官方期刊介绍：自2024年初暂停考虑以AI/ML为重要组成的稿件，并明确LLM等AI系统自身的安全研究不在范围内。已发表论文仍可作方法参照，不能据此推断现时收稿范围。",
+      "cas_claim_supported": "机构页面将该刊称为中科院二区。",
+      "cas_evidence_level": "C_institutional_statement",
+      "cas_evidence_source_ids": ["s_cose_zzu", "s_cose_mnnu"],
+      "cas_partition_table_year": null,
+      "cas_edition": null,
+      "cas_major_category_verified": false,
+      "cas_minor_categories_verified": false,
+      "cas_latest_official_record_verified": false,
+      "year_caution": "2025是引用论文年份或网页发布日期，不足以单独证明采用2025版分区表。",
+      "target_status": "因官方收稿范围冲突，排除本项目当前投稿候选；分区证据保留但不用于推荐投稿。",
+      "publisher_scope": {"checked_on": "2026-09-30", "source_id": "s_cose_official_scope", "scope_text_read": true, "full_author_guidelines_read": false, "decision": "out_of_scope_under_current_publisher_statement"},
+      "indexing": {
+        "scie": "武汉大学图书馆条目标记SCIE有，属于机构转录证据；本次未直查Clarivate MJL。",
+        "source_ids": ["s_cose_whu"]
+      },
+      "publisher_journal_page": "https://www.sciencedirect.com/journal/computers-and-security",
+      "author_guidelines_read": false,
+      "access_note": "ScienceDirect部分页面直接打开失败或403；没有把未读作者指南当作投稿要求依据。"
+    },
+    {
+      "id": "expert_systems_applications",
+      "title": "Expert Systems with Applications",
+      "fit_assessment": "官方范围明确包含风险评估、多智能体系统和知识管理，作为目前优先匹配候选。仍须证明实际方法贡献，不能只给既有概念改名；该判断不是录用或分区保证。",
+      "cas_claim_supported": "西安工程大学2026-06-05页面称计算机科学大类一区Top。",
+      "cas_evidence_level": "C_institutional_statement",
+      "cas_evidence_source_ids": ["s_eswa_xpu", "s_eswa_2025_secondary"],
+      "cas_partition_table_year": null,
+      "cas_edition": null,
+      "cas_major_category_reported": "计算机科学，一区，Top",
+      "cas_major_category_verified": "机构陈述与二级期刊页交叉一致；官方数据库具体条目未核验。",
+      "cas_minor_categories_verified": false,
+      "cas_latest_official_record_verified": false,
+      "year_caution": "2026网页日期不等于2026分区版本；页面未写所用分区表年份。",
+      "target_status": "中科院一区候选，待年度、版本和小类确认。",
+      "publisher_scope": {"checked_on": "2026-09-30", "source_id": "s_eswa_official_scope", "scope_text_read": true, "full_author_guidelines_read": false, "decision": "scope_aligned_candidate_not_submission_ready"},
+      "indexing": {
+        "scie": "历史武汉大学图书馆条目标记SCIE有；不据历史页面认证当前分区。",
+        "source_ids": ["s_eswa_whu_historical"]
+      },
+      "publisher_journal_page": "https://www.sciencedirect.com/journal/expert-systems-with-applications",
+      "author_guidelines_read": false,
+      "access_note": "未完整读取作者指南；期刊页面访问存在403限制。"
+    },
+    {
+      "id": "information_fusion",
+      "title": "Information Fusion",
+      "fit_assessment": "若核心贡献是多源证据、不确定性与关系结构的融合，可作为候选；仅把已有模块串起来不足以支撑此定位。",
+      "cas_claim_supported": "烟台大学明确引用2025年发布的中科院期刊分区表，称该刊为一区Top。",
+      "cas_evidence_level": "C_institutional_statement",
+      "cas_evidence_source_ids": ["s_inffus_ytu", "s_inffus_2025_secondary"],
+      "cas_partition_table_year": 2025,
+      "cas_edition": null,
+      "cas_major_category_reported": "2025二级期刊页报告计算机科学大类1区、人工智能和理论方法小类1区；仍非官方数据库核验。",
+      "cas_major_category_verified": false,
+      "cas_minor_categories_verified": false,
+      "cas_latest_official_record_verified": false,
+      "year_caution": "可确认机构明确引用2025表；该页面未呈现完整大类、小类与升级版条目。",
+      "target_status": "2025中科院一区Top有明确机构证据；完整官方条目和2026变化仍待核。",
+      "publisher_scope": {"checked_on": "2026-09-30", "source_id": "s_inffus_official_scope", "scope_text_read": true, "full_author_guidelines_read": false, "decision": "conditional_on_substantive_information_fusion_contribution"},
+      "indexing": {
+        "scie": "Juelich机构期刊记录列出SCIE/JCR收录；不是分区发布机构直接核验。",
+        "source_ids": ["s_inffus_juelich"]
+      },
+      "publisher_journal_page": "https://www.sciencedirect.com/journal/information-fusion",
+      "author_guidelines_read": false,
+      "access_note": "未完整读取作者指南；期刊页面访问存在403限制。"
+    },
+    {
+      "id": "ieee_tdsc",
+      "title": "IEEE Transactions on Dependable and Secure Computing",
+      "fit_assessment": "与多Agent安全和系统威胁模型高度相关；适合作为安全论证及实验严谨度参照。",
+      "cas_claim_supported": "暨南大学教师官网将2025年TDSC论文标为中科院二区。",
+      "cas_evidence_level": "C_institutional_statement",
+      "cas_evidence_source_ids": ["s_tdsc_jnu", "s_tdsc_2025_secondary"],
+      "cas_partition_table_year": null,
+      "cas_edition": null,
+      "cas_major_category_reported": "2025二级期刊页报告计算机科学大类2区，硬件与软件工程小类1区、信息系统小类2区；仍非官方数据库核验。",
+      "cas_major_category_verified": false,
+      "cas_minor_categories_verified": false,
+      "cas_latest_official_record_verified": false,
+      "year_caution": "2025是论文年份，未说明分区表采用年份。",
+      "target_status": "中科院二区候选，待官方年度及大小类条目确认。",
+      "indexing": {
+        "scie": "IEEE官方February 2025 title list明确标SCIE。",
+        "source_ids": ["s_ieee_title_list_2025"],
+        "not_cas_evidence": "同一PDF的Q1来自2023 JCR（2024年发布），不能替代中科院分区。"
+      },
+      "publisher_journal_page": "https://www.computer.org/csdl/journal/tq",
+      "author_guidelines_read": false,
+      "access_note": "本次未读取完整作者指南，不据此声称稿件格式或样本量硬门槛。"
+    }
+  ],
+  "papers": [
+    {
+      "id": "atc_bayes_sadak_2026",
+      "title": "A multi-agent LLM framework with Bayesian fusion and safety guardrails for ATC-pilot communication error detection",
+      "authors": ["Mustafa Semih Sadak"],
+      "journal_id": "expert_systems_applications",
+      "doi": "10.1016/j.eswa.2026.132241",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0957417426011541",
+      "publication": {"status": "publisher_online_journal_article", "volume": "321", "article_number": "132241", "volume_year": 2026},
+      "journal_partition": {"cas": "目标年份官方中科院分区待复核", "fit": "与本文最接近的MAS+Bayesian fusion+安全护栏实验范式；不是同任务baseline"},
+      "reading": {"range": "official publisher abstract, highlights and preview sections", "fulltext_read": false, "source_ids": ["s_atc_bayes_publisher"]},
+      "verified_experimental_facts": {"architecture": "四个专门角色分别处理syntax、semantics、context和risk，结合显式安全规则与reliability-weighted Bayesian fusion。", "data": "894条专家标注真实交换，52条错误、原始阳性率5.8%，另有400条合成压力集。", "backends": ["Gemini 2.5 Flash", "Llama-4 Maverick 17B"], "evaluation": "报告严格留出、五折OOF、召回/FPR、合成集精度和端到端延迟；出版社摘要报告严格留出平均召回90.6%，FPR为4.6%/2.4%，平均延迟约1.6秒。"},
+      "comparison_role": "投稿实验设计的首要期刊近邻：多Agent专门角色、规则护栏、Bayesian fusion、多后端与低阳性率评测。",
+      "direct_baseline_boundary": "其标签是ATC通信错误而非API MAS系统级授权/信息流风险；不能把论文报告的召回和FPR直接并入本文主表。",
+      "lesson_for_our_experiments": "必须增加多后端、低阳性率、严格任务/拓扑留出、固定FPR召回、延迟/token/API成本和规则下限；同时验证规范线与运行线是否各自提供独立增益。"
+    },
+    {
+      "id": "sel_chahine_2026",
+      "title": "Separating intent from execution: A defense-in-depth security architecture for LLM-based multi-agent systems",
+      "authors": ["Khaled Chahine"],
+      "journal_id": "expert_systems_applications",
+      "doi": "10.1016/j.eswa.2026.133781",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0957417426026898",
+      "publication": {
+        "status": "publisher_online_journal_article",
+        "online_date": null,
+        "online_date_note": "截至检索日已能访问出版社文章摘要；首次online具体日期本次未核验。",
+        "volume": "332",
+        "article_number": "133781",
+        "volume_year": 2027,
+        "volume_date_note": "出版社提交的Crossref元数据标2027年1月卷期。2026-07-29是DOI记录创建日期，不能当首次online日期；首次上线日期仍未核实。"
+      },
+      "reading": {
+        "range": "publisher_abstract_highlights_and_section_snippets",
+        "fulltext_read": false,
+        "author_manuscript_found": false,
+        "source_ids": ["s_sel_publisher", "s_sel_crossref"]
+      },
+      "verified_experimental_facts": {
+        "setting": "真实Ed25519密码操作的原型模拟器和实时LLM API。",
+        "coverage": "23项实验，16种攻击向量。该数字不是23条轨迹，也未证明每格样本量。",
+        "models": ["Google Gemini 2.5 Flash", "Anthropic Claude Sonnet 4", "OpenAI GPT-4o-mini"],
+        "comparators": ["完整SEL", "LLM-only raw", "pre-parsed LLM", "function-calling/structured-output LLM", "纯确定性规则引擎"],
+        "measures": ["正确性", "注入抵抗", "延迟开销", "模糊凭证的解释能力"],
+        "component_evidence": "出版社预览区分结构化凭证与模糊凭证：前者纯规则能匹敌SEL，后者检验语义解释的额外作用；还描述部分语义层注入误判被后续确定性层拦截。这是预览中的组件证据，不代表已核实完整消融表。"
+      },
+      "not_verified": ["逐场景样本数", "重复运行次数及置信区间", "统计检验", "完整消融表", "可下载代码和数据"],
+      "comparison_role": "MAS安全架构与双线消融设计参照。",
+      "direct_baseline_boundary": "其核心是身份凭证、授权与密码执行边界，不是通用风险概率监测器；不能不改任务就直接比较监测F1。",
+      "lesson_for_our_experiments": "必须同时证明语义分支比纯规则多处理了什么，以及确定性约束阻止了哪些语义模型误判。"
+    },
+    {
+      "id": "cracks_yang_2026",
+      "title": "Cracks in Collaboration: Threat Models and Attacks on Multi-LLM Collaborative Systems",
+      "authors": ["Meng Yang", "Tianqing Zhu", "Bo Liu", "Heng Xu", "Wanlei Zhou"],
+      "journal_id": "ieee_tdsc",
+      "doi": "10.1109/TDSC.2026.3670889",
+      "publisher_url": "https://ieeexplore.ieee.org/document/11424974/",
+      "publication": {
+        "status": "published_journal_issue",
+        "online_date": null,
+        "volume": "23",
+        "issue": "3",
+        "pages": "7191-7207",
+        "volume_year": 2026,
+        "issue_period": "May-June 2026",
+        "metadata_note": "卷期与页码由作者官方代码引用及DBLP相互印证；IEEE入口通过Crossref出版社登记信息解析。"
+      },
+      "reading": {
+        "range": "author_repository_readme_publication_metadata_and_selected_code_data_at_commit_52443f836380b66cf807eec9fd3d71163433d11b",
+        "fulltext_read": false,
+        "author_manuscript_found": false,
+        "publisher_fulltext_access": "未取得可读全文。",
+        "source_ids": ["s_cracks_repository", "s_cracks_crossref", "s_cracks_dblp", "s_cracks_code_data"]
+      },
+      "verified_experimental_facts": {
+        "topologies": ["centralized", "horizontal chain", "joint free communication"],
+        "communication_modes": ["直接拼接", "总结", "投票选择消息"],
+        "attack_categories": ["Decision Poisoning", "Indirect EchoLeak", "Information Collision"],
+        "code": "作者提供三种结构的代码、环境配置、运行脚本和部分数据资源。"
+      },
+      "not_verified": ["实验总样本量", "每个条件下的任务数", "模型完整清单", "baseline完整清单", "置信区间和统计检验", "消融实验"],
+      "sample_count_caution": "仓库中medalpaca-medical-meadow-medqa-500.json的文件名不能代替论文实际样本量证明。",
+      "separately_verified_public_code": {
+        "commit": "52443f836380b66cf807eec9fd3d71163433d11b",
+        "qa_records_counted": 400,
+        "qa_domains": {"finance": 100, "law": 100, "medical": 100, "uncertain": 100},
+        "medical_records_counted": 500,
+        "as3_code_exclusion": "当前AS-III定向攻击入口跳过101条答案为A的题，因此有399条候选对象；不是论文实际执行或成功攻击分母。",
+        "model_entries": ["Llama-2-7B-chat", "Llama-3.1-8B-Instruct", "Qwen2.5-7B-Instruct"],
+        "runtime": "检查的入口为本地Transformers推理，不能称为其论文API实验复现。",
+        "score_entries": "AS-I标签命中；AS-II嵌入相似度0.6阈值；AS-III含LLM判答预处理。不是统一独立状态oracle。",
+        "factorial_and_repetition_caution": "不同入口启用组合不一致；不能据此确认完整全因子实验。三轮交互不是三次独立重复。",
+        "paper_boundary": "以上仅证实公开代码和数据，完整论文实验分母、划分、统计与消融仍未取得。"
+      },
+      "comparison_role": "MAS威胁模型、拓扑变化与攻击传播实验参照，可进一步核查其任务是否可复用。",
+      "direct_baseline_boundary": "攻击研究及实验框架不是一个可直接替代我们的外部监测器；不能将其攻击成功率与我们的检测准确率混比。",
+      "lesson_for_our_experiments": "系统级风险需要在不同协作结构、消息处理方式下验证，不能只报告一个固定DAG。"
+    },
+    {
+      "id": "bil_raafay_2026",
+      "title": "Beyond Patterns: A Bayesian Intent Lattice for Metamorphic Malware Detection",
+      "authors": ["Muhammad Abdur Raafay"],
+      "journal_id": "computers_security",
+      "doi": "10.1016/j.cose.2026.105092",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0167404826002683",
+      "publication": {
+        "status": "publisher_in_press_journal_preproof",
+        "online_date": "2026-07-31",
+        "volume": null,
+        "volume_year": null,
+        "article_number": "105092",
+        "status_note": "出版社标In Press, Journal Pre-proof；不同于仅有SSRN预印本，也不冒充已排定卷期版本。"
+      },
+      "reading": {
+        "range": "publisher_metadata_highlights_and_abstract",
+        "fulltext_read": false,
+        "source_ids": ["s_bil_publisher"],
+        "preprint_note": "存在同题SSRN版本，但其摘要与出版社版本不完全相同，未用它替代期刊实验事实。"
+      },
+      "verified_experimental_facts": {
+        "model": "潜在恶意意图与可观测能力事件组成紧凑BN；论文宣称在模型假设下有闭式误报上界。",
+        "data": ["6000个受控合成变体", "MOTIF数据集中的1947个真实Windows-PE恶意软件样本"],
+        "coverage": "六个变形层级。",
+        "comparators": ["byte n-gram", "opcode HMM", "CFG kernel", "syscall n-gram", "LightGBM/EMBER", "MalConv", "GraphSAGE GNN"],
+        "measures": ["不同变形层级下的F1变化"],
+        "real_data_boundary": "MOTIF部分是意图分类器的feature-space analogue与逐步扰动；作者指出仍需完整二进制级真实恶意软件验证。"
+      },
+      "not_verified": ["数据划分及是否家族隔离", "重复次数与置信区间", "统计检验", "完整消融", "公开代码", "误报上界的全部假设与推导"],
+      "comparison_role": "可观测行为事件到潜在风险意图的BN方法近邻，以及受控集与真实数据双线评估参照。",
+      "direct_baseline_boundary": "对象是恶意软件而非API Agent；其特征、标签、攻击和数据不能直接当MAS安全监测benchmark。",
+      "lesson_for_our_experiments": "需分开报告受控构造样本、真实运行轨迹和仅特征空间扰动，避免把三者证据强度混在一起。"
+    },
+    {
+      "id": "dynamic_cyber_risk_2025",
+      "title": "A novel proactive and dynamic cyber risk assessment methodology",
+      "authors": ["Pavlos Cheimonidis", "Konstantinos Rantos"],
+      "journal_id": "computers_security",
+      "doi": "10.1016/j.cose.2025.104439",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0167404825001282",
+      "publication": {
+        "status": "published_journal_volume",
+        "online_date": null,
+        "volume": "154",
+        "volume_date": "2025-07",
+        "article_number": "104439"
+      },
+      "reading": {
+        "range": "author_uploaded_public_pdf; experimental passages in Sections 5-7 verified, not the complete article",
+        "fulltext_read": false,
+        "pdf_pages": 16,
+        "read_to_eof": false,
+        "author_upload": "Pavlos Cheimonidis，2025-07-06",
+        "license": "CC BY 4.0；PDF第1页与作者上传页均标明。",
+        "source_ids": ["s_dynamic_risk_publisher", "s_dynamic_risk_author_pdf"],
+        "access_note": "作者公开上传的完整PDF可在线读取；Sec5-7实验相关段落已核验，不声称整篇读完。直接本地下载遇403，未绕过限制。"
+      },
+      "verified_experimental_facts": {
+        "knowledge_sources": ["NVD", "CAPEC", "MITRE ATT&CK", "内部环境信息"],
+        "model": "结合BN攻击成功概率、资产影响和EPSS等信息进行主动及动态风险评估。",
+        "evaluation_setting": "Sec5、图4、表3（pp7-8）：人工SCADA场景，6个资产、9个真实CVE；不是9条真实攻击轨迹。",
+        "implementation": "Sec5-6（pp10-11）：AND/OR关系构造CPT，使用GeNIe执行BN。",
+        "comparisons": "Sec6.1-6.2、表24-25（pp12-13）：有/无防火墙与有/无APT因素的模型情景比较；防火墙80%检测阻断率是预设假定，非本文测得。",
+        "evaluation_boundary": "所核验实验段为风险建模演示，不能当成独立检测数据集上的baseline准确率比较。"
+      },
+      "not_verified": ["独立检测数据集及baseline数值比较", "重复运行和统计检验", "完整模块消融", "代码可复现程度"],
+      "reported_limitations": "Sec7（pp13-14）明确尚不能整合实时攻击数据；风险变化演示不等同于在线监测有效性验证。",
+      "comparison_role": "知识资源到BN再到动态风险的建模与证据溯源参照。",
+      "direct_baseline_boundary": "网络与资产风险不等于API Agent轨迹风险；不能直接将SCADA用例作为我们的监测算法baseline。",
+      "lesson_for_our_experiments": "借鉴知识到节点、边、参数的可追溯过程；本项目仍需公开任务的真实API轨迹和规范化对比。不能把该文演示案例数当成期刊样本门槛。"
+    },
+    {
+      "id": "iraf_brb_2025",
+      "title": "IRAF-BRB: An explainable AI framework for enhanced interpretability in project risk assessment",
+      "authors": ["Bodrunnessa Badhon", "Ripon K. Chakrabortty", "Sreenatha G. Anavatti", "Mario Vanhoucke"],
+      "journal_id": "expert_systems_applications",
+      "doi": "10.1016/j.eswa.2025.127979",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0957417425015982",
+      "publication": {
+        "status": "published_journal_volume",
+        "online_date": null,
+        "volume": "285",
+        "volume_year": 2025,
+        "article_number": "127979"
+      },
+      "reading": {
+        "range": "institutional_complete_pdf_obtained; Section 4.1-4.5 and Section 5 read completely (printed pages 10-17); page 1 publication metadata and page 18 data availability checked",
+        "fulltext_read": false,
+        "complete_pdf_obtained": true,
+        "pdf_pages": 20,
+        "read_to_eof": false,
+        "experiment_section_read_completely": true,
+        "visual_check": "第15页表7-10已渲染并目视核对。",
+        "pdf_sha256": "5f92560190f239125a27bb87acba420544d7f2a1b314ddab0e39903e2e826c08",
+        "source_ids": ["s_iraf_author_pdf"],
+        "access_note": "合法取得Ghent机构库公开的完整、出版社排版PDF；实验段已完整读到，但未通读全部20页至EOF，不标为整篇阅读全文。"
+      },
+      "verified_experimental_facts": {
+        "setting": "Sec4.1（pp10-11）：高层建筑项目风险案例，8个风险因素、各3个等级；表4的15行仅为节省篇幅展示的代表场景，不是数据集总样本量。",
+        "comparators": ["DE-BRB", "PSO-BRB", "CMA-ES-BRB", "Neural Network BRB", "原始DECMSA-BRB"],
+        "hyperparameter_selection": "Sec4.4、表8（p15）：网格搜索和交叉验证；具体折数与划分未核实。",
+        "repetitions": "Sec4.4（p15）：每种模型10次独立运行，不是10条数据。",
+        "statistics": "Sec4.4、表9-10（p15）：MSE均值和标准差，alpha=0.05的独立双样本t检验、等方差假设。",
+        "component_evidence": "表9比较修改与原始DECMSA；Sec4.5、图13（pp16-17）分析5项参数，不等于完整模块消融或跨领域测试。",
+        "explainability_evidence": "Sec4.2-4.3、图10-12及表7（pp12-15）：LIME/SHAP案例和定性性质对照，未核实独立的解释忠实度测量。",
+        "data_availability": "p18声明数据可按请求提供；未获得公开可下载的数据集。"
+      },
+      "not_verified": ["数据集总样本量", "训练验证测试具体划分", "代码公开情况", "解释忠实性的定量测试"],
+      "reported_limitations": "Sec5（p17）指出依赖专家信念、高维规则规模增长；跨行业验证和反事实解释列为后续工作。",
+      "comparison_role": "可解释风险模型的实验报告与统计方法参照。",
+      "direct_baseline_boundary": "BRB不是本任务的MAS监测器，建筑项目风险也不是Agent安全；不进入直接Agent baseline名录。",
+      "lesson_for_our_experiments": "借鉴重复运行、调参和解释验证的分开报告，但不照搬独立t检验：本项目同任务上的方法比较应按独立任务组做配对评估及组级重采样，同轨迹前缀不充当独立样本。论文未建立期刊统一样本门槛。"
+    },
+    {
+      "id": "alteda_rabieinejad_2026",
+      "title": "Beyond the prompt: Log-based threat detection and attribution for multi-Agent LLMs",
+      "authors": ["Elnaz Rabieinejad", "Fattane Zarrinkalam", "Ali Dehghantanha"],
+      "journal_id": "information_processing_management",
+      "doi": "10.1016/j.ipm.2026.104768",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0306457326001597",
+      "publication": {
+        "status": "publisher_record_2026",
+        "volume": null,
+        "article_number": "104768"
+      },
+      "journal_partition": {
+        "cas": "未取得目标年份官方中科院分区条目；投稿前核验",
+        "fit": "高相关期刊近邻；不能把网上分区标签当作已认证证据"
+      },
+      "reading": {
+        "range": "publisher abstract, highlights and method/experiment snippets read",
+        "fulltext_read": false,
+        "source_ids": ["s_alteda_publisher"],
+        "access_note": "出版社页面可核验摘要和实验摘要；未取得合法完整全文，数值细节不扩写。"
+      },
+      "verified_experimental_facts": {
+        "model": "ALTEDA把同步的应用、网络和主机运行日志组成带属性有向多重图，做图级威胁分类，并用SHAP做全局和局部归因。",
+        "data": "出版社摘要称红队生成800条轨迹、攻击成功率31.4%；仓库metadata进一步记录400 benign + 400 compromised、12类攻击变体、seed=42、model=llama2。仓库数据是作者资源事实，不替代论文表格。",
+        "scope": "不读取用户提示词和回复文本，关注攻击造成的运行行为与跨Agent交互。",
+        "reported_result": "约40%轨迹进度即可出现高可信早期告警，完整性能在中段轨迹附近趋于稳定；具体指标需以全文表格为准。"
+      },
+      "comparison_role": "最接近的多Agent运行时图监测基线：代表纯日志图分类、早期告警和归因。",
+      "direct_baseline_boundary": "其特征依赖应用/网络/主机日志和监督红队轨迹；与本项目只使用API可见事件、知识约束BN和双线监测的输入条件不同，必须做同信息量复现或明确作为上界参照。",
+      "lesson_for_our_experiments": "必须加入部分轨迹早报、跨Agent归因和按任务划分的数据；同时用同一公开事件输入比较ALTEDA式图分类、纯规则和我们的结构化概率线。",
+      "author_repository": {
+        "url": "https://github.com/Researcher-sudo/Log-based-Threat-Detection-and-Attribution-for-Multi-Agent-LLMs",
+        "status": "public_repository_pinned",
+        "commit": "3a438e2fcddd26a4f1513b064dd949bf9e4dd7b7",
+        "local_copy": "paperAlpha/data/external/ALTEDA",
+        "license": "No LICENSE file observed at pinned repository root; redistribution permission unresolved.",
+        "verified_contents": ["attack-set builder", "instrumented workload runner", "application/system/network log bundles", "graph creation notebook", "threat detection and attribution notebook"],
+        "fairness_warning": "作者输入包含主机、系统和网络日志；若本项目只允许API可见事件，必须做输入投影或将ALTEDA作为 richer-observation upper-bound，而不能直接声称公平比较。",
+        "artifact_warning": "仓库内pdf/paper.pdf首页实际是MDAgents（arXiv:2404.15155v3），与ALTEDA题名不一致；不能把该PDF当作ALTEDA论文全文。"
+      }
+    },
+    {
+      "id": "llm_agent_umf_2026",
+      "title": "LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Design of Multi Active/Passive Core-Agent Architectures",
+      "authors": ["Amine Ben Hassouna", "Hana Chaari", "Ines Belhaj"],
+      "journal_id": "information_fusion",
+      "doi": "10.1016/j.inffus.2025.103865",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S1566253525009273",
+      "publication": {
+        "status": "published_journal_volume",
+        "volume": "127",
+        "volume_part": "C",
+        "article_number": "103865"
+      },
+      "journal_partition": {
+        "cas": "Information Fusion的目标年份中科院分区需按官方库复核；现有机构记录仅作线索",
+        "fit": "高相关方法类参照；强调系统架构和信息融合，不是直接安全检测baseline"
+      },
+      "reading": {
+        "range": "publisher highlights and abstract read",
+        "fulltext_read": false,
+        "source_ids": ["s_llm_agent_umf_publisher"],
+        "access_note": "出版社页面可核验组件划分与方法定位；未取得完整正文。"
+      },
+      "verified_experimental_facts": {
+        "model": "把LLM Agent拆为planning、memory、profile、action和security模块，并区分active/passive core-agent。",
+        "role": "提供Agent系统组件、权限和信息融合的架构语言，可帮助定义我们DAG节点及可观测字段。"
+      },
+      "comparison_role": "工作流/组件建模参照，用于确定系统图的节点语义和边类型；不作为检测性能baseline。",
+      "direct_baseline_boundary": "文章重点是统一建模与设计，不等于运行时风险概率估计，也没有被核验为API轨迹检测器。",
+      "lesson_for_our_experiments": "在第一层工作流图中明确planning、memory、action、security等节点语义；第二层只使用运行中可见的交互、工具和共享资源事件。"
+    },
+    {
+      "id": "llm_agent_security_survey_tang_2025",
+      "title": "Security of LLM-based Agents Regarding Attacks, Defenses, and Applications: A Comprehensive Survey",
+      "authors": ["Yaxin Tang", "Yijia Liu", "Jiahe Lan", "Zheng Yan"],
+      "journal_id": "information_fusion",
+      "doi": "10.1016/j.inffus.2025.103941",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S1566253525009859",
+      "publication": {
+        "status": "publisher_record_2025",
+        "volume": "127",
+        "article_number": "103941"
+      },
+      "journal_partition": {
+        "cas": "目标年份官方中科院分区待复核",
+        "fit": "安全威胁分类和防御覆盖面的综述参照，不作为数值baseline"
+      },
+      "reading": {
+        "range": "publisher metadata and indexed abstract/summary read",
+        "fulltext_read": false,
+        "source_ids": ["s_llm_agent_security_survey"],
+        "access_note": "当前只用于威胁面和防御面分类，未用未核验的表格数字。"
+      },
+      "comparison_role": "补充知识库的威胁行为目录和实验覆盖矩阵。",
+      "direct_baseline_boundary": "综述不能直接提供可运行的检测器或公平数值比较。",
+      "lesson_for_our_experiments": "将工具使用、记忆、通信、权限、提示注入和数据泄露分别映射到事件节点、关系边和风险标签；每类至少保留正常/攻击对照。"
+    },
+    {
+      "id": "ptfusion_wang_2026",
+      "title": "PTFusion: LLM-driven context-aware knowledge fusion for web penetration testing",
+      "authors": ["Wenhao Wang", "Hao Gu", "Zhixuan Wu", "Hao Chen", "Xingguo Chen", "Fan Shi"],
+      "journal_id": "information_fusion",
+      "doi": "10.1016/j.inffus.2025.103731",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S1566253525007936",
+      "publication": {"status": "publisher_record_2026", "volume": "127", "volume_part": "A", "article_number": "103731"},
+      "journal_partition": {"cas": "目标年份官方中科院分区待复核", "fit": "多Agent、动态知识图和工具编排的系统设计参照；不是通用运行时检测baseline"},
+      "reading": {"range": "publisher abstract and highlights read", "fulltext_read": false, "source_ids": ["s_ptfusion_publisher"], "access_note": "出版社页面可核验半去中心化多Agent、MCP工具调用和动态知识图描述；未取得完整正文。"},
+      "verified_experimental_facts": {"model": "MasterAgent、ReconAgent、AttackAgent组成半去中心化协作；通过MCP调用工具并用动态知识图维护主机、端口和漏洞关系。", "focus": "知识融合和渗透测试任务完成，不是API-only安全风险概率监测。"},
+      "comparison_role": "动态知识图和工具编排的系统级参照，帮助定义第二层运行时关系和知识更新接口。",
+      "direct_baseline_boundary": "其目标是完成渗透测试任务，输入与成功指标不同，不能把任务完成率直接同本文风险检测F1比较。",
+      "lesson_for_our_experiments": "若引入知识模板，必须记录知识版本、实体绑定和工具证据来源；动态知识更新不能绕过固定评测协议。"
+    },
+    {
+      "id": "penexpert_li_2026",
+      "title": "PenExpert: A multi-agent hybrid LLM–expert system framework for autonomous penetration testing",
+      "authors": ["Zhe Li", "Tao Zhou", "Jing Zhu", "Di Li", "Xia Zhu", "Dong Wei", "Jie Liu", "Meng Song"],
+      "journal_id": "expert_systems_applications",
+      "doi": "10.1016/j.eswa.2026.133284",
+      "publisher_url": "https://doi.org/10.1016/j.eswa.2026.133284",
+      "publication": {"status": "publisher_record_2026", "volume": "331", "article_number": "133284"},
+      "journal_partition": {"cas": "目标年份官方中科院分区待复核", "fit": "多Agent与专家知识结合的系统设计参照；不是通用风险监测baseline"},
+      "reading": {"range": "publisher-indexed abstract read", "fulltext_read": false, "source_ids": ["s_penexpert_publisher"], "access_note": "公开索引摘要核验MITRE ATT&CK知识库、RAG、任务状态管理和多主机渗透场景；未取得完整正文。"},
+      "verified_experimental_facts": {"model": "LLM与专家系统结合，使用MITRE ATT&CK语义基础、payload知识库、RAG和结构化任务状态管理。", "reported_result": "索引摘要报告不同场景子任务完成率相对基线提升7%–123%；具体分母和统计需全文核验。"},
+      "comparison_role": "知识编译、状态管理和专家规则融合参照，支持本文第一层规范线的知识来源设计。",
+      "direct_baseline_boundary": "其评价目标是渗透测试任务完成率，不是观察前缀上的MAS风险预警；不能直接混入本文检测指标表。",
+      "lesson_for_our_experiments": "知识模板应能独立审计并绑定到运行时证据；同时报告无知识、静态知识和版本化知识三种消融。"
+    }
+  ],
+  "proposed_evidence_requirements_for_our_study": {
+    "status": "本项目实验设计建议，不是期刊作者指南硬性门槛。",
+    "requirements": [
+      "分别关闭两条监测分支，并与纯规则、文本或轨迹判别器比较，证明两条路线各自的必要性。",
+      "与单Agent风险聚合、扁平模型、完整关系图比较；删除或打乱关系，验证MAS结构信息是否带来增益。",
+      "只使用当时可见轨迹前缀，分别记录首次报警与首次违规时刻，避免未来结果泄漏。",
+      "加入正常但表面可疑的任务，并测误报、AUPRC、固定误报率召回、概率校准、延迟和调用成本。",
+      "通过关键证据删除、关系变更、知识约束消融检验解释是否真实影响决策，而非只展示一张图。",
+      "风险真值依据权限策略、工具执行结果和独立复核，不由同一监测模型循环自证。",
+      "区分受控实验、独立来源轨迹与前瞻真实运行；按独立任务计算统计不确定性，不能把同轨迹窗口视作独立样本。",
+      "公开划分、配置、提示词、模型版本和可合法共享的轨迹；适应性攻击或跨拓扑外推应与普通随机划分区分。"
+    ],
+    "no_fixed_sample_minimum_claimed": true
+  },
+  "sources": [
+    {"id": "s_cas_portal", "url": "https://www.fenqubiao.com/", "type": "official_partition_database_entry", "summary": "分区官方查询入口；尚未取得登录后期刊条目。"},
+    {"id": "s_cas_lookup_instructions", "url": "https://www.egi.cas.cn/yjsjy/pygl/zxjj/202509/P020250930713332295627.pdf", "type": "cas_institution_instructions", "summary": "说明中科院邮箱等登录方式及升级版查询；不是具体期刊分区证明。"},
+    {"id": "s_cose_zzu", "url": "https://softschool.zzu.edu.cn/front/singleArticleDetail?id=4a453ec8706c508001707572d16b0182", "type": "university_faculty_record", "summary": "2025年C&S论文条目标中科院二区，未注明分区版本。"},
+    {"id": "s_cose_mnnu", "url": "https://wxxy.mnnu.edu.cn/info/1025/8960.htm", "type": "university_news", "date": "2025-01-06", "summary": "将C&S称为中科院二区；不能自动证明2025版分区。"},
+    {"id": "s_cose_whu", "url": "https://topj.lib.whu.edu.cn/show.asp?cat=zk&id=3315", "type": "university_library_transcription", "summary": "C&S收录和分区条目，SCIE有；中科院栏未明示可认证的年度。"},
+    {"id": "s_eswa_xpu", "url": "https://jsjxy.xpu.edu.cn/info/1263/6636.htm", "type": "university_news", "date": "2026-06-05", "summary": "ESWA计算机科学大类一区Top的机构陈述，分区表年份未写。"},
+    {"id": "s_eswa_2025_secondary", "url": "https://www.ais.cn/journal/database/2794", "type": "secondary_journal_index", "retrieved_on": "2026-10-01", "summary": "二级期刊页标注2025年3月升级版计算机科学大类1区；仅作交叉线索，不能替代官方分区库。"},
+    {"id": "s_eswa_whu_historical", "url": "https://apps.lib.whu.edu.cn/topj/show.asp?cat=sci&id=12411", "type": "historical_university_library_record", "summary": "历史条目显示SCIE收录；不用于认证最新中科院分区。"},
+    {"id": "s_inffus_ytu", "url": "https://www.ytu.edu.cn/info/1036/19903.htm", "type": "university_news", "date": "2025-07-18", "summary": "明确援引2025中科院分区表，称Information Fusion一区Top。"},
+    {"id": "s_inffus_2025_secondary", "url": "https://www.ablesci.com/journal/detail?id=DlZBEp", "type": "secondary_journal_index", "retrieved_on": "2026-10-01", "summary": "二级期刊页列出2025年3月升级版计算机科学大类及人工智能、理论方法小类均为1区；仅作交叉线索。"},
+    {"id": "s_inffus_juelich", "url": "https://juser.fz-juelich.de/record/83004", "type": "research_institution_journal_record", "summary": "列出Information Fusion的SCIE/JCR收录，未据此认证中科院分区。"},
+    {"id": "s_tdsc_jnu", "url": "https://faculty.jnu.edu.cn/wlkjaqxy/xzh2/list.psp", "type": "university_faculty_record", "summary": "2025年TDSC论文标中科院二区，具体分区年份和大小类未给。"},
+    {"id": "s_tdsc_2025_secondary", "url": "https://www.ablesci.com/journal/detail?id=rRl3K5", "type": "secondary_journal_index", "retrieved_on": "2026-10-01", "summary": "二级期刊页列出2025年3月升级版计算机科学大类2区、硬件与软件工程小类1区及信息系统小类2区；仅作交叉线索。"},
+    {"id": "s_ieee_title_list_2025", "url": "https://open.ieee.org/wp-content/uploads/IEEE-Title-List-February-2025.pdf", "type": "official_publisher_title_list", "summary": "TDSC标SCIE；其Q1基于2023 JCR、2024年发布，非中科院分区。"},
+    {"id": "s_atc_bayes_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S0957417426011541", "type": "official_publisher_article_abstract_and_preview", "retrieved_on": "2026-10-03", "summary": "出版社页面核验四角色LLM、多后端、Bayesian fusion、安全护栏、894条真实交换、400条合成压力集、严格留出召回/FPR和约1.6秒延迟；未取得完整正文。"},
+    {"id": "s_sel_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S0957417426026898", "type": "publisher_article_abstract_and_snippets", "summary": "原始摘要确认23实验、16攻击向量、3实时API和5架构；未读全文。"},
+    {"id": "s_sel_crossref", "url": "https://api.crossref.org/works/10.1016%2Fj.eswa.2026.133781", "type": "publisher_deposited_metadata", "summary": "元数据标2027年1月卷期；2026-07-29记录创建日期不是已证实首次上线日期。"},
+    {"id": "s_cracks_repository", "url": "https://github.com/S1mpleyang/Cracks-in-Agent-Collaboration", "type": "author_official_repository", "summary": "提供期刊引用、三种协作结构、通信方式、攻击类别及代码资源。"},
+    {"id": "s_cracks_code_data", "url": "https://github.com/S1mpleyang/Cracks-in-Agent-Collaboration/tree/52443f836380b66cf807eec9fd3d71163433d11b", "type": "pinned_author_code_and_data", "summary": "核查qa-data.json实际400条、医疗JSON实际500条及101条答案A；centralized/AS3.py排除A，llama3_utils.py列本地模型，AS2/AS2-ACC-400-ASR.py及AS3/dataprocess.py显示评分机制。只作代码事实，未替代全文实验。"},
+    {"id": "s_cracks_crossref", "url": "https://api.crossref.org/works/10.1109%2FTDSC.2026.3670889", "type": "publisher_deposited_crossref_metadata", "summary": "读取resource.primary.URL确认IEEE文章编号11424974。"},
+    {"id": "s_cracks_dblp", "url": "https://dblp.org/rec/journals/tdsc/YangZLXZ26.html", "type": "bibliographic_crosscheck", "summary": "卷23期3页7191–7207，2026；只辅助核对出版信息。"},
+    {"id": "s_bil_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S0167404826002683", "type": "publisher_article_metadata_and_abstract", "summary": "2026-07-31 Journal Pre-proof；6000合成变体、1947 MOTIF样本、7对照。"},
+    {"id": "s_dynamic_risk_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S0167404825001282", "type": "publisher_indexed_abstract_and_metadata", "summary": "知识来源、BN风险评估和SCADA案例；全文实验规模未读。"},
+    {"id": "s_dynamic_risk_author_pdf", "url": "https://www.researchgate.net/profile/Pavlos-Cheimonidis/publication/390090586_A_novel_proactive_and_dynamic_cyber_risk_assessment_methodology/links/686a16b0e4632b045dca284f/A-novel-proactive-and-dynamic-cyber-risk-assessment-methodology.pdf", "landing_url": "https://www.researchgate.net/publication/390090586_A_novel_proactive_and_dynamic_cyber_risk_assessment_methodology", "type": "author_uploaded_public_publisher_formatted_pdf", "license": "CC BY 4.0", "summary": "作者2025-07-06上传的16页全文；在线核验Sec5-7实验相关段落，未通读至EOF。"},
+    {"id": "s_iraf_author_pdf", "url": "https://backoffice.biblio.ugent.be/download/01KGFB2Z2755WD918FWWVJAT59/01KGFB3Y83STZT94SJ9RR7F678", "type": "institutional_public_complete_publisher_formatted_pdf", "summary": "20页PDF已取得；Sec4.1-4.5及Sec5（pp10-17）完整读取，p15表7-10目视核验；未通读整篇至EOF。"},
+    {"id": "s_cose_official_scope", "url": "https://shop.elsevier.com/journals/computers-and-security/0167-4048", "type": "official_publisher_current_journal_scope", "retrieved_on": "2026-09-30", "summary": "官方Description明确：自2024年初暂停以AI/ML为重要组成的投稿，包括AI/ML用于系统安全隐私；AI/ML系统自身安全（如LLM、联邦学习）也在收稿范围外。本项目据此撤销该刊当前投稿推荐。"},
+    {"id": "s_eswa_official_scope", "url": "https://shop.elsevier.com/journals/expert-systems-with-applications/0957-4174", "type": "official_publisher_current_journal_scope", "retrieved_on": "2026-09-30", "summary": "官方Description包括risk assessment、multi-agent systems、knowledge management；强调清晰说明真实贡献而非改名包装既有方法。仅范围正文已读，完整作者指南未读。"},
+    {"id": "s_inffus_official_scope", "url": "https://shop.elsevier.com/journals/information-fusion/1566-2535", "type": "official_publisher_current_journal_scope", "retrieved_on": "2026-09-30", "summary": "官方Description覆盖多源、多过程及多层融合、态势感知、不完备环境下融合学习和信息安全应用；需与本项目具体融合贡献对应。仅范围正文已读。"}
+    ,{"id": "s_alteda_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S0306457326001597", "type": "official_publisher_article_abstract", "retrieved_on": "2026-10-01", "summary": "出版社摘要核验ALTEDA的日志图威胁检测、部分轨迹早期告警、SHAP归因、800条轨迹和31.4%攻击成功率；未取得完整正文。"}
+    ,{"id": "s_alteda_repository", "url": "https://github.com/Researcher-sudo/Log-based-Threat-Detection-and-Attribution-for-Multi-Agent-LLMs", "type": "author_official_repository", "retrieved_on": "2026-10-01", "summary": "作者仓库公开攻击集生成、带应用/系统/网络日志的运行器、图构建与检测归因notebook；commit和许可证尚未固定。"}
+    ,{"id": "s_llm_agent_umf_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S1566253525009273", "type": "official_publisher_article_abstract", "retrieved_on": "2026-10-01", "summary": "出版社页面核验LLM-Agent-UMF对planning、memory、profile、action、security模块及active/passive core-agent的划分。"}
+    ,{"id": "s_llm_agent_security_survey", "url": "https://doi.org/10.1016/j.inffus.2025.103941", "type": "publisher_metadata_and_indexed_summary", "retrieved_on": "2026-10-01", "summary": "核验Information Fusion综述的题名、DOI和安全威胁/防御覆盖定位；未将综述中的未核验数字当作实验事实。"}
+    ,{"id": "s_ptfusion_publisher", "url": "https://www.sciencedirect.com/science/article/pii/S1566253525007936", "type": "official_publisher_article_abstract", "retrieved_on": "2026-10-01", "summary": "出版社摘要核验PTFusion的半去中心化多Agent、MCP工具调用、动态知识图和上下文融合定位；未取得完整正文。"}
+    ,{"id": "s_penexpert_publisher", "url": "https://doi.org/10.1016/j.eswa.2026.133284", "type": "publisher_metadata_and_indexed_abstract", "retrieved_on": "2026-10-01", "summary": "公开索引摘要核验PenExpert的MITRE ATT&CK知识库、payload知识库、RAG和任务状态管理；摘要报告的相对提升未作为本文数值证据。"}
+  ],
+  "remaining_verification": [
+    "登录官方分区库或通过校图书馆获取目标年份、升级版、大小类与Top完整记录。",
+    "取得最接近两篇MAS论文的合法全文，核对样本量、统计、完整消融和数据可复现性。",
+    "复核SEL首次online日期和2027卷期元数据后生成正式参考文献。",
+    "对正式baseline做统一输入可见性、监督数据与计算预算审计；本目录的期刊近邻不能自动视为可比baseline。",
+    "投稿前读取实际作者指南、数据/代码政策；本轮未读指南，不以推测替代。"
+  ]
+}
