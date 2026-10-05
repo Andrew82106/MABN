@@ -50,16 +50,9 @@
     "results/submission/final_eval/LLM_JUDGE_BASELINE.md",
     "results/submission/final_eval/MATCHED_INFORMATION_AUDIT.md",
     "results/submission/final_eval/GROUP_CALIBRATION_AUDIT.md",
-    "results/submission/development/mast_two_layer_v2_20261005/REPORT.md",
-    "results/submission/development/atbench_external_20261005_v2/REPORT.md",
-    "results/external_who_when_audit_v1/REPORT.md",
-    "results/submission/development/communication_mode_smoke_lanyun_20261005_r1/REPORT.md",
-    "results/submission/development/prevalence_shift_20261005/REPORT.md",
-    "results/submission/development/paired_bootstrap_20261005/REPORT.md",
-    "results/submission/development/e2e_cost_closure_20261005/REPORT.md",
-    "results/submission/development/agentmonitor_style_baseline_20261005/REPORT.md",
-    "results/submission/development/e2e_episode_cost_20261005/REPORT.md"
+    "results/external_who_when_audit_v1/REPORT.md"
   ],
+  "local_only_diagnostics": "results/submission/development/",
   "excluded": [
     "API keys and credentials",
     "raw external benchmark releases",
