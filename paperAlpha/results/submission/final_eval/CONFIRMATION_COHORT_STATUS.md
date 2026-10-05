@@ -11,6 +11,8 @@ The selected packets are generated at
 `results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2/`.
 The source queue is content-bound by SHA-256
 `de537a1339b92343dfb8bde07b308fe46b0ef98cb9fad5ef8040bc218730814c`.
+The digest is over the sorted relative file names and bytes of the 160 source
+`monitor.json` files, with NUL separators.
 The two packet files contain blank annotation fields. The packet compiler removes
 episode/scenario/request identity, model/provider fields, evaluator labels and
 post-hoc outcomes before the packets are handed to raters.
