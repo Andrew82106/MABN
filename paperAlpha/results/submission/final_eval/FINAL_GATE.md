@@ -1,5 +1,10 @@
 # Final experiment gate
 
+Development folders are intentionally excluded from release archives. References
+to `../development/` below identify local audit provenance only; the release
+claim is defined by this file, `RESULTS.md`, and the compact artifacts listed in
+`submission/PACKAGE_MANIFEST.json`.
+
 This file is the compact submission audit for the current two-line MAS risk
 monitor. It supersedes exploratory result folders as the active reading order;
 raw runs remain immutable for reproducibility.
@@ -42,13 +47,13 @@ pre-fix saturated value 0.639 to 0.236; this is why the current tracked
 - Grouped uncertainty audit: completed; runtime-BN intervals abstain on 6.1% of episodes (coverage 93.9%, mean width 0.030) and report selective coverage-risk without calling the interval a calibrated confidence interval.
 - Monitor-side scaling audit: completed; p95 is 0.532 ms for 1--3 events, 1.398 ms for 7--10 events and 1.905 ms for 11+ events, excluding API/semantic extraction.
 - Same-episode cost audit: 10/80 LANYUN episodes align API and semantic ledgers; serial service-time estimate p50/p95 47.386/83.429 s, local semantic+graph+BN p50/p95 0.691/0.996 ms. Coverage is partial and this is not a deployment throughput guarantee.
-- LANYUN transport sanity: `LANYUN_SANITY.md` records a fresh HTTP 200 check for `glm-5.3-flash`; this is availability evidence only.
+- LANYUN transport sanity: the fresh `qwen3.6-flash` smoke returned 22/22 successful requests; this is availability evidence only. The raw report is local-only and excluded from the release archive.
 - LANYUN DAG front-end smoke: latest v5 parsed 17/18 as acyclic; exact node/edge F1 0.081/0.000 and semantic node/edge F1 0.938/0.747. This remains a front-end check, not a monitor result.
 - Release-scoped regression suite: the 10 tracked test modules (36 tests) pass after
   including the dynamic hierarchical/final-feature dependencies in the package.
   The wider workspace contains historical HarnessAudit tests that require the
   optional `openai-agents` SDK and is not part of this release claim.
-- Unified topology communication smoke ([report](../development/communication_mode_smoke_lanyun_20261005_r1/REPORT.md)): 12 LANYUN episodes across chain/fork/join/review and direct/summary/vote modes, 33 requests with 25 completed and 8 failed; failures are retained and monitor/evaluator artifacts are separate. Task text explicitly states policy situations, so this is transport/topology evidence only.
+- Unified topology communication smoke: the latest local-only qwen3.6-flash run covered chain/fork/join/review with 8 episodes and 22/22 completed requests. Task text explicitly states policy situations, so this is transport/topology evidence only.
 
 ## Remaining gates
 
@@ -61,7 +66,7 @@ pre-fix saturated value 0.639 to 0.236; this is why the current tracked
 - The matched-information audit now has paired topology-family bootstrap intervals for the flat controls, but still lacks a preregistered untouched confirmation cohort; the current 4,000-episode OOF package remains development evidence, not final generalization proof.
 - The release-specific judge/annotation tests pass (6/6); the broader historical `paperAlpha/tests` collection still needs the optional `openai-agents` SDK and is not claimed green in the current environment.
 - Uncertainty/abstention is reported as an epistemic missing-provenance diagnostic, not a calibrated interval.
-- Component-wise online cost is now closed in `development/e2e_cost_closure_20261005/REPORT.md` (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
+- Component-wise online cost is recorded in a local-only diagnostic (API transport, semantic extraction and monitor path); a same-episode end-to-end latency and deployment-level RSS/training-cost measurement are still pending.
 
 Until these gates are closed, the numbers above are a strong development package
 and a reproducible paper candidate, not a final superiority claim for a journal.
