@@ -112,6 +112,11 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
   **61.9%**；端到端抽取延迟 p50/p95 为 **6.53/11.76 s**，输入/输出 token 总量为
   **4,234/8,742**。这只是成本与可观测性测试，不是语义准确率、风险指标或独立安全验证；
   失败记录保留在 `results/submission/development/semantic_extraction_cost_20261005_lanyun_r1/`。
+- **结构化抽取 v2 复核**：同一 21 条公开回复改用 JSON mode、最多一次显式重试和失败即
+  abstain；32 次请求中 31 次完成，首次严格解析 10/21，重试后最终解析 15/21，最终
+  abstain **28.6%**，p50/p95 **10.62/16.39 s**，输入/输出 token **8,192/14,821**。
+  这显著改善了 v1，但仍未达到部署门槛（最终 abstain ≤10%）；结果仍不接入风险评测，
+  记录在 `results/submission/development/semantic_extraction_cost_20261005_lanyun_v2/`。
 
 ## 期刊对照边界
 
