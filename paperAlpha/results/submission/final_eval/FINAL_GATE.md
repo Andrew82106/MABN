@@ -15,7 +15,7 @@ families), family-disjoint five-fold OOF evaluation gives:
 | graph-features logistic | 0.578 | 0.724 [0.708, 0.739] | 0.527 [0.500, 0.558] | 0.194 |
 | local-only logistic | 0.564 | 0.688 [0.672, 0.705] | 0.485 [0.460, 0.516] | 0.204 |
 | AgentMonitor-style statistics + logistic (adapted target) | 0.581 | 0.712 | 0.503 | 0.197 |
-| two-line BN fusion | **0.668** | **0.820 [0.804, 0.835]** | **0.675 [0.646, 0.707]** | **0.160** |
+| two-line BN fusion | **0.667** | **0.820 [0.804, 0.836]** | **0.675 [0.644, 0.707]** | **0.160** |
 
 The two-line model is a white-box monitor of observable evidence, not a claim
 that the protected API model has become internally transparent and not a causal

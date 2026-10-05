@@ -7,21 +7,21 @@ The public trace contains the normative workflow DAG and runtime events; labels 
 
 | method | F1 | precision | recall | AUROC | AUPRC | Brier | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| workflow_bn | 0.516 | 0.351 | 0.978 | 0.517 | 0.340 | 0.639 | 0.645 |
+| workflow_bn | 0.516 | 0.351 | 0.978 | 0.517 | 0.340 | 0.236 | 0.123 |
 | runtime_bn | 0.626 | 0.493 | 0.859 | 0.716 | 0.545 | 0.196 | 0.113 |
 | workflow_logistic | 0.518 | 0.357 | 0.945 | 0.578 | 0.389 | 0.219 | 0.009 |
 | runtime_logistic | 0.653 | 0.562 | 0.778 | 0.805 | 0.653 | 0.167 | 0.019 |
-| hierarchical_fusion | 0.668 | 0.598 | 0.756 | 0.820 | 0.675 | 0.160 | 0.019 |
+| hierarchical_fusion | 0.667 | 0.604 | 0.744 | 0.820 | 0.675 | 0.160 | 0.020 |
 
 ## Fixed 5% FPR (fold-local)
 
 | method | empirical FPR | recall |
 |---|---:|---:|
 | workflow_bn | 0.743 | 0.799 |
-| runtime_bn | 0.051 | 0.258 |
+| runtime_bn | 0.051 | 0.244 |
 | workflow_logistic | 0.055 | 0.075 |
 | runtime_logistic | 0.051 | 0.292 |
-| hierarchical_fusion | 0.052 | 0.303 |
+| hierarchical_fusion | 0.052 | 0.304 |
 
 ## Interpretation
 - `workflow_bn` is the normative DAG line; `runtime_bn` is the observable message/delegation line.

@@ -28,7 +28,7 @@
 | local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
 | AgentMonitor-style statistics + logistic (adapted target) | 0.581 | 0.712 | 0.503 | 0.197 |
 | reliability-weighted Bayesian fusion（期刊邻近对照） | 0.604 | 0.763 | 0.596 | 0.459 |
-| **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
+| **two-line BN fusion（本文方法）** | **0.667** | **0.820** | **0.675** | **0.160** |
 
 ### MAS 专用结构对照
 
@@ -43,13 +43,13 @@ scenario-family 留出上的 MAS 结构对照。它们只使用公开事件流�
 | dynamic taint path（规则传播） | 0.503 | 0.597 | 0.405 | 0.321 |
 | trust/reputation risk（CogTrust 同信息代理） | 0.634 | 0.730 | 0.499 | 0.245 |
 | AgentMonitor-style statistics + logistic（目标适配） | 0.581 | 0.712 | 0.503 | 0.197 |
-| **two-line BN fusion（本文方法）** | **0.668** | **0.820** | **0.675** | **0.160** |
+| **two-line BN fusion（本文方法）** | **0.667** | **0.820** | **0.675** | **0.160** |
 
 AgentMonitor-style 对照严格采用其公开的逐 Agent 输入/输出/调用与图统计特征，但将原论文的“任务表现预测”目标适配为本文风险标签；因此它是同信息可复现适配，不是原论文安全目标复现。上述结果是与 MAS 近邻论文中“独立 Agent 聚合、拓扑传播、日志图/路径评分”相对应的
 同信息代理基线；ALTEDA 使用主机/网络日志，不能与本 API 可见条件直接混比，另列为
 richer-observation 上界参考。
 
-主模型的族聚类 95% CI 为 AUROC **[0.804, 0.835]**、AUPRC **[0.646, 0.707]**、
+主模型的族聚类 95% CI 为 AUROC **[0.804, 0.836]**、AUPRC **[0.644, 0.707]**、
 Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC 为
 **[0.791, 0.818]/[0.622, 0.683]**。
 
@@ -177,9 +177,9 @@ MAS 威胁与协作拓扑补充参考 IEEE TDSC 的 *Cracks in Collaboration*，
 
 ## 再现入口
 
-使用同一数据、5 折和随机种子的完整重跑已在 `results/submission/development/journal_recheck_20261005/`
-完成；双线融合 AUROC/AUPRC/Brier/F1 = **0.819671/0.674792/0.160353/0.667761**，
-与本文件主结果一致。这是复现验收证据，不是新的测试集结果。
+使用同一数据、5 折和随机种子的修复后完整重跑已写入
+`results/independent_mas_journal_v1/`；双线融合 AUROC/AUPRC/Brier/F1 =
+**0.819643/0.674740/0.160364/0.667111**。这是主公开基准的修复后复现，不是新的测试集结果。
 
 在仓库根目录执行以下命令可重建主公开轨迹和主评测；所有生成结果默认留在被忽略的
 `paperAlpha/results/` 下，不会污染 Git：

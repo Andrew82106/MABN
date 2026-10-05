@@ -24,11 +24,11 @@
 | local-only logistic | 0.564 | 0.688 | 0.485 | 0.204 |
 | AgentMonitor-style statistics + logistic（目标适配） | 0.581 | 0.712 | 0.503 | 0.197 |
 | reliability-weighted Bayesian fusion | 0.604 | 0.763 | 0.596 | 0.459 |
-| **two-line BN fusion** | **0.668** | **0.820** | **0.675** | **0.160** |
+| **two-line BN fusion** | **0.667** | **0.820** | **0.675** | **0.160** |
 
-主模型族聚类 95% CI：AUROC [0.804, 0.835]、AUPRC [0.646, 0.707]。相对 reliability-weighted fusion 的成对 bootstrap 差值：ΔAUROC 0.056 [0.045, 0.067]，ΔAUPRC 0.079 [0.061, 0.098]；2,000/2,000 次重采样为正。相对最强同信息 trust/reputation proxy 的 ΔAUROC/ΔAUPRC 为 0.090 [0.077, 0.103] / 0.176 [0.153, 0.200]；相对 graph-features logistic 为 0.096 [0.084, 0.108] / 0.147 [0.127, 0.167]。
+主模型族聚类 95% CI：AUROC [0.804, 0.836]、AUPRC [0.644, 0.707]；修复后 Brier [0.154, 0.167]，F1 [0.644, 0.691]。相对 reliability-weighted fusion 的成对 bootstrap差值仍作为历史开发审计，不与修复后 OOF 混写。相对最强同信息 trust/reputation proxy 的差值也只作开发集参照。
 
-按训练折负类 5% 固定误报点，主模型测试 FPR 0.052、召回 0.303；ECE 0.019、Brier 0.160。该低误报点召回仍不高，因此不能把结果写成稳定的在线预警保证。
+按训练折负类 5% 固定误报点，主模型测试 FPR 0.052、召回 0.304；ECE 0.020、Brier 0.160。该低误报点召回仍不高，因此不能把结果写成稳定的在线预警保证。
 
 ## MAS 基线
 
