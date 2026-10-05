@@ -8,6 +8,7 @@
     "scripts/evaluate_independent_mas_journal_v1.py",
     "scripts/evaluate_two_layer_v2.py",
     "scripts/evaluate_independent_mas_mas_baselines_v1.py",
+    "scripts/evaluate_mas_baselines_v1.py",
     "scripts/evaluate_independent_mas_learned_baselines_v1.py",
     "scripts/evaluate_independent_fair_baselines_v1.py",
     "scripts/evaluate_independent_prefix_v1.py",

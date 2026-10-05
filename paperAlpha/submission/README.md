@@ -36,7 +36,7 @@ F1 **0.667**、AUROC **0.820**、AUPRC **0.675**、Brier **0.160**。这些是�
 运行 `reproduce_main.ps1` 会按固定种子生成公开轨迹并运行五折评测；原始生成数据和结果留在
 本地 `results/`，不提交 API key 或外部数据。
 
-`results/submission/development/` 仅是本地审计材料，不属于正式发布入口；其中的 smoke、成本、
+`results/submission/development/` 仅是本地审计材料，不属于正式发布入口；发布归档会排除该目录，其中的 smoke、成本、
 迁移和历史诊断不会被当作主结果，也不列入 `PACKAGE_MANIFEST.json`。
 
 ## 外部边界证据
