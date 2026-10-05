@@ -49,9 +49,13 @@ def main(argv=None):
                           run_id="local-fixture")
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / "monitor.json").write_text(json.dumps(result.monitor_projection(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    evaluator_path = None
     if not args.no_evaluator:
-        (args.output / "evaluator.json").write_text(json.dumps(result.evaluation_view(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(result.snapshot(), ensure_ascii=False))
+        evaluator_path = args.output / "evaluator.json"
+        evaluator_path.write_text(json.dumps(result.evaluation_view(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Keep stdout public too: labels are available only in evaluator.json.
+    print(json.dumps({"monitor_path": str(args.output / "monitor.json"),
+                      "evaluator_path": None if evaluator_path is None else str(evaluator_path)}, ensure_ascii=False))
     return 0
 
 
