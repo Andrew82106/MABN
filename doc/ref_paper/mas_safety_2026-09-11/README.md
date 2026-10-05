@@ -12,7 +12,7 @@
 - [本地论文清单](./本地论文清单.md)：按同一编号打开 PDF，检查下载状态。
 - [归档记录](./manifest.json)：论文来源、实际下载地址、时间、大小与 SHA-256。
 - [当前投稿门槛](./journal_alignment/current_target_gate_20261004.md)：按 ESWA/TDSC 参照论文核对当前实验，区分已完成证据与真正缺口。
-- [MAST/MAD 外部审计](./journal_alignment/mast_external_audit_20261004.md)：公开 MAS 失败轨迹的独立迁移检查及其标签边界。
+- [MAST/MAD 外部审计（历史 v1）](./journal_alignment/mast_external_audit_20261004.md)：保留旧版结果和边界说明；当前有效的二次迁移结果见投稿包中的 [MAST/MAD v2 报告](../../../paperAlpha/results/submission/development/mast_two_layer_v2_20261005/REPORT.md)。
 - [MAS 基准补充审计](./journal_alignment/mas_benchmark_update_20261005.md)：更新 TAMAS 的 ACL 2026 正式状态，并记录 DUMA-Bench 的 dual-control 边界。
 
 ## 目录规则

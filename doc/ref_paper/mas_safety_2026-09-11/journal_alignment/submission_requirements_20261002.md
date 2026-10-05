@@ -35,7 +35,7 @@ IEEE Author Center 也明确鼓励共享数据、代码和其他研究产物以�
 | 双线、可审计监测器 | 已完成开发候选 | `paperAlpha/results/independent_mas_journal_v1/MODEL_SPEC.md` |
 | family-disjoint 强基线 | 已完成开发评测 | `paperAlpha/results/independent_mas_journal_v1/REPORT.md` |
 | 固定误报预算与聚类区间 | 已完成开发评测 | `metrics.json` 中 `fixed_fpr_5pct` 与 `hierarchical_fusion_bootstrap_95` |
-| 动作前检查 | 已有合成前缀检查 | `paperAlpha/results/independent_mas_prefix_v1/REPORT.md` |
+| 动作前检查 | 已有合成前缀检查；完整生成目录为本地产物 | `paperAlpha/results/submission/final_eval/RESULTS.md`（主包可读摘要） |
 | 真实 API MAS 外部效度 | 有迁移证据，但仍未完成独立确认 | A2ASecBench 仍是参考运行器标签；Lanyun `glm-5.3-flash` 已有 80 案例迁移（64 完成），但标签来自同一手工模拟器；独立人工标注/授权 MAS 队列仍缺 |
 | 完整 API 成本/延迟 | 部分完成 | Lanyun 传输成本、监测器 CPU 延迟和 DAG 前端 smoke 已记录；语义抽取的端到端成本、内存和扩展性仍缺 |
 
