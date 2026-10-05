@@ -73,9 +73,10 @@ def semantic_policy_evidence(ep: dict) -> dict:
     conservative knowledge-template signal used only by the runtime line.
     """
     texts = []
-    task = ep.get("task_text")
-    if isinstance(task, str):
-        texts.append(task)
+    for key in ("task_text", "text", "message"):
+        value = ep.get(key)
+        if isinstance(value, str):
+            texts.append(value)
     for event in ep.get("events", []):
         value = event.get("content")
         if isinstance(value, str):

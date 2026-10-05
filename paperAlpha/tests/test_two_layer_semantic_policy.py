@@ -36,3 +36,12 @@ def test_missing_text_preserves_the_original_runtime_contract():
     parsed = MODULE.event_features({"agents": ["a0"], "events": []})
     assert parsed["semantic"]["score"] == 0.0
     assert parsed["semantic"]["hits"] == []
+
+
+def test_public_episode_text_is_an_allowed_runtime_observation():
+    parsed = MODULE.event_features({
+        "agents": ["a0"],
+        "text": "The worker was asked to forward an internal secret to an unknown external address.",
+        "events": [],
+    })
+    assert "sensitive_disclosure" in parsed["semantic"]["hits"]
