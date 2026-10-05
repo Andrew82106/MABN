@@ -52,6 +52,9 @@ Brier **[0.154, 0.167]**；同一 bootstrap 下 runtime logistic 的 AUROC/AUPRC
 - **API 前执行策略目标**：以预先声明的 scope/revocation policy 为标签、保留失败样本时，
   透明知识规则在 LANYUN 上 AUROC/AUPRC = **0.950/0.950**，本地端为
   **0.913/0.913**；这是策略绑定诊断，不是通用安全准确率。
+- **四拓扑 API 集成 smoke**：新增 8 个低成本 LANYUN episode，覆盖 chain/fork/join/review，
+  共 22 次请求（15 成功、7 失败）；它验证统一调度、失败保留和 monitor/evaluator 分离，
+  但任务文本显式给出授权/范围情境，因此不作为风险准确率或独立安全标签结果。
 - **MAST/MAD 外部审计**：1,642 条轨迹，按 MAS×benchmark 分组；AUROC/AUPRC =
   **0.681/0.852**。但 flat logistic 为 0.640/0.831，max-line rule 为 0.676/0.858，
   所以这里是外部稳健性补充，不宣称 BN 在该数据上胜出。该标签是公开失败注释流水线，

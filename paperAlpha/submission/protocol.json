@@ -3,7 +3,7 @@
   "status": "development_in_progress_not_submission_ready",
   "current_result_summary": "submission/FINAL_RESULTS.md",
   "external_confirmation_plan": "submission/EXTERNAL_CONFIRMATION_PLAN.md",
-  "as_of": "2026-10-04",
+  "as_of": "2026-10-05",
   "user_requirements": {
     "journal_system": "Chinese Academy of Sciences journal partition",
     "allowed_partitions": [1, 2],
@@ -313,6 +313,14 @@
       "pre_execution_policy_target": {"directory": "results/submission/development/lanyun_knowledge_attempt_local_20261004", "n": 80, "positive": 40, "policy_rule": {"f1": 0.904, "auroc": 0.913, "auprc": 0.913, "brier": 0.091}, "knowledge_runtime_union": {"f1": 0.904, "auroc": 0.840, "auprc": 0.913, "brier": 0.087}},
       "interpretation": "A second API/model condition with the same hand-authored two-agent simulator. It strengthens transport and model-transfer evidence but is not an independent topology or human-adjudicated confirmation cohort.",
       "artifacts": ["results/balanced_delegation_api_v1_20261004_local_r20/PLAN.json", "results/balanced_delegation_api_v1_20261004_local_r20/REPORT.json", "results/submission/development/external_api_mas_transfer_local_20261004/REPORT.md", "results/submission/development/lanyun_knowledge_attempt_local_20261004/REPORT.md"]
+    },
+    "unified_topology_api_smoke": {
+      "directory": "results/submission/development/unified_topology_api_20261005_r1",
+      "status": "completed_topology_transport_diagnostic_not_risk_evaluation",
+      "source": "Eight low-cost LANYUN glm-5.3-flash episodes covering chain, fork, join and review, with one safe and one policy-violation prompt per topology.",
+      "coverage": {"episodes": 8, "topologies": 4, "variants_per_topology": 2, "total_api_requests": 22, "completed_api_requests": 15, "failed_api_requests": 7, "policy_intent_accuracy": 1.0},
+      "boundary": "The public task text explicitly states the authorization/scope condition for each variant; evaluator labels and scores remain in evaluator.json, but this is not an independent security label or fair risk-prediction cohort.",
+      "artifacts": ["scripts/collect_unified_topology_api_v1.py", "scripts/run_unified_topology_queue.py", "scripts/UNIFIED_TOPOLOGY_QUEUE.md", "results/submission/development/unified_topology_api_20261005_r1/PLAN.json", "results/submission/development/unified_topology_api_20261005_r1/REPORT.json"]
     },
     "binding_consistency_extension": {
       "directory": "results/submission/development/binding_consistency_extension_v2",
