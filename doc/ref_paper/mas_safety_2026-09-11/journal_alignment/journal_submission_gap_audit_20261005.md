@@ -40,7 +40,7 @@ TDSC 更适合对照威胁模型、协作拓扑、攻击传播、低误报和可
 | 任务/拓扑隔离 | 4,000 条轨迹、186 topology families、五折 family-disjoint OOF | 已满足合成开发协议 |
 | 指标完整性 | F1、AUROC、AUPRC、Brier、ECE、5% FPR、聚类 bootstrap | 已满足主要统计报告要求 |
 | 白盒边界 | 不读取 API 权重/隐藏状态；输出因素、边、路径、上下界 | 已满足“监测器白盒”表述 |
-| API 可运行性 | LANYUN 与本地端点均完成迁移/失败保留/拓扑 smoke | 已满足链路审计，未满足外部效度 |
+| API 可运行性 | LANYUN 完成迁移/失败保留/拓扑 smoke；本地 `58661/v1` 可达但当前认证复核为 401 | 已满足 LANYUN 链路审计，未满足外部效度 |
 | 可复现材料 | 公开投影、协议、manifest、失败记录、命令入口 | 基本满足；提交前需整理发布清单 |
 
 ## 3. 关键缺口（按投稿阻断程度排序）
@@ -104,6 +104,10 @@ SentinelAgent、Node Contribution Backpropagation、AgentMonitor 等可以作为
 ### P1-4：不确定性尚不是校准安全保证
 
 unknown/redacted 的 lower/point/upper 是观测缺失下的区间诊断，不是概率覆盖保证。若保留“置信度/不确定性”作为贡献，需在独立确认集报告 coverage-risk 曲线、abstention cost 和 ECE；否则正文将其称为“epistemic missing-provenance diagnostic”。
+
+### P1-5：低阳性率压力已补，但仍不是独立确认
+
+主集 OOF 结果已重加权到 5%/10% 阳性率，AUPRC 分别为 0.201/0.336；这揭示了基率变化对精度和校准的影响，但没有替代真实低基率样本。最终投稿仍需在独立队列上冻结 violation prevalence，并给出固定 FPR 召回区间。
 
 ## 4. 投稿前最小验收表
 
