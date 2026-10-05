@@ -68,5 +68,6 @@ CogTrust 或 HalluProp 的完整实现。
 
 - 现有论文与期刊记录：[`catalog.json`](./catalog.json)
 - 当前投稿门槛：[`current_target_gate_20261004.md`](./current_target_gate_20261004.md)
+- 期刊状态与分区证据审计：[`journal_status_audit_20261005.md`](./journal_status_audit_20261005.md)
 - ESWA/TDSC 要求映射：[`submission_requirements_20261002.md`](./submission_requirements_20261002.md)
 - 统一实验结果：[`FINAL_RESULTS.md`](../../../../paperAlpha/submission/FINAL_RESULTS.md)
