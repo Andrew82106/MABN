@@ -37,6 +37,7 @@ discovery method.
 - Prefix alarm audit: completed; it exposes held-out false-alarm shift instead of claiming reliable early warning.
 - Grouped uncertainty audit: completed; runtime-BN intervals abstain on 6.1% of episodes (coverage 93.9%, mean width 0.030) and report selective coverage-risk without calling the interval a calibrated confidence interval.
 - Monitor-side scaling audit: completed; p95 is 0.532 ms for 1--3 events, 1.398 ms for 7--10 events and 1.905 ms for 11+ events, excluding API/semantic extraction.
+- Same-episode cost audit: 10/80 LANYUN episodes align API and semantic ledgers; serial service-time estimate p50/p95 47.386/83.429 s, local semantic+graph+BN p50/p95 0.691/0.996 ms. Coverage is partial and this is not a deployment throughput guarantee.
 - LANYUN transport sanity: `LANYUN_SANITY.md` records a fresh HTTP 200 check for `glm-5.3-flash`; this is availability evidence only.
 - LANYUN DAG front-end smoke: latest v5 parsed 17/18 as acyclic; exact node/edge F1 0.081/0.000 and semantic node/edge F1 0.938/0.747. This remains a front-end check, not a monitor result.
 - Unified topology communication smoke ([report](../development/communication_mode_smoke_lanyun_20261005_r1/REPORT.md)): 12 LANYUN episodes across chain/fork/join/review and direct/summary/vote modes, 33 requests with 25 completed and 8 failed; failures are retained and monitor/evaluator artifacts are separate. Task text explicitly states policy situations, so this is transport/topology evidence only.
