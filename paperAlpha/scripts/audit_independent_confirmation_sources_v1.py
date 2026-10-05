@@ -121,11 +121,36 @@ def audit(repo: Path) -> dict[str, Any]:
             "label_boundary": "evaluator-only policy-intent score; not a human security label",
         }
 
+    frozen_queues = {}
+    for key, directory in {
+        "frozen_lanyun_glm": dev / "frozen_confirmation_lanyun_20261005",
+        "frozen_lanyun_qwen": dev / "frozen_confirmation_lanyun_qwen_20261005",
+    }.items():
+        summary = directory / "SUMMARY.json"
+        if not summary.exists():
+            continue
+        data = load_json(summary)
+        plan = data.get("plan", {})
+        frozen_queues[key] = {
+            "planned_episodes": data.get("planned_episodes"),
+            "observed_episodes": data.get("observed_episodes"),
+            "complete": data.get("complete"),
+            "completed_api_requests": data.get("completed_api_requests"),
+            "failed_api_requests": data.get("failed_api_requests"),
+            "model": plan.get("model"),
+            "api_condition": plan.get("endpoint"),
+            "topology_families": len(plan.get("topologies", {})),
+            "api_conditions": 1,
+            "label_boundary": "hand-authored policy-intent evaluator; not independent human security gold",
+        }
+    sources.update(frozen_queues)
+
     # Conservative gate: do not sum rows across incompatible sources.
+    complete_frozen = [item for item in frozen_queues.values() if item.get("complete")]
     gate = {
-        "minimum_complete_episodes": False,
-        "four_explicit_topology_families": False,
-        "two_independent_api_model_conditions": False,
+        "minimum_complete_episodes": sum(int(item.get("observed_episodes") or 0) for item in complete_frozen) >= 160,
+        "four_explicit_topology_families": bool(complete_frozen) and all(item.get("topology_families", 0) >= 4 for item in complete_frozen),
+        "two_independent_api_model_conditions": len({item.get("model") for item in complete_frozen}) >= 2,
         "two_blind_human_labelers": False,
         "single_compatible_frozen_cohort": False,
         "decision": "not_satisfied",
@@ -133,7 +158,7 @@ def audit(repo: Path) -> dict[str, Any]:
     notes = [
         "Existing counts are retained as source-specific diagnostics; they are not summed into one confirmation set.",
         "A2ASecBench attack families and MAST MAS×benchmark groups are not interchangeable with workflow topology families.",
-        "LANYUN/local API runs share a hand-authored simulator and evaluator labels; they are cross-endpoint diagnostics, not independent human confirmation.",
+        "The two frozen LANYUN queues now provide 160 policy-intent episodes under two model conditions, but share hand-authored scenarios and evaluator labels; they are not independent human confirmation.",
         "The 19 MAST human-labelled traces are too few and outside the frozen API protocol.",
     ]
     return {
@@ -166,7 +191,7 @@ def markdown(report: dict[str, Any]) -> str:
         "|---|---:|---|---|",
     ]
     for name, data in report["sources"].items():
-        count = data.get("episodes", data.get("full_traces", data.get("eligible_traces", "n/a")))
+        count = data.get("episodes", data.get("observed_episodes", data.get("full_traces", data.get("eligible_traces", "n/a"))))
         topologies = data.get("topology_families", data.get("explicit_topology_families", "n/a"))
         condition = data.get("api_conditions", data.get("api_condition", "n/a"))
         label = data.get("label_boundary", "not recorded")
@@ -175,7 +200,7 @@ def markdown(report: dict[str, Any]) -> str:
         "",
         "## Gate",
         "",
-        "All confirmation-gate fields are false until a single frozen cohort is collected and independently double-labelled.",
+        "The frozen queue now covers the episode/topology/model-count fields, but the gate remains open because labels are hand-authored policy-intent targets and no blind double-label agreement has been collected.",
         "",
         "## Minimum freeze",
         "",

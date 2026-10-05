@@ -409,6 +409,16 @@
       "metrics": {"graph_features_learned": {"f1": 0.5807139, "auroc": 0.7236949, "auprc": 0.527324, "brier": 0.1943102}, "local_only": {"f1": 0.5638912, "auroc": 0.6876021, "auprc": 0.4847202, "brier": 0.2038693}},
       "artifacts": ["results/submission/development/learned_baselines_recheck_20261005/REPORT.md", "results/submission/development/learned_baselines_recheck_20261005/metrics.json"]
     },
+    "frozen_four_topology_api_queues_20261005": {
+      "status": "completed_policy_intent_integration_only",
+      "conditions": [
+        {"directory": "results/submission/development/frozen_confirmation_lanyun_20261005", "model": "glm-5.3-flash", "episodes": 80, "requests": 220, "completed": 145, "failed": 75, "input_tokens": 33036, "output_tokens": 53241, "policy_intent_accuracy": 0.9148936170212766, "latency_p50_seconds": 6.328, "latency_p95_seconds": 14.047},
+        {"directory": "results/submission/development/frozen_confirmation_lanyun_qwen_20261005", "model": "qwen3.6-flash", "episodes": 80, "requests": 220, "completed": 220, "failed": 0, "input_tokens": 41312, "output_tokens": 187869, "policy_intent_accuracy": 1.0}
+      ],
+      "label_boundary": "Both queues use hand-authored policy-intent evaluator targets; they are not blind human security labels.",
+      "transfer_boundary": "The frozen public projections transfer poorly to the current structural/tool-sink monitor (AUROC 0.500 for two-line BN; 0.424/0.500 for runtime logistic). A fixed public policy-text rule is a diagnostic control only.",
+      "artifacts": ["scripts/collect_frozen_confirmation_queue_v1.py", "scripts/summarize_frozen_confirmation_queue_v1.py", "scripts/evaluate_frozen_confirmation_transfer_v1.py"]
+    },
     "formal_collection": {
       "status": "not_frozen_or_started",
       "risk_families": ["privacy and information flow", "delegated authorization", "shared resources and action combinations"],
@@ -421,11 +431,11 @@
     }
   },
   "evaluation_requirements": [
-    {"id": "E1", "requirement": "Matched-input current-action policy detection and original-scope MAS guard comparison", "status": "pending", "development_evidence": "Lanyun pre-execution policy target and public knowledge rule completed on 80 observable prefixes; not independent confirmation."},
+    {"id": "E1", "requirement": "Matched-input current-action policy detection and original-scope MAS guard comparison", "status": "pending", "development_evidence": "Two frozen Lanyun four-topology queues provide 160 policy-intent episodes across two models; the public policy-text rule is AUROC 0.956/0.955, while the structural/tool-sink monitor transfers at AUROC 0.500. These are hand-authored policy-intent diagnostics, not independent confirmation."},
     {"id": "E2", "requirement": "Action-before-execution joint forecasting against strong same-supervision controls", "status": "pending", "development_evidence": "No final action-before-execution forecast claim; the Lanyun policy-intent target is a separate diagnostic."},
     {"id": "E3", "requirement": "Independent calibration and workflow-level low-false-alarm warning", "status": "pending", "development_evidence": "Main synthetic calibration, grouped uncertainty coverage-risk and prefix alarm audits are recorded; held-out negative false-alarm shift and independent low-FPR confirmation remain unresolved."},
-    {"id": "E4", "requirement": "Held-out task, topology, policy composition and generating-model transfer with each setting named precisely", "status": "pending", "development_evidence": "Lanyun supplies a second generating endpoint but keeps the same hand-authored two-agent topology."},
-    {"id": "E5", "requirement": "Natural missingness coverage plus separately labelled evidence-error and missing-record stress tests", "status": "pending", "development_evidence": "R14 retains 14 failed/incomplete runs; no systematic independent missingness/error cohort yet."},
+    {"id": "E4", "requirement": "Held-out task, topology, policy composition and generating-model transfer with each setting named precisely", "status": "pending", "development_evidence": "The frozen queues cover chain/fork/join/review under Lanyun glm-5.3-flash and qwen3.6-flash, 20 episodes per topology/model cell. The same hand-authored scenario order is reused, so this is model/topology integration evidence rather than held-out policy composition."},
+    {"id": "E5", "requirement": "Natural missingness coverage plus separately labelled evidence-error and missing-record stress tests", "status": "pending", "development_evidence": "The GLM queue retains 75 failed API calls and the Qwen queue retains none; failed records are preserved but the failures are provider availability, not independently labelled semantic/evidence errors."},
     {"id": "E6", "requirement": "Observable intermediate semantics, object/role binding, evidence lineage and independent numerical explanation verification", "status": "pending", "development_evidence": "Public authority/resource rule explanations, lineage audits and the 4,000-case counterfactual path-faithfulness check exist; independent semantic adjudication is incomplete."},
     {"id": "E7", "requirement": "API usage, training cost, monitor p50/p95 latency, memory and inference-width scaling", "status": "pending", "development_evidence": "Lanyun R15 records 416 requests, 459902 tokens, transport p50/p95 7.429/28.555s; local r20 records 406 requests, 310540 tokens; monitor-side scaling v2 reports p95 0.550/1.474/1.955ms, peak tracemalloc 0.010/0.073/0.058MB and observational process-RSS deltas up to 0.031MB for 1-3/7-10/11+ events. An independent semantic-cost smoke uses 21 public completed replies: 21/21 API-complete, 8/21 strict JSON parsed, parse-failure rate 0.619, extraction latency p50/p95 6.532/11.755s, input/output totals 4234/8742 tokens; this is cost/observability only, not semantic accuracy. Deployment-level RSS, training cost and the full low-FPR online confirmation remain."}
   ],
