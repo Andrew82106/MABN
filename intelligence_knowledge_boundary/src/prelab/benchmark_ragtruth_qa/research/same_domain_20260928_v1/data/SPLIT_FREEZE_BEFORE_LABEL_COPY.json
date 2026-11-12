@@ -1,0 +1,27 @@
+{
+  "schema_version": "ragognize-same-domain-grouped-v1",
+  "seed": 20260928,
+  "counts": {
+    "fit": {
+      "answers": 1292,
+      "groups": 617,
+      "no_hint_answers": 681
+    },
+    "validation": {
+      "answers": 271,
+      "groups": 133,
+      "no_hint_answers": 135
+    },
+    "test": {
+      "answers": 279,
+      "groups": 133,
+      "no_hint_answers": 155
+    }
+  },
+  "split_assignment_sha256": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+  "algorithm": "SHA256(str(seed)+'|'+group_id) ascending; first ceil(.15*G) test; next same validation; remainder fit",
+  "group_definition": "Transitive closure of prior 917 source/question/context groups plus exact normalized target-document-to-any-document edges over all 1842 rows",
+  "label_blind": true,
+  "new_target_labels_opened_before_freeze": false,
+  "historical_exposure": "All source rows have previously been read and some used in auxiliary training; this is a common-data internal repartition, not a new external blind test"
+}

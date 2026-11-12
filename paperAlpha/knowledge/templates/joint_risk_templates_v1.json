@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "joint-risk-templates-v1",
+  "scope": "Knowledge-constrained source, adoption, authorization and communication templates for the current binary-state model; not a compiler for every catalog risk.",
+  "axes": {
+    "trust": {"states": ["clean", "untrusted", "unknown"], "unknown": ["unknown"], "meaning": "Observed classifier/category output, not established safety or instruction adoption."},
+    "role": {"states": ["unknown", "reader", "reasoner", "reviewer", "executor"], "unknown": ["unknown"], "meaning": "Explicit pre-run role category. A role name is neither permission nor proof of future behavior."},
+    "permission": {"states": ["unknown", "no_mismatch", "mismatch"], "unknown": ["unknown"], "meaning": "Observed permission-check status; no_mismatch does not establish complete authorization."},
+    "expected": {"states": ["unknown", "expected", "unexpected"], "unknown": ["unknown"], "meaning": "Comparison of an actual communication with a supplied normative DAG; no DAG means unknown."},
+    "delegation": {"states": ["0", "1"], "unknown": [], "meaning": "Whether the logged event is a task delegation, not proof of valid delegated authority."}
+  },
+  "templates": [
+    {
+      "id": "source",
+      "binding": "origin_once",
+      "scope": "origin",
+      "event_types": ["input_received"],
+      "axes": ["trust"],
+      "parameter_pattern": "source:{trust}",
+      "initial_logits": [-4.0, -1.0, -2.0],
+      "update": "seed_or",
+      "interpretation": "One latent origin hypothesis, shared by an explicit source_id; missing source_id uses an entry-agent proxy.",
+      "knowledge_links": [{"risk_id": "RB026", "source_ids": [22], "coverage": "Lineage motivates shared identity; this model does not semantically recover independent claims or implement the paper's verification pipeline."}],
+      "benign_controls": ["One harmless document forwarded by many agents", "Multiple copies of one source versus independently checked sources"],
+      "evidence_gaps": ["Initial observed class may be wrong", "No later Bayesian reclassification", "Entry-agent proxy is not a reliable material identity"]
+    },
+    {
+      "id": "adoption",
+      "binding": "origin_to_node_once",
+      "scope": "node",
+      "event_types": ["input_received"],
+      "axes": ["role", "trust"],
+      "parameter_pattern": "adoption:{role}:{trust}",
+      "initial_logits": [-2.0, 0.5, -1.0, -2.0, 0.5, -1.0, -2.0, 0.5, -1.0, -2.0, 0.5, -1.0, -2.0, 0.5, -1.0],
+      "update": "carrier_or",
+      "interpretation": "A risky source can affect a receiving node through a learned gate. Merely observing an input is not evidence that its instruction was followed.",
+      "knowledge_links": [{"risk_id": "RB003", "source_ids": [6], "coverage": "Adoption and transfer are modeled separately as engineering hypotheses; role-specific uptake probabilities are not provided by the paper."}],
+      "benign_controls": ["Quoting an injected instruction while rejecting it", "Analyzing untrusted text as task data"],
+      "evidence_gaps": ["No textual uptake classifier", "No node compromise labels", "Role probabilities may be unidentifiable from final outcomes"]
+    },
+    {
+      "id": "authorization",
+      "binding": "privileged_action_once",
+      "scope": "node",
+      "event_types": ["tool_proposed", "tool_call"],
+      "axes": ["role", "permission"],
+      "parameter_pattern": "authorization:{role}:{permission}",
+      "initial_logits": [-3.0, -4.0, -1.0, -3.0, -4.0, -1.0, -3.0, -4.0, -1.0, -3.0, -4.0, -1.0, -3.0, -4.0, -1.0],
+      "update": "seed_or",
+      "interpretation": "A privileged-action permission observation can independently seed node risk; it is not inferred from information provenance alone.",
+      "knowledge_links": [
+        {"risk_id": "RB008", "source_ids": [11, 12], "coverage": "Keep authorization separate from relayed claims; no independent user-intent or approval-binding verifier is implemented."},
+        {"risk_id": "RB009", "source_ids": [12], "coverage": "Delegated authorization motivates a separate mechanism; no resource or cumulative-budget attenuation verifier is implemented."},
+        {"risk_id": "RB011", "source_ids": [33, 13], "coverage": "Observed-check proxy only, not a credential audience/session/subject validator."}
+      ],
+      "benign_controls": ["Correctly authorized sensitive call", "Legitimate delegation with narrower permissions"],
+      "evidence_gaps": ["Only supplied permission flags", "No parameter-source authorization policy", "Proposal and dispatch share one initial injection; later checks update global observables"]
+    },
+    {
+      "id": "transmission",
+      "binding": "actual_message",
+      "scope": "edge",
+      "event_types": ["message_sent", "delegation"],
+      "axes": ["trust", "expected", "delegation"],
+      "parameter_pattern": "transmission:{trust}:{expected}:delegation={delegation}",
+      "initial_logits": [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5],
+      "update": "carrier_or",
+      "interpretation": "Only an actual chronological message can transfer a sender's latent risk. A normative edge alone cannot transfer anything.",
+      "knowledge_links": [
+        {"risk_id": "RB003", "source_ids": [6], "coverage": "Communication-based propagation hypothesis, not verified semantic infection."},
+        {"risk_id": "RB026", "source_ids": [22], "coverage": "Preserve shared-source dependencies under branching/merging; not independent-source discovery or factuality verification."}
+      ],
+      "benign_controls": ["Forwarding an attack solely as a warning", "Benign auxiliary communication outside an incomplete workflow"],
+      "evidence_gaps": ["No message-level claim dependencies", "Unknown provenance cannot be reconstructed", "A clean category does not force zero transmission"]
+    }
+  ],
+  "confidence": {"parameter_name": "transmission:confidence_offset", "initial_value": 0.0, "meaning": "Additive logit coefficient times observed confidence minus 0.5; unknown message class uses zero offset."},
+  "head": {
+    "observables": ["bias", "log_observed_nodes", "log_messages", "untrusted_message_fraction", "unknown_message_fraction", "workflow_known", "unexpected_message_fraction", "log_observed_origins", "privileged_action_seen", "permission_check_seen", "permission_mismatch_seen", "capability_manifest_known", "privileged_capability_fraction"],
+    "latent_summaries": ["node_risk_fraction", "joint_pair_risk_fraction", "capable_node_risk_fraction", "workflow_terminal_risk_fraction"],
+    "initial_coefficients": [-0.7, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, 0.5],
+    "interpretation": "Learned conditional Bernoulli output marginalized over the joint node state; this head structure is our architectural choice, not a proven literature mechanism."
+  },
+  "expected_parameters": 69,
+  "review_note": "Sources 6, 11, 22 rechecked against primary HTML on 2026-09-19. Source 6 section 3.1 supports cross-agent transfer and role/tool-dependent payloads; source 11 sections 3.2-3.4 distinguish trace provenance from independently specified authorization; source 22 sections 6.2-6.4 distinguish confirmed, contradicted and unresolved lineage. Our Bernoulli factors, priors and fitted probabilities are modeling choices, not claims made by these papers."
+}

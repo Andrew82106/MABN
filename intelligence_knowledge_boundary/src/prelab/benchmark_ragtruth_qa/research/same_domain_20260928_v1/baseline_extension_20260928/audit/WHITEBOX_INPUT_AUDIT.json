@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "plans": 1842,
+  "random_contexts_independently_retokenized": 550,
+  "fit_raw_tokens_for_redeep": 141282,
+  "all_donors_fit_only": true,
+  "all_donors_disjoint_groups_titles_documents": true,
+  "answer_tokens_offsets_and_final_token_preserved": true,
+  "config_sha256": "e2f5525fc403005ccfcb1dbd7a9795f13b8c004927af1bcfebd712fd7ae8203b",
+  "plans_sha256": "60b4f5e1e720bcb59d1e56a662034cc3e47d90b7fcabd3682bcb8ae0d1c4f78f",
+  "GPU_used": false,
+  "stage": "input preparation/formula plus available completed raw-score audit",
+  "completed_score_checks": {
+    "lumina": {
+      "status": "PASS",
+      "raw_feature_files": 550,
+      "fit_check": null,
+      "scores": {
+        "validation": {
+          "rows": 271,
+          "predictions_sha256": "e472c18d7d3743b3a5f17ac619a7e9d1e08fef5f9ae134c66b6be29e11a08fe5",
+          "actual_native_scores_recomputed": true
+        },
+        "test": {
+          "rows": 279,
+          "predictions_sha256": "965aa00c18394dc4c49906a853078859f3532773a971ced70a6de644187f5cb7",
+          "actual_native_scores_recomputed": true
+        }
+      }
+    },
+    "redeep": {
+      "status": "PASS",
+      "raw_feature_files": 1842,
+      "fit_check": {
+        "raw_fit_tokens": 141282,
+        "selected_heads": [
+          16
+        ],
+        "selected_layers": [
+          31,
+          17,
+          25,
+          16,
+          20,
+          22,
+          27,
+          1,
+          8,
+          14
+        ],
+        "fit_only_pearson_selection_and_minmax_independently_recomputed": true
+      },
+      "scores": {
+        "validation": {
+          "rows": 271,
+          "predictions_sha256": "6d4fb60ca6ed0a6d8d1d783b1b55db3128fff8e769082398e93cb0518630396e",
+          "actual_native_scores_recomputed": true
+        },
+        "test": {
+          "rows": 279,
+          "predictions_sha256": "e57b53e0bd07e404096a9ec9e7523c06d7652b671ca7ddc7807b38bee317a6b5",
+          "actual_native_scores_recomputed": true
+        }
+      }
+    }
+  },
+  "formula_review": {
+    "LUMINA": "0.5 IPR - 0.5 cosine top100 MMD; unnormalized top100 masses retained; official all-output-layer convention; predictor t-1",
+    "ReDeEP": "paper standard JSD + retrieved-document ECS; raw fit-token Pearson; fit-only MinMax; fixed alpha1 beta0.2 khead1 klayer10"
+  },
+  "adaptation_notes": [
+    "LUMINA NF4 is precision adaptation",
+    "ReDeEP follows paper formula rather than contradictory released-code divergence",
+    "Exact shared original prompt used; author re-templating/truncation not applied",
+    "Common answer metric is max4window, not native arithmetic mean; retained native answer_score is supplementary"
+  ]
+}

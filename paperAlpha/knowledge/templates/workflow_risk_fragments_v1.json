@@ -1,0 +1,13 @@
+{
+  "schema": "workflow-risk-fragments-v1",
+  "scope": "Fixed-prefix forecast for explicitly proposed, once-dispatched actions; static authority window and declared requested-charge/combination policies. Not arbitrary future actions or successful external effects.",
+  "composition_basis": "https://arxiv.org/abs/1302.1554",
+  "dispatch_features": ["bias", "visible_support", "visible_opposition"],
+  "dispatch_families": ["payment", "release", "other"],
+  "fragments": [
+    {"id": "authorization", "selector": "every_proposal", "operator": "dispatch_and_failed_reference", "risk_ids": ["RB008", "RB009"], "source_ids": [11, 12], "meaning": "Reference-required policy violation, not all possible authority or proven harm."},
+    {"id": "single_bound", "selector": "payment_with_declared_bound", "operator": "dispatch_and_amount_exceeds", "risk_ids": ["RB009"], "source_ids": [12], "meaning": "Exceeds an explicitly supplied single-action bound; a declaration is not authenticated permission."},
+    {"id": "cumulative_budget", "selector": "matching_budget_contract", "operator": "requested_charge_sum_exceeds", "risk_ids": ["RB039"], "source_ids": [12], "meaning": "Sum of once-dispatched requested nonnegative charges plus declared prior subtotal; not settled spending."},
+    {"id": "prohibited_combination", "selector": "declared_bound_action_set", "operator": "all_selected_dispatches", "risk_ids": ["RB049"], "source_ids": [12], "meaning": "Fixed unordered conjunction of exact action bindings within one task/principal; no inferred harmful intent or ordered-chain guarantee."}
+  ]
+}

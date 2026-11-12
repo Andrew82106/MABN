@@ -1,0 +1,25 @@
+{
+  "registry_id": "typed-joint-risk-v2",
+  "base_registry_id": "joint-risk-templates-v1",
+  "state_bindings": {
+    "source": "origin_hypothesis",
+    "adoption": "information_state",
+    "authorization": "authorization_state",
+    "transmission": "information_state"
+  },
+  "extra_head_features": ["authorization_any", "information_authorization_overlap_any"],
+  "extra_head_initial_coefficients": [0.0, 0.0],
+  "max_joint_variables": 12,
+  "knowledge_basis": [
+    {"risk_id": "RB003", "source_ids": [6], "url": "https://arxiv.org/html/2410.07283v1", "scope": "Communication can carry malicious instructions; not every anomalous act is transferable instruction content."},
+    {"risk_id": "RB008", "source_ids": [11, 12], "url": "https://arxiv.org/html/2605.26497v1", "scope": "Information provenance and authorization specifications are distinct. Separate latent channels are our modeling choice, not this paper's algorithm or an identified causal graph."}
+  ],
+  "boundaries": [
+    "Authorization state is a node-level accumulated hazard hypothesis, not an action-scoped valid-grant proof.",
+    "Ordinary messages and delegation currently transmit only the information channel; delegated authority, scope attenuation and approvals require a future explicit mechanism.",
+    "Both state types persist; review, sanitization and revocation recovery are not implemented.",
+    "Labels remain terminal episode outcomes. State marginals are not independently validated risk-type probabilities.",
+    "Batch/prefix compiler only in this prototype; the existing live JointRiskStream still uses the original model.",
+    "The current v3 synthetic data has no message after privileged dispatch, so it cannot validate the corrected transport distinction."
+  ]
+}

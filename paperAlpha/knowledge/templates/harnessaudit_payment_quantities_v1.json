@@ -1,0 +1,27 @@
+{
+  "schema_version": "payment-quantity-profile-v1",
+  "registry_id": "harnessaudit-public-payment-arguments-v1",
+  "source": {
+    "url": "https://github.com/UCSB-AI/HarnessAudit/blob/6317162590aeeb1c8dde32b880ac199933343e4a/multi_agent/tools/daily_life.yaml",
+    "revision": "6317162590aeeb1c8dde32b880ac199933343e4a",
+    "selection": "Public parameter descriptions only; no backend, task policies, audit rules or outcomes. Call arguments are declarations, never approval certificates."
+  },
+  "tools": [
+    {
+      "name": "authorize_payment",
+      "amount_fields": [
+        {"name": "amount", "unit": "currency_field", "description": "(str) Payment amount"},
+        {"name": "amount_usd", "unit": "USD", "description": "(str) Payment amount in USD"}
+      ],
+      "limit_field": "amount_limit",
+      "limit_description": "(str) Maximum payment amount",
+      "currency_field": "currency",
+      "currency_description": "(str) Payment currency code (default USD)",
+      "default_currency": "USD",
+      "scope_fields": ["request_id", "customer_id", "bundle_id", "plan_id", "option_id", "selected_option"],
+      "scope_policy": "Preserve separate explicit identifiers; do not assume option, bundle and plan IDs are interchangeable.",
+      "limit_semantics": "self_declared_single_action_bound",
+      "usage_semantics": "requested_nonnegative_charge_at_dispatch_not_confirmed_spend"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "prediction_receipt_model_and_branch_hashes": "PASS",
+  "test_responses": 279,
+  "all_window_shapes_and_probability_ranges": "PASS",
+  "test_labels_read": false,
+  "test_evaluation_called": false,
+  "sklearn_version": "1.6.1",
+  "prediction_sha256": "5a5e8ac8ae1a2ceffb158f190d3ac6f730a352411bd4cab8f557f36701ca2601"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "message-workflow-templates-v1",
+  "scope": "Compile declared acyclic message workflows and exact-value tracking into observable event subgraphs. This is not workflow discovery, semantic leak detection, authenticated delivery or a safety guarantee.",
+  "knowledge": {
+    "risk_ids": ["RB013", "RB014"],
+    "source_ids": [15, 16],
+    "meaning": "Existing privacy catalogue motivates tracking content, recipients and permitted uses. It does not prove the chosen conditional probability law or make task relevance an authorization."
+  },
+  "templates": [
+    {"id": "configured_source", "family": "prepare", "requires_past": true, "meaning": "Already available configured source; missing content stays unknown."},
+    {"id": "prepare_message", "family": "prepare", "requires_past": false, "meaning": "One complete preparation message, with explicitly declared input routes."},
+    {"id": "work_message", "family": "work", "requires_past": false, "meaning": "One complete worker message; occurrence does not establish adoption."},
+    {"id": "review_message", "family": "review", "requires_past": false, "meaning": "One complete reviewer message; occurrence is not an approval or rejection verdict."},
+    {"id": "publish_message", "family": "publish", "requires_past": false, "meaning": "One complete publisher message; policy is evaluated separately from occurrence."}
+  ]
+}

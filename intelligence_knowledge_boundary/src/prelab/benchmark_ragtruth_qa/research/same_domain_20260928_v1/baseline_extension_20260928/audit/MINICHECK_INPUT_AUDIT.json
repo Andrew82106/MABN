@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "answers": 550,
+  "native_sentences": 2482,
+  "max_native_doc_claim_pair_tokens": 968,
+  "truncated_pairs": 0,
+  "all_source_chunks_independently_reconstructed": true,
+  "all_nonwhitespace_characters_covered": true,
+  "all_original_tokens_mapping_mass_one": true,
+  "nonwhitespace_mapping_independently_reconstructed": true,
+  "whitespace_tokens_with_nonzero_native_mass": 1837,
+  "input": "retrieved_passages + original sentence; question not used as evidence/claim",
+  "native_granularity": "sentence; common BPE mapping is not native token detection",
+  "splits": {
+    "validation": {
+      "answers": 271,
+      "prepared_sha256": "e946384aaffbf9248aee69220c2b0f712211a834e0f2203178979ea9c8ece20a"
+    },
+    "test": {
+      "answers": 279,
+      "prepared_sha256": "9f8db87df0faba3ad05cffffc802258d55e134556ba08aff9e2b44131e064a9a"
+    }
+  },
+  "completed_prediction_checks": {
+    "validation": {
+      "answers": 271,
+      "prediction_sha256": "baafe4bfa7a06c69e4ce1db069bf76156b063709f48a48c866435519540adbf7",
+      "all_chunk_maxima_score_direction_and_sentence_to_token_projections_recomputed": true
+    },
+    "test": {
+      "answers": 279,
+      "prediction_sha256": "7c20fefb0c493186068547dfe712bb5baa17059313cc242a665743c40fec7a54",
+      "all_chunk_maxima_score_direction_and_sentence_to_token_projections_recomputed": true
+    }
+  },
+  "prepared_receipt_sha256": "0e2ab74091ec83714f616c82f5059f881c746f619dd6aca1aafefac2f911a3e7",
+  "code_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\semantic\\minicheck_official.py": "20e9ce301610662ba44114ce51764e5b85999dbe6a9ef1509d12dbbb9312989b",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\semantic\\common.py": "743bc6358fde0b2389df734ec88f10d93b47cbb56078628efe79531cc6feb1f6"
+  },
+  "GPU_used": false,
+  "stage": "prepared inputs/mapping plus available actual native-score projections"
+}

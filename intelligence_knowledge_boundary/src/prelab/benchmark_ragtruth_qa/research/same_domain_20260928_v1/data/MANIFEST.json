@@ -1,0 +1,169 @@
+{
+  "schema_version": "ragognize-same-domain-grouped-v1",
+  "complete": true,
+  "seed": 20260928,
+  "dataset": "F4biian/RAGognize",
+  "revision": "aab54518c2a7c0d25fff8bffbf5337d0321de142",
+  "official_source_split": "train",
+  "generator": "Llama-2-7b-chat-hf",
+  "counts": {
+    "fit": {
+      "answers": 1292,
+      "groups": 617,
+      "no_hint_answers": 681
+    },
+    "validation": {
+      "answers": 271,
+      "groups": 133,
+      "no_hint_answers": 135
+    },
+    "test": {
+      "answers": 279,
+      "groups": 133,
+      "no_hint_answers": 155
+    }
+  },
+  "split_assignment_sha256": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+  "groups": {
+    "cross_split_identity_hashes": {
+      "normalized_question_sha256": 0,
+      "source_identity_sha256": 0,
+      "source_url_sha256": 0,
+      "source_title_sha256": 0,
+      "normalized_context_sha256": 0,
+      "retrieved_context_sha256": 0
+    },
+    "cross_split_target_document_edges": 0,
+    "original_groups": 917,
+    "final_groups": 883,
+    "largest_group_answers": 28,
+    "target_document_merge_edges_across_original_groups": 61,
+    "shared_non_target_distractors_do_not_trigger_merges": true,
+    "test_label_statistics_computed": false
+  },
+  "source_files_sha256": {
+    "reports/paper/tmp/submission_20260927_v2/external_eval/train_fixture/inputs/answers.jsonl": "d9425c906bc3a99e95bbad749198612cc9ef140186d6c36d49f01a049d25d199",
+    "reports/paper/tmp/submission_20260927_v2/external_eval/train_fixture/geometry/sequences.jsonl": "a32f8172098f9cd457a2c3ab80ea3cfd081139908f29c87af412c3468270d444",
+    "reports/paper/tmp/submission_20260927_v2/external_eval/train_fixture/geometry/windows.jsonl": "2759ab837db468548112bc764339e51021be6822f75c8725e088575541617102",
+    "reports/paper/tmp/submission_20260927_v2/external_eval/train_fixture/scoring/answers.jsonl": "a41758c2cb1f21447a8321e1b198cf113423e39a92c8d516f78565699e201cfb",
+    "src/prelab/benchmark_ragtruth_qa/auxiliary_ragognize_train_v1/conversion_v1/all_train/answers.jsonl": "c57ac1e958fb5c8c6ba8ded82c1e8d485f571590ea74e8ea44f1070f0ce98cfb",
+    "src/prelab/benchmark_ragtruth_qa/auxiliary_ragognize_train_v1/conversion_v1/all_train/sequences.jsonl": "620919d00814bc8cd3fec6194a208211a175877bc521786290fa0ab004a023c4",
+    "src/prelab/benchmark_ragtruth_qa/auxiliary_ragognize_train_v1/conversion_v1/all_train/tokens.jsonl": "b20216056928aece504c451e300693f9dc414972e9b83e7046751b0336796f35",
+    "src/prelab/benchmark_ragtruth_qa/auxiliary_ragognize_train_v1/conversion_v1/all_train/windows.jsonl": "1d113229aa603381bcf4c753b26bc1c9db50a71056869c1c623e4b94db8335b1"
+  },
+  "files": {
+    "fit/answers.jsonl": {
+      "sha256": "13100c4864920cf3251205664ee8977b32d4e75ee75575b3ab18eff4f1499254",
+      "bytes": 8115911
+    },
+    "fit/geometry.jsonl": {
+      "sha256": "fd18569c25561deda3b232dbeed8c3358579fc69f053efdde04c9577154185bb",
+      "bytes": 13689217
+    },
+    "fit/inputs.jsonl": {
+      "sha256": "0f3488ae9cfe257adf039a7128e21967553e38fcb0e210709e36a1128ba9d438",
+      "bytes": 11159312
+    },
+    "fit/scoring.jsonl": {
+      "sha256": "cef0b4ac110b2028c4af0690bed97880c163650b86fb722e42eff4da7610f87f",
+      "bytes": 7883037
+    },
+    "fit/sequences.jsonl": {
+      "sha256": "d9428319e4db302ca94be62b4449c94dba924d0edca58f42a2680b680aba366b",
+      "bytes": 11956978
+    },
+    "fit/tokens.jsonl": {
+      "sha256": "be448f0f1df99d674c70e7a95db34bb0d477822bb6148dfc2af67c35e2451e7c",
+      "bytes": 70975929
+    },
+    "fit/window_geometry.jsonl": {
+      "sha256": "362b9e58ec6da7ea4aa931d1cc810bd8938900686e33d37d261ba73d325c71ab",
+      "bytes": 26769568
+    },
+    "fit/windows.jsonl": {
+      "sha256": "4c1c10cd57d992e403a552093effcab1aa12a5c493798880747ec112604b99f9",
+      "bytes": 76235432
+    },
+    "GROUP_AUDIT.json": {
+      "sha256": "d5e6bad21ec64ec13017ed2c839b4b8f61f1ca05285e136bffba9f4d050be6d7",
+      "bytes": 546
+    },
+    "GROUPS.json": {
+      "sha256": "22b5a42e47c2c60734fabf89008553f036b43bdf4a929193e034a5f40c36f625",
+      "bytes": 206586
+    },
+    "split_assignments.jsonl": {
+      "sha256": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+      "bytes": 1601652
+    },
+    "SPLIT_FREEZE_BEFORE_LABEL_COPY.json": {
+      "sha256": "6c7d3b5e54b92b350d219eda228e8ff6a696bec4bb3e7872301aef82fccfe658",
+      "bytes": 1048
+    },
+    "test/geometry.jsonl": {
+      "sha256": "79d37ec952ed333551aee7b6e5611f3431b86eaedf3a478740ea4a15a4e2d073",
+      "bytes": 3041335
+    },
+    "test/inputs.jsonl": {
+      "sha256": "307ef1d5983e4fd16ec8d9f5d8833da2f101b44a8391dd215a4e9a603353f0de",
+      "bytes": 2529099
+    },
+    "test/sealed/labels.jsonl": {
+      "sha256": "64e7d766bcd7f4d79df342afba59bac3b5c6c36559fadc8a265ca934236829d0",
+      "bytes": 1657824
+    },
+    "test/sealed/README.md": {
+      "sha256": "b85f0566c1072030cf8cac6614716967bc09577221a2e79e921c703ae1b35a78",
+      "bytes": 358
+    },
+    "test/window_geometry.jsonl": {
+      "sha256": "b4f18ddade8e0ef215db63483d22849c46066009dc91662abadec557864eaccd",
+      "bytes": 5653106
+    },
+    "validation/answers.jsonl": {
+      "sha256": "fa3f6ff688c2ca4b0c7f8554a90cf2fddb4f30c3fb5a2b7fd0253cae86a895db",
+      "bytes": 1813471
+    },
+    "validation/geometry.jsonl": {
+      "sha256": "8bf228f50195f2d4c249118c08ec91b9428855f6aa743a015d34003fc2730efd",
+      "bytes": 3100352
+    },
+    "validation/inputs.jsonl": {
+      "sha256": "6f5e5d755c951ee8f38e9d07c098f0c08b8aa961c59013511733a2baa727baf4",
+      "bytes": 2545662
+    },
+    "validation/scoring.jsonl": {
+      "sha256": "32cb6e4094a843f8ebd461b1429a76e0462033e2ef9832df5a5cddca26b28bbb",
+      "bytes": 1787342
+    },
+    "validation/sequences.jsonl": {
+      "sha256": "248e04600c2aedafbe2c6f5f0d39c3d4ece5166cb0baaf985a2385b5533bf7c9",
+      "bytes": 2692175
+    },
+    "validation/tokens.jsonl": {
+      "sha256": "d3fff1d7889ab521f06d1ac6479b55cf1030dc5c78487c5b94fba51768cab239",
+      "bytes": 16369988
+    },
+    "validation/window_geometry.jsonl": {
+      "sha256": "4a6afd82da87d0eba46e2460e85282dab518c3c211cfd477b1e270233bcf518b",
+      "bytes": 6104539
+    },
+    "validation/windows.jsonl": {
+      "sha256": "80065441bd87f164f1377211f54f0a2abacfa9b7413cbeb8b015f95c3496c276",
+      "bytes": 17596723
+    }
+  },
+  "geometry_records_verified": 1842,
+  "predictor_exports_reused_verbatim": true,
+  "test_label_statistics_computed": false,
+  "test_labels_physically_separate": true,
+  "training_cohort": "all fit answers",
+  "primary_evaluation_cohort": "no_hint",
+  "secondary_evaluation_cohort": "all",
+  "annotation_type": "automatic silver character spans",
+  "comparison_requirement": "All methods use these exact fit/validation/test memberships; initialize from generic base models and new heads, never the official RAGognizer checkpoint trained on all official train",
+  "historical_exposure": "Common-data internal repartition; official train has been read and used in prior research. Official test2781 is already seen and excluded.",
+  "GPU_used": false,
+  "model_forward": false,
+  "builder_sha256": "924ffe3fa1b7e15a69dace8041ca6253ec3bcb001625f53735af8b5f5470b9ae"
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperalpha-pre-exp1"
+version = "0.2.0"
+description = "Archived early pre-exp1 research workspace"
+requires-python = ">=3.11"
+
+[project.scripts]
+pre-exp1 = "pre_exp1.cli:main"
+
+[tool.setuptools]
+packages = ["pre_exp1"]
+package-dir = {pre_exp1 = "pre_exp1/src/pre_exp1"}
+
+[tool.pytest.ini_options]
+testpaths = ["pre_exp1/tests"]
+pythonpath = ["pre_exp1/src"]
+cache_dir = "../../.local/cache/legacy_pre_exp1"
+addopts = "-ra"

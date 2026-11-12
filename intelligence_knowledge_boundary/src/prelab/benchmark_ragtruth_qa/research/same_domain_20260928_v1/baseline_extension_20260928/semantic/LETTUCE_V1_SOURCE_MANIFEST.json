@@ -1,0 +1,38 @@
+{
+  "revision": "d96e413aaf39f97739207759e8f393df1ecc38af",
+  "tag": "0.1.6",
+  "files": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/README.md",
+      "sha256": "bf11d228c4aa24c2c82f70e18b01f822c3f46136bd82b9a278534ed6113dfdd2"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/LICENSE",
+      "sha256": "c19341bdd059245b994d6984da1a24d40a52535e7bb1c93d4a2829d66c272e68"
+    },
+    "scripts/train.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/scripts/train.py",
+      "sha256": "cdfda0628c12562466166164cd139176701cc9f93c46abffde94684be94ba37a"
+    },
+    "lettucedetect/models/trainer.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/lettucedetect/models/trainer.py",
+      "sha256": "d428283ac99879c6dd50f9354850715c9a4fb8e623bf1f1ddaa838cc5664131f"
+    },
+    "lettucedetect/models/evaluator.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/lettucedetect/models/evaluator.py",
+      "sha256": "3e4590447c2bf51155333dc291c8877f851c39983b6f34dfc9b320c51bdc3182"
+    },
+    "lettucedetect/datasets/ragtruth.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/lettucedetect/datasets/ragtruth.py",
+      "sha256": "6bfb32a87eeac5dc39621e544f3f9f44f09900714ce5f801c387ff69431031db"
+    },
+    "lettucedetect/models/inference.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/lettucedetect/models/inference.py",
+      "sha256": "0e6119b28d7c9b800bb8be46069b3547909ecee9ba3211cd726a4c29b0c03508"
+    },
+    "lettucedetect/preprocess/preprocess_ragtruth.py": {
+      "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/d96e413aaf39f97739207759e8f393df1ecc38af/lettucedetect/preprocess/preprocess_ragtruth.py",
+      "sha256": "5277440d7d4e2ac6187a3be1dd3f030eb840a65ab8fc204a208b821fcb5c8f2f"
+    }
+  }
+}

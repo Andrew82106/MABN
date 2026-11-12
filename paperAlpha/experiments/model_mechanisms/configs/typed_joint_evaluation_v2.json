@@ -1,0 +1,11 @@
+{
+  "version": "typed-joint-evaluation-v2",
+  "reference_run": "experiments/model_mechanisms/runs/dynamic_joint_bn_converged_20260919",
+  "expected_seeds": [20260919, 20260920, 20260921],
+  "max_joint_variables": 12,
+  "training": {"regularization": 0.01, "max_iter": 200},
+  "warm_start": "Use the same split's previously fitted joint_bn parameters with two zero extra head coefficients; no held-out fitting.",
+  "alarm_policy": "Original single threshold; empirical validation-negative any-alarm FPR <= 0.10. No phase policy.",
+  "comparison": "All six converged-run controls retained without refitting; same raw inputs and splits. Typed model has 71 parameters versus 69 for original joint_bn.",
+  "scope": "All 12 existing development settings/seeds. Semantic transport repair and an explicit authorization/overlap readout; not a full multi-risk monitor, new dataset or original MAS baseline reproduction."
+}

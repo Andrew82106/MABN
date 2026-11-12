@@ -1,0 +1,5 @@
+{
+  "frozen_predictions_sha256": "a831fe30c3dd4eeba2007ae17478775119e4b5b8cb12ea324fdbba4ee3f03a53",
+  "released_at_unix": 1790581953.6058633,
+  "policy": "all model checkpoints, predictions and thresholds frozen before labels opened"
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c00"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c01"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c02"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.0003,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c03"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 1,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "loss": "balanced",
+    "id": "c04"
+  },
+  {
+    "feature": "attention",
+    "architecture": "conv",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c05"
+  },
+  {
+    "feature": "attention",
+    "architecture": "gru",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c06"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "natural",
+    "id": "c07"
+  },
+  {
+    "feature": "attention",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "ranking",
+    "id": "c08"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c09"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c10"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 2,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c11"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.0003,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c12"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 256,
+    "depth": 1,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "loss": "balanced",
+    "id": "c13"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "conv",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c14"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "gru",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "balanced",
+    "id": "c15"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "natural",
+    "id": "c16"
+  },
+  {
+    "feature": "hybrid",
+    "architecture": "mlp",
+    "width": 64,
+    "depth": 1,
+    "dropout": 0.1,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "loss": "ranking",
+    "id": "c17"
+  }
+]

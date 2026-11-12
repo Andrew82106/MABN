@@ -1,0 +1,40 @@
+{
+  "schema_version": "risk-template-v1",
+  "purpose": "将风险知识条目映射为可审计的局部BN变量和动态边证据",
+  "not_causal_discovery": true,
+  "fields": {
+    "risk_id": "risk_catalog entry id",
+    "node_role": "workflow node role",
+    "preconditions": ["observable facts required before scoring"],
+    "local_variables": ["binary or bounded evidence variables"],
+    "edge_variables": ["message/delegation provenance variables"],
+    "sink_conditions": ["tool/permission/external-effect conditions"],
+    "benign_controls": ["normal comparison cases"],
+    "source_ids": ["literature source identifiers"],
+    "label_policy": "independent annotation or external-state predicate"
+  },
+  "examples": [
+    {
+      "risk_id": "RB003",
+      "node_role": "communication",
+      "preconditions": ["untrusted content enters an Agent context", "an explicit message or delegation exists"],
+      "local_variables": ["untrusted_input", "instruction_like_content"],
+      "edge_variables": ["source_agent", "target_agent", "data_class", "parent_task"],
+      "sink_conditions": ["downstream Agent adopts content as an instruction", "sensitive tool is called"],
+      "benign_controls": ["content is quoted or flagged, not followed", "message is sanitized before forwarding"],
+      "source_ids": [6],
+      "label_policy": "annotated adoption or independently verified downstream effect"
+    },
+    {
+      "risk_id": "RB009",
+      "node_role": "tool_execution",
+      "preconditions": ["a delegated task has a tool capability", "parent and child authorization scopes are observable"],
+      "local_variables": ["permission_mismatch", "high_impact_tool", "approval_missing"],
+      "edge_variables": ["delegating_agent", "authorization_source", "approval_chain"],
+      "sink_conditions": ["external side effect is verified"],
+      "benign_controls": ["approved call with matching scope", "dry-run without external effect"],
+      "source_ids": [12],
+      "label_policy": "external effect or independent policy adjudication"
+    }
+  ]
+}

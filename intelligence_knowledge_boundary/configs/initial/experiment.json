@@ -1,0 +1,18 @@
+{
+  "dataset_seed": 20260909,
+  "probe_seeds": [42, 43, 44],
+  "layers": [8, 16, 24],
+  "fit_steps": 120,
+  "validate_every": 10,
+  "bags_per_class": 8,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0005,
+  "k_ratio": 0.1,
+  "selection": "validation response AUROC only; no span labels",
+  "localization_budget": 0.1,
+  "methods": ["last_linear", "mean_linear", "mil_mean", "mil_max", "mil_topk", "hami_ori"],
+  "controls": ["token_surprisal", "response_length", "tfidf_text", "shuffled_label_mil_topk"],
+  "primary_localization": "macro within-positive-response token AUROC and AP; recall/precision at top 10 percent of tokens",
+  "primary_classification": "heldout response AUROC; threshold from validation response F1",
+  "scope": "English news summaries; evidence-relative explicit conflict; target-model teacher-forced replay"
+}

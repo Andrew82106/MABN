@@ -1,0 +1,49 @@
+{
+  "identity": "Lookback Lens original architecture / same-fit / NF4 replay",
+  "features": "native lb_prefix_pre_header, 32 layers x32 heads; unweighted mean over8 complete raw BPE",
+  "classifier": {
+    "C": 0.1,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": null,
+    "max_iter": 1000,
+    "multi_class": "deprecated",
+    "n_jobs": null,
+    "penalty": "l2",
+    "random_state": null,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "scaler": null,
+  "sample_weight": null,
+  "baseline_C": 1.0,
+  "tuned_C_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "tuned_selection": "maximum common no-hint validation selection_key; tie prefer C=1 then ascending C",
+  "solver_budget": "1000; if ConvergenceWarning rerun unchanged objective at3000 then10000; fail if still unconverged",
+  "adaptation": "8-window probability coverage-mean per BPE -> report mean4 and lexical max4 -> answer max",
+  "pooling_selection": "validation selection_key maximum; tie mean; frozen together with thresholds",
+  "fit_answers": 1292,
+  "validation_answers": 271,
+  "fit_spans": 132238,
+  "data_manifest_sha256": "8b2d4cbb74ac82447e959a24e7d3f6cb1c1d1f58e71d0f17375a896cb65c578e",
+  "code_sha256": "010727b801c87ed16b17a1d62892326ee0e333b39a4b13bbf80b27e81d27a0ff",
+  "metrics_sha256": "59326891250c42b4cc0ee18abb2a8559b381f534204f9bf622a482a57a5145f4",
+  "validation_only_thresholds": "common no-hint validation threshold rule",
+  "software": {
+    "scikit-learn": "1.6.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "test_opened": false,
+  "gpu_used": false,
+  "C": 0.1
+}

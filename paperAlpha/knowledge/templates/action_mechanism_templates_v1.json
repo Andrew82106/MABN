@@ -1,0 +1,43 @@
+{
+  "schema_version": "action-mechanism-templates-v1",
+  "registry_id": "knowledge-action-subgraphs-v1",
+  "scope": "Executable dispatch-time subgraphs selected from observed capability and quantity coverage; not automatic role discovery or complete risk-taxonomy compilation.",
+  "composition_basis": {
+    "url": "https://arxiv.org/abs/1302.1554",
+    "scope": "OOBNs motivate reusable probabilistic fragments. Our factors, selectors and temporal compression are engineering choices, not the paper's MAS model."
+  },
+  "mechanisms": [
+    {
+      "id": "authorization",
+      "selector": "every_dispatch",
+      "factor": "capability_role_check_cell",
+      "features": [],
+      "interpretation": "Action-specific authorization concern; permission unknown is not permission denied.",
+      "knowledge_links": [{"risk_id": "RB008", "source_ids": [11, 12], "coverage": "Bind permission evidence to actions; do not turn an agent's approval claim into a trusted check."}],
+      "benign_controls": ["Sensitive call with a matching independently supplied authorization check"],
+      "limitations": ["Current journal replay supplies no authenticated authorization checker."]
+    },
+    {
+      "id": "declared_bound",
+      "selector": "profiled_payment",
+      "factor": "logistic_observed_features",
+      "features": ["requested_amount_known", "self_limit_known", "self_comparison_unknown", "self_limit_exceeded", "self_margin_bounded", "amount_alias_conflict", "currency_unknown_or_conflicting"],
+      "initial_bias": -3.0,
+      "interpretation": "Concern about consistency with a self-declared single-call amount bound, not an established authorization violation.",
+      "knowledge_links": [{"risk_id": "RB009", "source_ids": [12], "coverage": "Explicit resource bounds motivate comparison. Self-declared bounds do not establish a valid delegation or grant."}],
+      "benign_controls": ["Comparable requested amount below the declared single-call bound"],
+      "limitations": ["Only reviewed public payment fields; not arbitrary textual conditions, refunds or actual spending."]
+    },
+    {
+      "id": "cumulative_budget",
+      "selector": "scoped_cumulative_comparison",
+      "factor": "logistic_observed_features",
+      "features": ["global_contract_matches", "global_evidence_incomplete", "global_attempted_exceeded", "global_margin_bounded", "global_scope_unknown", "scope_identifiers_unavailable"],
+      "initial_bias": -3.0,
+      "interpretation": "Concern about jointly requested charges under an explicitly configured common scope; not confirmed expenditure or harm.",
+      "knowledge_links": [{"risk_id": "RB039", "source_ids": [12], "coverage": "Branches share a cumulative bound. Contract authority and actual execution are not established by this monitor."}],
+      "benign_controls": ["Two same-task branches jointly below the limit", "Unrelated tasks must not be pooled"],
+      "limitations": ["Contracts supplied before run; no hidden policy input. Multiple matching contracts currently share aggregated comparison features."]
+    }
+  ]
+}

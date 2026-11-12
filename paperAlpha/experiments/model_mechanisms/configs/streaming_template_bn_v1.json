@@ -1,0 +1,53 @@
+{
+  "version": "streaming-template-bn-v1",
+  "status": "development protocol; existing synthetic data is not a fresh confirmation set",
+  "data": "experiments/synthetic_mas/runs/independent_mas_v3",
+  "seeds": [20260919, 20260920, 20260921],
+  "outer_test_fraction": 0.2,
+  "validation_fraction_of_remaining": 0.25,
+  "split_group": "renaming-invariant public workflow topology; no hidden-edge family identifiers",
+  "workflow_visibility": "runtime_only ignores workflow_dag and edge_kind; deviations require explicitly supplied W",
+  "origin_identity": "source_id if supplied; otherwise distinct entry-agent proxy, not independent evidence sources",
+  "settings": [
+    {"workflow": "runtime_only", "permission": "observed"},
+    {"workflow": "runtime_only", "permission": "masked"},
+    {"workflow": "workflow_known", "permission": "observed"},
+    {"workflow": "workflow_known", "permission": "masked"}
+  ],
+  "training": {
+    "bn": "joint episode NLL and fixed weak Gaussian logit prior",
+    "regularization": 0.01,
+    "threshold": "validation F1 maximum; ties choose highest threshold",
+    "test_tuning": false,
+    "graph_gates_trainable": false
+  },
+  "baselines": {
+    "logistic_same_evidence": {"C": 1.0, "max_iter": 1000},
+    "histgb_same_evidence": {"max_iter": 100, "max_leaf_nodes": 7, "l2_regularization": 1.0, "early_stopping": false}
+  },
+  "ablations": ["authorization", "information_flow", "workflow_deviation", "global_context"],
+  "knowledge_mapping": {
+    "authorization": {
+      "catalog_ids": ["RB008", "RB009", "RB011"],
+      "interpretation": "Observable permission/capability evidence only; not independent proof of a harmful effect."
+    },
+    "information_flow": {
+      "catalog_ids": ["RB003", "RB026"],
+      "interpretation": "Chronological paths with source_id deduplication when present; otherwise only entry-agent keys. Existing v3 data has no source_id, so independent-source recovery and RB026 are NOT evaluated."
+    },
+    "workflow_deviation": {
+      "catalog_ids": ["RB007", "RB009"],
+      "interpretation": "Engineering approximation inspired by identity/delegation risks, not a literature-proven equivalence between an extra edge and danger."
+    },
+    "global_context": {
+      "catalog_ids": [],
+      "interpretation": "Hand-designed graph summary; no claim of discovering a new risk mechanism."
+    }
+  },
+  "early_warning": {
+    "actual_violation_lead_time": "not estimable: dataset has no independent violation timestamp",
+    "reported_proxy": "strictly before first observed privileged tool_call; not before verified harm",
+    "negative_false_alarm": "any threshold crossing in the negative episode",
+    "threshold_selection_uses_proxy": false
+  }
+}

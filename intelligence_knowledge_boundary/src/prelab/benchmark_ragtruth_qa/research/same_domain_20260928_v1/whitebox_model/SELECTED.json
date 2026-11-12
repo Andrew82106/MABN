@@ -1,0 +1,86 @@
+{
+  "epoch": 15,
+  "mean_batch_loss": 0.3852026182928203,
+  "elapsed_seconds": 103.4825643999502,
+  "evaluation": {
+    "partition": "validation",
+    "thresholds": {
+      "answer": 0.8157892227172852,
+      "window": 0.509154736995697
+    },
+    "cohorts": {
+      "all": {
+        "answer": {
+          "n": 271,
+          "positive": 161,
+          "tp": 136,
+          "fp": 47,
+          "fn": 25,
+          "tn": 63,
+          "precision": 0.7431693989071039,
+          "recall": 0.84472049689441,
+          "f1": 0.7906976744186046,
+          "auroc": 0.8485601355166571,
+          "average_precision": 0.906858319795874,
+          "threshold": 0.8157892227172852
+        },
+        "window": {
+          "n": 31283,
+          "positive": 8793,
+          "tp": 6686,
+          "fp": 7480,
+          "fn": 2107,
+          "tn": 15010,
+          "precision": 0.47197515177184807,
+          "recall": 0.7603775730694871,
+          "f1": 0.5824295483252755,
+          "auroc": 0.7874906961694993,
+          "average_precision": 0.6022622703632232,
+          "threshold": 0.509154736995697
+        },
+        "groups": 133
+      },
+      "no_hint": {
+        "answer": {
+          "n": 135,
+          "positive": 86,
+          "tp": 75,
+          "fp": 15,
+          "fn": 11,
+          "tn": 34,
+          "precision": 0.8333333333333334,
+          "recall": 0.872093023255814,
+          "f1": 0.8522727272727273,
+          "auroc": 0.8699572852396772,
+          "average_precision": 0.9316711083441491,
+          "threshold": 0.8157892227172852
+        },
+        "window": {
+          "n": 14740,
+          "positive": 5067,
+          "tp": 3972,
+          "fp": 3017,
+          "fn": 1095,
+          "tn": 6656,
+          "precision": 0.5683216483044785,
+          "recall": 0.7838957963291888,
+          "f1": 0.6589250165892502,
+          "auroc": 0.8015351959744796,
+          "average_precision": 0.6698332919491609,
+          "threshold": 0.509154736995697
+        },
+        "groups": 67
+      }
+    },
+    "selection_key": [
+      0.6589250165892502,
+      0.6589250165892502,
+      0.5683216483044785
+    ],
+    "primary_cohort": "no_hint",
+    "pooling": "max",
+    "annotation": "released automatic span annotations; not human gold"
+  },
+  "selection": "validation no_hint, common metrics selection_key; ties keep earliest epoch",
+  "fixed_final": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": "joint-optimizer-continuation-v1",
+  "scope": "Fit-only optimization sufficiency for all joint_bn/no_messages/no_latent_head estimators; no architecture, data, split or regularization changes.",
+  "methods": ["joint_bn", "no_messages", "no_latent_head"],
+  "stationarity_tolerance": 0.00001,
+  "selection": "Continue if original optimizer failed OR fit-objective projected-gradient infinity norm exceeds tolerance.",
+  "max_additional_iterations": 300,
+  "ftol": 1e-12,
+  "gtol": 1e-6,
+  "bounds": [-8.0, 8.0],
+  "acceptance": "Keep the additional fit iff finite and its same fit objective does not increase; save every attempt regardless.",
+  "evaluation_order": "Finish and freeze all training decisions before computing any new validation/test scores.",
+  "claim": "Numerical stationarity diagnostic only, not global optimality or independent external validation."
+}

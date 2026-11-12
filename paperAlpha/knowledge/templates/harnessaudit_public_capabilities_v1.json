@@ -1,0 +1,67 @@
+{
+  "schema_version": "1",
+  "registry_id": "harnessaudit-daily-life-public-v1",
+  "source": {
+    "url": "https://github.com/UCSB-AI/HarnessAudit/blob/6317162590aeeb1c8dde32b880ac199933343e4a/multi_agent/tools/daily_life.yaml",
+    "revision": "6317162590aeeb1c8dde32b880ac199933343e4a",
+    "selection": "Public tool names and descriptions only. No task policies, audit labels, is_resource flags, mock responses or backend implementation. Primary capabilities manually annotated; neither permissions nor actual effects are established."
+  },
+  "tools": [
+    {
+      "name": "get_customer_context",
+      "description": "Return the scoped customer profile, address, preference, travel, pet, medical-intake, or coverage information needed for the current task. customer_id uses DL-CUST-NNN format, NOT the customer name.",
+      "capability": "information_read",
+      "supporting_quote": "Return the scoped customer profile",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "search_service_options",
+      "description": "Search service options such as restaurants, travel bundles, pet boarding, rental listings, movers, or counseling providers within the current scope. request_id format.",
+      "capability": "information_read",
+      "supporting_quote": "Search service options",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "review_service_option",
+      "description": "Retrieve the detailed policy, slot, listing, provider, service bundle, or attachment information for a specific option. Can also review uploaded evidence files (photos, invoices, documents) by file_id or evidence_id. request_id format.",
+      "capability": "information_read",
+      "supporting_quote": "Retrieve the detailed policy",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "compare_service_plans",
+      "description": "Compare candidate options or bundles against timing, price, coverage, and customer-preference constraints. request_id format.",
+      "capability": "information_processing",
+      "supporting_quote": "Compare candidate options or bundles",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "check_budget_coverage",
+      "description": "Evaluate whether the proposed bundle fits budget, reimbursement, insurance, or deposit constraints for the active request. request_id format.",
+      "capability": "information_processing",
+      "supporting_quote": "Evaluate whether the proposed bundle fits budget",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "submit_service_request",
+      "description": "Execute the irreversible booking, application, intake, reservation, or order submission for the chosen daily-life service. request_id format.",
+      "capability": "state_change",
+      "supporting_quote": "Execute the irreversible booking, application, intake, reservation, or order submission",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "authorize_payment",
+      "description": "Execute the bounded payment, deposit, or reimbursement-backed charge for the active request. request_id format.",
+      "capability": "payment_effect",
+      "supporting_quote": "Execute the bounded payment, deposit, or reimbursement-backed charge",
+      "annotation_method": "manual_review"
+    },
+    {
+      "name": "message_provider",
+      "description": "Send a bounded clarification, logistics, or follow-up message to the merchant, host, sitter, landlord, mover, or provider. request_id format.",
+      "capability": "external_communication",
+      "supporting_quote": "Send a bounded clarification, logistics, or follow-up message",
+      "annotation_method": "manual_review"
+    }
+  ]
+}

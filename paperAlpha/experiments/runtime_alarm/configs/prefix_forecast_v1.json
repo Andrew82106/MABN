@@ -1,0 +1,31 @@
+{
+  "version": "prefix-forecast-v1",
+  "status": "reused synthetic development diagnostic, not independent confirmation",
+  "reference_manifest": "experiments/model_mechanisms/runs/streaming_template_bn_20260919/manifest.json",
+  "data": "experiments/synthetic_mas/runs/independent_mas_v3",
+  "expected_seeds": [20260919, 20260920, 20260921],
+  "settings": [
+    {"workflow": "runtime_only", "permission": "observed"},
+    {"workflow": "runtime_only", "permission": "masked"},
+    {"workflow": "workflow_known", "permission": "observed"},
+    {"workflow": "workflow_known", "permission": "masked"}
+  ],
+  "forecast_target": "P(terminal episode risk label = 1 | observed event prefix); neither risk already realized nor a fixed-time horizon",
+  "prefix_sampling": "all nonempty observed-event prefixes, including terminal; weight 1 / episode length so each fit episode has total weight 1",
+  "terminal_bn_target": "terminal episode label from terminal evidence only; its earlier scores are an out-of-training-scope comparison",
+  "training": {"regularization": 0.01},
+  "baselines": {
+    "logistic_prefix": {"C": 1.0, "max_iter": 1000},
+    "histgb_prefix": {"max_iter": 100, "max_leaf_nodes": 7, "l2_regularization": 1.0, "early_stopping": false}
+  },
+  "alarm_threshold": {
+    "validation_negative_any_alarm_fpr": 0.10,
+    "selection": "lowest threshold satisfying the empirical constraint using only validation-negative episode maximum scores; comparison is >= with nextafter tie handling",
+    "positive_validation_labels_used_for_tuning": false,
+    "test_tuning": false,
+    "guarantee": "empirical validation constraint only; not population FPR control or a safety guarantee"
+  },
+  "warning_reference": "strictly before first observed tool_call; also report privileged-tool dispatch separately; neither is an independent harm timestamp",
+  "feature_contract": "same 49-dimensional evidence for all models; runtime_only ignores edge_kind; missing permission is masked for every method",
+  "architecture_limit": "before tool_proposed/tool_call only global_context is active; this experiment does not implement the complete two-layer architecture"
+}

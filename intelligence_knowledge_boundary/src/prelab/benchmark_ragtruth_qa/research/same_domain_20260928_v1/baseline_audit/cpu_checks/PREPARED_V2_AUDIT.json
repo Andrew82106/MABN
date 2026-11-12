@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "counts": {
+    "fit": {
+      "old_no_hint": 681,
+      "new_no_hint": 681,
+      "shared_windows": 137192
+    },
+    "validation": {
+      "old_no_hint": 135,
+      "new_no_hint": 135,
+      "shared_windows": 31283
+    }
+  },
+  "GPU_used": false,
+  "test_opened": false
+}

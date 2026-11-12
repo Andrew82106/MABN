@@ -32,182 +32,48 @@
 - API 场景的主系统应称为**灰盒/外部可观测监测**，不能声称从文本恢复了模型内部白盒机制；本地模型探针只能作为可选增强或后续扩展。
 - 风险入口、失败方式、危险动作和最终危害必须分开记录；“模型说要做”不等于“动作已执行”。
 - 单 Agent 安全不等于 MAS 安全；重点关注委派、共享记忆、信息流、权限传递、组合危害、重复执行和全局资源约束。
+- 可读节点名不等于学到了可信语义。关键中间节点须有可核对的观测定义，并独立检验其预测与实际事件是否一致；不能只凭最终风险分数就宣称整张图的内部解释可信。
 - 综述和风险目录是图构建的知识底座，不应被误写成已经完成的实验、因果发现或绝对安全保证。
 - 旧的 `pre_exp1/`、历史数据和共享实验平台属于可复用遗产，不能自动当作当前论文结果或当前方法已经实现。
 
 后续任何新增代码、数据、实验或论文文字，都必须说明它位于上述主线的哪一层；如果改变研究对象、观测假设或核心贡献，先更新本节再继续。
 
-## 当前用途（2026-09-13）
+## 当前入口
 
-这里统一存放当前讨论的 **BayesTrace 向多智能体系统（MAS）安全风险评估拓展**
-论文的代码、配置、数据和实验结果。`paperAlpha` 是工程代号，不表示大论文中的章节顺序。
-具体研究切口和创新性仍在讨论，尚未冻结实验方案；目录整理不代表新方法已经实现。
+研究方案以 [实验协议](experiments/protocol.json) 为准；结果与证据边界见[论文汇报](docs/manuscript/README.md)。历史开发分数不等于独立安全验证。
 
-实际路径：`D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha`。
+当前设计分为规范工作流线与运行时关系线；两者通过对象、角色、时间和权限关系结合。当前包仍是开发与外部诊断材料，独立人工确认尚未完成。
 
-## 新工作放在哪里
+## 目录
 
-| 目录 | 用途 |
-|---|---|
-| `src/` | 新论文的方法代码、特征提取与监测模块 |
-| `configs/` | 可复现的模型、数据和实验配置；不保存密钥 |
-| `scripts/` | 数据处理、训练、评估等运行入口 |
-| `tests/` | 新代码的测试 |
-| `research/` | 危险行为目录、来源与机制归纳；不等同于已冻结的实验方案 |
-| `data/raw/` | 新工作的原始数据和运行记录；保留来源，不覆盖原始记录 |
-| `data/processed/` | 清洗、标注和特征等派生数据 |
-| `data/splits/` | 训练、验证、测试划分及其来源记录 |
-| `results/` | 按实验名称和运行编号分开保存指标、图表、报告与模型产物 |
+| 目录 | 只负责什么 |
+| --- | --- |
+| [docs/](docs/README.md) | 设计说明、文献、论文写作和使用指南 |
+| [knowledge/](knowledge/README.md) | 算法实际读取的风险定义、模板、格式约束 |
+| [code/](code/README.md) | 源码、命令、测试、第三方实现 |
+| [data/](data/README.md) | 可供多次实验复用的输入数据与划分 |
+| [experiments/](experiments/README.md) | 实验协议、配置、分析和完整运行记录 |
+| [archive/](archive/README.md) | 已退役的整套预实验与旧平台 |
+| `.local/` | 本机环境、缓存和可恢复备份，不进入 Git |
 
-代码、配置与数据新目录目前只有占位文件；`research/` 已有文献整理。代码与生成数据分开；不同运行不互相覆盖。
-原始数据、派生数据和运行结果默认不纳入 Git，划分文件只保存样本标识和来源，
-不包含原文或凭据。需要共享小型数据时再明确选取。
+不再保留根级 `src/`、`scripts/`、`configs/`、`research/`、`literature/`、`results/`、`submission/`、`pre_exp1/` 的重复入口。
 
-现有 `pyproject.toml` 的安装和默认测试入口仍指向旧的 `pre_exp1`，
-没有在本次整理中改成新方法入口；后续实现时再接入。
-继续使用项目统一 Conda 环境 `multi_agent_graph`，不另建环境。
+## 开发与复现
 
-## 现有资产如何处理
+本机继续使用 `D:\anaconda\envs\multi_agent_graph\python.exe`，未新建环境。
+源码运行、测试依赖和新实验输出方式见[复现说明](docs/usage/REPRODUCIBILITY.md)；只安装核心 wheel 不包含整套实验命令与数据。
 
-- [research/README.md](research/README.md)：新增危险行为与风险机制目录（48 项、39 项来源），用于讨论后续研究范围。
-- [pre_exp1/](pre_exp1/)：旧 P0、P1 和 P1v2 预实验代码、配置与测试，原位保留。
-- [data/pre_exp1/](data/pre_exp1/)：上述实验的历史运行数据，原位保留，不当作新论文结果。
-- [data/shared/](data/shared/)：旧实验的静态任务、模板和 schema，可按需要复用。
-- [../shared_lab/](../shared_lab/)：共享实验平台，保持独立；是否用于新论文尚未决定，不复制整套平台。
-- [../doc/ref_paper/my_work/](../doc/ref_paper/my_work/)：已有论文原文，继续保留在文献区。
-- [../doc/ref_paper/mas_safety_2026-09-11/](../doc/ref_paper/mas_safety_2026-09-11/)：MAS 安全文献与调研，继续保留在文献区。
+- 找实验：[按主题分类的实验索引](experiments/README.md)。
+- 找旧路径：[迁移规则和查询命令](docs/usage/PROJECT_STRUCTURE.md)。
+- 查本次整理：[迁移验收](docs/usage/STRUCTURE_MIGRATION_20261014.md)。
+- 查历史研究：[旧研究记录索引](docs/design/HISTORICAL_RESEARCH_INDEX.md)。
 
-旧资产可供后续评估复用，但本次未重新验收，也未迁移 BayesTrace 原始实现或数据集。
-其他论文目录不并入本工程。
+完整本地工作区与 Git 源码包不是同一备份范围。原始轨迹、第三方资产、权重、环境和凭据默认不公开；紧凑结果发布范围由 [PACKAGE_MANIFEST.json](docs/manuscript/PACKAGE_MANIFEST.json) 明确列出。
 
----
+## 后续工作规则
 
-## 以下为旧路线与操作说明（历史记录）
-
-以下保留原说明，方便定位旧实验及其使用限制；其中“当前”、阶段状态和论文目标
-均指当时的工作，不代表新论文已经选定该路线，也不构成重跑实验的授权。
-
-`paperAlpha` 是第一篇论文的独立工程目录。论文一的总体目标是区分“发生了通信”
-与“消息对下游可验证危害产生了因果影响”，并比较 Original、Safe replacement
-与 Drop，以区分真正的安全遏制和任务停摆。
-
-P0 工具验证已经完成。**P1 良性任务可完成性 Phase A** 的工程实施和独立只读
-旁路审计也已完成：在不加入风险种子、不进入后续因果处理的前提下，已搭建八角色
-良性工作流、provider 接口、程序化终点、日志、validation、全轨迹 replay 和
-provenance。随后已运行唯一一次真实 P1 benign gate pilot；原始证据保持不变，目前处于
-验收返工中，不得重跑、不得进入 P2。
-
-Phase A 的 test double dry-run 与单 episode 本地模型 shakedown 只验证工程链路，
-不产生实验性研究结论；真实 pilot 只用于 P1 gate 验收：
-
-```text
-P1 scientific gate: P1_AWAITING_MAIN_AGENT_ACCEPTANCE（验收返工中；不得 P2）
-```
-
-## 目录职责
-
-- `pre_exp1/`：第一个预实验的代码、冻结配置、测试、脚本与实现说明；
-- `pre_exp1/p1_benign/`：P1 Phase A 独立代码、配置、提示、命令和测试；
-- `data/shared/`：可复用的小型虚构静态数据、模板和 schema；
-- `data/pre_exp1/`：`pre_exp1` 的全部运行输出。
-
-生成数据不得写入 `pre_exp1/`。原始追加式日志位于
-`data/pre_exp1/raw/`，manifest、派生数据和报告分别位于相应子目录。
-
-## 安装
-
-统一使用 Conda 环境 `multi_agent_graph`、Python 3.11.15。运行时没有第三方
-依赖；测试需要 pytest。`environment.yml` 只声明项目所需的最小环境。
-
-```powershell
-cd D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha
-conda run -n multi_agent_graph python -B -m pip install -e ".[test]"
-```
-
-## 测试
-
-```powershell
-cd D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha
-conda run -n multi_agent_graph python -B -m pytest -p no:cacheprovider
-```
-
-## P0 smoke test
-
-```powershell
-cd D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha
-conda run -n multi_agent_graph python -B pre_exp1\scripts\run_p0_smoke.py
-```
-
-smoke test 覆盖正常安全、危险 Original、Safe 和 Drop 四条 scripted 轨迹。
-它只检查预先规定的代码行为。
-
-## 验证和重放
-
-将 `<RUN_ID>` 替换为 smoke test 打印的运行编号：
-
-```powershell
-conda run -n multi_agent_graph python -B pre_exp1\scripts\validate_run.py --run-id <RUN_ID>
-conda run -n multi_agent_graph python -B -m pre_exp1.cli replay-run --run-id <RUN_ID>
-```
-
-所有上述命令产生的持久运行数据都写到
-`D:\Projects\Multi_Agent_Graph_Analysis\paperAlpha\data\pre_exp1`。
-
-## P1 Phase A 入口
-
-P1 的安全边界、六个命令、数据位置和分析资格见
-[pre_exp1/p1_benign/README.md](pre_exp1/p1_benign/README.md)。
-
-确定性工程 dry-run：
-
-```powershell
-conda run --no-capture-output -n multi_agent_graph python -B pre_exp1\p1_benign\scripts\run_p1_dry.py --episodes 2
-```
-
-P1 测试：
-
-```powershell
-conda run --no-capture-output -n multi_agent_graph python -B -m pytest pre_exp1\p1_benign\tests -p no:cacheprovider
-```
-
-当前 `run_p1_live.py` 必须安全失败；真实模型、解码和预算尚未冻结。讯飞 Astron
-Coding Plan 只登记为 `interactive_coding_only`，不得用于自动化 P1 调用。
-
-hardening 后当前正式工程 dry-run 为
-`P1-BENIGN-DRY-20260731T094841301886Z`，validation `99/99`、replay `2/2`、
-P1 tests `224/224`、P0 regression `57/57`；畸形 artifact 会结构化失败而不是
-抛 traceback。
-它仍然 `eligible_for_scientific_analysis=false`。
-
-## P1 正式良性门槛批次入口
-
-P1 真实模型资格检查通过后，正式良性门槛批次位于
-`pre_exp1/p1_scientific_benign/`。它只使用冻结的本机 `qwen3:8b`，按
-`P1-TASK-001` 至 `P1-TASK-020` 顺序运行一次 20-episode benign pilot；不运行风险
-种子、Original/Safe/Drop、因果分析或 P2。确定性工程证据与真实 pilot 分别位于
-`data/pre_exp1/p1_scientific_benign/engineering_dry/` 和
-`data/pre_exp1/p1_scientific_benign/pilot/`。
-
-```powershell
-conda run --no-capture-output -n multi_agent_graph python -B pre_exp1\p1_scientific_benign\scripts\run_scientific_dry.py
-conda run --no-capture-output -n multi_agent_graph python -B pre_exp1\p1_scientific_benign\scripts\run_scientific_pilot.py
-```
-
-正式数据仅用于 P1 gate pilot，完成后状态为
-`P1_AWAITING_MAIN_AGENT_ACCEPTANCE`，不由实施 Agent 宣布 P1 Go。
-
-既有真实 pilot：`P1-BENIGN-PILOT-QWEN3-20260731T132033188154Z`。公开
-validation/replay 默认只读并按 run ID 自动路由；`--repair-id <REPAIR_ID>` 只在
-`pilot/acceptance_repair/<REPAIR_ID>/` 生成派生审计，不覆盖原始 pilot artifact。
-当前唯一交付说明是 [pre_exp1/p1_scientific_benign/REWORK4_DELIVERY.md](pre_exp1/p1_scientific_benign/REWORK4_DELIVERY.md)；
-`DELIVERY.md`、`REWORK_DELIVERY.md`、`REWORK2_DELIVERY.md` 和 `REWORK3_DELIVERY.md` 仅为历史基线。
-当前状态为 `p1_go=false`、返工待验收、既有 pilot 未重跑、不得进入 P2。当前四次返工派生审计 ID 为
-`acceptance4-20260801T120000000000Z`。
-
-## P1 真实模型资格检查入口
-
-P1 Phase A 通过后，真实本地模型资格检查位于
-`pre_exp1/p1_model_qualification/`。它只使用已安装的 `qwen3:8b` 与
-`ministral-3:8b` 各一次三-episode 串行资格批次，数据与 Phase A 隔离，且始终
-`eligible_for_scientific_analysis=false`。命令与安全边界见
-[pre_exp1/p1_model_qualification/README.md](pre_exp1/p1_model_qualification/README.md)。
+1. 先读项目宪章、[AGENTS.md](AGENTS.md)和实验协议；不另建竞争性的当前方案。
+2. 分清已观察违规、未来风险预测与运行报警，不把攻击存在等同于危害发生。
+3. 保留原始失败与不利结果；测试集用于调参后不能继续称独立测试。
+4. 不改变用户选定的对话模型或思考强度；新 API 调用须有任务授权。
+5. 原始运行、冻结源码与旧指标不改写；普通历史实验留在对应主题的 `runs/`，不因“不再最新”就归档。

@@ -1,0 +1,26 @@
+{
+  "repository": "fava-uw/fava-data",
+  "revision": "f4e40415d525b18bcb49ba241f26fd8e12eeb606",
+  "declared_license": "cc-by-4.0",
+  "records": [
+    {
+      "filename": "README.md",
+      "url": "https://huggingface.co/datasets/fava-uw/fava-data/resolve/f4e40415d525b18bcb49ba241f26fd8e12eeb606/README.md",
+      "final_url": "https://huggingface.co/api/resolve-cache/datasets/fava-uw/fava-data/f4e40415d525b18bcb49ba241f26fd8e12eeb606/README.md?%2Fdatasets%2Ffava-uw%2Ffava-data%2Fresolve%2Ff4e40415d525b18bcb49ba241f26fd8e12eeb606%2FREADME.md=&etag=%22565dc05cd12abf76654bd709dff889bdedb1aab1%22",
+      "bytes": 541,
+      "sha256": "4beced487bef240dadcdff07b803af3744509f7940107320030107ec2150e6a6",
+      "seconds": 0.9780027000233531
+    },
+    {
+      "filename": "training.json",
+      "url": "https://huggingface.co/datasets/fava-uw/fava-data/resolve/f4e40415d525b18bcb49ba241f26fd8e12eeb606/training.json",
+      "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/65a31a980699df1be538d712/124fca65bf4bf59d1fb4af8595866819ea66405b33e598e891df8c061b395db2?user_id=public&response-content-type=application%2Fjson&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27training.json%3B+filename%3D%22training.json%22%3B&X-Xet-Cas-Uid=public&Expires=1789155860&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjVhMzFhOTgwNjk5ZGYxYmU1MzhkNzEyLzEyNGZjYTY1YmY0YmY1OWQxZmI0YWY4NTk1ODY2ODE5ZWE2NjQwNWIzM2U1OThlODkxZGY4YzA2MWIzOTVkYjJcXD91c2VyX2lkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZqc29uJnJlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249aW5saW5lJTNCK2ZpbGVuYW1lJTJBJTNEVVRGLTglMjclMjd0cmFpbmluZy5qc29uJTNCK2ZpbGVuYW1lJTNEJTIydHJhaW5pbmcuanNvbiUyMiUzQiZYLVhldC1DYXMtVWlkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzg5MTU1ODYwfX19XX0_&Signature=MEYCIQCNu2A-EySZUJjSywdDwAyQzqOI0H26EhYAxz3dEbgvegIhANDrZjzByLCI8GfNbFzdWE7EtcnKoIoG8-I~a2GMI43g&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F",
+      "bytes": 137320668,
+      "sha256": "5f6422b13b48b3f6fdff7bab4698b3702c90154c10cad519047f58600e6536a7",
+      "seconds": 12.939227499999106
+    }
+  ],
+  "evaluation_data_downloaded": false,
+  "official_test_opened": false,
+  "GPU_used": false
+}

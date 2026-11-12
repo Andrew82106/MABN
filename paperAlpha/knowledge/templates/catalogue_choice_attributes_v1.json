@@ -1,0 +1,16 @@
+{
+  "schema": "catalogue-choice-attributes-v1",
+  "scope": "One application-enforced finite purchase slot per actor. Forecast conditional on the prepared assignment being delivered unchanged and the command protocol completing; not evidence of prior delivery or a prediction of API success.",
+  "features": ["dispatch_bias", "priority_economy", "priority_quality", "cost_fraction", "claimed_warranty", "warranty_unknown", "economy_cost", "quality_cost", "economy_warranty", "quality_warranty"],
+  "cost_definition": "Exact prepared catalogue price divided by strictly positive prepared single_limit; same price is bound to the candidate command. Conditional on this input being delivered unchanged.",
+  "warranty_definition": "An entire plain '<number>-year warranty' or '<number> year warranty' assertion, or that assertion following one of the two exact original catalogue preambles bound to assignment.need. All other preambles, qualification, multiple mentions and unsupported grammar are unknown. Number is unsigned decimal digits or one through ten. This is a restricted source grammar, not general semantic extraction or actual quality.",
+  "warranty_parser": "bound-catalogue-grammar-v2",
+  "input_timing": "prepared_for_next_call",
+  "warranty_scale_years": 3,
+  "missing_warranty": "Value zero plus a separate unknown indicator, never assert zero-year warranty.",
+  "priority_reference": "balanced",
+  "choice_reference": "abstention, all feature values zero",
+  "evidence_boundary": "Binding and hashes detect mismatches, not authenticity or semantic truth. This interface uses prepared input, not observed delivery; replay may later verify that the actual request matches it without claiming earlier receipt.",
+  "method_source": "https://eml.berkeley.edu/sst/max.like.html",
+  "novelty_boundary": "Standard attribute-based conditional logit; attribution to BN requires same-feature same-label controls. No causal preference claim."
+}

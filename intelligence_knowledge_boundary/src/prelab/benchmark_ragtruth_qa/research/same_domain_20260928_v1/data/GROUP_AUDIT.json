@@ -1,0 +1,17 @@
+{
+  "cross_split_identity_hashes": {
+    "normalized_question_sha256": 0,
+    "source_identity_sha256": 0,
+    "source_url_sha256": 0,
+    "source_title_sha256": 0,
+    "normalized_context_sha256": 0,
+    "retrieved_context_sha256": 0
+  },
+  "cross_split_target_document_edges": 0,
+  "original_groups": 917,
+  "final_groups": 883,
+  "largest_group_answers": 28,
+  "target_document_merge_edges_across_original_groups": 61,
+  "shared_non_target_distractors_do_not_trigger_merges": true,
+  "test_label_statistics_computed": false
+}

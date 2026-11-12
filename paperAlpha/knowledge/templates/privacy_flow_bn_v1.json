@@ -1,0 +1,18 @@
+{
+  "schema": "privacy-flow-bn-v1",
+  "knowledge": {"risk_id": "RB013", "source_id": 15, "upstream_revision": "1301eb9245a03bbee8694ee2b74accbc8f6fefe6"},
+  "functional_stages": ["coordinator_prepare", "worker", "coordinator_finalize"],
+  "field_kinds": ["canary", "number", "structured", "text"],
+  "target": "Any source-policy-prohibited literal value in the later coordinator-to-user response",
+  "observation_contract": "Monitor is configured with the initial vault and allowlist; only completed earlier MAS messages are visible at prediction time.",
+  "fragment": {
+    "worker": "P(W_j | C_j, field_kind_j, first_prefix_context, G)",
+    "final": "P(F_j | W_j, field_kind_j, first_prefix_context, G)",
+    "shared_state": "Binary co-disclosure propensity G, a statistical hypothesis, not an identified internal or causal state",
+    "system_query": "Y = OR over distinct protected literal values F_j",
+    "worker_direct_vault_access": true,
+    "derived_memory_is_independent_evidence": false
+  },
+  "parameter_bounds": [-12.0, 12.0],
+  "scope": "Optional privacy forecasting fragment; does not replace the authorization model or establish an arbitrary-DAG or general MAS safety monitor. Knowledge motivates variables and observation constraints, not the invented latent factor or learned numerical parameters."
+}

@@ -1,0 +1,131 @@
+{
+  "commit": "4d081915b8fb4430fda65c411da61540cc73cc57",
+  "upstream_main_at_review": "4d081915b8fb4430fda65c411da61540cc73cc57",
+  "commit_date": "2025-06-03T00:36:07Z",
+  "files": [
+    {
+      "path": "source_files/readme.md",
+      "source_path": "readme.md",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/readme.md",
+      "bytes": 2782,
+      "sha256": "62de8a61ce1ce8a8156d7dcf855ba795179dbedac9f29281fae1d5838ab10410"
+    },
+    {
+      "path": "source_files/requirements.txt",
+      "source_path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/requirements.txt",
+      "bytes": 939,
+      "sha256": "e6818a17cd188689ede599b78be29f8621160eedd8ab631b36c1aa01b7b0567b"
+    },
+    {
+      "path": "source_files/ReDeEP/token_level_detect.py",
+      "source_path": "ReDeEP/token_level_detect.py",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/token_level_detect.py",
+      "bytes": 13752,
+      "sha256": "3d52c13017bf566713b73bd1a821b25853d1a3bffceb2bf26fab684298ccf0be"
+    },
+    {
+      "path": "source_files/ReDeEP/token_level_reg.py",
+      "source_path": "ReDeEP/token_level_reg.py",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/token_level_reg.py",
+      "bytes": 11829,
+      "sha256": "3dbd3c34477673d0990e1af41e50865cf23486a14b2b339115a88e59164e3dee"
+    },
+    {
+      "path": "source_files/ReDeEP/chunk_level_detect.py",
+      "source_path": "ReDeEP/chunk_level_detect.py",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/chunk_level_detect.py",
+      "bytes": 14743,
+      "sha256": "4c5b9d42b63ec15047259e7eb28ff4702997f94dd40a1f9bd38e6affbf0d4399"
+    },
+    {
+      "path": "source_files/ReDeEP/chunk_level_reg.py",
+      "source_path": "ReDeEP/chunk_level_reg.py",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/chunk_level_reg.py",
+      "bytes": 11883,
+      "sha256": "cc3c4796aed7c7c74963b036c3e7b00cc52e61da0d95387dbd7439d5b579d07f"
+    },
+    {
+      "path": "source_files/transformers/src/transformers/models/llama/modeling_llama.py",
+      "source_path": "transformers/src/transformers/models/llama/modeling_llama.py",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/transformers/src/transformers/models/llama/modeling_llama.py",
+      "bytes": 94029,
+      "sha256": "d215c2143c902767335ace6556bd601c761b7f9995e18a5922a087be42fbc4f5"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama2_7B/token_hyperparameter.json",
+      "source_path": "ReDeEP/log/test_llama2_7B/token_hyperparameter.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama2_7B/token_hyperparameter.json",
+      "bytes": 256,
+      "sha256": "31a78d840ae19e28b7b27c3c833876c0d59b3cc5e927bf30074b06b02f136892"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama2_7B/topk_heads.json",
+      "source_path": "ReDeEP/log/test_llama2_7B/topk_heads.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama2_7B/topk_heads.json",
+      "bytes": 300,
+      "sha256": "633a37382dfe46242028cea3d4f28c6bb2102da1859572f6077a39a612228a4b"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama2_13B/token_hyperparameter.json",
+      "source_path": "ReDeEP/log/test_llama2_13B/token_hyperparameter.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama2_13B/token_hyperparameter.json",
+      "bytes": 298,
+      "sha256": "39218acaf37071a3f77225edb528490df4dac39c0599df03dc1a167a98d8f2f8"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama2_13B/topk_heads.json",
+      "source_path": "ReDeEP/log/test_llama2_13B/topk_heads.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama2_13B/topk_heads.json",
+      "bytes": 373,
+      "sha256": "91095682594f38e46f74645f25d209ccd523728932e22dde6ae99710bc1a67ff"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama3_8B/token_hyperparameter.json",
+      "source_path": "ReDeEP/log/test_llama3_8B/token_hyperparameter.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama3_8B/token_hyperparameter.json",
+      "bytes": 370,
+      "sha256": "49a5b7f240432a0ddc777a6a6d3dff3053083762007d29f8401236adba77cc39"
+    },
+    {
+      "path": "source_files/ReDeEP/log/test_llama3_8B/topk_heads.json",
+      "source_path": "ReDeEP/log/test_llama3_8B/topk_heads.json",
+      "url": "https://raw.githubusercontent.com/Jeryi-Sun/ReDEeP-ICLR/4d081915b8fb4430fda65c411da61540cc73cc57/ReDeEP/log/test_llama3_8B/topk_heads.json",
+      "bytes": 299,
+      "sha256": "c53edccab60a71489877aaa08e9c111736437b50028f2bc1a2fbec00ef5d5525"
+    },
+    {
+      "path": "source_files/ReDeEP_ICLR2025.pdf",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/7daf60e805e596c3bd1e843e72ea5560-Paper-Conference.pdf",
+      "bytes": 1284603,
+      "sha256": "cb18f3d21d8bff994b8e26b9f85392f26653ab8c48d33629807d6682650e4479"
+    }
+  ],
+  "executed_author_code": false,
+  "downloaded_dataset_or_scores": false,
+  "checks_passed": true,
+  "local_schema_sources": [
+    {
+      "path": "prelab/benchmark_ragtruth_qa/src/feature_qa.py",
+      "sha256": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73"
+    },
+    {
+      "path": "prelab/benchmark_ragtruth_qa/src/run_feature_qa_all.py",
+      "sha256": "bbef406757683907ee9645104a0962b3c5e7495c6cd46533e915b2ed6743cf74"
+    },
+    {
+      "path": "prelab/benchmark_ragtruth_qa/fit_expansion/run_llama_expansion_v3.py",
+      "sha256": "2a7a539354d50cec2e95f55b5edf77dcc9762f7e75a67a5c258fb4cc60664654"
+    },
+    {
+      "path": "prelab/round7_evidence_grounding/src/attention7.py",
+      "sha256": "b824a106688cf370bb31c4ae30929ed3698b10c38131b7123ff2be472b212190"
+    },
+    {
+      "path": "prelab/round7_evidence_grounding/references/redeep_adaptation.md",
+      "sha256": "2c8d590eb08bf2d89022591b6840d9b5047b5818085c94732d7beda70af0e90f"
+    }
+  ],
+  "literal_test_named_paths_are_parameter_records_only": true,
+  "original_paper_local_matches_download": true
+}

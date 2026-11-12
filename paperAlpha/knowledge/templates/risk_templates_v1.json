@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "streaming-risk-templates-v1",
+  "expected_total_cells": 49,
+  "parameterization": "One shared Bernoulli CPT per template; row-major parent-state indexing; q=sigmoid(theta[cell]); episode risk is the OR of conditionally independent instantiated risk variables.",
+  "scope_limit": "Action and global evidence templates only. This is not automatic role-specific sub-BN discovery, causal discovery, or a complete trainable second-layer GNN.",
+  "templates": [
+    {
+      "id": "authorization",
+      "scope": "action",
+      "dims": [3, 3],
+      "parents": [
+        {"name": "permission_status", "states": [{"value": 0, "name": "unknown", "meaning": "No permission check observed, or permission fields deliberately masked."}, {"value": 1, "name": "observed_no_mismatch", "meaning": "A supplied check reports no mismatch; this is not proof of valid authorization."}, {"value": 2, "name": "observed_mismatch", "meaning": "A supplied permission_mismatch or permission_denied flag is true."}], "unknown_values": [0], "availability": "observed_prefix"},
+        {"name": "capability_status", "states": [{"value": 0, "name": "unknown", "meaning": "No explicit pre-run allowed_tools list for this actor."}, {"value": 1, "name": "tool_listed", "meaning": "Tool is in that actor's supplied list; resource/task-level authorization is not established."}, {"value": 2, "name": "tool_not_listed", "meaning": "Tool is absent from that actor's supplied list."}], "unknown_values": [0], "availability": "observed_prefix"}
+      ],
+      "cpt": {"sharing": "all_instances_of_template", "index_order": "C", "link": "sigmoid"},
+      "trigger": "An observed tool_proposed or tool_call for a configured privileged tool; matching proposal and dispatch are one action.",
+      "required_observations": ["Current actor, action_id, sequence and privileged tool event", "Optional current permission flags", "Optional explicitly supplied pre-run allowed_tools"],
+      "unknown_handling": "Missing or masked checks stay in state 0; they are not converted into approvals. Missing capability metadata also stays in state 0.",
+      "catalog_links": [
+        {"risk_id": "RB008", "source_ids": [11, 12], "coverage": "Permission-check proxy only; does not authenticate a relayed claim of approval."},
+        {"risk_id": "RB009", "source_ids": [12], "coverage": "Permission/capability proxy only; does not reconstruct resource and budget attenuation along delegation."},
+        {"risk_id": "RB011", "source_ids": [33, 13], "coverage": "No subject/session/audience token-binding verifier is implemented."}
+      ],
+      "benign_controls": ["Valid approval bound to the actual action", "Legitimate delegation with narrower permissions", "Approved inter-service authorization transfer"],
+      "evidence_gaps": ["No independent approval verifier", "No resource, budget, subject, session or token-audience binding", "Privileged tool use alone is not an unsafe effect"]
+    },
+    {
+      "id": "information_flow",
+      "scope": "action",
+      "dims": [2, 2, 3],
+      "parents": [
+        {"name": "observed_path", "states": [{"value": 0, "name": "no_observed_witness", "meaning": "No chronological witness was observed; this does not establish absence of a path."}, {"value": 1, "name": "observed_witness", "meaning": "Current action actor has an observed chronological witness from an untrusted input, including a same-agent input."}], "unknown_values": [], "availability": "observed_prefix"},
+        {"name": "multiple_origin_keys", "states": [{"value": 0, "name": "zero_or_one_key", "meaning": "At most one observed origin key."}, {"value": 1, "name": "multiple_keys", "meaning": "More than one key: explicit source_id when supplied, otherwise entry-agent proxy. Distinct keys do not prove source independence."}], "unknown_values": [], "availability": "observed_prefix"},
+        {"name": "permission_status", "states": [{"value": 0, "name": "unknown", "meaning": "No permission check observed, or permission fields deliberately masked."}, {"value": 1, "name": "observed_no_mismatch", "meaning": "A supplied check reports no mismatch; this is not proof of valid authorization."}, {"value": 2, "name": "observed_mismatch", "meaning": "A supplied permission_mismatch or permission_denied flag is true."}], "unknown_values": [0], "availability": "observed_prefix"}
+      ],
+      "cpt": {"sharing": "all_instances_of_template", "index_order": "C", "link": "sigmoid"},
+      "trigger": "A privileged action with at least one already observed source-to-actor witness. observed_path=0 rows exist in the shared table but current extractor does not activate them.",
+      "required_observations": ["Earlier input_received event marked untrusted", "Actual observed chronological untrusted messages or delegation events, or same-agent input", "Current privileged action", "Optional source_id and permission check"],
+      "unknown_handling": "Unknown/redacted/zero-confidence messages are not asserted carriers. Missing source_id uses entry-agent keys, not recovered provenance. Missing witnesses are not evidence of safety.",
+      "catalog_links": [
+        {"risk_id": "RB003", "source_ids": [6], "coverage": "Observed communication witnesses only; instruction adoption is not semantically verified."},
+        {"risk_id": "RB026", "source_ids": [22], "coverage": "Deduplication inspiration only. No semantic evidence-independence test, consensus detector or complete RB026 mechanism is implemented or evaluated."}
+      ],
+      "benign_controls": ["Forwarding an attack as a warning without following it", "Legitimate use of externally supplied data", "Independent verification versus multiple copies of one source"],
+      "evidence_gaps": ["No proof of instruction adoption from path existence", "No complete text lineage or independent-source recovery", "Existing independent_mas_v3 traces lack source_id", "Entry-agent proxies may merge or split real materials"]
+    },
+    {
+      "id": "workflow_deviation",
+      "scope": "action",
+      "dims": [2, 2, 3],
+      "parents": [
+        {"name": "unexpected_incoming", "states": [{"value": 0, "name": "not_observed", "meaning": "No incoming message absent from an explicitly supplied workflow was observed; unknown workflow does not prove conformance."}, {"value": 1, "name": "observed", "meaning": "At least one actual incoming communication is absent from the supplied workflow."}], "unknown_values": [], "availability": "workflow_available"},
+        {"name": "unexpected_upstream", "states": [{"value": 0, "name": "not_observed", "meaning": "No unexpected communication witness has reached this actor; unobserved deviations remain possible."}, {"value": 1, "name": "observed", "meaning": "An unexpected communication reaches this actor directly or through later actual communications."}], "unknown_values": [], "availability": "workflow_available"},
+        {"name": "permission_status", "states": [{"value": 0, "name": "unknown", "meaning": "No permission check observed, or permission fields deliberately masked."}, {"value": 1, "name": "observed_no_mismatch", "meaning": "A supplied check reports no mismatch; this is not proof of valid authorization."}, {"value": 2, "name": "observed_mismatch", "meaning": "A supplied permission_mismatch or permission_denied flag is true."}], "unknown_values": [0], "availability": "observed_prefix"}
+      ],
+      "cpt": {"sharing": "all_instances_of_template", "index_order": "C", "link": "sigmoid"},
+      "trigger": "A privileged action with an already observed incoming or upstream workflow deviation. Requires an explicitly supplied pre-run workflow.",
+      "required_observations": ["Explicit pre-run workflow DAG", "Actual message/delegation endpoints and order", "Current privileged action", "Optional current permission check"],
+      "unknown_handling": "Without explicit workflow, deviations are unavailable, not inferred from edge_kind. A boolean 0 then means no observed assertion, not verified conformance. Normative edges never create runtime paths.",
+      "catalog_links": [
+        {"risk_id": "RB007", "source_ids": [14], "coverage": "Engineering proxy for communication deviation; no identity or capability authentication is performed."},
+        {"risk_id": "RB009", "source_ids": [12], "coverage": "Engineering proxy inspired by delegation risks, not a literature-proven equivalence between extra communication and privilege escalation."}
+      ],
+      "benign_controls": ["Legitimate third-party service with verified identity", "Approved workflow change", "Narrower legitimate delegation outside an outdated workflow"],
+      "evidence_gaps": ["An extra communication is not necessarily unsafe", "No identity verifier", "No dynamic policy approval or workflow-version validator", "Deviations unavailable in runtime-only mode"]
+    },
+    {
+      "id": "global_context",
+      "scope": "global",
+      "dims": [2, 2, 2, 2],
+      "parents": [
+        {"name": "untrusted_messages", "states": [{"value": 0, "name": "not_observed", "meaning": "No positive-confidence message marked untrusted in this prefix."}, {"value": 1, "name": "observed", "meaning": "At least one such message in this prefix."}], "unknown_values": [], "availability": "observed_prefix"},
+        {"name": "unknown_messages", "states": [{"value": 0, "name": "not_observed", "meaning": "No received message has missing/unknown/redacted data_class or zero confidence; missing events are not detected."}, {"value": 1, "name": "observed", "meaning": "At least one received message has unavailable class or zero confidence."}], "unknown_values": [], "availability": "observed_prefix"},
+        {"name": "unexpected_messages", "states": [{"value": 0, "name": "not_observed", "meaning": "No message absent from an explicit workflow was observed; without workflow this is unavailable evidence."}, {"value": 1, "name": "observed", "meaning": "At least one actual message is absent from the explicit workflow."}], "unknown_values": [], "availability": "workflow_available"},
+        {"name": "multiple_affected_agents", "states": [{"value": 0, "name": "zero_or_one", "meaning": "At most one observed agent has a chronological untrusted-input witness."}, {"value": 1, "name": "multiple", "meaning": "More than one observed agent has such a witness; affected means witness-bearing, not compromised."}], "unknown_values": [], "availability": "observed_prefix"}
+      ],
+      "cpt": {"sharing": "all_instances_of_template", "index_order": "C", "link": "sigmoid"},
+      "trigger": "Exactly one context factor for the current observed prefix, including a prefix with no privileged action.",
+      "required_observations": ["Current prefix message counters", "Current prefix chronological witness state", "Explicit workflow only for unexpected_messages"],
+      "unknown_handling": "Boolean absence means no observed evidence, not safety. Unknown-message presence is explicit; unlogged events cannot be counted. Without workflow, unexpected_messages remains index 0 and is marked unavailable in the compiled graph.",
+      "catalog_links": [],
+      "benign_controls": ["Authorized handling of untrusted documents by several agents", "Harmless missing message-class metadata", "Approved atypical communication"],
+      "evidence_gaps": ["Hand-designed summary with no specific literature-backed mechanism claim", "Not a complete trainable second-layer GNN", "No detection of missing events or actual compromise", "Terminal-label training does not establish calibrated prefix probabilities"]
+    }
+  ]
+}

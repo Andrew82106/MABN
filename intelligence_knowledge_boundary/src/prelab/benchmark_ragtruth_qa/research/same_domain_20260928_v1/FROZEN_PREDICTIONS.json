@@ -1,0 +1,1401 @@
+{
+  "config_sha256": "586af572bb060740cd86044b44db789ead9dc1f89f5ee92f9f8605a66dda97d2",
+  "data_manifest_sha256": "8b2d4cbb74ac82447e959a24e7d3f6cb1c1d1f58e71d0f17375a896cb65c578e",
+  "created_at_unix": 1790581933.9332173,
+  "test_labels_read": false,
+  "methods": [
+    {
+      "name": "Lookback-default",
+      "role": "baseline",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_validation\\predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_test\\predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.6635467094868448,
+        "window": 0.3063688200031126
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\model.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\PROTOCOL.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\VALIDATION.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_validation\\PREDICTION_RECEIPT.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\CACHE_BINDINGS.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_test\\PREDICTION_RECEIPT.json"
+      ],
+      "test_predictions_sha256": "51f7a5663ab6f230cf14212b3103a86dedaff1529ce8b6b06436daa5f6d184dc",
+      "validation_predictions_sha256": "f55454d38ec9c062baae52cc821025552bb0603bf56c332ef1ad7fdd6c8e9431",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\model.pkl": "87a83c23238b5719397532c187be5022586e2a27dd8a7145c9e025b1e1627830",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\PROTOCOL.json": "85ce9c450272032da20f4055b0fd587a999d2336b106adcc2e086d09565250f6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\VALIDATION.json": "5e56fff3dc0b38c9c0004f1a4c0ae31ad1cbfdb38b51b7fd1bc04c1bde116cd3",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_validation\\PREDICTION_RECEIPT.json": "6f97c1bbe0ee75b6639d9bac4ebe019ec9ac1ef8e9caed496437fe1ae1120fbc",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\CACHE_BINDINGS.json": "850fafd8bada782f04ada0b45610ded8b1cf6fa07d539b2b4e058f0e3a1f7508",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_default_test\\PREDICTION_RECEIPT.json": "8d595a181a8f99a3a1b094a87dea2515599d8fecfb00874ee85bcca9c5ad3eaf"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.6635467094868448,
+          "window": 0.3063688200031126
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 123,
+              "fp": 26,
+              "fn": 38,
+              "tn": 84,
+              "precision": 0.825503355704698,
+              "recall": 0.7639751552795031,
+              "f1": 0.7935483870967742,
+              "auroc": 0.8231507622811971,
+              "average_precision": 0.8805055553099115,
+              "threshold": 0.6635467094868448
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6676,
+              "fp": 8077,
+              "fn": 2117,
+              "tn": 14413,
+              "precision": 0.45251813190537515,
+              "recall": 0.7592403047878995,
+              "f1": 0.5670602225431071,
+              "auroc": 0.7748241393359455,
+              "average_precision": 0.5764478536373003,
+              "threshold": 0.3063688200031126
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 68,
+              "fp": 10,
+              "fn": 18,
+              "tn": 39,
+              "precision": 0.8717948717948718,
+              "recall": 0.7906976744186046,
+              "f1": 0.8292682926829268,
+              "auroc": 0.8388704318936877,
+              "average_precision": 0.9077637165570018,
+              "threshold": 0.6635467094868448
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 3810,
+              "fp": 3282,
+              "fn": 1257,
+              "tn": 6391,
+              "precision": 0.5372250423011844,
+              "recall": 0.7519242155121374,
+              "f1": 0.6266962743646681,
+              "auroc": 0.7777450416257159,
+              "average_precision": 0.6476934729354428,
+              "threshold": 0.3063688200031126
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.6266962743646681,
+          0.6266962743646681,
+          0.5372250423011844
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Lookback-tuned",
+      "role": "baseline",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_validation\\predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_test\\predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.4868948232466727,
+        "window": 0.31330828530753413
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\model.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\PROTOCOL.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\VALIDATION.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_validation\\PREDICTION_RECEIPT.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\CACHE_BINDINGS.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_test\\PREDICTION_RECEIPT.json"
+      ],
+      "test_predictions_sha256": "3348e60a4bbc70a78b38ffd3129f6c3b14f263b114ff389b043d7429290cbd63",
+      "validation_predictions_sha256": "651b0bde79a1574e4076ce441f867ef8928eb19c600e42984a181db6ae7045ac",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\model.pkl": "8985be7d31df9eebdd4e13ca6aa2d652639fabf141b3efc348f314e7d480e061",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\PROTOCOL.json": "755c4eccf0dffa22039cb7f61fd5c597bf0205d3815143e683323255f7b11a8c",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\VALIDATION.json": "355e82ed956ef2121f296decc7d8d8a53524afd074ef5ac728d9561e9fb345b8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_validation\\PREDICTION_RECEIPT.json": "b085ea6dc77cd04996842cb7ee5bee0d28dfad818af63ca889b05a7dd37ec603",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\lookback_run_v2\\tuned\\CACHE_BINDINGS.json": "850fafd8bada782f04ada0b45610ded8b1cf6fa07d539b2b4e058f0e3a1f7508",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\predictions\\lookback_tuned_test\\PREDICTION_RECEIPT.json": "b024d4b21adcd9c9e7ba713ca097b97f6b124e46f42e69e9230aae9ee64934bf"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.4868948232466727,
+          "window": 0.31330828530753413
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 128,
+              "fp": 26,
+              "fn": 33,
+              "tn": 84,
+              "precision": 0.8311688311688312,
+              "recall": 0.7950310559006211,
+              "f1": 0.8126984126984127,
+              "auroc": 0.8402597402597403,
+              "average_precision": 0.8964020366300907,
+              "threshold": 0.4868948232466727
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6742,
+              "fp": 7450,
+              "fn": 2051,
+              "tn": 15040,
+              "precision": 0.4750563697857948,
+              "recall": 0.7667462754463777,
+              "f1": 0.586643463128127,
+              "auroc": 0.7914726951695731,
+              "average_precision": 0.6122718511001095,
+              "threshold": 0.31330828530753413
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 72,
+              "fp": 8,
+              "fn": 14,
+              "tn": 41,
+              "precision": 0.9,
+              "recall": 0.8372093023255814,
+              "f1": 0.8674698795180723,
+              "auroc": 0.8699572852396772,
+              "average_precision": 0.9307240521922493,
+              "threshold": 0.4868948232466727
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 3904,
+              "fp": 2976,
+              "fn": 1163,
+              "tn": 6697,
+              "precision": 0.5674418604651162,
+              "recall": 0.7704756266035129,
+              "f1": 0.653553193270277,
+              "auroc": 0.7962430588187144,
+              "average_precision": 0.6816620133923191,
+              "threshold": 0.31330828530753413
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.653553193270277,
+          0.653553193270277,
+          0.5674418604651162
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "RAGognizer-retrained-NF4",
+      "role": "baseline",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_validation_predictions_v1\\predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_test_predictions_v1\\predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "mean",
+      "thresholds": {
+        "answer": 0.6340426802635193,
+        "window": 0.5685654282569885
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\head.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\lora\\adapter_config.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\lora\\adapter_model.safetensors",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION_MAX.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION_MEAN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_validation_predictions_v1\\PREDICTION_RECEIPT.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_test_predictions_v1\\PREDICTION_RECEIPT.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\SELECTED.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\RUN_BINDING.json"
+      ],
+      "test_predictions_sha256": "157546225fda9d17a6942e74f776a4c9de1b1c9514ab4108da76e4830cc63f88",
+      "validation_predictions_sha256": "e1d4b09a9a08759205bb833374a558b432e0b198db99ff2daf6df7171bc340aa",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\head.pt": "980209419ad50a9cbe109e76453fd32ea968fe2ec54206aff36a5726c75d9622",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\lora\\adapter_config.json": "b763dc2e8ae72562042ad8ade6bda3397a23864a29408de08d2548e5cec3ff17",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\lora\\adapter_model.safetensors": "391809add1b51bdc78182d1ee2be19db35ca49cb4b7d9c3e94bef883fec9d204",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION.json": "607ccb5ee7a2a4998373c17b0624850da75cf2a984d234de982f4a645041cb43",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION_MAX.json": "b87b52eceb4019d40afe743b7da9a9a2b0e739335b2dcf59813a9b7d8c88c284",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\epoch_5\\VALIDATION_MEAN.json": "7ab82a37992fe9fa2681ebf804ace20051c3a3115c7274515595f49c13378393",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_validation_predictions_v1\\PREDICTION_RECEIPT.json": "a0b61c964c3b24b9e6151293956d62830c739d33c474fb7d79be96c1e441d5bb",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_test_predictions_v1\\PREDICTION_RECEIPT.json": "af48c84448ee9b3039115d2509c522b632a3b95c5d20370404da4ddaf667b3c1",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\SELECTED.json": "fb9e07c10b928d38b3bb03822b6094b6bd9a9b9fe48f92b5980b7c8ed2a3edca",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_audit\\ragognizer_run_v1\\RUN_BINDING.json": "e2c6c9ae0082f3ce5b4d50b5e0a6e8cfcf3962864c35c923c1509b61e0b2b878"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.6340426802635193,
+          "window": 0.5685654282569885
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 137,
+              "fp": 28,
+              "fn": 24,
+              "tn": 82,
+              "precision": 0.8303030303030303,
+              "recall": 0.8509316770186336,
+              "f1": 0.8404907975460123,
+              "auroc": 0.8816487859966121,
+              "average_precision": 0.925805637380523,
+              "threshold": 0.6340426802635193
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6644,
+              "fp": 4246,
+              "fn": 2149,
+              "tn": 18244,
+              "precision": 0.6101010101010101,
+              "recall": 0.755601046286819,
+              "f1": 0.6751003403952649,
+              "auroc": 0.8616472605411851,
+              "average_precision": 0.720192654461524,
+              "threshold": 0.5685654282569885
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 75,
+              "fp": 10,
+              "fn": 11,
+              "tn": 39,
+              "precision": 0.8823529411764706,
+              "recall": 0.872093023255814,
+              "f1": 0.8771929824561403,
+              "auroc": 0.8984337921214999,
+              "average_precision": 0.9487075829865065,
+              "threshold": 0.6340426802635193
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 3975,
+              "fp": 1800,
+              "fn": 1092,
+              "tn": 7873,
+              "precision": 0.6883116883116883,
+              "recall": 0.7844878626406158,
+              "f1": 0.7332595462091865,
+              "auroc": 0.8781328543429345,
+              "average_precision": 0.7816535989845018,
+              "threshold": 0.5685654282569885
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7332595462091865,
+          0.7332595462091865,
+          0.6883116883116883
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "mean",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Context-base",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\best_validation_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_test_v1\\predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.17328819632530212,
+        "window": 0.07477004081010818
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_test_v1\\prepared.json"
+      ],
+      "test_predictions_sha256": "d8b8051454f56fd5e1abdba72adfda3a392c185b7dd4047982ea53e9fab8bd4e",
+      "validation_predictions_sha256": "7ce7de113a906436df91ba71b7cfe5e1047d4cc7e34828774096466bbcd1d802",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\best.pt": "0947cf3bbc7ec270b5f2e7674977e4edfa97df187edbc5f0e72ba6289fee9f60",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\prepared.json": "061d44f92251a6f7fbe6e5c4b82a82f1f4ad80e153a1daa988419a6170aa7dc7",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_v1\\complete.json": "f94b9e2294a8962537d1fe441f49ea002e754df5c9c0285e6b630ae1de1653ea",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_test_v1\\complete.json": "1b04a51c9d44a304bcca7cd7d1bdc923ea36d2759bb510885888409c97fdea38",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_base_test_v1\\prepared.json": "cbefff888a2a2a9070385d4ad633e1d0c500889f7fbc8b676398bb9a3ebd3c35"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.17328819632530212,
+          "window": 0.07477004081010818
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 142,
+              "fp": 57,
+              "fn": 19,
+              "tn": 53,
+              "precision": 0.7135678391959799,
+              "recall": 0.8819875776397516,
+              "f1": 0.7888888888888889,
+              "auroc": 0.7986730660643705,
+              "average_precision": 0.8525070667821595,
+              "threshold": 0.17328819632530212
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 7179,
+              "fp": 11504,
+              "fn": 1614,
+              "tn": 10986,
+              "precision": 0.38425306428303807,
+              "recall": 0.8164448993517571,
+              "f1": 0.5225651477653225,
+              "auroc": 0.7231547316453927,
+              "average_precision": 0.5136236674709148,
+              "threshold": 0.07477004081010818
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 78,
+              "fp": 23,
+              "fn": 8,
+              "tn": 26,
+              "precision": 0.7722772277227723,
+              "recall": 0.9069767441860465,
+              "f1": 0.8342245989304813,
+              "auroc": 0.8096820123398196,
+              "average_precision": 0.8771423164715456,
+              "threshold": 0.17328819632530212
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4247,
+              "fp": 4644,
+              "fn": 820,
+              "tn": 5029,
+              "precision": 0.477674052412552,
+              "recall": 0.8381685415433195,
+              "f1": 0.6085399054305775,
+              "auroc": 0.7354063835720951,
+              "average_precision": 0.5557164040275826,
+              "threshold": 0.07477004081010818
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.6085399054305775,
+          0.6085399054305775,
+          0.477674052412552
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Context-large",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best_validation_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.04410091042518616,
+        "window": 0.04569203406572342
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json"
+      ],
+      "test_predictions_sha256": "4f8c2b26bd1616a7065e888d0b2be233fda5ebdd4435a9ceeede0ba3ffd76bc2",
+      "validation_predictions_sha256": "92c93728e7863e538e20d2f2446c199bd079e0e4aba653db7f9f573ef9968fea",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.04410091042518616,
+          "window": 0.04569203406572342
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 143,
+              "fp": 38,
+              "fn": 18,
+              "tn": 72,
+              "precision": 0.7900552486187845,
+              "recall": 0.8881987577639752,
+              "f1": 0.8362573099415205,
+              "auroc": 0.8937888198757764,
+              "average_precision": 0.9298631568134621,
+              "threshold": 0.04410091042518616
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6999,
+              "fp": 4325,
+              "fn": 1794,
+              "tn": 18165,
+              "precision": 0.6180678205581067,
+              "recall": 0.7959740702831798,
+              "f1": 0.6958293980215738,
+              "auroc": 0.8731637048893484,
+              "average_precision": 0.749289892932552,
+              "threshold": 0.04569203406572342
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 77,
+              "fp": 10,
+              "fn": 9,
+              "tn": 39,
+              "precision": 0.8850574712643678,
+              "recall": 0.8953488372093024,
+              "f1": 0.8901734104046243,
+              "auroc": 0.9227574750830565,
+              "average_precision": 0.9584879809453382,
+              "threshold": 0.04410091042518616
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4098,
+              "fp": 1831,
+              "fn": 969,
+              "tn": 7842,
+              "precision": 0.6911789509192107,
+              "recall": 0.8087625814091178,
+              "f1": 0.7453619497999272,
+              "auroc": 0.8782180458686026,
+              "average_precision": 0.7792811442055756,
+              "threshold": 0.04569203406572342
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7453619497999272,
+          0.7453619497999272,
+          0.6911789509192107
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Whitebox",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best_validation_token_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.8157892227172852,
+        "window": 0.509154736995697
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json"
+      ],
+      "test_predictions_sha256": "05425c757d30fc6801bfe8466236f0bf021a40a9dddc9c4fac51d485da15888b",
+      "validation_predictions_sha256": "e72fe1dbba271807409b5daacbda59da123aa2488aa572b9cbf600da9621bd67",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.8157892227172852,
+          "window": 0.509154736995697
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 136,
+              "fp": 47,
+              "fn": 25,
+              "tn": 63,
+              "precision": 0.7431693989071039,
+              "recall": 0.84472049689441,
+              "f1": 0.7906976744186046,
+              "auroc": 0.8485601355166571,
+              "average_precision": 0.906858319795874,
+              "threshold": 0.8157892227172852
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6686,
+              "fp": 7480,
+              "fn": 2107,
+              "tn": 15010,
+              "precision": 0.47197515177184807,
+              "recall": 0.7603775730694871,
+              "f1": 0.5824295483252755,
+              "auroc": 0.7874906961694993,
+              "average_precision": 0.6022622703632232,
+              "threshold": 0.509154736995697
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 75,
+              "fp": 15,
+              "fn": 11,
+              "tn": 34,
+              "precision": 0.8333333333333334,
+              "recall": 0.872093023255814,
+              "f1": 0.8522727272727273,
+              "auroc": 0.8699572852396772,
+              "average_precision": 0.9316711083441491,
+              "threshold": 0.8157892227172852
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 3972,
+              "fp": 3017,
+              "fn": 1095,
+              "tn": 6656,
+              "precision": 0.5683216483044785,
+              "recall": 0.7838957963291888,
+              "f1": 0.6589250165892502,
+              "auroc": 0.8015351959744796,
+              "average_precision": 0.6698332919491609,
+              "threshold": 0.509154736995697
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.6589250165892502,
+          0.6589250165892502,
+          0.5683216483044785
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Fusion-token",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\best_validation_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\test_predictions.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.15945177111457742,
+        "window": 0.17429926063294576
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\test_predictions.receipt.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\best.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\SELECTED.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json"
+      ],
+      "test_predictions_sha256": "7e21370bf80b935d56e2023115f69ac91b41f2ec9a918aad6d3b7f426d5a6671",
+      "validation_predictions_sha256": "f04a76fbc1f0b1d0448227d55b90edf34199fc3bbe348d660804084b863c1f02",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\test_predictions.receipt.json": "d4b8cc868085d4c9be19d4dddfb3caa0a1c348c52ede8725ef0d4ae1d75a8caf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\best.pkl": "182a5bae9db77b98cef2bf82ea6c577a2401395a6cd3b60531bd0e16ceb94547",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\SELECTED.json": "113e577b90c28906ad469fd106978e019d4917bf03d348c3549e8568f43263f1",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json": "ac10f1e24274971342e8ad3ced0dffe2700d075f38fdd3b8ff93175a1777f259"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.15945177111457742,
+          "window": 0.17429926063294576
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 145,
+              "fp": 30,
+              "fn": 16,
+              "tn": 80,
+              "precision": 0.8285714285714286,
+              "recall": 0.9006211180124224,
+              "f1": 0.8630952380952381,
+              "auroc": 0.903896103896104,
+              "average_precision": 0.9368846368931514,
+              "threshold": 0.15945177111457742
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6959,
+              "fp": 4080,
+              "fn": 1834,
+              "tn": 18410,
+              "precision": 0.6304013044659842,
+              "recall": 0.7914249971568293,
+              "f1": 0.7017950786607503,
+              "auroc": 0.8808500430609517,
+              "average_precision": 0.7613882374360582,
+              "threshold": 0.17429926063294576
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 78,
+              "fp": 8,
+              "fn": 8,
+              "tn": 41,
+              "precision": 0.9069767441860465,
+              "recall": 0.9069767441860465,
+              "f1": 0.9069767441860465,
+              "auroc": 0.9352159468438538,
+              "average_precision": 0.9650008214507391,
+              "threshold": 0.15945177111457742
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4109,
+              "fp": 1687,
+              "fn": 958,
+              "tn": 7986,
+              "precision": 0.7089371980676329,
+              "recall": 0.8109334912176831,
+              "f1": 0.7565129338120224,
+              "auroc": 0.885778209744005,
+              "average_precision": 0.7955466112110561,
+              "threshold": 0.17429926063294576
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7565129338120224,
+          0.7565129338120224,
+          0.7089371980676329
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Fusion-window",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\best_validation_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\test_predictions.jsonl",
+      "score_field": "window_scores",
+      "scores_are_windows": true,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.29948255282604835,
+        "window": 0.33270284674139955
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\test_predictions.receipt.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\best.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\SELECTED.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json"
+      ],
+      "test_predictions_sha256": "ec7527f5ea3095231ded65490c12d76e2379bf0b94fc49facebb16b8a9373b6c",
+      "validation_predictions_sha256": "f59f575223d67a43dd61c11ede6432ea36841946cfc5d8a66ea2b48c0c9b9655",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\test_predictions.receipt.json": "d60a6b2cb551d9f06b60a1073495140262320f3907f2685a0c04517e7ad8e63b",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\best.pkl": "03a63f85fb196d2d83c377d6eb26e27cad8a2bb65c224633e02e30462ab2013b",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\SELECTED.json": "30ebbc855139b4b37f40aca459e65c2a3a479dba2ff0b6fce4e9b109821105d6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json": "ac10f1e24274971342e8ad3ced0dffe2700d075f38fdd3b8ff93175a1777f259"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.29948255282604835,
+          "window": 0.33270284674139955
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 149,
+              "fp": 34,
+              "fn": 12,
+              "tn": 76,
+              "precision": 0.8142076502732241,
+              "recall": 0.9254658385093167,
+              "f1": 0.8662790697674418,
+              "auroc": 0.9037267080745341,
+              "average_precision": 0.9367486447825257,
+              "threshold": 0.29948255282604835
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 7043,
+              "fp": 4239,
+              "fn": 1750,
+              "tn": 18251,
+              "precision": 0.6242687466761212,
+              "recall": 0.8009780507221653,
+              "f1": 0.7016687422166874,
+              "auroc": 0.8809095840364145,
+              "average_precision": 0.761384513348849,
+              "threshold": 0.33270284674139955
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 79,
+              "fp": 8,
+              "fn": 7,
+              "tn": 41,
+              "precision": 0.9080459770114943,
+              "recall": 0.9186046511627907,
+              "f1": 0.9132947976878613,
+              "auroc": 0.9380635975320362,
+              "average_precision": 0.9666035277324542,
+              "threshold": 0.29948255282604835
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4143,
+              "fp": 1734,
+              "fn": 924,
+              "tn": 7939,
+              "precision": 0.704951505870342,
+              "recall": 0.8176435760805211,
+              "f1": 0.7571271929824561,
+              "auroc": 0.8861875493630875,
+              "average_precision": 0.7954024759797294,
+              "threshold": 0.33270284674139955
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7571271929824561,
+          0.7571271929824561,
+          0.704951505870342
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Fusion-window-HGB",
+      "role": "candidate",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\best_validation_predictions.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\test_predictions.jsonl",
+      "score_field": "window_scores",
+      "scores_are_windows": true,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.3174249621603233,
+        "window": 0.3633343616308481
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\test_predictions.receipt.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\best.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\SELECTED.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json"
+      ],
+      "test_predictions_sha256": "5a5e8ac8ae1a2ceffb158f190d3ac6f730a352411bd4cab8f557f36701ca2601",
+      "validation_predictions_sha256": "6caf7c70943156266f826855d0563ff696380bde4d668165b56db93be36377bc",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\test_predictions.receipt.json": "16b32b86f77b1384c131341df2eb7e316feb95723e3d7f5464a83254547ab54f",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\best.pkl": "44395179c95bca039e1e330e42f792814730a86a3ed4fcc77c3493919a9f6bd0",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\nonlinear_window_v1\\SELECTED.json": "fd06c8b2b1194ae8a51cbdef3310f8c2ef3df5dd6d91b2554458d2eddac4d183",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\OOF_CONFIG.json": "ac10f1e24274971342e8ad3ced0dffe2700d075f38fdd3b8ff93175a1777f259"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.3174249621603233,
+          "window": 0.3633343616308481
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 147,
+              "fp": 36,
+              "fn": 14,
+              "tn": 74,
+              "precision": 0.8032786885245902,
+              "recall": 0.9130434782608695,
+              "f1": 0.8546511627906976,
+              "auroc": 0.8940711462450593,
+              "average_precision": 0.9305783724876493,
+              "threshold": 0.3174249621603233
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6980,
+              "fp": 4076,
+              "fn": 1813,
+              "tn": 18414,
+              "precision": 0.6313314037626628,
+              "recall": 0.7938132605481633,
+              "f1": 0.7033099904277293,
+              "auroc": 0.8759580878459599,
+              "average_precision": 0.7600235981748973,
+              "threshold": 0.3633343616308481
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 79,
+              "fp": 9,
+              "fn": 7,
+              "tn": 40,
+              "precision": 0.8977272727272727,
+              "recall": 0.9186046511627907,
+              "f1": 0.9080459770114943,
+              "auroc": 0.9323682961556715,
+              "average_precision": 0.9648287051981844,
+              "threshold": 0.3174249621603233
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4113,
+              "fp": 1680,
+              "fn": 954,
+              "tn": 7993,
+              "precision": 0.7099948213360953,
+              "recall": 0.8117229129662522,
+              "f1": 0.7574585635359116,
+              "auroc": 0.8808949735490055,
+              "average_precision": 0.8008843209123845,
+              "threshold": 0.3633343616308481
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7574585635359116,
+          0.7574585635359116,
+          0.7099948213360953
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Average-token",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average_validation.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average_test.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.4654467897489667,
+        "window": 0.3838692039716989
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average_test.receipt.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average.json"
+      ],
+      "test_predictions_sha256": "066be1f6098472ed1919eaa1257b9081c64f37e065f16e4e467936b5cb205416",
+      "validation_predictions_sha256": "03ec2abd34aa20348eade8debccc4ef0f788327c13bdb1efbffbfbc08117999c",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average_test.receipt.json": "3f6e6848a518c71104418c942cbeb7b52e6be29ef28af887045b5495adae4613",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\token_v1\\fixed_average.json": "d82e84182ef7625a97da396dc456f6cdd5fed42b43b41b89843ef467485f8923"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.4654467897489667,
+          "window": 0.3838692039716989
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 131,
+              "fp": 28,
+              "fn": 30,
+              "tn": 82,
+              "precision": 0.8238993710691824,
+              "recall": 0.8136645962732919,
+              "f1": 0.81875,
+              "auroc": 0.8757199322416713,
+              "average_precision": 0.9218356718761771,
+              "threshold": 0.4654467897489667
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6690,
+              "fp": 4505,
+              "fn": 2103,
+              "tn": 17985,
+              "precision": 0.5975882090218848,
+              "recall": 0.7608324803821221,
+              "f1": 0.6694016409845908,
+              "auroc": 0.8562246172111218,
+              "average_precision": 0.7368693259934298,
+              "threshold": 0.3838692039716989
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 73,
+              "fp": 9,
+              "fn": 13,
+              "tn": 40,
+              "precision": 0.8902439024390244,
+              "recall": 0.8488372093023255,
+              "f1": 0.8690476190476191,
+              "auroc": 0.9100616990982441,
+              "average_precision": 0.9553988442057856,
+              "threshold": 0.4654467897489667
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 3988,
+              "fp": 1955,
+              "fn": 1079,
+              "tn": 7718,
+              "precision": 0.6710415615009254,
+              "recall": 0.7870534833234656,
+              "f1": 0.7244323342415986,
+              "auroc": 0.8627662862560534,
+              "average_precision": 0.7801796583586337,
+              "threshold": 0.3838692039716989
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7244323342415986,
+          0.7244323342415986,
+          0.6710415615009254
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Average-window",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average_validation.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average_test.jsonl",
+      "score_field": "window_scores",
+      "scores_are_windows": true,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 0.46734876837581396,
+        "window": 0.3882217761129141
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average_test.receipt.json",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average.json"
+      ],
+      "test_predictions_sha256": "6ef744678547bba4061e5ef8f6cd812ed54190c6206fc4d531672d7eaed811ee",
+      "validation_predictions_sha256": "e382196c784294e6fbc31e13277e100328294cacd5bd7befeda6aa7903a4d533",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\best.pt": "af19321ac5b05cdc2d20d42ba734795833ae94c2068054e18734540b595c9176",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\prepared.json": "e0934d901bbb1447c1df378fae5fd81cba1dbe136d1e95327b4473d4d88165e6",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\best.pt": "6b29275a6a4530f2ea76655f398f4c414a45be2ae5e277c73bb7e230d9c79702",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\preprocessor.pkl": "efbc32e5b2cdfcf66a15abe6d834356045c6d7cc32eadb29240b2bb7c51cc754",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\RUN.json": "ca161277d0f0908c7ebf7d9cd699fe1fa774978b6e646b6cce2d74f587e66f92",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_v1\\complete.json": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\complete.json": "383c129ff6202aee5b97af1c256d1a699d6c49bf9c075e7536a270e251fb94cf",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_test_v1\\prepared.json": "4cf1440837066a8e0cf997578a9ab9a85c72d2d056c090d21bc402cecf054a7d",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\COMPLETE.json": "d1db18853855e77da534bfc660f629c90af3597e84e00e6190ee90c89aecd220",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_model\\token_predictions_test.manifest.json": "e165452b40dd3cb77ec92d47d8ce3cd14bbb1286e5a05d6c34ca6ef8b306ef90",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average_test.receipt.json": "73e4430d50a7eb08649654edce2a3939a39892b9c99bd94d8aa8f636d95700a3",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\window_v1\\fixed_average.json": "1639a53e4e72c272d27cc620ff4810ae915f28c82e321ba667af0c69d67eb016"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 0.46734876837581396,
+          "window": 0.3882217761129141
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 136,
+              "fp": 30,
+              "fn": 25,
+              "tn": 80,
+              "precision": 0.8192771084337349,
+              "recall": 0.84472049689441,
+              "f1": 0.8318042813455657,
+              "auroc": 0.8832298136645963,
+              "average_precision": 0.9259973659089134,
+              "threshold": 0.46734876837581396
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 6740,
+              "fp": 4521,
+              "fn": 2053,
+              "tn": 17969,
+              "precision": 0.5985258858005506,
+              "recall": 0.7665188217900603,
+              "f1": 0.6721851002293807,
+              "auroc": 0.8576663285202462,
+              "average_precision": 0.737699789833814,
+              "threshold": 0.3882217761129141
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 75,
+              "fp": 9,
+              "fn": 11,
+              "tn": 40,
+              "precision": 0.8928571428571429,
+              "recall": 0.872093023255814,
+              "f1": 0.8823529411764706,
+              "auroc": 0.916468913146654,
+              "average_precision": 0.9582968259454812,
+              "threshold": 0.46734876837581396
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 4013,
+              "fp": 1957,
+              "fn": 1054,
+              "tn": 7716,
+              "precision": 0.6721943048576214,
+              "recall": 0.7919873692520228,
+              "f1": 0.7271903596991937,
+              "auroc": 0.8639880924873724,
+              "average_precision": 0.7809453332997803,
+              "threshold": 0.3882217761129141
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.7271903596991937,
+          0.7271903596991937,
+          0.6721943048576214
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    },
+    {
+      "name": "Always-risk",
+      "role": "control",
+      "validation_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\prediction_pipeline\\always_risk\\validation.jsonl",
+      "test_predictions": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\prediction_pipeline\\always_risk\\test.jsonl",
+      "score_field": "token_scores",
+      "scores_are_windows": false,
+      "pooling": "max",
+      "thresholds": {
+        "answer": 1.0,
+        "window": 1.0
+      },
+      "model_artifacts": [
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\prediction_pipeline\\always_risk\\RECEIPT.json"
+      ],
+      "test_predictions_sha256": "f965c48143e218300a0a4044212d8a739077a0d2577a40cd7415f3d4faa8ea03",
+      "validation_predictions_sha256": "dc6bed343d26bae27317f5631733163aee6e9f14e0f8c77bc1af14a31a58d949",
+      "artifact_hashes": {
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\prediction_pipeline\\always_risk\\RECEIPT.json": "c097bc29ab6c638d77e8bc11ce601772632bcedd9234c7cc01eb1d77c5681148"
+      },
+      "validation": {
+        "partition": "validation",
+        "thresholds": {
+          "answer": 1.0,
+          "window": 1.0
+        },
+        "cohorts": {
+          "all": {
+            "answer": {
+              "n": 271,
+              "positive": 161,
+              "tp": 161,
+              "fp": 110,
+              "fn": 0,
+              "tn": 0,
+              "precision": 0.5940959409594095,
+              "recall": 1.0,
+              "f1": 0.7453703703703703,
+              "auroc": 0.5,
+              "average_precision": 0.5940959409594095,
+              "threshold": 1.0
+            },
+            "window": {
+              "n": 31283,
+              "positive": 8793,
+              "tp": 8793,
+              "fp": 22490,
+              "fn": 0,
+              "tn": 0,
+              "precision": 0.2810791803855129,
+              "recall": 1.0,
+              "f1": 0.43881624912665934,
+              "auroc": 0.5,
+              "average_precision": 0.2810791803855129,
+              "threshold": 1.0
+            },
+            "groups": 133
+          },
+          "no_hint": {
+            "answer": {
+              "n": 135,
+              "positive": 86,
+              "tp": 86,
+              "fp": 49,
+              "fn": 0,
+              "tn": 0,
+              "precision": 0.6370370370370371,
+              "recall": 1.0,
+              "f1": 0.7782805429864253,
+              "auroc": 0.5,
+              "average_precision": 0.6370370370370371,
+              "threshold": 1.0
+            },
+            "window": {
+              "n": 14740,
+              "positive": 5067,
+              "tp": 5067,
+              "fp": 9673,
+              "fn": 0,
+              "tn": 0,
+              "precision": 0.3437584803256445,
+              "recall": 1.0,
+              "f1": 0.511637299944464,
+              "auroc": 0.5,
+              "average_precision": 0.3437584803256445,
+              "threshold": 1.0
+            },
+            "groups": 67
+          }
+        },
+        "selection_key": [
+          0.511637299944464,
+          0.511637299944464,
+          0.3437584803256445
+        ],
+        "primary_cohort": "no_hint",
+        "pooling": "max",
+        "annotation": "released automatic span annotations; not human gold"
+      }
+    }
+  ],
+  "evaluation_files_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\metrics.py": "59326891250c42b4cc0ee18abb2a8559b381f534204f9bf622a482a57a5145f4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\evaluate_final.py": "427335fb6b8ad12f840d6f7e020c6d58690594b781deeee114f2cdecaf1778a0",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\geometry.jsonl": "79d37ec952ed333551aee7b6e5611f3431b86eaedf3a478740ea4a15a4e2d073",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\inputs.jsonl": "307ef1d5983e4fd16ec8d9f5d8833da2f101b44a8391dd215a4e9a603353f0de",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\split_assignments.jsonl": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\answers.jsonl": "fa3f6ff688c2ca4b0c7f8554a90cf2fddb4f30c3fb5a2b7fd0253cae86a895db",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\sequences.jsonl": "248e04600c2aedafbe2c6f5f0d39c3d4ece5166cb0baaf985a2385b5533bf7c9"
+  }
+}

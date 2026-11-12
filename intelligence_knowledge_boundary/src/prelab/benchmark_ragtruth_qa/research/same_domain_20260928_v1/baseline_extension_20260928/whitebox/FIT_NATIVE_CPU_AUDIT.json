@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "actual_fit_function_called": true,
+  "synthetic_tokens": 12,
+  "fit_token_population_not_windows": true,
+  "nonlexical_tokens_not_dropped": true,
+  "validation_plan_ignored": true,
+  "only_fit_label_path_read": true,
+  "independent_scipy_rank_agreement": true,
+  "independent_sklearn_minmax_agreement": true,
+  "max_score_error": 1.3877787807814457e-16,
+  "real_data_labels_read": false,
+  "GPU_used": false,
+  "run_whitebox_sha256": "c4b707d02f3db60a7a5f76838c3f0743aa372601b9ac8bffc13bdd0b78d7ab91"
+}

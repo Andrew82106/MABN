@@ -1,0 +1,13 @@
+# Standalone project rules; binary assets are never text-normalized.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.gz binary
+
+.local/** export-ignore
+code/external/** export-ignore
+data/raw/** export-ignore
+data/processed/** export-ignore
+archive/early_pre_exp1/data/pre_exp1/** export-ignore

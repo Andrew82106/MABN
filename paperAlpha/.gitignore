@@ -7,35 +7,89 @@ __pycache__/
 .env.*
 !.env.example
 
-# Generated pre_exp1 data. Keep directory placeholders and shared static data.
-data/pre_exp1/raw/*
-!data/pre_exp1/raw/.gitkeep
-data/pre_exp1/interim/*
-!data/pre_exp1/interim/.gitkeep
-data/pre_exp1/processed/*
-!data/pre_exp1/processed/.gitkeep
-data/pre_exp1/manifests/*
-!data/pre_exp1/manifests/.gitkeep
-data/pre_exp1/reports/*
-!data/pre_exp1/reports/.gitkeep
+# Keep these protections when this directory is copied out of the parent repo.
+*.env
+*.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+venv/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+.mypy_cache/
+.dmypy.json
+.cache/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.arrow
+*.parquet
+**/checkpoints/
+**/matrices/
+**/scores/
+**/logs/
+**/*predictions*.jsonl
+**/*.jsonl.pending
+**/*.jsonl.partial
+**/FAILED_*_SNAPSHOT.py
+**/testing_utils.py
+tmp/
 
-# Generated P1 benign Phase A data.
-data/pre_exp1/p1_benign/raw/*
-data/pre_exp1/p1_benign/interim/*
-data/pre_exp1/p1_benign/processed/*
-data/pre_exp1/p1_benign/manifests/*
-data/pre_exp1/p1_benign/reports/*
+# Local environments, caches, receipts and recoverable migration backups.
+/.local/
 
-# New MAS paper: generated/sensitive artifacts stay local by default.
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-results/*
-!results/.gitkeep
+# Full-text reference copies and personal manuscripts stay in the local library.
+/docs/references/**/*.pdf
 
-# External benchmark releases are downloaded locally for audit; keep raw files
-# out of Git and record provenance in the tracked external-data manifest.
-data/external/*
-!data/external/README.md
-!data/external/.gitkeep
+# Upstream repositories are restored from their provenance manifests.
+/code/external/*
+!/code/external/README.md
+
+# Shared inputs; raw/generated data stays local, split specifications stay tracked.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+
+# Retired experiment output; keep the archived static fixtures and source.
+/archive/early_pre_exp1/data/pre_exp1/**
+!/archive/early_pre_exp1/data/pre_exp1/**/
+!/archive/early_pre_exp1/data/pre_exp1/**/.gitkeep
+
+# Immutable run bundles are local unless explicitly listed in PACKAGE_MANIFEST.
+/experiments/*/runs/**
+
+# Compact public result allowlist (no raw traces, models or credentials).
+!/experiments/synthetic_mas/runs/independent_mas_journal_v1/
+!/experiments/synthetic_mas/runs/independent_mas_journal_v1/REPORT.md
+!/experiments/synthetic_mas/runs/independent_mas_journal_v1/metrics.json
+!/experiments/synthetic_mas/runs/independent_mas_journal_v1/MODEL_SPEC.md
+!/experiments/submission_audit/runs/final_eval/
+!/experiments/submission_audit/runs/final_eval/RESULTS.md
+!/experiments/submission_audit/runs/final_eval/FINAL_GATE.md
+!/experiments/submission_audit/runs/final_eval/BASELINE_MAPPING.md
+!/experiments/submission_audit/runs/final_eval/LLM_JUDGE_BASELINE.md
+!/experiments/submission_audit/runs/final_eval/MATCHED_INFORMATION_AUDIT.md
+!/experiments/submission_audit/runs/final_eval/GROUP_CALIBRATION_AUDIT.md
+!/experiments/submission_audit/runs/final_eval/CONFIRMATION_COHORT_STATUS.md
+!/experiments/failure_attribution/runs/external_who_when_audit_v1/
+!/experiments/failure_attribution/runs/external_who_when_audit_v1/REPORT.md

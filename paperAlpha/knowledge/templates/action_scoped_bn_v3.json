@@ -1,0 +1,35 @@
+{
+  "registry_id": "action-scoped-risk-v3",
+  "base_registry_id": "joint-risk-templates-v1",
+  "model_name": "ActionScopedJointBN-v3",
+  "max_joint_variables": 12,
+  "action_binding_fields": ["action_id", "actor", "principal", "tool", "resource", "arguments"],
+  "permission_states": ["unknown", "no_mismatch", "mismatch"],
+  "lifecycle_events": ["tool_proposed", "tool_call", "authorization_checked", "action_cancelled"],
+  "information_head_features": ["information_node_fraction", "information_pair_fraction", "information_capable_fraction", "information_terminal_fraction"],
+  "observable_overrides": {"8": "active_or_dispatched_action_seen", "9": "retained_permission_assessment_known", "10": "retained_permission_mismatch"},
+  "head_features": ["pending_authorization_any", "dispatched_authorization_any", "pending_information_authorization_overlap_any", "dispatched_information_authorization_overlap_any"],
+  "head_initial_coefficients": [0.5, 0.5, 0.5, 0.5],
+  "updates": {
+    "new_action": "A new action-scoped Bernoulli hypothesis uses the role/unknown permission cell.",
+    "pending_check": "The latest complete accepted check replaces that action's pending authorization factor; checks are not independent votes.",
+    "expiry": "A pending check expires after its declared valid_until_sequence; the action returns to the unknown conditional table.",
+    "dispatch": "Freeze the authorization estimate and copy the actor's current information bit into a distinct dispatch-time bit.",
+    "cancellation": "Remove a pending action from active readouts without changing already dispatched actions.",
+    "after_dispatch": "Do not revise the historical action through a new pending check; post-hoc reassessment is not implemented."
+  },
+  "knowledge_basis": [{
+    "risk_id": "RB008",
+    "source_id": 11,
+    "url": "https://arxiv.org/html/2605.26497v1",
+    "scope": "Independent authorization and parameter-source constraints motivate explicit action binding. Our replaceable conditional factors, phase-specific readout and expiry rules are new engineering assumptions, not this paper's BN or a novelty proof."
+  }],
+  "boundaries": [
+    "Requires structured events and a trusted logging adapter. A checker_id string is not cryptographic authentication.",
+    "A no_mismatch check is an observed assessment, not proof of complete authorization or safety.",
+    "Replacement is a conditional state model of the latest check, not independent-evidence Bayesian conditioning or causal discovery.",
+    "The dispatched information snapshot is a modeled state, not verified tool side effects or confirmed harm.",
+    "No parameter-posterior inference, calibrated local-state truth, monotonicity guarantee, delegation attenuation or recovery claim.",
+    "Exact state grows with actions and sources; this prototype does not solve large-graph inference."
+  ]
+}

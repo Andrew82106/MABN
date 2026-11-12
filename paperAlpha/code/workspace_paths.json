@@ -1,0 +1,2143 @@
+{
+  "schema": "paperalpha-workspace-layout-v2",
+  "canonical_roots": [
+    "docs",
+    "knowledge",
+    "code",
+    "data",
+    "experiments",
+    "archive",
+    ".local"
+  ],
+  "purpose": "Resolve historical paths without copying assets or modifying frozen evidence.",
+  "moves": [
+    {
+      "source": "src",
+      "destination": "code/src"
+    },
+    {
+      "source": "tests",
+      "destination": "code/tests"
+    },
+    {
+      "source": "scripts/tests",
+      "destination": "code/tests/commands"
+    },
+    {
+      "source": "scripts",
+      "destination": "code/commands"
+    },
+    {
+      "source": "literature",
+      "destination": "docs/references"
+    },
+    {
+      "source": "docs/ORGANIZATION_CHECK_20261014.md",
+      "destination": "docs/usage/ORGANIZATION_CHECK_20261014.md"
+    },
+    {
+      "source": "docs/PROJECT_STRUCTURE.md",
+      "destination": "docs/usage/PROJECT_STRUCTURE.md"
+    },
+    {
+      "source": "docs/REPRODUCIBILITY.md",
+      "destination": "docs/usage/REPRODUCIBILITY.md"
+    },
+    {
+      "source": "configs/.gitkeep",
+      "destination": ".local/backups/structure_20261014/placeholders/configs.gitkeep"
+    },
+    {
+      "source": "configs/action_mechanism_templates_v1.json",
+      "destination": "knowledge/templates/action_mechanism_templates_v1.json"
+    },
+    {
+      "source": "configs/action_scoped_bn_v3.json",
+      "destination": "knowledge/templates/action_scoped_bn_v3.json"
+    },
+    {
+      "source": "configs/catalogue_choice_attributes_v1.json",
+      "destination": "knowledge/templates/catalogue_choice_attributes_v1.json"
+    },
+    {
+      "source": "configs/dynamic_joint_bn_v1.json",
+      "destination": "experiments/model_mechanisms/configs/dynamic_joint_bn_v1.json"
+    },
+    {
+      "source": "configs/forecast_alarm_calibration_v1.json",
+      "destination": "experiments/runtime_alarm/configs/forecast_alarm_calibration_v1.json"
+    },
+    {
+      "source": "configs/harnessaudit_payment_quantities_v1.json",
+      "destination": "knowledge/templates/harnessaudit_payment_quantities_v1.json"
+    },
+    {
+      "source": "configs/harnessaudit_public_capabilities_v1.json",
+      "destination": "knowledge/templates/harnessaudit_public_capabilities_v1.json"
+    },
+    {
+      "source": "configs/joint_optimizer_continuation_v1.json",
+      "destination": "experiments/model_mechanisms/configs/joint_optimizer_continuation_v1.json"
+    },
+    {
+      "source": "configs/joint_risk_templates_v1.json",
+      "destination": "knowledge/templates/joint_risk_templates_v1.json"
+    },
+    {
+      "source": "configs/message_workflow_templates_v1.json",
+      "destination": "knowledge/templates/message_workflow_templates_v1.json"
+    },
+    {
+      "source": "configs/observable_event_dag_v1.json",
+      "destination": "knowledge/templates/observable_event_dag_v1.json"
+    },
+    {
+      "source": "configs/phase_alarm_policy_v1.json",
+      "destination": "experiments/runtime_alarm/configs/phase_alarm_policy_v1.json"
+    },
+    {
+      "source": "configs/prefix_forecast_v1.json",
+      "destination": "experiments/runtime_alarm/configs/prefix_forecast_v1.json"
+    },
+    {
+      "source": "configs/privacy_flow_bn_v1.json",
+      "destination": "knowledge/templates/privacy_flow_bn_v1.json"
+    },
+    {
+      "source": "configs/risk_templates_v1.json",
+      "destination": "knowledge/templates/risk_templates_v1.json"
+    },
+    {
+      "source": "configs/streaming_template_bn_v1.json",
+      "destination": "experiments/model_mechanisms/configs/streaming_template_bn_v1.json"
+    },
+    {
+      "source": "configs/typed_joint_bn_v2.json",
+      "destination": "knowledge/templates/typed_joint_bn_v2.json"
+    },
+    {
+      "source": "configs/typed_joint_evaluation_v2.json",
+      "destination": "experiments/model_mechanisms/configs/typed_joint_evaluation_v2.json"
+    },
+    {
+      "source": "configs/workflow_risk_fragments_v1.json",
+      "destination": "knowledge/templates/workflow_risk_fragments_v1.json"
+    },
+    {
+      "source": "research/并行发布流程_可见授权对照与分组数据_20260920.md",
+      "destination": "experiments/privacy_flow/notes/并行发布流程_可见授权对照与分组数据_20260920.md"
+    },
+    {
+      "source": "research/部分运行的分组学习与公平对照_20260930.md",
+      "destination": "experiments/message_workflows/notes/部分运行的分组学习与公平对照_20260930.md"
+    },
+    {
+      "source": "research/初始任务与职责证据_v7接入_20260919.md",
+      "destination": "docs/design/初始任务与职责证据_v7接入_20260919.md"
+    },
+    {
+      "source": "research/动作级BN_条件更新与阶段建模_20260919.md",
+      "destination": "docs/design/动作级BN_条件更新与阶段建模_20260919.md"
+    },
+    {
+      "source": "research/动作监督与规则语义核验_20260919.md",
+      "destination": "docs/design/动作监督与规则语义核验_20260919.md"
+    },
+    {
+      "source": "research/动作历史精确压缩_推导与长序列验证_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/动作历史精确压缩_推导与长序列验证_20260919.md"
+    },
+    {
+      "source": "research/独立校准与整流程报警_从概率到预警_20260920.md",
+      "destination": "experiments/runtime_alarm/notes/独立校准与整流程报警_从概率到预警_20260920.md"
+    },
+    {
+      "source": "research/多分支授权API实跑_共享依赖与输出目标_20260919.md",
+      "destination": "experiments/privacy_flow/notes/多分支授权API实跑_共享依赖与输出目标_20260919.md"
+    },
+    {
+      "source": "research/多工作流消息图与策略联合训练_来源补全及线索类型_20260920.md",
+      "destination": "docs/design/多工作流消息图与策略联合训练_来源补全及线索类型_20260920.md"
+    },
+    {
+      "source": "research/发布者可见授权BN_双证据视图与学习_20260919.md",
+      "destination": "docs/design/发布者可见授权BN_双证据视图与学习_20260919.md"
+    },
+    {
+      "source": "research/分支局部状态BN_训练对照与结构失活诊断_20260920.md",
+      "destination": "experiments/privacy_flow/notes/分支局部状态BN_训练对照与结构失活诊断_20260920.md"
+    },
+    {
+      "source": "research/分支信息预测接入知识组合_联合事件与双时钟_20260920.md",
+      "destination": "docs/design/分支信息预测接入知识组合_联合事件与双时钟_20260920.md"
+    },
+    {
+      "source": "research/分支BN_冻结留出API评测_20260920.md",
+      "destination": "docs/design/分支BN_冻结留出API评测_20260920.md"
+    },
+    {
+      "source": "research/工具能力条件BN_真实工具覆盖与容量边界_20260919.md",
+      "destination": "docs/design/工具能力条件BN_真实工具覆盖与容量边界_20260919.md"
+    },
+    {
+      "source": "research/工作流风险子图组合_共享动作与策略_20260920.md",
+      "destination": "docs/design/工作流风险子图组合_共享动作与策略_20260920.md"
+    },
+    {
+      "source": "research/公开职责条件BN_v9_训练结果与提取边界_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/公开职责条件BN_v9_训练结果与提取边界_20260919.md"
+    },
+    {
+      "source": "research/功能阶段与执行主体分离_固定DAG实跑修正_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/功能阶段与执行主体分离_固定DAG实跑修正_20260919.md"
+    },
+    {
+      "source": "research/共享授权节点BN_联合结构与可学习性_20260919.md",
+      "destination": "docs/design/共享授权节点BN_联合结构与可学习性_20260919.md"
+    },
+    {
+      "source": "research/共享消息的分组学习与重复实验_20260930.md",
+      "destination": "experiments/message_workflows/notes/共享消息的分组学习与重复实验_20260930.md"
+    },
+    {
+      "source": "research/候选属性交叉实验_独立协议审查_20260920.md",
+      "destination": "experiments/purchase/notes/候选属性交叉实验_独立协议审查_20260920.md"
+    },
+    {
+      "source": "research/候选属性BN_独立代码审查_20260920.md",
+      "destination": "docs/design/候选属性BN_独立代码审查_20260920.md"
+    },
+    {
+      "source": "research/候选属性BN_证据绑定与可识别性_20260920.md",
+      "destination": "docs/design/候选属性BN_证据绑定与可识别性_20260920.md"
+    },
+    {
+      "source": "research/互斥动作选择BN_运行约束与真实API采购_20260920.md",
+      "destination": "docs/design/互斥动作选择BN_运行约束与真实API采购_20260920.md"
+    },
+    {
+      "source": "research/阶段化MAS_API实跑与监督边界_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/阶段化MAS_API实跑与监督边界_20260919.md"
+    },
+    {
+      "source": "research/旧失败记录复核与真实实验依赖_20260930.md",
+      "destination": "experiments/model_mechanisms/notes/旧失败记录复核与真实实验依赖_20260930.md"
+    },
+    {
+      "source": "research/可观测事件DAG_BN_可变工作流与缺失历史_20260920.md",
+      "destination": "docs/design/可观测事件DAG_BN_可变工作流与缺失历史_20260920.md"
+    },
+    {
+      "source": "research/可观测消息门控BN_联合分布与开发对照_20260920.md",
+      "destination": "experiments/message_workflows/notes/可观测消息门控BN_联合分布与开发对照_20260920.md"
+    },
+    {
+      "source": "research/跨属性实验诊断与系统依赖风险范围_20260930.md",
+      "destination": "experiments/model_mechanisms/notes/跨属性实验诊断与系统依赖风险范围_20260930.md"
+    },
+    {
+      "source": "research/跨主体授权关系BN_机制对照与证据不足_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/跨主体授权关系BN_机制对照与证据不足_20260919.md"
+    },
+    {
+      "source": "research/类型化监督BN_v8_真实动作训练与身份捷径_20260919.md",
+      "destination": "docs/design/类型化监督BN_v8_真实动作训练与身份捷径_20260919.md"
+    },
+    {
+      "source": "research/类型化联合BN_信息与授权分离_20260919.md",
+      "destination": "docs/design/类型化联合BN_信息与授权分离_20260919.md"
+    },
+    {
+      "source": "research/类型化文本证据v2_实跑与逐项接纳_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/类型化文本证据v2_实跑与逐项接纳_20260919.md"
+    },
+    {
+      "source": "research/类型化BN_在线解释与完整验收_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/类型化BN_在线解释与完整验收_20260919.md"
+    },
+    {
+      "source": "research/历史评测资格修正_20260919.md",
+      "destination": "docs/design/历史评测资格修正_20260919.md"
+    },
+    {
+      "source": "research/联合两层BN_实现与开发评测_20260919.md",
+      "destination": "docs/design/联合两层BN_实现与开发评测_20260919.md"
+    },
+    {
+      "source": "research/联合BN_12组开发评测结论_20260919.md",
+      "destination": "docs/design/联合BN_12组开发评测结论_20260919.md"
+    },
+    {
+      "source": "research/联合BN_优化充分性与分阶段预警_20260919.md",
+      "destination": "docs/design/联合BN_优化充分性与分阶段预警_20260919.md"
+    },
+    {
+      "source": "research/联合BN_在线接入与一致性_20260919.md",
+      "destination": "docs/design/联合BN_在线接入与一致性_20260919.md"
+    },
+    {
+      "source": "research/联合BN_知识模板与可执行图_20260919.md",
+      "destination": "docs/design/联合BN_知识模板与可执行图_20260919.md"
+    },
+    {
+      "source": "research/流式模板BN_方法与证据_20260919.md",
+      "destination": "docs/design/流式模板BN_方法与证据_20260919.md"
+    },
+    {
+      "source": "research/任务语义接入消息BN_字段用途与整消息预测_20260920.md",
+      "destination": "docs/design/任务语义接入消息BN_字段用途与整消息预测_20260920.md"
+    },
+    {
+      "source": "research/授权API实跑_证据覆盖与联合建模缺口_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/授权API实跑_证据覆盖与联合建模缺口_20260919.md"
+    },
+    {
+      "source": "research/同监督结构对照_联合依赖收益与训练覆盖_20260920.md",
+      "destination": "experiments/model_mechanisms/notes/同监督结构对照_联合依赖收益与训练覆盖_20260920.md"
+    },
+    {
+      "source": "research/统一运行时序_通信工具接入与边界_20260919.md",
+      "destination": "docs/design/统一运行时序_通信工具接入与边界_20260919.md"
+    },
+    {
+      "source": "research/完整信息项事件BN_变量消元与公开MAS开发验证_20260920.md",
+      "destination": "experiments/model_mechanisms/notes/完整信息项事件BN_变量消元与公开MAS开发验证_20260920.md"
+    },
+    {
+      "source": "research/危险行为与风险机制目录.md",
+      "destination": "docs/design/危险行为与风险机制目录.md"
+    },
+    {
+      "source": "research/文本条件BN_v5_接入与机制验证_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/文本条件BN_v5_接入与机制验证_20260919.md"
+    },
+    {
+      "source": "research/隐私流BN_AgentLeak真实轨迹与前瞻评测_20260919.md",
+      "destination": "docs/design/隐私流BN_AgentLeak真实轨迹与前瞻评测_20260919.md"
+    },
+    {
+      "source": "research/隐私模型跨API迁移_冻结实跑与覆盖缺口_20260919.md",
+      "destination": "experiments/privacy_flow/notes/隐私模型跨API迁移_冻结实跑与覆盖缺口_20260919.md"
+    },
+    {
+      "source": "research/隐私模型同监督对照与分阶段状态_20260919.md",
+      "destination": "experiments/privacy_flow/notes/隐私模型同监督对照与分阶段状态_20260919.md"
+    },
+    {
+      "source": "research/隐私授权API实跑_真实传递与授权视图分离_20260919.md",
+      "destination": "experiments/privacy_flow/notes/隐私授权API实跑_真实传递与授权视图分离_20260919.md"
+    },
+    {
+      "source": "research/隐私与授权联合BN_作用域绑定与可执行图_20260919.md",
+      "destination": "docs/design/隐私与授权联合BN_作用域绑定与可执行图_20260919.md"
+    },
+    {
+      "source": "research/运行文本证据层_真实提取与语义边界_20260919.md",
+      "destination": "docs/design/运行文本证据层_真实提取与语义边界_20260919.md"
+    },
+    {
+      "source": "research/真实MAS采购对照_系统关系必要但BN尚无独占优势_20260920.md",
+      "destination": "experiments/harnessaudit/notes/真实MAS采购对照_系统关系必要但BN尚无独占优势_20260920.md"
+    },
+    {
+      "source": "research/真实MAS全序回放_信息通道失活与设计修正_20260919.md",
+      "destination": "experiments/model_mechanisms/notes/真实MAS全序回放_信息通道失活与设计修正_20260919.md"
+    },
+    {
+      "source": "research/真实MAS四类采集_标签与模型覆盖_20260919.md",
+      "destination": "docs/design/真实MAS四类采集_标签与模型覆盖_20260919.md"
+    },
+    {
+      "source": "research/知识模板驱动消息子图编译_从固定适配到可变工作流_20260920.md",
+      "destination": "docs/design/知识模板驱动消息子图编译_从固定适配到可变工作流_20260920.md"
+    },
+    {
+      "source": "research/知识子图BN_v7_授权与额度分离_20260919.md",
+      "destination": "docs/design/知识子图BN_v7_授权与额度分离_20260919.md"
+    },
+    {
+      "source": "research/中间节点语义锚定_真实MAS前缀训练_20260920.md",
+      "destination": "docs/design/中间节点语义锚定_真实MAS前缀训练_20260920.md"
+    },
+    {
+      "source": "research/字段到达与任务用途联合建模_消息BN_20260920.md",
+      "destination": "docs/design/字段到达与任务用途联合建模_消息BN_20260920.md"
+    },
+    {
+      "source": "research/作用域数值BN_v6_局部限额与系统累计_20260919.md",
+      "destination": "docs/design/作用域数值BN_v6_局部限额与系统累计_20260919.md"
+    },
+    {
+      "source": "research/baseline_dataset_catalog.json",
+      "destination": "docs/references/baseline_dataset_survey.json"
+    },
+    {
+      "source": "research/Baseline与数据集调研.md",
+      "destination": "docs/design/Baseline与数据集调研.md"
+    },
+    {
+      "source": "research/H-WD-BN_v2_升级设计规范.md",
+      "destination": "docs/design/H-WD-BN_v2_升级设计规范.md"
+    },
+    {
+      "source": "research/HarnessAudit_运行观测与事后标签分离_20260919.md",
+      "destination": "docs/design/HarnessAudit_运行观测与事后标签分离_20260919.md"
+    },
+    {
+      "source": "research/HarnessAudit_API实跑与动作前观测_20260919.md",
+      "destination": "experiments/harnessaudit/notes/HarnessAudit_API实跑与动作前观测_20260919.md"
+    },
+    {
+      "source": "research/MAS风险监测器_v1_方法与实验协议.md",
+      "destination": "experiments/model_mechanisms/notes/MAS风险监测器_v1_方法与实验协议.md"
+    },
+    {
+      "source": "research/MAS原方法复现入口核验_20260919.md",
+      "destination": "docs/design/MAS原方法复现入口核验_20260919.md"
+    },
+    {
+      "source": "research/MAS原生对照接入_当前动作与未来风险分离_20260920.md",
+      "destination": "experiments/harnessaudit/notes/MAS原生对照接入_当前动作与未来风险分离_20260920.md"
+    },
+    {
+      "source": "research/README.md",
+      "destination": "docs/design/HISTORICAL_RESEARCH_INDEX.md"
+    },
+    {
+      "source": "research/risk_catalog.json",
+      "destination": "knowledge/risks/risk_catalog.json"
+    },
+    {
+      "source": "research/risk_template_schema.json",
+      "destination": "knowledge/schemas/risk_template_schema.json"
+    },
+    {
+      "source": "submission/baselines.json",
+      "destination": "experiments/baselines.json"
+    },
+    {
+      "source": "submission/development_diagnostics.json",
+      "destination": "experiments/submission_audit/configs/development_diagnostics.json"
+    },
+    {
+      "source": "submission/EXTERNAL_CONFIRMATION_PLAN.md",
+      "destination": "experiments/confirmation_preparation/PLAN.md"
+    },
+    {
+      "source": "submission/FINAL_RESULTS.md",
+      "destination": "docs/manuscript/FINAL_RESULTS.md"
+    },
+    {
+      "source": "submission/harnessaudit_task_candidates.json",
+      "destination": "experiments/harnessaudit/task_candidates.json"
+    },
+    {
+      "source": "submission/INDEPENDENT_CONFIRMATION_AUDIT_20261005.md",
+      "destination": "experiments/confirmation_preparation/notes/INDEPENDENT_CONFIRMATION_AUDIT_20261005.md"
+    },
+    {
+      "source": "submission/PACKAGE_MANIFEST.json",
+      "destination": "docs/manuscript/PACKAGE_MANIFEST.json"
+    },
+    {
+      "source": "submission/protocol.json",
+      "destination": "experiments/protocol.json"
+    },
+    {
+      "source": "submission/README.md",
+      "destination": "docs/manuscript/README.md"
+    },
+    {
+      "source": "submission/relational_contracts.json",
+      "destination": "knowledge/risks/relational_contracts.json"
+    },
+    {
+      "source": "submission/reproduce_main.ps1",
+      "destination": "code/commands/reproduce_main.ps1"
+    },
+    {
+      "source": "submission/SUBMISSION_PACKET.md",
+      "destination": "docs/manuscript/SUBMISSION_PACKET.md"
+    },
+    {
+      "source": "pre_exp1",
+      "destination": "archive/early_pre_exp1/pre_exp1"
+    },
+    {
+      "source": "data/pre_exp1",
+      "destination": "archive/early_pre_exp1/data/pre_exp1"
+    },
+    {
+      "source": "data/shared",
+      "destination": "archive/early_pre_exp1/data/shared"
+    },
+    {
+      "source": "data/mas_adapter",
+      "destination": "data/processed/mas_adapter"
+    },
+    {
+      "source": "data/external/A2ASecBench",
+      "destination": "code/external/A2ASecBench"
+    },
+    {
+      "source": "data/external/AgentLeak",
+      "destination": "code/external/AgentLeak"
+    },
+    {
+      "source": "data/external/AgentMonitor",
+      "destination": "code/external/AgentMonitor"
+    },
+    {
+      "source": "data/external/AgentMonitor_audit_snapshot",
+      "destination": "code/external/AgentMonitor_audit_snapshot"
+    },
+    {
+      "source": "data/external/ALTEDA",
+      "destination": "code/external/ALTEDA"
+    },
+    {
+      "source": "data/external/ATBench",
+      "destination": "data/raw/external/ATBench"
+    },
+    {
+      "source": "data/external/BlindGuard",
+      "destination": "code/external/BlindGuard"
+    },
+    {
+      "source": "data/external/G-safeguard",
+      "destination": "code/external/G-safeguard"
+    },
+    {
+      "source": "data/external/HarnessAudit",
+      "destination": "code/external/HarnessAudit"
+    },
+    {
+      "source": "data/external/MAST",
+      "destination": "data/raw/external/MAST"
+    },
+    {
+      "source": "data/external/MultiAgentHarmDataset",
+      "destination": "code/external/MultiAgentHarmDataset"
+    },
+    {
+      "source": "data/external/QuadSentinel",
+      "destination": "code/external/QuadSentinel"
+    },
+    {
+      "source": "data/external/TAMAS",
+      "destination": "code/external/TAMAS"
+    },
+    {
+      "source": "data/external/Who_and_When",
+      "destination": "data/raw/external/Who_and_When"
+    },
+    {
+      "source": "data/external/README.md",
+      "destination": "docs/usage/EXTERNAL_ASSETS.md"
+    },
+    {
+      "source": ".venv-baselines",
+      "destination": ".local/environments/baselines"
+    },
+    {
+      "source": ".pytest_cache",
+      "destination": ".local/cache/pytest_before_migration"
+    },
+    {
+      "source": "archive/local_scratch_20261014",
+      "destination": ".local/cache/literature_20261014"
+    },
+    {
+      "source": "README.history.md",
+      "destination": "archive/project_docs/README.history.md"
+    },
+    {
+      "source": "paperAlpha",
+      "destination": ".local/backups/structure_20261014/empty_paths/paperAlpha"
+    },
+    {
+      "source": "results/_judge_smoke",
+      "destination": "experiments/llm_judge/runs/_judge_smoke"
+    },
+    {
+      "source": "results/a2a_baselines_v1",
+      "destination": "experiments/a2asecbench/runs/a2a_baselines_v1"
+    },
+    {
+      "source": "results/a2a_early_warning_v1",
+      "destination": "experiments/a2asecbench/runs/a2a_early_warning_v1"
+    },
+    {
+      "source": "results/a2a_fusion_v1",
+      "destination": "experiments/a2asecbench/runs/a2a_fusion_v1"
+    },
+    {
+      "source": "results/a2a_layer2_v1",
+      "destination": "experiments/a2asecbench/runs/a2a_layer2_v1"
+    },
+    {
+      "source": "results/a2a_prefix_v1",
+      "destination": "experiments/a2asecbench/runs/a2a_prefix_v1"
+    },
+    {
+      "source": "results/a2asecbench_v1",
+      "destination": "experiments/a2asecbench/runs/a2asecbench_v1"
+    },
+    {
+      "source": "results/action_scoped_mechanism_20260919",
+      "destination": "experiments/model_mechanisms/runs/action_scoped_mechanism_20260919"
+    },
+    {
+      "source": "results/action_scoped_mechanism_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/action_scoped_mechanism_verified_20260919"
+    },
+    {
+      "source": "results/agentleak_error_eligibility_audit_20260930",
+      "destination": "experiments/privacy_flow/runs/agentleak_error_eligibility_audit_20260930"
+    },
+    {
+      "source": "results/agentleak_event_dag_development_20260920",
+      "destination": "experiments/privacy_flow/runs/agentleak_event_dag_development_20260920"
+    },
+    {
+      "source": "results/agentleak_event_dag_development_verified_20260920",
+      "destination": "experiments/privacy_flow/runs/agentleak_event_dag_development_verified_20260920"
+    },
+    {
+      "source": "results/agentleak_release_inventory_20260919",
+      "destination": "experiments/privacy_flow/runs/agentleak_release_inventory_20260919"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r10",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r10"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r11",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r11"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r12",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r12"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r13",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r13"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r2",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r2"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r3",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r3"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r4",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r4"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r5",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r5"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r6",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r6"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r7",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r7"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r8",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r8"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261002_r9",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r9"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261003_r14",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261003_r14"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261003_r15",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261003_r15"
+    },
+    {
+      "source": "results/balanced_delegation_api_v1_20261004_local_r20",
+      "destination": "experiments/delegation/runs/balanced_delegation_api_v1_20261004_local_r20"
+    },
+    {
+      "source": "results/branch_privacy_inputs_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_privacy_inputs_20260920"
+    },
+    {
+      "source": "results/branch_publisher_diagnosis_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_diagnosis_20260920"
+    },
+    {
+      "source": "results/branch_publisher_diagnosis_complete_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_diagnosis_complete_20260920"
+    },
+    {
+      "source": "results/branch_publisher_fit_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_fit_20260920"
+    },
+    {
+      "source": "results/branch_publisher_fit_verified_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_fit_verified_20260920"
+    },
+    {
+      "source": "results/branch_publisher_test_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_test_20260920"
+    },
+    {
+      "source": "results/branch_publisher_test_verified_20260920",
+      "destination": "experiments/privacy_flow/runs/branch_publisher_test_verified_20260920"
+    },
+    {
+      "source": "results/branch_workflow_risk_20260920",
+      "destination": "experiments/model_mechanisms/runs/branch_workflow_risk_20260920"
+    },
+    {
+      "source": "results/branch_workflow_risk_final_20260920",
+      "destination": "experiments/model_mechanisms/runs/branch_workflow_risk_final_20260920"
+    },
+    {
+      "source": "results/branched_authority_api_20260919",
+      "destination": "experiments/delegation/runs/branched_authority_api_20260919"
+    },
+    {
+      "source": "results/branched_authority_api_verified_20260919",
+      "destination": "experiments/delegation/runs/branched_authority_api_verified_20260919"
+    },
+    {
+      "source": "results/branched_authority_scope_20260919",
+      "destination": "experiments/delegation/runs/branched_authority_scope_20260919"
+    },
+    {
+      "source": "results/branched_publisher_data_20260920",
+      "destination": "experiments/privacy_flow/runs/branched_publisher_data_20260920"
+    },
+    {
+      "source": "results/branched_publisher_data_verified_20260920",
+      "destination": "experiments/privacy_flow/runs/branched_publisher_data_verified_20260920"
+    },
+    {
+      "source": "results/capability_action_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/capability_action_verified_20260919"
+    },
+    {
+      "source": "results/choice_attribute_development_20260920",
+      "destination": "experiments/purchase/runs/choice_attribute_development_20260920"
+    },
+    {
+      "source": "results/choice_attribute_final_20260920",
+      "destination": "experiments/purchase/runs/choice_attribute_final_20260920"
+    },
+    {
+      "source": "results/choice_attribute_reviewed_20260920",
+      "destination": "experiments/purchase/runs/choice_attribute_reviewed_20260920"
+    },
+    {
+      "source": "results/compact_action_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/compact_action_verified_20260919"
+    },
+    {
+      "source": "results/compiled_multiworkflow_contextual_20260920",
+      "destination": "experiments/message_workflows/runs/compiled_multiworkflow_contextual_20260920"
+    },
+    {
+      "source": "results/compiled_multiworkflow_contextual_verified_20260920",
+      "destination": "experiments/message_workflows/runs/compiled_multiworkflow_contextual_verified_20260920"
+    },
+    {
+      "source": "results/compiled_multiworkflow_development_20260920",
+      "destination": "experiments/message_workflows/runs/compiled_multiworkflow_development_20260920"
+    },
+    {
+      "source": "results/compiled_multiworkflow_verified_20260920",
+      "destination": "experiments/message_workflows/runs/compiled_multiworkflow_verified_20260920"
+    },
+    {
+      "source": "results/compositional_mas_v1",
+      "destination": "experiments/synthetic_mas/runs/compositional_mas_v1"
+    },
+    {
+      "source": "results/conditional_policy_queries_20260920",
+      "destination": "experiments/model_mechanisms/runs/conditional_policy_queries_20260920"
+    },
+    {
+      "source": "results/conformal_monitor_v1",
+      "destination": "experiments/synthetic_mas/runs/conformal_monitor_v1"
+    },
+    {
+      "source": "results/crossed_purchase_prospective_20260920",
+      "destination": "experiments/purchase/runs/crossed_purchase_prospective_20260920"
+    },
+    {
+      "source": "results/delegation_api_pilot_20260919",
+      "destination": "experiments/delegation/runs/delegation_api_pilot_20260919"
+    },
+    {
+      "source": "results/delegation_api_verified_20260919",
+      "destination": "experiments/delegation/runs/delegation_api_verified_20260919"
+    },
+    {
+      "source": "results/delegation_api_verified_v2_20260919",
+      "destination": "experiments/delegation/runs/delegation_api_verified_v2_20260919"
+    },
+    {
+      "source": "results/delegation_joint_context_audit_20260919",
+      "destination": "experiments/delegation/runs/delegation_joint_context_audit_20260919"
+    },
+    {
+      "source": "results/delegation_mechanism_20260919",
+      "destination": "experiments/delegation/runs/delegation_mechanism_20260919"
+    },
+    {
+      "source": "results/delegation_mechanism_qualified_20260919",
+      "destination": "experiments/delegation/runs/delegation_mechanism_qualified_20260919"
+    },
+    {
+      "source": "results/dependence_envelope_diagnostic_20260930",
+      "destination": "experiments/model_mechanisms/runs/dependence_envelope_diagnostic_20260930"
+    },
+    {
+      "source": "results/duty_conditioned_bn_20260919",
+      "destination": "experiments/model_mechanisms/runs/duty_conditioned_bn_20260919"
+    },
+    {
+      "source": "results/duty_conditioned_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/duty_conditioned_verified_20260919"
+    },
+    {
+      "source": "results/dynamic_joint_bn_converged_20260919",
+      "destination": "experiments/model_mechanisms/runs/dynamic_joint_bn_converged_20260919"
+    },
+    {
+      "source": "results/dynamic_joint_bn_v1_20260919",
+      "destination": "experiments/model_mechanisms/runs/dynamic_joint_bn_v1_20260919"
+    },
+    {
+      "source": "results/eval_protocol_v1",
+      "destination": "experiments/synthetic_mas/runs/eval_protocol_v1"
+    },
+    {
+      "source": "results/exclusive_purchase_api_20260920",
+      "destination": "experiments/purchase/runs/exclusive_purchase_api_20260920"
+    },
+    {
+      "source": "results/exclusive_purchase_evaluation_20260920",
+      "destination": "experiments/purchase/runs/exclusive_purchase_evaluation_20260920"
+    },
+    {
+      "source": "results/external_who_when_audit_v1",
+      "destination": "experiments/failure_attribution/runs/external_who_when_audit_v1"
+    },
+    {
+      "source": "results/fixed_dag_development_20260919",
+      "destination": "experiments/model_mechanisms/runs/fixed_dag_development_20260919"
+    },
+    {
+      "source": "results/fixed_dag_reviewed_20260919",
+      "destination": "experiments/model_mechanisms/runs/fixed_dag_reviewed_20260919"
+    },
+    {
+      "source": "results/fixed_dag_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/fixed_dag_verified_20260919"
+    },
+    {
+      "source": "results/fixed_dag_verified_final_20260919",
+      "destination": "experiments/model_mechanisms/runs/fixed_dag_verified_final_20260919"
+    },
+    {
+      "source": "results/forecast_alarm_independent_calibration_20260920",
+      "destination": "experiments/runtime_alarm/runs/forecast_alarm_independent_calibration_20260920"
+    },
+    {
+      "source": "results/forecast_alarm_independent_calibration_verified_20260920",
+      "destination": "experiments/runtime_alarm/runs/forecast_alarm_independent_calibration_verified_20260920"
+    },
+    {
+      "source": "results/fusion_oof_v1",
+      "destination": "experiments/synthetic_mas/runs/fusion_oof_v1"
+    },
+    {
+      "source": "results/fusion_v3",
+      "destination": "experiments/synthetic_mas/runs/fusion_v3"
+    },
+    {
+      "source": "results/fusion_v4",
+      "destination": "experiments/synthetic_mas/runs/fusion_v4"
+    },
+    {
+      "source": "results/generalization_stress_v1",
+      "destination": "experiments/synthetic_mas/runs/generalization_stress_v1"
+    },
+    {
+      "source": "results/groupcv_v1",
+      "destination": "experiments/synthetic_mas/runs/groupcv_v1"
+    },
+    {
+      "source": "results/harnessaudit_api_journal_dl14_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_journal_dl14_monitor_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_monitor_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_journal_dl14_replay_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_replay_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_pilot_dl11_lifecycle_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl11_lifecycle_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_pilot_dl11_projection_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl11_projection_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_pilot_dl14_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl14_20260919"
+    },
+    {
+      "source": "results/harnessaudit_api_pilot_dl14_projection_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl14_projection_20260919"
+    },
+    {
+      "source": "results/harnessaudit_cohort_development_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_cohort_development_20260919"
+    },
+    {
+      "source": "results/harnessaudit_cohort_review_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_cohort_review_20260919"
+    },
+    {
+      "source": "results/harnessaudit_cohort_v7_coverage_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_cohort_v7_coverage_20260919"
+    },
+    {
+      "source": "results/harnessaudit_dag_v1",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_dag_v1"
+    },
+    {
+      "source": "results/harnessaudit_dispatch_supervision_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_20260919"
+    },
+    {
+      "source": "results/harnessaudit_dispatch_supervision_final_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_final_20260919"
+    },
+    {
+      "source": "results/harnessaudit_dispatch_supervision_verified_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_verified_20260919"
+    },
+    {
+      "source": "results/harnessaudit_observation_split_fixture_20260919",
+      "destination": "experiments/harnessaudit/runs/harnessaudit_observation_split_fixture_20260919"
+    },
+    {
+      "source": "results/hierarchical_monitor_mas_v3",
+      "destination": "experiments/synthetic_mas/runs/hierarchical_monitor_mas_v3"
+    },
+    {
+      "source": "results/hierarchical_monitor_v3",
+      "destination": "experiments/synthetic_mas/runs/hierarchical_monitor_v3"
+    },
+    {
+      "source": "results/hierarchical_monitor_v4",
+      "destination": "experiments/synthetic_mas/runs/hierarchical_monitor_v4"
+    },
+    {
+      "source": "results/independent_fair_baselines_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_fair_baselines_v1"
+    },
+    {
+      "source": "results/independent_fair_baselines_v2",
+      "destination": "experiments/synthetic_mas/runs/independent_fair_baselines_v2"
+    },
+    {
+      "source": "results/independent_mas_agentmonitor_adapter_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_agentmonitor_adapter_v1"
+    },
+    {
+      "source": "results/independent_mas_journal_parity_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_journal_parity_v1"
+    },
+    {
+      "source": "results/independent_mas_journal_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_journal_v1"
+    },
+    {
+      "source": "results/independent_mas_learned_baselines_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_learned_baselines_v1"
+    },
+    {
+      "source": "results/independent_mas_mas_baselines_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_mas_baselines_v1"
+    },
+    {
+      "source": "results/independent_mas_prefix_v1",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_prefix_v1"
+    },
+    {
+      "source": "results/independent_mas_v2",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_v2"
+    },
+    {
+      "source": "results/independent_mas_v3",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_v3"
+    },
+    {
+      "source": "results/independent_mas_v3_fair_baselines",
+      "destination": "experiments/synthetic_mas/runs/independent_mas_v3_fair_baselines"
+    },
+    {
+      "source": "results/indistinguishable_control_v1",
+      "destination": "experiments/synthetic_mas/runs/indistinguishable_control_v1"
+    },
+    {
+      "source": "results/initial_task_context_api_20260919",
+      "destination": "experiments/semantic_extraction/runs/initial_task_context_api_20260919"
+    },
+    {
+      "source": "results/initial_task_context_v7_replay_20260919",
+      "destination": "experiments/semantic_extraction/runs/initial_task_context_v7_replay_20260919"
+    },
+    {
+      "source": "results/joint_alarm_timing_diagnostic_20260919",
+      "destination": "experiments/runtime_alarm/runs/joint_alarm_timing_diagnostic_20260919"
+    },
+    {
+      "source": "results/joint_knowledge_equivalence_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_knowledge_equivalence_20260919"
+    },
+    {
+      "source": "results/joint_knowledge_graph_examples_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_knowledge_graph_examples_20260919"
+    },
+    {
+      "source": "results/joint_online_equivalence_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_online_equivalence_20260919"
+    },
+    {
+      "source": "results/joint_online_equivalence_after_typed_hooks_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_online_equivalence_after_typed_hooks_20260919"
+    },
+    {
+      "source": "results/joint_online_graph_regression_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_online_graph_regression_20260919"
+    },
+    {
+      "source": "results/joint_online_graph_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/joint_online_graph_verified_20260919"
+    },
+    {
+      "source": "results/knowledge_scoped_bn_final_20260919",
+      "destination": "experiments/model_mechanisms/runs/knowledge_scoped_bn_final_20260919"
+    },
+    {
+      "source": "results/knowledge_scoped_bn_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/knowledge_scoped_bn_verified_20260919"
+    },
+    {
+      "source": "results/learnable_graph_v1",
+      "destination": "experiments/synthetic_mas/runs/learnable_graph_v1"
+    },
+    {
+      "source": "results/length_normalized_graph_v1",
+      "destination": "experiments/synthetic_mas/runs/length_normalized_graph_v1"
+    },
+    {
+      "source": "results/mas_baselines_v1",
+      "destination": "experiments/synthetic_mas/runs/mas_baselines_v1"
+    },
+    {
+      "source": "results/mas_purchase_development_20260920",
+      "destination": "experiments/purchase/runs/mas_purchase_development_20260920"
+    },
+    {
+      "source": "results/mas_purchase_development_resumed_20260920",
+      "destination": "experiments/purchase/runs/mas_purchase_development_resumed_20260920"
+    },
+    {
+      "source": "results/mas_purchase_development_verified_20260920",
+      "destination": "experiments/purchase/runs/mas_purchase_development_verified_20260920"
+    },
+    {
+      "source": "results/matched_event_controls_20260920",
+      "destination": "experiments/model_mechanisms/runs/matched_event_controls_20260920"
+    },
+    {
+      "source": "results/matched_event_controls_verified_20260920",
+      "destination": "experiments/model_mechanisms/runs/matched_event_controls_verified_20260920"
+    },
+    {
+      "source": "results/message_dependence_audit_20260920",
+      "destination": "experiments/message_workflows/runs/message_dependence_audit_20260920"
+    },
+    {
+      "source": "results/message_hurdle_development_20260920",
+      "destination": "experiments/message_workflows/runs/message_hurdle_development_20260920"
+    },
+    {
+      "source": "results/message_hurdle_development_verified_20260920",
+      "destination": "experiments/message_workflows/runs/message_hurdle_development_verified_20260920"
+    },
+    {
+      "source": "results/message_workflow_compiler_replay_20260920",
+      "destination": "experiments/message_workflows/runs/message_workflow_compiler_replay_20260920"
+    },
+    {
+      "source": "results/model_test_v1",
+      "destination": "experiments/synthetic_mas/runs/model_test_v1"
+    },
+    {
+      "source": "results/observable_event_dag_current_audit_20260920",
+      "destination": "experiments/model_mechanisms/runs/observable_event_dag_current_audit_20260920"
+    },
+    {
+      "source": "results/observable_event_dag_development_20260920",
+      "destination": "experiments/model_mechanisms/runs/observable_event_dag_development_20260920"
+    },
+    {
+      "source": "results/observable_event_dag_development_verified_20260920",
+      "destination": "experiments/model_mechanisms/runs/observable_event_dag_development_verified_20260920"
+    },
+    {
+      "source": "results/organization_20261014",
+      "destination": ".local/backups/organization_20261014"
+    },
+    {
+      "source": "results/partial_grouped_audit_20260930",
+      "destination": "experiments/message_workflows/runs/partial_grouped_audit_20260930"
+    },
+    {
+      "source": "results/partial_observability_v1",
+      "destination": "experiments/synthetic_mas/runs/partial_observability_v1"
+    },
+    {
+      "source": "results/partial_repeated_extension_20260930",
+      "destination": "experiments/message_workflows/runs/partial_repeated_extension_20260930"
+    },
+    {
+      "source": "results/partial_repeated_extension_final_20260930",
+      "destination": "experiments/message_workflows/runs/partial_repeated_extension_final_20260930"
+    },
+    {
+      "source": "results/phase_alarm_policy_20260919",
+      "destination": "experiments/runtime_alarm/runs/phase_alarm_policy_20260919"
+    },
+    {
+      "source": "results/prefix_forecast_v1_20260919",
+      "destination": "experiments/runtime_alarm/runs/prefix_forecast_v1_20260919"
+    },
+    {
+      "source": "results/privacy_authority_composition_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_authority_composition_20260919"
+    },
+    {
+      "source": "results/privacy_authority_composition_final_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_authority_composition_final_20260919"
+    },
+    {
+      "source": "results/privacy_authority_composition_final_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_authority_composition_final_verified_20260919"
+    },
+    {
+      "source": "results/privacy_authority_composition_qualified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_authority_composition_qualified_20260919"
+    },
+    {
+      "source": "results/privacy_authority_composition_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_authority_composition_verified_20260919"
+    },
+    {
+      "source": "results/privacy_flow_agentleak_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_flow_agentleak_20260919"
+    },
+    {
+      "source": "results/privacy_flow_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_flow_verified_20260919"
+    },
+    {
+      "source": "results/privacy_flow_verified_complete_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_flow_verified_complete_20260919"
+    },
+    {
+      "source": "results/privacy_identity_free_fit_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_identity_free_fit_20260919"
+    },
+    {
+      "source": "results/privacy_identity_free_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_identity_free_verified_20260919"
+    },
+    {
+      "source": "results/privacy_stage_states_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_stage_states_20260919"
+    },
+    {
+      "source": "results/privacy_stage_states_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_stage_states_verified_20260919"
+    },
+    {
+      "source": "results/privacy_supervision_attribution_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_supervision_attribution_20260919"
+    },
+    {
+      "source": "results/privacy_supervision_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_supervision_verified_20260919"
+    },
+    {
+      "source": "results/privacy_transfer_api_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_transfer_api_20260919"
+    },
+    {
+      "source": "results/privacy_transfer_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/privacy_transfer_verified_20260919"
+    },
+    {
+      "source": "results/public_duty_graphs_api_20260919",
+      "destination": "experiments/model_mechanisms/runs/public_duty_graphs_api_20260919"
+    },
+    {
+      "source": "results/publisher_view_bn_20260919",
+      "destination": "experiments/privacy_flow/runs/publisher_view_bn_20260919"
+    },
+    {
+      "source": "results/publisher_view_bn_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/publisher_view_bn_verified_20260919"
+    },
+    {
+      "source": "results/quadsentinel_author_preflight_20260920",
+      "destination": "experiments/harnessaudit/runs/quadsentinel_author_preflight_20260920"
+    },
+    {
+      "source": "results/quadsentinel_author_verified_20260920",
+      "destination": "experiments/harnessaudit/runs/quadsentinel_author_verified_20260920"
+    },
+    {
+      "source": "results/relational_forecast_development_20260920",
+      "destination": "experiments/model_mechanisms/runs/relational_forecast_development_20260920"
+    },
+    {
+      "source": "results/relational_forecast_development_verified_20260920",
+      "destination": "experiments/model_mechanisms/runs/relational_forecast_development_verified_20260920"
+    },
+    {
+      "source": "results/relational_forecast_semantics_audit_20260920",
+      "destination": "experiments/model_mechanisms/runs/relational_forecast_semantics_audit_20260920"
+    },
+    {
+      "source": "results/repeated_message_development_20260930",
+      "destination": "experiments/message_workflows/runs/repeated_message_development_20260930"
+    },
+    {
+      "source": "results/repeated_message_history_audit_20260930",
+      "destination": "experiments/message_workflows/runs/repeated_message_history_audit_20260930"
+    },
+    {
+      "source": "results/repeated_message_protocol_audit_20260930",
+      "destination": "experiments/message_workflows/runs/repeated_message_protocol_audit_20260930"
+    },
+    {
+      "source": "results/runtime_dependencies",
+      "destination": "code/external/runtime_dependencies"
+    },
+    {
+      "source": "results/runtime_envs",
+      "destination": ".local/environments/collection"
+    },
+    {
+      "source": "results/runtime_evidence_coverage_20260919",
+      "destination": "experiments/model_mechanisms/runs/runtime_evidence_coverage_20260919"
+    },
+    {
+      "source": "results/runtime_journal_component_replay_20260919",
+      "destination": "experiments/model_mechanisms/runs/runtime_journal_component_replay_20260919"
+    },
+    {
+      "source": "results/runtime_journal_components_20260919",
+      "destination": "experiments/model_mechanisms/runs/runtime_journal_components_20260919"
+    },
+    {
+      "source": "results/scoped_budget_bn_mechanism_20260919",
+      "destination": "experiments/model_mechanisms/runs/scoped_budget_bn_mechanism_20260919"
+    },
+    {
+      "source": "results/scoped_budget_bn_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/scoped_budget_bn_verified_20260919"
+    },
+    {
+      "source": "results/scoped_budget_components_20260919",
+      "destination": "experiments/model_mechanisms/runs/scoped_budget_components_20260919"
+    },
+    {
+      "source": "results/scoped_privacy_api_20260919",
+      "destination": "experiments/privacy_flow/runs/scoped_privacy_api_20260919"
+    },
+    {
+      "source": "results/scoped_privacy_api_bound_20260919",
+      "destination": "experiments/privacy_flow/runs/scoped_privacy_api_bound_20260919"
+    },
+    {
+      "source": "results/scoped_privacy_api_verified_20260919",
+      "destination": "experiments/privacy_flow/runs/scoped_privacy_api_verified_20260919"
+    },
+    {
+      "source": "results/semantic_arrival_development_20260920",
+      "destination": "experiments/message_workflows/runs/semantic_arrival_development_20260920"
+    },
+    {
+      "source": "results/semantic_arrival_development_verified_20260920",
+      "destination": "experiments/message_workflows/runs/semantic_arrival_development_verified_20260920"
+    },
+    {
+      "source": "results/semantic_arrival_gate_equivalence_20260920",
+      "destination": "experiments/message_workflows/runs/semantic_arrival_gate_equivalence_20260920"
+    },
+    {
+      "source": "results/semantic_extraction_controls_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_extraction_controls_20260919"
+    },
+    {
+      "source": "results/semantic_extraction_dl14_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_extraction_dl14_20260919"
+    },
+    {
+      "source": "results/semantic_extraction_v2_controls_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_extraction_v2_controls_20260919"
+    },
+    {
+      "source": "results/semantic_extraction_v2_dl14_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_extraction_v2_dl14_20260919"
+    },
+    {
+      "source": "results/semantic_v2_items_controls_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_v2_items_controls_20260919"
+    },
+    {
+      "source": "results/semantic_v2_items_dl14_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_v2_items_dl14_20260919"
+    },
+    {
+      "source": "results/semantic_v2_items_scoped_controls_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_v2_items_scoped_controls_20260919"
+    },
+    {
+      "source": "results/semantic_v2_items_scoped_dl14_20260919",
+      "destination": "experiments/semantic_extraction/runs/semantic_v2_items_scoped_dl14_20260919"
+    },
+    {
+      "source": "results/shared_authority_bn_20260919",
+      "destination": "experiments/delegation/runs/shared_authority_bn_20260919"
+    },
+    {
+      "source": "results/shared_authority_bn_qualified_20260919",
+      "destination": "experiments/delegation/runs/shared_authority_bn_qualified_20260919"
+    },
+    {
+      "source": "results/shared_authority_bn_verified_20260919",
+      "destination": "experiments/delegation/runs/shared_authority_bn_verified_20260919"
+    },
+    {
+      "source": "results/stage_dag_development_20260919",
+      "destination": "experiments/model_mechanisms/runs/stage_dag_development_20260919"
+    },
+    {
+      "source": "results/stage_dag_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/stage_dag_verified_20260919"
+    },
+    {
+      "source": "results/stage_workflow_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/stage_workflow_verified_20260919"
+    },
+    {
+      "source": "results/stale_authority_api_pilot_20260919",
+      "destination": "experiments/delegation/runs/stale_authority_api_pilot_20260919"
+    },
+    {
+      "source": "results/stale_authority_api_verified_20260919",
+      "destination": "experiments/delegation/runs/stale_authority_api_verified_20260919"
+    },
+    {
+      "source": "results/streaming_template_bn_20260919",
+      "destination": "experiments/model_mechanisms/runs/streaming_template_bn_20260919"
+    },
+    {
+      "source": "results/submission/development/a2asecbench_api_20261001",
+      "destination": "experiments/a2asecbench/runs/submission__a2asecbench_api_20261001"
+    },
+    {
+      "source": "results/submission/development/a2asecbench_api_final_20261002",
+      "destination": "experiments/a2asecbench/runs/submission__a2asecbench_api_final_20261002"
+    },
+    {
+      "source": "results/submission/development/agentleak",
+      "destination": "experiments/privacy_flow/runs/submission__agentleak"
+    },
+    {
+      "source": "results/submission/development/agentleak_external_journal_v1_r3",
+      "destination": "experiments/privacy_flow/runs/submission__agentleak_external_journal_v1_r3"
+    },
+    {
+      "source": "results/submission/development/agentleak_external_projection_smoke_check_v1",
+      "destination": "experiments/privacy_flow/runs/submission__agentleak_external_projection_smoke_check_v1"
+    },
+    {
+      "source": "results/submission/development/agentleak_external_projection_v1",
+      "destination": "experiments/privacy_flow/runs/submission__agentleak_external_projection_v1"
+    },
+    {
+      "source": "results/submission/development/agentleak_full_inventory_20261003",
+      "destination": "experiments/privacy_flow/runs/submission__agentleak_full_inventory_20261003"
+    },
+    {
+      "source": "results/submission/development/agentmonitor_adapter_20261005",
+      "destination": "experiments/model_mechanisms/runs/submission__agentmonitor_adapter_20261005"
+    },
+    {
+      "source": "results/submission/development/agentmonitor_style_baseline_20261005",
+      "destination": "experiments/model_mechanisms/runs/submission__agentmonitor_style_baseline_20261005"
+    },
+    {
+      "source": "results/submission/development/annotation_packets_smoke",
+      "destination": "experiments/confirmation_preparation/runs/submission__annotation_packets_smoke"
+    },
+    {
+      "source": "results/submission/development/api_cost_report_v1",
+      "destination": "experiments/runtime_costs/runs/submission__api_cost_report_v1"
+    },
+    {
+      "source": "results/submission/development/api_recovery_confirm_20261001",
+      "destination": "experiments/model_mechanisms/runs/submission__api_recovery_confirm_20261001"
+    },
+    {
+      "source": "results/submission/development/api_recovery_mini_20261001",
+      "destination": "experiments/model_mechanisms/runs/submission__api_recovery_mini_20261001"
+    },
+    {
+      "source": "results/submission/development/api_recovery_pilot_20261001",
+      "destination": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_20261001"
+    },
+    {
+      "source": "results/submission/development/api_recovery_pilot_55_20261001",
+      "destination": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_55_20261001"
+    },
+    {
+      "source": "results/submission/development/api_recovery_pilot_luna_20261001",
+      "destination": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_luna_20261001"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_20261001_v2",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v2"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_20261001_v3",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v3"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_20261001_v4",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v4"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_20261001_v5",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v5"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_20261001_v6",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v6"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_replication_20261001",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_replication_20261001"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_replication_20261001_v6",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_replication_20261001_v6"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_transfer_20261001",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer_20261001"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_transfer3_20261001",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer3_20261001"
+    },
+    {
+      "source": "results/submission/development/api_stage_forecast_transfer3_20261001_v6",
+      "destination": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer3_20261001_v6"
+    },
+    {
+      "source": "results/submission/development/api_stage_latency_20261001",
+      "destination": "experiments/runtime_costs/runs/submission__api_stage_latency_20261001"
+    },
+    {
+      "source": "results/submission/development/api_stage_latency_20261001_v6",
+      "destination": "experiments/runtime_costs/runs/submission__api_stage_latency_20261001_v6"
+    },
+    {
+      "source": "results/submission/development/atbench_external_20261005",
+      "destination": "experiments/atbench_transfer/runs/submission__atbench_external_20261005"
+    },
+    {
+      "source": "results/submission/development/atbench_external_20261005_v2",
+      "destination": "experiments/atbench_transfer/runs/submission__atbench_external_20261005_v2"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_lanyun_r14",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_r14"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_lanyun_r15",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_r15"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_lanyun_v1",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_v1"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_local_20261004",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_local_20261004"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_local_20261004b",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_local_20261004b"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_v1",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v1"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_v2",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v2"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_v3",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v3"
+    },
+    {
+      "source": "results/submission/development/balanced_api_mas_transfer_v4",
+      "destination": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v4"
+    },
+    {
+      "source": "results/submission/development/balanced_api_projection_v4",
+      "destination": "experiments/delegation/runs/submission__balanced_api_projection_v4"
+    },
+    {
+      "source": "results/submission/development/baseline_recheck_learned_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__baseline_recheck_learned_20261005"
+    },
+    {
+      "source": "results/submission/development/baseline_recheck_mas_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__baseline_recheck_mas_20261005"
+    },
+    {
+      "source": "results/submission/development/binding_consistency_extension_lanyun_v1",
+      "destination": "experiments/delegation/runs/submission__binding_consistency_extension_lanyun_v1"
+    },
+    {
+      "source": "results/submission/development/binding_consistency_extension_v1",
+      "destination": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v1"
+    },
+    {
+      "source": "results/submission/development/binding_consistency_extension_v2",
+      "destination": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v2"
+    },
+    {
+      "source": "results/submission/development/binding_consistency_extension_v3",
+      "destination": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v3"
+    },
+    {
+      "source": "results/submission/development/binding_consistency_extension_v4",
+      "destination": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v4"
+    },
+    {
+      "source": "results/submission/development/blind_model_confirmation_lanyun_20261005_r1",
+      "destination": "experiments/confirmation_preparation/runs/submission__blind_model_confirmation_lanyun_20261005_r1"
+    },
+    {
+      "source": "results/submission/development/communication_mode_smoke_lanyun_20261005_r1",
+      "destination": "experiments/confirmation_preparation/runs/submission__communication_mode_smoke_lanyun_20261005_r1"
+    },
+    {
+      "source": "results/submission/development/dag_api_recheck_20261002",
+      "destination": "experiments/model_mechanisms/runs/submission__dag_api_recheck_20261002"
+    },
+    {
+      "source": "results/submission/development/dag_api_v1",
+      "destination": "experiments/model_mechanisms/runs/submission__dag_api_v1"
+    },
+    {
+      "source": "results/submission/development/e2e_cost_closure_20261005",
+      "destination": "experiments/runtime_costs/runs/submission__e2e_cost_closure_20261005"
+    },
+    {
+      "source": "results/submission/development/e2e_episode_cost_20261005",
+      "destination": "experiments/runtime_costs/runs/submission__e2e_episode_cost_20261005"
+    },
+    {
+      "source": "results/submission/development/external_api_mas_transfer_local_20261004",
+      "destination": "experiments/delegation/runs/submission__external_api_mas_transfer_local_20261004"
+    },
+    {
+      "source": "results/submission/development/external_api_mas_v1",
+      "destination": "experiments/delegation/runs/submission__external_api_mas_v1"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_lanyun_qwen_balanced_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_qwen_balanced_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_lanyun_qwen_full_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_qwen_full_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_lanyun_smoke_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_smoke_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_balanced_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005_semantic_r2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_balanced_20261005_semantic_r2"
+    },
+    {
+      "source": "results/submission/development/frozen_communication_transfer_qwen_full_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_full_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_source",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_source"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v1",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_v1"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_v2"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_glm_complete_20261006_v1",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_glm_complete_20261006_v1"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_20261005_v1"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006_v2"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v3",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006_v3"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261006_flash",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_flash"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261006_glm_topup",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_glm_topup"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261006_qwen_smoke",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_qwen_smoke"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261006_qwen37_smoke",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_qwen37_smoke"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261006_smoke",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_smoke"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261007_deepseek_full",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261007_deepseek_full"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_20261007_deepseek_smoke",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261007_deepseek_smoke"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_glm_20261006_r1",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_glm_20261006_r1"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_lanyun_qwen_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_qwen_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_local_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_local_20261006_r1",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261006_r1"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_local_20261006_r2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261006_r2"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005_semantic",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005_semantic"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005_semantic_r2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005_semantic_r2"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_transfer_lanyun_qwen_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_qwen_20261005"
+    },
+    {
+      "source": "results/submission/development/frozen_confirmation_transfer_lanyun_qwen_20261005_semantic_r2",
+      "destination": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_qwen_20261005_semantic_r2"
+    },
+    {
+      "source": "results/submission/development/harnessaudit",
+      "destination": "experiments/harnessaudit/runs/submission__harnessaudit"
+    },
+    {
+      "source": "results/submission/development/harnessaudit_expansion",
+      "destination": "experiments/harnessaudit/runs/submission__harnessaudit_expansion"
+    },
+    {
+      "source": "results/submission/development/harnessaudit_paired",
+      "destination": "experiments/harnessaudit/runs/submission__harnessaudit_paired"
+    },
+    {
+      "source": "results/submission/development/hierarchical_v3_probe_20261006",
+      "destination": "experiments/synthetic_mas/runs/submission__hierarchical_v3_probe_20261006"
+    },
+    {
+      "source": "results/submission/development/independent_confirmation_audit_20261005",
+      "destination": "experiments/confirmation_preparation/runs/submission__independent_confirmation_audit_20261005"
+    },
+    {
+      "source": "results/submission/development/independent_judge_a2a_20261002",
+      "destination": "experiments/llm_judge/runs/submission__independent_judge_a2a_20261002"
+    },
+    {
+      "source": "results/submission/development/independent_judge_pilot_20261002",
+      "destination": "experiments/llm_judge/runs/submission__independent_judge_pilot_20261002"
+    },
+    {
+      "source": "results/submission/development/independent_mas_relational_v1",
+      "destination": "experiments/synthetic_mas/runs/submission__independent_mas_relational_v1"
+    },
+    {
+      "source": "results/submission/development/independent_mas_v3_grouped_20261002",
+      "destination": "experiments/synthetic_mas/runs/submission__independent_mas_v3_grouped_20261002"
+    },
+    {
+      "source": "results/submission/development/journal_recheck_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__journal_recheck_20261005"
+    },
+    {
+      "source": "results/submission/development/lanyun_api_projection_v1",
+      "destination": "experiments/delegation/runs/submission__lanyun_api_projection_v1"
+    },
+    {
+      "source": "results/submission/development/lanyun_attempt_risk_r14",
+      "destination": "experiments/delegation/runs/submission__lanyun_attempt_risk_r14"
+    },
+    {
+      "source": "results/submission/development/lanyun_attempt_risk_r15",
+      "destination": "experiments/delegation/runs/submission__lanyun_attempt_risk_r15"
+    },
+    {
+      "source": "results/submission/development/lanyun_knowledge_attempt_local_20261004",
+      "destination": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_local_20261004"
+    },
+    {
+      "source": "results/submission/development/lanyun_knowledge_attempt_r14",
+      "destination": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_r14"
+    },
+    {
+      "source": "results/submission/development/lanyun_knowledge_attempt_r15",
+      "destination": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_r15"
+    },
+    {
+      "source": "results/submission/development/learned_baselines_recheck_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__learned_baselines_recheck_20261005"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_400_20261006_r1",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_400_20261006_r1"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_assembled_final_r1",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_assembled_final_r1"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_merged_r1",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_merged_r1"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_merged_r2",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_merged_r2"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_r1",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_r1"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_all_r2",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_all_r2"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r1",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r1"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r2",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r2"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r3",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r3"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_smoke_20261006",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_smoke_20261006"
+    },
+    {
+      "source": "results/submission/development/llm_judge_baseline_lanyun_smoke_20261006_r2",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_smoke_20261006_r2"
+    },
+    {
+      "source": "results/submission/development/llm_judge_dryrun_20261006",
+      "destination": "experiments/llm_judge/runs/submission__llm_judge_dryrun_20261006"
+    },
+    {
+      "source": "results/submission/development/local_seeded_relation_v1",
+      "destination": "experiments/synthetic_mas/runs/submission__local_seeded_relation_v1"
+    },
+    {
+      "source": "results/submission/development/mas_baselines_recheck_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__mas_baselines_recheck_20261005"
+    },
+    {
+      "source": "results/submission/development/mas_baselines_recheck_20261005_v2",
+      "destination": "experiments/synthetic_mas/runs/submission__mas_baselines_recheck_20261005_v2"
+    },
+    {
+      "source": "results/submission/development/mast_two_layer_v2_20261005",
+      "destination": "experiments/mast_transfer/runs/submission__mast_two_layer_v2_20261005"
+    },
+    {
+      "source": "results/submission/development/model_transfer_local_v1",
+      "destination": "experiments/delegation/runs/submission__model_transfer_local_v1"
+    },
+    {
+      "source": "results/submission/development/paired_bootstrap_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__paired_bootstrap_20261005"
+    },
+    {
+      "source": "results/submission/development/prevalence_shift_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__prevalence_shift_20261005"
+    },
+    {
+      "source": "results/submission/development/quadsentinel_confirmation_20261001",
+      "destination": "experiments/confirmation_preparation/runs/submission__quadsentinel_confirmation_20261001"
+    },
+    {
+      "source": "results/submission/development/quadsentinel_preflight",
+      "destination": "experiments/harnessaudit/runs/submission__quadsentinel_preflight"
+    },
+    {
+      "source": "results/submission/development/quadsentinel_replication_20261001",
+      "destination": "experiments/harnessaudit/runs/submission__quadsentinel_replication_20261001"
+    },
+    {
+      "source": "results/submission/development/reliability_bayes_recheck_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__reliability_bayes_recheck_20261005"
+    },
+    {
+      "source": "results/submission/development/repro_smoke_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__repro_smoke_20261005"
+    },
+    {
+      "source": "results/submission/development/repro_smoke_eval_20261005",
+      "destination": "experiments/synthetic_mas/runs/submission__repro_smoke_eval_20261005"
+    },
+    {
+      "source": "results/submission/development/semantic_extraction_cost_20261005_lanyun_r1",
+      "destination": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_r1"
+    },
+    {
+      "source": "results/submission/development/semantic_extraction_cost_20261005_lanyun_r2",
+      "destination": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_r2"
+    },
+    {
+      "source": "results/submission/development/semantic_extraction_cost_20261005_lanyun_v2",
+      "destination": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_v2"
+    },
+    {
+      "source": "results/submission/development/shared_credit_pilot",
+      "destination": "experiments/harnessaudit/runs/submission__shared_credit_pilot"
+    },
+    {
+      "source": "results/submission/development/shared_credit_pilot_confirmation",
+      "destination": "experiments/confirmation_preparation/runs/submission__shared_credit_pilot_confirmation"
+    },
+    {
+      "source": "results/submission/development/shared_credit_pilot_final_run",
+      "destination": "experiments/harnessaudit/runs/submission__shared_credit_pilot_final_run"
+    },
+    {
+      "source": "results/submission/development/strong_baselines_canonical_20261006",
+      "destination": "experiments/synthetic_mas/runs/submission__strong_baselines_canonical_20261006"
+    },
+    {
+      "source": "results/submission/development/training_cost_canonical_20261006",
+      "destination": "experiments/runtime_costs/runs/submission__training_cost_canonical_20261006"
+    },
+    {
+      "source": "results/submission/development/unified_topology_api_20261005_lanyun",
+      "destination": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_lanyun"
+    },
+    {
+      "source": "results/submission/development/unified_topology_api_20261005_lanyun_r2",
+      "destination": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_lanyun_r2"
+    },
+    {
+      "source": "results/submission/development/unified_topology_api_20261005_r1",
+      "destination": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_r1"
+    },
+    {
+      "source": "results/submission/development/who_when_localization_20261005",
+      "destination": "experiments/failure_attribution/runs/submission__who_when_localization_20261005"
+    },
+    {
+      "source": "results/submission/development/who_when_localization_20261005_smoke",
+      "destination": "experiments/failure_attribution/runs/submission__who_when_localization_20261005_smoke"
+    },
+    {
+      "source": "results/submission/development/independent_mas_release_validation_latest.json",
+      "destination": "experiments/synthetic_mas/runs/submission__independent_mas_release_validation_latest.json"
+    },
+    {
+      "source": "results/submission/development/JOURNAL_EVAL_AUDIT_20261002.md",
+      "destination": "experiments/model_mechanisms/runs/submission__JOURNAL_EVAL_AUDIT_20261002.md"
+    },
+    {
+      "source": "results/submission/development/paired_information_baselines_20261006.json",
+      "destination": "experiments/model_mechanisms/runs/submission__paired_information_baselines_20261006.json"
+    },
+    {
+      "source": "results/submission/diagnostic_knowledge_template",
+      "destination": "experiments/submission_audit/runs/diagnostic_knowledge_template"
+    },
+    {
+      "source": "results/submission/final_eval",
+      "destination": "experiments/submission_audit/runs/final_eval"
+    },
+    {
+      "source": "results/submission/final_eval_candidate",
+      "destination": "experiments/submission_audit/runs/final_eval_candidate"
+    },
+    {
+      "source": "results/submission/final_eval_strict",
+      "destination": "experiments/submission_audit/runs/final_eval_strict"
+    },
+    {
+      "source": "results/submission/final_eval_strict_probe",
+      "destination": "experiments/submission_audit/runs/final_eval_strict_probe"
+    },
+    {
+      "source": "results/task_cue_message_development_20260920",
+      "destination": "experiments/message_workflows/runs/task_cue_message_development_20260920"
+    },
+    {
+      "source": "results/task_cue_message_development_replay_20260920",
+      "destination": "experiments/message_workflows/runs/task_cue_message_development_replay_20260920"
+    },
+    {
+      "source": "results/task_cue_message_development_verified_20260920",
+      "destination": "experiments/message_workflows/runs/task_cue_message_development_verified_20260920"
+    },
+    {
+      "source": "results/task_cue_message_score_resolution_20260920",
+      "destination": "experiments/message_workflows/runs/task_cue_message_score_resolution_20260920"
+    },
+    {
+      "source": "results/task_field_semantics_extraction_20260920",
+      "destination": "experiments/message_workflows/runs/task_field_semantics_extraction_20260920"
+    },
+    {
+      "source": "results/template_graph_examples_20260919",
+      "destination": "experiments/model_mechanisms/runs/template_graph_examples_20260919"
+    },
+    {
+      "source": "results/temporal_monitor_v1",
+      "destination": "experiments/synthetic_mas/runs/temporal_monitor_v1"
+    },
+    {
+      "source": "results/text_conditioned_bn_mechanism_20260919",
+      "destination": "experiments/model_mechanisms/runs/text_conditioned_bn_mechanism_20260919"
+    },
+    {
+      "source": "results/two_layer_independent_mas_v3",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_mas_v3"
+    },
+    {
+      "source": "results/two_layer_independent_multiseed_v1",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_multiseed_v1"
+    },
+    {
+      "source": "results/two_layer_independent_seed_20260914",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260914"
+    },
+    {
+      "source": "results/two_layer_independent_seed_20260915",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260915"
+    },
+    {
+      "source": "results/two_layer_independent_seed_20260916",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260916"
+    },
+    {
+      "source": "results/two_layer_independent_v2",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v2"
+    },
+    {
+      "source": "results/two_layer_independent_v3",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v3"
+    },
+    {
+      "source": "results/two_layer_independent_v3_seed_20260914",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260914"
+    },
+    {
+      "source": "results/two_layer_independent_v3_seed_20260915",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260915"
+    },
+    {
+      "source": "results/two_layer_independent_v3_seed_20260916",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260916"
+    },
+    {
+      "source": "results/two_layer_independent_v4",
+      "destination": "experiments/synthetic_mas/runs/two_layer_independent_v4"
+    },
+    {
+      "source": "results/two_layer_v2",
+      "destination": "experiments/synthetic_mas/runs/two_layer_v2"
+    },
+    {
+      "source": "results/typed_action_identity_diagnostic_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_action_identity_diagnostic_20260919"
+    },
+    {
+      "source": "results/typed_action_supervision_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_action_supervision_20260919"
+    },
+    {
+      "source": "results/typed_action_supervision_audit_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_action_supervision_audit_20260919"
+    },
+    {
+      "source": "results/typed_action_supervision_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_action_supervision_verified_20260919"
+    },
+    {
+      "source": "results/typed_authorization_revision_diagnostic_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_authorization_revision_diagnostic_20260919"
+    },
+    {
+      "source": "results/typed_joint_bn_v2_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_joint_bn_v2_20260919"
+    },
+    {
+      "source": "results/typed_knowledge_graph_examples_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_knowledge_graph_examples_20260919"
+    },
+    {
+      "source": "results/typed_online_graph_equivalence_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_online_graph_equivalence_20260919"
+    },
+    {
+      "source": "results/typed_online_graph_verified_20260919",
+      "destination": "experiments/model_mechanisms/runs/typed_online_graph_verified_20260919"
+    },
+    {
+      "source": "results/uncertainty_calibration_v1",
+      "destination": "experiments/synthetic_mas/runs/uncertainty_calibration_v1"
+    },
+    {
+      "source": "results/unified_independent_group_v2",
+      "destination": "experiments/synthetic_mas/runs/unified_independent_group_v2"
+    },
+    {
+      "source": "results/unified_independent_public_v2",
+      "destination": "experiments/synthetic_mas/runs/unified_independent_public_v2"
+    },
+    {
+      "source": "results/unified_independent_v2",
+      "destination": "experiments/synthetic_mas/runs/unified_independent_v2"
+    },
+    {
+      "source": "results/unified_monitor_v2",
+      "destination": "experiments/synthetic_mas/runs/unified_monitor_v2"
+    },
+    {
+      "source": "results/unified_topology_queue_smoke",
+      "destination": "experiments/confirmation_preparation/runs/unified_topology_queue_smoke"
+    },
+    {
+      "source": "results/unified_topology_queue_smoke_join",
+      "destination": "experiments/confirmation_preparation/runs/unified_topology_queue_smoke_join"
+    },
+    {
+      "source": "results/workflow_risk_composition_20260920",
+      "destination": "experiments/model_mechanisms/runs/workflow_risk_composition_20260920"
+    },
+    {
+      "source": "results/workflow_risk_composition_replay_20260920",
+      "destination": "experiments/model_mechanisms/runs/workflow_risk_composition_replay_20260920"
+    },
+    {
+      "source": "results/.gitkeep",
+      "destination": ".local/backups/structure_20261014/placeholders/results.gitkeep"
+    },
+    {
+      "source": "results/FIRST_VERSION_REPORT.md",
+      "destination": "experiments/synthetic_mas/runs/imported_root_reports/FIRST_VERSION_REPORT.md"
+    },
+    {
+      "source": "results/generalization_stress_v1.log",
+      "destination": "experiments/synthetic_mas/runs/imported_root_reports/generalization_stress_v1.log"
+    },
+    {
+      "source": "results/uncertainty_calibration_v1.log",
+      "destination": "experiments/synthetic_mas/runs/imported_root_reports/uncertainty_calibration_v1.log"
+    }
+  ]
+}

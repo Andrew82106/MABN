@@ -1,0 +1,32 @@
+{
+  "repository": "abhika-m/FAVA",
+  "revision": "7ec08c2dcbff016a7b6af93152994600b646f0a5",
+  "files": [
+    {
+      "original_path": "README.md",
+      "url": "https://raw.githubusercontent.com/abhika-m/FAVA/7ec08c2dcbff016a7b6af93152994600b646f0a5/README.md",
+      "file": "prelab\\benchmark_ragtruth_qa\\additional_data\\fava_training\\official_training_code\\README.md",
+      "sha256": "62684bf4ec0c46f92b2ca822d300c5db6ff6c4bba916e808d1fded8be293de65"
+    },
+    {
+      "original_path": "training/process_train_data.py",
+      "url": "https://raw.githubusercontent.com/abhika-m/FAVA/7ec08c2dcbff016a7b6af93152994600b646f0a5/training/process_train_data.py",
+      "file": "prelab\\benchmark_ragtruth_qa\\additional_data\\fava_training\\official_training_code\\training__process_train_data.py",
+      "sha256": "36ba7b0c0677e07e74a3cd3d6ce813c879dd6c2197670f7427855f4f7ec4b046"
+    },
+    {
+      "original_path": "training/generate_train_data.py",
+      "url": "https://raw.githubusercontent.com/abhika-m/FAVA/7ec08c2dcbff016a7b6af93152994600b646f0a5/training/generate_train_data.py",
+      "file": "prelab\\benchmark_ragtruth_qa\\additional_data\\fava_training\\official_training_code\\training__generate_train_data.py",
+      "sha256": "c662e4475a62b807649cc705d01a08e9442f0afefca68698496a0fb3cd04e171"
+    },
+    {
+      "original_path": "training/sample_wiki/prepare_source_data.py",
+      "url": "https://raw.githubusercontent.com/abhika-m/FAVA/7ec08c2dcbff016a7b6af93152994600b646f0a5/training/sample_wiki/prepare_source_data.py",
+      "file": "prelab\\benchmark_ragtruth_qa\\additional_data\\fava_training\\official_training_code\\training__sample_wiki__prepare_source_data.py",
+      "sha256": "ae815b3e1282c8374c69cb71b7f011605c5292acdaa07c95cb6fffec4054ac52"
+    }
+  ],
+  "used_as_documentation_only": true,
+  "downloaded_evaluation_files": false
+}

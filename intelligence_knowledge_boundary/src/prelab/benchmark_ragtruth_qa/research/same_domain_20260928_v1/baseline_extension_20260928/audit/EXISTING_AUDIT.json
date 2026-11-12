@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "data": {
+    "status": "PASS",
+    "counts": {
+      "fit": {
+        "answers": 1292,
+        "groups": 617,
+        "lexical_tokens": 121532,
+        "eligible_windows": 137192,
+        "no_hint_answers": 681
+      },
+      "validation": {
+        "answers": 271,
+        "groups": 133,
+        "lexical_tokens": 27674,
+        "eligible_windows": 31283,
+        "no_hint_answers": 135
+      },
+      "test": {
+        "answers": 279,
+        "groups": 133,
+        "lexical_tokens": 25722,
+        "eligible_windows": 28977,
+        "no_hint_answers": 155
+      }
+    },
+    "files_sha256": {
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\metrics.py": "59326891250c42b4cc0ee18abb2a8559b381f534204f9bf622a482a57a5145f4",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\evaluate_final.py": "427335fb6b8ad12f840d6f7e020c6d58690594b781deeee114f2cdecaf1778a0",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\FROZEN_PREDICTIONS.json": "a831fe30c3dd4eeba2007ae17478775119e4b5b8cb12ea324fdbba4ee3f03a53",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\TEST_RELEASE.json": "c3d0c073a78e9ece83c618fc090ca55c08a00c15de40b1fc3335fcec81e95a79",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\MANIFEST.json": "8b2d4cbb74ac82447e959a24e7d3f6cb1c1d1f58e71d0f17375a896cb65c578e",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\split_assignments.jsonl": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\GROUP_AUDIT.json": "d5e6bad21ec64ec13017ed2c839b4b8f61f1ca05285e136bffba9f4d050be6d7",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\GROUPS.json": "22b5a42e47c2c60734fabf89008553f036b43bdf4a929193e034a5f40c36f625",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\fit\\geometry.jsonl": "fd18569c25561deda3b232dbeed8c3358579fc69f053efdde04c9577154185bb",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\fit\\inputs.jsonl": "0f3488ae9cfe257adf039a7128e21967553e38fcb0e210709e36a1128ba9d438",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\geometry.jsonl": "8bf228f50195f2d4c249118c08ec91b9428855f6aa743a015d34003fc2730efd",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\inputs.jsonl": "6f5e5d755c951ee8f38e9d07c098f0c08b8aa961c59013511733a2baa727baf4",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\geometry.jsonl": "79d37ec952ed333551aee7b6e5611f3431b86eaedf3a478740ea4a15a4e2d073",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\inputs.jsonl": "307ef1d5983e4fd16ec8d9f5d8833da2f101b44a8391dd215a4e9a603353f0de",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\answers.jsonl": "fa3f6ff688c2ca4b0c7f8554a90cf2fddb4f30c3fb5a2b7fd0253cae86a895db",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\sequences.jsonl": "248e04600c2aedafbe2c6f5f0d39c3d4ece5166cb0baaf985a2385b5533bf7c9",
+      "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\evaluate_extensions.py": "0430b3a34f919b902c234ae8c0b430849d3a59b32adb8e4333a5e76ed3fb7896"
+    },
+    "cross_split_identity_collisions": 0,
+    "cross_split_source_group_collisions": 0,
+    "all_offsets_and_lexical_masks_checked": true,
+    "scope": "split/data integrity; does not alone establish absence of pretrained-data overlap"
+  },
+  "methods": {
+    "Lookback-default": {
+      "status": "PASS",
+      "independent_counts_and_metrics_match": true,
+      "validation_thresholds_reproduced": true,
+      "all_prediction_rows_geometry_hash_bound": true,
+      "old_frozen_result_reproduced_with_float_tolerance_1e_12": true,
+      "test_predictions_sha256": "51f7a5663ab6f230cf14212b3103a86dedaff1529ce8b6b06436daa5f6d184dc",
+      "validation_predictions_sha256": "f55454d38ec9c062baae52cc821025552bb0603bf56c332ef1ad7fdd6c8e9431",
+      "native_granularity": "original frozen record"
+    },
+    "Lookback-tuned": {
+      "status": "PASS",
+      "independent_counts_and_metrics_match": true,
+      "validation_thresholds_reproduced": true,
+      "all_prediction_rows_geometry_hash_bound": true,
+      "old_frozen_result_reproduced_with_float_tolerance_1e_12": true,
+      "test_predictions_sha256": "3348e60a4bbc70a78b38ffd3129f6c3b14f263b114ff389b043d7429290cbd63",
+      "validation_predictions_sha256": "651b0bde79a1574e4076ce441f867ef8928eb19c600e42984a181db6ae7045ac",
+      "native_granularity": "original frozen record"
+    },
+    "RAGognizer-retrained-NF4": {
+      "status": "PASS",
+      "independent_counts_and_metrics_match": true,
+      "validation_thresholds_reproduced": true,
+      "all_prediction_rows_geometry_hash_bound": true,
+      "old_frozen_result_reproduced_with_float_tolerance_1e_12": true,
+      "test_predictions_sha256": "157546225fda9d17a6942e74f776a4c9de1b1c9514ab4108da76e4830cc63f88",
+      "validation_predictions_sha256": "e1d4b09a9a08759205bb833374a558b432e0b198db99ff2daf6df7171bc340aa",
+      "native_granularity": "original frozen record"
+    },
+    "Fusion-window-HGB": {
+      "status": "PASS",
+      "independent_counts_and_metrics_match": true,
+      "validation_thresholds_reproduced": true,
+      "all_prediction_rows_geometry_hash_bound": true,
+      "old_frozen_result_reproduced_with_float_tolerance_1e_12": true,
+      "test_predictions_sha256": "5a5e8ac8ae1a2ceffb158f190d3ac6f730a352411bd4cab8f557f36701ca2601",
+      "validation_predictions_sha256": "6caf7c70943156266f826855d0563ff696380bde4d668165b56db93be36377bc",
+      "native_granularity": "original frozen record"
+    }
+  },
+  "test_labels_sha256": "64e7d766bcd7f4d79df342afba59bac3b5c6c36559fadc8a265ca934236829d0",
+  "primary_candidate_unchanged": "Fusion-window-HGB",
+  "result_sha256": "e9c2aedcef440e2fdfbbef00eff7788a433aa883ac053c2fa448ae693abae492"
+}

@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "independent_baselines": 6,
+  "primary_candidates": 1,
+  "default_lookback_only_supplementary": true,
+  "report_copies_sha256_identical": "c04949f7dfdc668395dcca0a19b5f50277de5748c994183a473551d4d200adc1",
+  "tables": {
+    "no_hint": {
+      "rows": 7,
+      "all_printed_values_match_result_json": true
+    },
+    "all": {
+      "rows": 7,
+      "all_printed_values_match_result_json": true
+    }
+  },
+  "test_answers_primary": 155,
+  "test_answers_all": 279,
+  "bootstrap_samples": 2000,
+  "strongest_baseline_and_ci_text_recomputed": true,
+  "protected_document_hashes_unchanged": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\reports\\paper\\面向开源情报问答的大语言模型事实风险监测与定位研究（初稿）.docx": "c487f0d7ac8311a506be3436d34ea19110bd21ce88618f97f755b4b848b385a4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\reports\\paper\\面向开源情报问答的大语言模型事实风险监测与定位研究（正式论文）.docx": "c487f0d7ac8311a506be3436d34ea19110bd21ce88618f97f755b4b848b385a4"
+  },
+  "main_f1": {
+    "Lookback-tuned": {
+      "answer": 0.7297297297297297,
+      "window": 0.5216324710080286
+    },
+    "RAGognizer-retrained-NF4": {
+      "answer": 0.8,
+      "window": 0.6240278895146152
+    },
+    "ReDeEP-paper-FP16": {
+      "answer": 0.6816143497757847,
+      "window": 0.35829185223997906
+    },
+    "LUMINA-NF4": {
+      "answer": 0.65625,
+      "window": 0.36708629812078086
+    },
+    "LettuceDetect-v1-retrained-BF16-forward": {
+      "answer": 0.797752808988764,
+      "window": 0.5994244604316546
+    },
+    "MiniCheck-FlanT5-FP32-sentence": {
+      "answer": 0.6888888888888889,
+      "window": 0.45092365902515025
+    },
+    "Fusion-window-HGB": {
+      "answer": 0.8439306358381503,
+      "window": 0.6458103638368247
+    }
+  },
+  "reports": [
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\RESULTS_ZH.md",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\reports\\paper\\tmp\\six_baselines_20260928\\RESULTS_ZH.md"
+  ],
+  "stage_receipts": [
+    {
+      "name": "final_input_audit",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\audit_whitebox.py"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "4b854ac2b6d4d1c3e1f9ed923cec43c5821eb6113b8d9039d0b3e1ccfebe88ca",
+      "started_at": 1790604781.3929746,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\final_input_audit\\20260928_221301.log",
+      "launcher_pid": 14868,
+      "child_pid": 5784,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604793.4219205,
+      "elapsed_seconds": 12.028945922851562,
+      "entry_sha256_after": "4b854ac2b6d4d1c3e1f9ed923cec43c5821eb6113b8d9039d0b3e1ccfebe88ca"
+    },
+    {
+      "name": "final_lettuce_audit",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\audit_lettuce.py"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "1f05741ff14ca61adb008764bcb01d7aa3c78a5573588b63c415c4f9a1b0c1ab",
+      "started_at": 1790604793.4936435,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\final_lettuce_audit\\20260928_221313.log",
+      "launcher_pid": 53448,
+      "child_pid": 38452,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604803.0902767,
+      "elapsed_seconds": 9.596633195877075,
+      "entry_sha256_after": "1f05741ff14ca61adb008764bcb01d7aa3c78a5573588b63c415c4f9a1b0c1ab"
+    },
+    {
+      "name": "final_minicheck_audit",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\audit_minicheck.py"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "6408a503a8c5abf427c79a13357bf39a61b9e9bb2dceb5ae2a3c8e6baa5fff3b",
+      "started_at": 1790604803.1662817,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\final_minicheck_audit\\20260928_221323.log",
+      "launcher_pid": 68352,
+      "child_pid": 39640,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604810.2220097,
+      "elapsed_seconds": 7.055727958679199,
+      "entry_sha256_after": "6408a503a8c5abf427c79a13357bf39a61b9e9bb2dceb5ae2a3c8e6baa5fff3b"
+    },
+    {
+      "name": "prepare_six_baselines",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\prepare_new_config.py"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "c16b07897a82110512805b457859baf016d748916eb02a98f830f69f0d9d76da",
+      "started_at": 1790604810.3062963,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\prepare_six_baselines\\20260928_221330.log",
+      "launcher_pid": 68748,
+      "child_pid": 84812,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604810.3778877,
+      "elapsed_seconds": 0.07159137725830078,
+      "entry_sha256_after": "c16b07897a82110512805b457859baf016d748916eb02a98f830f69f0d9d76da"
+    },
+    {
+      "name": "freeze_six_baselines",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\evaluate_extensions.py",
+        "freeze-new",
+        "--config",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\new_methods.json"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "0430b3a34f919b902c234ae8c0b430849d3a59b32adb8e4333a5e76ed3fb7896",
+      "started_at": 1790604810.447111,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\freeze_six_baselines\\20260928_221330.log",
+      "launcher_pid": 31680,
+      "child_pid": 57560,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604842.406831,
+      "elapsed_seconds": 31.959720134735107,
+      "entry_sha256_after": "0430b3a34f919b902c234ae8c0b430849d3a59b32adb8e4333a5e76ed3fb7896"
+    },
+    {
+      "name": "evaluate_six_baselines",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\evaluate_extensions.py",
+        "evaluate"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "0430b3a34f919b902c234ae8c0b430849d3a59b32adb8e4333a5e76ed3fb7896",
+      "started_at": 1790604842.4758492,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\evaluate_six_baselines\\20260928_221402.log",
+      "launcher_pid": 56232,
+      "child_pid": 52040,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604872.8393624,
+      "elapsed_seconds": 30.363513231277466,
+      "entry_sha256_after": "0430b3a34f919b902c234ae8c0b430849d3a59b32adb8e4333a5e76ed3fb7896"
+    },
+    {
+      "name": "report_six_baselines",
+      "command": [
+        "D:\\anaconda\\python.exe",
+        "-u",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\audit\\generate_report.py"
+      ],
+      "cwd": "D:\\Projects\\Multi_Agent_Graph_Analysis",
+      "entry_sha256": "e5131f623a7a52510a36fa334b233809bc0250dd5cd377a57f55da258d291a47",
+      "started_at": 1790604872.9156852,
+      "log": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\execution\\report_six_baselines\\20260928_221432.log",
+      "launcher_pid": 86540,
+      "child_pid": 57280,
+      "status": "complete",
+      "exit_code": 0,
+      "completed_at": 1790604879.9425778,
+      "elapsed_seconds": 7.02689266204834,
+      "entry_sha256_after": "e5131f623a7a52510a36fa334b233809bc0250dd5cd377a57f55da258d291a47"
+    }
+  ],
+  "GPU_used": false,
+  "finished_at": 1790604879.9859588
+}

@@ -1,0 +1,22 @@
+{
+  "chosen": "large",
+  "keys": {
+    "base": [
+      0.6085399054305775,
+      0.6085399054305775,
+      0.477674052412552
+    ],
+    "large": [
+      0.7453619497999272,
+      0.7453619497999272,
+      0.6911789509192107
+    ]
+  },
+  "rule": "existing validation no_hint min(two F1), windowF1, windowPrecision; exact architecture tie chooses smaller base",
+  "fixed_oof_epochs": 5,
+  "source_complete_sha256": {
+    "base": "f94b9e2294a8962537d1fe441f49ea002e754df5c9c0285e6b630ae1de1653ea",
+    "large": "2973065315f287e42ae572d758b9a3e5c62fe2b89171114ba5f2a359fa05db13"
+  },
+  "test_labels_read": false
+}

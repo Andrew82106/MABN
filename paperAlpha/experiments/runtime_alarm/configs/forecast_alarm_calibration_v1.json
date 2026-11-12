@@ -1,0 +1,15 @@
+{
+  "schema": "message-forecast-independent-calibration-study-v1",
+  "parent": "experiments/message_workflows/runs/message_hurdle_development_20260920",
+  "split_seed": "episode-alarm-calibration-v1-20260920:",
+  "calibration_template_count": 2,
+  "regularization": [0.001, 0.03],
+  "phases": ["early", "late"],
+  "target_id": "fixed-final-external-literal-disclosure",
+  "total_empirical_fpr_budget": 0.1,
+  "fixed_phase_budgets": {"early": 0.05, "late": 0.05},
+  "policies": ["fixed_half", "episode_max", "fixed_phase_budget"],
+  "baseline": {"logistic_C": 1.0, "histgb_leaves": 7, "histgb_iterations": 100, "histgb_l2": 0.1, "random_state": 17},
+  "selection": "One label-blind hash-based template partition, report all models and policies, no policy/default selection from validation results.",
+  "interpretation": "Refit without calibration templates. All datasets were previously seen in development; not a new held-out performance claim or population false-alarm guarantee. Functional-stage timing only, not wall-clock lead time."
+}

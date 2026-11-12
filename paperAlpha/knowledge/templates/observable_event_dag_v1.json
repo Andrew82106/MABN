@@ -1,0 +1,10 @@
+{
+  "schema": "observable-event-dag-v1",
+  "families": ["prepare", "work", "review", "publish", "dispatch"],
+  "features": ["bias", "visible_support", "visible_opposition", "parent_mean", "multiple_parents_all"],
+  "knowledge": {
+    "risk_ids": ["RB013", "RB014"],
+    "source_ids": [15, 16],
+    "meaning": "Track externally observable content across declared or witnessed deliveries. Literal occurrence is not malicious instruction adoption, semantic equivalence, causality, authorization or physical harm. The logistic dependency is our modeling assumption, not a theorem from the cited sources."
+  }
+}

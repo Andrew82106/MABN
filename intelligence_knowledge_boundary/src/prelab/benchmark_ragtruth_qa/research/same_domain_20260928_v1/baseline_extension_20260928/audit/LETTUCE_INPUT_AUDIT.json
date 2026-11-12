@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "all_answers_independently_retokenized": 1842,
+  "native_train_and_validation_labels_checked": 154610,
+  "all_native_labels_match_original_valid_character_spans": true,
+  "all_inputs_untruncated": true,
+  "no_labels_in_test_prepared": true,
+  "all_target_token_mapping_weights_sum_to_one": true,
+  "nonwhitespace_mapping_independently_reconstructed": true,
+  "whitespace_target_tokens_with_native_derived_nonzero_mass": 6042,
+  "splits": {
+    "fit": {
+      "rows": 1292,
+      "prepared_sha256": "e3b50b1b16ce79b9a9816be341cbe08969d14cd493ebac643246257336d2614c"
+    },
+    "validation": {
+      "rows": 271,
+      "prepared_sha256": "4a9771599545aa4f9841c3c381086543a464dc6415116a88bdfd544f85a424ae"
+    },
+    "test": {
+      "rows": 279,
+      "prepared_sha256": "ae4f1878bc8ff0c1559c12d91c0e7e05c7bf565082a081972895d0f01aee2ef1"
+    }
+  },
+  "prepared_receipt_sha256": "132cb08f0a662bc4582a22616e46721bfa46efac7cb086dc9f88aeb238e8a492",
+  "completed_prediction_checks": {
+    "validation": {
+      "rows": 271,
+      "sha256": "a7255cbcd63c6e8c2cb4228fb57dacf1c543720c4f47a71f768f7b37e3aee879",
+      "actual_projection_recomputed_from_saved_native_scores": true
+    },
+    "test": {
+      "rows": 279,
+      "sha256": "5759cf5a34308277d370ff993bc3ec757ebebedf6b927d7147515a359c408b7d",
+      "actual_projection_recomputed_from_saved_native_scores": true
+    }
+  },
+  "training_check": {
+    "epochs": 6,
+    "selected_epoch": 5,
+    "selection_recomputed_from_validation_history": true,
+    "checkpoint_sha256_verified": "53e3ee82817f24b8b67c4086c3a1548d2b81293984fb6f83527c8dd5e7bd6490",
+    "validation_replay_identical_to_selected_epoch": true
+  },
+  "code_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\semantic\\lettuce_v1.py": "e8adc46d30b42714c7d2c5fa2ce4dae65fa2427a9a28dbc69cf014590b0e2ea6",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\semantic\\common.py": "743bc6358fde0b2389df734ec88f10d93b47cbb56078628efe79531cc6feb1f6"
+  },
+  "GPU_used": false,
+  "stage": "input/label/mapping plus available actual native-score projections"
+}

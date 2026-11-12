@@ -1,0 +1,65 @@
+[
+  {
+    "file": "从检索到生成：基于大语言模型的情报合成数据可靠性评测研究_李毅.pdf",
+    "bytes": 1863779,
+    "pages": 10,
+    "sha256": "7884ebe0d40b0979a1fdc3dd8862d4bf93704340e92a7ea35965f722221b475f",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "journal_print"
+  },
+  {
+    "file": "以模治模：基于生成式人工智能的失真健康信息识别_张君冬.pdf",
+    "bytes": 2057120,
+    "pages": 9,
+    "sha256": "319e947834183a8d0541d1a1244ea53e30ab92cae8c160928588728a99336061",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "journal_print"
+  },
+  {
+    "file": "基于南海新闻动态的检索增强生成评测基准构建及实证研究_冯暑阳.pdf",
+    "bytes": 708784,
+    "pages": 9,
+    "sha256": "c7ee75dca03ab7f1b07f5069704d7f487376d1240a0587a968daad91c6612794",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "online_first"
+  },
+  {
+    "file": "基于多智能体的生成式科技情报幻觉信息检测研究_武朋.pdf",
+    "bytes": 1582721,
+    "pages": 10,
+    "sha256": "467a9694ba24a43706ef8c5eb2ff82a653e31635fd364e0f19a5088091f18583",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "online_first"
+  },
+  {
+    "file": "基于混合检索增强生成大语言模型的网络舆情多任务分析_王润周.pdf",
+    "bytes": 2420721,
+    "pages": 13,
+    "sha256": "c008b4c56c37708e79240c73467f1499ab08c74c25f2477286fd4458d4a4fb05",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "journal_print"
+  },
+  {
+    "file": "大语言模型幻觉引发信息污染的成因解构与治理研究_吴亚平.pdf",
+    "bytes": 1722502,
+    "pages": 10,
+    "sha256": "bd88f824013675a18c0fb5cb52ac95317d68f1ec7bb95880eed88720a3d40a8c",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "journal_print"
+  },
+  {
+    "file": "大语言模型生成摘要可靠性评测研究_王伟正.pdf",
+    "bytes": 1527782,
+    "pages": 9,
+    "sha256": "5c945e7b4c9cc954d364b8a49faa1cad661722749a6a1722c7060867a756df92",
+    "source": "CNKI via authorized university WebVPN browser session",
+    "download_date": "2026-10-09",
+    "version": "journal_print"
+  }
+]

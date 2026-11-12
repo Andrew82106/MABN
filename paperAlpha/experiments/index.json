@@ -1,0 +1,2452 @@
+{
+  "schema": "paperalpha-experiment-index-v1",
+  "primary_protocol": "experiments/protocol.json",
+  "baseline_catalog": "experiments/baselines.json",
+  "primary_development_run": "experiments/synthetic_mas/runs/independent_mas_journal_v1",
+  "confirmation_status": "not_independently_human_confirmed",
+  "artifact_rule": "Do not edit raw runs, frozen source, hashes, labels or metrics during organization.",
+  "families": [
+    {
+      "name": "a2asecbench",
+      "title": "A2A 安全基准",
+      "runs": [
+        {
+          "id": "a2a_baselines_v1",
+          "path": "experiments/a2asecbench/runs/a2a_baselines_v1",
+          "previous_path": "results/a2a_baselines_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "a2a_early_warning_v1",
+          "path": "experiments/a2asecbench/runs/a2a_early_warning_v1",
+          "previous_path": "results/a2a_early_warning_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "a2a_fusion_v1",
+          "path": "experiments/a2asecbench/runs/a2a_fusion_v1",
+          "previous_path": "results/a2a_fusion_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "a2a_layer2_v1",
+          "path": "experiments/a2asecbench/runs/a2a_layer2_v1",
+          "previous_path": "results/a2a_layer2_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "a2a_prefix_v1",
+          "path": "experiments/a2asecbench/runs/a2a_prefix_v1",
+          "previous_path": "results/a2a_prefix_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "a2asecbench_v1",
+          "path": "experiments/a2asecbench/runs/a2asecbench_v1",
+          "previous_path": "results/a2asecbench_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__a2asecbench_api_20261001",
+          "path": "experiments/a2asecbench/runs/submission__a2asecbench_api_20261001",
+          "previous_path": "results/submission/development/a2asecbench_api_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__a2asecbench_api_final_20261002",
+          "path": "experiments/a2asecbench/runs/submission__a2asecbench_api_final_20261002",
+          "previous_path": "results/submission/development/a2asecbench_api_final_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "atbench_transfer",
+      "title": "ATBench 外部迁移",
+      "runs": [
+        {
+          "id": "submission__atbench_external_20261005",
+          "path": "experiments/atbench_transfer/runs/submission__atbench_external_20261005",
+          "previous_path": "results/submission/development/atbench_external_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__atbench_external_20261005_v2",
+          "path": "experiments/atbench_transfer/runs/submission__atbench_external_20261005_v2",
+          "previous_path": "results/submission/development/atbench_external_20261005_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "confirmation_preparation",
+      "title": "确认集准备",
+      "runs": [
+        {
+          "id": "submission__annotation_packets_smoke",
+          "path": "experiments/confirmation_preparation/runs/submission__annotation_packets_smoke",
+          "previous_path": "results/submission/development/annotation_packets_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__blind_model_confirmation_lanyun_20261005_r1",
+          "path": "experiments/confirmation_preparation/runs/submission__blind_model_confirmation_lanyun_20261005_r1",
+          "previous_path": "results/submission/development/blind_model_confirmation_lanyun_20261005_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__communication_mode_smoke_lanyun_20261005_r1",
+          "path": "experiments/confirmation_preparation/runs/submission__communication_mode_smoke_lanyun_20261005_r1",
+          "previous_path": "results/submission/development/communication_mode_smoke_lanyun_20261005_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_lanyun_qwen_balanced_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_qwen_balanced_20261005",
+          "previous_path": "results/submission/development/frozen_communication_lanyun_qwen_balanced_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_lanyun_qwen_full_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_qwen_full_20261005",
+          "previous_path": "results/submission/development/frozen_communication_lanyun_qwen_full_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_lanyun_smoke_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_lanyun_smoke_20261005",
+          "previous_path": "results/submission/development/frozen_communication_lanyun_smoke_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_transfer_qwen_balanced_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_balanced_20261005",
+          "previous_path": "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_transfer_qwen_balanced_20261005_semantic_r2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_balanced_20261005_semantic_r2",
+          "previous_path": "results/submission/development/frozen_communication_transfer_qwen_balanced_20261005_semantic_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_communication_transfer_qwen_full_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_communication_transfer_qwen_full_20261005",
+          "previous_path": "results/submission/development/frozen_communication_transfer_qwen_full_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_20261007_balanced_160_source",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_source",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_source",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_20261007_balanced_160_v1",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_v1",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_20261007_balanced_160_v2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_20261007_balanced_160_v2",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_20261007_balanced_160_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_glm_complete_20261006_v1",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_glm_complete_20261006_v1",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_glm_complete_20261006_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_qwen_20261005_v1",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_20261005_v1",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_qwen_20261005_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_qwen_full_20261006",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_qwen_full_20261006_v2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006_v2",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_blind_packets_qwen_full_20261006_v3",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_blind_packets_qwen_full_20261006_v3",
+          "previous_path": "results/submission/development/frozen_confirmation_blind_packets_qwen_full_20261006_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261005",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261006_flash",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_flash",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261006_flash",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261006_glm_topup",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_glm_topup",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261006_glm_topup",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261006_qwen_smoke",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_qwen_smoke",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261006_qwen_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261006_qwen37_smoke",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_qwen37_smoke",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261006_qwen37_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261006_smoke",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261006_smoke",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261006_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261007_deepseek_full",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261007_deepseek_full",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261007_deepseek_full",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_20261007_deepseek_smoke",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_20261007_deepseek_smoke",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_20261007_deepseek_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_glm_20261006_r1",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_glm_20261006_r1",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_glm_20261006_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_lanyun_qwen_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_lanyun_qwen_20261005",
+          "previous_path": "results/submission/development/frozen_confirmation_lanyun_qwen_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_local_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261005",
+          "previous_path": "results/submission/development/frozen_confirmation_local_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_local_20261006_r1",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261006_r1",
+          "previous_path": "results/submission/development/frozen_confirmation_local_20261006_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_local_20261006_r2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_local_20261006_r2",
+          "previous_path": "results/submission/development/frozen_confirmation_local_20261006_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_transfer_lanyun_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005",
+          "previous_path": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_transfer_lanyun_20261005_semantic",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005_semantic",
+          "previous_path": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005_semantic",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_transfer_lanyun_20261005_semantic_r2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_20261005_semantic_r2",
+          "previous_path": "results/submission/development/frozen_confirmation_transfer_lanyun_20261005_semantic_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_transfer_lanyun_qwen_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_qwen_20261005",
+          "previous_path": "results/submission/development/frozen_confirmation_transfer_lanyun_qwen_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__frozen_confirmation_transfer_lanyun_qwen_20261005_semantic_r2",
+          "path": "experiments/confirmation_preparation/runs/submission__frozen_confirmation_transfer_lanyun_qwen_20261005_semantic_r2",
+          "previous_path": "results/submission/development/frozen_confirmation_transfer_lanyun_qwen_20261005_semantic_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_confirmation_audit_20261005",
+          "path": "experiments/confirmation_preparation/runs/submission__independent_confirmation_audit_20261005",
+          "previous_path": "results/submission/development/independent_confirmation_audit_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__quadsentinel_confirmation_20261001",
+          "path": "experiments/confirmation_preparation/runs/submission__quadsentinel_confirmation_20261001",
+          "previous_path": "results/submission/development/quadsentinel_confirmation_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__shared_credit_pilot_confirmation",
+          "path": "experiments/confirmation_preparation/runs/submission__shared_credit_pilot_confirmation",
+          "previous_path": "results/submission/development/shared_credit_pilot_confirmation",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__unified_topology_api_20261005_lanyun",
+          "path": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_lanyun",
+          "previous_path": "results/submission/development/unified_topology_api_20261005_lanyun",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__unified_topology_api_20261005_lanyun_r2",
+          "path": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_lanyun_r2",
+          "previous_path": "results/submission/development/unified_topology_api_20261005_lanyun_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__unified_topology_api_20261005_r1",
+          "path": "experiments/confirmation_preparation/runs/submission__unified_topology_api_20261005_r1",
+          "previous_path": "results/submission/development/unified_topology_api_20261005_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_topology_queue_smoke",
+          "path": "experiments/confirmation_preparation/runs/unified_topology_queue_smoke",
+          "previous_path": "results/unified_topology_queue_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_topology_queue_smoke_join",
+          "path": "experiments/confirmation_preparation/runs/unified_topology_queue_smoke_join",
+          "previous_path": "results/unified_topology_queue_smoke_join",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "delegation",
+      "title": "委派与授权",
+      "runs": [
+        {
+          "id": "balanced_delegation_api_v1_20261002",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002",
+          "previous_path": "results/balanced_delegation_api_v1_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r10",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r10",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r10",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r11",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r11",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r11",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r12",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r12",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r12",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r13",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r13",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r13",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r2",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r2",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r3",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r3",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r4",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r4",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r5",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r5",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r5",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r6",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r6",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r6",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r7",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r7",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r7",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r8",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r8",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r8",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261002_r9",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261002_r9",
+          "previous_path": "results/balanced_delegation_api_v1_20261002_r9",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261003_r14",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261003_r14",
+          "previous_path": "results/balanced_delegation_api_v1_20261003_r14",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261003_r15",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261003_r15",
+          "previous_path": "results/balanced_delegation_api_v1_20261003_r15",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "balanced_delegation_api_v1_20261004_local_r20",
+          "path": "experiments/delegation/runs/balanced_delegation_api_v1_20261004_local_r20",
+          "previous_path": "results/balanced_delegation_api_v1_20261004_local_r20",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branched_authority_api_20260919",
+          "path": "experiments/delegation/runs/branched_authority_api_20260919",
+          "previous_path": "results/branched_authority_api_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branched_authority_api_verified_20260919",
+          "path": "experiments/delegation/runs/branched_authority_api_verified_20260919",
+          "previous_path": "results/branched_authority_api_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branched_authority_scope_20260919",
+          "path": "experiments/delegation/runs/branched_authority_scope_20260919",
+          "previous_path": "results/branched_authority_scope_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_api_pilot_20260919",
+          "path": "experiments/delegation/runs/delegation_api_pilot_20260919",
+          "previous_path": "results/delegation_api_pilot_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_api_verified_20260919",
+          "path": "experiments/delegation/runs/delegation_api_verified_20260919",
+          "previous_path": "results/delegation_api_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_api_verified_v2_20260919",
+          "path": "experiments/delegation/runs/delegation_api_verified_v2_20260919",
+          "previous_path": "results/delegation_api_verified_v2_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_joint_context_audit_20260919",
+          "path": "experiments/delegation/runs/delegation_joint_context_audit_20260919",
+          "previous_path": "results/delegation_joint_context_audit_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_mechanism_20260919",
+          "path": "experiments/delegation/runs/delegation_mechanism_20260919",
+          "previous_path": "results/delegation_mechanism_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "delegation_mechanism_qualified_20260919",
+          "path": "experiments/delegation/runs/delegation_mechanism_qualified_20260919",
+          "previous_path": "results/delegation_mechanism_qualified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "shared_authority_bn_20260919",
+          "path": "experiments/delegation/runs/shared_authority_bn_20260919",
+          "previous_path": "results/shared_authority_bn_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "shared_authority_bn_qualified_20260919",
+          "path": "experiments/delegation/runs/shared_authority_bn_qualified_20260919",
+          "previous_path": "results/shared_authority_bn_qualified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "shared_authority_bn_verified_20260919",
+          "path": "experiments/delegation/runs/shared_authority_bn_verified_20260919",
+          "previous_path": "results/shared_authority_bn_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "stale_authority_api_pilot_20260919",
+          "path": "experiments/delegation/runs/stale_authority_api_pilot_20260919",
+          "previous_path": "results/stale_authority_api_pilot_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "stale_authority_api_verified_20260919",
+          "path": "experiments/delegation/runs/stale_authority_api_verified_20260919",
+          "previous_path": "results/stale_authority_api_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_lanyun_r14",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_r14",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_lanyun_r14",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_lanyun_r15",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_r15",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_lanyun_r15",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_lanyun_v1",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_lanyun_v1",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_lanyun_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_local_20261004",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_local_20261004",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_local_20261004",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_local_20261004b",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_local_20261004b",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_local_20261004b",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_v1",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v1",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_v2",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v2",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_v3",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v3",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_mas_transfer_v4",
+          "path": "experiments/delegation/runs/submission__balanced_api_mas_transfer_v4",
+          "previous_path": "results/submission/development/balanced_api_mas_transfer_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__balanced_api_projection_v4",
+          "path": "experiments/delegation/runs/submission__balanced_api_projection_v4",
+          "previous_path": "results/submission/development/balanced_api_projection_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__binding_consistency_extension_lanyun_v1",
+          "path": "experiments/delegation/runs/submission__binding_consistency_extension_lanyun_v1",
+          "previous_path": "results/submission/development/binding_consistency_extension_lanyun_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__external_api_mas_transfer_local_20261004",
+          "path": "experiments/delegation/runs/submission__external_api_mas_transfer_local_20261004",
+          "previous_path": "results/submission/development/external_api_mas_transfer_local_20261004",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__external_api_mas_v1",
+          "path": "experiments/delegation/runs/submission__external_api_mas_v1",
+          "previous_path": "results/submission/development/external_api_mas_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_api_projection_v1",
+          "path": "experiments/delegation/runs/submission__lanyun_api_projection_v1",
+          "previous_path": "results/submission/development/lanyun_api_projection_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_attempt_risk_r14",
+          "path": "experiments/delegation/runs/submission__lanyun_attempt_risk_r14",
+          "previous_path": "results/submission/development/lanyun_attempt_risk_r14",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_attempt_risk_r15",
+          "path": "experiments/delegation/runs/submission__lanyun_attempt_risk_r15",
+          "previous_path": "results/submission/development/lanyun_attempt_risk_r15",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_knowledge_attempt_local_20261004",
+          "path": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_local_20261004",
+          "previous_path": "results/submission/development/lanyun_knowledge_attempt_local_20261004",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_knowledge_attempt_r14",
+          "path": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_r14",
+          "previous_path": "results/submission/development/lanyun_knowledge_attempt_r14",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__lanyun_knowledge_attempt_r15",
+          "path": "experiments/delegation/runs/submission__lanyun_knowledge_attempt_r15",
+          "previous_path": "results/submission/development/lanyun_knowledge_attempt_r15",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__model_transfer_local_v1",
+          "path": "experiments/delegation/runs/submission__model_transfer_local_v1",
+          "previous_path": "results/submission/development/model_transfer_local_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "failure_attribution",
+      "title": "失败定位",
+      "runs": [
+        {
+          "id": "external_who_when_audit_v1",
+          "path": "experiments/failure_attribution/runs/external_who_when_audit_v1",
+          "previous_path": "results/external_who_when_audit_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__who_when_localization_20261005",
+          "path": "experiments/failure_attribution/runs/submission__who_when_localization_20261005",
+          "previous_path": "results/submission/development/who_when_localization_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__who_when_localization_20261005_smoke",
+          "path": "experiments/failure_attribution/runs/submission__who_when_localization_20261005_smoke",
+          "previous_path": "results/submission/development/who_when_localization_20261005_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "harnessaudit",
+      "title": "HarnessAudit 与原生守卫",
+      "runs": [
+        {
+          "id": "harnessaudit_api_journal_dl14_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_20260919",
+          "previous_path": "results/harnessaudit_api_journal_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_journal_dl14_monitor_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_monitor_20260919",
+          "previous_path": "results/harnessaudit_api_journal_dl14_monitor_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_journal_dl14_replay_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_journal_dl14_replay_20260919",
+          "previous_path": "results/harnessaudit_api_journal_dl14_replay_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_pilot_dl11_lifecycle_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl11_lifecycle_20260919",
+          "previous_path": "results/harnessaudit_api_pilot_dl11_lifecycle_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_pilot_dl11_projection_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl11_projection_20260919",
+          "previous_path": "results/harnessaudit_api_pilot_dl11_projection_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_pilot_dl14_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl14_20260919",
+          "previous_path": "results/harnessaudit_api_pilot_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_api_pilot_dl14_projection_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_api_pilot_dl14_projection_20260919",
+          "previous_path": "results/harnessaudit_api_pilot_dl14_projection_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_cohort_development_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_cohort_development_20260919",
+          "previous_path": "results/harnessaudit_cohort_development_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_cohort_review_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_cohort_review_20260919",
+          "previous_path": "results/harnessaudit_cohort_review_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_cohort_v7_coverage_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_cohort_v7_coverage_20260919",
+          "previous_path": "results/harnessaudit_cohort_v7_coverage_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_dag_v1",
+          "path": "experiments/harnessaudit/runs/harnessaudit_dag_v1",
+          "previous_path": "results/harnessaudit_dag_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_dispatch_supervision_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_20260919",
+          "previous_path": "results/harnessaudit_dispatch_supervision_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_dispatch_supervision_final_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_final_20260919",
+          "previous_path": "results/harnessaudit_dispatch_supervision_final_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_dispatch_supervision_verified_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_dispatch_supervision_verified_20260919",
+          "previous_path": "results/harnessaudit_dispatch_supervision_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "harnessaudit_observation_split_fixture_20260919",
+          "path": "experiments/harnessaudit/runs/harnessaudit_observation_split_fixture_20260919",
+          "previous_path": "results/harnessaudit_observation_split_fixture_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "quadsentinel_author_preflight_20260920",
+          "path": "experiments/harnessaudit/runs/quadsentinel_author_preflight_20260920",
+          "previous_path": "results/quadsentinel_author_preflight_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "quadsentinel_author_verified_20260920",
+          "path": "experiments/harnessaudit/runs/quadsentinel_author_verified_20260920",
+          "previous_path": "results/quadsentinel_author_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_20261001_v2",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v2",
+          "previous_path": "results/submission/development/api_stage_forecast_20261001_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_20261001_v3",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v3",
+          "previous_path": "results/submission/development/api_stage_forecast_20261001_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_20261001_v4",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v4",
+          "previous_path": "results/submission/development/api_stage_forecast_20261001_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_20261001_v5",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v5",
+          "previous_path": "results/submission/development/api_stage_forecast_20261001_v5",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_20261001_v6",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_20261001_v6",
+          "previous_path": "results/submission/development/api_stage_forecast_20261001_v6",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_replication_20261001",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_replication_20261001",
+          "previous_path": "results/submission/development/api_stage_forecast_replication_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_replication_20261001_v6",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_replication_20261001_v6",
+          "previous_path": "results/submission/development/api_stage_forecast_replication_20261001_v6",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_transfer_20261001",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer_20261001",
+          "previous_path": "results/submission/development/api_stage_forecast_transfer_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_transfer3_20261001",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer3_20261001",
+          "previous_path": "results/submission/development/api_stage_forecast_transfer3_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_forecast_transfer3_20261001_v6",
+          "path": "experiments/harnessaudit/runs/submission__api_stage_forecast_transfer3_20261001_v6",
+          "previous_path": "results/submission/development/api_stage_forecast_transfer3_20261001_v6",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__harnessaudit",
+          "path": "experiments/harnessaudit/runs/submission__harnessaudit",
+          "previous_path": "results/submission/development/harnessaudit",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__harnessaudit_expansion",
+          "path": "experiments/harnessaudit/runs/submission__harnessaudit_expansion",
+          "previous_path": "results/submission/development/harnessaudit_expansion",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__harnessaudit_paired",
+          "path": "experiments/harnessaudit/runs/submission__harnessaudit_paired",
+          "previous_path": "results/submission/development/harnessaudit_paired",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__quadsentinel_preflight",
+          "path": "experiments/harnessaudit/runs/submission__quadsentinel_preflight",
+          "previous_path": "results/submission/development/quadsentinel_preflight",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__quadsentinel_replication_20261001",
+          "path": "experiments/harnessaudit/runs/submission__quadsentinel_replication_20261001",
+          "previous_path": "results/submission/development/quadsentinel_replication_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__shared_credit_pilot",
+          "path": "experiments/harnessaudit/runs/submission__shared_credit_pilot",
+          "previous_path": "results/submission/development/shared_credit_pilot",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__shared_credit_pilot_final_run",
+          "path": "experiments/harnessaudit/runs/submission__shared_credit_pilot_final_run",
+          "previous_path": "results/submission/development/shared_credit_pilot_final_run",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "llm_judge",
+      "title": "大模型裁判对照",
+      "runs": [
+        {
+          "id": "_judge_smoke",
+          "path": "experiments/llm_judge/runs/_judge_smoke",
+          "previous_path": "results/_judge_smoke",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_judge_a2a_20261002",
+          "path": "experiments/llm_judge/runs/submission__independent_judge_a2a_20261002",
+          "previous_path": "results/submission/development/independent_judge_a2a_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_judge_pilot_20261002",
+          "path": "experiments/llm_judge/runs/submission__independent_judge_pilot_20261002",
+          "previous_path": "results/submission/development/independent_judge_pilot_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_400_20261006_r1",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_400_20261006_r1",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_400_20261006_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_assembled_final_r1",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_assembled_final_r1",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_assembled_final_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_merged_r1",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_merged_r1",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_merged_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_merged_r2",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_merged_r2",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_merged_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_r1",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_r1",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_recovery_all_r2",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_all_r2",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_all_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_recovery_r1",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r1",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_recovery_r2",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r2",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_full_20261006_recovery_r3",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_full_20261006_recovery_r3",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_full_20261006_recovery_r3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_smoke_20261006",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_smoke_20261006",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_smoke_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_baseline_lanyun_smoke_20261006_r2",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_baseline_lanyun_smoke_20261006_r2",
+          "previous_path": "results/submission/development/llm_judge_baseline_lanyun_smoke_20261006_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__llm_judge_dryrun_20261006",
+          "path": "experiments/llm_judge/runs/submission__llm_judge_dryrun_20261006",
+          "previous_path": "results/submission/development/llm_judge_dryrun_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "mast_transfer",
+      "title": "MAST 外部迁移",
+      "runs": [
+        {
+          "id": "submission__mast_two_layer_v2_20261005",
+          "path": "experiments/mast_transfer/runs/submission__mast_two_layer_v2_20261005",
+          "previous_path": "results/submission/development/mast_two_layer_v2_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "message_workflows",
+      "title": "消息与工作流",
+      "runs": [
+        {
+          "id": "compiled_multiworkflow_contextual_20260920",
+          "path": "experiments/message_workflows/runs/compiled_multiworkflow_contextual_20260920",
+          "previous_path": "results/compiled_multiworkflow_contextual_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "compiled_multiworkflow_contextual_verified_20260920",
+          "path": "experiments/message_workflows/runs/compiled_multiworkflow_contextual_verified_20260920",
+          "previous_path": "results/compiled_multiworkflow_contextual_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "compiled_multiworkflow_development_20260920",
+          "path": "experiments/message_workflows/runs/compiled_multiworkflow_development_20260920",
+          "previous_path": "results/compiled_multiworkflow_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "compiled_multiworkflow_verified_20260920",
+          "path": "experiments/message_workflows/runs/compiled_multiworkflow_verified_20260920",
+          "previous_path": "results/compiled_multiworkflow_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "message_dependence_audit_20260920",
+          "path": "experiments/message_workflows/runs/message_dependence_audit_20260920",
+          "previous_path": "results/message_dependence_audit_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "message_hurdle_development_20260920",
+          "path": "experiments/message_workflows/runs/message_hurdle_development_20260920",
+          "previous_path": "results/message_hurdle_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "message_hurdle_development_verified_20260920",
+          "path": "experiments/message_workflows/runs/message_hurdle_development_verified_20260920",
+          "previous_path": "results/message_hurdle_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "message_workflow_compiler_replay_20260920",
+          "path": "experiments/message_workflows/runs/message_workflow_compiler_replay_20260920",
+          "previous_path": "results/message_workflow_compiler_replay_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "partial_grouped_audit_20260930",
+          "path": "experiments/message_workflows/runs/partial_grouped_audit_20260930",
+          "previous_path": "results/partial_grouped_audit_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "partial_repeated_extension_20260930",
+          "path": "experiments/message_workflows/runs/partial_repeated_extension_20260930",
+          "previous_path": "results/partial_repeated_extension_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "partial_repeated_extension_final_20260930",
+          "path": "experiments/message_workflows/runs/partial_repeated_extension_final_20260930",
+          "previous_path": "results/partial_repeated_extension_final_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "repeated_message_development_20260930",
+          "path": "experiments/message_workflows/runs/repeated_message_development_20260930",
+          "previous_path": "results/repeated_message_development_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "repeated_message_history_audit_20260930",
+          "path": "experiments/message_workflows/runs/repeated_message_history_audit_20260930",
+          "previous_path": "results/repeated_message_history_audit_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "repeated_message_protocol_audit_20260930",
+          "path": "experiments/message_workflows/runs/repeated_message_protocol_audit_20260930",
+          "previous_path": "results/repeated_message_protocol_audit_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_arrival_development_20260920",
+          "path": "experiments/message_workflows/runs/semantic_arrival_development_20260920",
+          "previous_path": "results/semantic_arrival_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_arrival_development_verified_20260920",
+          "path": "experiments/message_workflows/runs/semantic_arrival_development_verified_20260920",
+          "previous_path": "results/semantic_arrival_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_arrival_gate_equivalence_20260920",
+          "path": "experiments/message_workflows/runs/semantic_arrival_gate_equivalence_20260920",
+          "previous_path": "results/semantic_arrival_gate_equivalence_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "task_cue_message_development_20260920",
+          "path": "experiments/message_workflows/runs/task_cue_message_development_20260920",
+          "previous_path": "results/task_cue_message_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "task_cue_message_development_replay_20260920",
+          "path": "experiments/message_workflows/runs/task_cue_message_development_replay_20260920",
+          "previous_path": "results/task_cue_message_development_replay_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "task_cue_message_development_verified_20260920",
+          "path": "experiments/message_workflows/runs/task_cue_message_development_verified_20260920",
+          "previous_path": "results/task_cue_message_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "task_cue_message_score_resolution_20260920",
+          "path": "experiments/message_workflows/runs/task_cue_message_score_resolution_20260920",
+          "previous_path": "results/task_cue_message_score_resolution_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "task_field_semantics_extraction_20260920",
+          "path": "experiments/message_workflows/runs/task_field_semantics_extraction_20260920",
+          "previous_path": "results/task_field_semantics_extraction_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "model_mechanisms",
+      "title": "模型机制检查",
+      "runs": [
+        {
+          "id": "action_scoped_mechanism_20260919",
+          "path": "experiments/model_mechanisms/runs/action_scoped_mechanism_20260919",
+          "previous_path": "results/action_scoped_mechanism_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "action_scoped_mechanism_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/action_scoped_mechanism_verified_20260919",
+          "previous_path": "results/action_scoped_mechanism_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_workflow_risk_20260920",
+          "path": "experiments/model_mechanisms/runs/branch_workflow_risk_20260920",
+          "previous_path": "results/branch_workflow_risk_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_workflow_risk_final_20260920",
+          "path": "experiments/model_mechanisms/runs/branch_workflow_risk_final_20260920",
+          "previous_path": "results/branch_workflow_risk_final_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "capability_action_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/capability_action_verified_20260919",
+          "previous_path": "results/capability_action_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "compact_action_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/compact_action_verified_20260919",
+          "previous_path": "results/compact_action_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "conditional_policy_queries_20260920",
+          "path": "experiments/model_mechanisms/runs/conditional_policy_queries_20260920",
+          "previous_path": "results/conditional_policy_queries_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "dependence_envelope_diagnostic_20260930",
+          "path": "experiments/model_mechanisms/runs/dependence_envelope_diagnostic_20260930",
+          "previous_path": "results/dependence_envelope_diagnostic_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "duty_conditioned_bn_20260919",
+          "path": "experiments/model_mechanisms/runs/duty_conditioned_bn_20260919",
+          "previous_path": "results/duty_conditioned_bn_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "duty_conditioned_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/duty_conditioned_verified_20260919",
+          "previous_path": "results/duty_conditioned_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "dynamic_joint_bn_converged_20260919",
+          "path": "experiments/model_mechanisms/runs/dynamic_joint_bn_converged_20260919",
+          "previous_path": "results/dynamic_joint_bn_converged_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "dynamic_joint_bn_v1_20260919",
+          "path": "experiments/model_mechanisms/runs/dynamic_joint_bn_v1_20260919",
+          "previous_path": "results/dynamic_joint_bn_v1_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fixed_dag_development_20260919",
+          "path": "experiments/model_mechanisms/runs/fixed_dag_development_20260919",
+          "previous_path": "results/fixed_dag_development_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fixed_dag_reviewed_20260919",
+          "path": "experiments/model_mechanisms/runs/fixed_dag_reviewed_20260919",
+          "previous_path": "results/fixed_dag_reviewed_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fixed_dag_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/fixed_dag_verified_20260919",
+          "previous_path": "results/fixed_dag_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fixed_dag_verified_final_20260919",
+          "path": "experiments/model_mechanisms/runs/fixed_dag_verified_final_20260919",
+          "previous_path": "results/fixed_dag_verified_final_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_knowledge_equivalence_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_knowledge_equivalence_20260919",
+          "previous_path": "results/joint_knowledge_equivalence_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_knowledge_graph_examples_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_knowledge_graph_examples_20260919",
+          "previous_path": "results/joint_knowledge_graph_examples_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_online_equivalence_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_online_equivalence_20260919",
+          "previous_path": "results/joint_online_equivalence_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_online_equivalence_after_typed_hooks_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_online_equivalence_after_typed_hooks_20260919",
+          "previous_path": "results/joint_online_equivalence_after_typed_hooks_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_online_graph_regression_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_online_graph_regression_20260919",
+          "previous_path": "results/joint_online_graph_regression_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_online_graph_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/joint_online_graph_verified_20260919",
+          "previous_path": "results/joint_online_graph_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "knowledge_scoped_bn_final_20260919",
+          "path": "experiments/model_mechanisms/runs/knowledge_scoped_bn_final_20260919",
+          "previous_path": "results/knowledge_scoped_bn_final_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "knowledge_scoped_bn_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/knowledge_scoped_bn_verified_20260919",
+          "previous_path": "results/knowledge_scoped_bn_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "matched_event_controls_20260920",
+          "path": "experiments/model_mechanisms/runs/matched_event_controls_20260920",
+          "previous_path": "results/matched_event_controls_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "matched_event_controls_verified_20260920",
+          "path": "experiments/model_mechanisms/runs/matched_event_controls_verified_20260920",
+          "previous_path": "results/matched_event_controls_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "observable_event_dag_current_audit_20260920",
+          "path": "experiments/model_mechanisms/runs/observable_event_dag_current_audit_20260920",
+          "previous_path": "results/observable_event_dag_current_audit_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "observable_event_dag_development_20260920",
+          "path": "experiments/model_mechanisms/runs/observable_event_dag_development_20260920",
+          "previous_path": "results/observable_event_dag_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "observable_event_dag_development_verified_20260920",
+          "path": "experiments/model_mechanisms/runs/observable_event_dag_development_verified_20260920",
+          "previous_path": "results/observable_event_dag_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "public_duty_graphs_api_20260919",
+          "path": "experiments/model_mechanisms/runs/public_duty_graphs_api_20260919",
+          "previous_path": "results/public_duty_graphs_api_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "relational_forecast_development_20260920",
+          "path": "experiments/model_mechanisms/runs/relational_forecast_development_20260920",
+          "previous_path": "results/relational_forecast_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "relational_forecast_development_verified_20260920",
+          "path": "experiments/model_mechanisms/runs/relational_forecast_development_verified_20260920",
+          "previous_path": "results/relational_forecast_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "relational_forecast_semantics_audit_20260920",
+          "path": "experiments/model_mechanisms/runs/relational_forecast_semantics_audit_20260920",
+          "previous_path": "results/relational_forecast_semantics_audit_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "runtime_evidence_coverage_20260919",
+          "path": "experiments/model_mechanisms/runs/runtime_evidence_coverage_20260919",
+          "previous_path": "results/runtime_evidence_coverage_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "runtime_journal_component_replay_20260919",
+          "path": "experiments/model_mechanisms/runs/runtime_journal_component_replay_20260919",
+          "previous_path": "results/runtime_journal_component_replay_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "runtime_journal_components_20260919",
+          "path": "experiments/model_mechanisms/runs/runtime_journal_components_20260919",
+          "previous_path": "results/runtime_journal_components_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_budget_bn_mechanism_20260919",
+          "path": "experiments/model_mechanisms/runs/scoped_budget_bn_mechanism_20260919",
+          "previous_path": "results/scoped_budget_bn_mechanism_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_budget_bn_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/scoped_budget_bn_verified_20260919",
+          "previous_path": "results/scoped_budget_bn_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_budget_components_20260919",
+          "path": "experiments/model_mechanisms/runs/scoped_budget_components_20260919",
+          "previous_path": "results/scoped_budget_components_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "stage_dag_development_20260919",
+          "path": "experiments/model_mechanisms/runs/stage_dag_development_20260919",
+          "previous_path": "results/stage_dag_development_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "stage_dag_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/stage_dag_verified_20260919",
+          "previous_path": "results/stage_dag_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "stage_workflow_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/stage_workflow_verified_20260919",
+          "previous_path": "results/stage_workflow_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "streaming_template_bn_20260919",
+          "path": "experiments/model_mechanisms/runs/streaming_template_bn_20260919",
+          "previous_path": "results/streaming_template_bn_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentmonitor_adapter_20261005",
+          "path": "experiments/model_mechanisms/runs/submission__agentmonitor_adapter_20261005",
+          "previous_path": "results/submission/development/agentmonitor_adapter_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentmonitor_style_baseline_20261005",
+          "path": "experiments/model_mechanisms/runs/submission__agentmonitor_style_baseline_20261005",
+          "previous_path": "results/submission/development/agentmonitor_style_baseline_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_recovery_confirm_20261001",
+          "path": "experiments/model_mechanisms/runs/submission__api_recovery_confirm_20261001",
+          "previous_path": "results/submission/development/api_recovery_confirm_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_recovery_mini_20261001",
+          "path": "experiments/model_mechanisms/runs/submission__api_recovery_mini_20261001",
+          "previous_path": "results/submission/development/api_recovery_mini_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_recovery_pilot_20261001",
+          "path": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_20261001",
+          "previous_path": "results/submission/development/api_recovery_pilot_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_recovery_pilot_55_20261001",
+          "path": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_55_20261001",
+          "previous_path": "results/submission/development/api_recovery_pilot_55_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_recovery_pilot_luna_20261001",
+          "path": "experiments/model_mechanisms/runs/submission__api_recovery_pilot_luna_20261001",
+          "previous_path": "results/submission/development/api_recovery_pilot_luna_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__binding_consistency_extension_v1",
+          "path": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v1",
+          "previous_path": "results/submission/development/binding_consistency_extension_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__binding_consistency_extension_v2",
+          "path": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v2",
+          "previous_path": "results/submission/development/binding_consistency_extension_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__binding_consistency_extension_v3",
+          "path": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v3",
+          "previous_path": "results/submission/development/binding_consistency_extension_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__binding_consistency_extension_v4",
+          "path": "experiments/model_mechanisms/runs/submission__binding_consistency_extension_v4",
+          "previous_path": "results/submission/development/binding_consistency_extension_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__dag_api_recheck_20261002",
+          "path": "experiments/model_mechanisms/runs/submission__dag_api_recheck_20261002",
+          "previous_path": "results/submission/development/dag_api_recheck_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__dag_api_v1",
+          "path": "experiments/model_mechanisms/runs/submission__dag_api_v1",
+          "previous_path": "results/submission/development/dag_api_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__JOURNAL_EVAL_AUDIT_20261002.md",
+          "path": "experiments/model_mechanisms/runs/submission__JOURNAL_EVAL_AUDIT_20261002.md",
+          "previous_path": "results/submission/development/JOURNAL_EVAL_AUDIT_20261002.md",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__paired_information_baselines_20261006.json",
+          "path": "experiments/model_mechanisms/runs/submission__paired_information_baselines_20261006.json",
+          "previous_path": "results/submission/development/paired_information_baselines_20261006.json",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "template_graph_examples_20260919",
+          "path": "experiments/model_mechanisms/runs/template_graph_examples_20260919",
+          "previous_path": "results/template_graph_examples_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "text_conditioned_bn_mechanism_20260919",
+          "path": "experiments/model_mechanisms/runs/text_conditioned_bn_mechanism_20260919",
+          "previous_path": "results/text_conditioned_bn_mechanism_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_action_identity_diagnostic_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_action_identity_diagnostic_20260919",
+          "previous_path": "results/typed_action_identity_diagnostic_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_action_supervision_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_action_supervision_20260919",
+          "previous_path": "results/typed_action_supervision_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_action_supervision_audit_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_action_supervision_audit_20260919",
+          "previous_path": "results/typed_action_supervision_audit_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_action_supervision_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_action_supervision_verified_20260919",
+          "previous_path": "results/typed_action_supervision_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_authorization_revision_diagnostic_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_authorization_revision_diagnostic_20260919",
+          "previous_path": "results/typed_authorization_revision_diagnostic_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_joint_bn_v2_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_joint_bn_v2_20260919",
+          "previous_path": "results/typed_joint_bn_v2_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_knowledge_graph_examples_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_knowledge_graph_examples_20260919",
+          "previous_path": "results/typed_knowledge_graph_examples_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_online_graph_equivalence_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_online_graph_equivalence_20260919",
+          "previous_path": "results/typed_online_graph_equivalence_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "typed_online_graph_verified_20260919",
+          "path": "experiments/model_mechanisms/runs/typed_online_graph_verified_20260919",
+          "previous_path": "results/typed_online_graph_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "workflow_risk_composition_20260920",
+          "path": "experiments/model_mechanisms/runs/workflow_risk_composition_20260920",
+          "previous_path": "results/workflow_risk_composition_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "workflow_risk_composition_replay_20260920",
+          "path": "experiments/model_mechanisms/runs/workflow_risk_composition_replay_20260920",
+          "previous_path": "results/workflow_risk_composition_replay_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "privacy_flow",
+      "title": "隐私与信息传播",
+      "runs": [
+        {
+          "id": "agentleak_error_eligibility_audit_20260930",
+          "path": "experiments/privacy_flow/runs/agentleak_error_eligibility_audit_20260930",
+          "previous_path": "results/agentleak_error_eligibility_audit_20260930",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "agentleak_event_dag_development_20260920",
+          "path": "experiments/privacy_flow/runs/agentleak_event_dag_development_20260920",
+          "previous_path": "results/agentleak_event_dag_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "agentleak_event_dag_development_verified_20260920",
+          "path": "experiments/privacy_flow/runs/agentleak_event_dag_development_verified_20260920",
+          "previous_path": "results/agentleak_event_dag_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "agentleak_release_inventory_20260919",
+          "path": "experiments/privacy_flow/runs/agentleak_release_inventory_20260919",
+          "previous_path": "results/agentleak_release_inventory_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_privacy_inputs_20260920",
+          "path": "experiments/privacy_flow/runs/branch_privacy_inputs_20260920",
+          "previous_path": "results/branch_privacy_inputs_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_diagnosis_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_diagnosis_20260920",
+          "previous_path": "results/branch_publisher_diagnosis_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_diagnosis_complete_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_diagnosis_complete_20260920",
+          "previous_path": "results/branch_publisher_diagnosis_complete_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_fit_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_fit_20260920",
+          "previous_path": "results/branch_publisher_fit_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_fit_verified_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_fit_verified_20260920",
+          "previous_path": "results/branch_publisher_fit_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_test_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_test_20260920",
+          "previous_path": "results/branch_publisher_test_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branch_publisher_test_verified_20260920",
+          "path": "experiments/privacy_flow/runs/branch_publisher_test_verified_20260920",
+          "previous_path": "results/branch_publisher_test_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branched_publisher_data_20260920",
+          "path": "experiments/privacy_flow/runs/branched_publisher_data_20260920",
+          "previous_path": "results/branched_publisher_data_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "branched_publisher_data_verified_20260920",
+          "path": "experiments/privacy_flow/runs/branched_publisher_data_verified_20260920",
+          "previous_path": "results/branched_publisher_data_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_authority_composition_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_authority_composition_20260919",
+          "previous_path": "results/privacy_authority_composition_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_authority_composition_final_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_authority_composition_final_20260919",
+          "previous_path": "results/privacy_authority_composition_final_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_authority_composition_final_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_authority_composition_final_verified_20260919",
+          "previous_path": "results/privacy_authority_composition_final_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_authority_composition_qualified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_authority_composition_qualified_20260919",
+          "previous_path": "results/privacy_authority_composition_qualified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_authority_composition_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_authority_composition_verified_20260919",
+          "previous_path": "results/privacy_authority_composition_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_flow_agentleak_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_flow_agentleak_20260919",
+          "previous_path": "results/privacy_flow_agentleak_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_flow_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_flow_verified_20260919",
+          "previous_path": "results/privacy_flow_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_flow_verified_complete_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_flow_verified_complete_20260919",
+          "previous_path": "results/privacy_flow_verified_complete_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_identity_free_fit_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_identity_free_fit_20260919",
+          "previous_path": "results/privacy_identity_free_fit_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_identity_free_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_identity_free_verified_20260919",
+          "previous_path": "results/privacy_identity_free_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_stage_states_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_stage_states_20260919",
+          "previous_path": "results/privacy_stage_states_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_stage_states_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_stage_states_verified_20260919",
+          "previous_path": "results/privacy_stage_states_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_supervision_attribution_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_supervision_attribution_20260919",
+          "previous_path": "results/privacy_supervision_attribution_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_supervision_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_supervision_verified_20260919",
+          "previous_path": "results/privacy_supervision_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_transfer_api_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_transfer_api_20260919",
+          "previous_path": "results/privacy_transfer_api_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "privacy_transfer_verified_20260919",
+          "path": "experiments/privacy_flow/runs/privacy_transfer_verified_20260919",
+          "previous_path": "results/privacy_transfer_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "publisher_view_bn_20260919",
+          "path": "experiments/privacy_flow/runs/publisher_view_bn_20260919",
+          "previous_path": "results/publisher_view_bn_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "publisher_view_bn_verified_20260919",
+          "path": "experiments/privacy_flow/runs/publisher_view_bn_verified_20260919",
+          "previous_path": "results/publisher_view_bn_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_privacy_api_20260919",
+          "path": "experiments/privacy_flow/runs/scoped_privacy_api_20260919",
+          "previous_path": "results/scoped_privacy_api_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_privacy_api_bound_20260919",
+          "path": "experiments/privacy_flow/runs/scoped_privacy_api_bound_20260919",
+          "previous_path": "results/scoped_privacy_api_bound_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "scoped_privacy_api_verified_20260919",
+          "path": "experiments/privacy_flow/runs/scoped_privacy_api_verified_20260919",
+          "previous_path": "results/scoped_privacy_api_verified_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentleak",
+          "path": "experiments/privacy_flow/runs/submission__agentleak",
+          "previous_path": "results/submission/development/agentleak",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentleak_external_journal_v1_r3",
+          "path": "experiments/privacy_flow/runs/submission__agentleak_external_journal_v1_r3",
+          "previous_path": "results/submission/development/agentleak_external_journal_v1_r3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentleak_external_projection_smoke_check_v1",
+          "path": "experiments/privacy_flow/runs/submission__agentleak_external_projection_smoke_check_v1",
+          "previous_path": "results/submission/development/agentleak_external_projection_smoke_check_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentleak_external_projection_v1",
+          "path": "experiments/privacy_flow/runs/submission__agentleak_external_projection_v1",
+          "previous_path": "results/submission/development/agentleak_external_projection_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__agentleak_full_inventory_20261003",
+          "path": "experiments/privacy_flow/runs/submission__agentleak_full_inventory_20261003",
+          "previous_path": "results/submission/development/agentleak_full_inventory_20261003",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "purchase",
+      "title": "采购任务",
+      "runs": [
+        {
+          "id": "choice_attribute_development_20260920",
+          "path": "experiments/purchase/runs/choice_attribute_development_20260920",
+          "previous_path": "results/choice_attribute_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "choice_attribute_final_20260920",
+          "path": "experiments/purchase/runs/choice_attribute_final_20260920",
+          "previous_path": "results/choice_attribute_final_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "choice_attribute_reviewed_20260920",
+          "path": "experiments/purchase/runs/choice_attribute_reviewed_20260920",
+          "previous_path": "results/choice_attribute_reviewed_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "crossed_purchase_prospective_20260920",
+          "path": "experiments/purchase/runs/crossed_purchase_prospective_20260920",
+          "previous_path": "results/crossed_purchase_prospective_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "exclusive_purchase_api_20260920",
+          "path": "experiments/purchase/runs/exclusive_purchase_api_20260920",
+          "previous_path": "results/exclusive_purchase_api_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "exclusive_purchase_evaluation_20260920",
+          "path": "experiments/purchase/runs/exclusive_purchase_evaluation_20260920",
+          "previous_path": "results/exclusive_purchase_evaluation_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "mas_purchase_development_20260920",
+          "path": "experiments/purchase/runs/mas_purchase_development_20260920",
+          "previous_path": "results/mas_purchase_development_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "mas_purchase_development_resumed_20260920",
+          "path": "experiments/purchase/runs/mas_purchase_development_resumed_20260920",
+          "previous_path": "results/mas_purchase_development_resumed_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "mas_purchase_development_verified_20260920",
+          "path": "experiments/purchase/runs/mas_purchase_development_verified_20260920",
+          "previous_path": "results/mas_purchase_development_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "runtime_alarm",
+      "title": "运行时预警",
+      "runs": [
+        {
+          "id": "forecast_alarm_independent_calibration_20260920",
+          "path": "experiments/runtime_alarm/runs/forecast_alarm_independent_calibration_20260920",
+          "previous_path": "results/forecast_alarm_independent_calibration_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "forecast_alarm_independent_calibration_verified_20260920",
+          "path": "experiments/runtime_alarm/runs/forecast_alarm_independent_calibration_verified_20260920",
+          "previous_path": "results/forecast_alarm_independent_calibration_verified_20260920",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "joint_alarm_timing_diagnostic_20260919",
+          "path": "experiments/runtime_alarm/runs/joint_alarm_timing_diagnostic_20260919",
+          "previous_path": "results/joint_alarm_timing_diagnostic_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "phase_alarm_policy_20260919",
+          "path": "experiments/runtime_alarm/runs/phase_alarm_policy_20260919",
+          "previous_path": "results/phase_alarm_policy_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "prefix_forecast_v1_20260919",
+          "path": "experiments/runtime_alarm/runs/prefix_forecast_v1_20260919",
+          "previous_path": "results/prefix_forecast_v1_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "runtime_costs",
+      "title": "运行成本与延迟",
+      "runs": [
+        {
+          "id": "submission__api_cost_report_v1",
+          "path": "experiments/runtime_costs/runs/submission__api_cost_report_v1",
+          "previous_path": "results/submission/development/api_cost_report_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_latency_20261001",
+          "path": "experiments/runtime_costs/runs/submission__api_stage_latency_20261001",
+          "previous_path": "results/submission/development/api_stage_latency_20261001",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__api_stage_latency_20261001_v6",
+          "path": "experiments/runtime_costs/runs/submission__api_stage_latency_20261001_v6",
+          "previous_path": "results/submission/development/api_stage_latency_20261001_v6",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__e2e_cost_closure_20261005",
+          "path": "experiments/runtime_costs/runs/submission__e2e_cost_closure_20261005",
+          "previous_path": "results/submission/development/e2e_cost_closure_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__e2e_episode_cost_20261005",
+          "path": "experiments/runtime_costs/runs/submission__e2e_episode_cost_20261005",
+          "previous_path": "results/submission/development/e2e_episode_cost_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__semantic_extraction_cost_20261005_lanyun_r1",
+          "path": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_r1",
+          "previous_path": "results/submission/development/semantic_extraction_cost_20261005_lanyun_r1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__semantic_extraction_cost_20261005_lanyun_r2",
+          "path": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_r2",
+          "previous_path": "results/submission/development/semantic_extraction_cost_20261005_lanyun_r2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__semantic_extraction_cost_20261005_lanyun_v2",
+          "path": "experiments/runtime_costs/runs/submission__semantic_extraction_cost_20261005_lanyun_v2",
+          "previous_path": "results/submission/development/semantic_extraction_cost_20261005_lanyun_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__training_cost_canonical_20261006",
+          "path": "experiments/runtime_costs/runs/submission__training_cost_canonical_20261006",
+          "previous_path": "results/submission/development/training_cost_canonical_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "semantic_extraction",
+      "title": "语义提取",
+      "runs": [
+        {
+          "id": "initial_task_context_api_20260919",
+          "path": "experiments/semantic_extraction/runs/initial_task_context_api_20260919",
+          "previous_path": "results/initial_task_context_api_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "initial_task_context_v7_replay_20260919",
+          "path": "experiments/semantic_extraction/runs/initial_task_context_v7_replay_20260919",
+          "previous_path": "results/initial_task_context_v7_replay_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_extraction_controls_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_extraction_controls_20260919",
+          "previous_path": "results/semantic_extraction_controls_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_extraction_dl14_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_extraction_dl14_20260919",
+          "previous_path": "results/semantic_extraction_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_extraction_v2_controls_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_extraction_v2_controls_20260919",
+          "previous_path": "results/semantic_extraction_v2_controls_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_extraction_v2_dl14_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_extraction_v2_dl14_20260919",
+          "previous_path": "results/semantic_extraction_v2_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_v2_items_controls_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_v2_items_controls_20260919",
+          "previous_path": "results/semantic_v2_items_controls_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_v2_items_dl14_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_v2_items_dl14_20260919",
+          "previous_path": "results/semantic_v2_items_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_v2_items_scoped_controls_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_v2_items_scoped_controls_20260919",
+          "previous_path": "results/semantic_v2_items_scoped_controls_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "semantic_v2_items_scoped_dl14_20260919",
+          "path": "experiments/semantic_extraction/runs/semantic_v2_items_scoped_dl14_20260919",
+          "previous_path": "results/semantic_v2_items_scoped_dl14_20260919",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "submission_audit",
+      "title": "投稿证据审计",
+      "runs": [
+        {
+          "id": "diagnostic_knowledge_template",
+          "path": "experiments/submission_audit/runs/diagnostic_knowledge_template",
+          "previous_path": "results/submission/diagnostic_knowledge_template",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "final_eval",
+          "path": "experiments/submission_audit/runs/final_eval",
+          "previous_path": "results/submission/final_eval",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "final_eval_candidate",
+          "path": "experiments/submission_audit/runs/final_eval_candidate",
+          "previous_path": "results/submission/final_eval_candidate",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "final_eval_strict",
+          "path": "experiments/submission_audit/runs/final_eval_strict",
+          "previous_path": "results/submission/final_eval_strict",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "final_eval_strict_probe",
+          "path": "experiments/submission_audit/runs/final_eval_strict_probe",
+          "previous_path": "results/submission/final_eval_strict_probe",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    },
+    {
+      "name": "synthetic_mas",
+      "title": "合成 MAS 主实验",
+      "runs": [
+        {
+          "id": "compositional_mas_v1",
+          "path": "experiments/synthetic_mas/runs/compositional_mas_v1",
+          "previous_path": "results/compositional_mas_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "conformal_monitor_v1",
+          "path": "experiments/synthetic_mas/runs/conformal_monitor_v1",
+          "previous_path": "results/conformal_monitor_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "eval_protocol_v1",
+          "path": "experiments/synthetic_mas/runs/eval_protocol_v1",
+          "previous_path": "results/eval_protocol_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fusion_oof_v1",
+          "path": "experiments/synthetic_mas/runs/fusion_oof_v1",
+          "previous_path": "results/fusion_oof_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fusion_v3",
+          "path": "experiments/synthetic_mas/runs/fusion_v3",
+          "previous_path": "results/fusion_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "fusion_v4",
+          "path": "experiments/synthetic_mas/runs/fusion_v4",
+          "previous_path": "results/fusion_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "generalization_stress_v1",
+          "path": "experiments/synthetic_mas/runs/generalization_stress_v1",
+          "previous_path": "results/generalization_stress_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "groupcv_v1",
+          "path": "experiments/synthetic_mas/runs/groupcv_v1",
+          "previous_path": "results/groupcv_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "hierarchical_monitor_mas_v3",
+          "path": "experiments/synthetic_mas/runs/hierarchical_monitor_mas_v3",
+          "previous_path": "results/hierarchical_monitor_mas_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "hierarchical_monitor_v3",
+          "path": "experiments/synthetic_mas/runs/hierarchical_monitor_v3",
+          "previous_path": "results/hierarchical_monitor_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "hierarchical_monitor_v4",
+          "path": "experiments/synthetic_mas/runs/hierarchical_monitor_v4",
+          "previous_path": "results/hierarchical_monitor_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_fair_baselines_v1",
+          "path": "experiments/synthetic_mas/runs/independent_fair_baselines_v1",
+          "previous_path": "results/independent_fair_baselines_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_fair_baselines_v2",
+          "path": "experiments/synthetic_mas/runs/independent_fair_baselines_v2",
+          "previous_path": "results/independent_fair_baselines_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_agentmonitor_adapter_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_agentmonitor_adapter_v1",
+          "previous_path": "results/independent_mas_agentmonitor_adapter_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_journal_parity_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_journal_parity_v1",
+          "previous_path": "results/independent_mas_journal_parity_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_journal_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_journal_v1",
+          "previous_path": "results/independent_mas_journal_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_learned_baselines_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_learned_baselines_v1",
+          "previous_path": "results/independent_mas_learned_baselines_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_mas_baselines_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_mas_baselines_v1",
+          "previous_path": "results/independent_mas_mas_baselines_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_prefix_v1",
+          "path": "experiments/synthetic_mas/runs/independent_mas_prefix_v1",
+          "previous_path": "results/independent_mas_prefix_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_v2",
+          "path": "experiments/synthetic_mas/runs/independent_mas_v2",
+          "previous_path": "results/independent_mas_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_v3",
+          "path": "experiments/synthetic_mas/runs/independent_mas_v3",
+          "previous_path": "results/independent_mas_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "independent_mas_v3_fair_baselines",
+          "path": "experiments/synthetic_mas/runs/independent_mas_v3_fair_baselines",
+          "previous_path": "results/independent_mas_v3_fair_baselines",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "indistinguishable_control_v1",
+          "path": "experiments/synthetic_mas/runs/indistinguishable_control_v1",
+          "previous_path": "results/indistinguishable_control_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "learnable_graph_v1",
+          "path": "experiments/synthetic_mas/runs/learnable_graph_v1",
+          "previous_path": "results/learnable_graph_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "length_normalized_graph_v1",
+          "path": "experiments/synthetic_mas/runs/length_normalized_graph_v1",
+          "previous_path": "results/length_normalized_graph_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "mas_baselines_v1",
+          "path": "experiments/synthetic_mas/runs/mas_baselines_v1",
+          "previous_path": "results/mas_baselines_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "model_test_v1",
+          "path": "experiments/synthetic_mas/runs/model_test_v1",
+          "previous_path": "results/model_test_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "partial_observability_v1",
+          "path": "experiments/synthetic_mas/runs/partial_observability_v1",
+          "previous_path": "results/partial_observability_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__baseline_recheck_learned_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__baseline_recheck_learned_20261005",
+          "previous_path": "results/submission/development/baseline_recheck_learned_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__baseline_recheck_mas_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__baseline_recheck_mas_20261005",
+          "previous_path": "results/submission/development/baseline_recheck_mas_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__hierarchical_v3_probe_20261006",
+          "path": "experiments/synthetic_mas/runs/submission__hierarchical_v3_probe_20261006",
+          "previous_path": "results/submission/development/hierarchical_v3_probe_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_mas_relational_v1",
+          "path": "experiments/synthetic_mas/runs/submission__independent_mas_relational_v1",
+          "previous_path": "results/submission/development/independent_mas_relational_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_mas_v3_grouped_20261002",
+          "path": "experiments/synthetic_mas/runs/submission__independent_mas_v3_grouped_20261002",
+          "previous_path": "results/submission/development/independent_mas_v3_grouped_20261002",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__journal_recheck_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__journal_recheck_20261005",
+          "previous_path": "results/submission/development/journal_recheck_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__learned_baselines_recheck_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__learned_baselines_recheck_20261005",
+          "previous_path": "results/submission/development/learned_baselines_recheck_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__local_seeded_relation_v1",
+          "path": "experiments/synthetic_mas/runs/submission__local_seeded_relation_v1",
+          "previous_path": "results/submission/development/local_seeded_relation_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__mas_baselines_recheck_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__mas_baselines_recheck_20261005",
+          "previous_path": "results/submission/development/mas_baselines_recheck_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__mas_baselines_recheck_20261005_v2",
+          "path": "experiments/synthetic_mas/runs/submission__mas_baselines_recheck_20261005_v2",
+          "previous_path": "results/submission/development/mas_baselines_recheck_20261005_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__paired_bootstrap_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__paired_bootstrap_20261005",
+          "previous_path": "results/submission/development/paired_bootstrap_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__prevalence_shift_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__prevalence_shift_20261005",
+          "previous_path": "results/submission/development/prevalence_shift_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__reliability_bayes_recheck_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__reliability_bayes_recheck_20261005",
+          "previous_path": "results/submission/development/reliability_bayes_recheck_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__repro_smoke_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__repro_smoke_20261005",
+          "previous_path": "results/submission/development/repro_smoke_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__repro_smoke_eval_20261005",
+          "path": "experiments/synthetic_mas/runs/submission__repro_smoke_eval_20261005",
+          "previous_path": "results/submission/development/repro_smoke_eval_20261005",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__strong_baselines_canonical_20261006",
+          "path": "experiments/synthetic_mas/runs/submission__strong_baselines_canonical_20261006",
+          "previous_path": "results/submission/development/strong_baselines_canonical_20261006",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "submission__independent_mas_release_validation_latest.json",
+          "path": "experiments/synthetic_mas/runs/submission__independent_mas_release_validation_latest.json",
+          "previous_path": "results/submission/development/independent_mas_release_validation_latest.json",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "temporal_monitor_v1",
+          "path": "experiments/synthetic_mas/runs/temporal_monitor_v1",
+          "previous_path": "results/temporal_monitor_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_mas_v3",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_mas_v3",
+          "previous_path": "results/two_layer_independent_mas_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_multiseed_v1",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_multiseed_v1",
+          "previous_path": "results/two_layer_independent_multiseed_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_seed_20260914",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260914",
+          "previous_path": "results/two_layer_independent_seed_20260914",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_seed_20260915",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260915",
+          "previous_path": "results/two_layer_independent_seed_20260915",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_seed_20260916",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_seed_20260916",
+          "previous_path": "results/two_layer_independent_seed_20260916",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v2",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v2",
+          "previous_path": "results/two_layer_independent_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v3",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v3",
+          "previous_path": "results/two_layer_independent_v3",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v3_seed_20260914",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260914",
+          "previous_path": "results/two_layer_independent_v3_seed_20260914",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v3_seed_20260915",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260915",
+          "previous_path": "results/two_layer_independent_v3_seed_20260915",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v3_seed_20260916",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v3_seed_20260916",
+          "previous_path": "results/two_layer_independent_v3_seed_20260916",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_independent_v4",
+          "path": "experiments/synthetic_mas/runs/two_layer_independent_v4",
+          "previous_path": "results/two_layer_independent_v4",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "two_layer_v2",
+          "path": "experiments/synthetic_mas/runs/two_layer_v2",
+          "previous_path": "results/two_layer_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "uncertainty_calibration_v1",
+          "path": "experiments/synthetic_mas/runs/uncertainty_calibration_v1",
+          "previous_path": "results/uncertainty_calibration_v1",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_independent_group_v2",
+          "path": "experiments/synthetic_mas/runs/unified_independent_group_v2",
+          "previous_path": "results/unified_independent_group_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_independent_public_v2",
+          "path": "experiments/synthetic_mas/runs/unified_independent_public_v2",
+          "previous_path": "results/unified_independent_public_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_independent_v2",
+          "path": "experiments/synthetic_mas/runs/unified_independent_v2",
+          "previous_path": "results/unified_independent_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "unified_monitor_v2",
+          "path": "experiments/synthetic_mas/runs/unified_monitor_v2",
+          "previous_path": "results/unified_monitor_v2",
+          "status": "preserved_existing_record_not_revalidated"
+        },
+        {
+          "id": "imported_root_reports",
+          "path": "experiments/synthetic_mas/runs/imported_root_reports",
+          "previous_path": "results/FIRST_VERSION_REPORT.md",
+          "status": "preserved_existing_record_not_revalidated"
+        }
+      ]
+    }
+  ]
+}

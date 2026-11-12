@@ -1,0 +1,1126 @@
+{
+  "original_files": 152978,
+  "metadata_mismatches": [],
+  "sha256_checks": [
+    {
+      "path": "data/benchmark_ragtruth_qa/fit.jsonl",
+      "sha256": "814ecd12fd25c44742a718498ce48557006dae914cd0b8d4c3df3a5ee6e39c9a",
+      "matches": true
+    },
+    {
+      "path": "data/benchmark_ragtruth_qa/calibration.jsonl",
+      "sha256": "7d03f482d0b5b85822b759520bbe70eeae7d341d8efcc842418cd7fd610c7eb7",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/FORMAL_BASELINE_RESULTS.md",
+      "sha256": "8676e166356836388ae02282df7e309dbf80b0469dccf626367162b572d56872",
+      "matches": true
+    },
+    {
+      "path": "reports/paper/PAPER_WRITING_PROMPT_CN.md",
+      "sha256": "78534687b5eb6a94f7cc6792fe4a10cb38f35cc0127e3b1451c9a9e3b63fe911",
+      "matches": true
+    },
+    {
+      "path": "reports/paper/面向开源情报问答的大语言模型事实风险监测与定位研究（初稿）.docx",
+      "sha256": "c487f0d7ac8311a506be3436d34ea19110bd21ce88618f97f755b4b848b385a4",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/analyze_first_risk_token.py",
+      "sha256": "864857434fd7e3b76597595880d91d0b6b5d27b6f8a8e854810e4937aebc024c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/analyze_first_risk_token_matched.py",
+      "sha256": "c9d15f2dacd73e34f1b717703e164225bdbaadd9fa5f420bd20e244b0ab6c5ed",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/analyze_fit_loss_exposure.py",
+      "sha256": "73189b833b806a7e6f567bf35a89db8a4c1f542cb05342777f246cb993f45aae",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/analyze_large_fusion_reliance.py",
+      "sha256": "85312290389285247d5c85b8e175527d19396c5a082e4c44576ff3b50a7a949e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/analyze_typeaware_contradiction_fold0_v1.py",
+      "sha256": "9e69dfb49a35085fc9a1c3d5b76e4483383bbb39b600abe4c8e53719dc517ec1",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_auxiliary_conflict_runner_v2.py",
+      "sha256": "665586fa1f303bf6392a16ba9c7416f657a0a93c332d99cd7c44b674baa972b9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_auxiliary_conflict_token_pilot_v1.py",
+      "sha256": "a109097226acd3119943505618d82ec659caafc5a4ba4eef811819ea21aa3e7a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_auxiliary_conflict_token_pilot_v2_final.py",
+      "sha256": "9e19f9cf7a55ce90fe9e581bc793c78f0f6081fe76e9a0f47ec2dc977d6ed3e5",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_exact_subset_attribution_v2.py",
+      "sha256": "8955dfac1691e19e0c20ef89e330e60770881222c386070004defe694d5d4b0a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_exact_subset_attribution_v3_extraction.py",
+      "sha256": "1e7e863443dd42a41eb4f662cc4bb94e8dfd2db08c35c579cde5eea6c6f1bf72",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_exact_subset_attribution_v3_fit_pilot.py",
+      "sha256": "26b140db37df01369b544180fee2d1c3b586ee67c1a8b6c873057233ef76ce3b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_exact_subset_attribution_v3_gpu_smoke.py",
+      "sha256": "81c0d452c322dc3416f367fd3eaf61057c6c3fad0b422b9b36b42209312fd2ec",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_exact_subset_attribution_v3_scoring.py",
+      "sha256": "fe0966f8d10777d0c48accd5fa0620f6b4c7cd0db499bbe6871907c0a45f8062",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_forced_evidence_quote_probe_v1.py",
+      "sha256": "cc4dbc491bded9e8b74fd29abb5d6aa2d1f62ca3aa7918f47651a8cda8f17d2f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_large_fixed_convex.py",
+      "sha256": "ea408d384b9cee69b6efed8fccf9492c55b871c5d0dd4b2bcd4da6131d5ca899",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_large_matched_combination.py",
+      "sha256": "a56cb08954fba46823a63abb18909efb7882eb5e662e198c57c1f206caaad3ba",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_microclaim_crossencoder_stage_v1.py",
+      "sha256": "2447c9fc0664f082494e98d21624713dc88a8f210d4dc4b51db06e0b54ca474b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_microclaim_crossencoder_v1.py",
+      "sha256": "fa1b80e307565327ea84208090694ebd7dcc7e670b07c898034821fb2c0fc885",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_microclaim_within_answer_contrastive_v5.py",
+      "sha256": "bbfa62ca1194e3769b98e8a4c46c1b403c637d4584bf55b4929c09616837291d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_microclaim_within_answer_contrastive_v5_fold_pilot.py",
+      "sha256": "15370ae9a27bb5babaea083b043df6d546f66dc4da0bddbbe00d93eb7e7559de",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_microclaim_within_answer_contrastive_v5_gpu.py",
+      "sha256": "41cc75263ae393dd7b3d56484ca52e305438ae2799be3777f457bc8b1d20e816",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_redeep_raw_features_v1.py",
+      "sha256": "b16f3074f5e2c4e8d3f16dbb965b249a303501cf6030f1a9d5156efe96aace89",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_relation_pair_fast_v1.py",
+      "sha256": "df449a569e941c66f06016d68400169e210a8285b2186943c39859f047232dfc",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_relation_pair_final_v1.py",
+      "sha256": "921ce26f05dc344b57f4f8668e1ac0ff079cbdb19421e8173f8a1999906c579a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_sources.py",
+      "sha256": "66702886a984443a36b4586b5a1d14035597d162d6ba26372c07b920a7dd7973",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/audit_specificity_gate_v1.py",
+      "sha256": "9950d848e72f276742e133809dc4ad239b172a377955ff888017e8275e8526d4",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/build_citation_alignment.py",
+      "sha256": "50238f798a3ae7e361cfe74a94350763a5e865654fb9a4a072dc9ba6c3901843",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/build_citation_heading_semantic.py",
+      "sha256": "b44fe4abf0a056046647dbe5546b241191fc00c42d708ece6bebf5c39fb6ac89",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/build_cited_source_semantic.py",
+      "sha256": "284c30a7ddc0a6d69d6f4404ed54fb0b0305a69ab5d753f311bd1871ed90482e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/build_gold.py",
+      "sha256": "55e217a2eddf9b443d5dab2547292ac072d451f1dedac148764732be49bf51d7",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/build_redeep_final_manifest_v1.py",
+      "sha256": "7a89bfcf0b29242a7ef6c75a0f43a4eb0e04cd2914e99d5aebbb0b255bfb1934",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/cache_frozen_context_fusion.py",
+      "sha256": "74cd38e37e6e6d136efb48544c919b6b52cd87e57d92bbeaf1b6619cef4d7f35",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/check_generation_residual_fusion.py",
+      "sha256": "33dadef52928e1f7714ac7c6f4772860d266cbb6f3d6dce8c7764b17dbd621bf",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/check_modernbert_generation_bridge.py",
+      "sha256": "563c667b45e49ee74c7ba9f881e52bd205e10d66260464992e94f227c0802d02",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/compare_current_harp_intervals.py",
+      "sha256": "1aaf9d651fb8b8b0465d84935f30e8b24d49f64c3a1386931c8deeb1bc0a5093",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_completed_detector_types.py",
+      "sha256": "a56d39561819fd42c9dbed3e3eebc537859be3291f745cc6aa659f24e37553f7",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_completed_full_context.py",
+      "sha256": "ef5f8ad7f9a8f922da400efa60ad6e56871de9fe75cf01c2db2ce95ab4d69655",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_completed_large.py",
+      "sha256": "8620463682c4dbdcb910b14090d6cf2d556f6f99a96a8c79709d00c95691be2e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_completed_tail.py",
+      "sha256": "ec49432d0de98037140f2c1dba6d4920ce9afe9b78b678b344ed22a96a124ca6",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_forced_evidence_quote_probe_v2.py",
+      "sha256": "835a35e3bf07ebdf84f447bbeb74d5c2f3db2017cde460eaf14942de5d627771",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_forced_quote_cache_replay_v1.py",
+      "sha256": "377e9c157ce1de062ff4bbc5b12ef7d5abb6d9bb3f6710fe2f0185cca4d093de",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_forced_quote_token_offsets_v1.py",
+      "sha256": "f4aaf68ff920b05b8956776b4a80023a60160dce5abeafbc356218b030a43ba2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_selected_convex.py",
+      "sha256": "4293a98594f7bbdc0f9f84534c5c9b8a98a5eb21f923544e7157d878779910d8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/diagnose_semantic_window_v2_expanded_fit_v1.py",
+      "sha256": "4133d504e5fd5e3a4592bcae395089371a2894f18aa1dd7d4aee4b7df4c6e8f9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/download_checkpoint.py",
+      "sha256": "84f84936c1cca174f7d53ef681c49f6dab682c45a3be292b0704a271092e7292",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/download_modernbert_large.py",
+      "sha256": "9af73c98bbb5e128ba84668f4d4e1259ddcd86324cf4669e35ca5a0c9f119f2e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/download_nli_initialization.py",
+      "sha256": "79836ede7c84d6e5e889e2f8bcb1b452aafbdf2372bb6dc4ff123b03f13cdbf2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/evaluate_forced_evidence_quote_probe_v1.py",
+      "sha256": "d2f6fb4c3a863c6c84273448a6a6c5aec6202eeb8e2fb37e0e5240ea017a11cb",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/evaluate_forced_evidence_quote_probe_v2.py",
+      "sha256": "a80e1ac7a107d96e32dd55e47e4c8535c5e7a189e491335f519acb604883ac8f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/evaluate_microclaim_within_answer_contrastive_v5_fold.py",
+      "sha256": "749ca286280e815269b7bdfef3f3b3479035377d760c7b779f89cb5fda420a47",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/extract_harp.py",
+      "sha256": "9619cbae61cd6ecd24bca9b80fefb584d3fb772ecd61758547214904437484f3",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/fava_nfc_character_map.py",
+      "sha256": "60ff6f41a8927faf64561da541a1887db501caf34025c92fcb49413470b2854b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/feature_lookback_controls.py",
+      "sha256": "293565753d8ed8c42750bf92f3a6b00acd215d6b9e3f910d5568f91c76853e0a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/feature_lookback_controls_v2.py",
+      "sha256": "b49629aa5370444f74afe9e313b01330bf31e6210156e8c0069088aabb84426f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/feature_qa.py",
+      "sha256": "2b5c4011b9fea11c6888fc72e0930068ec42ce8a1ad79d2b7e4a8c6d27d78d73",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/finalize_forced_evidence_quote_probe_v1_features.py",
+      "sha256": "463643bce2fdb9aa786ec91a5cb6ebed496f48c6f4688c1a6a79c4be435719fd",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/finalize_forced_evidence_quote_probe_v2_features.py",
+      "sha256": "25ac94cd67d61d09ee3440d8854d378f310be730d27509eeb51b24c22a5cfff9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/generation_residual_fusion.py",
+      "sha256": "0b9991bce8736f4d5d0e18b46954cdf8df1fc60d892c50d6f4643b1eef0da479",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/generation_residual_fusion_v2.py",
+      "sha256": "1535a417cb8d099a346dd57fcbf03335eb672981f25d35ead1e9412d6a800955",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/ghost_geometry.py",
+      "sha256": "2d3976a0c22c122e4ea95c2b68b9122d984b1dca8b4bbd516ce476553d98b17e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/local_repair_pair_loss.py",
+      "sha256": "16e99ae3a747ba81343830c8659bb565d4880a0284e8a9287fa668e447aea173",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/lumina_qa_signals.py",
+      "sha256": "15910f994e66ebc88bd5f826c9081b292fd13c4259ce35bd7214d17987983626",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/microclaim_pairwise_rank_loss_v5.py",
+      "sha256": "b74f1184c27e5b9c1fb84bdfc3fbd6f529a636faeab1b47f087940a630baddfc",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/modernbert_generation_bridge.py",
+      "sha256": "774274473ee7a3c4e89293ea67f405a8e00c6e2c54379caff7a821930aabfc46",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/mva_attention_features_v1.py",
+      "sha256": "6b40a1aa6afc31fe13e0da617d1f6b78b45864e49dad94493123e67575692dc6",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/plot_full_context_learning.py",
+      "sha256": "c6bd4ff3c154c73890f75dab3565bd41cbb84a6f19858b91ab3bef2597bdd085",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_atomic_microclaim_relation_expanded_v1.py",
+      "sha256": "7b7f912dfff0c664761e0b8ae91de446b8835eea1314563cdb86153d7d44b8d0",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_atomic_microclaim_relation_expanded_v2.py",
+      "sha256": "9a2a69e442f759b00686ea2f07d01acf0e4455e697b6348d8ccdaac70a280f4d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_atomic_microclaim_relation_expanded_v3.py",
+      "sha256": "ea580fb7bb016875922296272de117acff8d38ecd0a4a943cfe1f25464bffa49",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_atomic_microclaim_relation_expanded_v4.py",
+      "sha256": "9dac8461d30c24602e4f3d05b9613cc498e40a401948ca1c50735f5f792c9574",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_auxiliary_conflict_token_pilot_v1.py",
+      "sha256": "32f1f5e0ec3d096c3d74e260b2d1a8908c0fa3ee10d194f40e2a00e76e452caf",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_auxiliary_human.py",
+      "sha256": "98c622e245973096abbc70b6596e97d04129d9c50e4aace526afc482af3a2645",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_auxiliary_tokens.py",
+      "sha256": "d0dd2d7c1c95775c8ada7d39266a06d958a0df742b11e533f05344e81501dad2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_control_scene_transfer.py",
+      "sha256": "55d0deed58e6cf6a553a6c4c1ca701727fef2fbae9c6ee3ef63edb3a9b71dfdb",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_development.py",
+      "sha256": "8954650841af604eb9444f14ac7c822ee664ab2d8399c2edcc8f3c566f736a94",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_fava_candidates.py",
+      "sha256": "ed0f7742ab725eea030718c3b48d725001d84cbc00f3db83d1675e4f08f0835a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_fava_candidates_v2.py",
+      "sha256": "3bb5459d51024f0013d987d3f8d3a274752349e700daae1edb04404f27ad2398",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_fava_local_pair_tokens_v1.py",
+      "sha256": "fed4d7c15470a31208bd773a7f0dda4f47eb4d9f46e99c1c33fce7ccc0a5677d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_fava_tokens.py",
+      "sha256": "f764147b977d2da46138995ae9f01a858748dbba1d7fd50fc4072a86c6d1272c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_fava_tokens_v2.py",
+      "sha256": "12234ab0bf90426a61b3e8a42f4a160512bd5d24427f78b1eac991efcf457d80",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_forced_evidence_quote_probe_v1.py",
+      "sha256": "fb71081166421a01e9a73e6f3ca873ebd1d8e2b738b5dc5f1b028803a20c6c17",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_ghost_feature_inputs.py",
+      "sha256": "7b690bc34d1bfb4f03ca0efefc2cfb15b2cf7af0ed68758a9e36abeadd0b9938",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_human_correction_pair_pilot_v1.py",
+      "sha256": "53769145a75bdafa9e8f0d23279410dc356746517621e58c05d24af15a876833",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_lumina_qa_inputs_v1.py",
+      "sha256": "97a03d6ccbd54fea4c17eb0145d264b9e5c1e7191bbc5c5c8fd1c58fe561e9be",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_microclaim_indomain_pairs_v5.py",
+      "sha256": "d0011f84e7fd06deedb7493804eb8baa1a3f83d337119cca0cb9326272c06c0c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_psiloqa_candidates.py",
+      "sha256": "95388187fae4edf7c615ba499e3bb3c4a04b021983820d3e8443744ce5d5f039",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_psiloqa_tokens_v1.py",
+      "sha256": "d176d37bc0e536c2e0924ccc73e334ab1f2d23f1310334668e80f638bc556ddc",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/prepare_redeep_formal_baseline_v1.py",
+      "sha256": "996467be1777059b94365180953cbb32cf4b2ccf1a59ab5470f959b4c59e6eea",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/redeep_formal_core_v1.py",
+      "sha256": "8fded50579a701c27d43be2edd83fe0303cc7f4df9cae7561028181e26d5efdb",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/report_matched_detector_trials.py",
+      "sha256": "352641999bb46d251634f799c97da49423eb188fbd4a2a2859717d099a1f939d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/review_gold.py",
+      "sha256": "74bfe3930797cf6beb80c3b7afb314d8bb638dd1061c96ec5244a1bc8a954de5",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_aligned_evidence_head_v1.py",
+      "sha256": "3741358739571dadfabc1d183c586c4b606085097f0cd14fe411a3a8a70c4e0e",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_answer_conditioned_scores.py",
+      "sha256": "0edf1c846a7def845ca3fdf92dfa2838db5f9d2abeba8dfe6a542c1162d5964f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_atomic_evidence_router_v1.py",
+      "sha256": "476a8b78620173b9ca86e7797a87a56ace52a764fe7c66f6c773d08a8408f7d2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_atomic_microclaim_nli_v1.py",
+      "sha256": "1b2412a4767fd0087868fc6a132f87348b709a81dbc5a93a49e37848a612f2ec",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_auxiliary_conflict_token_pilot_v1.py",
+      "sha256": "4e89de369c54131516d8689f30e6b6337b1333e3a152ad3bd0d2830de9e4bade",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_auxiliary_conflict_token_pilot_v2.py",
+      "sha256": "07a65892e1318f586d6d06bcc7d34786b601e08d0f5384e47155aec3435d33d3",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_auxiliary_transfer.py",
+      "sha256": "9bc06a2ddfff3dc5794e1b353aaac6ae33b133b16d666c3a0ca95e0143ffe37c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_citation_scope.py",
+      "sha256": "f25200b031568617f9b9dd18028ad903cf411ae35fed7e70a7454bac909dbfde",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_claim_evidence_meta_v1.py",
+      "sha256": "5cc31ebc4bbf2c2a0046951e8de9d05c27381f8657eb3863895086d4ca1bac16",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_claim_pooling.py",
+      "sha256": "82b328de5829c58c98b30f8a592834ecbf1c2ff961fdc2e7c8f5db49ce45cc99",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_completed_score_fusion.py",
+      "sha256": "c811a0eba795188a7565b54ce3d2ea80561154fd03bf873d0b6e49d17696ab5d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_control_scene_transfer.py",
+      "sha256": "02a94e8e027ee978dbf3c1efda51b0585a63c0053e9d905c29615beca2f7c28c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_detector_fixed_convex.py",
+      "sha256": "fe49811f2764e239acd8708f96cef266ddeb2c5c6f0d5958d5ec85546024b255",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_development.py",
+      "sha256": "8426b6b5c0959143f963d1a4a3121b9b24b98d2647af8c278c3a94c5918d2a9f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_disagreement_dual_gate_v1.py",
+      "sha256": "45c37746003490f226c31196bd3628e3dd66b250d948da6f9fe04e5fcafca409",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_evidence_union_nli_v2.py",
+      "sha256": "ebcc46faa91e090926d91a1b7dcc485087d99a78af0f4cd576585b1217354a48",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_exact_subset_attribution_v1.py",
+      "sha256": "ea6bc933991b7eef71f2d6994eac30789268c8ab44e1a18cda523529009dd394",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_exact_subset_attribution_v2.py",
+      "sha256": "a55a7cb8a57e783eab39a09195880ed671c9f7f1b06ee77005f0f362b9fbc7fc",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_exact_subset_attribution_v3_fit_pilot.py",
+      "sha256": "4c9b7e01fc77dfb97509144e64145396d948f60d7b7a2b66f6549d53efab980b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_existing_auxiliary_readout.py",
+      "sha256": "b2b88170ea59974b4ef46eaa8eff7b2c52d1770e91b68a39d0199d9018b5d03f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_expanded_claim_whitebox_v1.py",
+      "sha256": "1b5d5505214bf6ee186cbb9e9d7675d3187cef7490571d6e1819452c34c36b75",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_fava_transfer.py",
+      "sha256": "65b233c090a6fba03567bf7515bb748e4d352437ff728afeade3ea8021f6ae9d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_feature_qa.py",
+      "sha256": "9d9bd6ba68e297f2986420ea5265546d6c48bd4fec8090f20eac08d70d3d9957",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_feature_qa_all.py",
+      "sha256": "bbef406757683907ee9645104a0962b3c5e7495c6cd46533e915b2ed6743cf74",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_forced_evidence_quote_probe_v1.py",
+      "sha256": "3380729506c5dc23c4430313a1eb0cba6777b9ca24981d11170a2cc2256a0598",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_forced_evidence_quote_probe_v1_gpu.py",
+      "sha256": "a142d00ef1601aff6af203cfaf60644a11c37f108c8c4043f641b51f8e01e0cb",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_forced_evidence_quote_probe_v2_gpu.py",
+      "sha256": "eb4a51353ba4edaff2cff877f576ff206f1fca1d6bd820928fb0db4acebfcca2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_frozen_nli_local_signal_cuda_v1.py",
+      "sha256": "ecbba278f5f5baf8532ea1b35bdc566236946a495a5240129d1e8cdd60a7ae82",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_frozen_nli_local_signal_v1.py",
+      "sha256": "e68b494b9dc713d317eaf2772ddaa3ad16b48797a496cf2ff5cee621ade038c1",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_encoder.py",
+      "sha256": "1e41d35fda6b6fdd45c23aa0b5f7f2ec63085a046fe8595e1d942a9ba8ac5b03",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_encoder_large.py",
+      "sha256": "8a0899a12ce6b39569dfcebc46bb2bbe753db0a7a457895e19e3733d6e0e35d9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_encoder_v2.py",
+      "sha256": "c017bcb5c437af9097d68f1ee518f63111ebcadc229510c28a63947a9b76cc75",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_fusion.py",
+      "sha256": "a5f4ee39f4cc88eaeabaca20e8e1e27cbaa2c19164f27856621ec14bc5974c84",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_fusion_v2.py",
+      "sha256": "e61ab12279dadbada0ac418aea357bc25e517b951afb192618a3b2b44676b617",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_nli_initialization.py",
+      "sha256": "bfcd627f30eb6305d1a147a836bab0bb882c5ab65ab185bb07867c9de65b7cdf",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_full_context_nli_initialization_v2.py",
+      "sha256": "5ba13ca460a525326e4ab3a7ba656c6439442e7eaa1d470f3275109bbbb5911f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_feature_extraction_v1.py",
+      "sha256": "55898518b3d0f7fc9f9bf068e09c7631532bc0785d03d200339cd1b1e3bd6a57",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_k4_evaluation_adapter_v1.py",
+      "sha256": "a1eb4fd383027b0ecf34ef69a0eddddcbf9cb14d3d8bcab9f624c1c28c74bfdf",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_matched_lr_v1.py",
+      "sha256": "1b15f24d146a8bb3839c58c5a6efa4e75a4a6b2a2b85acc26fd04fc4477ae1ab",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_native_only_v1.py",
+      "sha256": "e95d593ea4f10124b6acad79c7e5336fcfbe27c2f09bf80b0426307dc377fa4c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_nll_nonlinear_v1.py",
+      "sha256": "47416e4a17190358c1dc882822704c12a9a35f892a363803d7465d109d9d2e2f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_ghost_official_answer_rf_v1.py",
+      "sha256": "e2cb7bfc6466392b83c1e285230c56a1944f473a2e90c7c5711e6b5e5019572a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_group_crossfit_lb_large.py",
+      "sha256": "9eab4d2c2e38587852e10c477f92cae584e87e945aee176e7dbcb8445b501fc8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_harp_development.py",
+      "sha256": "6fb13a604d078b2308ea7e9100e3b44d37faf74be80185593cce3f612da62e7d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_large_fixed_convex.py",
+      "sha256": "ba13c0c6520788840aeb88b6ddacdaced511f864d12088b14bcccc7d234454a9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_large_matched_combination.py",
+      "sha256": "ceeaf124a8ae05948a4855f6465e2d2e7b95bf0fdfb0022d509968fc8e3bd2ad",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_large_matched_combination_v2.py",
+      "sha256": "dafbe3ae87a2d6f9a321740ba191faf1a5dc87ecadb86e7c692ac4106d80b9b2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_length_position_naive.py",
+      "sha256": "672b945929ae18ee3ccb78e1d5b6e273732175f20a5240597b3687edc035c5af",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lexical.py",
+      "sha256": "08f6c3a7c7666962d12bfb36ff3ac289277de30b97fdb98b198d1240f826447d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_local_gated_answer_scores.py",
+      "sha256": "dcf3adbf66b159ba28879f052e338b7ccf3f0060691313a1445ffa5d415b56bd",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_local_pair_transfer_v1.py",
+      "sha256": "92e91412a98a7c62688754ad60f46b20764550945320c28595172e8f9a9e5876",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_controls.py",
+      "sha256": "d467d6d25da3cefeb7337c32585d9fb05d39cb6af290357f9585efa7df445cb8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_controls_v2.py",
+      "sha256": "23a6f79d3b29ff3121934875e11b0a05380db9badeda894a3fd5620af396568a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_k4_evaluation_adapter_v1.py",
+      "sha256": "b726eaf9b015ff672d0588606877c9fc28090b770ae3b0a3094a0bb106603e8c",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_official_span_v1.py",
+      "sha256": "a4d1a7feb10974a5707749b9da6a3781882e6653b18580f92c43f01227d7d99b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_regularization.py",
+      "sha256": "b4c4843acf96d150a308bbb476307d91381928a8a92069168796303f072bfa6b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lookback_regularization_v2.py",
+      "sha256": "ee7c0ca9f3dc0673faa079cdd3bb62e270250cb1b9b3279aa43afef8a8169688",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lumina_k4_evaluation_adapter_v2.py",
+      "sha256": "dd9d8a38a6ab5be9cb4ce28c1d5737f748abaede4db4fdefdc8a671638e90920",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_lumina_qa_extraction_v1.py",
+      "sha256": "b7038aefefe82de948955d25d4bd616805aa104e451413887f28ee324a03d76d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_microclaim_crossencoder_expanded_v4.py",
+      "sha256": "56ed23f63f5344fb8335d9f716a99b61fd09f70e9a2d9550ab5e0bf77eb13e1f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_microclaim_crossencoder_typeaware_v5.py",
+      "sha256": "15a761fef83904d597b82f3dc7e81124737487cba3fa69421a473906799a8e86",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_microclaim_crossencoder_v1.py",
+      "sha256": "aaf08424d7f8b129bd21ae11100f0c13a0f6bcc025edbe8805b6c1a00c9ebaa8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_microclaim_within_answer_contrastive_v5.py",
+      "sha256": "15b049428f8c4e362fa7c9f8ea8022f0c9018ed39248ae8ad7424277e94a0166",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_microclaim_within_answer_contrastive_v5_gpu.py",
+      "sha256": "d289a101b16132f0f5797cde1865150a67d037ce37084b6d29fb0a4b493b53bc",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_persistence.py",
+      "sha256": "7edd22f8be27f1d41e8153abce93b8f2f5614e011e370ec4341d3edba4d7d63b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_psiloqa_fixed_convex_v1.py",
+      "sha256": "50555f33357ff861ea34ca7a2d7dc8f1f2c4c07d369bcf646596f64d6b41d8d8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_psiloqa_transfer.py",
+      "sha256": "9aa7eb98cd68af397d939dbce98274b1c14b7aa0baab2acffb3949bc58dda4d5",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_redeep_formal_baseline_v1.py",
+      "sha256": "63e350bfaa77a614cfdec88218c31d5a8cd692c363c00976551adc91983191a2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_refchecker_nli_backbone_ablation_v1.py",
+      "sha256": "7cf7908bc09e53ee987589999a0ff54d9a411d0ebc5695f14693d40ed93b5fe0",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_regularization.py",
+      "sha256": "e61f4a59a3937f6b1698262f02764fc6bd41f3326af5531a0359ee6742f03689",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_relation_pair_fast_v1.py",
+      "sha256": "32b4d9d57f384c0d38919db415a9107f4a875c4e8e3427998fef5d083a9104ac",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_relation_scope_localizer_v1.py",
+      "sha256": "0cc4346ecab53333a90f84d0de10885aefae192f8a46377cac08f96dfad80947",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_retrieved_evidence_nli_citation_v2.py",
+      "sha256": "eedc46c815e89422eb3c6229e5c7703f6621a6e8cb21a40cb6d17bf359bbc6ed",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_retrieved_evidence_nli_v1.py",
+      "sha256": "353129f81e194b87542ec60aa74a6db012cb437108384805ceaa1dd13d1bd64a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_conflict_pair_nli_stress_v1.py",
+      "sha256": "ecf70dd358916a127e06735921d93272994a3312a69b9e4084dbca31b5f9f4a3",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_full.py",
+      "sha256": "8607df2467eeb32720c155da2bde509dc9b1e30cf76af3bcf9e7b91c9118e838",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_hidden.py",
+      "sha256": "627845fff7bd6944615c13674ae23f04e8b5977f8dfe32382dcf5c5bfd7ae1a9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_multitask.py",
+      "sha256": "87b5771c71902120fafb2ad247fa3552db429138d1daaeaf0cd37d84dcb08cf2",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_sequence.py",
+      "sha256": "cb2a49f36c735aa36b1b15367cc645af355bb06335fa1a592c55ba9382284265",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_source_attribution_combined_fit_v1.py",
+      "sha256": "a1a5f11fea66e12feaca198aac813794e29a33a5dfdc3e0116944ab1ccea5e79",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_source_attribution_expanded_fit_v1.py",
+      "sha256": "924bbea7b59cc17bc7899e2a41c66f92b9d2f99130e08441473f31bb75112462",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_source_attribution_v1.py",
+      "sha256": "a87b4c8bcc232cead05cdaa23deb67642c8551f11870b5fd1a640513e78b977b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_source_attribution_v1_score.py",
+      "sha256": "7bea68dadbd80656caa1c651d5c6f62e941511481b103e8ce75c57b7cb1878b6",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v2.py",
+      "sha256": "b365a59004b3e68e804849ef5ac85a5d8b58c353be7165c2a7100df0e4e190a4",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v2_expanded_fit_v1.py",
+      "sha256": "9f3600e48dbad97c05a5fbf0c0bef13ac625faa79d2aa2c0030e9c27c6742b7b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v2_expanded_hgb_v1.py",
+      "sha256": "ac66401c2cb71d06200813b6d959e685680ca31e25284a8649b95271c0b17143",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v2_target_domain_weighted_v1.py",
+      "sha256": "404ac2402ae830a8fb023e27899bbc386afb7ae46d33ada6c194413aa2ad2370",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v3.py",
+      "sha256": "15d0892ec9b489aa71973d8605e8395594768e2abe01de699659cc530332ba28",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_semantic_window_v3_target_domain_weighted_union_v2.py",
+      "sha256": "c1faf56262a33bf432103a4f3fd1921fdcfc77a371de9ab57d1c29e62a797940",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_sequence.py",
+      "sha256": "19f1d5253a11783165880fa0c01a53d3f3c89150f75c40080e35836e6f521137",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_sequence_capacity.py",
+      "sha256": "c50a72df98659dbf92281c0da6e7bfa708e01d6ea38fa2d5dfb4c233197b7f7b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_sequence_full.py",
+      "sha256": "5445ab4e0876adfeca99344f7f83f0bccdf879d82d7dc7306e813581811f464d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_specificity_gate_v1.py",
+      "sha256": "226cb976e67fe1ee8803b7db81f70bccb64b18585cae1565a3796750f195eca9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_tail_claim_pooling.py",
+      "sha256": "b179b7e83a1947f83a2b7c1e415ee4f6070ad6d97b0fabdfc8e55f28d44cb40a",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_token_source_attribution_v4.py",
+      "sha256": "2dcbd70831ef34f5dea316653b610175f842a5053048ebc832f54808fcc73db6",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_window_sequence.py",
+      "sha256": "fe9cce9a6be685bfa0d9f333226fb7089f4ad83c8ce30b034909d6ebe1ff9f68",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/run_within_answer_pairwise_ranker_v1.py",
+      "sha256": "99d817897ea5276bc57630388269f8b59e385ed543e2c58f5326e3e994af67e5",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_current_on_lookback8_v1.py",
+      "sha256": "b43f8fe6252d0643d443d6cc397e9389a759ff172cd667ce9a6fb9de16909733",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_current_on_lookback8_v2.py",
+      "sha256": "141d2c7effa4c189106797171efc78b93700a6a5412875df6cc78cef8713a443",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_frozen_nli_cuda_v1.py",
+      "sha256": "a22997c158a22ac9389ce84ab03db751fc102421ed5d62b0ed72d6fc6c651cba",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_lumina_official_answer_v1.py",
+      "sha256": "891ec560d6be46e569f4e4a58679f0011959b3e58ad2c6c304dae9f4e8ad8cf5",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_lumina_qa_v1.py",
+      "sha256": "e5fcdb74d3c07290330235aa8928ac7984dcaf9b8c3b4d7bc6ce881e0a36f2b9",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_redeep_formal_baseline_v1.py",
+      "sha256": "c5ffa368b6e91780f863bfb2ff523941bb0273651ef2f9475b2df66f4585417f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/score_token_source_attribution_v4.py",
+      "sha256": "c3d39d1a3c8e712efde81cda2a4ac36431121671a9bb74ace767a2c795fe4514",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/selftest_redeep_formal_baseline_v1.py",
+      "sha256": "1650fc7b3e3e6269a766bdf5c617e88df0325be58b95a28b0f0f2b557f1ab9d7",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/semantic_window_v2_features.py",
+      "sha256": "6c059d04fae0431d68353e49c0de472f64d1d78588fd5b011d2c75a9e47fd0c6",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/semantic_window_v3_features.py",
+      "sha256": "60a4007c9b39042aaeb02f85b894d0b2dac4d59569a72def7e6738300b15677d",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/supplement_fixed_convex_baselines.py",
+      "sha256": "1e460ab989c76769dabb0ed0e6428527dd6921dcbaa27404aa24b1a7190bfe94",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/tail_finetune.py",
+      "sha256": "e87bedb566db633bbd0ee3c8d3740df6e069dc981455c86125116fbd0866131f",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/tail_finetune_all_docs.py",
+      "sha256": "29814bf7005c87e5b172ede11cdf4c57e3ae53fde1be7f58b3b73e4e08be8d90",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/tail_finetune_all_docs_v3.py",
+      "sha256": "9759d89757f7b84bfc8de60d35168652ae579ddd79de56431a597585cd119096",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/tokenizer_feasibility.py",
+      "sha256": "cdd5c372a2858a0ac9a86a63efc2bd69beff1c473f22cee4801ba236bd9bb6d0",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/train_citation_alignment.py",
+      "sha256": "f90892be924af54fa2845ddd2dbd83abd66cb206f960ec9a1e634e5d15fcf053",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/train_citation_heading_semantic.py",
+      "sha256": "09f83d1539dbaa1e5f3ec4361ee10348018526b75a9ccb31e0baee9dd23473f1",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/train_cited_source_semantic.py",
+      "sha256": "a0cb90fd404bde30aadab5b3cf2295cf78ddc2ad12548ec341ea10ab65b00783",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/train_completed_score_combiner.py",
+      "sha256": "80ae6181c922bfea432c3fc198921137e2c8e977aab51ac1068816983f316cf1",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/train_frozen_context_fusion.py",
+      "sha256": "3279ee40c1d09c27619df8180411e127eeca578157428652cdf8f84e69d1d577",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_frozen_nli_local_signal_v1.py",
+      "sha256": "1ac4ef513d98a23b4e7d23463bc4996aa2ab605e3dcdbf8a739349a18f1813c1",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_ghost_k4_evaluation_adapter_v1.py",
+      "sha256": "9f63751499c602824f1830cd6ad011be7e3e2c2be8a0454c8301d781dd78f190",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_group_crossfit_lb_large_v1.py",
+      "sha256": "121d695afe9501b1d6127e52bd430b0cf863c06376224d7571cd19c6f8e9875b",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_lookback_k4_evaluation_adapter_v1.py",
+      "sha256": "991a6f76d8f480b86ba0c96e79776c4b86f93bf0f8fb835959e7ed517882cbf7",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_redeep_extraction_identity_v1.py",
+      "sha256": "9313fbfbef60c804c75207246f0117e5592ed6af7c0b406eef2cce696a1676c0",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_redeep_scoring_v1.py",
+      "sha256": "0540fbda297a677111762bf8a94a86afc1270089d02810811ff76cd55d54ffef",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_semantic_window_v2_expanded_fit_v1.py",
+      "sha256": "e381498f581eea2b3fd792dd5bbdff772ade5e393668d4a5dfd24981a444d286",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_semantic_window_v2_expanded_hgb_v1.py",
+      "sha256": "e1f218d47632d27070698226c02ca7b90e32150f6db8c6f09e440eecae94b5e8",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_semantic_window_v2_target_domain_weighted_v1.py",
+      "sha256": "5735c222255776533e7f4b10936286a75e00eebcd91fe08fad603eac7b1e0a91",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_semantic_window_v3_target_domain_weighted_union_v2.py",
+      "sha256": "a3ccc0763ca5154763dca994593336b723d1f5f6836d121e1c621a402806df67",
+      "matches": true
+    },
+    {
+      "path": "src/prelab/benchmark_ragtruth_qa/src/verify_within_answer_pairwise_ranker_v1.py",
+      "sha256": "7596435d31927b7315c6cce43b98263fb2a523c4740ec5de18864d59b0c00d95",
+      "matches": true
+    }
+  ]
+}

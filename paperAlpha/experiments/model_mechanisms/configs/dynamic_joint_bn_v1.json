@@ -1,0 +1,44 @@
+{
+  "version": "dynamic-joint-bn-v1",
+  "scope": "small-graph exact conditional DBN development; no real-world superiority claim",
+  "reference_manifest": "experiments/model_mechanisms/runs/streaming_template_bn_20260919/manifest.json",
+  "data": "experiments/synthetic_mas/runs/independent_mas_v3",
+  "expected_seeds": [20260919, 20260920, 20260921],
+  "settings": [
+    {"workflow": "runtime_only", "permission": "observed"},
+    {"workflow": "runtime_only", "permission": "masked"},
+    {"workflow": "workflow_known", "permission": "observed"},
+    {"workflow": "workflow_known", "permission": "masked"}
+  ],
+  "max_joint_variables": 10,
+  "training": {"regularization": 0.01, "max_iter": 100},
+  "target": "terminal episode outcome given current prefix; equal total loss weight per episode",
+  "roles": ["unknown", "reader", "reasoner", "reviewer", "executor"],
+  "role_policy": "only audited pre-run roles; absent roles remain unknown; do not infer roles from future actions",
+  "group_policy": "optional explicit workflow.agent_to_node; no automatic grouping or label-informed clustering",
+  "inference": "exact joint probabilities over workflow-node states and origin hypotheses; no independence closure at branches",
+  "knowledge_links": {
+    "source_adoption_transmission": {"risk_ids": ["RB003", "RB026"], "scope": "structure inspiration; not verified instruction adoption or independent-source recovery"},
+    "authorization": {"risk_ids": ["RB008", "RB009", "RB011"], "scope": "observed permission flags, not a full delegation or authorization verifier"},
+    "global_head": {"risk_ids": [], "scope": "learned named observable and latent summaries; architectural choice, not a literature-proven mechanism"}
+  },
+  "baselines": {
+    "template_bn_prefix": {"regularization": 0.01},
+    "logistic_flat_prefix": {"C": 1.0, "max_iter": 1000},
+    "histgb_flat_prefix": {"max_iter": 100, "max_leaf_nodes": 7, "l2_regularization": 1.0, "early_stopping": false}
+  },
+  "flat_feature_contract": "13 current-prefix observable summaries plus 49 chronological template counts; same raw information as joint BN, no latent learned states or labels; roles and capability manifests absent in this benchmark",
+  "comparison_scope": "generic same-observation controls and architecture ablations, NOT reproductions of published MAS monitors",
+  "ablations": ["no_messages", "no_latent_head"],
+  "threshold": {"validation_negative_any_alarm_fpr": 0.10, "test_tuning": false},
+  "limitations": [
+    "Exact cost grows exponentially with node groups plus origin hypotheses; fail above the declared limit.",
+    "Origin identity is only as reliable as logged source_id; missing IDs use entry-agent proxies.",
+    "Latent risks and role CPTs are not uniquely identifiable from episode labels.",
+    "Current benchmark has no explicit role/capability manifest or independent harm timestamp.",
+    "First observed origin class initializes its latent prior; later reclassification is not full Bayesian evidence revision.",
+    "One authorization injection per action; changed proposal/dispatch checks affect observables, not a revised old injection.",
+    "No state recovery or review-verifier semantics yet; latents persist within an episode.",
+    "Reused synthetic development data; not confirmatory results or an original MAS baseline reproduction."
+  ]
+}

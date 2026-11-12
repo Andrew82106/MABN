@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "date": "2026-09-27",
+  "canonical_root": "intelligence_knowledge_boundary",
+  "root_cleanup_date": "2026-10-14",
+  "doc_cleanup_date": "2026-10-14",
+  "legacy_runtime_aliases": [
+    {
+      "alias": "prelab",
+      "target": "intelligence_knowledge_boundary/src/prelab"
+    },
+    {
+      "alias": "research",
+      "target": "intelligence_knowledge_boundary/reports/research"
+    },
+    {
+      "alias": "tmp",
+      "target": "intelligence_knowledge_boundary/artifacts/legacy_tmp"
+    }
+  ],
+  "directory_aliases": [
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/.venv",
+      "target": "intelligence_knowledge_boundary/artifacts/environments/prelab"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/configs",
+      "target": "intelligence_knowledge_boundary/configs/initial"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/data",
+      "target": "intelligence_knowledge_boundary/data/initial"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/initial"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/models",
+      "target": "intelligence_knowledge_boundary/artifacts/models/initial"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/references",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/initial/references"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/initial"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/data",
+      "target": "intelligence_knowledge_boundary/data/benchmark_ragtruth_qa"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/references",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/references"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/benchmark_ragtruth_qa",
+      "target": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/semantic_baseline",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/semantic_baseline"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/third_party",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/third_party"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/fit_expansion/data",
+      "target": "intelligence_knowledge_boundary/data/benchmark_ragtruth_qa/fit_expansion"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/research/sirg_baseline_audit_v1/official_repo/.git/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/benchmark_ragtruth_qa/research/sirg_baseline_audit_v1/official_repo/.git"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/data/round10_dual_granularity",
+      "target": "intelligence_knowledge_boundary/src/prelab/round10_dual_granularity/data"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round10_dual_granularity/references",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/round10_dual_granularity/references"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round10_dual_granularity",
+      "target": "intelligence_knowledge_boundary/src/prelab/round10_dual_granularity/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round11_logprob",
+      "target": "intelligence_knowledge_boundary/src/prelab/round11_logprob/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round12_conditional_fusion",
+      "target": "intelligence_knowledge_boundary/src/prelab/round12_conditional_fusion/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round13_generalization_diagnostics/data",
+      "target": "intelligence_knowledge_boundary/data/round13_generalization_diagnostics"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round13_generalization_diagnostics",
+      "target": "intelligence_knowledge_boundary/src/prelab/round13_generalization_diagnostics/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round14_window_detection",
+      "target": "intelligence_knowledge_boundary/src/prelab/round14_window_detection/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round15_window_regularization",
+      "target": "intelligence_knowledge_boundary/src/prelab/round15_window_regularization/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round16_dataset_expansion/data",
+      "target": "intelligence_knowledge_boundary/data/round16_dataset_expansion"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round16_dataset_expansion/references",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/round16_dataset_expansion/references"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round16_dataset_expansion",
+      "target": "intelligence_knowledge_boundary/src/prelab/round16_dataset_expansion/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round17_expanded_retraining/data",
+      "target": "intelligence_knowledge_boundary/data/round17_expanded_retraining"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round17_expanded_retraining",
+      "target": "intelligence_knowledge_boundary/src/prelab/round17_expanded_retraining/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round18_input_information_diagnostics/data",
+      "target": "intelligence_knowledge_boundary/data/round18_input_information_diagnostics"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round18_input_information_diagnostics/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round18_input_information_diagnostics"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round19_three_signal_probe/data",
+      "target": "intelligence_knowledge_boundary/data/round19_three_signal_probe"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round19_three_signal_probe",
+      "target": "intelligence_knowledge_boundary/src/prelab/round19_three_signal_probe/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round2/configs",
+      "target": "intelligence_knowledge_boundary/configs/round2"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round2/data",
+      "target": "intelligence_knowledge_boundary/data/round2"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round2/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round2"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round2/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round2"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round20_localization_optimization",
+      "target": "intelligence_knowledge_boundary/src/prelab/round20_localization_optimization/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round21_semantic_internal_probe/data",
+      "target": "intelligence_knowledge_boundary/data/round21_semantic_internal_probe"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round21_semantic_internal_probe",
+      "target": "intelligence_knowledge_boundary/src/prelab/round21_semantic_internal_probe/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round22_evidence_verification/data",
+      "target": "intelligence_knowledge_boundary/data/round22_evidence_verification"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round22_evidence_verification",
+      "target": "intelligence_knowledge_boundary/src/prelab/round22_evidence_verification/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round23b_local_evidence_probe/data",
+      "target": "intelligence_knowledge_boundary/data/round23b_local_evidence_probe"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round23b_local_evidence_probe",
+      "target": "intelligence_knowledge_boundary/src/prelab/round23b_local_evidence_probe/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round23_local_evidence_probe/data",
+      "target": "intelligence_knowledge_boundary/data/round23_local_evidence_probe"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round23_local_evidence_probe/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round23_local_evidence_probe"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round24_sequence_persistence",
+      "target": "intelligence_knowledge_boundary/src/prelab/round24_sequence_persistence/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round25_lumina_completion/data",
+      "target": "intelligence_knowledge_boundary/data/round25_lumina_completion"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round25_lumina_completion",
+      "target": "intelligence_knowledge_boundary/src/prelab/round25_lumina_completion/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round26_global_local_fusion",
+      "target": "intelligence_knowledge_boundary/src/prelab/round26_global_local_fusion/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round27_joint_verifier_states",
+      "target": "intelligence_knowledge_boundary/src/prelab/round27_joint_verifier_states/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round28_semantic_scene_adaptation/data",
+      "target": "intelligence_knowledge_boundary/data/round28_semantic_scene_adaptation"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round28_semantic_scene_adaptation",
+      "target": "intelligence_knowledge_boundary/src/prelab/round28_semantic_scene_adaptation/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round29_full_hidden_scene_adaptation",
+      "target": "intelligence_knowledge_boundary/src/prelab/round29_full_hidden_scene_adaptation/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round3/configs",
+      "target": "intelligence_knowledge_boundary/configs/round3"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round3/data",
+      "target": "intelligence_knowledge_boundary/data/round3"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round3/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round3"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round3/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round3"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round30_answer_supervision",
+      "target": "intelligence_knowledge_boundary/src/prelab/round30_answer_supervision/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round31_large_semantic_scene_adaptation/data",
+      "target": "intelligence_knowledge_boundary/data/round31_large_semantic_scene_adaptation"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round31_large_semantic_scene_adaptation",
+      "target": "intelligence_knowledge_boundary/src/prelab/round31_large_semantic_scene_adaptation/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round32_scene_regularization/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round32_scene_regularization"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/configs",
+      "target": "intelligence_knowledge_boundary/configs/round4"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/data",
+      "target": "intelligence_knowledge_boundary/data/round4"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round4"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round4"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/data",
+      "target": "intelligence_knowledge_boundary/data/round4/confirmation"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round4/confirmation"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round4/confirmation"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round5_oracle/data",
+      "target": "intelligence_knowledge_boundary/data/round5_oracle"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round5_oracle/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round5_oracle"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round5_oracle/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round5_oracle"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/data",
+      "target": "intelligence_knowledge_boundary/data/round6_evidence_grounding"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/logs",
+      "target": "intelligence_knowledge_boundary/artifacts/logs/round6_evidence_grounding"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round6_evidence_grounding"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round7_evidence_grounding/data",
+      "target": "intelligence_knowledge_boundary/data/round7_evidence_grounding"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round7_evidence_grounding/references",
+      "target": "intelligence_knowledge_boundary/artifacts/dependencies/round7_evidence_grounding/references"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round7_evidence_grounding",
+      "target": "intelligence_knowledge_boundary/src/prelab/round7_evidence_grounding/results"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round8_token_localization/data",
+      "target": "intelligence_knowledge_boundary/data/round8_token_localization"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/src/prelab/round8_token_localization/results",
+      "target": "intelligence_knowledge_boundary/reports/experiments/round8_token_localization"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/data/round9_evidence_binding",
+      "target": "intelligence_knowledge_boundary/src/prelab/round9_evidence_binding/data"
+    },
+    {
+      "alias": "intelligence_knowledge_boundary/reports/experiments/round9_evidence_binding",
+      "target": "intelligence_knowledge_boundary/src/prelab/round9_evidence_binding/results"
+    }
+  ],
+  "moves": [
+    {
+      "from": "intelligence_knowledge_boundary/README.md",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/README.md"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/artifacts/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/artifacts/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/configs/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/configs/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/data/README.md",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/data/README.md"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/data/processed/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/data/processed/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/data/raw/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/data/raw/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/data/splits/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/data/splits/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/reports/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/reports/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/scripts/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/scripts/.gitkeep"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/.gitkeep",
+      "to": "intelligence_knowledge_boundary/reports/history/initial_proposal/src/.gitkeep"
+    },
+    {
+      "from": "prelab",
+      "to": "intelligence_knowledge_boundary/src/prelab"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/.venv",
+      "to": "intelligence_knowledge_boundary/artifacts/environments/prelab"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/configs",
+      "to": "intelligence_knowledge_boundary/configs/initial"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/data",
+      "to": "intelligence_knowledge_boundary/data/initial"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/initial"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/models",
+      "to": "intelligence_knowledge_boundary/artifacts/models/initial"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/references",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/initial/references"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/initial"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/data",
+      "to": "intelligence_knowledge_boundary/data/benchmark_ragtruth_qa"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/references",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/references"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/semantic_baseline",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/semantic_baseline"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/third_party",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/benchmark_ragtruth_qa/third_party"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/fit_expansion/data",
+      "to": "intelligence_knowledge_boundary/data/benchmark_ragtruth_qa/fit_expansion"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/research/sirg_baseline_audit_v1/official_repo/.git/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/benchmark_ragtruth_qa/research/sirg_baseline_audit_v1/official_repo/.git"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round10_dual_granularity/references",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/round10_dual_granularity/references"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round13_generalization_diagnostics/data",
+      "to": "intelligence_knowledge_boundary/data/round13_generalization_diagnostics"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round16_dataset_expansion/data",
+      "to": "intelligence_knowledge_boundary/data/round16_dataset_expansion"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round16_dataset_expansion/references",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/round16_dataset_expansion/references"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round17_expanded_retraining/data",
+      "to": "intelligence_knowledge_boundary/data/round17_expanded_retraining"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round18_input_information_diagnostics/data",
+      "to": "intelligence_knowledge_boundary/data/round18_input_information_diagnostics"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round18_input_information_diagnostics/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round18_input_information_diagnostics"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round19_three_signal_probe/data",
+      "to": "intelligence_knowledge_boundary/data/round19_three_signal_probe"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round2/configs",
+      "to": "intelligence_knowledge_boundary/configs/round2"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round2/data",
+      "to": "intelligence_knowledge_boundary/data/round2"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round2/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round2"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round2/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round2"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round21_semantic_internal_probe/data",
+      "to": "intelligence_knowledge_boundary/data/round21_semantic_internal_probe"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round22_evidence_verification/data",
+      "to": "intelligence_knowledge_boundary/data/round22_evidence_verification"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round23b_local_evidence_probe/data",
+      "to": "intelligence_knowledge_boundary/data/round23b_local_evidence_probe"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round23_local_evidence_probe/data",
+      "to": "intelligence_knowledge_boundary/data/round23_local_evidence_probe"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round23_local_evidence_probe/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round23_local_evidence_probe"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round25_lumina_completion/data",
+      "to": "intelligence_knowledge_boundary/data/round25_lumina_completion"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round28_semantic_scene_adaptation/data",
+      "to": "intelligence_knowledge_boundary/data/round28_semantic_scene_adaptation"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round3/configs",
+      "to": "intelligence_knowledge_boundary/configs/round3"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round3/data",
+      "to": "intelligence_knowledge_boundary/data/round3"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round3/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round3"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round3/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round3"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round31_large_semantic_scene_adaptation/data",
+      "to": "intelligence_knowledge_boundary/data/round31_large_semantic_scene_adaptation"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round32_scene_regularization/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round32_scene_regularization"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/configs",
+      "to": "intelligence_knowledge_boundary/configs/round4"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/data",
+      "to": "intelligence_knowledge_boundary/data/round4"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round4"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round4"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/data",
+      "to": "intelligence_knowledge_boundary/data/round4/confirmation"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round4/confirmation"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round4/confirmation/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round4/confirmation"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round5_oracle/data",
+      "to": "intelligence_knowledge_boundary/data/round5_oracle"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round5_oracle/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round5_oracle"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round5_oracle/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round5_oracle"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/data",
+      "to": "intelligence_knowledge_boundary/data/round6_evidence_grounding"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/logs",
+      "to": "intelligence_knowledge_boundary/artifacts/logs/round6_evidence_grounding"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round6_evidence_grounding/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round6_evidence_grounding"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round7_evidence_grounding/data",
+      "to": "intelligence_knowledge_boundary/data/round7_evidence_grounding"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round7_evidence_grounding/references",
+      "to": "intelligence_knowledge_boundary/artifacts/dependencies/round7_evidence_grounding/references"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round8_token_localization/data",
+      "to": "intelligence_knowledge_boundary/data/round8_token_localization"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/round8_token_localization/results",
+      "to": "intelligence_knowledge_boundary/reports/experiments/round8_token_localization"
+    },
+    {
+      "from": "doc/ref_paper/intelligence_knowledge_boundary",
+      "to": "intelligence_knowledge_boundary/reports/reference_papers"
+    },
+    {
+      "from": "research/ragognizer_geometry_debug",
+      "to": "intelligence_knowledge_boundary/reports/research/ragognizer_geometry_debug"
+    },
+    {
+      "from": "research/recent_span_rag_datasets",
+      "to": "intelligence_knowledge_boundary/reports/research/recent_span_rag_datasets"
+    },
+    {
+      "from": "PAPER_HANDOFF.md",
+      "to": "intelligence_knowledge_boundary/reports/paper/PAPER_HANDOFF.md"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/PAPER_WRITING_PROMPT_CN.md",
+      "to": "intelligence_knowledge_boundary/reports/paper/PAPER_WRITING_PROMPT_CN.md"
+    },
+    {
+      "from": "intelligence_knowledge_boundary/src/prelab/benchmark_ragtruth_qa/面向开源情报问答的大语言模型事实风险监测与定位研究（初稿）.docx",
+      "to": "intelligence_knowledge_boundary/reports/paper/面向开源情报问答的大语言模型事实风险监测与定位研究（初稿）.docx"
+    }
+  ]
+}

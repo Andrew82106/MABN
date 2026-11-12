@@ -1,0 +1,54 @@
+{
+  "official\\LettuceDetect\\README.md": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/README.md",
+    "sha256": "d1d7e9881e36a7fc450e4a401635ac7dd693de98a2a20dd4fbf1ad7743c7fc06"
+  },
+  "official\\LettuceDetect\\LICENSE": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/LICENSE",
+    "sha256": "c19341bdd059245b994d6984da1a24d40a52535e7bb1c93d4a2829d66c272e68"
+  },
+  "official\\LettuceDetect\\scripts\\train.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/scripts/train.py",
+    "sha256": "0a46f3357716631e4e33c33f6700a3ddc03e08be20320db70ebf9557e36d6d11"
+  },
+  "official\\LettuceDetect\\lettucedetect\\models\\trainer.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/lettucedetect/models/trainer.py",
+    "sha256": "20a2dba3a3faa841023a52f26253d1822f11acd79f0f568ff22d6cf07e529c76"
+  },
+  "official\\LettuceDetect\\lettucedetect\\models\\evaluator.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/lettucedetect/models/evaluator.py",
+    "sha256": "4a6f65691667ed28424c688b26de2bb97e8769e73aafedac14e67cdd27b0f517"
+  },
+  "official\\LettuceDetect\\lettucedetect\\datasets\\hallucination_dataset.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/lettucedetect/datasets/hallucination_dataset.py",
+    "sha256": "a193853dd4292061bb629c5a7fe230fbd7543772841a9b4ae3e2e05eb136b425"
+  },
+  "official\\LettuceDetect\\lettucedetect\\models\\inference.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/lettucedetect/models/inference.py",
+    "sha256": "3c19c283a7791f83148334efa2144e0032678a7c7df6358360f97a7d1e006113"
+  },
+  "official\\LettuceDetect\\lettucedetect\\preprocess\\preprocess_ragtruth.py": {
+    "url": "https://raw.githubusercontent.com/KRLabsOrg/LettuceDetect/2096ed28f3b662a62b4406795da3d6fbc5490063/lettucedetect/preprocess/preprocess_ragtruth.py",
+    "sha256": "5a966d99d8e75599899baa41b2911d33d88a8171c1868ddf58e40bf2fc91d634"
+  },
+  "official\\MiniCheck\\README.md": {
+    "url": "https://raw.githubusercontent.com/Liyan06/MiniCheck/b58b9fa69acbd1015ec970fa65dd752413a053d2/README.md",
+    "sha256": "0e93835c8414847d0b349ee7830537e00d45e5d06ba55fbb6254fe14d4343776"
+  },
+  "official\\MiniCheck\\LICENSE": {
+    "url": "https://raw.githubusercontent.com/Liyan06/MiniCheck/b58b9fa69acbd1015ec970fa65dd752413a053d2/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "official\\MiniCheck\\minicheck\\inference.py": {
+    "url": "https://raw.githubusercontent.com/Liyan06/MiniCheck/b58b9fa69acbd1015ec970fa65dd752413a053d2/minicheck/inference.py",
+    "sha256": "325292ec98f0e0902ada035d0e0d0395017082bd1b12a7a8e63e2d15df012d5a"
+  },
+  "official\\MiniCheck\\minicheck\\minicheck.py": {
+    "url": "https://raw.githubusercontent.com/Liyan06/MiniCheck/b58b9fa69acbd1015ec970fa65dd752413a053d2/minicheck/minicheck.py",
+    "sha256": "bf1f7e7dc0d4eec7633c61d9c23eee720feea8422fe757394acc678155eed9b6"
+  },
+  "official\\MiniCheck\\minicheck\\utils.py": {
+    "url": "https://raw.githubusercontent.com/Liyan06/MiniCheck/b58b9fa69acbd1015ec970fa65dd752413a053d2/minicheck/utils.py",
+    "sha256": "d18d28c6ddc0a38d4186841304f3f164b72942a91fe3e13664b0965cba2c2d65"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "version": "same-domain-redeep-lumina-v1",
+  "seed": 20260928,
+  "source_files": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\MANIFEST.json": "8b2d4cbb74ac82447e959a24e7d3f6cb1c1d1f58e71d0f17375a896cb65c578e",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\split_assignments.jsonl": "b0259ced47e36b8bdfc5c81b6bdfde0933c3983dcde28fa6031263e6376971c9",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\fit\\inputs.jsonl": "0f3488ae9cfe257adf039a7128e21967553e38fcb0e210709e36a1128ba9d438",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\fit\\geometry.jsonl": "fd18569c25561deda3b232dbeed8c3358579fc69f053efdde04c9577154185bb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\inputs.jsonl": "6f5e5d755c951ee8f38e9d07c098f0c08b8aa961c59013511733a2baa727baf4",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\validation\\geometry.jsonl": "8bf228f50195f2d4c249118c08ec91b9428855f6aa743a015d34003fc2730efd",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\inputs.jsonl": "307ef1d5983e4fd16ec8d9f5d8833da2f101b44a8391dd215a4e9a603353f0de",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\data\\test\\geometry.jsonl": "79d37ec952ed333551aee7b6e5611f3431b86eaedf3a478740ea4a15a4e2d073"
+  },
+  "code_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\baseline_extension_20260928\\whitebox\\run_whitebox.py": "c4b707d02f3db60a7a5f76838c3f0743aa372601b9ac8bffc13bdd0b78d7ab91",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\src\\run_redeep_formal_baseline_v1.py": "63e350bfaa77a614cfdec88218c31d5a8cd692c363c00976551adc91983191a2",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\src\\redeep_formal_core_v1.py": "8fded50579a701c27d43be2edd83fe0303cc7f4df9cae7561028181e26d5efdb",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\src\\lumina_qa_signals.py": "15910f994e66ebc88bd5f826c9081b292fd13c4259ce35bd7214d17987983626",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\round7_evidence_grounding\\src\\lumina7.py": "ea1d1e45e22a510450a4428335a5b3f3366d09459f41db40aaf83ea98278aab8",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\whitebox_signals.py": "6994125fe9bb98548788b1ed5ffd3ad44bb5b9502f294afddb7ac7e7b6e7210a"
+  },
+  "candidate_heads_sha256": "633a37382dfe46242028cea3d4f28c6bb2102da1859572f6077a39a612228a4b",
+  "candidate_heads": [
+    [
+      1,
+      14
+    ],
+    [
+      1,
+      21
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      22
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      19
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      13,
+      20
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      16,
+      1
+    ],
+    [
+      18,
+      9
+    ],
+    [
+      18,
+      10
+    ],
+    [
+      18,
+      13
+    ],
+    [
+      19,
+      1
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      20,
+      15
+    ],
+    [
+      20,
+      17
+    ],
+    [
+      20,
+      22
+    ],
+    [
+      22,
+      10
+    ],
+    [
+      23,
+      8
+    ],
+    [
+      23,
+      30
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      27,
+      9
+    ],
+    [
+      28,
+      18
+    ],
+    [
+      31,
+      18
+    ],
+    [
+      31,
+      19
+    ],
+    [
+      31,
+      24
+    ],
+    [
+      31,
+      28
+    ]
+  ],
+  "counts": {
+    "fit": 1292,
+    "validation": 271,
+    "test": 279
+  },
+  "summary": {
+    "fit": {
+      "answers": 1292,
+      "maxima": {
+        "original": 1568,
+        "random": 0,
+        "answer_tokens": 499
+      },
+      "raw_answer_tokens": 141282
+    },
+    "validation": {
+      "answers": 271,
+      "maxima": {
+        "original": 1422,
+        "random": 1368,
+        "answer_tokens": 433
+      },
+      "raw_answer_tokens": 32122
+    },
+    "test": {
+      "answers": 279,
+      "maxima": {
+        "original": 1479,
+        "random": 1358,
+        "answer_tokens": 459
+      },
+      "raw_answer_tokens": 29882
+    }
+  },
+  "model": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\artifacts\\models\\initial\\Llama-2-7b-chat-hf",
+  "model_revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+  "redeep": {
+    "formula": "paper standard JSD and retrieved-document ECS; code formula retained only diagnostic",
+    "k_heads": 1,
+    "k_layers": 10,
+    "alpha": 1.0,
+    "beta": 0.2,
+    "selection": "all raw fit-token Pearson, native token risk-inverse ECS; no window pooling",
+    "normalization": "fit-token minmax without clipping",
+    "precision": "full FP16 with CPU offload",
+    "logit_chunk_tokens": 1024,
+    "native_answer_pooling": "all response tokens arithmetic mean"
+  },
+  "lumina": {
+    "official_commit": "c43ff41d872b05f659dcb3ad3a6dd78226954319",
+    "lambda": 0.5,
+    "kernel": "cosine",
+    "topk": 100,
+    "precision": "NF4 doublequant BF16, FP32 signal reductions",
+    "partitions": [
+      "validation",
+      "test"
+    ],
+    "donor_selection": "fit-only unique material; SHA(seed,target_material,donor_material); disjoint group/titles/texts; context-length gate",
+    "native_answer_pooling": "all response tokens arithmetic mean"
+  },
+  "input_convention": "exact shared rendered prompt+answer token IDs; no author re-templating/truncation/extra space",
+  "test_labels_read": false,
+  "prepared_gpu_used": false,
+  "plans_sha256": "60b4f5e1e720bcb59d1e56a662034cc3e47d90b7fcabd3682bcb8ae0d1c4f78f"
+}

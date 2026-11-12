@@ -3,26 +3,30 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "paperalpha-pre-exp1"
+name = "paperalpha"
 version = "0.2.0"
-description = "Deterministic P0 infrastructure sandbox for pre_exp1"
+description = "Knowledge-compiled MAS risk monitoring"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.3"]
 
 [project.optional-dependencies]
-test = ["pytest>=7.4,<9"]
+test = ["pytest>=7.4,<9", "setuptools>=68", "wheel>=0.43"]
+collection = ["openai-agents==0.22.3"]
 
 [project.scripts]
-pre-exp1 = "pre_exp1.cli:main"
+paperalpha-evaluate = "paperalpha_runtime.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "pre_exp1/src"}
+packages = ["paperalpha_monitor", "paperalpha_runtime"]
+package-dir = {paperalpha_monitor = "code/src/paperalpha_monitor", paperalpha_runtime = "code/src/paperalpha_runtime"}
+include-package-data = false
 
-[tool.setuptools.packages.find]
-where = ["pre_exp1/src"]
+[tool.setuptools.cmdclass]
+build_py = "packaging_build.BuildPy"
 
 [tool.pytest.ini_options]
-testpaths = ["pre_exp1/tests"]
-pythonpath = ["pre_exp1/src"]
+testpaths = ["code/tests"]
+pythonpath = ["code/src", "code/commands", "code/tests"]
+cache_dir = ".local/cache/pytest"
 addopts = "-ra"

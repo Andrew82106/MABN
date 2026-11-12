@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "active_lora_B_by_projection": {
+    "q_proj": 32,
+    "k_proj": 32,
+    "v_proj": 32,
+    "o_proj": 32,
+    "gate_proj": 32,
+    "up_proj": 32,
+    "down_proj": 32
+  },
+  "head_finite_gradients": true,
+  "epoch": 1,
+  "answers": 8
+}

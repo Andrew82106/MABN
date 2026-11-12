@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "full_epochs": 24,
+  "selected_epoch": 15,
+  "fold_epochs": [
+    15,
+    15,
+    15
+  ],
+  "oof_answers": 1292,
+  "fold_held_answers": [
+    433,
+    448,
+    411
+  ],
+  "all_predictions_shape_and_range_checked": true,
+  "all_oof_predictions_exclude_training_members": true,
+  "fit_only_preprocessor_ids_match_runs": true,
+  "oof_validation_targets_used": false,
+  "full_validation_score_replay_exact": true,
+  "no_hint_answer_f1": 0.8522727272727273,
+  "no_hint_window_f1": 0.6589250165892502,
+  "oof_receipts": [
+    {
+      "fold": 0,
+      "predictions_sha256": "2127746f4dcde73fe9c5e7241bf0d90ba1772217ccaf01d2679a9fff75a05c9e",
+      "training_ids_sha256": "7bda364ae86de7b2e5a3c3caa4e4f7e707b3ed13e9f58acc0743f231d209ab0c",
+      "held_ids_sha256": "ae219b4ee2fad73eb2defae00ef55b1e792325280ae7c373ffdfb60d5f161a21",
+      "prediction_manifest_sha256": "cd5d3d2fd31489ab3d652bf085b86a6f1d968453a0d6274e1158eb530659ac5a"
+    },
+    {
+      "fold": 1,
+      "predictions_sha256": "b1854bd6ac8ce3a5253e35c36e02c0de7a22fe05465fd52e5f84d881b265bada",
+      "training_ids_sha256": "27358fbd8b38f09bc9293d5333fd28f40529ae3c7bbc3b47c2f46f006b09657d",
+      "held_ids_sha256": "dec99a6ef48512cc447a9f718ec54826a311e3a5cfb6fa52555097df63fb66f9",
+      "prediction_manifest_sha256": "ba224fd9198ea0c860e2d15386b145cd7f9559036b8b31d137dc1b002bdfa614"
+    },
+    {
+      "fold": 2,
+      "predictions_sha256": "ae0a84319b01e355db5fed7992560553b5f25ff783e60391c4e8afd39c1d5e3f",
+      "training_ids_sha256": "084f94f911177b989d55fa442e086678800fb585b5499cf05704b29771c4b75f",
+      "held_ids_sha256": "46cfee6acfa1567641014d23059cb1d24ad1a0982dd30ae33f5ba19ea1d55b37",
+      "prediction_manifest_sha256": "986a768a933d100587b8281db7854c2dc4133053717cd4817b5310d3202f917f"
+    }
+  ],
+  "test_predictions_created": false,
+  "test_labels_read": false
+}

@@ -1,0 +1,445 @@
+{
+  "as_of": "2026-09-13",
+  "scope": "API Agent/MAS runtime risk assessment and safety monitoring",
+  "baselines": [
+    {
+      "id": "B1",
+      "name": "无监测上限（Oracle/独立验收）",
+      "type": "参考上限",
+      "input": "由环境状态、工具回执和人工/程序化安全谓词直接判定；不作为可部署算法。",
+      "output": "安全事件/轨迹标签",
+      "mas_support": "可有MAS",
+      "comparison_value": "衡量监测器距离真实外部效果还有多远。",
+      "boundary": "不能只用最终文本代替外部状态。",
+      "sources": []
+    },
+    {
+      "id": "B2",
+      "name": "静态规则与策略门",
+      "type": "规则/策略",
+      "input": "工具白名单、参数 schema、权限、预算、目标域和时序约束。",
+      "output": "允许/阻断/升级",
+      "mas_support": "可包在MAS外围",
+      "comparison_value": "最低成本、可审计，适合检测硬约束违反。",
+      "boundary": "不能理解隐含意图、跨步骤组合和未知风险。",
+      "sources": [
+        "https://modelcontextprotocol.io/docs/draft/tutorials/security/security_best_practices",
+        "https://atlas.mitre.org/"
+      ]
+    },
+    {
+      "id": "B3",
+      "name": "单步文本/工具调用分类器",
+      "type": "监督分类",
+      "input": "只看当前请求、消息、工具说明或一次调用；可用 TF-IDF/embedding+LogReg、XGBoost、MLP。",
+      "output": "单步风险标签",
+      "mas_support": "可包在MAS外围",
+      "comparison_value": "成本低，测量“局部检测”能力。",
+      "boundary": "无法判断跨 Agent 来源、记忆传播和组合危害。",
+      "sources": [
+        "https://arxiv.org/abs/2401.10019"
+      ]
+    },
+    {
+      "id": "B4",
+      "name": "全轨迹 LLM-as-Judge",
+      "type": "LLM 评审",
+      "input": "把完整交互记录、工具调用和回执交给外部 LLM，要求输出 safe/unsafe、机制和理由。",
+      "output": "轨迹级判定/解释",
+      "mas_support": "可处理MAS日志",
+      "comparison_value": "最直接的黑盒基线；R-Judge就是这一评测形式。",
+      "boundary": "模型自述不等于实际效果；成本、稳定性和校准需报告。",
+      "sources": [
+        "https://arxiv.org/abs/2401.10019",
+        "https://arxiv.org/abs/2412.14470"
+      ]
+    },
+    {
+      "id": "B5",
+      "name": "GuardAgent",
+      "type": "知识到可执行检查",
+      "input": "外部 guard agent 将自然语言安全要求转成 guardrail 代码，检查目标 Agent 行为。",
+      "output": "违反/通过与阻断",
+      "mas_support": "非原生MAS，可包裹",
+      "comparison_value": "与“文献知识→可执行检查”最接近的外部守卫基线。",
+      "boundary": "规则由 LLM 生成，主要是策略符合性，不是概率风险传播。",
+      "sources": [
+        "https://arxiv.org/abs/2406.09187"
+      ]
+    },
+    {
+      "id": "B6",
+      "name": "ShieldAgent",
+      "type": "策略规则电路",
+      "input": "从策略文档抽取可验证规则，形成 action-based probabilistic rule circuits，再对轨迹检查。",
+      "output": "违规判定/屏蔽计划",
+      "mas_support": "主要单Agent",
+      "comparison_value": "知识约束和可验证规则的强基线。",
+      "boundary": "其概率规则电路不等于我们的分层 BN；需区分策略违反和风险概率。",
+      "sources": [
+        "https://arxiv.org/abs/2503.22738"
+      ]
+    },
+    {
+      "id": "B7",
+      "name": "AgentDoG",
+      "type": "轨迹诊断守卫模型",
+      "input": "对轨迹做上下文监测，并按 risk source、failure mode、consequence 诊断根因。",
+      "output": "安全标签、根因和解释",
+      "mas_support": "非原生MAS，但可输入MAS轨迹",
+      "comparison_value": "当前最直接的轨迹级诊断竞争者；有开放模型和 ATBench。",
+      "boundary": "需统一输入字段，不能让它取得我们的额外权限/内部信息。",
+      "sources": [
+        "https://arxiv.org/abs/2601.18491",
+        "https://github.com/LiYu0524/ATbench"
+      ]
+    },
+    {
+      "id": "B8",
+      "name": "AgentTrust",
+      "type": "工具调用运行时拦截",
+      "input": "在工具执行前输出 allow/warn/block/review，结合规则、链式风险和 LLM Judge。",
+      "output": "动作级处置",
+      "mas_support": "工具链/MCP；非MAS专属",
+      "comparison_value": "和 API Agent 的实际执行边界高度相关。",
+      "boundary": "更偏阻断系统；与风险评估器比较时应分开报告检测和干预。",
+      "sources": [
+        "https://arxiv.org/abs/2605.04785"
+      ]
+    },
+    {
+      "id": "B9",
+      "name": "AgentMonitor（MAS）",
+      "type": "MAS统计预测",
+      "input": "在 Agent 层采集输入/输出统计，用 XGBoost 预测任务表现，并做实时安全修正。",
+      "output": "任务表现预测/安全修正",
+      "mas_support": "原生MAS",
+      "comparison_value": "少数直接面向 MAS 的现成基线，可比较系统级聚合。",
+      "boundary": "主要预测整体性能，不是细粒度风险机制或概率路径。",
+      "sources": [
+        "https://arxiv.org/abs/2408.14972"
+      ]
+    },
+    {
+      "id": "B10",
+      "name": "AgentMonitor（安全测试）",
+      "type": "上下文运行监视器",
+      "input": "审计 Agent 行动和上下文，遇到越界行为停止测试并记录可疑行为。",
+      "output": "停止/排序/人工复核",
+      "mas_support": "单Agent，可置于MAS外层",
+      "comparison_value": "适合运行时安全边界基线。",
+      "boundary": "安全边界依赖预先定义，不能替代组合风险建模。",
+      "sources": [
+        "https://arxiv.org/abs/2311.10538"
+      ]
+    },
+    {
+      "id": "B11",
+      "name": "AgentGuard",
+      "type": "工作流安全扫描",
+      "input": "用编排器发现不安全工具工作流，执行验证后生成约束。",
+      "output": "不安全工作流/约束",
+      "mas_support": "主要单Agent",
+      "comparison_value": "适合比较“先审查计划再执行”的路线。",
+      "boundary": "不等于在线跨节点状态传播监测。",
+      "sources": [
+        "https://arxiv.org/abs/2502.09809"
+      ]
+    },
+    {
+      "id": "B12",
+      "name": "ToolEmu 安全评估器",
+      "type": "模拟轨迹+LLM评审",
+      "input": "在仿真工具环境中生成候选轨迹，再评估风险严重度和任务有用性。",
+      "output": "风险/有用性评分",
+      "mas_support": "单Agent工具环境",
+      "comparison_value": "低成本、结果级和轨迹级对照。",
+      "boundary": "工具副作用是模拟的，不能替代真实执行证据。",
+      "sources": [
+        "https://github.com/ryoungj/toolemu"
+      ]
+    },
+    {
+      "id": "B13",
+      "name": "记忆/信息流专项守卫",
+      "type": "专项策略守卫",
+      "input": "对记忆写入、检索、晋升和跨 Agent 复用，或 source-to-sink 流程设门。",
+      "output": "记忆/流向违规",
+      "mas_support": "MAS专项",
+      "comparison_value": "可检验我们的子模板是否覆盖已有专项防御。",
+      "boundary": "不是通用风险评估器，专项结果不能直接和总风险分数比较。",
+      "sources": [
+        "https://arxiv.org/html/2608.00426v1",
+        "https://arxiv.org/html/2607.25255v1"
+      ]
+    },
+    {
+      "id": "B14",
+      "name": "朴素分数聚合",
+      "type": "结构消融",
+      "input": "每个 Agent 独立输出风险分数，再取 max/mean/Noisy-OR/加权和。",
+      "output": "系统风险分数",
+      "mas_support": "原生MAS",
+      "comparison_value": "是我们必须做的关键消融：检验“显式跨节点关系”是否有价值。",
+      "boundary": "它没有来源、授权、记忆和工作流关系，不能作为强方法。",
+      "sources": []
+    },
+    {
+      "id": "B15",
+      "name": "序列/图模型基线",
+      "type": "统计/深度序列",
+      "input": "用 HMM/Markov、Transformer、GNN/Temporal-GNN 对事件序列或工作流图分类。",
+      "output": "事件/轨迹风险概率",
+      "mas_support": "可支持MAS图",
+      "comparison_value": "检验 BN 的结构先验与可解释性是否带来增益。",
+      "boundary": "需要严格同输入、同训练划分；不要把相关性解释成因果。",
+      "sources": []
+    }
+  ],
+  "datasets": [
+    {
+      "id": "D1",
+      "name": "R-Judge",
+      "purpose": "安全风险判断",
+      "mas_support": "569 条多轮 Agent 交互记录；27 场景、5 类应用、10 类风险；安全标签和风险描述。",
+      "evidence": "否；多轮记录但非协作系统",
+      "recommended_use": "最适合先做离线全轨迹 Judge/监测基线。",
+      "boundary": "没有完整外部执行状态；偏风险认知判断。",
+      "source": "https://arxiv.org/abs/2401.10019"
+    },
+    {
+      "id": "D2",
+      "name": "Agent-SafetyBench",
+      "purpose": "广泛 Agent 安全",
+      "mas_support": "349 个交互环境、2,000 测试案例；8 类风险、10 类失败方式。",
+      "evidence": "否；主要单Agent",
+      "recommended_use": "主安全集之一，覆盖面广。",
+      "boundary": "不是原生MAS；需把系统级标签谨慎映射。",
+      "source": "https://arxiv.org/abs/2412.14470"
+    },
+    {
+      "id": "D3",
+      "name": "AgentDojo",
+      "purpose": "工具调用与间接提示注入",
+      "mas_support": "97 个现实任务、629 个安全测试；邮箱、银行、旅行等动态工具环境。",
+      "evidence": "否",
+      "recommended_use": "主安全集之一，能测提示/工具链防御和外部效果。",
+      "boundary": "攻击重点较集中；非多 Agent。",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html"
+    },
+    {
+      "id": "D4",
+      "name": "ATBench / AgentDoG",
+      "purpose": "长轨迹安全诊断",
+      "mas_support": "最新公开版约 1,000 条轨迹，503 safe/497 unsafe；平均约 9 轮；按 risk source、failure mode、harm 诊断。",
+      "evidence": "否；可把轨迹拼成MAS输入",
+      "recommended_use": "最适合比较细粒度根因诊断和解释。",
+      "boundary": "截至当前为新近版本，需锁定具体 release 和许可证。",
+      "source": "https://github.com/LiYu0524/ATbench"
+    },
+    {
+      "id": "D5",
+      "name": "MCP Security Bench (MSB)",
+      "purpose": "MCP 工具链安全",
+      "mas_support": "12 类 MCP 攻击；10 个领域、405 个工具、2,000 个攻击实例；覆盖规划、调用和响应，运行真实良性/恶意工具。",
+      "evidence": "否；多服务器但非多Agent",
+      "recommended_use": "最接近 API 工具运行时的主安全集之一。",
+      "boundary": "MCP 专属；不能代表所有 Agent 框架。",
+      "source": "https://arxiv.org/abs/2510.15994"
+    },
+    {
+      "id": "D6",
+      "name": "MCP-SafetyBench",
+      "purpose": "真实 MCP 多步安全",
+      "mas_support": "5 个领域、20 类 MCP 攻击；多轮任务和跨服务器协作。",
+      "evidence": "否；有跨服务器协调，非原生MAS",
+      "recommended_use": "补充 MSB 的攻击面和跨服务场景。",
+      "boundary": "需核对当前代码、数据和许可证版本。",
+      "source": "https://arxiv.org/abs/2512.15163"
+    },
+    {
+      "id": "D7",
+      "name": "A2ASecBench",
+      "purpose": "Agent-to-Agent 协议安全",
+      "mas_support": "A2A 协议攻击场景、fixtures、运行 harness 和评分。",
+      "evidence": "是；直接 A2A/MAS",
+      "recommended_use": "评测跨 Agent 身份、资源引用和任务状态。",
+      "boundary": "当前以作者仓库公开说明为依据，使用前核对 release 规模和许可证。",
+      "source": "https://github.com/SaFo-Lab/A2ASecBench"
+    },
+    {
+      "id": "D8",
+      "name": "MT-AgentRisk",
+      "purpose": "多轮工具风险",
+      "mas_support": "将单轮危险任务转成多轮攻击序列，评估多轮工具使用风险，并提供 ToolShield 对照。",
+      "evidence": "否",
+      "recommended_use": "测试风险随多轮上下文累积的能力。",
+      "boundary": "不是MAS协作；来源为近期预印本。",
+      "source": "https://arxiv.org/abs/2602.13379"
+    },
+    {
+      "id": "D9",
+      "name": "AgentLeak",
+      "purpose": "MAS 内部隐私泄漏",
+      "mas_support": "面向输出、Agent 间消息、记忆等内部通道的泄漏评测。",
+      "evidence": "是",
+      "recommended_use": "隐私子任务的直接数据集。",
+      "boundary": "不是通用风险集；各通道实验覆盖不完全相同。",
+      "source": "https://arxiv.org/html/2602.11510v3"
+    },
+    {
+      "id": "D10",
+      "name": "τ-bench",
+      "purpose": "正常政策与外部状态",
+      "mas_support": "零售/航空多轮用户模拟、领域 API 工具和政策；以对话末数据库状态和 pass^k 评估。",
+      "evidence": "否",
+      "recommended_use": "最适合正常合规轨迹、授权/参数/重复副作用对照。",
+      "boundary": "主要是能力和合规，不是攻击安全集。",
+      "source": "https://arxiv.org/abs/2406.12045"
+    },
+    {
+      "id": "D11",
+      "name": "ToolSandbox",
+      "purpose": "状态依赖工具使用",
+      "mas_support": "有状态工具执行、工具间隐式状态依赖、用户模拟和任意轨迹的中间/最终里程碑评估。",
+      "evidence": "否",
+      "recommended_use": "适合测节点状态传递、信息不足和外部状态变化。",
+      "boundary": "安全标签不是主目标。",
+      "source": "https://arxiv.org/abs/2408.04682"
+    },
+    {
+      "id": "D12",
+      "name": "AppWorld",
+      "purpose": "多应用 API 正常环境",
+      "mas_support": "9 个日常应用、457 个 API、模拟人物和程序化状态/执行评测。",
+      "evidence": "否；可构建多个 Agent 角色",
+      "recommended_use": "适合长流程、跨应用和外部效果正常对照。",
+      "boundary": "默认不是安全攻击集，需要自行加入风险注入。",
+      "source": "https://github.com/StonyBrookNLP/appworld"
+    },
+    {
+      "id": "D13",
+      "name": "AgentHarm",
+      "purpose": "有害任务结果",
+      "mas_support": "110 个恶意用户任务、11 类危害；多步工具 Agent 的有害完成评估。",
+      "evidence": "否",
+      "recommended_use": "补充结果级 harmfulness。",
+      "boundary": "攻击者就是用户，不能代表第三方注入或MAS传播。",
+      "source": "https://arxiv.org/abs/2410.09024"
+    },
+    {
+      "id": "D14",
+      "name": "Monitoring Sequentially Contextual Harm",
+      "purpose": "组合意图监测",
+      "mas_support": "50 个 Agent 任务、8 类危害；将有害目标拆成看似正常的子任务，测试外部监测器。",
+      "evidence": "否",
+      "recommended_use": "直接测试“局部正常、整体危险”的监测难点。",
+      "boundary": "规模较小，主要是研究性子集。",
+      "source": "https://mlanthology.org/iclrw/2025/yuehhan2025iclrw-monitoring/"
+    },
+    {
+      "id": "D15",
+      "name": "WebArena / BrowserGym",
+      "purpose": "正常网页操作轨迹",
+      "mas_support": "多站点或统一浏览器 Agent 环境，提供长流程执行和状态评估。",
+      "evidence": "否",
+      "recommended_use": "可作正常长链和权限边界对照。",
+      "boundary": "不是安全标签集；成本和复现条件较高。",
+      "source": "https://github.com/web-arena-x/webarena"
+    },
+    {
+      "id": "D16",
+      "name": "AgentBench / OSWorld",
+      "purpose": "通用能力与副作用对照",
+      "mas_support": "多环境 Agent 能力评测；OSWorld 提供桌面/web 任务和执行后状态。",
+      "evidence": "否",
+      "recommended_use": "只用于正常行为/失败和外部状态对照。",
+      "boundary": "不要当作主安全数据集；缺少系统安全标签。",
+      "source": "https://github.com/THUDM/AgentBench"
+    }
+  ],
+  "protocol": {
+    "common_observation": [
+      "user/task",
+      "agent_messages",
+      "tool_calls",
+      "tool_returns",
+      "memory",
+      "authorization",
+      "runtime_metadata",
+      "external_effect_when_available"
+    ],
+    "metrics": [
+      "precision",
+      "recall",
+      "F1",
+      "PR-AUC",
+      "macro-F1",
+      "time-to-detection",
+      "Brier",
+      "ECE",
+      "safe-FPR",
+      "task_success",
+      "cost"
+    ],
+    "rules": [
+      "same visible fields",
+      "scenario/template split",
+      "separate detection and intervention",
+      "report task success and safety together"
+    ]
+  },
+  "mas_native_baselines": [
+    {
+      "id": "M1",
+      "name": "SentinelAgent",
+      "observation": "动态 Agent 交互执行图（节点、边、路径）",
+      "output": "语义异常、协同风险、根因与干预",
+      "relation_to_project": "原生 MAS 图监测核心 baseline",
+      "source": "https://arxiv.org/abs/2505.24201"
+    },
+    {
+      "id": "M2",
+      "name": "Node Contribution Backpropagation",
+      "observation": "有向 MAS 通信 DAG 与最终决策",
+      "output": "Agent 对最终决策的贡献、可疑节点定位/隔离",
+      "relation_to_project": "原生 MAS 跨节点责任归因 baseline",
+      "source": "https://arxiv.org/abs/2510.19420"
+    },
+    {
+      "id": "M3",
+      "name": "AgentMonitor (MAS)",
+      "observation": "各 Agent 的输入/输出统计",
+      "output": "系统任务表现预测与安全修正",
+      "relation_to_project": "原生 MAS 级粗粒度统计 baseline",
+      "source": "https://arxiv.org/abs/2408.14972"
+    },
+    {
+      "id": "M4",
+      "name": "QuadSentinel",
+      "added_on": "2026-09-20",
+      "observation": "运行中的 Agent 间消息、工具提案、可观测谓词与策略",
+      "output": "当前事件 allow/deny、策略命中与理由；不是未来风险概率",
+      "relation_to_project": "知识编译与有状态 MAS 监测的直接对照，应进入当前动作检测赛道",
+      "source": "https://arxiv.org/html/2512.16279v1",
+      "code": "https://github.com/yyiliu/QuadSentinel",
+      "pinned_commit": "1d4e29443284385a2505acb1e7986d9d80dc97f1",
+      "status": "作者代码全谓词配置已完成接入检查及8个真实API采购开发流程的同目标前缀重放；不是论文成绩或完整基准复现",
+      "development_comparison": "experiments/harnessaudit/notes/真实MAS采购对照_系统关系必要但BN尚无独占优势_20260920.md",
+      "profile": "quadsentinel-author-full-predicates-gpt55-monitor-only-v1",
+      "boundary": "k=-1不测检索；角色统一5.5；人工审核已编译策略；无实际阻断；仓库未发现许可证，暂不随本项目重新发布作者源码。"
+    },
+    {
+      "id": "M5",
+      "name": "SafeFlow (Dai et al., 2607.25255)",
+      "added_on": "2026-09-20",
+      "observation": "来源、委派、消息与工具组成的实际协作图，以及可信策略条件",
+      "output": "暂存高风险动作的释放/阻断及来源路径",
+      "relation_to_project": "系统级信息流与全图规则检查近邻；不能仅用单Agent方法代替",
+      "source": "https://arxiv.org/html/2607.25255v1",
+      "status": "核读原文，尚未确认作者完整实现链接或实跑",
+      "boundary": "自身包含任务规划、上下文重建和执行控制；只实现传播规则必须标注partial/inspired，不能称原方法复现。"
+    }
+  ],
+  "selection_note": "单 Agent 或工具链方法只能作为迁移下界/专项对照；核心 MAS 比较必须包含 mas_native_baselines。"
+}

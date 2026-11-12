@@ -1,0 +1,52 @@
+{
+  "schema": "same-domain-held-fit-prediction-binding-v1",
+  "fixed_epochs": 5,
+  "fit_answers": 881,
+  "held_answers": 411,
+  "fit_ids": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\folds\\fold_2_fit_ids.json",
+    "sha256": "3a1fd42f49324c0a923201c62515521ee8db91ab8c2d92b065bbeda0527680ff"
+  },
+  "held_ids": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\fusion\\folds\\fold_2_held_ids.json",
+    "sha256": "46cfee6acfa1567641014d23059cb1d24ad1a0982dd30ae33f5ba19ea1d55b37"
+  },
+  "pretrained_model": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\artifacts\\models\\initial\\ModernBERT-large",
+    "files_sha256": {
+      "config.json": "55dca68059e98f0debf8eb63ab355c451c65b1f5d90fdca4754113fdaadd2cca",
+      "tokenizer.json": "9fd55248d51d33976b324fc11592e28071da7d41e0e9401dfb7082e30574b7b1",
+      "tokenizer_config.json": "3cd2017ff46d0a527e5d39cae39272eccfa1f19bb9f89b05d166aab2e38354e2",
+      "model.safetensors": "44510fec5d3a81a1877f225637b869495f18e55f6f23a09abb9be0acc030295f",
+      "download_manifest.json": "2d452a6a1d169fadbcce7002d20e048dfac6739569048017a16542c920fcdbe5"
+    }
+  },
+  "prepared": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_oof_fold_2\\prepared.json",
+    "sha256": "7a45374dbd518cbd5dde5d9cd024c1752a8671489444edc5ffd8ac45b205456b"
+  },
+  "fit_inputs": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_oof_fold_2\\fit_inputs.jsonl",
+    "sha256": "c7ba43b345143e20f026555112338222976f5d1fd7ed44e9bb907a2ce23c03a0"
+  },
+  "held_inputs": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_oof_fold_2\\held_inputs.jsonl",
+    "sha256": "f9ed521ceff65c920ac487df5f000ab3f810db26baf5b098e8f3c58ad407b232"
+  },
+  "checkpoint": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_oof_fold_2\\last.pt",
+    "sha256": "b4ed2f966d0c43029d8a1e56df4a32a6d10aceb28430005fb14d2ff0546a0f70"
+  },
+  "predictions": {
+    "path": "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\modernbert_large_oof_fold_2\\held_fit_predictions.jsonl",
+    "sha256": "737829f3f5143d7ba41f016b52fc3f8bb2acb423e2d440f0dd0380f3baa4be68"
+  },
+  "runner_sha256": {
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\train_crossfit.py": "3804e55cb9231ced38403e9f5036c4590b2870b9c305a6d35cfeee78254966e3",
+    "D:\\Projects\\Multi_Agent_Graph_Analysis\\intelligence_knowledge_boundary\\src\\prelab\\benchmark_ragtruth_qa\\research\\same_domain_20260928_v1\\model_design\\train_full_context.py": "4607268f91861e325bee09fc5475ce6ce596b74809fe5ce1df7eff98faa28e57"
+  },
+  "held_groups_excluded_from_training": true,
+  "held_labels_used": false,
+  "validation_opened": false,
+  "test_labels_read": false
+}

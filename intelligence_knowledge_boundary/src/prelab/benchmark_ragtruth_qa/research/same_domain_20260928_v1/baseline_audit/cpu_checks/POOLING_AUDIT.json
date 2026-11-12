@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "validation_answers": 271,
+  "native_train_predict_common_pooling_equal": 542,
+  "tied_pooling_prefers_mean": true,
+  "GPU_used": false,
+  "test_labels_opened": false
+}

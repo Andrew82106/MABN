@@ -1,58 +1,55 @@
-# Intelligence Knowledge Boundary
+# 《情报杂志》项目工作区
 
-目标期刊：《情报杂志》（Journal of Intelligence）。
+本目录是“面向开源情报问答的大语言模型事实风险监测与定位研究”的统一工作区。论文、代码、数据、模型、实验结果与参考资料均已归入本目录。
 
-研究主题：面向开源情报搜集的大语言模型事件知识边界识别与应用。
+公开 Git 分支只交接研究材料。下列 Word、PPT 和历史稿链接仅在原本机工作区可用；研究结果从[同域实验状态](src/prelab/benchmark_ragtruth_qa/research/same_domain_20260928_v1/STATUS.md)进入。原始数据、环境和权重按实验清单另行准备。
 
-状态：下列知识边界方案为早期历史草案。用户已将当前工作改为“用整段标签训练探针，监测并尝试定位事实性错误”；实施、数据和结果统一见 [prelab](../prelab/README.md)。本目录暂保留原始命名和资料，不代表当前实验仍在比较新旧事件。
+## 常用入口
 
-## 研究目标
+- [正式论文](reports/paper/面向开源情报问答的大语言模型事实风险监测与定位研究（正式论文）.docx)
+- [图1可编辑PPT](reports/paper/图1_FRML总体框架（可编辑）.pptx)
+- [论文写作交接提示](reports/paper/PAPER_WRITING_PROMPT_CN.md)
+- [写作风格要求](reports/paper/WRITING_STYLE_CN.md)
+- [实验汇总与交接说明](reports/paper/PAPER_HANDOFF.md)
+- [当前主实验代码](src/prelab/benchmark_ragtruth_qa/src/)
+- [当前实验状态](src/prelab/benchmark_ragtruth_qa/CURRENT_STATUS.md)
+- [正式基线结果](src/prelab/benchmark_ragtruth_qa/FORMAL_BASELINE_RESULTS.md)
+- [参考论文](reports/reference_papers/README.md)
+- [从旧 doc 收入的稿件](reports/history/doc_manuscripts_20261014/README.md)：单独归档，不替代上面的正式论文。
 
-检验模型内部信号能否预测具体事件问题的回答可靠性，并帮助分配检索和人工核验资源。
+## 目录分工
 
-区分三个层次：实体整体熟悉程度、具体事实的回答可靠性、给定证据下的推断能力。第一阶段聚焦前两者；不将知识分数解释为研判正确性的保证，也不声称能够证明参数中绝对不存在某项知识。
-
-## 目录
-
-| 路径 | 用途 |
+| 目录 | 内容 |
 |---|---|
-| `src/` | 后续算法适配与公共代码 |
-| `scripts/` | 数据处理、实验运行和分析入口 |
-| `configs/` | 模型和实验配置 |
-| `data/raw/` | 原始公开数据及来源记录 |
-| `data/processed/` | 清洗后的事件和问答 |
-| `data/splits/` | 按事件、时间划分的数据清单 |
-| `artifacts/` | 探针权重、缓存与运行产物 |
-| `reports/` | 复现记录、实验报告和结果 |
+| `src` | 实验代码。现有各轮实验保留在 `src/prelab`，主实验为 `benchmark_ragtruth_qa` |
+| `scripts` | 运行入口与目录兼容工具 |
+| `configs` | 实验配置及目录映射 |
+| `data` | 训练数据、评测数据及特征，主实验数据位于 `data/benchmark_ragtruth_qa` |
+| `artifacts` | 模型、Python 环境、外部依赖、日志及本地迁移记录 |
+| `reports` | 论文、实验结果、文献、调研与历史方案 |
 
-参考论文统一保存在 [doc/ref_paper/intelligence_knowledge_boundary](../doc/ref_paper/intelligence_knowledge_boundary/README.md)。正式项目代码与数据保存在本项目目录内；按用户最新要求，小样本预实验独立放在仓库根目录的 [prelab](../prelab/README.md)。
+论文集中放在 `reports/paper`。当前主实验结果入口为 [reports/experiments/benchmark_ragtruth_qa](reports/experiments/benchmark_ragtruth_qa/)。早期方案保存在 [reports/history/initial_proposal](reports/history/initial_proposal/)。
 
-## 拟实施顺序
+部分历史结果目录内含依赖原目录位置的审计脚本，因此保留代码与结果的内部布局，通过项目内目录链接接入分类；同一份文件只有一份实体。代码实体在 `src/prelab/`，补充报告在 `reports/research/`，根目录旧入口已取消。
 
-1. **先构建事件样本**：从公开可核验材料提取事件问答，标明事实有效时间、证据出处、事件主体及问题类型。先定义数据与参考标签，再运行方法；具体小样本方案见 `prelab`。
-2. **再复现算法**：在数据口径确定后检查并复现 ICLR 2026 Internal Confidence，再实现或适配 EMNLP 2024 KEEN 类探针。前者是免训练的内部置信度方法，后者是需要训练的实体知识估计器，分别报告结果。下载源码后固定版本；当前仅收藏论文与代码链接。
-3. **验证边界识别**：比较实体熟悉度、问题级内部信号、口头自评和多次回答一致性；用独立证据判定实际正确性。重点检验熟悉主体但不了解细节或最新进展的情况。
-4. **可选后续应用实验**：若边界识别有效，再研究相同核验或检索预算下的错误漏检与成本；当前预实验不包含此项。
+原根目录 `tmp/` 中属于本项目的缓存、专用环境、旧审计和迁移记录已归入 `artifacts/legacy_tmp/`。根目录重复的交接入口已移除，正式交接说明继续从上面的“实验汇总与交接说明”进入。
 
-## 实验边界
+## 运行
 
-- 闭卷知识评估与提供外部材料后的评估分开，避免把读到的材料当成预存知识。
-- 训练、验证和测试按事件分组，并设置时间外推测试；测试事件不得用于拟合探针、选择层或调整阈值。
-- 不将答错一次当成绝对未知，也不将多次一致当成事实正确。
-- 对概率或等级做独立验证集校准；未校准的分数不展示为正确概率。
-- 事件时间与事件热度应分别分析，避免仅凭热门实体识别获得表面效果。
-- 高知识评分不等于免除来源核验；复杂因果研判与未来预测另行设计评测。
-- 现成算法迁移本身不预设为创新；拟重点检验事件粒度、时效性与核验资源配置的增量价值。
+在本目录执行主实验脚本，例如查看可用参数。
 
-## 预期产出
+```powershell
+.\scripts\run_experiment.ps1 benchmark_ragtruth_qa/src/run_development.py --help
+```
 
-- 可复现的白盒评估代码。
-- 带来源和时间标记的事件事实问答及固定划分。
-- 模型事件知识画像、适用边界和失败案例。
-- 固定核验预算下的收益评估，为期刊论文提供实证依据。
+已有 Python 环境位于 `artifacts/environments/prelab`，模型位于 `artifacts/models/initial`。新检出仓库先运行 `scripts/restore_compatibility_links.ps1` 恢复目录链接；模型、数据和环境按各实验清单另行准备。
 
-## 运行环境
+旧实验清单中保存了根目录 `prelab/` 等绝对路径，原始清单不改写。统一运行入口会临时建立 `prelab/`、`research/`、`tmp/` 链接，等待脚本结束后移除；同一仓库的此类运行不并发启动。它不会覆盖已有的普通目录，也不会删除实际代码和数据。强行终止 PowerShell 进程可能遗留临时链接，需先确认没有运行中的实验再清理。
 
-沿用仓库的 [统一 Python 环境](../doc/Python环境说明.md)：`multi_agent_graph`，解释器 `D:\anaconda\envs\multi_agent_graph\python.exe`。
+旧命令请通过上述入口运行，不再直接使用根目录的 `prelab/.venv/...`。正常目录恢复脚本只恢复长期保留的链接，不重新创建已取消的根目录入口。
 
-当前未安装新依赖、未下载模型权重，代码和数据目录为占位目录。显卡、模型选择及预算在实施前确认。
+迁移清单和检查结果见 [reports/migration/README.md](reports/migration/README.md)。
+
+本次根目录整理及临时文件归属见[整理记录](reports/migration/ROOT_CLEANUP_20261014.md)。
+
+根目录 `doc/` 已撤销，两份稿件及参考文献均在本项目内。共享指南的历史快照归入 MAS 项目，本项目运行方式以上文为准。后续文档归位与原件校验见[文档整理记录](reports/migration/DOC_CLEANUP_20261014.md)。
